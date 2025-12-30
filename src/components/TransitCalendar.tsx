@@ -101,6 +101,38 @@ const getTransitOrb = (planet1: string, planet2: string, aspectName: string): nu
   return 2.5;
 };
 
+// Get orb for eclipse-to-planet aspects (tighter orbs than regular transits)
+const getEclipseOrb = (planetName: string, aspectName: string): number => {
+  const personalPlanets = ['Mercury', 'Venus', 'Mars'];
+  const socialPlanets = ['Jupiter', 'Saturn'];
+  const outerPlanets = ['Uranus', 'Neptune', 'Pluto'];
+  const nodes = ['North Node', 'South Node'];
+
+  // Personal planets (Mercury, Venus, Mars)
+  if (personalPlanets.includes(planetName)) {
+    if (aspectName === 'Conjunction' || aspectName === 'Opposition') return 3;
+    if (aspectName === 'Trine' || aspectName === 'Square') return 2.5;
+    return 2;
+  }
+
+  // Nodes
+  if (nodes.includes(planetName)) {
+    if (aspectName === 'Conjunction' || aspectName === 'Opposition') return 5;
+    if (aspectName === 'Trine' || aspectName === 'Square') return 4;
+    return 3;
+  }
+
+  // Social planets (Jupiter, Saturn) and Outer planets (Uranus, Neptune, Pluto)
+  if (socialPlanets.includes(planetName) || outerPlanets.includes(planetName)) {
+    if (aspectName === 'Conjunction' || aspectName === 'Opposition') return 4;
+    if (aspectName === 'Trine' || aspectName === 'Square') return 3;
+    return 2;
+  }
+
+  // Default (shouldn't reach here, but just in case)
+  return 3;
+};
+
 // Calculate aspects for a given date
 const calculateDayAspects = (date: Date, prevDate?: Date) => {
   const planets = calculatePlanetaryPositions(date);
@@ -228,6 +260,40 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
       position: positionStr,
       isLunation: true
     });
+
+    // If it's a Solar Eclipse, check for aspects to planets (excluding Sun and Moon)
+    if (bestNewMoonData.isEclipse) {
+      const eclipseLongitude = bestNewMoonData.sunLongitude;
+      planets.forEach(planet => {
+        // Skip Sun and Moon
+        if (planet.name === 'Sun' || planet.name === 'Moon') return;
+
+        let diff = Math.abs(eclipseLongitude - planet.longitude);
+        if (diff > 180) diff = 360 - diff;
+
+        for (const aspectType of ASPECT_TYPES) {
+          const orb = Math.abs(diff - aspectType.angle);
+          const maxOrb = getEclipseOrb(planet.name, aspectType.name);
+
+          if (orb <= maxOrb) {
+            aspects.push({
+              planet1: 'Solar Eclipse',
+              planet2: planet.name,
+              symbol1: '🌑🌒',
+              symbol2: planet.symbol,
+              color1: '#8B0000',
+              color2: PLANET_COLORS[planet.name],
+              aspect: aspectType.name,
+              symbol: aspectType.symbol,
+              color: aspectType.color,
+              orb: orb.toFixed(1),
+              isEclipseAspect: true
+            });
+            break;
+          }
+        }
+      });
+    }
   }
 
   // Add Full Moon if found within orb
@@ -249,6 +315,40 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
       position: positionStr,
       isLunation: true
     });
+
+    // If it's a Lunar Eclipse, check for aspects to planets (excluding Sun and Moon)
+    if (bestFullMoonData.isLunarEclipse) {
+      const eclipseLongitude = fullMoonLongitude;
+      planets.forEach(planet => {
+        // Skip Sun and Moon
+        if (planet.name === 'Sun' || planet.name === 'Moon') return;
+
+        let diff = Math.abs(eclipseLongitude - planet.longitude);
+        if (diff > 180) diff = 360 - diff;
+
+        for (const aspectType of ASPECT_TYPES) {
+          const orb = Math.abs(diff - aspectType.angle);
+          const maxOrb = getEclipseOrb(planet.name, aspectType.name);
+
+          if (orb <= maxOrb) {
+            aspects.push({
+              planet1: 'Lunar Eclipse',
+              planet2: planet.name,
+              symbol1: '🌕🌒',
+              symbol2: planet.symbol,
+              color1: '#8B0000',
+              color2: PLANET_COLORS[planet.name],
+              aspect: aspectType.name,
+              symbol: aspectType.symbol,
+              color: aspectType.color,
+              orb: orb.toFixed(1),
+              isEclipseAspect: true
+            });
+            break;
+          }
+        }
+      });
+    }
   }
 
   // Check for Sign Ingress
@@ -329,12 +429,14 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
     }
   }
 
-  // Sort: regular aspects first, then ingresses, then lunations
+  // Sort: regular aspects first, then eclipse aspects, then ingresses, then lunations
   aspects.sort((a: any, b: any) => {
     if (a.isLunation && !b.isLunation) return 1;
     if (!a.isLunation && b.isLunation) return -1;
     if (a.isIngress && !b.isIngress && !b.isLunation) return 1;
     if (!a.isIngress && b.isIngress && !a.isLunation) return -1;
+    if (a.isEclipseAspect && !b.isEclipseAspect && !b.isIngress && !b.isLunation) return 1;
+    if (!a.isEclipseAspect && b.isEclipseAspect && !a.isIngress && !a.isLunation) return -1;
     if (a.orb !== undefined && b.orb !== undefined) {
       return parseFloat(a.orb) - parseFloat(b.orb);
     }
@@ -382,6 +484,9 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
           key = `lunation-${aspect.aspect}`;
         } else if (aspect.isIngress) {
           key = `ingress-${aspect.planet1}-${aspect.signName}`;
+        } else if (aspect.isEclipseAspect) {
+          // Eclipse aspects: each gets its own row
+          key = `eclipse-${aspect.planet1}-${aspect.aspect}-${aspect.planet2}`;
         } else {
           // For regular aspects, create a key based on planet pair and aspect type
           const planets = [aspect.planet1, aspect.planet2].sort();
@@ -402,14 +507,15 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
             symbol: aspect.symbol,
             isLunation: aspect.isLunation,
             isIngress: aspect.isIngress,
+            isEclipseAspect: aspect.isEclipseAspect,
             signName: aspect.signName,
-            sortPriority: aspect.isLunation ? 3 : aspect.isIngress ? 2 : 1
+            sortPriority: aspect.isLunation ? 4 : aspect.isIngress ? 3 : aspect.isEclipseAspect ? 2 : 1
           });
         }
       });
     });
 
-    // Sort aspects: regular first, ingresses second, lunations last
+    // Sort aspects: regular first, eclipse aspects second, ingresses third, lunations last
     const sortedAspects = Array.from(aspectKeys.values()).sort((a, b) => {
       if (a.sortPriority !== b.sortPriority) return a.sortPriority - b.sortPriority;
       return 0;
@@ -424,6 +530,8 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
           key = `lunation-${aspect.aspect}`;
         } else if (aspect.isIngress) {
           key = `ingress-${aspect.planet1}-${aspect.signName}`;
+        } else if (aspect.isEclipseAspect) {
+          key = `eclipse-${aspect.planet1}-${aspect.aspect}-${aspect.planet2}`;
         } else {
           const planets = [aspect.planet1, aspect.planet2].sort();
           key = `${planets[0]}-${aspect.aspect}-${planets[1]}`;
@@ -698,6 +806,12 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                       <span>→</span>
                       <span style={{ fontSize: '9px' }}>{aspectTemplate.signName}</span>
                     </div>
+                  ) : aspectTemplate.isEclipseAspect ? (
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px', flexWrap: 'wrap' }}>
+                      <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                      <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
+                      <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
+                    </div>
                   ) : (
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
                       <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
@@ -728,15 +842,17 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                               ? `${aspect.aspect} at ${aspect.position} (${aspect.phase})`
                               : aspect.isIngress
                                 ? `${aspect.planet1} enters ${aspect.signName}`
-                                : `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb`
+                                : aspect.isEclipseAspect
+                                  ? `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb (Eclipse Aspect)`
+                                  : `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb`
                           }
                           style={{
                             padding: '6px 4px',
-                            backgroundColor: aspect.isLunation ? '#fff3cd' : hexToRgba(aspect.color1, 0.2),
+                            backgroundColor: aspect.isLunation ? '#fff3cd' : aspect.isEclipseAspect ? '#ffe4e4' : hexToRgba(aspect.color1, 0.2),
                             borderRadius: '3px',
                             borderLeft: `3px solid ${aspect.color}`,
                             fontSize: '10px',
-                            cursor: aspect.isLunation || aspect.isIngress ? 'default' : 'pointer',
+                            cursor: aspect.isLunation || aspect.isIngress || aspect.isEclipseAspect ? 'default' : 'pointer',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -760,6 +876,19 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                               </div>
                               <div style={{ fontSize: '8px', color: '#666' }}>{aspect.planet1} enters {aspect.signName}</div>
                               <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}° in</div>
+                            </div>
+                          ) : aspect.isEclipseAspect ? (
+                            <div style={{ textAlign: 'center' }}>
+                              <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
+                                <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
+                                <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                              </div>
+                              <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
+                                {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                              </div>
+                              <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
+                              <div style={{ fontSize: '7px', color: '#8B0000', fontWeight: 'bold' }}>ECLIPSE</div>
                             </div>
                           ) : (
                             <div style={{ textAlign: 'center' }}>
@@ -805,8 +934,8 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
         </div>
 
         {/* Orb Settings */}
-        <div>
-          <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '8px', color: '#555' }}>Orb Settings (Conj/Opp — Trine/Square — Sextile):</div>
+        <div style={{ marginBottom: '15px' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '8px', color: '#555' }}>Transit Orb Settings (Conj/Opp — Trine/Square — Sextile):</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '8px', fontSize: '11px', color: '#666' }}>
             <div>☽ <strong>Moon:</strong> 2° / 1.5° / 1°</div>
             <div>☊☋ <strong>Nodes:</strong> 5° / 4° / 3°</div>
@@ -817,9 +946,22 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
           </div>
         </div>
 
+        {/* Eclipse Aspect Orb Settings */}
+        <div style={{ marginBottom: '15px', padding: '10px', background: '#fff5f5', borderRadius: '6px', border: '1px solid #ffe4e4' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '8px', color: '#8B0000' }}>🌑🌒 Eclipse Aspect Orbs (Tighter than regular transits):</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '8px', fontSize: '11px', color: '#666' }}>
+            <div>☿♀♂ <strong>Personal Planets:</strong> 3° / 2.5° / 2°</div>
+            <div>♃♄♅♆♇ <strong>Social & Outer Planets:</strong> 4° / 3° / 2°</div>
+            <div>☊☋ <strong>Lunar Nodes:</strong> 5° / 4° / 3°</div>
+          </div>
+          <div style={{ fontSize: '10px', color: '#8B0000', marginTop: '5px', fontStyle: 'italic' }}>
+            Eclipse aspects do not include the Sun or Moon themselves (already part of the eclipse)
+          </div>
+        </div>
+
         {/* Tip */}
         <div style={{ marginTop: '15px', padding: '10px', background: '#e8f4ff', borderRadius: '6px', fontSize: '12px', color: '#2c5aa0' }}>
-          💡 <strong>Tip:</strong> Click on regular aspects to view detailed interpretations. Lunations (New/Full Moons) and Ingresses are shown at the bottom of each day.
+          💡 <strong>Tip:</strong> Click on regular aspects to view detailed interpretations. Lunations (New/Full Moons), Ingresses, and Eclipse Aspects are informational only.
         </div>
       </div>
 
