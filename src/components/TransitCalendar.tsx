@@ -107,98 +107,148 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
   const prevPlanets = prevDate ? calculatePlanetaryPositions(prevDate) : [];
   const aspects: any[] = [];
 
-  // Find Sun and Moon for lunations
-  const sun = planets.find(p => p.name === 'Sun');
-  const moon = planets.find(p => p.name === 'Moon');
+  // Helper to get position in degrees and sign
+  const getPositionString = (longitude: number) => {
+    const signNames = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
+                       'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+    const signIndex = Math.floor(longitude / 30);
+    const degreeInSign = longitude % 30;
+    const degrees = Math.floor(degreeInSign);
+    const minutes = Math.round((degreeInSign - degrees) * 60);
+    return `${degrees}°${minutes.toString().padStart(2, '0')}' ${signNames[signIndex]}`;
+  };
 
-  // Check for Lunations (New Moon, Full Moon, Solar Eclipse)
-  if (sun && moon) {
-    let diff = Math.abs(sun.longitude - moon.longitude);
-    if (diff > 180) diff = 360 - diff;
+  // Check for Lunations (New Moon, Full Moon, Solar Eclipse, Lunar Eclipse)
+  // Sample at 4 times during the day to catch lunations at any hour
+  let bestNewMoonData: any = null;
+  let bestFullMoonData: any = null;
+  let bestNewMoonOrb = 999;
+  let bestFullMoonOrb = 999;
 
-    // Helper to get position in degrees and sign
-    const getPositionString = (longitude: number) => {
-      const signNames = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
-                         'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
-      const signIndex = Math.floor(longitude / 30);
-      const degreeInSign = longitude % 30;
-      const degrees = Math.floor(degreeInSign);
-      const minutes = Math.round((degreeInSign - degrees) * 60);
-      return `${degrees}°${minutes.toString().padStart(2, '0')}' ${signNames[signIndex]}`;
-    };
+  for (const hour of [0, 6, 12, 18]) {
+    const sampleDate = new Date(date);
+    sampleDate.setUTCHours(hour, 0, 0, 0);
+    const samplePlanets = calculatePlanetaryPositions(sampleDate);
+    const sun = samplePlanets.find(p => p.name === 'Sun');
+    const moon = samplePlanets.find(p => p.name === 'Moon');
 
-    // New Moon (Conjunction) - max orb 5°
-    const newMoonOrb = diff;
-    if (newMoonOrb <= 5) {
-      const moonRelativePos = (moon.longitude - sun.longitude + 360) % 360;
-      const isApplying = moonRelativePos > 180;
-      let phase = 'Exact';
-      if (newMoonOrb > 1.5) {
-        phase = isApplying ? 'Applying' : 'Separating';
+    if (sun && moon) {
+      let diff = Math.abs(sun.longitude - moon.longitude);
+      if (diff > 180) diff = 360 - diff;
+
+      // Check New Moon (Conjunction)
+      const newMoonOrb = diff;
+      if (newMoonOrb < bestNewMoonOrb) {
+        bestNewMoonOrb = newMoonOrb;
+        const moonRelativePos = (moon.longitude - sun.longitude + 360) % 360;
+        const isApplying = moonRelativePos > 180;
+        let phase = 'Exact';
+        if (newMoonOrb > 1.5) {
+          phase = isApplying ? 'Applying' : 'Separating';
+        }
+
+        // Check if it's a Solar Eclipse (Node within 18° of Sun during New Moon)
+        const northNode = samplePlanets.find(p => p.name === 'North Node');
+        const southNode = samplePlanets.find(p => p.name === 'South Node');
+        let isEclipse = false;
+
+        if (northNode) {
+          let nodeDiff = Math.abs(sun.longitude - northNode.longitude);
+          if (nodeDiff > 180) nodeDiff = 360 - nodeDiff;
+          if (nodeDiff <= 18) isEclipse = true;
+        }
+        if (!isEclipse && southNode) {
+          let nodeDiff = Math.abs(sun.longitude - southNode.longitude);
+          if (nodeDiff > 180) nodeDiff = 360 - nodeDiff;
+          if (nodeDiff <= 18) isEclipse = true;
+        }
+
+        bestNewMoonData = {
+          orb: newMoonOrb,
+          phase,
+          isEclipse,
+          sunLongitude: sun.longitude,
+          moonLongitude: moon.longitude
+        };
       }
 
-      // Check if it's a Solar Eclipse (Node within 18° of Sun during New Moon)
-      const northNode = planets.find(p => p.name === 'North Node');
-      const southNode = planets.find(p => p.name === 'South Node');
-      let isEclipse = false;
+      // Check Full Moon (Opposition)
+      const fullMoonOrb = Math.abs(diff - 180);
+      if (fullMoonOrb < bestFullMoonOrb) {
+        bestFullMoonOrb = fullMoonOrb;
+        const moonRelativePos = (moon.longitude - sun.longitude + 360) % 360;
+        const isApplying = moonRelativePos < 180;
+        let phase = 'Exact';
+        if (fullMoonOrb > 1.5) {
+          phase = isApplying ? 'Applying' : 'Separating';
+        }
 
-      if (northNode) {
-        let nodeDiff = Math.abs(sun.longitude - northNode.longitude);
-        if (nodeDiff > 180) nodeDiff = 360 - nodeDiff;
-        if (nodeDiff <= 18) isEclipse = true;
-      }
-      if (!isEclipse && southNode) {
-        let nodeDiff = Math.abs(sun.longitude - southNode.longitude);
-        if (nodeDiff > 180) nodeDiff = 360 - nodeDiff;
-        if (nodeDiff <= 18) isEclipse = true;
-      }
+        // Check if it's a Lunar Eclipse (Node within 12° of Moon during Full Moon)
+        const northNode = samplePlanets.find(p => p.name === 'North Node');
+        const southNode = samplePlanets.find(p => p.name === 'South Node');
+        let isLunarEclipse = false;
 
-      const positionStr = getPositionString(sun.longitude);
-      aspects.push({
-        planet1: 'Sun',
-        planet2: 'Moon',
-        symbol1: '☉',
-        symbol2: '☽',
-        color1: PLANET_COLORS['Sun'],
-        color2: PLANET_COLORS['Moon'],
-        aspect: isEclipse ? 'Solar Eclipse' : 'New Moon',
-        aspectSymbol: isEclipse ? '🌑🌒' : '🌑',
-        color: isEclipse ? '#8B0000' : '#000000',
-        orb: newMoonOrb.toFixed(1),
-        phase: phase,
-        position: positionStr,
-        isLunation: true
-      });
+        if (northNode) {
+          let nodeDiff = Math.abs(moon.longitude - northNode.longitude);
+          if (nodeDiff > 180) nodeDiff = 360 - nodeDiff;
+          if (nodeDiff <= 12) isLunarEclipse = true;
+        }
+        if (!isLunarEclipse && southNode) {
+          let nodeDiff = Math.abs(moon.longitude - southNode.longitude);
+          if (nodeDiff > 180) nodeDiff = 360 - nodeDiff;
+          if (nodeDiff <= 12) isLunarEclipse = true;
+        }
+
+        bestFullMoonData = {
+          orb: fullMoonOrb,
+          phase,
+          isLunarEclipse,
+          sunLongitude: sun.longitude,
+          moonLongitude: moon.longitude
+        };
+      }
     }
+  }
 
-    // Full Moon (Opposition) - max orb 5°
-    const fullMoonOrb = Math.abs(diff - 180);
-    if (fullMoonOrb <= 5) {
-      const moonRelativePos = (moon.longitude - sun.longitude + 360) % 360;
-      const isApplying = moonRelativePos < 180;
-      let phase = 'Exact';
-      if (fullMoonOrb > 1.5) {
-        phase = isApplying ? 'Applying' : 'Separating';
-      }
+  // Add New Moon if found within orb
+  if (bestNewMoonData && bestNewMoonOrb <= 5) {
+    const positionStr = getPositionString(bestNewMoonData.sunLongitude);
+    aspects.push({
+      planet1: 'Sun',
+      planet2: 'Moon',
+      symbol1: '☉',
+      symbol2: '☽',
+      color1: PLANET_COLORS['Sun'],
+      color2: PLANET_COLORS['Moon'],
+      aspect: bestNewMoonData.isEclipse ? 'Solar Eclipse' : 'New Moon',
+      aspectSymbol: bestNewMoonData.isEclipse ? '🌑🌒' : '🌑',
+      color: bestNewMoonData.isEclipse ? '#8B0000' : '#000000',
+      orb: bestNewMoonOrb.toFixed(1),
+      phase: bestNewMoonData.phase,
+      position: positionStr,
+      isLunation: true
+    });
+  }
 
-      const fullMoonLongitude = (sun.longitude + 180) % 360;
-      const positionStr = getPositionString(fullMoonLongitude);
-      aspects.push({
-        planet1: 'Sun',
-        planet2: 'Moon',
-        symbol1: '☉',
-        symbol2: '☽',
-        color1: PLANET_COLORS['Sun'],
-        color2: PLANET_COLORS['Moon'],
-        aspect: 'Full Moon',
-        aspectSymbol: '🌕',
-        color: '#FFD700',
-        orb: fullMoonOrb.toFixed(1),
-        phase: phase,
-        position: positionStr,
-        isLunation: true
-      });
-    }
+  // Add Full Moon if found within orb
+  if (bestFullMoonData && bestFullMoonOrb <= 5) {
+    const fullMoonLongitude = (bestFullMoonData.sunLongitude + 180) % 360;
+    const positionStr = getPositionString(fullMoonLongitude);
+    aspects.push({
+      planet1: 'Sun',
+      planet2: 'Moon',
+      symbol1: '☉',
+      symbol2: '☽',
+      color1: PLANET_COLORS['Sun'],
+      color2: PLANET_COLORS['Moon'],
+      aspect: bestFullMoonData.isLunarEclipse ? 'Lunar Eclipse' : 'Full Moon',
+      aspectSymbol: bestFullMoonData.isLunarEclipse ? '🌕🌒' : '🌕',
+      color: bestFullMoonData.isLunarEclipse ? '#8B0000' : '#FFD700',
+      orb: bestFullMoonOrb.toFixed(1),
+      phase: bestFullMoonData.phase,
+      position: positionStr,
+      isLunation: true
+    });
   }
 
   // Check for Sign Ingress
