@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { calculatePlanetaryPositions } from '../utils/ephemeris';
+import { getGeneralAspectInterpretation } from '../utils/generalAspectInterpretations';
+import type { GeneralAspectInterpretation } from '../utils/generalAspectInterpretations';
 
 interface TransitCalendarProps {
   startDate?: Date;
@@ -128,6 +130,15 @@ const calculateDayAspects = (date: Date) => {
 export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = new Date() }) => {
   const [viewMode, setViewMode] = useState<'7day' | '2week' | '3week' | 'month'>('7day');
   const [currentStartDate, setCurrentStartDate] = useState(startDate);
+  const [selectedAspect, setSelectedAspect] = useState<{
+    planet1: string;
+    planet2: string;
+    aspect: string;
+    orb: string;
+    interpretation: GeneralAspectInterpretation | null;
+  } | null>(null);
+
+  console.log('📅 Transit Calendar Loaded - Click aspects for interpretations!');
 
   const days = useMemo(() => {
     const daysCount = viewMode === '7day' ? 7 : viewMode === '2week' ? 14 : viewMode === '3week' ? 21 : 30;
@@ -159,6 +170,30 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
 
   const goToToday = () => {
     setCurrentStartDate(new Date());
+  };
+
+  const handleAspectClick = (aspect: any) => {
+    console.log('🔍 Aspect clicked:', aspect);
+    const interpretation = getGeneralAspectInterpretation(
+      aspect.planet1,
+      aspect.planet2,
+      aspect.aspect,
+      parseFloat(aspect.orb)
+    );
+
+    console.log('📖 Interpretation found:', interpretation ? 'Yes' : 'No');
+
+    setSelectedAspect({
+      planet1: aspect.planet1,
+      planet2: aspect.planet2,
+      aspect: aspect.aspect,
+      orb: aspect.orb,
+      interpretation
+    });
+  };
+
+  const closeModal = () => {
+    setSelectedAspect(null);
   };
 
   return (
@@ -309,12 +344,25 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                   day.aspects.map((aspect, i) => (
                     <div
                       key={i}
+                      onClick={() => handleAspectClick(aspect)}
                       style={{
                         marginBottom: '6px',
                         padding: '4px',
                         background: '#f9f9f9',
                         borderRadius: '4px',
-                        borderLeft: `3px solid ${aspect.color}`
+                        borderLeft: `3px solid ${aspect.color}`,
+                        cursor: 'pointer',
+                        transition: 'all 0.2s',
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = '#e8f4ff';
+                        e.currentTarget.style.transform = 'translateX(2px)';
+                        e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = '#f9f9f9';
+                        e.currentTarget.style.transform = 'translateX(0)';
+                        e.currentTarget.style.boxShadow = 'none';
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', gap: '4px', flexWrap: 'wrap' }}>
@@ -384,7 +432,194 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
             <div>🔀 <strong>Mixed (Inner-Outer):</strong> 4° / 3° / 2.5°</div>
           </div>
         </div>
+
+        {/* Tip */}
+        <div style={{ marginTop: '15px', padding: '10px', background: '#e8f4ff', borderRadius: '6px', fontSize: '12px', color: '#2c5aa0' }}>
+          💡 <strong>Tip:</strong> Click on any aspect to view detailed interpretation including predictions for Love, Career, Finances, and Family.
+        </div>
       </div>
+
+      {/* Modal for Aspect Interpretation */}
+      {selectedAspect && (
+        <div
+          onClick={closeModal}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            padding: '20px'
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: 'white',
+              borderRadius: '12px',
+              maxWidth: '800px',
+              width: '100%',
+              maxHeight: '90vh',
+              overflow: 'auto',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+            }}
+          >
+            {selectedAspect.interpretation ? (
+              <div>
+                {/* Header */}
+                <div style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  padding: '20px',
+                  borderRadius: '12px 12px 0 0',
+                  position: 'sticky',
+                  top: 0,
+                  zIndex: 1
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                    <div>
+                      <h2 style={{ margin: 0, marginBottom: '8px' }}>{selectedAspect.interpretation.name}</h2>
+                      <div style={{ fontSize: '14px', opacity: 0.9 }}>
+                        Orb: {selectedAspect.orb}° | {selectedAspect.interpretation.frequency}
+                      </div>
+                    </div>
+                    <button
+                      onClick={closeModal}
+                      style={{
+                        background: 'rgba(255,255,255,0.2)',
+                        border: 'none',
+                        color: 'white',
+                        fontSize: '24px',
+                        cursor: 'pointer',
+                        borderRadius: '50%',
+                        width: '36px',
+                        height: '36px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      ×
+                    </button>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div style={{ padding: '20px' }}>
+                  {/* Duration */}
+                  <div style={{ marginBottom: '20px', padding: '12px', background: '#fff3cd', borderRadius: '6px', borderLeft: '4px solid #ffc107' }}>
+                    <strong>⏱️ Duration:</strong> {selectedAspect.interpretation.duration}
+                  </div>
+
+                  {/* Planet Energies */}
+                  <div style={{ marginBottom: '20px' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '12px', color: '#333' }}>🌟 Planet Energies</h3>
+                    <div style={{ padding: '12px', background: '#f8f9fa', borderRadius: '6px', marginBottom: '10px' }}>
+                      <strong style={{ color: PLANET_COLORS[selectedAspect.planet1] }}>{selectedAspect.planet1}:</strong> {selectedAspect.interpretation.planet1Energy}
+                    </div>
+                    <div style={{ padding: '12px', background: '#f8f9fa', borderRadius: '6px' }}>
+                      <strong style={{ color: PLANET_COLORS[selectedAspect.planet2] }}>{selectedAspect.planet2}:</strong> {selectedAspect.interpretation.planet2Energy}
+                    </div>
+                  </div>
+
+                  {/* Aspect Meaning */}
+                  <div style={{ marginBottom: '20px', padding: '15px', background: '#e8f4ff', borderRadius: '6px', borderLeft: '4px solid #4a90e2' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '8px', color: '#2c5aa0' }}>✨ Aspect Meaning</h3>
+                    <p style={{ margin: 0, lineHeight: '1.6' }}>{selectedAspect.interpretation.aspectMeaning}</p>
+                  </div>
+
+                  {/* Life Areas */}
+                  <div style={{ marginBottom: '20px' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '12px', color: '#333' }}>🎯 How This Affects Different Life Areas</h3>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#ffe8f0', borderRadius: '6px', borderLeft: '4px solid #e91e63' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#c2185b' }}>💕 Love & Relationships</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.loveRelationships}</p>
+                    </div>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#fff3e0', borderRadius: '6px', borderLeft: '4px solid #ff9800' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#e65100' }}>🏠 Family & Home</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.familyHome}</p>
+                    </div>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#e8f5e9', borderRadius: '6px', borderLeft: '4px solid #4caf50' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#2e7d32' }}>💼 Business & Career</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.businessCareer}</p>
+                    </div>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#f3e5f5', borderRadius: '6px', borderLeft: '4px solid #9c27b0' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#6a1b9a' }}>💰 Money & Finances</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.moneyFinances}</p>
+                    </div>
+                  </div>
+
+                  {/* Predictions */}
+                  <div style={{ marginBottom: '10px' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '12px', color: '#333' }}>🔮 10 Predictions - What Can Happen</h3>
+                    <div style={{ background: '#f8f9fa', borderRadius: '6px', padding: '15px' }}>
+                      {selectedAspect.interpretation.predictions.map((prediction, idx) => (
+                        <div key={idx} style={{
+                          marginBottom: idx < selectedAspect.interpretation!.predictions.length - 1 ? '10px' : 0,
+                          paddingBottom: idx < selectedAspect.interpretation!.predictions.length - 1 ? '10px' : 0,
+                          borderBottom: idx < selectedAspect.interpretation!.predictions.length - 1 ? '1px solid #dee2e6' : 'none'
+                        }}>
+                          <div style={{ display: 'flex', gap: '10px' }}>
+                            <div style={{
+                              minWidth: '24px',
+                              height: '24px',
+                              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                              color: 'white',
+                              borderRadius: '50%',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '12px',
+                              fontWeight: 'bold'
+                            }}>
+                              {idx + 1}
+                            </div>
+                            <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px', flex: 1 }}>{prediction}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div style={{ padding: '40px', textAlign: 'center' }}>
+                <div style={{ fontSize: '48px', marginBottom: '20px' }}>📚</div>
+                <h3 style={{ color: '#666', marginBottom: '10px' }}>Interpretation Not Available</h3>
+                <p style={{ color: '#999', marginBottom: '20px' }}>
+                  Detailed interpretation for {selectedAspect.planet1} {selectedAspect.aspect} {selectedAspect.planet2} is not yet available.
+                </p>
+                <p style={{ color: '#999', fontSize: '14px' }}>
+                  Currently available: Saturn-Uranus, Jupiter-Saturn, Mars-Jupiter (all aspects)
+                </p>
+                <button
+                  onClick={closeModal}
+                  style={{
+                    marginTop: '20px',
+                    padding: '10px 20px',
+                    background: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
