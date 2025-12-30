@@ -130,10 +130,8 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
     // New Moon (Conjunction) - max orb 5°
     const newMoonOrb = diff;
     if (newMoonOrb <= 5) {
-      // Determine phase based on Moon's position relative to Sun
       const moonRelativePos = (moon.longitude - sun.longitude + 360) % 360;
       const isApplying = moonRelativePos > 180;
-
       let phase = 'Exact';
       if (newMoonOrb > 1.5) {
         phase = isApplying ? 'Applying' : 'Separating';
@@ -176,16 +174,13 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
     // Full Moon (Opposition) - max orb 5°
     const fullMoonOrb = Math.abs(diff - 180);
     if (fullMoonOrb <= 5) {
-      // Determine phase for Full Moon
       const moonRelativePos = (moon.longitude - sun.longitude + 360) % 360;
       const isApplying = moonRelativePos < 180;
-
       let phase = 'Exact';
       if (fullMoonOrb > 1.5) {
         phase = isApplying ? 'Applying' : 'Separating';
       }
 
-      // Full Moon position is opposite Sun
       const fullMoonLongitude = (sun.longitude + 180) % 360;
       const positionStr = getPositionString(fullMoonLongitude);
       aspects.push({
@@ -206,26 +201,21 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
     }
   }
 
-  // Check for Sign Ingress (0° of any sign)
+  // Check for Sign Ingress
   const signNames = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
                      'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
   const signSymbols = ['♈', '♉', '♊', '♋', '♌', '♍', '♎', '♏', '♐', '♑', '♒', '♓'];
 
   if (prevPlanets.length > 0) {
     planets.forEach((planet, idx) => {
-      // Skip Moon ingresses (Moon changes signs every ~2.5 days - too frequent)
-      if (planet.name === 'Moon') {
-        return;
-      }
+      // Skip Moon ingresses (too frequent)
+      if (planet.name === 'Moon') return;
 
       const currentSign = Math.floor(planet.longitude / 30);
       const degreeInSign = planet.longitude % 30;
-
-      // Check if planet changed signs from previous day
       const prevPlanet = prevPlanets[idx];
       const prevSign = Math.floor(prevPlanet.longitude / 30);
 
-      // Detect sign change: current sign is different from previous sign
       if (currentSign !== prevSign) {
         aspects.push({
           planet1: planet.name,
@@ -245,13 +235,13 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
     });
   }
 
-  // Regular aspects (excluding Moon and filtering Node oppositions)
-  for (let j = 0; j < planets.length; j++) {
-    for (let k = j + 1; k < planets.length; k++) {
-      const planet1 = planets[j];
-      const planet2 = planets[k];
+  // Regular aspects (excluding Moon and Node oppositions)
+  for (let i = 0; i < planets.length; i++) {
+    for (let j = i + 1; j < planets.length; j++) {
+      const planet1 = planets[i];
+      const planet2 = planets[j];
 
-      // Skip Moon aspects (but lunations are already added above)
+      // Skip Moon aspects (lunations already added)
       if (planet1.name === 'Moon' || planet2.name === 'Moon') {
         continue;
       }
@@ -259,9 +249,8 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
       let diff = Math.abs(planet1.longitude - planet2.longitude);
       if (diff > 180) diff = 360 - diff;
 
-      // Check each aspect type
       for (const aspectType of ASPECT_TYPES) {
-        // Skip North Node opposition South Node (their natural relationship)
+        // Skip North Node opposition South Node
         if (aspectType.name === 'Opposition' &&
             ((planet1.name === 'North Node' && planet2.name === 'South Node') ||
              (planet1.name === 'South Node' && planet2.name === 'North Node'))) {
@@ -280,31 +269,25 @@ const calculateDayAspects = (date: Date, prevDate?: Date) => {
             color1: PLANET_COLORS[planet1.name],
             color2: PLANET_COLORS[planet2.name],
             aspect: aspectType.name,
-            aspectSymbol: aspectType.symbol,
+            symbol: aspectType.symbol,
             color: aspectType.color,
             orb: orb.toFixed(1)
           });
-          break; // Only record one aspect per planet pair
+          break;
         }
       }
     }
   }
 
-  // Sort aspects: regular aspects first, then ingresses, then lunations
+  // Sort: regular aspects first, then ingresses, then lunations
   aspects.sort((a: any, b: any) => {
-    // Lunations last (priority 3)
     if (a.isLunation && !b.isLunation) return 1;
     if (!a.isLunation && b.isLunation) return -1;
-
-    // Ingresses second-to-last (priority 2)
     if (a.isIngress && !b.isIngress && !b.isLunation) return 1;
     if (!a.isIngress && b.isIngress && !a.isLunation) return -1;
-
-    // Within same category, sort by orb (tightest first)
     if (a.orb !== undefined && b.orb !== undefined) {
       return parseFloat(a.orb) - parseFloat(b.orb);
     }
-
     return 0;
   });
 
@@ -400,27 +383,137 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
       {/* Controls */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '10px' }}>
         <div style={{ display: 'flex', gap: '10px' }}>
-          <button onClick={() => setViewMode('7day')} style={{ padding: '8px 16px', background: viewMode === '7day' ? '#4a90e2' : '#e0e0e0', color: viewMode === '7day' ? 'white' : '#333', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: viewMode === '7day' ? 'bold' : 'normal' }}>7 Days</button>
-          <button onClick={() => setViewMode('2week')} style={{ padding: '8px 16px', background: viewMode === '2week' ? '#4a90e2' : '#e0e0e0', color: viewMode === '2week' ? 'white' : '#333', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: viewMode === '2week' ? 'bold' : 'normal' }}>2 Weeks</button>
-          <button onClick={() => setViewMode('3week')} style={{ padding: '8px 16px', background: viewMode === '3week' ? '#4a90e2' : '#e0e0e0', color: viewMode === '3week' ? 'white' : '#333', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: viewMode === '3week' ? 'bold' : 'normal' }}>3 Weeks</button>
-          <button onClick={() => setViewMode('month')} style={{ padding: '8px 16px', background: viewMode === 'month' ? '#4a90e2' : '#e0e0e0', color: viewMode === 'month' ? 'white' : '#333', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: viewMode === 'month' ? 'bold' : 'normal' }}>Month</button>
+          <button
+            onClick={() => setViewMode('7day')}
+            style={{
+              padding: '8px 16px',
+              background: viewMode === '7day' ? '#4a90e2' : '#e0e0e0',
+              color: viewMode === '7day' ? 'white' : '#333',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: viewMode === '7day' ? 'bold' : 'normal'
+            }}
+          >
+            7 Days
+          </button>
+          <button
+            onClick={() => setViewMode('2week')}
+            style={{
+              padding: '8px 16px',
+              background: viewMode === '2week' ? '#4a90e2' : '#e0e0e0',
+              color: viewMode === '2week' ? 'white' : '#333',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: viewMode === '2week' ? 'bold' : 'normal'
+            }}
+          >
+            2 Weeks
+          </button>
+          <button
+            onClick={() => setViewMode('3week')}
+            style={{
+              padding: '8px 16px',
+              background: viewMode === '3week' ? '#4a90e2' : '#e0e0e0',
+              color: viewMode === '3week' ? 'white' : '#333',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: viewMode === '3week' ? 'bold' : 'normal'
+            }}
+          >
+            3 Weeks
+          </button>
+          <button
+            onClick={() => setViewMode('month')}
+            style={{
+              padding: '8px 16px',
+              background: viewMode === 'month' ? '#4a90e2' : '#e0e0e0',
+              color: viewMode === 'month' ? 'white' : '#333',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: viewMode === 'month' ? 'bold' : 'normal'
+            }}
+          >
+            Month
+          </button>
         </div>
 
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <button onClick={goToPrevious} style={{ padding: '8px 16px', background: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>← Previous</button>
-          <button onClick={goToToday} style={{ padding: '8px 16px', background: '#28a745', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>Today</button>
-          <button onClick={goToNext} style={{ padding: '8px 16px', background: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Next →</button>
+          <button
+            onClick={goToPrevious}
+            style={{
+              padding: '8px 16px',
+              background: '#6c757d',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            ← Previous
+          </button>
+          <button
+            onClick={goToToday}
+            style={{
+              padding: '8px 16px',
+              background: '#28a745',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontWeight: 'bold'
+            }}
+          >
+            Today
+          </button>
+          <button
+            onClick={goToNext}
+            style={{
+              padding: '8px 16px',
+              background: '#6c757d',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            Next →
+          </button>
         </div>
       </div>
 
       {/* Calendar Grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${viewMode === '7day' ? 7 : viewMode === '2week' ? 7 : viewMode === '3week' ? 7 : 6}, 1fr)`, gap: '10px' }}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: `repeat(${viewMode === '7day' ? 7 : viewMode === '2week' ? 7 : viewMode === '3week' ? 7 : 6}, 1fr)`,
+        gap: '10px'
+      }}>
         {days.map((day, index) => {
           const isToday = day.date.toDateString() === new Date().toDateString();
 
           return (
-            <div key={index} style={{ border: isToday ? '3px solid #28a745' : '1px solid #ddd', borderRadius: '8px', padding: '10px', background: isToday ? '#f0fff4' : 'white', minHeight: '200px', boxShadow: isToday ? '0 4px 12px rgba(40, 167, 69, 0.3)' : '0 2px 4px rgba(0,0,0,0.1)' }}>
-              <div style={{ fontWeight: 'bold', fontSize: '14px', marginBottom: '8px', color: isToday ? '#28a745' : '#333', borderBottom: '2px solid ' + (isToday ? '#28a745' : '#ddd'), paddingBottom: '5px' }}>
+            <div
+              key={index}
+              style={{
+                border: isToday ? '3px solid #28a745' : '1px solid #ddd',
+                borderRadius: '8px',
+                padding: '10px',
+                background: isToday ? '#f0fff4' : 'white',
+                minHeight: '200px',
+                boxShadow: isToday ? '0 4px 12px rgba(40, 167, 69, 0.3)' : '0 2px 4px rgba(0,0,0,0.1)'
+              }}
+            >
+              <div style={{
+                fontWeight: 'bold',
+                fontSize: '14px',
+                marginBottom: '8px',
+                color: isToday ? '#28a745' : '#333',
+                borderBottom: '2px solid ' + (isToday ? '#28a745' : '#ddd'),
+                paddingBottom: '5px'
+              }}>
                 {day.date.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
               </div>
 
@@ -476,9 +569,15 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                       ) : (
                         <>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }}>
-                            <span style={{ color: aspect.color1, fontSize: '12px', fontWeight: 'bold' }}>{aspect.symbol1}</span>
-                            <span style={{ color: aspect.color, fontSize: '11px', fontWeight: 'bold' }}>{aspect.aspectSymbol}</span>
-                            <span style={{ color: aspect.color2, fontSize: '12px', fontWeight: 'bold' }}>{aspect.symbol2}</span>
+                            <span style={{ color: aspect.color1, fontSize: '12px', fontWeight: 'bold' }}>
+                              {aspect.symbol1}
+                            </span>
+                            <span style={{ color: aspect.color, fontSize: '11px', fontWeight: 'bold' }}>
+                              {aspect.symbol}
+                            </span>
+                            <span style={{ color: aspect.color2, fontSize: '12px', fontWeight: 'bold' }}>
+                              {aspect.symbol2}
+                            </span>
                           </div>
                           <div style={{ fontSize: '8px', color: '#666', marginTop: '1px' }}>
                             {aspect.planet1} {aspect.aspect} {aspect.planet2}
@@ -491,7 +590,9 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                     </div>
                   ))
                 ) : (
-                  <div style={{ color: '#999', fontStyle: 'italic', fontSize: '10px', marginTop: '10px' }}>No major aspects</div>
+                  <div style={{ color: '#999', fontStyle: 'italic', fontSize: '10px', marginTop: '10px' }}>
+                    No major aspects
+                  </div>
                 )}
               </div>
             </div>
@@ -502,6 +603,8 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
       {/* Legend */}
       <div style={{ marginTop: '30px', padding: '15px', background: '#f9f9f9', borderRadius: '8px' }}>
         <h4 style={{ marginBottom: '10px', fontSize: '14px' }}>Legend</h4>
+
+        {/* Aspect Types */}
         <div style={{ marginBottom: '15px' }}>
           <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '8px', color: '#555' }}>Aspect Types:</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', fontSize: '12px' }}>
@@ -513,6 +616,8 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
             ))}
           </div>
         </div>
+
+        {/* Orb Settings */}
         <div>
           <div style={{ fontWeight: 'bold', fontSize: '12px', marginBottom: '8px', color: '#555' }}>Orb Settings (Conj/Opp — Trine/Square — Sextile):</div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '8px', fontSize: '11px', color: '#666' }}>
@@ -524,16 +629,191 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
             <div>🔀 <strong>Mixed (Inner-Outer):</strong> 4° / 3° / 2.5°</div>
           </div>
         </div>
+
+        {/* Tip */}
         <div style={{ marginTop: '15px', padding: '10px', background: '#e8f4ff', borderRadius: '6px', fontSize: '12px', color: '#2c5aa0' }}>
           💡 <strong>Tip:</strong> Click on regular aspects to view detailed interpretations. Lunations (New/Full Moons) and Ingresses are shown at the bottom of each day.
         </div>
       </div>
 
-      {/* Modal - shortened for brevity but includes full interpretation display */}
-      {selectedAspect && selectedAspect.interpretation && (
-        <div onClick={closeModal} style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.7)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px' }}>
-          <div onClick={(e) => e.stopPropagation()} style={{ background: 'white', borderRadius: '12px', maxWidth: '800px', width: '100%', maxHeight: '90vh', overflow: 'auto', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
-            {/* Interpretation content follows same structure as before */}
+      {/* Modal for Aspect Interpretation */}
+      {selectedAspect && (
+        <div
+          onClick={closeModal}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            padding: '20px'
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: 'white',
+              borderRadius: '12px',
+              maxWidth: '800px',
+              width: '100%',
+              maxHeight: '90vh',
+              overflow: 'auto',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+            }}
+          >
+            {selectedAspect.interpretation ? (
+              <div>
+                {/* Header */}
+                <div style={{
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  color: 'white',
+                  padding: '20px',
+                  borderRadius: '12px 12px 0 0',
+                  position: 'sticky',
+                  top: 0,
+                  zIndex: 1
+                }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start' }}>
+                    <div>
+                      <h2 style={{ margin: 0, marginBottom: '8px' }}>{selectedAspect.interpretation.name}</h2>
+                      <div style={{ fontSize: '14px', opacity: 0.9 }}>
+                        Orb: {selectedAspect.orb}° | {selectedAspect.interpretation.frequency}
+                      </div>
+                    </div>
+                    <button
+                      onClick={closeModal}
+                      style={{
+                        background: 'rgba(255,255,255,0.2)',
+                        border: 'none',
+                        color: 'white',
+                        fontSize: '24px',
+                        cursor: 'pointer',
+                        borderRadius: '50%',
+                        width: '36px',
+                        height: '36px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      ×
+                    </button>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div style={{ padding: '20px' }}>
+                  {/* Duration */}
+                  <div style={{ marginBottom: '20px', padding: '12px', background: '#fff3cd', borderRadius: '6px', borderLeft: '4px solid #ffc107' }}>
+                    <strong>⏱️ Duration:</strong> {selectedAspect.interpretation.duration}
+                  </div>
+
+                  {/* Planet Energies */}
+                  <div style={{ marginBottom: '20px' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '12px', color: '#333' }}>🌟 Planet Energies</h3>
+                    <div style={{ padding: '12px', background: '#f8f9fa', borderRadius: '6px', marginBottom: '10px' }}>
+                      <strong style={{ color: PLANET_COLORS[selectedAspect.planet1] }}>{selectedAspect.planet1}:</strong> {selectedAspect.interpretation.planet1Energy}
+                    </div>
+                    <div style={{ padding: '12px', background: '#f8f9fa', borderRadius: '6px' }}>
+                      <strong style={{ color: PLANET_COLORS[selectedAspect.planet2] }}>{selectedAspect.planet2}:</strong> {selectedAspect.interpretation.planet2Energy}
+                    </div>
+                  </div>
+
+                  {/* Aspect Meaning */}
+                  <div style={{ marginBottom: '20px', padding: '15px', background: '#e8f4ff', borderRadius: '6px', borderLeft: '4px solid #4a90e2' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '8px', color: '#2c5aa0' }}>✨ Aspect Meaning</h3>
+                    <p style={{ margin: 0, lineHeight: '1.6' }}>{selectedAspect.interpretation.aspectMeaning}</p>
+                  </div>
+
+                  {/* Life Areas */}
+                  <div style={{ marginBottom: '20px' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '12px', color: '#333' }}>🎯 How This Affects Different Life Areas</h3>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#ffe8f0', borderRadius: '6px', borderLeft: '4px solid #e91e63' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#c2185b' }}>💕 Love & Relationships</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.loveRelationships}</p>
+                    </div>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#fff3e0', borderRadius: '6px', borderLeft: '4px solid #ff9800' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#e65100' }}>🏠 Family & Home</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.familyHome}</p>
+                    </div>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#e8f5e9', borderRadius: '6px', borderLeft: '4px solid #4caf50' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#2e7d32' }}>💼 Business & Career</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.businessCareer}</p>
+                    </div>
+
+                    <div style={{ marginBottom: '12px', padding: '12px', background: '#f3e5f5', borderRadius: '6px', borderLeft: '4px solid #9c27b0' }}>
+                      <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#6a1b9a' }}>💰 Money & Finances</h4>
+                      <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px' }}>{selectedAspect.interpretation.moneyFinances}</p>
+                    </div>
+                  </div>
+
+                  {/* Predictions */}
+                  <div style={{ marginBottom: '10px' }}>
+                    <h3 style={{ fontSize: '16px', marginBottom: '12px', color: '#333' }}>🔮 10 Predictions - What Can Happen</h3>
+                    <div style={{ background: '#f8f9fa', borderRadius: '6px', padding: '15px' }}>
+                      {selectedAspect.interpretation.predictions.map((prediction, idx) => (
+                        <div key={idx} style={{
+                          marginBottom: idx < selectedAspect.interpretation!.predictions.length - 1 ? '10px' : 0,
+                          paddingBottom: idx < selectedAspect.interpretation!.predictions.length - 1 ? '10px' : 0,
+                          borderBottom: idx < selectedAspect.interpretation!.predictions.length - 1 ? '1px solid #dee2e6' : 'none'
+                        }}>
+                          <div style={{ display: 'flex', gap: '10px' }}>
+                            <div style={{
+                              minWidth: '24px',
+                              height: '24px',
+                              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                              color: 'white',
+                              borderRadius: '50%',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '12px',
+                              fontWeight: 'bold'
+                            }}>
+                              {idx + 1}
+                            </div>
+                            <p style={{ margin: 0, lineHeight: '1.6', fontSize: '13px', flex: 1 }}>{prediction}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div style={{ padding: '40px', textAlign: 'center' }}>
+                <div style={{ fontSize: '48px', marginBottom: '20px' }}>📚</div>
+                <h3 style={{ color: '#666', marginBottom: '10px' }}>Interpretation Not Available</h3>
+                <p style={{ color: '#999', marginBottom: '20px' }}>
+                  Detailed interpretation for {selectedAspect.planet1} {selectedAspect.aspect} {selectedAspect.planet2} is not yet available.
+                </p>
+                <p style={{ color: '#999', fontSize: '14px' }}>
+                  Currently available: Saturn-Uranus, Jupiter-Saturn, Mars-Jupiter (all aspects)
+                </p>
+                <button
+                  onClick={closeModal}
+                  style={{
+                    marginTop: '20px',
+                    padding: '10px 20px',
+                    background: '#6c757d',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
