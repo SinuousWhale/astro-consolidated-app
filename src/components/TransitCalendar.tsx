@@ -645,6 +645,13 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                       {aspect ? (
                         <div
                           onClick={() => handleAspectClick(aspect)}
+                          title={
+                            aspect.isLunation
+                              ? `${aspect.aspect} at ${aspect.position} (${aspect.phase})`
+                              : aspect.isIngress
+                                ? `${aspect.planet1} enters ${aspect.signName}`
+                                : `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb`
+                          }
                           style={{
                             padding: '6px 4px',
                             backgroundColor: aspect.isLunation ? '#fff3cd' : hexToRgba(aspect.color1, 0.2),
@@ -656,12 +663,14 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            minHeight: '40px'
+                            minHeight: '50px',
+                            gap: '2px'
                           }}
                         >
                           {aspect.isLunation ? (
                             <div style={{ textAlign: 'center' }}>
-                              <div style={{ fontWeight: 'bold', fontSize: '9px' }}>{aspect.aspectSymbol} {aspect.aspect}</div>
+                              <div style={{ fontWeight: 'bold', fontSize: '10px' }}>{aspect.aspectSymbol} {aspect.aspect}</div>
+                              <div style={{ fontSize: '8px', color: '#666' }}>at {aspect.position}</div>
                               <div style={{ fontSize: '8px', color: '#666' }}>({aspect.phase})</div>
                             </div>
                           ) : aspect.isIngress ? (
@@ -671,21 +680,25 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                                 {' '}→{' '}
                                 <span>{aspect.symbol2}</span>
                               </div>
-                              <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}°</div>
+                              <div style={{ fontSize: '8px', color: '#666' }}>{aspect.planet1} enters {aspect.signName}</div>
+                              <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}° in</div>
                             </div>
                           ) : (
                             <div style={{ textAlign: 'center' }}>
-                              <div style={{ fontWeight: 'bold', fontSize: '11px' }}>
+                              <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
                                 <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
                                 {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
                                 <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
                               </div>
-                              <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}°</div>
+                              <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
+                                {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                              </div>
+                              <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
                             </div>
                           )}
                         </div>
                       ) : (
-                        <div style={{ minHeight: '40px' }}></div>
+                        <div style={{ minHeight: '50px' }}></div>
                       )}
                     </td>
                   );
