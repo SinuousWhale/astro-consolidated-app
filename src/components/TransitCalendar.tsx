@@ -484,11 +484,39 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
     setSelectedAspect(null);
   };
 
+  // Get date range display for current view
+  const getDateRangeDisplay = () => {
+    const daysCount = viewMode === '7day' ? 7 : viewMode === '2week' ? 14 : viewMode === '3week' ? 21 : 30;
+    const endDate = new Date(currentStartDate);
+    endDate.setDate(endDate.getDate() + daysCount - 1);
+
+    const startMonth = currentStartDate.toLocaleDateString('en-US', { month: 'long' });
+    const startYear = currentStartDate.getFullYear();
+    const endMonth = endDate.toLocaleDateString('en-US', { month: 'long' });
+    const endYear = endDate.getFullYear();
+
+    // Same month and year
+    if (startMonth === endMonth && startYear === endYear) {
+      return `${startMonth} ${startYear}`;
+    }
+    // Same year, different months
+    if (startYear === endYear) {
+      return `${startMonth} - ${endMonth} ${startYear}`;
+    }
+    // Different years
+    return `${startMonth} ${startYear} - ${endMonth} ${endYear}`;
+  };
+
   return (
     <div style={{ padding: '20px', maxWidth: '1400px', margin: '0 auto' }}>
-      <h2 style={{ textAlign: 'center', color: '#333', marginBottom: '20px' }}>
+      <h2 style={{ textAlign: 'center', color: '#333', marginBottom: '10px' }}>
         Transit Calendar - Active Cosmic Currents
       </h2>
+
+      {/* Date Range Display */}
+      <div style={{ textAlign: 'center', fontSize: '16px', fontWeight: '600', color: '#4a90e2', marginBottom: '20px' }}>
+        {getDateRangeDisplay()}
+      </div>
 
       {/* Controls */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '10px' }}>
