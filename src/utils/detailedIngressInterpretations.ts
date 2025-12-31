@@ -56,6 +56,281 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
     ]
   },
 
+  'Mars-Taurus': {
+    name: 'Mars Ingress Taurus',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Taurus represents stability, sensory pleasure, material security, patience, persistence, comfort, and tangible beauty. It\'s the energy of grounding, enjoying physical reality, and building lasting value.',
+    eventMeaning: 'Mars in Taurus brings slow, steady, persistent action and physical stamina. Drive becomes focused on tangible results and material security. The next 6 weeks favor patient pursuit of goals, building lasting value, physical endurance work, and securing resources. Action is deliberate but unstoppable once committed. Excellent for sustained effort, financial goals, physical projects, or building something real. Stubbornness intensifies - determination is strength but inflexibility can block progress.',
+    loveRelationships: 'Sexual passion becomes more physical, sensual, and enduring. Pursue romance steadily and patiently - show interest through consistent action. Physical touch and sensual pleasure intensify in relationships. Attraction to stable, reliable partners. Existing relationships benefit from more physical affection and building security together. Possessiveness possible - channel into loyalty without smothering. Show desire through tangible actions and patient pursuit.',
+    familyHome: 'Physical energy directed toward home improvement, building, or creating comfort and security. Excellent time for renovation projects, gardening, or improving property value. Family conflicts may become stubborn - address issues patiently but persistently. Assert family security needs. Physical work on home brings satisfaction. Build lasting family security through patient, consistent effort. Protect what you value.',
+    businessCareer: 'Career action focused on building lasting value and financial security. Excellent for work requiring physical stamina, persistence, quality craftsmanship, or material results. Start business ventures with solid foundation, pursue financial goals steadily, or demonstrate reliable work ethic. Your persistence and tangible results impress others. Good for finance, agriculture, construction, crafts, or material production. Slow and steady wins.',
+    moneyFinances: 'Strong financial drive and persistent money-making action. Excellent time to pursue income steadily, build wealth through patient effort, or secure financial resources. Earning through physical work, quality craftsmanship, or material production. Take calculated financial risks based on tangible value. Money goals achieved through persistence and consistent action. Build financial security through sustained effort. Protect and grow resources methodically.',
+    predictions: [
+      'Sustained physical effort on project produces tangible, valuable results',
+      'Financial goal achieved through patient, persistent action over weeks',
+      'Physical stamina and endurance increase significantly through consistent effort',
+      'Home improvement or building project completes successfully',
+      'Stubborn persistence on important matter finally achieves breakthrough',
+      'Sexual or physical relationship deepens through consistent sensual attention',
+      'Material security improves through protecting and building resources',
+      'Quality work you produce through patient effort gets recognized and valued',
+      'Determination on difficult task overcomes obstacles through sheer persistence',
+      'You learn that slow, steady, consistent action creates lasting value and results'
+    ]
+  },
+
+  'Mars-Gemini': {
+    name: 'Mars Ingress Gemini',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Gemini represents curiosity, versatility, communication, mental quickness, learning, connections, and seeing multiple perspectives. It\'s the energy of questions, conversations, and information exchange.',
+    eventMeaning: 'Mars in Gemini brings quick, versatile, mentally active drive and scattered energy. Action becomes focused on communication, learning, and pursuing multiple interests. The next 6 weeks favor mental challenges, communication projects, learning new skills quickly, and versatile pursuit of goals. Energy scatters across many interests - multitasking peaks. Excellent for debates, writing, sales, networking, or quick learning. Mental restlessness intensifies - stay focused or energy dissipates.',
+    loveRelationships: 'Sexual passion expressed through mental stimulation and playful communication. Pursue romance through witty conversation, mental challenge, and variety. Physical chemistry needs mental connection to ignite. Attraction to intelligent, communicative, versatile partners. Existing relationships benefit from more conversation, variety, and playful interaction. Arguments may increase but resolve through communication. Keep romance mentally stimulating and varied.',
+    familyHome: 'Mental and physical restlessness at home - need variety and stimulation. Good time for communication-focused family projects, short family trips, or mentally engaging home activities. Family conflicts addressed through discussion and debate. Multiple home projects started - finish what matters. Physical energy directed toward learning, communication, or connecting with siblings and neighbors. Home may feel confining - create mental stimulation.',
+    businessCareer: 'Career drive focused on communication, networking, learning, and versatile projects. Excellent for work in writing, teaching, sales, media, consulting, or fields requiring mental agility. Pursue multiple professional opportunities simultaneously. Your quick thinking and versatile skills advance career. Good for debates, presentations, pitches, or learning new skills quickly. Avoid scattered focus - pursue key opportunities decisively. Mental energy drives professional action.',
+    moneyFinances: 'Financial energy directed toward multiple income streams and versatile earning. Good time to pursue varied financial opportunities, earn through communication or teaching, or learn about money quickly. Spending on communication tools, learning, or varied interests. Financial decisions benefit from gathering information and staying mentally flexible. Money through networking, writing, sales, or intellectual work. Avoid scattered financial focus - diversify but don\'t disperse.',
+    predictions: [
+      'Quick thinking or mental agility helps you seize opportunity others miss',
+      'Communication project or writing you pursue energetically succeeds',
+      'Multiple opportunities arise simultaneously - your versatility handles them',
+      'Debate or argument where your quick wit and mental courage win the day',
+      'Learning new skill quickly through energetic mental focus',
+      'Networking or social action leads to unexpected professional opportunity',
+      'Short trip or local exploration energizes and creates connections',
+      'Mental restlessness drives you to try something new and stimulating',
+      'Sibling or neighbor interaction where your assertiveness clears air',
+      'You learn that mental energy and versatile action create diverse opportunities'
+    ]
+  },
+
+  'Mars-Cancer': {
+    name: 'Mars Ingress Cancer',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Cancer represents nurturing, emotions, safety, family, roots, intuition, and the protective instinct. It\'s the energy of home, emotional security, and caring for yourself and others.',
+    eventMeaning: 'Mars in Cancer brings emotional, protective, defensive drive and indirect action. Energy becomes focused on home, family, and emotional security. The next 6 weeks favor protecting what you love, pursuing family goals, home improvements, and emotional assertion. Action style becomes more indirect and intuitive. Excellent for home projects, family initiatives, or fighting for emotional security. Passive-aggression and moodiness intensify - channel emotion into protective action, not defensive withdrawal.',
+    loveRelationships: 'Sexual passion connected to emotional security and intimacy. Pursue romance indirectly through creating safety and emotional connection. Physical chemistry needs emotional bonding to fully ignite. Attraction to partners who feel safe and family-oriented. Existing relationships benefit from more emotional assertion and fighting for relationship security. Moodiness or passive-aggression possible - communicate emotional needs directly. Protect relationship without smothering.',
+    familyHome: 'Peak energy for home improvements, family protection, and creating domestic security. Excellent time for renovation, moving, defending family interests, or pursuing family goals assertively. Family conflicts may intensify emotionally - protect your needs while respecting others\'. Physical energy directed toward making home safe and comfortable. Fight for family but avoid being overly defensive. Nurturing action creates results.',
+    businessCareer: 'Career drive focused on emotional security, family business, or nurturing professions. Excellent for work in real estate, food service, childcare, home-based business, or care professions. Pursue career goals that provide security and emotional satisfaction. Your protective instincts and emotional courage advance career. Good for asserting workplace boundaries or fighting for team/family atmosphere at work. Intuition guides career action wisely.',
+    moneyFinances: 'Financial drive focused on security, home, and family needs. Excellent time to pursue income for family security, invest in property, or fight for financial safety. Earning through nurturing work, home-based business, or emotional intelligence. Take action to protect and build financial nest egg. Money goals connected to emotional security and family wellbeing. Channel emotional energy into practical financial protection and growth.',
+    predictions: [
+      'Home improvement or renovation you pursue energetically creates sanctuary',
+      'Protective action on behalf of family or loved one makes real difference',
+      'Financial move to increase security pays off through persistent effort',
+      'Emotional boundary you assert changes relationship dynamics for better',
+      'Intuitive action on opportunity your feelings tell you to pursue',
+      'Family matter where your courage to fight for what\'s right resolves issue',
+      'Real estate or property action taken decisively improves your situation',
+      'Nurturing action or caring for someone creates deep bond and satisfaction',
+      'Defensive response that actually protects something important and valuable',
+      'You learn that emotional courage and protective action secure what you love'
+    ]
+  },
+
+  'Mars-Leo': {
+    name: 'Mars Ingress Leo',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, romance, and radiant presence. It\'s the energy of shining brightly, creating from the heart, and celebrating life with enthusiasm.',
+    eventMeaning: 'Mars in Leo brings bold, confident, dramatic action and creative drive. Energy becomes focused on self-expression, creative pursuits, and courageous leadership. The next 6 weeks favor pursuing creative projects boldly, taking center stage, leadership action, and expressing yourself powerfully. Action style becomes more theatrical and confident. Excellent for creative work, performance, leadership, or romantic pursuit. Ego and pride intensify - channel into authentic confidence, not arrogance.',
+    loveRelationships: 'Sexual passion becomes dramatic, playful, and confidence-driven. Pursue romance boldly and generously through grand gestures and confident expression. Physical chemistry intensifies through mutual admiration and playful energy. Attraction to confident, expressive, charismatic partners. Existing relationships heat up through more romance, play, and mutual celebration. Pride in relationship increases. Express desire confidently and generously. Avoid ego battles.',
+    familyHome: 'Creative energy and leadership at home. Excellent time for home improvements that express personal style boldly, creative family projects, or taking leadership role in family. Family pride increases - celebrate family achievements. Physical energy directed toward creating beautiful, impressive home environment. Family conflicts may involve pride - address with confident generosity, not domination. Lead family activities with warmth and enthusiasm.',
+    businessCareer: 'Career drive focused on creative expression, leadership, and recognition. Excellent for work in entertainment, arts, teaching, leadership positions, or fields requiring charisma and confidence. Pursue career goals boldly and showcase your talents. Your confidence and creative courage impress others. Good for presentations, performances, launching creative ventures, or taking center stage professionally. Lead with warmth and generosity. Earn recognition through authentic self-expression.',
+    moneyFinances: 'Financial drive connected to creative work, self-expression, and generous action. Good time to pursue income through creative talents, charge what you\'re worth confidently, or invest in yourself. Earning through performance, teaching, creative work, or leadership. Spending on creative expression, entertainment, or what makes you feel special. Financial confidence increases - be bold but not reckless. Money through shining your unique talents.',
+    predictions: [
+      'Creative project you pursue with passion and confidence receives recognition',
+      'Leadership opportunity where your courage and charisma are exactly what\'s needed',
+      'Romantic pursuit through bold, confident action succeeds beautifully',
+      'Performance or presentation where your energy and confidence shine',
+      'Financial opportunity through showcasing your creative talents boldly',
+      'Physical activity or competition where your enthusiasm gives you edge',
+      'Creative risk or bold move that expresses authentic self pays off',
+      'Family or work situation where your generous leadership makes difference',
+      'Confidence breakthrough - you pursue something you wanted but feared',
+      'You learn that bold, authentic self-expression and confident action attract success'
+    ]
+  },
+
+  'Mars-Virgo': {
+    name: 'Mars Ingress Virgo',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Virgo represents refinement, service, health, organization, discernment, and practical improvement. It\'s the energy of making things better through detailed attention and skillful craft.',
+    eventMeaning: 'Mars in Virgo brings precise, analytical, service-oriented action and detailed drive. Energy becomes focused on improvement, organization, health, and skillful work. The next 6 weeks favor pursuing practical goals methodically, improving systems, health and fitness routines, and detailed problem-solving. Action style becomes more analytical and perfectionistic. Excellent for organization projects, skill development, health improvements, or quality work. Criticism and perfectionism intensify - channel into constructive improvement, not fault-finding.',
+    loveRelationships: 'Sexual passion expressed through service, attention to detail, and practical care. Pursue romance through helpful actions, noticing partner\'s needs, and improving relationship practically. Physical chemistry builds through competence and attentive care. Attraction to skilled, health-conscious, helpful partners. Existing relationships benefit from addressing practical issues and establishing healthy routines together. Criticism of partner possible - offer help, not judgment. Show desire through useful actions.',
+    familyHome: 'Energy directed toward home organization, improvement, and practical family help. Excellent time for organizing home efficiently, health and wellness routines, or helping family members practically. Family conflicts addressed through problem-solving and practical solutions. Physical energy focused on detailed home projects and creating efficient, healthy environment. Avoid being too critical of family - help them improve, don\'t just criticize. Serve family through useful action.',
+    businessCareer: 'Career drive focused on quality work, skill development, and practical problem-solving. Excellent for work in healthcare, crafts, editing, analytics, quality control, organization, or service professions. Pursue career goals through demonstrating competence and attention to detail. Your skill and practical problem-solving advance career. Good for refining work quality, organizing projects, or improving professional processes. Earn recognition through excellence and useful service.',
+    moneyFinances: 'Financial drive directed toward practical improvement, budgeting, and earning through skilled work. Excellent time to organize finances, cut wasteful expenses, or pursue income through competence and service. Earning through skilled work, healthcare, quality control, or analytical services. Spending on health, quality tools, or practical improvements. Financial action should be analytical and efficient. Build wealth through skill, service, and practical money management.',
+    predictions: [
+      'Organization or system improvement you implement creates efficiency and results',
+      'Health and fitness routine you pursue energetically improves wellbeing significantly',
+      'Detailed work or skill development produces high-quality, valuable results',
+      'Problem-solving action on practical issue finally resolves persistent difficulty',
+      'Home organization project you tackle energetically transforms living space',
+      'Service or help you provide makes real difference in someone\'s life',
+      'Budget or financial refinement reveals savings and improves security',
+      'Quality work you pursue with attention to detail receives recognition',
+      'Critical eye you apply constructively prevents error and improves outcome',
+      'You learn that precise, skillful, service-oriented action creates excellent results'
+    ]
+  },
+
+  'Mars-Libra': {
+    name: 'Mars Ingress Libra',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Libra represents balance, partnership, beauty, harmony, diplomacy, and fairness. It\'s the energy of relationships, aesthetics, and seeking equilibrium through connection with others.',
+    eventMeaning: 'Mars in Libra brings diplomatic, partnership-oriented, fair action and balanced drive. Energy becomes focused on relationships, collaboration, and seeking justice. The next 6 weeks favor pursuing goals through partnership, fighting for fairness, diplomatic assertion, and collaborative action. Action style becomes more considerate but may be indecisive. Excellent for negotiations, partnerships, advocacy, or beautifying projects. Conflict avoidance and indecision intensify - channel diplomacy into fair assertiveness, not passive accommodation.',
+    loveRelationships: 'Sexual passion balanced with romance, consideration, and aesthetic experience. Pursue romance through charm, fairness, and creating beautiful shared experiences. Physical chemistry needs mental connection and mutual respect. Attraction to charming, fair-minded, aesthetically aware partners. Existing relationships benefit from more balanced give-and-take and diplomatic conflict resolution. Assert desires charmingly rather than aggressively. Fight for relationship equality and fairness.',
+    familyHome: 'Energy directed toward family harmony, fair mediation, and home beautification. Excellent time for mediating family conflicts diplomatically, beautifying home aesthetically, or pursuing family goals through collaboration. Family relationships benefit from more fairness and balanced assertion. Physical energy focused on creating beautiful, harmonious home environment. Avoid conflict avoidance - pursue family harmony through fair assertiveness, not just keeping peace.',
+    businessCareer: 'Career drive focused on partnerships, collaboration, fairness, and aesthetic work. Excellent for work in law, mediation, design, counseling, sales through charm, or relationship-oriented fields. Pursue career goals through collaboration and diplomatic assertion. Your charm and fairness advance career. Good for negotiations, forming partnerships, advocating for justice, or beautifying work. Balance assertiveness with consideration. Fight for professional fairness.',
+    moneyFinances: 'Financial drive directed toward partnership ventures, fair negotiations, and balanced money management. Excellent time to pursue income through partnerships, negotiate fairly for what you\'re worth, or invest in beauty and balance. Earning through diplomatic work, design, law, or relationship services. Spending on beauty, art, or aesthetic improvements. Financial action should be fair and collaborative. Fight for financial fairness and balance.',
+    predictions: [
+      'Partnership or collaboration you pursue actively produces better results than solo effort',
+      'Negotiation where your diplomatic assertiveness achieves fair, beneficial outcome',
+      'Home beautification project you tackle creates harmonious, aesthetically pleasing space',
+      'Conflict you mediate diplomatically resolves fairly for all parties',
+      'Relationship matter where fighting for equality and fairness improves dynamics',
+      'Career opportunity through networking, charm, and collaborative action',
+      'Financial partnership or venture you pursue actively succeeds through mutual benefit',
+      'Aesthetic or design work you pursue energetically receives appreciation',
+      'Social action or advocacy for justice and fairness makes real difference',
+      'You learn that diplomatic assertiveness and fighting for fairness create better results than aggression or avoidance'
+    ]
+  },
+
+  'Mars-Scorpio': {
+    name: 'Mars Ingress Scorpio',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Scorpio represents depth, transformation, power, intimacy, truth, and regeneration. It\'s the energy of diving deep, facing shadows, and emerging transformed through intensity.',
+    eventMeaning: 'Mars in Scorpio is the warrior in one of his traditional home signs - Mars co-rules Scorpio, so this placement brings powerful, intense, strategic action. Drive becomes laser-focused, deeply passionate, and unstoppable. The next 6 weeks favor pursuing goals with total commitment, transformative action, strategic power moves, and facing difficult truths. Action style becomes more intense and focused. Excellent for research, investigation, transformation work, or pursuing deep desires. Obsession and control issues intensify - channel power wisely.',
+    loveRelationships: 'Sexual passion reaches intense, transformative depths. Pursue romance with focused intensity and magnetic power. Physical chemistry becomes all-consuming and deeply bonding. Attraction to intense, mysterious, emotionally powerful partners. Existing relationships either deepen profoundly through intimacy and truth, or power struggles intensify. Assert desires with passionate honesty. Jealousy possible - channel into loyalty and depth, not control. Transform relationship through intense connection.',
+    familyHome: 'Intense energy directed toward family transformation, uncovering family secrets, or pursuing family resources. Excellent time for deep home renovation, addressing family shadows, or pursuing family financial matters powerfully. Family conflicts may intensify - address hidden dynamics and power issues honestly. Physical energy focused on transforming home or eliminating what\'s dead. Fight for family deeply but avoid manipulation. Pursue family goals with unwavering commitment.',
+    businessCareer: 'Career drive intensely focused on transformation, power, and deep work. Excellent for work in research, investigation, psychology, crisis management, surgery, finance, or transformative fields. Pursue career goals with total commitment and strategic power. Your intensity and depth impress others. Good for uncovering hidden information, pursuing ambitious goals relentlessly, or transforming career. Fight for professional power and recognition. Use influence wisely, not manipulatively.',
+    moneyFinances: 'Intense financial drive and strategic money action. Excellent time to pursue investments powerfully, deal with shared finances or debt, or transform financial situation completely. Earning through research, transformative work, managing resources, or depth services. Take strategic financial action with focused intensity. Money goals achieved through unwavering commitment. Pursue financial power and transformation. Use money power wisely and ethically.',
+    predictions: [
+      'Goal you pursue with intense focus and unwavering commitment finally succeeds',
+      'Sexual or emotional intimacy reaches transformative new depth',
+      'Financial opportunity through investment, inheritance, or shared resources',
+      'Investigation or research you pursue intensely uncovers crucial hidden information',
+      'Transformation you pursue powerfully (career, habit, relationship) succeeds',
+      'Power dynamic you address honestly and forcefully shifts in healthier direction',
+      'Hidden truth or shadow issue you confront directly transforms situation',
+      'Strategic action you take with perfect timing achieves desired result',
+      'Passionate commitment or loyalty that deepens bond profoundly',
+      'You learn that focused intensity, strategic action, and facing truth create powerful transformation'
+    ]
+  },
+
+  'Mars-Sagittarius': {
+    name: 'Mars Ingress Sagittarius',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, and finding meaning through broadening horizons.',
+    eventMeaning: 'Mars in Sagittarius brings adventurous, optimistic, freedom-seeking action and expansive drive. Energy becomes focused on exploration, truth, learning, and broadening horizons. The next 6 weeks favor pursuing adventures boldly, educational goals, travel action, and fighting for truth and freedom. Action style becomes more direct, honest, and risk-taking. Excellent for travel, education, outdoor activities, publishing, or pursuing big visions. Restlessness and overconfidence intensify - channel optimism into wise action, not reckless gambles.',
+    loveRelationships: 'Sexual passion expressed through adventure, honesty, and freedom. Pursue romance boldly and directly through shared adventures and authentic truth-telling. Physical chemistry needs freedom and excitement to thrive. Attraction to adventurous, honest, philosophical partners. Existing relationships benefit from more adventure, honesty, and independence. Fight for relationship freedom and growth. Restlessness in relationship possible - add adventure rather than escaping. Express desire honestly and optimistically.',
+    familyHome: 'Adventurous energy and drive for freedom at home. Excellent time for family travel, outdoor family activities, or expanding home space. Family relationships benefit from more honesty, freedom, and shared adventures. Physical energy directed toward exploration and escape from confinement. Home may feel restrictive - plan adventures or expand boundaries. Fight for family freedom and growth. Avoid being preachy - inspire through action, not lectures.',
+    businessCareer: 'Career drive focused on expansion, teaching, adventure, and pursuing big vision. Excellent for work in education, travel, publishing, international business, outdoor industries, or philosophical fields. Pursue career goals boldly and optimistically. Your vision and courage advance career. Good for taking career risks, expanding business, traveling for work, or teaching and inspiring others. Fight for professional freedom and growth. Think big and act courageously.',
+    moneyFinances: 'Optimistic financial drive and risk-taking money action. Good time to pursue growth investments, international opportunities, or expand income through bold action. Earning through teaching, travel, publishing, or adventurous work. Spending on travel, education, adventure, or growth experiences. Financial action should be optimistic but not reckless - take calculated risks. Money through courage, vision, and expansion. Trust abundance but verify facts.',
+    predictions: [
+      'Adventure or travel you pursue boldly creates memorable experiences and growth',
+      'Educational goal or class you tackle enthusiastically expands your horizons',
+      'Risk you take (calculated, not reckless) pays off with growth and opportunity',
+      'Honest, direct action on matter cuts through complexity and achieves result',
+      'Physical or outdoor challenge you pursue courageously succeeds',
+      'International connection or travel opportunity you pursue actively opens doors',
+      'Teaching or sharing knowledge you do energetically inspires others',
+      'Freedom or independence you fight for improves your situation',
+      'Big vision or ambitious goal you pursue boldly moves forward significantly',
+      'You learn that courageous action, honest pursuit, and adventurous spirit create growth and freedom'
+    ]
+  },
+
+  'Mars-Capricorn': {
+    name: 'Mars Ingress Capricorn',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Capricorn represents ambition, responsibility, discipline, achievement, mastery, and building lasting structures. It\'s the energy of climbing the mountain through persistent effort and mature commitment.',
+    eventMeaning: 'Mars in Capricorn is the warrior exalted - Mars is exalted in Capricorn, so this placement brings strategic, disciplined, ambitious action at its best. Drive becomes focused on achievement, goals, and building lasting success. The next 6 weeks favor pursuing ambitious goals methodically, career advancement, disciplined work, and strategic action. Action style becomes more controlled and strategic. Excellent for business, career moves, achieving goals, or building structures. This is Mars at peak effectiveness. Avoid being too rigid or cold.',
+    loveRelationships: 'Sexual passion expressed through commitment, achievement, and building future together. Pursue romance through demonstrating reliability, ambition, and long-term potential. Physical chemistry builds through respect and shared goals. Attraction to ambitious, mature, successful partners. Existing relationships benefit from more commitment, shared goals, and building security together. Assert desires maturely and responsibly. Some relationships deepen into serious commitment. Work toward relationship goals together.',
+    familyHome: 'Disciplined energy directed toward family goals, property investment, and building family security. Excellent time for major home improvements, property purchases, or taking family leadership role. Family relationships benefit from more structure, responsibility, and shared achievement. Physical energy focused on building lasting family value and security. Fight for family goals and long-term success. Lead family with maturity and strategic action. Build family legacy.',
+    businessCareer: 'Peak career drive and strategic professional action. Excellent for career advancement, business launches, leadership positions, or achieving ambitious professional goals. Pursue career goals with discipline, strategy, and unwavering commitment. Your competence and ambition impress others powerfully. Good for promotions, starting business, strategic career moves, or demonstrating authority. Fight for professional recognition and achievement. Build career success methodically. This is optimal time for career action.',
+    moneyFinances: 'Strategic financial drive and disciplined money action. Excellent time to pursue income through career advancement, build wealth methodically, or invest for long-term security. Earning through professional work, business acumen, demonstrating competence, or authority positions. Take strategic financial action with long-term focus. Money goals achieved through discipline and persistence. Build wealth systematically. Pursue financial success and security with maturity and strategy.',
+    predictions: [
+      'Career goal you pursue strategically and persistently achieves significant success',
+      'Ambitious project you tackle with discipline produces lasting, valuable results',
+      'Professional opportunity or promotion through demonstrated competence and reliability',
+      'Financial investment or business move you make strategically pays off long-term',
+      'Leadership role or responsibility you take on builds your authority and success',
+      'Goal you work toward methodically over weeks finally reaches achievement',
+      'Structural or organizational action you take creates lasting improvement',
+      'Mature, responsible approach to challenge succeeds where impulsive action failed',
+      'Relationship commitment or serious step forward you pursue deliberately',
+      'You learn that strategic, disciplined, ambitious action creates greatest success and achievement'
+    ]
+  },
+
+  'Mars-Aquarius': {
+    name: 'Mars Ingress Aquarius',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Aquarius represents innovation, individuality, friendship, progress, humanitarian ideals, and revolutionary thinking. It\'s the energy of breaking from tradition to create a better future for all.',
+    eventMeaning: 'Mars in Aquarius brings innovative, unconventional, group-oriented action and progressive drive. Energy becomes focused on change, innovation, community action, and fighting for ideals. The next 6 weeks favor pursuing progressive goals, innovative projects, group activism, and asserting individuality. Action style becomes more unconventional and rebellious. Excellent for technology projects, social activism, group efforts, or revolutionary changes. Detachment and rebellion intensify - channel into constructive change, not mere opposition.',
+    loveRelationships: 'Sexual passion expressed through freedom, friendship, and unconventional connection. Pursue romance through shared ideals, intellectual stimulation, and respecting independence. Physical chemistry needs mental connection and freedom to thrive. Attraction to unique, independent, progressive partners. Existing relationships benefit from more friendship, freedom, and equality. Assert desires intellectually and unconventionally. Fight for relationship freedom and progressive values. Some explore non-traditional relationship approaches.',
+    familyHome: 'Rebellious energy and drive for freedom from family expectations. Excellent time for modernizing home with technology, creating space for friends and community, or pursuing unconventional family approaches. Family relationships benefit from more independence, equality, and accepting uniqueness. Physical energy directed toward innovation and breaking from tradition. Fight for individual freedom within family. Lead family toward progressive change. Avoid being too detached or rebellious.',
+    businessCareer: 'Career drive focused on innovation, technology, networking, and progressive change. Excellent for work in technology, social causes, innovation, networking, or humanitarian fields. Pursue career goals through unconventional approaches and group collaboration. Your innovative thinking and progressive action advance career. Good for launching tech projects, network activism, advocating for workplace change, or pursuing unique career path. Fight for professional progress and innovation.',
+    moneyFinances: 'Innovative financial drive and unconventional money action. Good time to pursue income through technology, innovation, networking, or social causes. Earning through unconventional work, tech fields, social networking, or progressive ventures. Spending on technology, innovation, or causes you believe in. Financial action should be forward-thinking and collaborative. Money through unique talents and serving collective needs. Think outside traditional financial approaches.',
+    predictions: [
+      'Innovative action or unconventional approach solves problem traditional methods couldn\'t',
+      'Group project or community activism you pursue energetically creates change',
+      'Technology project or innovation you tackle succeeds through unique approach',
+      'Networking or social action leads to unexpected opportunity or connection',
+      'Rebellion or break from tradition that frees you to authentic path',
+      'Fight for social cause or humanitarian ideal makes real difference',
+      'Unconventional career move or innovative project you pursue boldly pays off',
+      'Friendship or group collaboration you initiate achieves collective goal',
+      'Independence or freedom you assert improves your situation significantly',
+      'You learn that innovative, unconventional, group-oriented action creates progressive change and freedom'
+    ]
+  },
+
+  'Mars-Pisces': {
+    name: 'Mars Ingress Pisces',
+    frequency: 'Approximately every 2 years',
+    duration: '~6 weeks',
+    planetEnergy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    signEnergy: 'Pisces represents compassion, spirituality, imagination, transcendence, unity, and dissolving boundaries. It\'s the energy of mystical connection, artistic inspiration, and merging with the infinite.',
+    eventMeaning: 'Mars in Pisces brings intuitive, compassionate, spiritually-guided action and diffuse drive. Energy becomes less directed and more flowing, following inspiration and intuition. The next 6 weeks favor pursuing spiritual goals, creative/artistic work, compassionate action, and surrendering to flow. Action style becomes more indirect and intuitive. Excellent for creative arts, spiritual practice, helping others, or imaginative pursuits. Boundaries and direction may dissolve - channel compassion into effective action, not escapism or victimhood.',
+    loveRelationships: 'Sexual passion expressed through spiritual connection, imagination, and selfless giving. Pursue romance through compassion, creativity, and emotional/spiritual attunement. Physical chemistry needs emotional and spiritual connection to fully activate. Attraction to sensitive, artistic, spiritual partners. Existing relationships benefit from more compassion, forgiveness, and spiritual intimacy. Assert desires gently and intuitively. Some sacrifice for love - give selflessly but maintain boundaries. Pursue romantic ideals.',
+    familyHome: 'Compassionate energy directed toward helping family, spiritual family time, or creating peaceful sanctuary. Excellent time for healing family wounds through forgiveness, artistic family projects, or making home spiritually peaceful. Family relationships benefit from more compassion, acceptance, and letting go. Physical energy may be lower - rest, restore, and pursue gentle activities. Fight for family compassionately. Create transcendent, peaceful home atmosphere. Serve family through gentle care.',
+    businessCareer: 'Career drive focused on creative, healing, spiritual, or helping work. Excellent for work in arts, music, film, photography, healing professions, spiritual services, or charitable work. Pursue career goals intuitively and compassionately. Your creativity and empathy advance career. Good for artistic projects, compassionate service, or connecting work to something greater. Trust intuition about career action. Serve others through your work. Avoid escapism - channel inspiration into practical action.',
+    moneyFinances: 'Intuitive financial drive and earning through creativity or compassion. Good time to pursue income through artistic work, healing services, or following financial intuition. Earning through creative, spiritual, or helping professions. Spending on art, music, spiritual development, or charitable giving. Financial action should combine intuition with practical grounding. Money through imagination, compassion, and service. Avoid financial escapism or confusion - trust intuition but verify facts.',
+    predictions: [
+      'Creative or artistic project you pursue inspired by imagination succeeds beautifully',
+      'Compassionate action or helping someone in need brings deep satisfaction',
+      'Spiritual practice or meditation you engage energetically produces insight and peace',
+      'Intuitive action on opportunity your feelings guide you toward pays off',
+      'Forgiveness or letting go you actively pursue frees you and heals situation',
+      'Artistic performance or creative expression channels inspiration powerfully',
+      'Service or sacrifice for cause or person you care about creates meaning',
+      'Dream or intuitive guidance leads to unexpected opportunity or solution',
+      'Boundary you dissolve (appropriately) creates connection and flow',
+      'You learn that intuitive, compassionate, spiritually-guided action creates meaning and transcendence'
+    ]
+  },
+
   'Venus-Aries': {
     name: 'Venus Ingress Aries',
     frequency: 'Approximately once per year',
