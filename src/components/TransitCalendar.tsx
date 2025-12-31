@@ -562,19 +562,78 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
     setCurrentStartDate(new Date());
   };
 
-  const handleAspectClick = (aspect: any) => {
+  const handleAspectClick = async (aspect: any) => {
     console.log('🔍 Aspect clicked:', aspect);
 
-    // Skip interpretations for lunations and ingresses
-    if (aspect.isLunation || aspect.isIngress) {
+    let interpretation: any = null;
+
+    // Handle lunations (New Moon, Full Moon, Solar Eclipse, Lunar Eclipse)
+    if (aspect.isLunation) {
+      try {
+        const { getSolarEclipseInterpretation, getNewMoonInterpretation, getFullMoonInterpretation } =
+          await import('../utils/eclipseAndLunationInterpretations');
+
+        // Extract sign from position string (e.g., "15°23' Aries" -> "Aries")
+        const signMatch = aspect.position?.match(/\s([A-Z][a-z]+)$/);
+        const sign = signMatch ? signMatch[1] : null;
+
+        if (sign) {
+          if (aspect.aspect === 'Solar Eclipse') {
+            interpretation = getSolarEclipseInterpretation(sign);
+          } else if (aspect.aspect === 'New Moon') {
+            interpretation = getNewMoonInterpretation(sign);
+          } else if (aspect.aspect === 'Full Moon' || aspect.aspect === 'Lunar Eclipse') {
+            interpretation = getFullMoonInterpretation(sign);
+          }
+        }
+
+        console.log('🌙 Lunation interpretation found:', interpretation ? 'Yes' : 'No', 'Sign:', sign);
+      } catch (error) {
+        console.error('Error loading lunation interpretation:', error);
+      }
+
+      if (interpretation) {
+        setSelectedAspect({
+          planet1: aspect.planet1,
+          planet2: aspect.planet2,
+          aspect: aspect.aspect,
+          orb: aspect.orb,
+          interpretation
+        });
+      }
       return;
     }
 
-    // Get the max orb for this aspect type
+    // Handle ingresses
+    if (aspect.isIngress) {
+      try {
+        const { getDetailedIngressInterpretation } =
+          await import('../utils/detailedIngressInterpretations');
+
+        interpretation = getDetailedIngressInterpretation(aspect.planet1, aspect.signName);
+        console.log('🔄 Ingress interpretation found:', interpretation ? 'Yes' : 'No',
+                    'Planet:', aspect.planet1, 'Sign:', aspect.signName);
+      } catch (error) {
+        console.error('Error loading ingress interpretation:', error);
+      }
+
+      if (interpretation) {
+        setSelectedAspect({
+          planet1: aspect.planet1,
+          planet2: aspect.signName,
+          aspect: 'Ingress',
+          orb: aspect.orb,
+          interpretation
+        });
+      }
+      return;
+    }
+
+    // Handle regular transit-to-transit aspects
     const maxOrb = getTransitOrb(aspect.planet1, aspect.planet2, aspect.aspect);
     const currentOrb = parseFloat(aspect.orb);
 
-    const interpretation = getGeneralAspectInterpretation(
+    interpretation = getGeneralAspectInterpretation(
       aspect.planet1,
       aspect.planet2,
       aspect.aspect,
@@ -857,7 +916,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                             borderRadius: '3px',
                             borderLeft: `3px solid ${aspect.color}`,
                             fontSize: '10px',
-                            cursor: aspect.isLunation || aspect.isIngress || aspect.isEclipseAspect ? 'default' : 'pointer',
+                            cursor: aspect.isEclipseAspect ? 'default' : 'pointer',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -966,7 +1025,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
 
         {/* Tip */}
         <div style={{ marginTop: '15px', padding: '10px', background: '#e8f4ff', borderRadius: '6px', fontSize: '12px', color: '#2c5aa0' }}>
-          💡 <strong>Tip:</strong> Click on regular aspects to view detailed interpretations. Lunations (New/Full Moons), Ingresses, and Eclipse Aspects are informational only.
+          💡 <strong>Tip:</strong> Click on aspects, lunations (New/Full Moons/Eclipses), and ingresses to view detailed interpretations. Eclipse Aspects are informational only.
         </div>
       </div>
 

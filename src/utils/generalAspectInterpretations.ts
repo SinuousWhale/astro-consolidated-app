@@ -507,36 +507,7 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'You will release relationship or value system that\'s familiar but no longer authentic',
       'Growing toward new way of loving and valuing that feels destined even if uncomfortable'
     ]
-  },
-
-  // ============================================================================
-  // SUN - MOON ASPECTS (Sample)
-  // ============================================================================
-
-  'Sun-Moon-Square': {
-    name: 'Sun Square Moon',
-    frequency: 'Occurs twice monthly (First Quarter and Third Quarter Moons)',
-    duration: '2-3 days peak, ~1 week influence',
-    planet1Energy: 'The Sun represents conscious identity, ego, purpose, vitality, creative life force, and how you shine. It\'s your core self, your will, and your primary drive.',
-    planet2Energy: 'The Moon represents emotions, instincts, needs, habits, security, nurturing, and your inner emotional world. It\'s your subconscious patterns, your gut feelings, and what makes you feel safe.',
-    aspectMeaning: 'Sun square Moon creates tension between what you want (Sun) and what you need (Moon), between your goals and your feelings, between moving forward and staying safe. This is a "crisis in action" - time to make decisions despite internal conflict. External demands clash with emotional needs. Productive friction if you work with it, exhausting if you fight it. Choose the middle path between head and heart.',
-    loveRelationships: 'Relationship tension between what you want to do and how you feel about it. Partner\'s goals may conflict with your emotional needs or vice versa. One person wants to move forward while other needs security. Arguments about balancing independence and togetherness. This isn\'t about right or wrong - it\'s about integration. Find compromise that honors both person\'s wants and needs.',
-    familyHome: 'Conflict between career/public life demands and family/home needs. You want to pursue goals but family needs attention. Or home improvements needed but work demands your time. Mother and father energies clash. Parent and child needs compete. Solution isn\'t choosing one over other - it\'s better time management and priority balance. Both matter.',
-    businessCareer: 'Career goals face emotional resistance or emotional needs interfere with productivity. You want to push forward but don\'t feel like it. Work demands clash with need for rest and security. This square pushes you to act anyway despite not feeling ready. Discipline meets emotion. Success requires working through discomfort, not waiting until you feel like it. Productive struggle.',
-    moneyFinances: 'Financial decisions create emotional tension. Investment or purchase you logically want to make doesn\'t feel emotionally safe, or vice versa. Spending for comfort clashes with saving for goals. Head says one thing about money, heart says another. Neither is wrong - find balanced approach. Spend some, save some. Take some risks, keep some security. Integration, not extremes.',
-    predictions: [
-      'Decision required before you feel emotionally ready to make it',
-      'Argument with partner about what they want vs. what you need',
-      'Work deadline conflicts with family obligation - both matter, choose wisely',
-      'Emotional resistance to something you logically know you should do',
-      'Balancing act between pursuing goals and honoring feelings exhausts but strengthens you',
-      'Parent or authority figure\'s expectations clash with your emotional needs',
-      'You will act despite discomfort and prove you\'re stronger than you feel',
-      'Home vs. career tension requires creative scheduling solution',
-      'Financial decision between logical investment and emotional security',
-      'Integration of head and heart through choosing middle path, not extremes'
-    ]
-  },
+  }
 
 };
 
