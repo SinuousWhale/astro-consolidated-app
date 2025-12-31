@@ -1510,6 +1510,135 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Professional project combining strategic planning with depth produces recognition',
       'Opportunity to build power through combining disciplined structure with psychological depth'
     ]
+  },
+
+  // ==========================================
+  // URANUS-NEPTUNE ASPECTS (All 5)
+  // ==========================================
+
+  'Uranus-Neptune-Conjunction': {
+    name: 'Uranus Conjunction Neptune',
+    frequency: 'Occurs approximately every 171 years (last in 1993)',
+    duration: '2-3 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Generational spiritual awakening and mystical revolution! This extremely rare conjunction merges Uranus\'s revolution with Neptune\'s transcendence, creating collective spiritual breakthroughs, technological mysticism, dissolution of old spiritual systems, and radical compassion. Expect societal spiritual awakening, innovative spirituality, digital spirituality, revolutionary art and music, or liberation through divine connection. The generation born under this seeks to revolutionize spirituality and spiritualize revolution. Mystical breakthroughs through technology. Compassion through authenticity.',
+    loveRelationships: 'Relationship based on spiritual connection AND personal freedom. May meet unconventional soulmate or relationship transcends traditional boundaries. Love that honors both mystical unity and individual authenticity. Spiritual partnership that allows complete freedom. Relationship may be long-distance, unconventional, or transcend normal categories. Divine love through radical acceptance. Neither codependent merger nor isolated independence - transcendent freedom. Mystical authentic love.',
+    familyHome: 'Family spirituality revolutionizes or unconventional spiritual family emerges. Home becomes sanctuary for both meditation and innovation. Family connected through spiritual awareness and individual freedom. May create chosen family based on spiritual values. Progressive spiritual practices at home. Mystical connection honors everyone\'s uniqueness. Family transcends traditional forms. Spiritual community as family. Unconventional sacred space.',
+    businessCareer: 'Career in revolutionary spiritual work, innovative arts, technology with soul, or compassionate innovation. Perfect for digital spirituality, progressive healing, visionary art, or humanitarian technology. Work transcends traditional categories - spiritual AND innovative. Career mission involves awakening collective consciousness. Success through authentic inspired vision. Revolutionary creative or healing work. Bringing divine into innovation.',
+    moneyFinances: 'Financial approach balances spiritual trust with innovative systems. Money through creative, spiritual, or technological work. May profit from digital spirituality, visionary arts, or compassionate technology. Financial freedom through inspired innovation. Investments in spiritual tech or progressive healing. However, verify opportunities - idealistic schemes possible. Abundance through authentic spiritual innovation. Trust intuition but use discernment.',
+    predictions: [
+      'You participate in generational shift toward more authentic, innovative spirituality',
+      'Career combines spiritual values with progressive innovation successfully',
+      'Relationship transcends conventional boundaries while maintaining deep spiritual connection',
+      'Creative or artistic breakthrough combines innovation with mystical inspiration',
+      'You help revolutionize collective approach to spirituality, healing, or consciousness',
+      'Technology and spirituality integrate in your work or life in meaningful ways',
+      'Unconventional spiritual path that honors both freedom and divine connection calls you',
+      'You will bridge awakening and transcendence, revolution and compassion, for collective',
+      'Financial abundance flows through authentic spiritual or creative innovation',
+      'Generation transformation toward unity consciousness through individual authenticity'
+    ]
+  },
+
+  'Uranus-Neptune-Sextile': {
+    name: 'Uranus Sextile Neptune',
+    frequency: 'Occurs several times during the long Uranus-Neptune cycle',
+    duration: '1-2 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Opportunity for inspired innovation through conscious spiritual action! Doors open to integrate awakening with transcendence, innovation with compassion, freedom with unity. Perfect time to begin progressive spiritual practices, innovative creative projects, or compassionate revolutionary work. Small inspired authentic steps toward mystical breakthroughs pay off. Opportunity favors those who combine innovation with spirituality, freedom with love.',
+    loveRelationships: 'Opportunity to bring spiritual depth and freedom into relationship if you initiate. Suggest meditation together, explore unconventional spiritual practices, or introduce progressive relationship concepts. Can deepen through honoring both mystical connection and individual authenticity. Small experiments in spiritual freedom strengthen bond. Building relationship that\'s both transcendent and liberating takes effort but works beautifully.',
+    familyHome: 'Opportunity to introduce spiritual innovation into family life. Start family meditation with creative approach, use technology for spiritual connection, or try progressive spiritual practices at home. Small changes toward inspired spiritual family expression pay off. Family harmony through combining spirituality with freedom. Works if you introduce it - suggest the practice, share the inspiration.',
+    businessCareer: 'Career opportunities in innovative spiritual or creative fields if you pursue them. Perfect time to launch digital spirituality project, propose progressive healing work, or network in visionary creative communities. Won\'t fall in lap - must demonstrate inspired innovation. Small career moves toward spiritually meaningful innovative work succeed. Mentorship in progressive spiritual or creative field possible.',
+    moneyFinances: 'Financial growth through innovative spiritual or creative work and action. Research investments in spiritual technology, progressive healing, or visionary arts. Start side income through inspired creative or healing skills. Learn about values-based innovative finance. Small amounts invested in meaningful innovation grow. Building wealth through inspired progressive service.',
+    predictions: [
+      'Career opportunity in spiritual innovation or progressive healing appears if actively developing',
+      'Creative project combining spiritual inspiration with innovation you start gains traction',
+      'Relationship deepens through spiritual practice or progressive concept you introduce',
+      'Workshop, retreat, or learning in innovative spirituality you attend opens doors',
+      'Financial strategy combining spiritual values with innovation works if you create it',
+      'Mentor in progressive spiritual or visionary creative field offers guidance if you reach out',
+      'Family spiritual practice you introduce brings both depth and freedom',
+      'You will learn that inspired action manifests mystical breakthroughs',
+      'Progressive spiritual idea you share authentically resonates with others',
+      'Opportunity to blend awakening and transcendence through conscious initiative'
+    ]
+  },
+
+  'Uranus-Neptune-Square': {
+    name: 'Uranus Square Neptune',
+    frequency: 'Occurs multiple times during the long Uranus-Neptune cycle',
+    duration: '1-2 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Spiritual confusion through revolutionary tension! The square creates friction between awakening and transcendence, authenticity and illusion, freedom and surrender. May experience spiritual disillusionment, confusion about authentic path, or tension between individual truth and collective consciousness. However, the friction refines spiritual discernment and produces innovative mysticism. The challenge: honor both radical truth AND compassion, freedom AND unity, clarity AND mystery. Integration creates conscious spirituality.',
+    loveRelationships: 'Relationship tension between freedom and spiritual unity. May want authentic independence while partner wants mystical merger (or vice versa). Spiritual idealization conflicts with need for truth. Confusion about whether relationship is divinely guided or escapist fantasy. Must balance spiritual connection with honest boundaries. Neither complete dissolution nor isolated awakening - conscious spiritual partnership with integrity.',
+    familyHome: 'Family spiritual confusion or tension between tradition and innovation. May feel disillusioned with family spiritual beliefs or confused about family spiritual path. Torn between family unity and authentic spiritual truth. Spiritual bypassing of family issues possible. Must honor both compassion and clarity. Neither enabling through spirituality nor rejecting connection - honest spiritual family relating.',
+    businessCareer: 'Career confusion between spiritual calling and practical reality. Spiritual work may feel confusing or innovative path may lack grounding. May be deceived or self-deceived about spiritual career. Tension between authentic truth and collective ideals. However, career DOES need more spiritual meaning. The key: ground spiritual vision in honest reality. Verify spiritual opportunities. Neither fantasy nor cynicism - discerning spiritual work.',
+    moneyFinances: 'Financial confusion around spiritual abundance or innovative schemes. May invest based on spiritual beliefs without verification or innovative opportunity that seems too good to be true. Tension between spiritual money beliefs and authentic reality. However, financial approach MAY need more spiritual trust. The key: trust divine abundance while checking facts. Neither spiritual bypassing nor blocking blessings - wise spiritual prosperity.',
+    predictions: [
+      'You face confusion about spiritual path requiring discernment between truth and illusion',
+      'Relationship spiritual idealization conflicts with need for authentic boundaries',
+      'Financial opportunity seems divinely guided but requires thorough verification',
+      'Career spiritual calling needs grounding in practical reality to manifest',
+      'You learn to distinguish genuine spiritual insight from escapist fantasy',
+      'Spiritual teacher or community charismatic but requires honest discernment',
+      'Creative or spiritual project needs both inspiration AND practical structure',
+      'Family situation requires both spiritual compassion AND honest boundaries',
+      'Disillusionment with spiritual beliefs ultimately refines authentic spirituality',
+      'Growth through integrating revolutionary truth with compassionate mystery'
+    ]
+  },
+
+  'Uranus-Neptune-Trine': {
+    name: 'Uranus Trine Neptune',
+    frequency: 'Occurs several times during the long Uranus-Neptune cycle',
+    duration: '1-2 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Effortless spiritual innovation and mystical awakening! Revolution and transcendence flow naturally together. Spiritual breakthroughs happen with grace, innovative compassion feels natural, and authentic mysticism flows easily. Perfect time for progressive spiritual practices, visionary creative work, or compassionate revolution. The universe supports spiritual evolution. Awakening feels divinely guided, innovation serves unity, and freedom expands consciousness naturally. Inspired breakthroughs.',
+    loveRelationships: 'Relationship beautifully balances spiritual depth and authentic freedom! May meet unconventional soulmate naturally or existing partnership evolves toward spiritual freedom. Both mystical connection and individual authenticity flow easily. Love transcends boundaries while honoring truth. Spiritual growth and personal liberation both supported. Relationship feels divinely guided yet authentically free. Transcendent authentic love.',
+    familyHome: 'Family spirituality evolves naturally toward progressive authentic forms! Spiritual practices that honor both unity and individuality emerge easily. Family connected through mystical awareness and personal freedom. Home becomes sanctuary for inspired spiritual innovation. Family healing through compassionate truth. Generational spiritual evolution happens gracefully. Spiritually connected liberated family.',
+    businessCareer: 'Career in innovative spiritual work flows beautifully! Perfect time for digital spirituality, progressive healing, visionary arts, or compassionate technology. Inspired creative or spiritual work succeeds naturally. Career mission of awakening consciousness manifests easily. Success through authentic spiritual innovation. Recognition for progressive spiritual or creative work. Meaningful abundant work.',
+    moneyFinances: 'Financial abundance through spiritual innovation flows naturally! Money through progressive healing, visionary arts, spiritual technology, or inspired creativity. Investments in spiritual innovation succeed. Financial freedom through authentic inspired work. Divine abundance real and tangible. Generosity and prosperity balanced beautifully. Wealth through spiritual service.',
+    predictions: [
+      'Spiritual breakthrough or mystical awakening happens naturally and transforms consciousness',
+      'Creative or visionary project combines innovation with spirituality and succeeds beautifully',
+      'Relationship balances deep spiritual connection with authentic personal freedom effortlessly',
+      'Career in progressive spiritual, healing, or creative work manifests naturally',
+      'Financial abundance flows through inspired innovative spiritual or creative service',
+      'You participate in collective spiritual evolution through authentic individual awakening',
+      'Innovative spiritual practice or creative expression becomes ongoing source of growth',
+      'Technology and spirituality integrate naturally in meaningful ways',
+      'Freedom and unity, awakening and transcendence, both increase simultaneously',
+      'Divine guidance and authentic truth align perfectly creating effortless spiritual evolution'
+    ]
+  },
+
+  'Uranus-Neptune-Opposition': {
+    name: 'Uranus Opposition Neptune',
+    frequency: 'Occurs once during the long Uranus-Neptune cycle',
+    duration: '1-2 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Maximum tension between awakening and transcendence, truth and mystery, freedom and surrender. Pulled between radical authenticity and mystical dissolution, revolutionary clarity and compassionate acceptance, individual truth and collective consciousness. Must integrate both - neither pure rationality nor pure faith works. The opposition demands conscious spirituality that honors both truth AND mystery, freedom AND unity, clarity AND compassion. Integration creates mature mysticism.',
+    loveRelationships: 'Relationship tension between authentic truth and spiritual idealization. May feel torn between honest individual needs and mystical unity. Partner wants spiritual merger while you need truth and space (or vice versa). Must balance spiritual connection with authentic boundaries. Neither complete dissolution nor isolated truth - integration of mystical love with honest individuality. Conscious spiritual partnership.',
+    familyHome: 'Family tension between spiritual ideals and authentic reality. May feel disillusioned when family doesn\'t match spiritual vision or torn between family unity and personal truth. Must honor both compassionate connection and honest boundaries. Neither spiritual bypassing nor cynical rejection - wise spiritual family relating that honors both love and truth.',
+    businessCareer: 'Career tension between spiritual mission and authentic practical reality. Spiritual calling may conflict with need for clarity and independence. Drawn to mystical work but need innovative freedom. Must balance inspired service with authentic truth. Neither losing self in collective nor isolating from purpose - integration of spiritual mission with authentic innovation.',
+    moneyFinances: 'Financial tension between spiritual abundance faith and innovative practical reality. Spiritual money beliefs may bypass honest assessment or innovative approach may lack faith. Must balance divine trust with authentic verification. Neither blind faith nor blocking blessings - integration of spiritual prosperity consciousness with honest innovative financial planning.',
+    predictions: [
+      'You face choice between spiritual beliefs and authentic truth - both have value, integrate',
+      'Relationship requires balancing mystical connection with honest individual boundaries',
+      'Spiritual path or teacher requires discernment - honor inspiration while maintaining clarity',
+      'Career balancing spiritual service with authentic freedom and innovation needed',
+      'Financial decision between spiritual trust and practical innovation resolved through wisdom',
+      'You will learn that truth AND compassion, freedom AND unity are both necessary',
+      'Family situation demands both spiritual love and honest authentic boundaries',
+      'Spiritual disillusionment ultimately serves more conscious authentic spirituality',
+      'Creative work requires both mystical inspiration and innovative honest structure',
+      'Integration of awakening and transcendence creates mature conscious spirituality'
+    ]
   }
 
 };
