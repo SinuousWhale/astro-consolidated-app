@@ -2141,6 +2141,614 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Dreams, visions, or psychic experiences guide you toward your authentic spiritual path',
       'You master the art of spiritual innovation, healing creativity, and transcendent service'
     ]
+  },
+
+  // ============================================================================
+  // NEPTUNE INGRESSES - Spirituality, transcendence, dissolution (~14 years per sign)
+  // ============================================================================
+
+  'Neptune-Aries': {
+    name: 'Neptune Ingress Aries',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Aries represents boldness, initiative, independence, courage, action, and pioneering spirit. It\'s the energy of self-assertion, leadership, new beginnings, and direct action.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Aries brings spiritual awakening through action, mystical pioneering, and dissolving the ego of self. This extremely rare generational cycle (happens once in 165 years) creates spiritual warriors, compassionate leaders, and visionary action-takers. You must merge spiritual vision with bold action, lead with compassion, and pioneer with divine guidance. This is about spiritual leadership, compassionate action, and dissolving separation between self and divine will.',
+    loveRelationships: 'Romance becomes spiritually charged through passionate devotion, soulmate seeking, and divine partnership. Relationships require spiritual alignment with action, compassionate leadership together, and merging spiritual vision. You learn to love with both passion and divine surrender, take action guided by love. Idealization of bold, independent partners possible - discernment needed. Long-term partnerships deepen through spiritual practice together, compassionate action as couple, and dissolving ego in service of love. Dating involves spiritual seekers or compassionate activists. You attract divinely guided, passionate partners.',
+    familyHome: 'Family spirituality centers on action, leadership with compassion, and spiritual pioneering. Home life needs space for spiritual practice, meditation, and peaceful retreat from action. You may lead family\'s spiritual awakening, act as spiritual warrior for family, or create home as spiritual training ground. Family relationships transform through compassionate leadership and spiritual action. You learn to balance spiritual service with family action. Home becomes both sanctuary and launch pad for spiritual missions.',
+    businessCareer: 'Mystical 14-year career evolution through spiritual leadership, compassionate action, or visionary pioneering. Professional success requires combining spiritual vision with bold action, leading with compassion, or pioneering spiritual movements. You may become spiritual teacher who acts boldly, activist guided by divine vision, or entrepreneur serving spiritual mission. Authority comes through demonstrated spiritual courage. Career involves spiritual activism, compassionate leadership, or visionary action. Professional reputation builds through spiritually guided courage.',
+    moneyFinances: 'Financial life becomes spiritually guided - earning through spiritual action, divine timing, and compassionate service. Money requires trusting divine guidance while taking action, serving spiritual mission, and releasing attachment to outcomes. You learn that spiritual action attracts divine support, compassion creates abundance, and bold faith manifests resources. Financial boundaries can dissolve - discernment essential. Long-term wealth builds through faith-guided action and spiritual service. Financial lessons teach that divine will guides prosperity, spiritual courage attracts support, and compassionate action creates abundance.',
+    predictions: [
+      'Spiritual awakening calls you to bold action - you become spiritual warrior or compassionate activist',
+      'Vision or dream guides you to pioneer spiritual movement, healing modality, or consciousness work',
+      'You learn to merge spiritual surrender with courageous action - acting as instrument of divine will',
+      'Relationship becomes spiritual partnership focused on compassionate action and shared mission',
+      'Career transforms into spiritual work requiring both vision and courage to manifest',
+      'You develop ability to act from spiritual guidance rather than ego desire',
+      'Identity dissolves and rebuilds around spiritual purpose rather than personal ambition',
+      'Compassionate leadership emerges - you lead others through example of faith-guided action',
+      'Artistic or creative work channels spiritual energy into bold, passionate expression',
+      'You master the art of spiritual courage, compassionate action, and visionary leadership'
+    ]
+  },
+
+  'Neptune-Taurus': {
+    name: 'Neptune Ingress Taurus',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Taurus represents stability, security, material comfort, sensory pleasure, values, and persistence. It\'s the energy of building, maintaining, enjoying physical reality, and valuing quality over quantity.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Taurus brings spiritual awakening through nature, sacred sensuality, and dissolving materialism. This extremely rare generational cycle spiritualizes values, creates sacred relationship with earth, and transforms what we consider valuable. You must connect to earth spirituality, find divine in physical world, and release attachment to material security. This is about earth mysticism, sacred simplicity, and discovering that true security comes from spiritual connection not material accumulation.',
+    loveRelationships: 'Romance becomes sacred sensuality, spiritual values alignment, and divine connection through physical intimacy. Relationships require shared spiritual values, sacred approach to sensuality, and building security through faith. You learn to love through sacred touch, worship through senses, and find divine in physical connection. Idealization of stable, sensual partners possible - discernment needed. Long-term partnerships deepen through spiritual values, sacred sexuality, and building together on spiritual foundation. Dating involves spiritually grounded people. You attract partners seeking divine through earthly experience.',
+    familyHome: 'Family values transform spiritually - releasing materialism, embracing sacred simplicity, and finding security in faith. Home life needs natural beauty, sacred spaces, and connection to earth. You may create sanctuary home, practice earth-based spirituality, or release family attachment to material wealth. Family relationships transform through shared spiritual values and sacred appreciation of nature. You learn to provide through spiritual means and trust divine abundance. Home becomes sacred nature sanctuary.',
+    businessCareer: 'Mystical 14-year career evolution through earth-based spirituality, sacred arts, or values-driven service. Professional success requires aligning work with spiritual values, creating beauty as spiritual practice, or serving earth/nature. You may work in environmental spirituality, sacred arts, healing through nature, or sustainable/spiritual business. Authority comes through demonstrated spiritual values. Career involves nature work, sacred arts, or earth-based healing. Professional reputation builds through spiritual integrity and sacred beauty.',
+    moneyFinances: 'Financial life becomes spiritual practice - releasing attachment to money, trusting divine abundance, and finding security in faith. Money requires spiritual values alignment, sustainable/ethical earning, and generous giving. You learn that true wealth is spiritual, material security is illusion, and divine provides what you need. Financial boundaries dissolve - can lead to confusion or transcendent trust. Long-term wealth builds through spiritual values and trusting abundance. Financial lessons teach that attachment creates suffering, divine abundance is real, and true security comes from faith not money.',
+    predictions: [
+      'Values completely transform from material to spiritual - you release attachment to possessions and status',
+      'Nature becomes your church - earth-based spirituality or environmental consciousness awakens deeply',
+      'Financial life requires more faith - you learn to trust divine provision over material security',
+      'Sacred sensuality awakens - physical intimacy becomes spiritual practice and worship',
+      'Career shifts toward work honoring earth, creating beauty, or serving sustainable values',
+      'You develop spiritual relationship with body, food, nature, and physical world',
+      'Artistic work channels divine beauty through physical form - music, sculpture, gardening',
+      'Material loss or release teaches that true security comes from spiritual connection',
+      'You learn to enjoy physical world sacredly without attaching to or hoarding it',
+      'You master the art of sacred simplicity, earth spirituality, and divine abundance trust'
+    ]
+  },
+
+  'Neptune-Gemini': {
+    name: 'Neptune Ingress Gemini',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Gemini represents communication, learning, curiosity, versatility, connection, and information exchange. It\'s the energy of thinking, speaking, writing, learning, networking, and intellectual exploration.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Gemini brings spiritual awakening through communication, divine channeling, and dissolving the rational mind. This extremely rare generational cycle spiritualizes communication, creates poetry and divine language, and transforms how we think and connect. You must channel divine messages, speak spiritual truth, and transcend rational thinking to access mystical knowing. This is about channeling, sacred communication, and discovering that words can carry divine energy.',
+    loveRelationships: 'Romance becomes spiritual communication, soul connection through words, and telepathic intimacy. Relationships require spiritual dialogue, sharing mystical experiences, and mental/spiritual connection. You learn to love through divine words, connect telepathically, and share spiritual truths. Idealization of intellectual partners possible - discernment needed about deception. Long-term partnerships deepen through spiritual conversations, writing together, and telepathic connection. Dating involves spiritual seekers or poets. You attract partners who communicate divinely.',
+    familyHome: 'Family communication becomes more spiritual, compassionate, and mystical. Home life needs space for sacred writing, spiritual learning, and quiet contemplation. You may channel messages for family, communicate spiritual truths, or create home library of spiritual wisdom. Relationship with siblings may become more spiritual or requires compassionate communication. Family relationships transform through honest spiritual dialogue and compassionate listening. Home becomes library and communication center for spiritual truth.',
+    businessCareer: 'Mystical 14-year career evolution through spiritual communication, channeling, writing, or teaching mystical truths. Professional success requires channeling divine messages, communicating spiritual wisdom, or creating inspired content. You may become spiritual writer, channel, poet, or teacher of mystical communication. Authority comes through demonstrated spiritual truth in words. Career involves spiritual writing, channeling, teaching, or inspired communication. Professional reputation builds through divinely inspired words.',
+    moneyFinances: 'Financial life becomes about communicating spiritual value, monetizing divine messages, or trusting intuitive financial guidance. Money requires sharing spiritual wisdom, writing inspired content, or teaching mystical truths. You learn to value spiritual communication, charge for channeled messages, and trust intuitive financial guidance. Financial confusion possible through unclear agreements - clarity essential. Long-term wealth builds through spiritual writing and divine communication. Financial lessons teach that spiritual words have value, divine messages deserve compensation, and intuitive guidance brings abundance.',
+    predictions: [
+      'Channeling or psychic communication abilities awaken - you receive and share divine messages',
+      'Writing becomes spiritual practice - poetry, journaling, or books channel divine inspiration',
+      'You learn to distinguish between divine guidance and mental confusion or deception',
+      'Spiritual teaching or speaking becomes important - you communicate mystical truths to others',
+      'Relationship deepens through spiritual dialogue and possibly telepathic or intuitive connection',
+      'Mental boundaries dissolve - meditation and spiritual practice help manage overwhelm',
+      'You develop compassionate communication - speaking truth with love and listening deeply',
+      'Information overload or confusion requires you to find truth through spiritual discernment',
+      'Sibling or communication relationship becomes more spiritual or teaches important lessons',
+      'You master the art of divine communication, channeling truth, and speaking with spiritual clarity'
+    ]
+  },
+
+  'Neptune-Cancer': {
+    name: 'Neptune Ingress Cancer',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Cancer represents nurturing, emotions, family, home, roots, security, and protection. It\'s the energy of caring, belonging, emotional safety, and creating sanctuary.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Cancer brings spiritual awakening through family, divine nurturing, and dissolving emotional boundaries. This extremely rare generational cycle spiritualizes family and home, creates universal compassion, and transforms emotional life into mystical experience. You must learn unconditional love, embrace all humanity as family, and find divine mother/home within. This is about universal compassion, spiritual family, and discovering that true home is spiritual connection to all beings.',
+    loveRelationships: 'Romance becomes unconditional love, soul family connection, and divine nurturing. Relationships require emotional/spiritual fusion, compassionate acceptance, and creating sacred home together. You learn to love unconditionally, nurture spiritually, and merge emotionally with divine beloved. Idealization of nurturing partners possible - boundary dissolution can cause codependency. Long-term partnerships deepen through unconditional love, spiritual family creation, and emotional healing together. Dating involves emotionally sensitive spiritual seekers. You attract partners seeking divine love and sacred home.',
+    familyHome: 'Family becomes spiritual practice, home becomes sacred sanctuary, and family boundaries dissolve into universal love. Home life needs spiritual spaces, healing environments, and connection to water/ocean. You may create ashram-like home, care for many as extended family, or heal ancestral wounds spiritually. Family relationships transform through forgiveness, unconditional love, and spiritual acceptance. You learn to love family spiritually while maintaining energetic boundaries. Home becomes healing sanctuary and spiritual womb.',
+    businessCareer: 'Mystical 14-year career evolution through healing, caregiving, spiritual family creation, or work with home/ocean/emotions. Professional success requires offering unconditional compassion, creating healing environments, or working with emotional/spiritual healing. You may become healer, work with families or children spiritually, create sanctuary spaces, or work near water. Authority comes through demonstrated compassion. Career involves healing, caregiving, family work, or creating sacred spaces. Professional reputation builds through unconditional love.',
+    moneyFinances: 'Financial life becomes about trusting divine provision, earning through caregiving, or releasing attachment to security. Money requires faith over planning, earning through compassion, and generous giving to those in need. You learn that divine mother provides, emotional security beats financial security, and compassionate service attracts abundance. Financial boundaries dissolve - vulnerability to being taken advantage of without discernment. Long-term wealth builds through healing work and trusting divine nurturing. Financial lessons teach that divine provides what you need, security is spiritual, and compassionate giving creates receiving.',
+    predictions: [
+      'Unconditional love awakens - you experience divine love and learn to love all beings as family',
+      'Home becomes sacred sanctuary - you create healing space for yourself and possibly others',
+      'Healing work or caregiving becomes central - you nurture others with spiritual compassion',
+      'Family wounds heal through forgiveness, compassion, and spiritual understanding of ancestry',
+      'Emotional boundaries dissolve - you must learn energetic protection while staying compassionate',
+      'Relationship with mother heals or reaches spiritual understanding and forgiveness',
+      'You develop psychic empathy - feeling others\' emotions requires spiritual boundaries',
+      'Ocean, water, or moon connection deepens - water becomes spiritual element for you',
+      'You learn to differentiate between compassion and codependency, love and enmeshment',
+      'You master the art of unconditional love, divine nurturing, and spiritual sanctuary creation'
+    ]
+  },
+
+  'Neptune-Leo': {
+    name: 'Neptune Ingress Leo',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, leadership, and recognition. It\'s the energy of shining, creating, celebrating, leading, and expressing authentic self.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Leo brings spiritual awakening through creativity, divine self-expression, and dissolving ego while shining. This extremely rare generational cycle spiritualizes art/entertainment, creates divine creativity, and transforms leadership into service. You must channel divine through creative expression, lead with humility, and shine for spiritual purpose not ego. This is about sacred artistry, humble leadership, and discovering that true creativity flows from divine source.',
+    loveRelationships: 'Romance becomes divine romance, creative soul partnership, and spiritual celebration of love. Relationships require creative/spiritual fusion, celebrating divine in each other, and loving as spiritual practice. You learn to love divinely, create together spiritually, and celebrate relationship sacredly. Idealization of creative/charismatic partners possible - ego dissolution needed. Long-term partnerships deepen through creative spiritual practice, celebrating divine love, and co-creating beauty. Dating involves creative spiritual seekers. You attract divinely creative, spiritually confident partners.',
+    familyHome: 'Family creativity and joy become spiritual - celebrating life sacredly, encouraging divine gifts in children, and creating home as stage for divine play. Home life needs creative/spiritual spaces, beauty, and joyful celebration. You may create artistically beautiful home, support family members\' creative gifts spiritually, or celebrate family sacredly. Family relationships transform through celebrating each person\'s divine light. You learn to lead family with humble spiritual confidence. Home becomes creative sanctuary and celebration space.',
+    businessCareer: 'Mystical 14-year career evolution through sacred arts, spiritual entertainment, or humble creative leadership. Professional success requires channeling divine through creativity, entertaining/inspiring for spiritual uplift, or leading humbly. You may become spiritual artist, sacred performer, or leader serving divine creative expression. Authority comes through demonstrated spiritual creativity and humble radiance. Career involves sacred arts, spiritual entertainment, or humble leadership. Professional reputation builds through divinely inspired creativity.',
+    moneyFinances: 'Financial life becomes about earning through spiritual creativity, monetizing divine expression, or generous giving from abundance. Money requires channeling divine through creative work, sharing creative gifts generously, and releasing attachment to recognition. You learn that divine creativity attracts abundance, spiritual art has value, and giving creates receiving. Financial ego can inflate or dissolve - humility essential. Long-term wealth builds through spiritual creative mastery. Financial lessons teach that divine source provides creative abundance, true wealth is spiritual joy, and sharing gifts creates flow.',
+    predictions: [
+      'Creative gifts awaken as divine channeling - art, music, performance becomes spiritual practice',
+      'You learn to create from divine source rather than ego, channeling beauty and inspiration',
+      'Leadership transforms from ego-driven to spiritually guided humble service',
+      'Relationship becomes celebration of divine love through creativity, joy, and mutual adoration',
+      'Career shifts toward sacred arts, spiritual entertainment, or humble inspiring leadership',
+      'You develop ability to shine spiritually - radiating divine light without ego attachment',
+      'Children or creative projects become spiritual teachers showing you divine play',
+      'Ego dissolves in service of creative expression - you become vessel for divine beauty',
+      'Joy and celebration become spiritual practices - finding divine in pleasure and playfulness',
+      'You master the art of sacred creativity, humble radiance, and divine self-expression'
+    ]
+  },
+
+  'Neptune-Virgo': {
+    name: 'Neptune Ingress Virgo',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Virgo represents analysis, refinement, service, health, organization, and practical skill. It\'s the energy of improvement, discernment, efficiency, helping, and mastering craft.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Virgo brings spiritual awakening through service, sacred healing, and dissolving perfectionism. This extremely rare generational cycle spiritualizes healing/service, creates compassionate medicine, and transforms work into devotion. You must serve selflessly, heal with divine compassion, and release perfectionism for acceptance. This is about sacred service, divine healing, and discovering that true health is spiritual wholeness.',
+    loveRelationships: 'Romance becomes sacred service partnership, healing each other divinely, and devotional love. Relationships require serving each other spiritually, healing together, and practical spiritual life. You learn to love through service, heal through compassion, and accept imperfection. Idealization then disillusionment possible - acceptance of human imperfection essential. Long-term partnerships deepen through serving together, healing practices, and devotional daily life. Dating involves healers or spiritual servers. You attract partners devoted to service and healing.',
+    familyHome: 'Family service becomes spiritual - caring for family with divine compassion, creating healthy home sacredly, and serving daily with devotion. Home life needs healing space, cleanliness as spiritual practice, and healthy routines. You may create healing home environment, care for ill family spiritually, or maintain home as devotional practice. Family relationships transform through compassionate service and releasing judgment. You learn to serve family selflessly yet maintain boundaries. Home becomes healing sanctuary and service center.',
+    businessCareer: 'Mystical 14-year career evolution through healing arts, spiritual service, or sacred health work. Professional success requires offering compassionate healing, serving selflessly, or creating spiritual health practices. You may become spiritual healer, holistic health practitioner, or worker serving marginalized with devotion. Authority comes through demonstrated compassion and healing skill. Career involves healing arts, spiritual service, or sacred health work. Professional reputation builds through selfless service and healing compassion.',
+    moneyFinances: 'Financial life becomes about earning through healing service, trusting divine provision for servants, and releasing attachment to wealth. Money requires serving compassionately, charging fairly for healing, and trusting that divine supports those who serve. You learn that service creates abundance, healers deserve compensation, and attachment to perfection blocks flow. Financial confusion possible - clear boundaries essential. Long-term wealth builds through healing mastery and devoted service. Financial lessons teach that divine provides for servers, healing work has value, and perfectionism blocks abundance.',
+    predictions: [
+      'Healing gifts awaken - you become channel for divine healing energy and compassionate service',
+      'Service transforms into spiritual devotion - daily work becomes sacred practice',
+      'Health consciousness spiritualizes - you develop holistic understanding of body-mind-spirit',
+      'Perfectionism dissolves through spiritual acceptance - you embrace imperfection with compassion',
+      'Career shifts toward healing arts, holistic health, spiritual service, or compassionate care',
+      'You develop spiritual discernment - distinguishing between divine guidance and mental noise',
+      'Daily routines become spiritual practices - cleaning, organizing, working with devotion',
+      'You learn to serve selflessly without martyrdom, help without enabling, heal with boundaries',
+      'Addiction to work or perfectionism releases through spiritual surrender and trust',
+      'You master the art of sacred service, divine healing, and compassionate devotion'
+    ]
+  },
+
+  'Neptune-Libra': {
+    name: 'Neptune Ingress Libra',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Libra represents balance, partnership, harmony, aesthetics, diplomacy, and fairness. It\'s the energy of relating, cooperating, creating beauty, and seeking equilibrium.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Libra brings spiritual awakening through partnership, divine beauty, and dissolving separation between self and other. This extremely rare generational cycle spiritualizes relationships, creates transcendent art, and transforms justice into compassion. You must find divine in relationships, create sacred beauty, and dissolve ego boundaries in love. This is about spiritual partnership, divine aesthetics, and discovering that separation is illusion.',
+    loveRelationships: 'Romance becomes spiritual union, soulmate merging, and divine partnership. Relationships require spiritual fusion, creating beauty together, and dissolving boundaries in love. You learn to love as spiritual merging, create with beloved, and find divine through partnership. Idealization and disillusionment in love likely - discernment about projection essential. Long-term partnerships deepen through spiritual practice together, creating art/beauty, and experiencing unity. Dating involves spiritual seekers of beauty. You attract divinely beautiful, spiritually oriented partners seeking fusion.',
+    familyHome: 'Family relationships spiritualize through forgiveness, seeking harmony, and creating beautiful peaceful home. Home life needs aesthetic beauty, peaceful energy, and space for art/music. You may create artistically beautiful home, mediate family conflicts with compassion, or bring divine beauty into family life. Family relationships transform through seeking harmony over rightness. You learn to balance family relationships with spiritual boundaries. Home becomes beautiful sanctuary of peace and art.',
+    businessCareer: 'Mystical 14-year career evolution through creating beauty, spiritual partnerships, or work promoting peace/justice compassionately. Professional success requires creating transcendent art, forming spiritual partnerships, or serving justice with compassion. You may become artist channeling divine beauty, work in spiritual partnerships, or serve peace/justice work. Authority comes through demonstrated beauty and relational wisdom. Career involves arts, partnerships, mediation, or peace work. Professional reputation builds through divine beauty creation.',
+    moneyFinances: 'Financial life becomes about partnership finances spiritually, earning through beauty creation, and balancing giving/receiving. Money requires fair partnerships, earning through art/beauty, and trusting divine partnership abundance. You learn that partnerships can confuse finances without clarity, beauty has spiritual value, and fair exchange creates flow. Financial boundaries in relationships dissolve - clarity and honesty essential. Long-term wealth builds through artistic mastery and spiritual partnerships. Financial lessons teach that partnership requires financial clarity, divine beauty deserves compensation, and fair exchange honors both.',
+    predictions: [
+      'Soulmate or twin flame connection appears - relationship becomes spiritual practice of union',
+      'Artistic gifts awaken as divine channeling - you create transcendent beauty in art, music, or design',
+      'You learn to balance spiritual merging with healthy boundaries in relationships',
+      'Business or creative partnership forms based on spiritual values and shared vision',
+      'Career shifts toward arts, beauty work, partnership counseling, or peace/justice work',
+      'You develop ability to see divine in others, creating harmony through spiritual vision',
+      'Codependency or idealization patterns require spiritual work on boundaries and projection',
+      'Justice and fairness expand to compassionate understanding beyond right/wrong',
+      'You learn that true partnership honors both union and individual sovereignty',
+      'You master the art of spiritual partnership, divine beauty creation, and compassionate relating'
+    ]
+  },
+
+  'Neptune-Scorpio': {
+    name: 'Neptune Ingress Scorpio',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Scorpio represents intensity, transformation, depth, power, intimacy, and regeneration. It\'s the energy of probing beneath surface, merging deeply, wielding power, and transforming through crisis.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Scorpio brings spiritual awakening through crisis, mystical sexuality, and dissolving death/rebirth boundaries. This extremely rare generational cycle spiritualizes sexuality/death, creates mystical transformation, and dissolves fear through spiritual truth. You must face shadows compassionately, experience sacred sexuality, and find divine in darkness/transformation. This is about mystical death/rebirth, sacred sexuality, and discovering that the divine is found in depth and darkness.',
+    loveRelationships: 'Romance becomes sacred sexuality, soul merging, and transformative spiritual union. Relationships require deep spiritual intimacy, sacred sexual connection, and transforming together through crisis. You learn to love through total merging, experience sex as worship, and transform through union. Obsession, possession, or addiction in love possible - spiritual boundaries essential. Long-term partnerships deepen through tantric practice, transforming shadows together, and death/rebirth cycles. Dating involves deeply spiritual, intense seekers. You attract transformative, mystically sexual, spiritually intense partners.',
+    familyHome: 'Family transformation spiritualizes through healing wounds, facing shadows compassionately, and dealing with death/inheritance spiritually. Home life needs privacy for depth work, space for shadow healing, and connection to mystery. You may deal with family death spiritually, heal ancestral trauma, or transform family through spiritual crisis work. Family relationships transform through shadow work, forgiveness, and spiritual depth. You learn to hold space for family darkness with compassion. Home becomes sanctuary for deep healing and transformation.',
+    businessCareer: 'Mystical 14-year career evolution through healing trauma, spiritual psychology, death work, or transformative service. Professional success requires offering deep healing, facilitating transformation, or working with death/sexuality spiritually. You may become depth psychologist, death doula, tantric teacher, or transformational healer. Authority comes through demonstrated ability to hold space for darkness. Career involves depth healing, death work, or sacred sexuality. Professional reputation builds through transformative healing power.',
+    moneyFinances: 'Financial life becomes about earning through transformation work, managing shared resources spiritually, or releasing attachment through loss. Money requires trust through financial crisis, earning through depth healing, and managing shared resources with integrity. You learn that financial death leads to rebirth, healing work deserves compensation, and attachment to money creates suffering. Financial boundaries dissolve in partnerships - absolute honesty essential. Long-term wealth builds through healing mastery. Financial lessons teach that transformation creates abundance, death births new life, and spiritual power attracts resources.',
+    predictions: [
+      'Mystical sexual awakening - sexuality becomes spiritual practice and path to divine union',
+      'Shadow work or depth psychology becomes central - you heal through facing darkness compassionately',
+      'Death experience (literal or metaphorical) becomes spiritual initiation into deeper truth',
+      'Psychic or mediumship abilities awaken - you sense beyond the veil',
+      'Career shifts toward depth healing, death work, tantric teaching, or transformational therapy',
+      'You develop ability to hold space for others\' darkness, pain, and transformation',
+      'Addiction, obsession, or power struggles teach lessons about surrender and spiritual boundaries',
+      'Financial crisis or loss teaches detachment and trust in spiritual provision',
+      'You learn that divine is found in darkness, death births rebirth, power is spiritual',
+      'You master the art of sacred sexuality, mystical transformation, and spiritual depth work'
+    ]
+  },
+
+  'Neptune-Sagittarius': {
+    name: 'Neptune Ingress Sagittarius',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, teaching, and finding meaning through broadening horizons.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Sagittarius brings spiritual awakening through seeking, divine truth questing, and dissolving dogmatic beliefs. This extremely rare generational cycle spiritualizes philosophy/religion, creates mystical seeking, and transforms belief into direct experience. You must seek divine truth directly, release religious dogma, and find faith through mystical experience. This is about mystical quest, spiritual seeking, and discovering that divine truth transcends all beliefs.',
+    loveRelationships: 'Romance becomes spiritual quest partnership, seeking truth together, and adventuring into mystical realms. Relationships require shared spiritual vision, freedom to explore, and questing together. You learn to love through shared seeking, explore spiritually together, and find divine through adventure. Idealization of spiritual teachers or gurus as partners possible - discernment essential. Long-term partnerships deepen through spiritual adventures, seeking truth together, and expanding consciousness. Dating involves spiritual seekers or philosophers. You attract adventurous, truth-seeking, spiritually expansive partners.',
+    familyHome: 'Family spirituality becomes seeking, questing, and exploring diverse spiritual traditions together. Home life needs space for study, multicultural spiritual practice, and freedom to roam. You may explore various spiritual paths with family, travel on spiritual quests, or study diverse wisdom traditions. Family relationships transform through accepting different spiritual paths. You learn to share spiritual wisdom without preaching. Home becomes ashram, study center, or launch pad for spiritual adventures.',
+    businessCareer: 'Mystical 14-year career evolution through spiritual teaching, mystical writing, or guiding others\' spiritual quests. Professional success requires sharing mystical truths, teaching from direct experience, or guiding seekers. You may become spiritual teacher, write spiritual books, lead spiritual journeys, or teach mystical philosophy. Authority comes through demonstrated mystical wisdom and lived truth. Career involves spiritual education, mystical writing, or guiding seekers. Professional reputation builds through authentic spiritual seeking and wisdom.',
+    moneyFinances: 'Financial life becomes about earning through teaching truth, trusting divine abundance, and releasing attachment to security for freedom. Money requires sharing spiritual wisdom, teaching from experience, and trusting that seeking truth attracts abundance. You learn that spiritual teaching has value, divine provides for seekers, and freedom requires trusting abundance. Financial boundaries dissolve in optimism - discernment about giving essential. Long-term wealth builds through teaching mastery. Financial lessons teach that truth attracts abundance, teaching creates flow, and trusting divine brings provision.',
+    predictions: [
+      'Spiritual seeking intensifies - you quest for direct mystical experience and divine truth',
+      'Religious or philosophical beliefs dissolve into personal mystical experience',
+      'Teaching spiritual truths becomes important - you share wisdom from direct experience',
+      'International spiritual travel or immersion in foreign spiritual traditions transforms you',
+      'Career shifts toward spiritual teaching, mystical writing, or guiding others\' awakening',
+      'You develop ability to access mystical states - visions, revelations, divine guidance',
+      'Relationship becomes shared spiritual quest - seeking, traveling, learning together',
+      'Higher education in spiritual/mystical subjects or studying with spiritual teachers',
+      'You learn to distinguish between spiritual bypassing and authentic mystical experience',
+      'You master the art of mystical seeking, spiritual teaching, and living divine truth'
+    ]
+  },
+
+  'Neptune-Capricorn': {
+    name: 'Neptune Ingress Capricorn',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Capricorn represents ambition, achievement, structure, mastery, responsibility, and authority. It\'s the energy of building, achieving, leading with integrity, and reaching the mountain top through persistent effort.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Capricorn brings spiritual awakening through structure dissolution, sacred leadership, and dissolving material ambition. This extremely rare generational cycle spiritualizes authority, creates compassionate leadership, and transforms success into service. You must lead with spiritual vision, achieve for service not ego, and dissolve attachment to worldly success. This is about spiritual authority, humble achievement, and discovering that true success is serving the divine plan.',
+    loveRelationships: 'Romance becomes spiritual partnership with shared mission, building spiritual legacy together, and devotional commitment. Relationships require shared spiritual goals, building together for service, and serious spiritual commitment. You learn to love through building together spiritually, commit deeply, and create spiritual legacy. Disillusionment with traditional success in relationships possible. Long-term partnerships deepen through spiritual missions, serving together, and building spiritual work/legacy. Dating involves serious spiritual workers. You attract committed, mission-driven, spiritually mature partners.',
+    familyHome: 'Family responsibility becomes spiritual service, building spiritual legacy, and creating structure for spiritual work. Home life needs space for spiritual work, simplicity, and connection to mountains/earth. You may build spiritual family business, serve family mission, or create home supporting spiritual work. Family relationships transform through serving together and shared spiritual purpose. You learn to balance worldly responsibility with spiritual calling. Home becomes monastery, spiritual workspace, or service center.',
+    businessCareer: 'Mystical 14-year career evolution through spiritualizing your profession, leading with compassion, or building spiritual organizations. Professional success requires serving spiritual mission through career, leading compassionately, or building structures for spiritual work. You may build spiritual organization, lead compassionately in traditional field, or achieve success serving divine will. Authority comes through demonstrated spiritual integrity. Career involves spiritual leadership, compassionate management, or building spiritual structures. Professional reputation builds through serving greater good.',
+    moneyFinances: 'Financial life becomes about earning through spiritual service in world, building sustainable spiritual work, and releasing attachment to status/wealth. Money requires serving spiritual mission professionally, building sustainable spiritual income, and trusting divine while working responsibly. You learn that spiritual work can be professional, divine supports those building for service, and worldly success without spirit is empty. Financial confusion about charging for spiritual work requires clarity. Long-term wealth builds through spiritual professional mastery. Financial lessons teach that spiritual work deserves professional compensation, divine blesses responsible service, and true wealth is spiritual legacy.',
+    predictions: [
+      'Career transforms into spiritual mission - professional success serves spiritual purpose',
+      'You build organization, business, or structure that serves spiritual/humanitarian mission',
+      'Disillusionment with traditional success leads to redefining achievement as spiritual service',
+      'Leadership role requires leading with compassion, integrity, and spiritual vision',
+      'Relationship with authority figures spiritualizes or dissolves based on spiritual alignment',
+      'You develop ability to manifest spiritual visions into practical reality',
+      'Career achievement feels empty without spiritual purpose - you seek meaningful success',
+      'Financial success becomes byproduct of serving spiritual mission with integrity',
+      'You learn to balance worldly responsibility with spiritual surrender and trust',
+      'You master the art of spiritual leadership, sacred achievement, and building for divine purpose'
+    ]
+  },
+
+  'Neptune-Aquarius': {
+    name: 'Neptune Ingress Aquarius',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Aquarius represents innovation, community, individuality, progress, friendship, and humanitarian vision. It\'s the energy of awakening, connecting, revolutionizing, and serving collective evolution.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY: Neptune in Aquarius brings spiritual awakening through unity consciousness, divine vision for humanity, and dissolving separation between individuals. This extremely rare generational cycle spiritualizes technology, creates utopian visions, and transforms individuality into universal love. You must serve collective evolution, envision spiritual future, and dissolve ego into group consciousness. This is about universal love, spiritual community, and discovering that all beings are one.',
+    loveRelationships: 'Romance becomes spiritual friendship, universal love, and soul group connection. Relationships require spiritual freedom, friendship foundation, and shared vision for humanity. You learn to love as universal compassion, be friends with lovers, and create spiritual communities together. Confusion about romantic vs platonic love possible. Long-term partnerships deepen through serving humanity together, spiritual friendship, and group spiritual work. Dating involves community members or online connections. You attract spiritually evolved, community-minded, humanitarian partners.',
+    familyHome: 'Family becomes spiritual community, chosen family, and network of spiritual friends. Home life needs space for community gatherings, technology for connection, and group spiritual practice. You may create spiritual community home, blur lines between family/friends, or live communally. Family relationships transform through dissolving traditional boundaries. You learn that all humanity is family. Home becomes community center, group meditation space, or technological spiritual hub.',
+    businessCareer: 'Mystical 14-year career evolution through serving collective evolution, spiritual technology, or building spiritual communities. Professional success requires serving humanity, creating spiritual networks, or developing consciousness technology. You may build spiritual community, develop meditation technology, serve humanitarian causes, or work in spiritual social media. Authority comes through demonstrated service to collective. Career involves community building, humanitarian work, spiritual technology, or collective consciousness work. Professional reputation builds through serving greater good.',
+    moneyFinances: 'Financial life becomes about sharing resources communally, earning through serving collective, and trusting group abundance. Money requires serving community, possibly sharing finances, and trusting that collective supports those who serve. You learn that community creates abundance, spiritual networks provide, and individual wealth serves collective good. Financial boundaries dissolve in community - clarity about giving/receiving essential. Long-term wealth builds through community platforms. Financial lessons teach that shared wealth exceeds individual wealth, serving collective attracts abundance, and spiritual community provides.',
+    predictions: [
+      'Unity consciousness awakens - you experience all beings as one, dissolving separation',
+      'Spiritual community becomes your true family - you find belonging in soul groups',
+      'Career becomes serving collective evolution, building spiritual networks, or humanitarian work',
+      'Technology becomes spiritual tool - you use social media, apps, or platforms for spiritual service',
+      'Friendship and romance blur - you learn that love transcends categories',
+      'You develop visionary abilities - seeing potential futures and spiritual evolution pathways',
+      'Utopian visions inspire you to work toward spiritual transformation of society',
+      'Financial sharing or community economics become part of your spiritual practice',
+      'You learn to balance individual sovereignty with group consciousness and collective service',
+      'You master the art of universal love, spiritual community building, and serving collective awakening'
+    ]
+  },
+
+  'Neptune-Pisces': {
+    name: 'Neptune Ingress Pisces',
+    frequency: 'Approximately every 165 years',
+    duration: '~14 years (Neptune rules Pisces)',
+    planetEnergy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, and divine connection. It\'s where boundaries dissolve, you connect to the mystical, sacrifice for higher purpose, and experience unity consciousness.',
+    signEnergy: 'Pisces represents spirituality, compassion, imagination, transcendence, unity, and dissolution. It\'s the energy of connecting to divine, serving selflessly, creating artistically, and transcending ego boundaries.',
+    eventMeaning: '🌊 MYSTICAL 14-YEAR JOURNEY (Neptune at Home): Neptune in Pisces brings maximum spiritual awakening, divine connection, and ego dissolution. This is Neptune at its most mystical and transcendent. This extremely rare generational cycle creates spiritual renaissance, mystical arts flowering, and mass spiritual awakening. You must surrender completely to divine, serve selflessly, and dissolve all boundaries. This is about full spiritual awakening, complete surrender, and experiencing total unity with all that is.',
+    loveRelationships: 'Romance becomes total spiritual union, unconditional divine love, and complete ego dissolution in beloved. Relationships require spiritual devotion, unconditional acceptance, and total surrender. You learn to love as divine loves, surrender completely, and merge into unity. Complete boundary dissolution can lead to codependency - spiritual discernment essential. Long-term partnerships deepen through spiritual practice, serving together selflessly, and experiencing divine love through each other. Dating involves mystics and spiritual devotees. You attract divinely devoted, boundaryless, spiritually surrendered partners.',
+    familyHome: 'Family becomes expression of universal love, all beings as family, and serving suffering beings. Home life needs space for deep spirituality, retreat, and connection to ocean/water. You may create sanctuary home, welcome all beings as family, or serve from home. Family relationships transform through total forgiveness, unconditional love, and spiritual surrender. You learn to love all beings as divinely as you love family. Home becomes ashram, sanctuary, healing space, or spiritual retreat center.',
+    businessCareer: 'Mystical 14-year career evolution through pure spiritual service, mystical arts, or complete devotion to divine work. Professional success requires total surrender to divine will, creating transcendent art, or serving suffering beings selflessly. You may become mystic, spiritual artist, healer serving marginalized, or devotee serving divine. Authority comes through demonstrated divine connection and selfless service. Career involves mystical spirituality, transcendent arts, healing, or serving suffering. Professional reputation builds through divine love and transcendent beauty.',
+    moneyFinances: 'Financial life becomes total trust in divine provision, earning through spiritual gifts, and complete detachment from money. Money requires surrendering financial control to divine, serving freely, and trusting completely. You learn that divine provides everything, attachment to money creates suffering, and spiritual service attracts mysterious abundance. All financial boundaries dissolve - can lead to chaos or miraculous provision. Long-term wealth builds through complete trust. Financial lessons teach that divine is the source, total surrender brings total provision, and money is spiritual energy.',
+    predictions: [
+      'Complete spiritual awakening - ego dissolves, you experience unity consciousness and divine love',
+      'Mystical experiences become frequent - visions, divine encounters, transcendent states',
+      'Artistic or musical gifts channel pure divine inspiration creating transcendent beauty',
+      'Service to suffering beings becomes central - you serve homeless, addicted, marginalized with devotion',
+      'All boundaries dissolve - you must learn spiritual discernment to function while staying open',
+      'Addiction or escapism may arise requiring spiritual healing and grounded practices',
+      'Career becomes pure spiritual service - you surrender professional ambition for divine calling',
+      'Financial miracles occur through complete trust - divine provides mysteriously',
+      'You become vessel for divine love, healing, and beauty - ego completely surrendered',
+      'You master the art of complete surrender, divine union, and serving as pure instrument of love'
+    ]
+  },
+
+  // ============================================================================
+  // PLUTO INGRESSES - Transformation, power, death/rebirth (~12-30 years per sign)
+  // ============================================================================
+
+  'Pluto-Aries': {
+    name: 'Pluto Ingress Aries',
+    frequency: 'Approximately every 248 years',
+    duration: '~19-31 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Aries represents boldness, initiative, independence, courage, action, and pioneering spirit. It\'s the energy of self-assertion, leadership, new beginnings, and direct action.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Aries brings total transformation of identity, power through action, and death/rebirth of the self. This extremely rare generational cycle (happens once every 248 years) creates revolutionary leaders, transforms courage/leadership, and destroys/rebuilds identity itself. You must die to who you were, be reborn empowered, and wield transformative power through action. This is about identity death/rebirth, empowered action, and transforming how humanity expresses courage and leadership.',
+    loveRelationships: 'Romance becomes transformative passion, power dynamics through assertion, and death/rebirth through relationship. Relationships require confronting power struggles, transforming through conflict, and being reborn through love. You learn to love powerfully, transform through passion, and face relationship shadows courageously. Power struggles or intense passion possible - shadow work essential. Long-term partnerships deepen through crisis transforming both people, power sharing, and continuous rebirth. Dating involves intense, powerful people. You attract transformative, powerful, shadow-aware partners.',
+    familyHome: 'Family power dynamics transform, identity death/rebirth through family, and confronting family shadows. Home life needs privacy for transformation, space to process intensity, and safe place for rebirth. You may transform family power structures, be reborn through family crisis, or face family shadows courageously. Family relationships transform through power struggles resolved, secrets revealed, and rebirth after crisis. You learn to wield family power wisely. Home becomes transformation chamber and rebirth sanctuary.',
+    businessCareer: 'Generational career transformation through wielding power, transforming industries, or being reborn professionally. Professional success requires facing career shadows, wielding power wisely, and transforming through professional crisis. You may destroy/rebuild career multiple times, transform entire industries, or wield significant power. Authority comes through demonstrated transformative power. Career path likely involves multiple complete transformations. Professional reputation builds through phoenix-like rebirths.',
+    moneyFinances: 'Financial transformation through crisis and rebirth, power through wealth, and complete financial death/rebirth cycles. Money requires facing financial shadows, transforming through financial crisis, and wielding financial power wisely. You learn through financial death/rebirth, building wealth from nothing, and using money as transformative power. Financial obsession or power possible - wisdom essential. Long-term wealth builds through transformation mastery. Financial lessons teach that death precedes rebirth, crisis creates opportunity, and financial power requires wisdom.',
+    predictions: [
+      'Identity completely dies and is reborn - who you become is unrecognizable from who you were',
+      'Power awakens within you - you must learn to wield it wisely without dominating others',
+      'Multiple complete life transformations occur - each death births stronger, wiser self',
+      'Career or life direction transforms through crisis forcing total reinvention',
+      'Relationship power struggles teach you about healthy power dynamics and shadow integration',
+      'You develop courage to face anything - transformation removes fear through direct confrontation',
+      'Leadership emerges phoenix-like - you lead through demonstrated transformation',
+      'Obsessive drive or compulsive action requires shadow work and wise power use',
+      'You learn that true power comes from being reborn repeatedly, not from dominating',
+      'You master the art of transformative action, wise power wielding, and continuous rebirth'
+    ]
+  },
+
+  'Pluto-Taurus': {
+    name: 'Pluto Ingress Taurus',
+    frequency: 'Approximately every 248 years',
+    duration: '~26-33 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Taurus represents stability, security, material comfort, sensory pleasure, values, and persistence. It\'s the energy of building, maintaining, enjoying physical reality, and valuing quality over quantity.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Taurus brings total transformation of values, power through resources, and death/rebirth of material reality. This extremely rare generational cycle transforms money systems, destroys/rebuilds values, and revolutionizes relationship with physical world. You must face what you truly value, transform through material crisis, and be reborn with authentic values. This is about values death/rebirth, financial transformation, and transforming how humanity relates to resources and physical reality.',
+    loveRelationships: 'Romance becomes intense values alignment, power through resources, and transformation through material life together. Relationships require sharing power over resources, transforming values together, and facing material shadows. You learn to love through shared resources, transform values through partnership, and face possessiveness/jealousy. Obsessive attachment or possessiveness possible - letting go essential. Long-term partnerships deepen through financial crisis survived together, values transformed, and continuous material rebirth. Dating involves people with resources or values depth. You attract powerful, transformative, financially aware partners.',
+    familyHome: 'Family finances transform through crisis, family values death/rebirth, and power dynamics around resources. Home life needs material security yet transformation capacity, beautiful space that can be rebuilt. You may transform family wealth, be reborn through financial crisis, or face family money shadows. Family relationships transform through honest resource discussion, values alignment, and shared financial power. You learn to steward family resources powerfully. Home becomes both secure base and transformation space.',
+    businessCareer: 'Generational career transformation through resource mastery, financial power wielding, or transforming value creation. Professional success requires transforming industries\' economics, wielding financial power, or facing material shadows professionally. You may transform how entire sectors create value, wield significant financial power, or be reborn professionally through crisis. Authority comes through demonstrated financial transformation power. Career involves finance, resources, transformation of value systems. Professional reputation builds through phoenix-like financial rebirths.',
+    moneyFinances: 'Complete financial death/rebirth cycles, power through wealth transformation, and obsessive focus on financial mastery. Money requires facing financial shadows deeply, transforming through complete loss/gain cycles, and wielding financial power wisely. You learn through total financial destruction/rebuilding, creating wealth from ashes, and understanding money as power. Obsession with money or resources possible - spiritual values essential. Long-term wealth builds through transformation, crisis mastery, strategic power. Financial lessons teach that attachments must die for rebirth, crisis reveals true values, and financial power requires spiritual wisdom.',
+    predictions: [
+      'Values completely transform - what you valued dies, authentic values emerge from ashes',
+      'Financial crisis and rebirth cycles teach you true wealth versus material attachment',
+      'Career involves transforming how value is created, money works, or resources flow',
+      'You develop power over resources - able to create wealth from nothing repeatedly',
+      'Relationship requires transforming shared resources, letting go of possession, power sharing',
+      'Obsession with security or material wealth requires shadow work and spiritual values',
+      'Environmental or earth transformation becomes focus - composting, regeneration, death/rebirth cycles',
+      'Body transformation through death/rebirth - releasing old physical patterns',
+      'You learn that true security comes from transformation capacity, not material accumulation',
+      'You master the art of financial transformation, wise resource power, and authentic values'
+    ]
+  },
+
+  'Pluto-Gemini': {
+    name: 'Pluto Ingress Gemini',
+    frequency: 'Approximately every 248 years',
+    duration: '~25-31 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Gemini represents communication, learning, curiosity, versatility, connection, and information exchange. It\'s the energy of thinking, speaking, writing, learning, networking, and intellectual exploration.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Gemini brings total transformation of communication, power through information, and death/rebirth of thought itself. This extremely rare generational cycle transforms information systems, destroys/rebuilds communication, and revolutionizes how we think/speak. You must transform how you think, wield information as power, and be reborn intellectually. This is about mental death/rebirth, information transformation, and transforming how humanity communicates and processes information.',
+    loveRelationships: 'Romance becomes deep communication, power through words, and transformation through dialogue. Relationships require truth-telling that transforms, powerful communication, and facing communication shadows. You learn to love through transformative words, speak power into relationship, and face lies/secrets. Obsessive thinking about partner or manipulative communication possible - truth essential. Long-term partnerships deepen through crisis conversations, secrets revealed/healed, and communication transformed. Dating involves deep communicators. You attract transformative, truth-seeking, powerful communicators.',
+    familyHome: 'Family communication transforms through crisis, family secrets revealed, and power dynamics through information. Home life needs space for deep conversation, privacy for truth-telling, and capacity for mental transformation. You may reveal family secrets, transform through family truth-telling, or face family communication shadows. Relationship with siblings may transform through crisis or truth. Family relationships transform through honest communication, secrets exposed/healed, power of truth. You learn to wield family communication power wisely. Home becomes truth laboratory.',
+    businessCareer: 'Generational career transformation through information power, transforming communication systems, or wielding data/knowledge. Professional success requires transforming how information flows, wielding communication power, or facing information shadows. You may transform entire communication industries, wield massive information power, or investigate/reveal truth professionally. Authority comes through demonstrated information transformation power. Career involves investigation, deep research, transformative writing/speaking. Professional reputation builds through truth-revealing.',
+    moneyFinances: 'Financial transformation through information, power through knowledge, and earning through investigation/transformation of data. Money requires wielding information powerfully, transforming through learning, and earning through depth research or transformative communication. You learn that information is power and wealth, secrets revealed create value, and knowledge transforms finances. Obsession with information or mental control possible - wisdom essential. Long-term wealth builds through information mastery. Financial lessons teach that truth creates value, information is currency, and knowledge is transformative power.',
+    predictions: [
+      'Thinking completely transforms - mental patterns die, new consciousness emerges',
+      'Secrets revealed transform your life - family, personal, or societal truths exposed',
+      'Writing or communication becomes transformatively powerful - your words change lives',
+      'Career involves investigation, research, revealing truth, or transforming information systems',
+      'Relationship deepens through crisis conversations where secrets/shadows are revealed and healed',
+      'Obsessive thinking or information addiction requires shadow work and mental discipline',
+      'Sibling relationship transforms through crisis, truth-telling, or deep honesty',
+      'You develop investigative powers - able to uncover hidden truth in any situation',
+      'Education completely transforms - how you learn dies and is reborn',
+      'You master the art of transformative communication, information power, and truth-revealing'
+    ]
+  },
+
+  'Pluto-Cancer': {
+    name: 'Pluto Ingress Cancer',
+    frequency: 'Approximately every 248 years',
+    duration: '~16-26 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Cancer represents nurturing, emotions, family, home, roots, security, and protection. It\'s the energy of caring, belonging, emotional safety, and creating sanctuary.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Cancer brings total transformation of family, power through emotion, and death/rebirth of roots/security. This extremely rare generational cycle transforms family structures, destroys/rebuilds emotional life, and revolutionizes home/belonging. You must face family shadows, transform through emotional crisis, and be reborn emotionally. This is about family death/rebirth, emotional transformation, and transforming how humanity nurtures, belongs, and creates home.',
+    loveRelationships: 'Romance becomes intense emotional bonding, power through feelings, and transformation through family/home creation. Relationships require emotional depth/honesty, transforming through emotional crisis, and facing emotional shadows together. You learn to love through emotional power, transform feelings, and face abandonment/engulfment fears. Obsessive emotional attachment or emotional manipulation possible - boundaries essential. Long-term partnerships deepen through emotional death/rebirth together, creating family from ashes, and healing emotional wounds. Dating involves emotionally deep people. You attract transformative, emotionally powerful, shadow-aware partners.',
+    familyHome: 'Family undergoes complete transformation - deaths, rebirths, secrets revealed, power struggles resolved. Home life needs emotional safety yet transformation capacity, sanctuary that can be rebuilt. You may face family death literally or metaphorically, transform ancestral patterns, or reveal/heal family shadows. Family relationships transform through emotional honesty, shadow work, and rebirth after crisis. Relationship with mother may transform through crisis or deep healing. You learn to wield emotional/family power wisely. Home becomes both sanctuary and transformation chamber.',
+    businessCareer: 'Generational career transformation through family business, real estate transformation, or emotional power in profession. Professional success requires transforming family/caregiving systems, wielding emotional intelligence powerfully, or building from emotional depths. You may transform family business, rebuild real estate from ground up, or use emotional depth professionally. Authority comes through demonstrated emotional transformation power. Career involves family work, real estate transformation, emotional healing. Professional reputation builds through emotional depth and transformation.',
+    moneyFinances: 'Financial transformation through family, power through real estate, and earning through emotional depth or caregiving transformation. Money requires transforming family finances, investing in property transformation, and earning through emotional or caregiving work. You learn through family financial crisis/rebirth, building wealth in real estate, and understanding emotional/financial connections. Obsession with security or family money possible - trust essential. Long-term wealth builds through property and family resources transformation. Financial lessons teach that family patterns affect finances, property transforms value, and emotional security enables financial risk.',
+    predictions: [
+      'Family undergoes complete transformation - death, crisis, rebirth creating stronger foundation',
+      'Emotional patterns completely die and are reborn - childhood wounds healed through transformation',
+      'Mother relationship transforms through crisis, death, or deep shadow work and healing',
+      'Home completely transforms - move, rebuild, or total renovation reflecting inner transformation',
+      'Career involves transforming family systems, real estate, caregiving, or emotional healing',
+      'You develop emotional power - able to transmute any feeling and hold space for others\' emotions',
+      'Relationship requires emotional honesty about shadows, fears, and deep needs',
+      'Obsessive need for security or emotional control requires shadow work and trust',
+      'Ancestral patterns surface to be transformed and healed permanently',
+      'You master the art of emotional transformation, family healing, and creating secure sanctuary'
+    ]
+  },
+
+  'Pluto-Leo': {
+    name: 'Pluto Ingress Leo',
+    frequency: 'Approximately every 248 years',
+    duration: '~12-20 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, leadership, and recognition. It\'s the energy of shining, creating, celebrating, leading, and expressing authentic self.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Leo brings total transformation of creativity, power through self-expression, and death/rebirth of the ego. This extremely rare generational cycle transforms leadership, destroys/rebuilds creative power, and revolutionizes self-expression. You must transform creative power, face ego shadows, and be reborn as authentic leader. This is about ego death/rebirth, creative transformation, and transforming how humanity leads and creates.',
+    loveRelationships: 'Romance becomes passionate transformation, power through love, and death/rebirth through creative partnership. Relationships require facing ego in love, transforming through passion, and sharing creative power. You learn to love transformatively, face jealousy/pride shadows, and be reborn through romance. Obsessive passion or ego battles possible - humility essential. Long-term partnerships deepen through ego death together, creating powerfully, and continuous rebirth through love. Dating involves creatively powerful people. You attract transformative, passionate, shadow-aware partners.',
+    familyHome: 'Family creative power transforms, children transform you, and facing family ego shadows. Home life needs space for creative transformation, joyful rebirth, and powerful self-expression. You may be transformed by children/creative projects, face family pride/ego issues, or transform family creative legacy. Family relationships transform through ego work, celebrating rebirths, and creative power sharing. Relationship with father or children may be deeply transformative. You learn to lead family powerfully yet humbly. Home becomes creative transformation space.',
+    businessCareer: 'Generational career transformation through creative power, transforming entertainment/arts, or leadership rebirth. Professional success requires transforming creative industries, wielding creative power, or being reborn as leader multiple times. You may destroy/rebuild creative career, transform entertainment itself, or wield significant leadership power. Authority comes through demonstrated creative/leadership transformation. Career involves creative transformation, powerful leadership, or entertainment revolution. Professional reputation builds through phoenix-like creative rebirths.',
+    moneyFinances: 'Financial transformation through creative work, power through performance/art, and earning through creative rebirth. Money requires transforming creative monetization, wielding creative financial power, and earning through authentic self-expression. You learn through creative financial death/rebirth, building wealth through transformed creativity, and understanding creative power as wealth. Obsession with recognition or creative control possible - authenticity essential. Long-term wealth builds through creative mastery transformation. Financial lessons teach that creative authenticity attracts wealth, ego death births greater creativity, and true power is authentic expression.',
+    predictions: [
+      'Ego completely dies and is reborn - pride transforms into humble authentic power',
+      'Creative power awakens transformatively - you create from deep unconscious power',
+      'Children or creative projects transform you completely through death/rebirth processes',
+      'Leadership emerges phoenix-like - you lead after being destroyed and rebuilt',
+      'Relationship requires ego death and rebirth - facing pride, jealousy, need for control',
+      'Career involves creative transformation, powerful artistic expression, or revolutionary entertainment',
+      'You develop power to inspire through transformation - leading by example of rebirth',
+      'Obsession with recognition or performance requires shadow work on ego and authenticity',
+      'Father relationship may transform through crisis or provide deep transformation lessons',
+      'You master the art of creative transformation, authentic leadership power, and humble radiance'
+    ]
+  },
+
+  'Pluto-Virgo': {
+    name: 'Pluto Ingress Virgo',
+    frequency: 'Approximately every 248 years',
+    duration: '~12-17 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Virgo represents analysis, refinement, service, health, organization, and practical skill. It\'s the energy of improvement, discernment, efficiency, helping, and mastering craft.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Virgo brings total transformation of health, power through service, and death/rebirth of daily life. This extremely rare generational cycle transforms healthcare/work, destroys/rebuilds service systems, and revolutionizes wellness. You must transform health practices, wield power through service, and be reborn through work. This is about health death/rebirth, service transformation, and transforming how humanity serves, heals, and maintains health.',
+    loveRelationships: 'Romance becomes transformative service, power through devotion, and death/rebirth through daily life together. Relationships require serving each other deeply, transforming through health/work issues, and facing perfectionism shadows. You learn to love through transformative service, heal each other powerfully, and be reborn through devotion. Obsessive criticism or perfectionism possible - acceptance essential. Long-term partnerships deepen through health crisis survived together, serving powerfully, and continuous practical rebirth. Dating involves health-conscious servers. You attract transformative, devoted, healing partners.',
+    familyHome: 'Family health transforms through crisis, family service patterns death/rebirth, and facing family perfectionism shadows. Home life needs health-supporting transformation capacity, clean yet changeable space, and service opportunities. You may transform family health, be reborn through health crisis, or face family service/perfectionism shadows. Family relationships transform through honest health discussion, service without martyrdom, and accepting imperfection. You learn to serve family powerfully yet maintain boundaries. Home becomes healing transformation laboratory.',
+    businessCareer: 'Generational career transformation through healthcare revolution, service transformation, or work rebirth. Professional success requires transforming healthcare systems, wielding service power, or being reborn professionally through work crisis. You may transform healthcare, revolutionize service industries, or wield power through technical mastery. Authority comes through demonstrated healing/service transformation power. Career involves health transformation, powerful service, or work revolution. Professional reputation builds through practical transformation expertise.',
+    moneyFinances: 'Financial transformation through health work, power through service, and earning through healing/analytical transformation. Money requires transforming health economics, earning through powerful service, and building wealth through practical mastery. You learn through work financial death/rebirth, creating wealth through healing/service, and understanding service as power. Obsession with efficiency or work addiction possible - balance essential. Long-term wealth builds through healing/service mastery. Financial lessons teach that service creates wealth, health work is valuable, and practical transformation builds sustainable income.',
+    predictions: [
+      'Health undergoes complete transformation - illness becomes catalyst for total wellness rebirth',
+      'Work life dies and is reborn - career completely transforms through work crisis or mastery',
+      'Healing gifts awaken powerfully - you become transformative healer or health revolutionary',
+      'Perfectionism shadow work required - accepting imperfection while maintaining excellence',
+      'Career involves healthcare transformation, service revolution, or powerful practical work',
+      'Daily routines completely transform - what you do daily dies and is reborn multiple times',
+      'Relationship requires transforming service patterns, healing perfectionism, sharing work power',
+      'Obsession with health, work, or perfection requires shadow integration and self-acceptance',
+      'You develop power to analyze and transform any system making it more efficient and healthy',
+      'You master the art of healing transformation, powerful service, and practical rebirth mastery'
+    ]
+  },
+
+  'Pluto-Libra': {
+    name: 'Pluto Ingress Libra',
+    frequency: 'Approximately every 248 years',
+    duration: '~12-20 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Libra represents balance, partnership, harmony, aesthetics, diplomacy, and fairness. It\'s the energy of relating, cooperating, creating beauty, and seeking equilibrium.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Libra brings total transformation of relationships, power through partnership, and death/rebirth of fairness/beauty. This extremely rare generational cycle transforms partnership structures, destroys/rebuilds justice systems, and revolutionizes relating. You must transform relationships, face partnership shadows, and be reborn through union. This is about relationship death/rebirth, partnership transformation, and transforming how humanity relates, partners, and creates justice.',
+    loveRelationships: 'Romance becomes total transformation through partnership, power struggles in relationship, and death/rebirth through union. Relationships require facing shadows together, transforming through intense partnership, and being reborn as couple. You learn to love through transformation, face codependency/power shadows, and be continuously reborn in relationship. Obsessive attachment or power battles possible - equality essential. Long-term partnerships deepen through crisis transforming both, shadow work together, and phoenix-like relationship rebirths. Dating involves transformative people seeking depth. You attract powerful, shadow-aware, transformative partners.',
+    familyHome: 'Family partnerships transform through crisis, family justice issues death/rebirth, and facing family relationship shadows. Home life needs beautiful yet transformable space, partnership equality, and aesthetic that can be rebuilt. You may transform family partnerships, be reborn through family relationship crisis, or face family fairness shadows. Family relationships transform through power balancing, shadow work in relating, and relationship rebirth. You learn to partner in family powerfully yet fairly. Home becomes beautiful transformation space.',
+    businessCareer: 'Generational career transformation through partnership power, transforming justice systems, or aesthetic revolution. Professional success requires transforming partnership industries, wielding relationship power, or being reborn through business partnerships. You may transform legal systems, revolutionize partnership structures, or wield aesthetic/relational power. Authority comes through demonstrated partnership transformation power. Career involves relationship transformation, justice reform, or aesthetic revolution. Professional reputation builds through partnership phoenix moments.',
+    moneyFinances: 'Financial transformation through partnership finances, power through shared resources, and earning through relationship/aesthetic work. Money requires transforming partnership finances, managing shared money powerfully, and earning through relationship or beauty work. You learn through partnership financial death/rebirth, building wealth through relationships, and understanding partnership power dynamics with money. Obsession with partnership money or financial fairness possible - honesty essential. Long-term wealth builds through transformed partnerships. Financial lessons teach that partnership transforms finances, shared resources require power awareness, and financial fairness creates sustainable wealth.',
+    predictions: [
+      'Relationships undergo complete death/rebirth - partnerships transform you entirely',
+      'Marriage or significant partnership transforms through crisis creating deeper union or ending',
+      'Power struggles in relationship teach you about equality, shadow projection, and partnership',
+      'Career involves transforming relationships, partnership law, justice reform, or aesthetic revolution',
+      'Business partnership transforms through crisis - either rebirthing stronger or dissolving',
+      'You develop power to mediate and transform conflicts into opportunities for rebirth',
+      'Codependency shadow work required - learning to partner powerfully yet maintain self',
+      'Obsession with relationships or partnership addiction requires shadow integration',
+      'Justice or fairness becomes focus - you may fight for equality or transform legal systems',
+      'You master the art of relationship transformation, partnership power dynamics, and union rebirth'
+    ]
+  },
+
+  'Pluto-Scorpio': {
+    name: 'Pluto Ingress Scorpio',
+    frequency: 'Approximately every 248 years',
+    duration: '~11-17 years (varies due to elliptical orbit - Pluto rules Scorpio)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Scorpio represents intensity, transformation, depth, power, intimacy, and regeneration. It\'s the energy of probing beneath surface, merging deeply, wielding power, and transforming through crisis.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION (Pluto at Home): Pluto in Scorpio brings maximum transformation, ultimate power wielding, and complete death/rebirth. This is Pluto at its most intense and transformative. This extremely rare generational cycle creates profound transformation, sexual/psychological revolution, and deep shadow work collectively. You must face all shadows, wield power wisely, and be completely reborn. This is about total transformation, maximum power, and revolutionizing humanity\'s relationship with sex, death, power, and rebirth.',
+    loveRelationships: 'Romance becomes total intensity, complete sexual/emotional fusion, and ultimate transformation through union. Relationships require absolute depth, facing all shadows together, and complete transformation through intimacy. You learn to love with maximum intensity, merge totally, and be utterly transformed by love. Obsession, possession, or power struggles likely - total honesty essential. Long-term partnerships deepen through intense crisis, complete shadow integration, and continuous death/rebirth. Dating involves extremely intense people. You attract totally transformative, deeply sexual, completely shadow-aware partners.',
+    familyHome: 'Family undergoes maximum transformation - death, secrets, power struggles all surfacing for complete healing. Home life needs absolute privacy, transformation capacity, and space for intense shadow work. You may face family death/inheritance, transform completely through family crisis, or reveal/heal deepest family shadows. Family relationships transform through brutal honesty, complete shadow exposure, and total rebirth. You learn to wield family power with absolute wisdom. Home becomes ultimate transformation chamber.',
+    businessCareer: 'Generational career transformation through maximum power wielding, transforming power structures, or complete professional rebirth. Professional success requires wielding ultimate power wisely, transforming fundamental structures, or being completely destroyed/rebuilt professionally. You may wield massive transformative power, revolutionize power itself, or undergo ultimate professional death/rebirth. Authority comes through demonstrated mastery of transformation and power. Career involves deep transformation, power work, or complete revolutionary change. Professional reputation builds through total transformation mastery.',
+    moneyFinances: 'Complete financial transformation, maximum power through wealth, and ultimate financial death/rebirth. Money requires total financial honesty, wielding financial power absolutely, and complete financial transformation. You learn through total financial destruction/rebuilding, creating massive wealth from nothing, and wielding financial power wisely. Obsession with money/power likely - spiritual wisdom absolutely essential. Long-term wealth builds through complete transformation mastery. Financial lessons teach that maximum power requires maximum wisdom, total death enables total rebirth, and financial transformation creates ultimate wealth.',
+    predictions: [
+      'Complete life transformation - who you were dies entirely, you are utterly reborn',
+      'Maximum power awakens - you wield transformative power that can create or destroy',
+      'Sexual awakening at deepest level - sexuality becomes transformative spiritual power',
+      'All shadows surface to be faced - no unconscious content remains hidden',
+      'Death experiences (literal or metaphorical) transform you at the deepest core',
+      'Career involves ultimate transformation work - deep healing, power dynamics, or death work',
+      'Relationship becomes total fusion - complete merging teaching you about power and boundaries',
+      'Obsession with control, power, or intensity requires deepest shadow integration work',
+      'Financial transformation at maximum level - complete loss and/or massive wealth creation',
+      'You master the art of total transformation, wise power wielding, and complete rebirth'
+    ]
+  },
+
+  'Pluto-Sagittarius': {
+    name: 'Pluto Ingress Sagittarius',
+    frequency: 'Approximately every 248 years',
+    duration: '~11-17 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, teaching, and finding meaning through broadening horizons.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Sagittarius brings total transformation of beliefs, power through truth, and death/rebirth of philosophy. This extremely rare generational cycle transforms religion/education, destroys/rebuilds belief systems, and revolutionizes truth-seeking. You must transform beliefs, face philosophical shadows, and be reborn through truth. This is about belief death/rebirth, truth transformation, and transforming how humanity seeks meaning, believes, and understands truth.',
+    loveRelationships: 'Romance becomes transformative truth-seeking, power through shared beliefs, and death/rebirth through philosophical alignment. Relationships require brutal honesty, transforming beliefs together, and facing truth shadows. You learn to love through truth-telling, transform philosophy together, and be reborn through shared vision. Obsessive preaching or philosophical domination possible - openness essential. Long-term partnerships deepen through crisis transforming beliefs, truth revealed, and continuous philosophical rebirth. Dating involves truth-seekers or teachers. You attract transformative, honest, philosophically powerful partners.',
+    familyHome: 'Family beliefs transform through crisis, family truth revealed, and facing family philosophical shadows. Home life needs space for learning transformation, diverse perspectives, and freedom to question. You may transform family religion, be reborn through family truth crisis, or face family belief shadows. Family relationships transform through honesty about beliefs, exposing family lies/dogma, and philosophical rebirth. You learn to share truth powerfully yet allow family diversity. Home becomes truth laboratory and study transformation center.',
+    businessCareer: 'Generational career transformation through education revolution, transforming belief systems, or truth-telling power. Professional success requires transforming education, wielding truth power, or being reborn through teaching crisis. You may transform religious/educational institutions, wield power through publishing/teaching, or revolutionize philosophy itself. Authority comes through demonstrated truth transformation power. Career involves education transformation, powerful teaching, or truth revolution. Professional reputation builds through truth-revealing and belief transformation.',
+    moneyFinances: 'Financial transformation through teaching, power through published truth, and earning through educational/philosophical transformation. Money requires earning through transformative teaching, publishing truth powerfully, and building wealth through education. You learn through educational financial death/rebirth, creating wealth through teaching, and understanding truth as financial power. Obsession with belief systems or educational control possible - humility essential. Long-term wealth builds through teaching/publishing mastery. Financial lessons teach that truth creates wealth, teaching transforms finances, and educational power builds sustainable income.',
+    predictions: [
+      'Beliefs completely die and are reborn - what you believed transforms entirely',
+      'Truth revealed transforms your life - family secrets, philosophical awakening, or exposed lies',
+      'Teaching or publishing becomes transformatively powerful - your truth changes lives',
+      'International experience transforms you - travel, education abroad, or cross-cultural immersion',
+      'Career involves transforming education, religious revolution, publishing truth, or philosophical work',
+      'Relationship requires brutal honesty and shared vision - beliefs must align or transform',
+      'Obsession with being right or philosophical domination requires shadow work and openness',
+      'Higher education completely transforms - what/how you learn dies and is reborn',
+      'You develop power to see and speak truth that transforms individuals and collective',
+      'You master the art of truth transformation, powerful teaching, and belief system rebirth'
+    ]
+  },
+
+  'Pluto-Capricorn': {
+    name: 'Pluto Ingress Capricorn',
+    frequency: 'Approximately every 248 years',
+    duration: '~14-21 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Capricorn represents ambition, achievement, structure, mastery, responsibility, and authority. It\'s the energy of building, achieving, leading with integrity, and reaching the mountain top through persistent effort.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Capricorn brings total transformation of structures, power through authority, and death/rebirth of achievement systems. This extremely rare generational cycle transforms government/corporations, destroys/rebuilds power structures, and revolutionizes authority. You must transform career/ambition, face authority shadows, and be reborn professionally. This is about structural death/rebirth, authority transformation, and transforming how humanity builds, achieves, and wields institutional power.',
+    loveRelationships: 'Romance becomes transformative achievement partnership, power through building together, and death/rebirth through shared ambition. Relationships require transforming traditional structures, facing authority shadows, and being reborn through commitment. You learn to love through powerful building, transform ambition together, and face control shadows. Obsessive control or ambition dominating relationship possible - equality essential. Long-term partnerships deepen through career crisis survived together, building powerfully, and continuous achievement rebirth. Dating involves ambitious powerful people. You attract transformative, achievement-oriented, authority-aware partners.',
+    familyHome: 'Family structures completely transform, family authority death/rebirth, and facing family power shadows. Home life needs solid yet transformable foundation, respect for earned authority, and space for ambitious transformation. You may transform family business/legacy, be reborn through family authority crisis, or face family power abuse shadows. Family relationships transform through authority rebalancing, structure rebuilding, and power wisdom. Relationship with father or authority figures deeply transformative. You learn to wield family authority wisely. Home becomes both secure base and transformation structure.',
+    businessCareer: 'Generational career transformation through wielding institutional power, destroying/rebuilding structures, or complete professional rebirth. Professional success requires transforming entire industries, wielding ultimate professional power, or being destroyed/rebuilt multiple times. You may destroy/rebuild career completely, transform corporate/government structures, or wield massive institutional power. Authority comes through demonstrated transformation of structures. Career involves structural transformation, power work, or revolutionary leadership. Professional reputation builds through phoenix-like professional rebirths.',
+    moneyFinances: 'Complete financial structure transformation, power through wealth building, and earning through structural/professional transformation. Money requires transforming how you build wealth, wielding financial power structurally, and earning through professional mastery. You learn through complete career financial death/rebirth, building massive wealth from nothing, and understanding professional power as wealth. Obsession with success or financial control possible - integrity essential. Long-term wealth builds through structural transformation mastery. Financial lessons teach that structures must transform, professional power creates wealth, and sustainable success requires integrity plus transformation.',
+    predictions: [
+      'Career undergoes complete transformation - professional identity dies and is utterly reborn',
+      'Power structures you\'re part of collapse and rebuild - corporation, government, or institution',
+      'Ambition transforms from ego-driven to service-driven through crisis or shadow work',
+      'Father or authority figure relationship transforms through crisis, death, or power shift',
+      'Career involves transforming institutions, wielding structural power, or revolutionary leadership',
+      'You develop power to build lasting structures from ashes of destruction',
+      'Relationship requires transforming traditional structures and facing control shadows',
+      'Obsession with success, control, or achievement requires deep shadow integration',
+      'Financial transformation through complete career death/rebirth or structural collapse/rebuild',
+      'You master the art of structural transformation, wise authority wielding, and professional rebirth'
+    ]
+  },
+
+  'Pluto-Aquarius': {
+    name: 'Pluto Ingress Aquarius',
+    frequency: 'Approximately every 248 years',
+    duration: '~20-24 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Aquarius represents innovation, community, individuality, progress, friendship, and humanitarian vision. It\'s the energy of awakening, connecting, revolutionizing, and serving collective evolution.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Aquarius brings total transformation of society, power through collective, and death/rebirth of community/technology. This extremely rare generational cycle transforms social structures, destroys/rebuilds networks, and revolutionizes technology and humanity itself. You must transform your relationship to collective, face social shadows, and be reborn through community. This is about social death/rebirth, collective transformation, and transforming how humanity connects, evolves collectively, and uses technology.',
+    loveRelationships: 'Romance becomes transformative friendship, power through network, and death/rebirth through social connection. Relationships require transforming traditional romance into revolutionary partnership, facing social shadows, and being reborn through progressive love. You learn to love through friendship transformation, create with social networks, and face attachment shadows. Obsessive need for freedom or social control possible - authentic connection essential. Long-term partnerships deepen through social crisis survived together, community building, and continuous social rebirth. Dating through communities or networks. You attract transformative, socially conscious, revolutionary partners.',
+    familyHome: 'Family becomes chosen family, family social networks transform, and facing family social shadows. Home life needs community space, technology integration, and room for progressive transformation. You may create chosen family completely, transform through family social crisis, or face family rejection shadows. Family relationships transform through accepting differences radically, social network rebuilding, and progressive rebirth. You learn that family is transformable and choosable. Home becomes community transformation hub.',
+    businessCareer: 'Generational career transformation through technology revolution, social transformation, or network power wielding. Professional success requires transforming social structures, wielding network power, or being reborn through technological crisis. You may transform social movements, revolutionize technology itself, or wield massive network power. Authority comes through demonstrated collective transformation power. Career involves social transformation, technology revolution, or network building. Professional reputation builds through community transformation leadership.',
+    moneyFinances: 'Financial transformation through network economics, power through collective wealth, and earning through social/technological transformation. Money requires transforming financial systems collectively, earning through networks, and building wealth through technology. You learn through social financial death/rebirth, creating wealth through communities, and understanding network power as wealth. Obsession with technology or social control possible - humanity essential. Long-term wealth builds through network transformation mastery. Financial lessons teach that collective transforms wealth, technology revolutionizes finances, and network power creates sustainable abundance.',
+    predictions: [
+      'Social identity dies and is reborn - who you are socially transforms completely',
+      'Community undergoes complete transformation - network collapses and rebuilds',
+      'Technology becomes transformative power - you wield tech to transform society',
+      'Friendship transforms into family or family transforms into chosen community',
+      'Career involves social transformation, technology revolution, or collective healing',
+      'You develop power to transform social structures and build revolutionary networks',
+      'Relationship requires progressive transformation - traditional structures must die',
+      'Obsession with freedom, technology, or social perfection requires shadow integration',
+      'Financial revolution through cryptocurrency, decentralized systems, or network economics',
+      'You master the art of collective transformation, network power wielding, and social rebirth'
+    ]
+  },
+
+  'Pluto-Pisces': {
+    name: 'Pluto Ingress Pisces',
+    frequency: 'Approximately every 248 years',
+    duration: '~25-30 years (varies due to elliptical orbit)',
+    planetEnergy: 'Pluto represents transformation, power, death/rebirth, depth, obsession, and the unconscious. It\'s where you face shadows, transform through crisis, wield power, die and are reborn, and undergo total metamorphosis.',
+    signEnergy: 'Pisces represents spirituality, compassion, imagination, transcendence, unity, and dissolution. It\'s the energy of connecting to divine, serving selflessly, creating artistically, and transcending ego boundaries.',
+    eventMeaning: '💀 GENERATIONAL TRANSFORMATION: Pluto in Pisces brings total transformation of spirituality, power through surrender, and death/rebirth of ego into unity. This extremely rare generational cycle transforms religion/spirituality, destroys/rebuilds compassion, and revolutionizes connection to divine. You must transform spiritually, face spiritual shadows, and be reborn into unity consciousness. This is about spiritual death/rebirth, divine transformation, and transforming how humanity connects to divine, serves compassionately, and experiences oneness.',
+    loveRelationships: 'Romance becomes total spiritual transformation, power through surrender, and death/rebirth through divine union. Relationships require spiritual depth, transforming through compassion, and facing victim/savior shadows. You learn to love as spiritual transformation, surrender control through love, and be reborn through unconditional love. Obsessive savior complex or victim addiction possible - boundaries essential. Long-term partnerships deepen through spiritual crisis survived together, serving compassionately, and continuous spiritual rebirth. Dating involves spiritual transformers. You attract deeply compassionate, spiritually transformative, shadow-aware partners.',
+    familyHome: 'Family spirituality undergoes total transformation, family addiction/victimhood patterns death/rebirth, and facing family spiritual shadows. Home life needs spiritual space, transformation through water/ocean, and sanctuary for spiritual crisis. You may transform family through spiritual awakening, be reborn through family addiction crisis, or face family savior/victim shadows. Family relationships transform through forgiveness, spiritual honesty, and compassionate rebirth. You learn to serve family spiritually yet maintain boundaries. Home becomes spiritual transformation sanctuary.',
+    businessCareer: 'Generational career transformation through spiritual work, healing transformation, or artistic rebirth. Professional success requires transforming spirituality/healing, wielding compassionate power, or being reborn through artistic crisis. You may transform spiritual/healing industries, wield power through art/music, or revolutionize compassion itself. Authority comes through demonstrated spiritual transformation power. Career involves spiritual transformation, deep healing, or transcendent art. Professional reputation builds through spiritual rebirth and compassionate service.',
+    moneyFinances: 'Financial transformation through spiritual work, power through healing, and earning through artistic/spiritual transformation. Money requires transforming relationship with money spiritually, earning through healing/art, and building wealth through surrender. You learn through financial victim patterns death/rebirth, creating wealth through spirituality, and understanding surrender as financial power. Obsession with spiritual purity or financial martyrdom possible - practical wisdom essential. Long-term wealth builds through spiritual/artistic mastery. Financial lessons teach that spiritual power creates wealth, surrender transforms finances, and serving creates sustainable abundance.',
+    predictions: [
+      'Spiritual awakening through complete ego death - who you thought you were dissolves entirely',
+      'Addiction or victim patterns surface to be transformed and healed permanently',
+      'Artistic or musical power awakens from depths - you create transformative transcendent art',
+      'Healing gifts emerge powerfully - you become transformative healer serving suffering beings',
+      'Career involves spiritual transformation, deep healing work, or transcendent artistic creation',
+      'You develop power to hold space for others\' complete transformation with compassion',
+      'Relationship requires spiritual depth and facing savior/victim shadow patterns',
+      'Obsession with spirituality, martyrdom, or saving others requires boundary work',
+      'Financial transformation through releasing poverty consciousness or spiritual materialism',
+      'You master the art of spiritual transformation, compassionate power, and ego death/rebirth into unity'
+    ]
   }
 };
 
