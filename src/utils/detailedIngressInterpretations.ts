@@ -56,6 +56,31 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
     ]
   },
 
+  'Venus-Aries': {
+    name: 'Venus Ingress Aries',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Aries represents new beginnings, courage, independence, leadership, initiative, and the pioneering spirit. It\'s the spark of self-assertion, the drive to be first, and pure initiating force.',
+    eventMeaning: 'Venus in Aries brings passionate, direct, bold love and attraction. Romantic and aesthetic energy becomes assertive and action-oriented. The next 3-4 weeks favor pursuing what you want romantically, starting new creative projects, direct expression of affection, and independent pleasure. Love becomes more exciting, spontaneous, and adventurous. Excellent for new relationships, bold romantic gestures, or refreshing existing partnerships. Beauty tastes become bolder. May rush into love or spend impulsively - enjoy the passion but stay aware.',
+    loveRelationships: 'Passionate pursuit and direct romantic action. Perfect time to make first move, ask someone out boldly, or reignite excitement in existing relationship. Express affection directly and enthusiastically. Attraction to confident, independent partners with adventurous spirit. Sexual chemistry and physical attraction intensify. Romance should be exciting, active, and spontaneous - boredom feels unbearable. Some may rush into new relationships - enjoy the passion but don\'t skip important stages.',
+    familyHome: 'More independence from family or assertion of individual needs at home. Good time to initiate home improvements requiring decisive action, decorate boldly, or pursue individual interests. Family relationships benefit from more honesty and directness. Active family outings or physical activities together. Less patience for family drama - address issues directly. Create more personal space and autonomy at home.',
+    businessCareer: 'Career success through bold initiative, creative courage, and direct approach. Excellent for work in fashion, sports, entrepreneurship, sales requiring assertiveness, or pioneering creative fields. Start new projects confidently or pitch ideas boldly. Your enthusiasm and direct approach attract clients and opportunities. Good time to ask for what you want professionally or negotiate assertively. Make your work more exciting and independent.',
+    moneyFinances: 'Bold financial action and independent earning. Good time to start new income stream, invest in yourself, or pursue money opportunities assertively. Earning through independent work, sales, competitive fields, or exciting ventures. Spending on adventure, sports, fashion, or what makes you feel confident. Impulse purchases possible - channel enthusiasm into smart financial boldness, not reckless spending. Money flows to those who take initiative.',
+    predictions: [
+      'Romantic pursuit or bold first move leads to exciting new connection',
+      'Confidence in pursuing what you want attracts right person or opportunity',
+      'Financial opportunity through taking initiative others hesitate on',
+      'Creative project you start with passion and enthusiasm',
+      'Spontaneous date or adventure that brings excitement and joy',
+      'Direct expression of feelings clears air and deepens relationship',
+      'Purchase or investment in yourself that boosts confidence',
+      'New relationship that begins quickly with strong physical attraction',
+      'Independence you assert in relationship improves dynamics',
+      'You learn that direct pursuit of what you want works better than waiting'
+    ]
+  },
+
   'Venus-Taurus': {
     name: 'Venus Ingress Taurus',
     frequency: 'Approximately once per year',
@@ -78,6 +103,256 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Garden, nature, or outdoor experience that grounds and restores you',
       'Realization of your true worth leads to better treatment from others',
       'Sensory pleasure or physical comfort that feels deeply satisfying and valuable'
+    ]
+  },
+
+  'Venus-Gemini': {
+    name: 'Venus Ingress Gemini',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Gemini represents curiosity, versatility, communication, mental quickness, learning, connections, and seeing multiple perspectives. It\'s the energy of questions, conversations, and information exchange.',
+    eventMeaning: 'Venus in Gemini brings playful, communicative, curious love and attraction. Romantic and aesthetic energy becomes light and versatile. The next 3-4 weeks favor flirting, interesting conversations, variety in relationships, mental stimulation, and social pleasures. Love becomes more intellectual, fun, and varied. Excellent for meeting new people, witty romance, creative communication, or exploring multiple interests. Beauty tastes become eclectic. May scatter romantic energy - enjoy variety but maintain depth where it matters.',
+    loveRelationships: 'Romance through conversation, wit, and mental connection. Perfect time for interesting dates involving talk, learning, or variety. Flirt through clever banter and playful communication. Attraction to intelligent, versatile, communicative partners. Relationships thrive through shared ideas, laughter, and mental stimulation. Text and message romance especially good. Keep things light, fun, and varied - too much intensity feels heavy. Some may date multiple people or explore options.',
+    familyHome: 'Family socializing and communication increase. Good time for family gatherings with conversation, games, or learning together. Home benefits from creating spaces for communication and variety. Short family trips or local exploration. Siblings and extended family connections strengthen. Family time should be mentally stimulating and varied - routine family patterns feel boring. Create more fun, playful family atmosphere.',
+    businessCareer: 'Career success through communication, networking, versatility, and social skills. Excellent for work in writing, teaching, sales, media, social networking, public relations, or variety-focused fields. Your charm, wit, and communication skills attract professional opportunities. Good time to network widely, pitch ideas charmingly, or start communication-based projects. Multiple professional interests or projects keep you engaged. Build relationships through interesting conversation.',
+    moneyFinances: 'Financial opportunities through communication, variety, networking, and intellectual pursuits. Good time for multiple income streams, freelance variety work, or earning through words and ideas. Spending on books, classes, communication tools, or varied experiences. Money through social connections and versatile skills. Financial decisions benefit from gathering information and exploring options. Avoid scattered financial focus - variety is good, but follow through matters too.',
+    predictions: [
+      'Romantic connection through interesting conversation or intellectual attraction',
+      'Social event or networking where your charm and wit attract opportunities',
+      'Financial opportunity through communication skills or versatile talents',
+      'Purchase of books, classes, or experiences that stimulate your mind',
+      'Relationship improves through more playful communication and variety',
+      'Flirtation or light romance that brings fun without heavy commitment',
+      'Multiple interests or projects that keep you engaged and curious',
+      'Sibling or neighbor connection that brings pleasure and support',
+      'Creative or communication project that showcases your versatility',
+      'You learn that mental connection and variety keep love and life interesting'
+    ]
+  },
+
+  'Venus-Cancer': {
+    name: 'Venus Ingress Cancer',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Cancer represents nurturing, emotions, safety, family, roots, intuition, and the protective instinct. It\'s the energy of home, emotional security, and caring for yourself and others.',
+    eventMeaning: 'Venus in Cancer brings nurturing, emotional, protective love and attraction. Romantic and aesthetic energy becomes caring and home-focused. The next 3-4 weeks favor deepening emotional intimacy, family bonding, home beautification, and creating safety in relationships. Love becomes more tender, vulnerable, and caring. Excellent for commitment deepening, family time, home improvement, or emotional healing. Beauty tastes become cozy and nostalgic. May become overly protective or moody - nurture without smothering.',
+    loveRelationships: 'Romance through emotional nurturing, vulnerability, and creating safety together. Perfect time for intimate emotional conversations, cooking together, staying home cuddling, or meeting family. Express love through caring actions, emotional support, and creating security. Attraction to partners who feel emotionally safe and family-oriented. Relationships deepen through vulnerability and shared feelings. Need for reassurance increases - give and receive emotional comfort. Some relationships move toward commitment or family planning.',
+    familyHome: 'Peak time for family bonding, home beautification, and creating emotional sanctuary. Excellent for family gatherings, improving home comfort and beauty, decorating nostalgically, or strengthening family relationships. Cooking for loved ones and creating cozy atmosphere brings deep satisfaction. Family financial planning or property decisions. Express love for family through nurturing care. Home becomes center of pleasure and comfort. Invest in making home feel safe and beautiful.',
+    businessCareer: 'Career success through nurturing approach, emotional intelligence, and caring service. Excellent for work in real estate, food service, childcare, interior design, family business, counseling, or home-based ventures. Your caring, protective approach attracts clients and opportunities. Good time to build workplace relationships through emotional support, create comfortable work environment, or pursue family-friendly career options. Workplace becomes like family.',
+    moneyFinances: 'Financial focus on home, family security, and emotional comfort. Good time for home improvements that add beauty and value, family financial planning, or real estate investment. Earning through nurturing work, home-based business, or caring services. Spending on home comfort, family needs, or creating beautiful sanctuary. Money decisions consider emotional security and family wellbeing. Save for nest egg and protect resources. Build wealth through property and family-oriented ventures.',
+    predictions: [
+      'Relationship deepens through emotional vulnerability and nurturing care',
+      'Home improvement that makes space significantly more comfortable and beautiful',
+      'Family connection or gathering that brings deep emotional satisfaction',
+      'Romantic evening at home that creates intimacy better than going out',
+      'Financial decision prioritizing home or family security pays off',
+      'Cooking or caring for someone creates deep connection and pleasure',
+      'Emotional conversation where vulnerability strengthens relationship bond',
+      'Purchase for home that creates lasting comfort and beauty',
+      'Family tradition or nostalgic activity that brings unexpected joy',
+      'You learn that emotional safety and nurturing care deepen love and connection'
+    ]
+  },
+
+  'Venus-Leo': {
+    name: 'Venus Ingress Leo',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, romance, and radiant presence. It\'s the energy of shining brightly, creating from the heart, and celebrating life with enthusiasm.',
+    eventMeaning: 'Venus in Leo brings passionate, generous, dramatic love and attraction. Romantic and aesthetic energy becomes bold and theatrical. The next 3-4 weeks favor grand romance, creative self-expression, celebration, and generous love. Love becomes more confident, playful, and dramatic. Excellent for romance, creative projects, entertainment, or expressing yourself boldly. Beauty tastes become luxurious and attention-getting. May seek too much attention - shine authentically but allow others their spotlight too.',
+    loveRelationships: 'Peak romance and passion time. Perfect for grand romantic gestures, dramatic date nights, creative expressions of love, or playful celebration together. Express love generously, confidently, and theatrically. Attraction to partners who appreciate your radiance and celebrate you. Relationships thrive through fun, romance, mutual admiration, and creative play. Give and receive compliments and praise. Some relationships deepen through loyalty and devotion. Single? You\'re magnetic - shine and attract admirers.',
+    familyHome: 'Family time becomes more joyful, celebratory, and fun. Excellent for family parties, entertainment, creative projects together, or celebrating family achievements. Home becomes stage for self-expression - decorate boldly and luxuriously. Express love for family generously and praise their accomplishments. Children (yours or others\') bring special joy. Family pride increases. Create more play and celebration in family life. Make home beautiful and impressive.',
+    businessCareer: 'Career success through confident self-expression, creativity, and generous leadership. Excellent for work in entertainment, arts, luxury goods, teaching, working with children, or any field requiring charisma. Your confidence and creative talents attract professional recognition. Good time to showcase work, present boldly, or take center stage professionally. Lead with warmth and generosity. Build professional relationships through authentic appreciation. Charge what you\'re worth confidently.',
+    moneyFinances: 'Financial confidence and earning through creativity or performance. Good time to increase prices based on unique value, pursue creative income, or earn through entertaining or teaching. Spending on luxury, entertainment, creative expression, or items that make you feel special. Generous with money but ensure you can afford it. Financial decisions should reflect your worth and creative value. Invest in self-expression and joy within budget. Money through shining your talents.',
+    predictions: [
+      'Romantic gesture or date that creates magical, memorable experience',
+      'Creative project or performance that receives recognition and appreciation',
+      'Purchase of luxury or beauty item that makes you feel confident and special',
+      'Relationship deepens through playful fun and mutual celebration',
+      'Financial opportunity through showcasing your creative talents boldly',
+      'Compliment or praise you give someone brightens their day significantly',
+      'Social event or party where you shine and attract positive attention',
+      'Generous act of love creates deep appreciation and connection',
+      'Creative self-expression brings unexpected joy and recognition',
+      'You learn that confident, generous self-expression attracts love and opportunity'
+    ]
+  },
+
+  'Venus-Virgo': {
+    name: 'Venus Ingress Virgo',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Virgo represents refinement, service, health, organization, discernment, and practical improvement. It\'s the energy of making things better through detailed attention and skillful craft.',
+    eventMeaning: 'Venus in Virgo brings practical, helpful, refined love and attraction. Romantic and aesthetic energy becomes service-oriented and detail-focused. The next 3-4 weeks favor showing love through helpful actions, improving relationships, health and wellness focus, and refining your environment. Love becomes more practical and analytical. Excellent for relationship improvement, health and beauty routines, organizing spaces beautifully, or acts of service. Beauty tastes become understated and functional. May be overly critical - help and improve, but accept imperfection.',
+    loveRelationships: 'Love through practical service, helpful actions, and attentive care. Perfect time for showing affection by helping partner, supporting their health, or improving daily life together. Express love through noticing details of what they need and providing it. Attraction to competent, helpful, health-conscious partners. Relationships improve through addressing practical issues, establishing healthy routines, or refining how you relate. Some may analyze relationship too much - help but don\'t criticize.',
+    familyHome: 'Family relationships benefit from practical help and service. Excellent for organizing home beautifully and functionally, establishing family health routines, or helping family members with practical needs. Home improvement focusing on efficiency and refined beauty. Family time through shared work projects or wellness activities. Show love for family through useful assistance. Create more organized, healthy, beautiful home environment. Attention to detail improves family life quality.',
+    businessCareer: 'Career success through quality work, helpful service, and attention to detail. Excellent for work in healthcare, wellness, crafts, editing, analytics, quality control, or service professions. Your competence and helpful approach attract professional recognition. Good time to refine work quality, organize workspace beautifully, or improve work processes. Build client relationships through reliable, excellent service. Earn through skillful, detail-oriented work. Value your expertise appropriately.',
+    moneyFinances: 'Financial improvement through practical analysis and refined budgeting. Good time to organize finances, cut unnecessary expenses, invest in health and quality, or earn through skilled service. Spending on health, wellness, quality tools, or practical beauty that serves a purpose. Financial decisions should be analytical and efficient. Money through competent work and attention to value. Build wealth through practical improvements and refined financial systems. Invest in what improves quality of life.',
+    predictions: [
+      'Helpful action or service you provide strengthens relationship significantly',
+      'Home organization or refinement that improves both beauty and function',
+      'Health or wellness improvement through attention to diet, exercise, or self-care',
+      'Financial analysis or budget refinement that reveals savings opportunity',
+      'Relationship improves through addressing practical issues helpfully',
+      'Purchase of quality item that serves practical need beautifully',
+      'Work quality or service excellence receives appreciation and recognition',
+      'Detail you notice about partner\'s needs allows you to help them perfectly',
+      'Daily routine improvement creates more time, health, and satisfaction',
+      'You learn that practical service and attention to detail are powerful expressions of love'
+    ]
+  },
+
+  'Venus-Libra': {
+    name: 'Venus Ingress Libra',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Libra represents balance, partnership, beauty, harmony, diplomacy, and fairness. It\'s the energy of relationships, aesthetics, and seeking equilibrium through connection with others.',
+    eventMeaning: 'Venus in Libra is the goddess of love in her second home sign - Venus rules Libra, so this placement maximizes relationship harmony, beauty, and partnership. Love becomes more romantic, balanced, and aesthetically focused. The next 3-4 weeks favor partnerships, commitments, beautifying environments, social activities, and seeking balance. This is the most romantic, partnership-oriented, beauty-seeking Venus transit. Perfect time for weddings, commitments, or relationship deepening. May avoid conflict for harmony - seek peace but address issues.',
+    loveRelationships: 'Peak romance and partnership time. Perfect for weddings, commitments, relationship discussions, or deepening partnerships. Romance becomes elegant, balanced, and harmonious. Express love through beautiful gestures, fair consideration, and creating aesthetic experiences together. Attraction to charming, balanced, aesthetically aware partners. Relationships thrive through equality, beauty, and mutual consideration. Social activities together strengthen bonds. Single? Focus on partnership attracts ideal partners. Some avoid necessary conflicts - seek harmony but address issues diplomatically.',
+    familyHome: 'Family harmony through balance, fairness, and beauty. Excellent for family social events, beautifying home aesthetically, or mediating family relationships diplomatically. Home becomes showcase of beauty and peaceful atmosphere. Family decisions made fairly and collaboratively. Decor improvements focusing on balance and elegance. Family time through cultural activities, art, or social gatherings. Create more peace, beauty, and balance in family relationships and home environment.',
+    businessCareer: 'Career success through partnership, diplomacy, and aesthetic sense. Excellent for work in law, counseling, design, fashion, beauty, arts, mediation, or relationship-oriented fields. Your charm, fairness, and aesthetic sense attract professional success. Good time to form partnerships, collaborate, beautify work, or mediate conflicts. Build client relationships through diplomatic grace and aesthetic awareness. Negotiate contracts or agreements. Create beautiful, harmonious work.',
+    moneyFinances: 'Financial partnerships and balanced money management. Good time for partnership financial agreements, collaborative ventures, or balanced budgeting. Earning through beauty work, design, law, counseling, or relationship services. Spending on beauty, art, fashion, or aesthetic improvements. Financial decisions should be fair and balanced. Partnership income or shared financial planning favored. Money through charm, aesthetic sense, and relationship skills. Invest in beauty and partnerships.',
+    predictions: [
+      'Romantic connection or relationship commitment that feels perfectly balanced',
+      'Aesthetic improvement to space creates beautiful, harmonious environment',
+      'Partnership or collaboration that succeeds through mutual fairness and balance',
+      'Social event where your charm attracts romantic or professional opportunities',
+      'Financial partnership or agreement reached through fair negotiation',
+      'Purchase of beautiful item or aesthetic experience that brings lasting pleasure',
+      'Relationship conversation about equality improves balance and satisfaction',
+      'Diplomatic approach to conflict resolves it gracefully and harmoniously',
+      'Wedding, commitment, or partnership celebration of your own or others\'',
+      'You learn that balanced partnership and aesthetic beauty create deep satisfaction'
+    ]
+  },
+
+  'Venus-Scorpio': {
+    name: 'Venus Ingress Scorpio',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Scorpio represents depth, transformation, power, intimacy, truth, and regeneration. It\'s the energy of diving deep, facing shadows, and emerging transformed through intensity.',
+    eventMeaning: 'Venus in Scorpio brings intense, deep, transformative love and attraction. Romantic and aesthetic energy becomes passionate and all-or-nothing. The next 3-4 weeks favor deep intimacy, emotional transformation, passionate connections, and facing relationship truths. Love becomes more intense, loyal, and sexually charged. Excellent for deepening bonds, healing relationship wounds, or transformative intimacy. Beauty tastes become dark and magnetic. May become possessive or jealous - embrace depth but allow freedom.',
+    loveRelationships: 'Intense, passionate, deeply bonding romance. Perfect time for deepening emotional and sexual intimacy, sharing secrets, or transforming relationship through truth. Express love with intensity, loyalty, and passionate devotion. Attraction to deep, mysterious, emotionally powerful partners. Relationships either deepen profoundly or end decisively - no surface connection satisfies. Sexual intimacy reaches new depths. Jealousy or power struggles possible - address honestly. Vulnerability and trust transform relationships. Some commit deeply or heal old wounds.',
+    familyHome: 'Family dynamics intensify - hidden issues surface for transformation. Excellent for deep family healing conversations, addressing family shadows, or transforming family relationships through honesty. Home becomes private sanctuary and place for deep emotional work. Family financial matters like inheritance or shared resources. Power dynamics in family need addressing. Family secrets may surface. Intense family emotions require honest expression. Transform family patterns through facing truth.',
+    businessCareer: 'Career success through depth, intensity, transformation, and powerful presence. Excellent for work in psychology, research, finance, crisis management, detective work, surgery, or transformative fields. Your intensity and depth attract professional recognition. Good time to transform career, address workplace power dynamics, or pursue deep, focused work. Build professional relationships through trust and depth. Earn through powerful, transformative work. Uncover hidden professional opportunities.',
+    moneyFinances: 'Financial transformation and deep money work. Good time for investments, dealing with shared finances, taxes, debt, or inheritance. Earning through transformative work, depth services, research, or managing others\' resources. Spending on deep experiences, transformation, or what empowers you. Financial decisions should penetrate beneath surface to real value. Money through intensity, power, and transformation. Address financial shadows or hidden issues. Transform financial situation profoundly.',
+    predictions: [
+      'Romantic or sexual intimacy deepens to transformative new level',
+      'Financial opportunity through inheritance, investment, or shared resources',
+      'Relationship transforms through confronting difficult truth or shadow honestly',
+      'Powerful attraction or connection that feels fated and intense',
+      'Purchase or investment in something powerful, transformative, or deeply valuable',
+      'Family secret or hidden dynamic surfaces and transforms relationships',
+      'Deep emotional healing through vulnerability and intimate connection',
+      'Power dynamic in relationship addressed honestly, creating healthier balance',
+      'Passionate loyalty or devotion deepens commitment profoundly',
+      'You learn that depth, intensity, and truth create transformative love and connection'
+    ]
+  },
+
+  'Venus-Sagittarius': {
+    name: 'Venus Ingress Sagittarius',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, and finding meaning through broadening horizons.',
+    eventMeaning: 'Venus in Sagittarius brings adventurous, free-spirited, optimistic love and attraction. Romantic and aesthetic energy becomes expansive and truth-seeking. The next 3-4 weeks favor adventure, travel, learning together, freedom in relationships, and optimistic pleasure. Love becomes more honest, adventurous, and philosophical. Excellent for travel romance, outdoor adventures, learning together, or exploring new experiences. Beauty tastes become exotic and eclectic. May avoid commitment for freedom - enjoy adventure but honor important bonds.',
+    loveRelationships: 'Romance through adventure, honesty, and shared exploration. Perfect time for travel together, outdoor adventures, learning experiences, or philosophical conversations. Express love through honesty, freedom, optimism, and sharing growth. Attraction to adventurous, honest, philosophical partners. Relationships thrive through shared adventures, mutual freedom, and authentic truth-telling. Need for independence within togetherness. Some meet partners while traveling or exploring. Too much routine feels stifling - add adventure and variety.',
+    familyHome: 'Family adventures, travel, and outdoor activities strengthen bonds. Excellent for family trips, cultural experiences, educational family time, or philosophical discussions with family. Home may feel confining - get outside or expand space. Family relationships benefit from more freedom, honesty, and optimism. International family connections or multicultural family experiences. Give family members space to grow. Share beliefs and life philosophy with family. Create more adventure and learning in family life.',
+    businessCareer: 'Career success through adventure, teaching, expansion, and optimistic vision. Excellent for work in travel, education, publishing, international business, outdoor industries, or philosophical fields. Your optimism and big-picture vision attract professional opportunities. Good time to expand business, travel for work, teach or publish, or pursue international opportunities. Build professional relationships through honesty and shared vision. Risk-taking and growth favored over safety and stagnation.',
+    moneyFinances: 'Financial optimism and growth opportunities. Good time for growth investments, international financial opportunities, or earning through travel, teaching, or publishing. Spending on travel, education, adventure, or experiences that broaden horizons. Financial decisions should consider growth and opportunity. Money through teaching, travel, inspiring others, or broad vision. Abundance mindset attracts opportunities but verify optimism with facts. Invest in growth and experiences.',
+    predictions: [
+      'Travel or adventure creates romantic opportunity or deepens relationship',
+      'Educational experience or class you take together strengthens bond through shared growth',
+      'Financial opportunity through international connection or expansive thinking',
+      'Outdoor adventure or physical activity that brings joy and freedom',
+      'Honest conversation resolves issue through direct truth-telling',
+      'Purchase of travel, experience, or adventure that creates lasting memories',
+      'Meeting someone while traveling or exploring who becomes significant',
+      'Freedom and space you give relationship actually strengthens it',
+      'Philosophical or meaningful conversation deepens connection',
+      'You learn that freedom, honesty, and adventure create authentic love and joy'
+    ]
+  },
+
+  'Venus-Capricorn': {
+    name: 'Venus Ingress Capricorn',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Capricorn represents ambition, responsibility, discipline, achievement, mastery, and building lasting structures. It\'s the energy of climbing the mountain through persistent effort and mature commitment.',
+    eventMeaning: 'Venus in Capricorn brings serious, committed, traditional love and attraction. Romantic and aesthetic energy becomes goal-oriented and mature. The next 3-4 weeks favor serious relationships, commitment, traditional expressions of love, and building lasting partnerships. Love becomes more responsible, loyal, and achievement-oriented. Excellent for commitments, traditional partnerships, career advancement through relationships, or creating lasting value. Beauty tastes become classic and timeless. May be too serious - commitment matters but enjoy lightness too.',
+    loveRelationships: 'Serious, committed, traditional romance. Perfect time for engagements, marriage, discussing long-term commitment, or building future together. Express love through responsibility, loyalty, commitment, and building security together. Attraction to mature, ambitious, reliable partners with long-term potential. Relationships assessed for viability and long-term success. Traditional commitments and formal relationships favored. Show love through consistent actions over time. Some relationships deepen into serious commitment or partnership becomes more goal-oriented.',
+    familyHome: 'Family responsibilities and traditional family structures emphasized. Excellent for family financial planning, property investment, honoring family traditions, or taking on family leadership role. Home becomes place of quality, structure, and lasting value. Family time through respecting traditions and building security together. Express love for family through responsibility and commitment. Home improvements focusing on lasting quality and value. Build family legacy and structure.',
+    businessCareer: 'Career success through professional relationships, traditional networking, and quality work. Excellent for work in business, finance, real estate, traditional luxury, or fields requiring authority. Your professionalism and reliability attract career advancement. Good time to network with authority figures, build professional reputation, or advance through relationships. Form professional partnerships with long-term potential. Earn respect through quality work and commitment. Money and relationships combine professionally.',
+    moneyFinances: 'Financial seriousness and long-term wealth building. Good time for major investments, real estate, traditional wealth-building, or financial planning for future. Earning through professional work, quality services, or building lasting value. Spending on quality that lasts, traditional luxury, or investment in future. Financial decisions should be conservative, strategic, and long-term focused. Money through commitment, responsibility, and building authority. Create lasting financial security.',
+    predictions: [
+      'Relationship commitment or engagement that feels serious and right',
+      'Financial investment in quality, property, or lasting value that builds wealth',
+      'Professional opportunity through relationship or networking with authority figure',
+      'Traditional romantic gesture or formal commitment that deepens partnership',
+      'Purchase of classic, quality item that lasts and appreciates in value',
+      'Family responsibility or leadership role that builds your authority and respect',
+      'Relationship discussion about long-term goals aligns you with partner',
+      'Career advancement through professional relationship or committed work',
+      'Building security and structure in relationship creates lasting foundation',
+      'You learn that serious commitment and traditional values create lasting love and success'
+    ]
+  },
+
+  'Venus-Aquarius': {
+    name: 'Venus Ingress Aquarius',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Aquarius represents innovation, individuality, friendship, progress, humanitarian ideals, and revolutionary thinking. It\'s the energy of breaking from tradition to create a better future for all.',
+    eventMeaning: 'Venus in Aquarius brings unconventional, friendly, freedom-loving love and attraction. Romantic and aesthetic energy becomes innovative and community-oriented. The next 3-4 weeks favor friendship-based romance, social causes, unconventional relationships, and progressive values. Love becomes more intellectual, independent, and equality-focused. Excellent for friendships deepening into romance, social activism together, unconventional partnerships, or expressing unique aesthetic. Beauty tastes become modern and unconventional. May be emotionally detached - intellect matters but so do feelings.',
+    loveRelationships: 'Romance through friendship, intellectual connection, and shared ideals. Perfect time for friendships becoming romantic, unconventional relationship structures, or connecting over social causes. Express love through respecting independence, intellectual stimulation, and supporting each other\'s individuality. Attraction to unique, progressive, humanitarian partners. Relationships thrive through friendship, freedom, equality, and shared vision for better world. Need space and independence. Some explore non-traditional relationship approaches.',
+    familyHome: 'Family relationships benefit from more freedom, equality, and accepting individuality. Excellent for progressive family structures, family social activism, or giving family members space to be unique. Home becomes gathering place for friends and community. Technology or modernization at home. Family time through group activities or social causes. Respect everyone\'s uniqueness rather than demanding conformity. Create more equality and freedom in family dynamics.',
+    businessCareer: 'Career success through innovation, networking, progressive work, and unique approach. Excellent for work in technology, social causes, networking, innovation, or humanitarian fields. Your unique perspective and progressive approach attract professional recognition. Good time to network widely, join professional groups, launch innovative projects, or advocate for progress at work. Build relationships through shared ideals and community. Earn through unique talents and serving collective needs.',
+    moneyFinances: 'Financial innovation and unconventional wealth-building. Good time for technology investments, cryptocurrency, crowdfunding, or progressive financial approaches. Earning through innovation, social networking, technology, or humanitarian work. Spending on technology, social causes, or what supports community and innovation. Financial decisions should be forward-thinking and consider collective good. Money through unique gifts and serving progressive causes. Think outside traditional financial patterns.',
+    predictions: [
+      'Friendship deepens into romance through intellectual and idealistic connection',
+      'Social networking or community involvement leads to romantic or financial opportunity',
+      'Financial opportunity through technology, innovation, or progressive venture',
+      'Unconventional relationship approach or structure that works perfectly for you',
+      'Purchase of technology or innovation that improves quality of life uniquely',
+      'Social cause or humanitarian work you engage in together strengthens bond',
+      'Freedom and independence you give relationship actually strengthens it',
+      'Meeting someone unique and unconventional who fascinates you',
+      'Group or community connection that brings pleasure and belonging',
+      'You learn that friendship, freedom, and accepting uniqueness create authentic love'
+    ]
+  },
+
+  'Venus-Pisces': {
+    name: 'Venus Ingress Pisces',
+    frequency: 'Approximately once per year',
+    duration: '~3-4 weeks',
+    planetEnergy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful and pleasurable.',
+    signEnergy: 'Pisces represents compassion, spirituality, imagination, transcendence, unity, and dissolving boundaries. It\'s the energy of mystical connection, artistic inspiration, and merging with the infinite.',
+    eventMeaning: 'Venus in Pisces is the goddess of love exalted - Venus is exalted in Pisces, so this placement maximizes unconditional love, compassion, and spiritual connection. Love becomes transcendent, selfless, and spiritually romantic. The next 3-4 weeks favor soul connections, spiritual romance, artistic expression, compassionate love, and surrendering to love. This is the most romantic, compassionate, spiritually beautiful Venus transit. Perfect time for deep soul bonding or artistic creation. May lose boundaries - love unconditionally but maintain healthy limits.',
+    loveRelationships: 'Transcendent, spiritual, unconditionally loving romance. Perfect time for soul mate connections, spiritual bonding, romantic idealism, or selfless expressions of love. Express love through compassion, spiritual connection, creativity, and gentle understanding. Attraction to sensitive, artistic, spiritual partners. Relationships deepen through shared spirituality, art, music, or helping others together. Forgiveness and unconditional acceptance heal wounds. Boundaries may blur - love deeply but protect yourself too. Romantic magic and enchantment peak.',
+    familyHome: 'Family relationships benefit from compassion, forgiveness, and spiritual connection. Excellent for healing old family wounds, spiritual or artistic family activities, or practicing unconditional love with family. Home becomes spiritual sanctuary and artistic haven. Family time through music, art, meditation, or compassionate service. Let go of old family resentments. Create peaceful, transcendent atmosphere at home. Express love through gentle acceptance and spiritual understanding.',
+    businessCareer: 'Career success through compassion, creativity, and spiritual service. Excellent for work in arts, music, film, photography, healing, spiritual services, charity, or helping professions. Your compassion and imagination attract professional recognition. Good time for creative projects, compassionate service work, or connecting work to something greater. Build professional relationships through empathy and artistic sensitivity. Earn through helping, creating, or spiritual work. Trust intuition about career.',
+    moneyFinances: 'Financial intuition and earning through compassion or creativity. Good time for charitable giving, earning through arts or healing, or trusting financial intuition. Spending on art, music, spiritual development, or helping others. Financial decisions benefit from combining intuition with practical analysis. Money through imagination, compassion, and service. Boundaries around money may blur - be generous but protect resources. Sometimes trust is wiser than calculation, but maintain practical limits.',
+    predictions: [
+      'Soul connection or spiritual romance that feels transcendent and fated',
+      'Artistic or creative expression that channels beautiful inspiration',
+      'Compassionate act or selfless giving that creates deep connection and meaning',
+      'Music, art, or beauty that moves you to tears and opens your heart',
+      'Forgiveness (giving or receiving) in relationship heals wound and deepens love',
+      'Financial help you give or receive comes from place of genuine compassion',
+      'Spiritual practice or meditation together deepens romantic connection',
+      'Purchase of art, music, or spiritual item that brings lasting beauty and peace',
+      'Romantic experience so magical it feels like dream come true',
+      'You learn that unconditional love and compassion are most beautiful expressions of Venus'
     ]
   },
 
