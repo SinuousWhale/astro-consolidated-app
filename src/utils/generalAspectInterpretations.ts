@@ -2155,6 +2155,393 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Mature approach to challenge you take earns respect and opportunities',
       'Opportunity to build success through combining authentic purpose with discipline'
     ]
+  },
+
+  // ============================================================================
+  // SUN-URANUS ASPECTS (Annual revolutionary awakening cycles)
+  // ============================================================================
+
+  'Sun-Uranus-Conjunction': {
+    name: 'Sun Conjunction Uranus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Annual revolutionary awakening of authentic self! The Sun\'s identity merges with Uranus\'s liberation, creating breakthrough self-expression, sudden insights, and freedom-seeking. Perfect time for radical authenticity, breaking free from limitations, embracing your uniqueness, and revolutionary change. Innovation and individuality flow naturally. Your authentic genius attracts awakening. Independence and originality combine. Annual boost of revolutionary life force.',
+    loveRelationships: 'Relationship liberation and authentic connection! Love feels electric and unconventional. Perfect time to break free from relationship patterns that limit you, embrace unconventional love, express your authentic self fully. Sudden attractions or breakthrough insights about love possible. Freedom and authenticity essential now. Exciting, unpredictable romantic energy. Good time to revolutionize how you love.',
+    familyHome: 'Family freedom and home innovation! Perfect time for sudden home changes, breaking family patterns, creating unconventional living situations. Home environment needs more space for individuality. Family dynamics may shift suddenly. Good time to introduce progressive ideas to family. Home technology upgrades favored. Liberation from family expectations possible.',
+    businessCareer: 'Career breakthrough and professional innovation! Excellent time to pursue unconventional career moves, introduce revolutionary ideas at work, break free from professional limitations. Sudden opportunities for advancement through innovation. Your unique approach attracts recognition. Good time to start innovative projects, embrace new technology, express authentic professional identity. Leadership through authenticity.',
+    moneyFinances: 'Financial liberation and innovative income! Money flows through unconventional or innovative channels. Sudden financial insights or opportunities through technology/progress. Good time to revolutionize how you earn, invest in innovation, embrace progressive financial strategies. Financial independence important. Unexpected gains through authentic self-expression possible. Break free from limiting financial patterns.',
+    predictions: [
+      'Sudden insight about your authentic life path appears - embrace it fully',
+      'Your unique genius or unconventional approach attracts significant opportunity',
+      'Unexpected change or awakening liberates you from limiting pattern',
+      'Revolutionary idea or innovation you express receives positive recognition',
+      'Sudden meeting with unconventional person catalyzes important breakthrough',
+      'Freedom-seeking impulse you honor leads to authentic self-expression',
+      'Technology or progressive approach you adopt transforms your effectiveness',
+      'Authentic self-expression you risk brings unexpected reward or connection',
+      'Sudden change in circumstances creates space for your true individuality',
+      'Opportunity to break free from limitation and embrace your revolutionary nature'
+    ]
+  },
+
+  'Sun-Uranus-Opposition': {
+    name: 'Sun Opposition Uranus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Annual tension between identity and freedom requiring integration! The Sun\'s ego faces Uranus\'s revolution, creating pull between stability and change, conformity and authenticity. Challenge is to honor both your core identity AND your need for freedom/innovation. Sudden disruptions may force authentic self-expression. Resistance to change creates crisis; embracing evolution creates breakthrough. Integration of tradition and innovation essential.',
+    loveRelationships: 'Relationship tension between commitment and freedom! Love requires balancing togetherness with independence. Partner may seem unpredictable or need space. Challenge is honoring your authentic self within relationship without causing unnecessary disruption. Sudden relationship changes possible if authenticity suppressed. Good time to renegotiate freedom within partnership. Compromise between stability and excitement needed.',
+    familyHome: 'Family tension between tradition and change! Home life requires balancing security with innovation. Family members may rebel or seek independence. Challenge is honoring family connections while allowing individuality. Sudden home disruptions possible. Good time to integrate progressive ideas with family values. Finding middle ground between conformity and authenticity essential.',
+    businessCareer: 'Career tension between established role and innovation! Work requires balancing responsibility with breakthrough thinking. Authority figures may resist your unconventional ideas, or you may chafe against limitations. Challenge is expressing authenticity without unnecessary disruption. Sudden professional changes possible. Good time to find innovative solutions within existing structures. Integration of tradition and progress.',
+    moneyFinances: 'Financial tension between security and risk! Money matters require balancing stability with innovative opportunities. Sudden financial changes possible. Challenge is taking calculated risks without reckless disruption. Good time to integrate conservative financial management with progressive income strategies. Find balance between security and financial freedom. Unexpected expenses or opportunities may arise.',
+    predictions: [
+      'Sudden disruption forces you to choose between conformity and authentic self-expression',
+      'Your resistance to necessary change creates crisis - embracing evolution resolves it',
+      'Unexpected challenge from authority or partner reveals where you need more freedom',
+      'Sudden opportunity requires you to balance stability with revolutionary change',
+      'Tension between your established identity and emerging authentic self reaches peak',
+      'Disruption you initially resist ultimately liberates you from limiting pattern',
+      'Conflict between security and freedom forces important integration and growth',
+      'Sudden change in circumstances reveals what must evolve in your self-expression',
+      'Your attempt to balance tradition and innovation creates breakthrough solution',
+      'Opportunity to integrate your core identity with your revolutionary authentic nature'
+    ]
+  },
+
+  'Sun-Uranus-Trine': {
+    name: 'Sun Trine Uranus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Annual effortless revolutionary authentic self-expression! The Sun\'s identity flows harmoniously with Uranus\'s innovation, creating natural breakthrough, easy authenticity, and inspired freedom. Perfect time for innovative projects, authentic self-expression, embracing change joyfully. Your unique genius flows without resistance. Sudden opportunities feel right and exciting. Liberation comes naturally. Excellent for trying new approaches, expressing individuality, pioneering initiatives. Innovation meets purpose gracefully.',
+    loveRelationships: 'Relationship innovation and authentic connection flow easily! Love feels exciting, free, and authentic. Perfect time for spontaneous romantic adventures, trying new experiences together, expressing your unique self in love. Attraction to unconventional partners or situations. Freedom within relationship feels natural. Good time to refresh romance with innovative approaches. Electric, exciting romantic energy without disruption.',
+    familyHome: 'Family freedom and home innovation flow naturally! Perfect time for exciting home improvements, introducing progressive ideas to family, creating space for individuality. Family supports your authentic self-expression. Home changes feel right and easy. Good time to adopt new technology at home, try unconventional living arrangements, celebrate family uniqueness. Liberation and connection balance perfectly.',
+    businessCareer: 'Career innovation and professional breakthrough flow effortlessly! Excellent time to introduce innovative ideas at work, take on unconventional projects, express your unique professional identity. Recognition comes through authenticity and innovation. Sudden opportunities align with your talents. Good time to pioneer new approaches, embrace technology, lead progressive initiatives. Your authentic genius shines professionally.',
+    moneyFinances: 'Financial innovation and unexpected abundance flow easily! Money opportunities through unconventional or progressive channels appear naturally. Good time to try innovative income strategies, invest in technology/innovation, embrace progressive financial approaches. Sudden financial gains through authentic self-expression possible. Financial freedom and security align. Your unique talents attract unexpected income.',
+    predictions: [
+      'Innovative idea you express effortlessly attracts enthusiastic support and opportunity',
+      'Your authentic self-expression naturally aligns with exciting breakthrough chance',
+      'Sudden opportunity appears that perfectly matches your unique talents and interests',
+      'Progressive approach you adopt flows smoothly and produces impressive results',
+      'Unconventional choice you make with confidence leads to liberating outcome',
+      'Technology or innovation you embrace enhances your effectiveness effortlessly',
+      'Authentic risk you take with excitement pays off better than expected',
+      'Sudden insight about your path feels both liberating and absolutely right',
+      'Your unique genius attracts recognition and opportunity without struggle',
+      'Opportunity to express your revolutionary authentic nature flows naturally and joyfully'
+    ]
+  },
+
+  'Sun-Uranus-Square': {
+    name: 'Sun Square Uranus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Growth through revolutionary friction and forced authenticity! The Sun\'s ego clashes with Uranus\'s rebellion, creating restlessness, sudden disruptions, and pressure to break free. Challenge is channeling revolutionary energy constructively rather than destructively. Resistance to authentic self-expression creates crisis; embracing change creates breakthrough. Tension forces necessary evolution. Good time to consciously choose authentic freedom rather than reactive rebellion. Crisis produces innovation.',
+    loveRelationships: 'Relationship friction forcing authentic freedom! Love feels restless or confining. Tension between commitment and independence creates challenges. Partner may seem unpredictable or rebellious. Challenge is expressing authentic needs without unnecessary disruption. Sudden relationship upsets force honest communication. Good time to address freedom issues constructively. Crisis reveals what must change. Reactive rebellion causes damage; conscious authenticity creates growth.',
+    familyHome: 'Family friction forcing necessary change! Home life feels restrictive or unstable. Sudden family disruptions or rebellions possible. Tension between security and freedom creates challenges. Challenge is honoring your authentic needs while maintaining connections. Good time to address limiting family patterns constructively. Crisis forces overdue changes. Resistance creates bigger problems; embracing evolution brings relief and liberation.',
+    businessCareer: 'Career friction forcing innovative breakthrough! Work feels restrictive or chaotic. Tension with authority or sudden professional disruptions possible. Challenge is expressing authentic professional identity constructively. Good time to channel frustration into innovation rather than rebellion. Crisis forces necessary career evolution. Resistance to change creates bigger problems; embracing new approaches creates opportunity. Constructive revolution favored over reactive rebellion.',
+    moneyFinances: 'Financial friction forcing liberating change! Money situation feels unstable or restrictive. Sudden expenses or unexpected financial changes possible. Challenge is balancing security with necessary financial evolution. Good time to address limiting financial patterns constructively. Crisis forces overdue financial changes. Reactive financial risks dangerous; conscious innovative financial strategies productive. Disruption ultimately liberating.',
+    predictions: [
+      'Sudden disruption forces you to choose authentic freedom over comfortable limitation',
+      'Your suppressed need for change erupts - channel it constructively for breakthrough',
+      'Friction with authority or established patterns reveals necessary evolution',
+      'Restlessness you feel is calling you to express suppressed authentic genius',
+      'Crisis or unexpected change forces overdue revolutionary shift in your life',
+      'Your resistance to authentic self-expression creates bigger disruption than acceptance would',
+      'Sudden upset you navigate consciously produces liberating breakthrough and growth',
+      'Tension between security and freedom reaches point requiring conscious choice',
+      'Frustration you channel into innovation produces unexpected positive results',
+      'Opportunity to transform crisis into conscious revolutionary authentic evolution'
+    ]
+  },
+
+  'Sun-Uranus-Sextile': {
+    name: 'Sun Sextile Uranus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Opportunity for breakthrough through authentic initiative! The Sun\'s purpose harmonizes with Uranus\'s innovation, creating potential for revolutionary self-expression IF you take action. Opportunities for breakthrough, innovation, and authentic freedom appear - but require your conscious engagement. Perfect time to try new approaches, express your unique genius, take innovative risks. Success comes through initiative and courage. Passive approach wastes potential; active authentic expression creates exciting results.',
+    loveRelationships: 'Relationship opportunity for authentic connection through initiative! Love potential for exciting new experiences, authentic expression, refreshing connection. Perfect time to suggest spontaneous date, try new activities together, express your unique self in relationship. Opportunity to attract unconventional romantic connection IF you put yourself out there. Taking authentic romantic risks favored. Initiative brings exciting results.',
+    familyHome: 'Family opportunity for positive change through initiative! Perfect time to suggest home improvements, introduce progressive family ideas, create more space for individuality. Family receptive to innovation IF you present it. Good time to adopt new home technology, try unconventional living arrangements, celebrate family uniqueness. Taking initiative for positive home change brings good results.',
+    businessCareer: 'Career opportunity for innovative advancement through initiative! Excellent time to propose innovative ideas at work, volunteer for unconventional projects, express your unique professional talents. Recognition available IF you step forward authentically. Good time to pioneer new approaches, embrace progressive technology, lead innovative initiatives. Taking calculated professional risks brings opportunity. Your authentic genius recognized IF expressed.',
+    moneyFinances: 'Financial opportunity through innovative initiative! Money potential through unconventional or progressive channels IF you pursue it. Good time to explore innovative income strategies, invest in technology/innovation, try new financial approaches. Unexpected financial gains possible through authentic self-expression and initiative. Financial freedom available through conscious action. Your unique talents can attract income IF applied.',
+    predictions: [
+      'Innovative opportunity appears - seize it with confidence for breakthrough results',
+      'Your authentic self-expression and initiative attracts exciting recognition',
+      'Sudden chance to try unconventional approach succeeds IF you take the risk',
+      'Progressive idea you propose receives support and creates positive change',
+      'Opportunity to express your unique genius appears - initiative required to actualize',
+      'Unconventional connection or opportunity you pursue actively produces exciting outcome',
+      'Technology or innovation you embrace proactively enhances your effectiveness',
+      'Authentic risk you take with courage pays off with liberating results',
+      'Sudden insight you act upon leads to breakthrough and positive change',
+      'Opportunity for revolutionary authentic advancement through conscious initiative and courage'
+    ]
+  },
+
+  // ============================================================================
+  // SUN-NEPTUNE ASPECTS (Annual spiritual transcendence cycles)
+  // ============================================================================
+
+  'Sun-Neptune-Conjunction': {
+    name: 'Sun Conjunction Neptune',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Annual spiritual awakening of divine purpose! The Sun\'s identity merges with Neptune\'s transcendence, creating mystical self-expression, divine inspiration, and compassionate creativity. Perfect time for spiritual practice, creative inspiration, surrendering to higher guidance, expressing compassion. Ego boundaries dissolve into something greater. Your authentic self connects to divine source. Imagination and spirituality flow naturally. Annual boost of mystical life force. Discernment needed to distinguish inspiration from illusion.',
+    loveRelationships: 'Relationship transcendence and divine love! Love feels mystical, compassionate, and soulful. Perfect time for romantic idealism, spiritual connection with partner, expressing unconditional love. Deep empathy and soul connection possible. Romance feels magical and transcendent. Good time to forgive, express devotion, connect through shared spiritual practice. Warning: see partner clearly while honoring divine love - discernment prevents disillusionment.',
+    familyHome: 'Family compassion and home sanctuary! Perfect time for creating peaceful home environment, expressing unconditional love for family, practicing forgiveness. Home becomes spiritual sanctuary. Family connections deepen through compassion. Good time for creative home projects, meditation space, artistic home improvements. Spiritual or artistic family activities favored. Boundaries with family may need conscious attention.',
+    businessCareer: 'Career inspiration and creative professional expression! Excellent time to pursue creative/spiritual career opportunities, bring compassion to work, follow inspired professional vision. Recognition through artistic or healing work. Good time to help others professionally, express your ideals through work, pursue meaningful career path. Warning: maintain clarity about practical career matters while following inspiration - discernment prevents confusion.',
+    moneyFinances: 'Financial inspiration and spiritual abundance! Money flows through creative, healing, or spiritual channels. Good time to trust divine abundance, pursue inspired financial opportunities, give generously. Financial decisions benefit from both spiritual trust AND practical discernment. Warning: verify practical financial details while honoring intuitive guidance. Avoid financial fantasy or escapism. Balance inspiration with clarity.',
+    predictions: [
+      'Spiritual insight about your life purpose appears through meditation or dream',
+      'Your creative or compassionate expression attracts divine support and recognition',
+      'Mystical experience or synchronicity confirms you\'re aligned with higher path',
+      'Inspired vision you receive feels both transcendent and deeply meaningful',
+      'Compassionate action you take creates ripple effect beyond what you can see',
+      'Creative project you undertake with divine inspiration flows beautifully',
+      'Soul connection with someone reveals deeper spiritual dimension of relationship',
+      'Dream or intuition you trust leads to inspired and beneficial outcome',
+      'Your surrender to higher guidance dissolves obstacle and opens miraculous path',
+      'Opportunity to express your divine purpose through creative compassionate authentic self'
+    ]
+  },
+
+  'Sun-Neptune-Opposition': {
+    name: 'Sun Opposition Neptune',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Annual tension between ego and transcendence requiring integration! The Sun\'s identity faces Neptune\'s dissolution, creating confusion between self and selflessness, clarity and mystery. Challenge is honoring both your individual purpose AND your connection to something greater. Illusions or idealizations may require honest examination. Resistance to spiritual truth creates confusion; embracing both clarity and mystery creates wisdom. Integration of ego and soul essential. Discernment crucial.',
+    loveRelationships: 'Relationship tension between reality and ideal! Love requires balancing romantic idealization with seeing partner clearly. Confusion about relationship possible if projecting fantasies rather than seeing truth. Challenge is honoring soul connection while maintaining healthy boundaries. Good time to examine illusions, practice compassionate honesty, integrate ideals with reality. Disillusionment possible but ultimately clarifying. See partner\'s humanity AND divinity.',
+    familyHome: 'Family tension between compassion and boundaries! Home life requires balancing unconditional love with healthy limits. Family members may seem unclear or confusing. Challenge is expressing compassion without losing yourself or enabling dysfunction. Good time to examine family illusions, practice loving boundaries, integrate ideals with reality. Confusion clears through honest compassionate communication. Balance empathy with discernment.',
+    businessCareer: 'Career tension between inspiration and clarity! Work requires balancing creative vision with practical reality. Confusion about professional direction possible if chasing fantasies rather than grounded goals. Challenge is pursuing meaningful work while maintaining clear boundaries and expectations. Good time to examine career illusions, ground inspired visions in reality. Integration of idealism and practicality essential. Verify details.',
+    moneyFinances: 'Financial tension between trust and clarity! Money matters require balancing spiritual abundance mindset with practical financial management. Confusion about finances possible through unclear thinking or avoidance. Challenge is trusting divine provision while taking grounded financial action. Good time to examine financial illusions, verify all financial details carefully. Balance faith with discernment. Avoid financial escapism or fantasy.',
+    predictions: [
+      'Confusion you experience reveals illusion you need to release to see truth clearly',
+      'Your idealization of situation dissolves - clarity painful but ultimately liberating',
+      'Tension between your ego desires and soul\'s path requires honest examination',
+      'Disappointment you feel reveals unrealistic expectation that needed reality check',
+      'Boundary issue forces you to integrate compassion with healthy self-protection',
+      'Confusion clears when you balance practical reality with spiritual trust',
+      'Illusion you release reveals more authentic and grounded spiritual path',
+      'Challenge between clarity and mystery resolved through discernment and faith',
+      'Your honest examination of idealization leads to more sustainable divine connection',
+      'Opportunity to integrate ego identity with soul purpose through compassionate clarity'
+    ]
+  },
+
+  'Sun-Neptune-Trine': {
+    name: 'Sun Trine Neptune',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Annual effortless spiritual creative self-expression! The Sun\'s identity flows harmoniously with Neptune\'s transcendence, creating natural divine inspiration, easy creative flow, and compassionate authenticity. Perfect time for spiritual practice, creative projects, expressing compassion, following intuition. Your purpose aligns with divine guidance effortlessly. Imagination and spirituality enhance self-expression without confusion. Excellent for artistic work, healing activities, meditation. Inspiration meets clarity gracefully. Magic flows naturally.',
+    loveRelationships: 'Relationship magic and soul connection flow easily! Love feels transcendent, compassionate, and divinely inspired. Perfect time for romantic intimacy, spiritual connection with partner, expressing unconditional love. Soul-level understanding comes naturally. Romance feels mystical and beautiful. Good time for creative dates, sharing dreams, spiritual practices together. Deep empathy and forgiveness flow without effort. Love transcends without losing clarity.',
+    familyHome: 'Family harmony and home sanctuary flow naturally! Perfect time for creating beautiful peaceful home, expressing unconditional family love, artistic home projects. Home feels like spiritual retreat. Family connections deepen through natural compassion. Good time to create meditation space, enjoy artistic activities together, practice forgiveness. Beauty and peace permeate home life effortlessly. Healing family energy.',
+    businessCareer: 'Career inspiration and creative professional flow effortlessly! Excellent time for creative/spiritual work, bringing compassion to professional life, following inspired career vision. Recognition comes through artistic or healing talents naturally. Good time to help others through work, express ideals professionally, pursue meaningful projects. Inspiration and clarity align perfectly. Your divine purpose expressed through career.',
+    moneyFinances: 'Financial inspiration and abundant flow easily! Money opportunities through creative, healing, or spiritual work appear naturally. Good time to trust divine abundance while taking inspired action, give generously, pursue meaningful income. Financial decisions benefit from both intuition and clarity. Your creative or compassionate talents attract income effortlessly. Spiritual and material abundance align. Generosity returns multiplied.',
+    predictions: [
+      'Creative inspiration flows effortlessly and produces beautiful meaningful results',
+      'Your compassionate authentic expression attracts divine support and recognition',
+      'Spiritual practice or meditation brings clear insight about your life purpose',
+      'Soul connection with someone feels natural, healing, and divinely orchestrated',
+      'Artistic project you undertake flows with inspired ease and touches hearts',
+      'Intuitive guidance you trust leads to blessed and beneficial outcome',
+      'Your surrender to divine flow dissolves obstacle and opens miraculous path',
+      'Compassionate action you take naturally creates healing ripple effect',
+      'Dream or vision you receive feels both mystical and absolutely clear',
+      'Opportunity to express your soul purpose through creative compassionate work flows naturally'
+    ]
+  },
+
+  'Sun-Neptune-Square': {
+    name: 'Sun Square Neptune',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Growth through spiritual confusion requiring discernment! The Sun\'s ego clashes with Neptune\'s dissolution, creating confusion, illusion, and crisis of faith. Challenge is developing discernment between divine inspiration and escapist fantasy. Resistance to spiritual truth creates greater confusion; embracing both clarity and mystery creates wisdom. Tension forces necessary spiritual maturation. Good time to consciously examine illusions, verify details, practice grounded spirituality. Crisis produces authentic faith. Confusion ultimately clarifying.',
+    loveRelationships: 'Relationship confusion forcing spiritual discernment! Love feels unclear or disillusioning. Romantic fantasies clash with reality. Confusion about partner or relationship possible through idealization or deception. Challenge is seeing clearly while maintaining compassion. Good time to examine projections, verify trust, practice loving honesty. Crisis reveals necessary truth. Painful disillusionment ultimately liberating. Authentic soul connection requires seeing reality clearly, not just ideal.',
+    familyHome: 'Family confusion forcing healthy boundaries! Home life feels chaotic or unclear. Compassion clashes with self-protection needs. Confusion about family dynamics possible through enabling or unclear boundaries. Challenge is expressing love without losing yourself. Good time to examine family illusions, establish compassionate boundaries, practice grounded empathy. Crisis forces necessary clarity. Confusion resolved through honest loving communication. Balance sacrifice with self-care.',
+    businessCareer: 'Career confusion forcing grounded clarity! Work feels unclear or disillusioning. Creative vision clashes with practical reality. Confusion about professional direction possible through unrealistic expectations or unclear information. Challenge is pursuing meaningful work while maintaining clarity. Good time to verify all professional details, examine career fantasies, ground inspired vision in reality. Crisis forces necessary practical assessment. Confusion clears through honest discernment.',
+    moneyFinances: 'Financial confusion forcing practical discernment! Money situation feels unclear or concerning. Spiritual abundance mindset clashes with financial reality. Confusion possible through financial fantasy, unclear information, or avoidance. Challenge is balancing faith with practical financial management. Good time to verify all financial details carefully, examine money illusions, practice grounded financial spirituality. Crisis forces necessary financial clarity. Confusion resolved through honest practical assessment.',
+    predictions: [
+      'Confusion or disillusionment forces you to distinguish divine guidance from wishful thinking',
+      'Your illusion about situation dissolves - clarity painful but ultimately necessary',
+      'Deception or self-deception revealed requires honest examination and discernment',
+      'Crisis of faith you navigate develops authentic spiritual maturity and wisdom',
+      'Confusion you experience is calling you to verify details and see reality clearly',
+      'Your escape into fantasy creates bigger problem - facing truth resolves it',
+      'Disappointment you feel reveals unrealistic expectation that needed grounding',
+      'Boundary issue forces you to balance compassion with healthy self-protection',
+      'Confusion clears when you integrate spiritual ideals with practical reality',
+      'Opportunity to transform spiritual confusion into grounded authentic divine connection'
+    ]
+  },
+
+  'Sun-Neptune-Sextile': {
+    name: 'Sun Sextile Neptune',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Opportunity for spiritual creativity through inspired initiative! The Sun\'s purpose harmonizes with Neptune\'s transcendence, creating potential for divine inspiration, creative flow, and compassionate expression IF you take action. Opportunities for spiritual growth, artistic creation, and soul-level connection appear - but require your conscious engagement. Perfect time to practice meditation, pursue creative projects, express compassion. Success comes through spiritual initiative and inspired action. Passive approach wastes potential; active divine engagement creates beautiful results.',
+    loveRelationships: 'Relationship opportunity for soul connection through initiative! Love potential for mystical romance, spiritual intimacy, compassionate expression. Perfect time to suggest romantic spiritual date, share dreams with partner, express unconditional love actively. Opportunity to attract soul-level connection IF you open your heart. Taking inspired romantic risks favored. Initiative brings transcendent results. Active compassion deepens love.',
+    familyHome: 'Family opportunity for healing connection through initiative! Perfect time to suggest spiritual family activities, create peaceful home sanctuary, express compassion actively. Family receptive to artistic or healing initiatives IF you present them. Good time to create meditation space, plan creative home projects, practice active forgiveness. Taking initiative for home beauty and peace brings blessed results.',
+    businessCareer: 'Career opportunity for meaningful work through initiative! Excellent time to propose creative/spiritual professional projects, volunteer to help others through work, express your ideals actively. Recognition available IF you step forward with inspired vision. Good time to pursue artistic or healing career opportunities, bring compassion to workplace, follow divine professional calling. Taking inspired career risks brings opportunity. Your creative talents recognized IF expressed.',
+    moneyFinances: 'Financial opportunity through creative initiative! Money potential through artistic, healing, or spiritual channels IF you pursue it actively. Good time to explore inspired income strategies, invest in creative projects, practice generous giving. Financial gains possible through compassionate work and inspired action. Divine abundance available through conscious initiative. Your creative or spiritual talents can attract income IF applied with faith and effort.',
+    predictions: [
+      'Creative opportunity appears - pursue it with inspired action for beautiful results',
+      'Your compassionate initiative and spiritual authenticity attracts divine support',
+      'Chance to express your artistic or healing gifts succeeds IF you take the risk',
+      'Spiritual practice you commit to actively brings profound insight and peace',
+      'Opportunity to make soul connection appears - initiative required to actualize',
+      'Inspired vision you act upon with faith produces miraculous and meaningful outcome',
+      'Creative project you initiate with divine inspiration touches hearts and succeeds',
+      'Compassionate action you take proactively creates unexpected healing ripple effect',
+      'Intuitive guidance you follow with courage leads to blessed and beneficial result',
+      'Opportunity for spiritual creative advancement through conscious inspired initiative and faith'
+    ]
+  },
+
+  // ============================================================================
+  // SUN-PLUTO ASPECTS (Annual transformation and empowerment cycles)
+  // ============================================================================
+
+  'Sun-Pluto-Conjunction': {
+    name: 'Sun Conjunction Pluto',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Annual death-rebirth of authentic power! The Sun\'s identity merges with Pluto\'s transformation, creating intense self-examination, empowerment through depth, and cathartic release. Perfect time for shadow work, reclaiming power, letting go what no longer serves, profound self-transformation. Ego dies to be reborn stronger. Your authentic self confronts and integrates the depths. Power and vulnerability combine. Annual boost of transformative life force. Intensity required for breakthrough.',
+    loveRelationships: 'Relationship intensity and transformative intimacy! Love feels deep, powerful, and all-consuming. Perfect time for profound soul connection, sexual intimacy, psychological honesty in relationship. Power dynamics surface for healing. Deep vulnerability and authentic power combine. Good time to release relationship patterns that limit you, deepen commitment through shared transformation. Warning: intensity can be overwhelming - channel it toward depth and healing rather than control or obsession.',
+    familyHome: 'Family transformation and home regeneration! Perfect time for deep family healing, releasing ancestral patterns, profound home changes. Family power dynamics surface for resolution. Home becomes place of transformation and empowerment. Good time to eliminate what no longer serves from home, address family psychological issues, reclaim power in family dynamics. Major home renovation or elimination favored. Deep family healing possible.',
+    businessCareer: 'Career empowerment and professional transformation! Excellent time for reclaiming professional power, pursuing positions of influence, undergoing career metamorphosis. Recognition through depth, intensity, and transformative impact. Good time to eliminate what limits professional growth, address workplace power dynamics, pursue meaningful influential work. Leadership through authentic power and psychological depth. Major career transformation possible.',
+    moneyFinances: 'Financial transformation and empowered resources! Money situation undergoes profound change. Good time to eliminate financial patterns that limit you, reclaim financial power, invest in transformation. Shared resources or inheritance issues may arise. Financial regeneration through release and empowerment. Good time to address financial psychology, heal money shadows, build powerful financial foundation. Major financial metamorphosis possible.',
+    predictions: [
+      'Profound realization about your authentic power transforms your life direction',
+      'Your willingness to release what no longer serves creates space for powerful rebirth',
+      'Deep psychological work you undertake produces liberating breakthrough and empowerment',
+      'Shadow aspect you integrate transforms into your greatest source of authentic power',
+      'Intense experience forces you to confront and reclaim suppressed personal power',
+      'Your courage to face the depths reveals profound truth about your life purpose',
+      'Elimination of limiting pattern creates powerful regeneration and new beginning',
+      'Vulnerability you risk with authentic person creates transformative soul connection',
+      'Power you reclaim through shadow work produces breakthrough in every life area',
+      'Opportunity to undergo profound death-rebirth cycle and emerge powerfully transformed'
+    ]
+  },
+
+  'Sun-Pluto-Opposition': {
+    name: 'Sun Opposition Pluto',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Annual tension between ego and transformation requiring integration! The Sun\'s identity faces Pluto\'s death-rebirth, creating power struggles, control issues, and crisis forcing evolution. Challenge is honoring both your will AND the necessity of surrender and transformation. Resistance to necessary change creates crisis; embracing death-rebirth creates empowerment. Integration of power and vulnerability essential. Shadow confrontation unavoidable. Transformation through conflict and release.',
+    loveRelationships: 'Relationship power struggles forcing transformation! Love involves intense power dynamics or control issues. Tension between autonomy and deep merger. Partner may trigger your shadows or power issues. Challenge is maintaining authentic self while surrendering to transformative love. Good time to address power imbalances, release toxic patterns, choose empowered vulnerability. Crisis forces necessary relationship transformation. Resistance creates damage; embrace of depth creates healing.',
+    familyHome: 'Family power struggles forcing healing transformation! Home life involves intense dynamics or control issues. Tension between independence and family depth/enmeshment. Challenge is maintaining boundaries while engaging necessary family healing. Good time to address toxic family patterns, reclaim power from family dynamics, practice healthy vulnerability. Crisis forces overdue family transformation. Resistance perpetuates dysfunction; conscious work creates breakthrough.',
+    businessCareer: 'Career power struggles forcing professional evolution! Work involves intense authority conflicts or control issues. Tension between your will and organizational/power structures. Challenge is maintaining authentic professional identity while navigating power realities. Good time to address toxic workplace dynamics, reclaim professional power constructively. Crisis forces necessary career transformation. Resistance creates conflict; strategic empowered evolution creates advancement.',
+    moneyFinances: 'Financial power struggles forcing monetary transformation! Money situation involves control issues or shared resource conflicts. Tension between financial autonomy and shared financial power. Challenge is maintaining healthy financial boundaries while addressing necessary financial psychology. Good time to resolve financial control issues, heal money shadows, reclaim financial power. Crisis forces overdue financial change. Resistance perpetuates problems; conscious transformation creates empowerment.',
+    predictions: [
+      'Power struggle forces you to examine and transform unhealthy control patterns',
+      'Your resistance to necessary change creates crisis - surrender to transformation resolves it',
+      'Conflict with powerful person reveals shadow aspect you need to integrate',
+      'Intense situation forces you to choose between ego attachment and empowered evolution',
+      'Control issue you face reveals where you need to reclaim authentic power',
+      'Crisis you navigate transforms victim mentality into empowered authentic strength',
+      'Confrontation with shadow or power dynamic produces breakthrough and liberation',
+      'Tension between will and surrender resolved through conscious transformation',
+      'Your willingness to release ego death produces profound rebirth and empowerment',
+      'Opportunity to integrate ego will with transformative power through shadow work and release'
+    ]
+  },
+
+  'Sun-Pluto-Trine': {
+    name: 'Sun Trine Pluto',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Annual effortless transformative empowerment! The Sun\'s identity flows harmoniously with Pluto\'s depth, creating natural psychological insight, easy power reclamation, and graceful transformation. Perfect time for shadow work, deep self-examination, eliminating limiting patterns, profound personal growth. Your purpose aligns with transformative power effortlessly. Intensity enhances self-expression without crisis. Excellent for therapy, depth work, powerful leadership. Empowerment meets authenticity gracefully. Regeneration flows naturally.',
+    loveRelationships: 'Relationship depth and transformative intimacy flow easily! Love feels powerful, profound, and soul-transforming. Perfect time for deep vulnerable sharing, sexual intimacy, psychological honesty in relationship. Power and tenderness combine naturally. Transformative conversations deepen connection without conflict. Good time to release relationship patterns together, support each other\'s growth, experience empowered merger. Depth without drama. Soul connection through authentic power.',
+    familyHome: 'Family healing and home transformation flow naturally! Perfect time for profound family conversations, releasing ancestral patterns together, empowering home changes. Family supports your transformation and vice versa. Home becomes place of natural regeneration. Good time to eliminate what no longer serves from home, address family psychology constructively, reclaim healthy family power. Deep healing without crisis. Empowered family evolution.',
+    businessCareer: 'Career empowerment and professional depth flow effortlessly! Excellent time for assuming leadership, pursuing influential positions, making profound professional impact. Recognition through depth, authenticity, and transformative contribution. Good time to eliminate what limits professional growth, mentor others through transformation, lead with authentic power. Your depth and intensity attract career advancement naturally. Powerful professional presence emerges effortlessly.',
+    moneyFinances: 'Financial empowerment and resource regeneration flow easily! Money transformation through natural release and rebuilding. Good time to eliminate limiting financial patterns, invest in growth/transformation, build powerful financial foundation. Shared resources or financial depth work flows smoothly. Your psychological relationship with money heals naturally. Financial power increases through authentic strategic action. Regenerative financial cycles favor you. Abundance through elimination and empowerment.',
+    predictions: [
+      'Profound insight about your power emerges naturally and transforms your approach',
+      'Your authentic depth and intensity attracts recognition and influential opportunity',
+      'Shadow work you undertake flows smoothly and produces liberating empowerment',
+      'Elimination of limiting pattern happens gracefully and creates immediate improvement',
+      'Deep conversation or therapeutic work produces breakthrough without crisis',
+      'Your natural psychological depth connects you with powerful influential people',
+      'Transformative change you make flows easily and produces lasting positive results',
+      'Power you reclaim feels natural, authentic, and immediately beneficial',
+      'Vulnerability you risk with right person creates profound soul-level connection',
+      'Opportunity to express your transformative authentic power flows naturally and successfully'
+    ]
+  },
+
+  'Sun-Pluto-Square': {
+    name: 'Sun Square Pluto',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Growth through intense confrontation and forced transformation! The Sun\'s ego clashes with Pluto\'s death-rebirth, creating power struggles, control crises, and pressure to evolve. Challenge is surrendering ego attachments while reclaiming authentic power. Resistance to transformation creates greater crisis; embracing shadow work and release creates empowerment. Tension forces necessary psychological evolution. Good time to consciously work with intensity, face shadows, release control. Crisis produces profound growth. Breakdown leads to breakthrough.',
+    loveRelationships: 'Relationship intensity forcing transformative growth! Love involves power struggles, control issues, or deep crises. Jealousy, possessiveness, or manipulation possible. Toxic patterns surface intensely. Challenge is addressing power dynamics without destructive behavior. Good time for deep honest communication, therapy, releasing toxic relationship patterns. Crisis reveals what must transform for relationship health. Resistance creates damage; conscious shadow work creates profound healing. Intensity channeled constructively deepens authentic bond.',
+    familyHome: 'Family intensity forcing necessary healing! Home life involves power struggles, control battles, or deep crises. Toxic family patterns surface intensely. Hidden family issues erupt. Challenge is addressing dysfunction without perpetuating it. Good time for family therapy, confronting toxic patterns, reclaiming power in healthy ways. Crisis forces overdue family healing work. Resistance perpetuates trauma; conscious transformation creates liberation. Intensity reveals what must change.',
+    businessCareer: 'Career intensity forcing professional transformation! Work involves power struggles, authority conflicts, or professional crisis. Control issues or toxic workplace dynamics surface. Challenge is navigating power realities without compromising integrity. Good time to address professional toxicity, reclaim career power constructively, make necessary job changes. Crisis forces overdue career evolution. Resistance creates burnout; conscious empowered change creates advancement. Confrontation produces clarity.',
+    moneyFinances: 'Financial intensity forcing monetary transformation! Money situation involves crisis, control issues, or deep financial psychology. Toxic financial patterns surface intensely. Shared resource conflicts possible. Challenge is addressing financial shadows without destructive behavior. Good time to confront money fears, transform financial patterns, reclaim financial power. Crisis forces necessary financial evolution. Resistance perpetuates problems; conscious transformation creates empowerment. Breakdown produces breakthrough.',
+    predictions: [
+      'Intense power struggle forces you to confront and transform unhealthy control patterns',
+      'Your resistance to necessary transformation creates crisis - embrace of shadow work resolves it',
+      'Control issue erupts revealing deep psychological pattern requiring conscious healing',
+      'Crisis forces you to choose between destructive ego attachment and empowered evolution',
+      'Shadow aspect you\'ve avoided confronts you intensely - integration produces breakthrough',
+      'Power struggle you navigate consciously transforms into authentic empowerment',
+      'Breakdown of control or structure you experience leads to profound regeneration',
+      'Intense emotion you process through depth work produces liberating transformation',
+      'Confrontation you handle with psychological awareness creates unexpected empowerment',
+      'Opportunity to transform crisis into conscious death-rebirth and profound authentic power'
+    ]
+  },
+
+  'Sun-Pluto-Sextile': {
+    name: 'Sun Sextile Pluto',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Opportunity for empowerment through transformative initiative! The Sun\'s purpose harmonizes with Pluto\'s depth, creating potential for profound growth, power reclamation, and psychological breakthrough IF you take action. Opportunities for shadow work, elimination, and transformative change appear - but require your conscious engagement. Perfect time to pursue therapy, do deep inner work, eliminate limiting patterns, reclaim power. Success comes through courage to face depths and take transformative action. Passive approach wastes potential; active depth work creates profound results.',
+    loveRelationships: 'Relationship opportunity for deep healing through initiative! Love potential for profound intimacy, transformative vulnerability, psychological honesty. Perfect time to suggest couples therapy, initiate deep conversation, address power dynamics constructively. Opportunity for soul-level healing connection IF you have courage to go deep. Taking vulnerable risks favored. Initiative brings transformative results. Active depth work deepens authentic bond.',
+    familyHome: 'Family opportunity for healing transformation through initiative! Perfect time to suggest family therapy, initiate difficult conversations, address toxic patterns constructively. Family receptive to healing work IF you present it courageously. Good time to eliminate what no longer serves from home, address family psychology, reclaim healthy family power. Taking initiative for profound family healing brings liberating results.',
+    businessCareer: 'Career opportunity for empowerment through initiative! Excellent time to pursue positions of influence, propose transformative projects, demonstrate leadership depth. Recognition available IF you step forward with authentic power. Good time to mentor others, eliminate what limits professional growth, address workplace dynamics constructively. Taking strategic empowered career risks brings advancement. Your depth and intensity recognized IF expressed courageously.',
+    moneyFinances: 'Financial opportunity through transformative initiative! Money potential through elimination and strategic rebuilding IF you take action. Good time to address limiting financial patterns, invest in transformation/growth, build powerful financial foundation. Financial empowerment available through conscious psychological work with money. Your willingness to transform financial shadows can increase resources IF you apply discipline and depth. Strategic financial action produces powerful results.',
+    predictions: [
+      'Opportunity for profound growth appears - pursue it with courage for transformative results',
+      'Your initiative to do deep psychological work produces liberating breakthrough',
+      'Chance to eliminate limiting pattern succeeds powerfully IF you take action',
+      'Therapeutic or depth work you commit to actively creates profound positive change',
+      'Opportunity to reclaim authentic power appears - initiative required to actualize',
+      'Difficult conversation you initiate courageously resolves long-standing issue',
+      'Shadow work you pursue actively transforms weakness into strength and empowerment',
+      'Strategic elimination you make proactively creates immediate improvement and regeneration',
+      'Vulnerability you risk with psychological awareness creates deep healing connection',
+      'Opportunity for transformative empowerment through conscious initiative and courageous depth work'
+    ]
   }
 
 };
