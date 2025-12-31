@@ -480,6 +480,106 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  'Saturn-Neptune-Opposition': {
+    name: 'Saturn Opposition Neptune',
+    frequency: 'Occurs approximately once per 36-year cycle',
+    duration: '8-12 months',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Neptune represents dreams, spirituality, imagination, compassion, illusion, transcendence, and dissolution of boundaries. It connects us to the infinite and the mystical.',
+    aspectMeaning: 'The opposition creates tension between Saturn\'s demand for structure and Neptune\'s call to transcend boundaries. Reality vs. fantasy, responsibility vs. escape, discipline vs. surrender - these polarities reach maximum tension. This aspect forces you to choose: ground your dreams in reality or watch them dissolve, face harsh truths or stay in denial. Integration requires honoring both material limits and spiritual vision.',
+    loveRelationships: 'Relationship pulled between practical commitment (Saturn) and romantic idealism (Neptune). Partner may represent one pole while you embody the other - one wants commitment, other wants freedom; one is practical, other is dreamy. Projection and disillusionment possible. Or you\'re torn between staying in stable-but-uninspiring relationship vs. leaving for fantasy that may not be real. Integration means committed love that also honors spiritual connection.',
+    familyHome: 'Family responsibilities (Saturn) conflict with desire for escape or spiritual retreat (Neptune). Aging parents need care when you need personal freedom. Home repairs demand money you wanted for creative pursuits. Family secrets or addictions can no longer be ignored - reality must be faced. Balancing duty to family with your own spiritual or creative needs becomes critical. Neither extreme works - find middle ground.',
+    businessCareer: 'Career tension between practical security (Saturn) and creative/spiritual calling (Neptune). Stable job feels soul-crushing, but pursuing dreams feels financially irresponsible. Work environment may expose deception or illusion that must be confronted. Or authority figures demand you abandon idealism for "realism." Success requires building sustainable structure that also serves your vision - neither pure pragmatism nor pure idealism works.',
+    moneyFinances: 'Financial reality check reveals where you\'ve been in denial or fantasy. Investments based on hope rather than research fail. Or fear of loss (Saturn) prevents you from trusting financial flow (Neptune). Extreme caution vs. blind faith - you must find balance. Verify all financial information thoroughly. Budget realistically while still giving to causes you believe in. Spiritual values and practical finances must both be honored.',
+    predictions: [
+      'Dream you\'ve been pursuing reveals its impracticality - you must revise or release it',
+      'Authority figure or reality situation forces you to face what you\'ve been denying',
+      'Relationship reaches crisis point between commitment and freedom - choose integration',
+      'Financial loss teaches you to verify information and maintain healthy skepticism',
+      'Family duty conflicts with personal spiritual path - you must honor both somehow',
+      'Career disillusionment peak - neither selling out nor starving artist works, find balance',
+      'Addiction or escapism pattern can no longer be avoided - get help and build structure',
+      'Creative or spiritual project needs business plan and budget or it won\'t survive',
+      'You will learn to dream with your eyes open - vision grounded in reality',
+      'Integration of practical responsibility with compassionate idealism becomes your work'
+    ]
+  },
+
+  'Saturn-Neptune-Trine': {
+    name: 'Saturn Trine Neptune',
+    frequency: 'Occurs approximately twice per 36-year cycle',
+    duration: '6-10 months',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Neptune represents dreams, spirituality, imagination, compassion, illusion, transcendence, and dissolution of boundaries. It connects us to the infinite and the mystical.',
+    aspectMeaning: 'The trine creates harmonious flow between structure and spirit, making it easier to manifest dreams into reality through disciplined work. This is the aspect of practical mysticism - building cathedrals, creating inspired art through craft mastery, or serving compassionately within sustainable systems. Dreams become achievable goals. Spiritual insights translate into tangible work. Ideal time for bringing vision into form.',
+    loveRelationships: 'Relationships deepen through both spiritual connection and practical commitment. You can be both romantic and realistic, honoring the transcendent bond while handling daily life together responsibly. Soulmate connections gain structure and longevity. Compassion becomes sustainable through healthy boundaries. Unconditional love expressed through consistent actions. Ideal time for spiritual partnership that also handles bills and responsibilities.',
+    familyHome: 'Family responsibilities handled with compassion and wisdom. Caring for aging or ill family members feels meaningful rather than burdensome. Home becomes spiritual sanctuary through disciplined practice - meditation room gets built, creative space gets organized. Family healing through structured therapy or spiritual practice. Practical steps toward family dreams succeed. Home improvements that create beauty and peace.',
+    businessCareer: 'Excellent period for work combining spiritual values with material success. Creative or healing professions thrive if you build sustainable business structure. Artistic vision manifests through patient craftsmanship. Spiritual or service work generates income through wise business practices. Mentor may help you structure your gifts into viable career. Dreams become practical plans that actually work.',
+    moneyFinances: 'Financial planning grounded in values and vision succeeds. Ethical investments prove wise. Money earned through work you believe in flows more easily. Financial discipline doesn\'t require sacrificing what matters - you find budget that supports both security and soul. Generosity and savings both possible. Building wealth while honoring spiritual values works now. Financial dreams manifest through realistic planning.',
+    predictions: [
+      'Creative or spiritual project you\'ve been working on patiently finally comes together beautifully',
+      'Career combines your ideals with practical success - doing well by doing good',
+      'Relationship commitment deepens through both romantic connection and mature partnership',
+      'Financial plan that honors both security and generosity creates peace and prosperity',
+      'Artistic work reaches new level through dedicated practice and skill refinement',
+      'Spiritual practice becomes integrated daily routine rather than special occasional activity',
+      'You will build something that serves others while also sustaining you',
+      'Mentor or guide helps you structure your vision into achievable steps',
+      'Family situation improves through compassionate but boundaried approach',
+      'Integration of idealism and realism makes your dreams actually achievable'
+    ]
+  },
+
+  'Saturn-Neptune-Square': {
+    name: 'Saturn Square Neptune',
+    frequency: 'Occurs approximately twice per 36-year cycle',
+    duration: '7-11 months',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Neptune represents dreams, spirituality, imagination, compassion, illusion, transcendence, and dissolution of boundaries. It connects us to the infinite and the mystical.',
+    aspectMeaning: 'The square creates friction between reality and idealism, forcing growth through confronting where dreams meet limits. Saturn says "work within reality" while Neptune says "transcend limitations" - this conflict demands you mature both your vision and your discipline. Illusions crumble, but refined dreams become achievable. Practical challenges force spiritual growth. Spiritual insights require practical application or they remain useless fantasies.',
+    loveRelationships: 'Relationship fantasies challenged by reality - you must love the real person, not your projection. Disappointment possible when partner shows human limitations. Or your idealism feels crushed by relationship\'s practical demands - bills, chores, compromises. Crisis pushes you to develop mature love that embraces both spiritual connection and human imperfection. Neither fantasy nor cynicism - realistic devotion. Love grows up.',
+    familyHome: 'Family illusions or secrets can no longer be maintained - reality intrudes. Idealized family image meets actual family dysfunction. Caring for family members tests your compassion with real limits on time, money, energy. Home repairs reveal more problems than expected. You must develop compassionate responsibility - helping family while protecting yourself. Fantasy family vs. real family reconciliation required.',
+    businessCareer: 'Career ideals tested by practical obstacles and limitations. Dream job isn\'t what you imagined, or path to creative career proves harder than expected. Authority figures may seem to block your vision, but they may be pushing you to make it more realistic. Work situation exposes where you\'ve been naive or impractical. Success requires refining vision to match reality while not abandoning core values. Mature your dreams.',
+    moneyFinances: 'Financial reality check forces you to budget and plan rather than hope and wish. "The universe will provide" meets "you need to pay rent." Investment losses possible if you\'ve been in denial. Or fear blocks you from wise opportunities. Neither blind faith nor paralyzed fear - you must develop realistic financial planning that also trusts the process. Money anxiety pushes spiritual and practical growth simultaneously.',
+    predictions: [
+      'Dream reveals its flaws and limitations - you must revise it to make it actually achievable',
+      'Relationship partner disappoints your fantasy but offers real human love if you can accept it',
+      'Financial wake-up call forces you to create real budget and verify all information',
+      'Creative project seems impossible until you break it into realistic practical steps',
+      'Family situation requires you to help compassionately while maintaining firm boundaries',
+      'Career setback teaches you to build stronger foundation under your dreams',
+      'Spiritual belief tested by harsh reality - your faith must mature beyond naive idealism',
+      'You will learn to work patiently within limitations while still holding vision',
+      'Addiction or escapism pattern creates crisis that forces you to get real help',
+      'Integration crisis - you must develop realistic idealism and visionary pragmatism'
+    ]
+  },
+
+  'Saturn-Neptune-Sextile': {
+    name: 'Saturn Sextile Neptune',
+    frequency: 'Occurs approximately twice per 36-year cycle',
+    duration: '5-8 months',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Neptune represents dreams, spirituality, imagination, compassion, illusion, transcendence, and dissolution of boundaries. It connects us to the infinite and the mystical.',
+    aspectMeaning: 'The sextile offers opportunities to blend structure with spirituality through conscious effort. This is the aspect of making small, practical steps toward your dreams. Not automatic like the trine, but supportive - you must reach for the opportunity. Perfect for starting spiritual practices with discipline, beginning creative projects methodically, or taking realistic steps toward idealistic goals. Effort now builds toward manifestation later.',
+    loveRelationships: 'Opportunity to develop relationships that honor both romance and reality. Small daily acts of love and commitment strengthen spiritual bond. You can take practical steps to improve relationship while maintaining idealism - couples therapy, date night routine, shared spiritual practice. Potential for grounding fantasy into sustainable partnership if you do the work. Romantic gestures gain staying power through consistent effort.',
+    familyHome: 'Opportunity to create home environment supporting spiritual and practical needs. Small improvements make home more peaceful and beautiful. Family relationships improve through structured compassion - scheduled calls, therapy appointments, boundary-setting conversations. Good time to establish meditation space, creative corner, or healing environment at home. Practical steps toward family harmony work if you take them.',
+    businessCareer: 'Opportunity to integrate spiritual values into career through practical steps. Take class that helps you monetize creative gifts. Start side business doing work you believe in. Volunteer in field you want to enter. Networking in spiritual or creative communities opens doors if you follow through professionally. Dreams become job descriptions you can actually apply for. Small career moves toward meaningful work succeed.',
+    moneyFinances: 'Opportunity to align finances with values through realistic planning. Start tithing or charitable giving structure. Begin ethical investment research. Create budget that funds both security and soul. Financial education in areas matching your values. Small steps toward financial dreams work - saving for retreat, funding creative project gradually, building emergency fund. Money and meaning can both be honored through effort.',
+    predictions: [
+      'Class or workshop helps you develop creative or spiritual gift into marketable skill',
+      'Small daily spiritual practice you start now builds into transformative long-term routine',
+      'Relationship improves through consistent small acts of commitment and romance',
+      'Budget or financial plan you create allows you to save and donate simultaneously',
+      'Home improvement project makes space more peaceful and functionally beautiful',
+      'Career opportunity in meaningful work appears if you\'ve been preparing for it',
+      'Mentor offers guidance on making your vision practical - you must follow through',
+      'Creative project advances through disciplined regular effort even in small increments',
+      'Family relationship heals through structured compassionate communication',
+      'You will learn that small realistic steps toward dreams work better than giant leaps'
+    ]
+  },
+
   // ============================================================================
   // VENUS - SOUTH NODE ASPECTS (Sample)
   // ============================================================================
