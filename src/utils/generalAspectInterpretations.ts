@@ -451,6 +451,93 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  // ============================================================================
+  // SATURN - NEPTUNE ASPECTS (Sample)
+  // ============================================================================
+
+  'Saturn-Neptune-Conjunction': {
+    name: 'Saturn Conjunction Neptune',
+    frequency: 'Occurs approximately every 36 years',
+    duration: '8-12 months',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Neptune represents dreams, spirituality, imagination, compassion, illusion, transcendence, and dissolution of boundaries. It connects us to the infinite and the mystical.',
+    aspectMeaning: 'The conjunction merges Saturn\'s structure with Neptune\'s dissolution, creating opportunities to manifest dreams into reality or watch illusions crumble into harsh reality. This rare aspect asks you to build something spiritual, make dreams practical, or face where fantasy has replaced responsibility. Spiritual discipline, creative manifestation, or disillusionment equally possible.',
+    loveRelationships: 'Relationship fantasies meet reality check, or spiritual connection deepens into committed partnership. You may finally commit to soulmate relationship or realize "perfect partner" was illusion. Unconditional love requires boundaries. Compassion needs structure. Some relationships become more spiritual and committed, others dissolve as illusions fade. True love vs. fantasy love becomes clear.',
+    familyHome: 'Family ideals and harsh realities must integrate. You may care for ill or aging family member (Saturn duty meets Neptune compassion), or family secrets and addictions come to light requiring structured intervention. Home becomes spiritual sanctuary through disciplined practice. Or home illusions crumble requiring practical rebuilding. Compassionate responsibility toward family.',
+    businessCareer: 'Career path integrates spiritual values with material responsibility. Ideal for work in healing, arts, spirituality, or helping professions if you build sustainable structure. Dreams of creative or spiritual career must become practical plans or remain fantasies. Some experience disillusionment with career and rebuild on more authentic foundation. Manifesting vision requires discipline.',
+    moneyFinances: 'Financial dreams require realistic planning and hard work to manifest. Investment illusions or financial deception possible - verify everything. Or spiritual approach to money (tithing, ethical investing, generosity) becomes structured practice. Some lose money through fantasy or lack of boundaries. Others build wealth through disciplined pursuit of inspired vision. Reality check on finances.',
+    predictions: [
+      'Dream or vision you\'ve had for years either manifests through disciplined work or proves to be unrealistic',
+      'Spiritual practice becomes daily disciplined routine rather than occasional escape',
+      'Relationship partner reveals they\'re not who you thought - illusion dissolves',
+      'Creative or artistic project requires more structure and hard work than you imagined',
+      'Family member\'s addiction or illness requires your compassionate but boundaried support',
+      'Financial opportunity that seems too good to be true probably is - verify thoroughly',
+      'You will build something beautiful and transcendent through patient, persistent effort',
+      'Compassion fatigue teaches you that helping others requires protecting yourself',
+      'Career disillusionment leads to rebuilding work life on more authentic spiritual values',
+      'Integration point between idealism and realism - you learn to dream practically'
+    ]
+  },
+
+  // ============================================================================
+  // VENUS - SOUTH NODE ASPECTS (Sample)
+  // ============================================================================
+
+  'Venus-South Node-Opposition': {
+    name: 'Venus Opposition South Node',
+    frequency: 'Occurs twice during ~18-month nodal cycle',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but limiting.',
+    aspectMeaning: 'Venus opposing South Node (conjunct North Node) pulls you toward new relationship patterns, values, and sources of pleasure that align with your soul\'s growth direction. This aspect says: "Your old way of loving and what you used to value no longer serves your evolution." You\'re drawn to people, beauty, and pleasures that challenge your comfort zone and help you grow. Tension between familiar relationship patterns and destined new ones.',
+    loveRelationships: 'Strong pull toward relationships that represent your growth edge, not your comfort zone. You may attract partners very different from your usual type, or existing relationship requires you to love differently than you\'re used to. Old relationship patterns feel increasingly unsatisfying. New ways of relating feel uncomfortable but right. Letting go of who you thought you needed to love in order to love who you\'re meant to love.',
+    familyHome: 'Family relationship patterns you inherited no longer feel right. You may create very different family dynamics than what you grew up with, or make home in way that challenges family traditions. Releasing family values that aren\'t truly yours. Home becomes expression of authentic values, not inherited ones. Some distance from family patterns feels necessary for growth.',
+    businessCareer: 'Career values shifting away from what\'s always felt safe toward what truly fulfills you. Work you\'ve always done well feels empty now. New career directions that align with authentic values call to you even if they\'re unfamiliar. Money and security can no longer be your only values - meaningful work matters more. Releasing career identity you\'ve outgrown.',
+    moneyFinances: 'What you value and spend money on is changing. Old financial priorities feel shallow. You may spend less on things that used to bring pleasure, more on things aligned with growth. Releasing attachment to money and possessions as primary source of security. Finding abundance through aligning with authentic values rather than pursuing wealth for its own sake.',
+    predictions: [
+      'Attraction to someone very different from your usual type who challenges you to grow',
+      'Relationship pattern you\'ve repeated for years suddenly feels unbearable - you change it',
+      'Career opportunity that pays less but aligns with your real values becomes more appealing',
+      'Possession or lifestyle you thought you valued no longer brings satisfaction',
+      'Family expectation about relationships or values you can no longer pretend to share',
+      'Letting go of what you thought you needed in partner to discover what you actually need',
+      'Financial priority shift - investing in growth and meaning over comfort and security',
+      'Artistic or aesthetic preference changes - what you find beautiful evolves',
+      'You will release relationship or value system that\'s familiar but no longer authentic',
+      'Growing toward new way of loving and valuing that feels destined even if uncomfortable'
+    ]
+  },
+
+  // ============================================================================
+  // SUN - MOON ASPECTS (Sample)
+  // ============================================================================
+
+  'Sun-Moon-Square': {
+    name: 'Sun Square Moon',
+    frequency: 'Occurs twice monthly (First Quarter and Third Quarter Moons)',
+    duration: '2-3 days peak, ~1 week influence',
+    planet1Energy: 'The Sun represents conscious identity, ego, purpose, vitality, creative life force, and how you shine. It\'s your core self, your will, and your primary drive.',
+    planet2Energy: 'The Moon represents emotions, instincts, needs, habits, security, nurturing, and your inner emotional world. It\'s your subconscious patterns, your gut feelings, and what makes you feel safe.',
+    aspectMeaning: 'Sun square Moon creates tension between what you want (Sun) and what you need (Moon), between your goals and your feelings, between moving forward and staying safe. This is a "crisis in action" - time to make decisions despite internal conflict. External demands clash with emotional needs. Productive friction if you work with it, exhausting if you fight it. Choose the middle path between head and heart.',
+    loveRelationships: 'Relationship tension between what you want to do and how you feel about it. Partner\'s goals may conflict with your emotional needs or vice versa. One person wants to move forward while other needs security. Arguments about balancing independence and togetherness. This isn\'t about right or wrong - it\'s about integration. Find compromise that honors both person\'s wants and needs.',
+    familyHome: 'Conflict between career/public life demands and family/home needs. You want to pursue goals but family needs attention. Or home improvements needed but work demands your time. Mother and father energies clash. Parent and child needs compete. Solution isn\'t choosing one over other - it\'s better time management and priority balance. Both matter.',
+    businessCareer: 'Career goals face emotional resistance or emotional needs interfere with productivity. You want to push forward but don\'t feel like it. Work demands clash with need for rest and security. This square pushes you to act anyway despite not feeling ready. Discipline meets emotion. Success requires working through discomfort, not waiting until you feel like it. Productive struggle.',
+    moneyFinances: 'Financial decisions create emotional tension. Investment or purchase you logically want to make doesn\'t feel emotionally safe, or vice versa. Spending for comfort clashes with saving for goals. Head says one thing about money, heart says another. Neither is wrong - find balanced approach. Spend some, save some. Take some risks, keep some security. Integration, not extremes.',
+    predictions: [
+      'Decision required before you feel emotionally ready to make it',
+      'Argument with partner about what they want vs. what you need',
+      'Work deadline conflicts with family obligation - both matter, choose wisely',
+      'Emotional resistance to something you logically know you should do',
+      'Balancing act between pursuing goals and honoring feelings exhausts but strengthens you',
+      'Parent or authority figure\'s expectations clash with your emotional needs',
+      'You will act despite discomfort and prove you\'re stronger than you feel',
+      'Home vs. career tension requires creative scheduling solution',
+      'Financial decision between logical investment and emotional security',
+      'Integration of head and heart through choosing middle path, not extremes'
+    ]
+  },
+
 };
 
 export default GENERAL_ASPECTS;
