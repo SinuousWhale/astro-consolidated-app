@@ -1123,6 +1123,135 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Spiritual practice or creative hobby you begin now becomes ongoing source of growth',
       'Opportunity to expand life meaningfully if you combine faith with conscious initiative'
     ]
+  },
+
+  // ==========================================
+  // JUPITER-PLUTO ASPECTS (All 5)
+  // ==========================================
+
+  'Jupiter-Pluto-Conjunction': {
+    name: 'Jupiter Conjunction Pluto',
+    frequency: 'Occurs approximately every 12-13 years',
+    duration: '6-12 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Massive transformational growth and powerful expansion! This rare conjunction merges Jupiter\'s growth with Pluto\'s total transformation, creating profound regeneration, empowered abundance, and phoenix-like rebirth into greater potential. What needs to die will be eliminated; what needs to grow will be empowered tremendously. Expect power surges, deep psychological breakthroughs, total life transformation, and quantum leaps through death-rebirth cycles. You gain tremendous power and wisdom through facing what must transform. Expansion through intensity and depth.',
+    loveRelationships: 'Relationship transforms completely - total death-rebirth of partnership. May meet intensely powerful soul connection or existing relationship goes through profound metamorphosis. Surface relating dies; authentic depth emerges. Power dynamics must transform. Psychological healing through intimacy. Empowered love through vulnerability and truth. However, control issues or obsession possible - share power don\'t dominate. Relationship becomes vehicle for profound growth and transformation. Love deepens through shadow work together.',
+    familyHome: 'Family undergoes major transformation and regeneration. Old family patterns die; healthier dynamics emerge. May deal with family crisis that ultimately empowers everyone. Inheritance or family resources increase substantially. Home renovation or relocation transforms living situation. Family healing through confronting buried issues. Psychological depth work with family members. Empowerment through releasing family shadows. What must end in family will; what must grow will flourish tremendously.',
+    businessCareer: 'Career transformation and massive professional growth! May completely change career path toward empowered calling. Rise to position of significant power and influence. Business success through strategic depth and transformation of industry. Research, investigation, or depth work central to success. Psychological insight gives professional advantage. Eliminate what\'s not working; invest totally in what is. Empire-building possible. Success through authentic power not manipulation. Career phoenix moment.',
+    moneyFinances: 'Major financial transformation and wealth-building power! Resources increase dramatically through strategic investment, inheritance, or total financial regeneration. Perfect time for financial transformation - eliminate debt, restructure finances, invest in growth powerfully. Wealth through psychology of money and eliminating limiting beliefs. Investments in transformation industries succeed. However, obsession with money or power struggles over resources possible. Empower yourself financially through facing money shadows. Phoenix wealth.',
+    predictions: [
+      'Total life transformation in major area - complete death-rebirth into empowered version of self',
+      'You gain significant power, influence, or resources through profound transformation',
+      'Psychological breakthrough eliminates deep pattern and unleashes tremendous growth',
+      'Career undergoes phoenix moment - what dies opens space for massive advancement',
+      'Financial regeneration through strategic investment or eliminating money blocks',
+      'Relationship transforms through deep intimacy and shadow work - surface dies, depth emerges',
+      'You will confront what must die in life and find courage to let it transform completely',
+      'Power increases dramatically but must be used wisely not manipulatively',
+      'Crisis or intense pressure ultimately catalyzes breakthrough growth and empowerment',
+      'You become profoundly more powerful, wealthy, and wise through transformational growth'
+    ]
+  },
+
+  'Jupiter-Pluto-Opposition': {
+    name: 'Jupiter Opposition Pluto',
+    frequency: 'Occurs approximately every 12-13 years (midpoint of Jupiter-Pluto cycle)',
+    duration: '6-12 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Tension between expansion and transformation, optimism and intensity, growth and death-rebirth. Pulled between wanting more and needing to eliminate, seeking abundance and confronting shadows, expanding outward and diving deep. Must integrate both - neither pure optimism nor pure intensity works. The opposition demands you grow THROUGH transformation, expand THROUGH depth, succeed THROUGH shadow work. Power requires wisdom, growth requires elimination. Integration of light and shadow produces real empowerment.',
+    loveRelationships: 'Tension between relationship growth and power transformation. May want expansion while partner wants depth (or vice versa). Pulled between optimistic love and confronting relationship shadows. Power struggle or control issues surface. Must balance growth with psychological truth. Relationship can\'t be only light or only intense. Integration: expand through honoring depth, grow through shadow work. Neither avoiding intensity nor drowning in it - wise depth.',
+    familyHome: 'Tension between family expansion and family transformation. Wanting more while needing to eliminate. Family power dynamics surface. May feel torn between optimistic family vision and dealing with family wounds. Balancing growth with healing challenging. Must honor both expansion desires and transformation needs. Integration: grow family through healing shadows. Neither toxic positivity nor endless processing - empowered growth through depth.',
+    businessCareer: 'Career tension between expansion and transformation. Offered growth opportunity while deep career change needed. Must balance ambition with authentic power. Success may require eliminating what doesn\'t serve. Power struggles with authority possible. Torn between conventional success and transformational calling. Integration: expand career through authentic transformation. Neither selling out nor sabotaging success - empowered growth through integrity.',
+    moneyFinances: 'Financial tension between expansion and transformation. Want more while needing to eliminate money blocks. May over-extend financially while transformation required. Investment opportunity while debt elimination needed. Power struggles over resources. Must balance abundance mindset with financial reality. Integration: grow wealth through transforming money psychology. Neither greed nor poverty consciousness - empowered prosperity through shadow work.',
+    predictions: [
+      'You face choice between conventional growth and transformational path - synthesis needed',
+      'Relationship requires both expansion and depth work - can\'t have one without other',
+      'Financial opportunity while money shadows surface - address both simultaneously',
+      'Career growth possible but requires eliminating what\'s inauthentic or dead',
+      'Power struggle teaches you difference between authentic power and control',
+      'You will learn that true expansion requires transformation not just addition',
+      'Family situation needs both optimistic vision and dealing with buried issues',
+      'Opportunity tempts you but feels like selling soul - negotiate from empowered place',
+      'Crisis or intensity ultimately serves growth if you don\'t avoid transformation',
+      'Integration of growth and depth, light and shadow, creates real empowerment'
+    ]
+  },
+
+  'Jupiter-Pluto-Trine': {
+    name: 'Jupiter Trine Pluto',
+    frequency: 'Occurs approximately 2-3 times during the 12-13 year Jupiter-Pluto cycle',
+    duration: '4-10 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Effortless transformational growth and empowered expansion! Growth and transformation flow naturally together. Profound regeneration feels destined, power increases naturally, and phoenix moments happen with grace. Perfect time for deep transformation, strategic empowerment, psychological healing, and massive growth through depth work. The universe supports your empowerment. Transformation feels right, wealth flows through power, and rebirth seems natural. Trust deep processes and profound changes. Depth and expansion aligned.',
+    loveRelationships: 'Relationship transforms beautifully and deepens naturally! May meet powerful soul connection that feels destined. Existing partnership evolves through natural psychological intimacy. Shadow work strengthens bond effortlessly. Power shared equally and lovingly. Relationship becomes vehicle for mutual empowerment. Deep truth-telling heals and bonds. Transformation through love flows gracefully. Both partners grow through depth and authenticity. Empowered partnership.',
+    familyHome: 'Family transformation and growth flow naturally! Family healing happens through depth conversations that feel right. Old patterns release easily. Family resources or inheritance flow smoothly. Home transformation or powerful improvement succeeds. Family empowerment through facing truth together. Generational patterns heal naturally. Family member experiences positive phoenix moment. Deep family bonds strengthen through authentic relating. Empowered family.',
+    businessCareer: 'Career breakthrough through strategic depth and transformation! Perfect time for major career move, powerful advancement, or transformational business launch. Success through research, psychology, investigation, or transformation industries. Strategic thinking and depth work succeed naturally. Rise to position of significant influence. Professional empowerment through authentic expertise. Career transforms naturally toward greater power and meaning. Strategic empire-building works.',
+    moneyFinances: 'Financial transformation and wealth-building flow powerfully! Money increases through strategic investment, inheritance, or financial regeneration. Perfect time for major financial moves - eliminate debt, restructure powerfully, invest strategically. Wealth through understanding power and psychology of money. Investments in transformation sectors succeed. Financial empowerment through releasing money blocks. Abundance through depth and strategy. Phoenix finances.',
+    predictions: [
+      'Major life transformation happens naturally and empowers you tremendously',
+      'Financial breakthrough through strategic investment or releasing money blocks',
+      'Career advancement to position of real power and influence flows smoothly',
+      'Psychological healing or therapy produces profound positive transformation',
+      'Relationship deepens through shadow work and authentic intimacy naturally',
+      'You eliminate what no longer serves easily and growth fills the space immediately',
+      'Inheritance, windfall, or major resource increase flows to you at perfect timing',
+      'Professional success through depth expertise - research, psychology, or strategy',
+      'Crisis resolves through deep work and produces unexpected empowerment',
+      'Transformation feels natural not forced - phoenix rebirth happens with grace'
+    ]
+  },
+
+  'Jupiter-Pluto-Square': {
+    name: 'Jupiter Square Pluto',
+    frequency: 'Occurs approximately 3-4 times during the 12-13 year Jupiter-Pluto cycle',
+    duration: '4-10 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Transformational growth through intense challenge and power struggles! The square creates friction between expansion and elimination, forcing profound change through crisis. Obsessive ambition, power struggles, or compulsive growth possible. May want success at any cost or resist necessary transformation. However, the tension produces tremendous empowerment if worked with consciously. The challenge: pursue growth through shadow work not avoidance, seek power through integrity not manipulation, expand through transformation not bypassing. Crisis catalyzes necessary rebirth.',
+    loveRelationships: 'Relationship power struggles or transformational crisis drives growth. Control issues surface - either yours or partner\'s. Jealousy, obsession, or intensity challenges. May try to change partner or resist being controlled. Relationship feels intense and pressured. However, stagnant dynamics DO need transforming. The key: share power authentically, transform through vulnerability not force. Neither dominating nor submitting - mutual empowerment. Growth through honest depth work on relationship shadows.',
+    familyHome: 'Family power dynamics or crisis creates transformational pressure. Struggles over control, inheritance, or family resources. May feel family obligations overwhelming or resist necessary family changes. Compulsive family patterns surface. However, unhealthy family dynamics DO need eliminating. The key: transform family patterns through boundaries and honesty not force or avoidance. Neither controlling family nor being controlled - empowered relating. Family healing through facing shadows together.',
+    businessCareer: 'Career ambition or power struggles drive intense growth challenges. May pursue success compulsively or face workplace power dynamics. Ruthless competition or ethical compromises tempting. Obsession with advancement or control issues with authority. However, career DOES need major transformation. The key: pursue power through integrity and depth work not manipulation. Neither selling soul nor giving up ambition - empowered authentic success. Career transformation through shadow work.',
+    moneyFinances: 'Financial obsession or power struggles around money. May pursue wealth compulsively or face conflicts over resources. Risky financial moves driven by greed or fear. Debt pressure or financial crisis forcing transformation. However, money patterns DO need deep transformation. The key: transform financial psychology and eliminate money shadows rather than just pursuing more. Neither greed nor deprivation - empowered prosperity through shadow work. Financial rebirth through depth.',
+    predictions: [
+      'You face intense pressure or crisis that ultimately forces necessary transformation',
+      'Power struggle teaches difference between authentic empowerment and manipulation',
+      'Financial pressure or obsession reveals money shadows that need healing',
+      'Career ambition becomes compulsive - success at what cost? Reassess values',
+      'Relationship intensity or control issues surface what needs transforming',
+      'You will learn that true growth requires facing shadows not bypassing them',
+      'Crisis or elimination that feels devastating ultimately creates space for rebirth',
+      'Obsessive pattern reveals psychological wound needing healing and integration',
+      'Temptation to use power manipulatively tests your integrity - choose wisely',
+      'Transformation happens through accepting death-rebirth not resisting change'
+    ]
+  },
+
+  'Jupiter-Pluto-Sextile': {
+    name: 'Jupiter Sextile Pluto',
+    frequency: 'Occurs approximately 2-3 times during the 12-13 year Jupiter-Pluto cycle',
+    duration: '3-8 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Opportunity for empowered growth through conscious transformation! Not automatic like the trine - you must reach for depth and power. Perfect time to begin deep psychological work, strategic empowerment, transformational projects, or shadow integration for growth. Doors to power and profound change open if you knock. Small transformative steps toward big empowerment pay off. Opportunity favors those who combine wisdom with depth work, faith with shadow integration.',
+    loveRelationships: 'Opportunity to deepen relationship through conscious intimacy work. Suggest couples therapy, share vulnerable truth, or explore relationship shadows together. Won\'t happen automatically - requires courage to go deep. Can empower bond through psychological honesty if both participate. Small authentic conversations or shadow work strengthen partnership. Building relationship that\'s both growth-oriented and deeply transformative takes initiative but works powerfully.',
+    familyHome: 'Opportunity to transform family dynamics through conscious depth work. Start family therapy, address buried family issues, or heal generational patterns. Small changes toward authentic family relating pay off. Family empowerment grows through combining love with psychological truth. Works if you take action - initiate the conversation, start the healing, face the shadow. Building family environment that\'s both healthy and psychologically deep.',
+    businessCareer: 'Career growth opportunities through strategic depth work if you pursue them. Perfect time to develop powerful expertise, research deeply, or propose transformational project. Won\'t fall in lap - must demonstrate strategic thinking and depth. Small career moves toward positions of power succeed. Mentorship with powerful person if you seek it. Authority figures receptive to well-researched transformational proposals. Building career power through strategic depth.',
+    moneyFinances: 'Financial growth through smart strategic investing and transformation work. Research powerful investment strategies then commit wisely. Eliminate debt or financial blocks strategically. Learn about wealth psychology and shadow work around money. Small amounts invested in transformation sectors accumulate powerfully. Financial education in psychology of wealth pays off. Building prosperity through transforming money consciousness. Take first empowered steps.',
+    predictions: [
+      'Career opportunity in powerful field appears for those developing strategic depth expertise',
+      'Small investment in transformation sector or strategic fund you research grows substantially',
+      'Relationship deepens through vulnerable conversation or shadow work you courageously initiate',
+      'Therapy, depth psychology, or shadow work you begin produces significant empowerment',
+      'Financial strategy combining growth mindset with eliminating blocks works if you commit',
+      'Mentor in powerful position offers guidance if you approach with authentic depth',
+      'Family healing opportunity through addressing buried issue you courageously raise',
+      'You will learn that conscious transformation produces exponential growth',
+      'Research or investigation project you pursue reveals powerful insights and opportunities',
+      'Opportunity to expand power through combining wisdom with psychological depth work'
+    ]
   }
 
 };
