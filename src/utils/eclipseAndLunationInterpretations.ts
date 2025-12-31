@@ -727,6 +727,222 @@ const FULL_MOONS: Record<string, FullMoonInterpretation> = {
       'Technology or communication breakdown forces you to communicate in person',
       'Mental clarity after period of confusion - you finally understand situation completely'
     ]
+  },
+
+  'Cancer': {
+    name: 'Full Moon in Cancer',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Cancer represents emotions, nurturing, family, home, roots, security, intuition, and the protective mother energy. It\'s the urge to belong, to care for others, and to create emotional safety.',
+    eventMeaning: 'The Full Moon in Cancer illuminates your emotional needs, family bonds, and sense of belonging. This is culmination point for home and family matters you initiated six months ago. Emotions peak, family dynamics become crystal clear, and your need for emotional security reaches maximum visibility. Tension between public ambition and private emotional needs becomes obvious. Balance between caring for others and caring for yourself required.',
+    loveRelationships: 'Emotional needs in relationship reach peak visibility - you see clearly whether they\'re being met or neglected. Vulnerability and emotional honesty either bring you closer or reveal unbridgeable emotional distance. Family compatibility with partner becomes highlighted issue. Some relationships deepen through emotional sharing, others end if emotional intimacy is impossible. True feelings become undeniable.',
+    familyHome: 'Family matters, home situations, or mother relationships reach emotional climax. Truth about family dynamics becomes crystal clear. Home you\'ve been working on shows results or reveals problems. Family secrets may surface. Emotional patterns in family reach peak intensity. Some family bonds strengthen through crisis, others break if they\'re toxic. Home vs. career tension peaks.',
+    businessCareer: 'Work-life balance issues reach crisis point. Career success may conflict with family needs or emotional well-being. Public achievements feel empty if home life suffers. You see clearly whether career allows emotional fulfillment or requires sacrificing too much. Some choose family over career advancement now. Emotional intelligence at work gets tested.',
+    moneyFinances: 'Financial results of home investments, family business, or emotional spending become visible. Real estate matters reach resolution. You see clearly whether money is providing real security or just buying temporary comfort. Family financial matters come to head. Emotional relationship with money illuminated - spending for comfort vs. true security becomes obvious.',
+    predictions: [
+      'Major emotional realization about what you truly need to feel safe and belong',
+      'Family issue that\'s been building reaches crisis and demands resolution',
+      'Home project or move you started shows final results - success or complications',
+      'Relationship conversation where true feelings can no longer be hidden',
+      'Mother or maternal figure relationship reaches peak of closeness or final break',
+      'Work-life balance breaks - you must choose to prioritize differently',
+      'Emotional breakthrough or breakdown that leads to healthier patterns',
+      'Family secret revealed that changes your understanding of family history',
+      'You will honor your emotional needs even if it disappoints others',
+      'Home becomes sanctuary through emotional honesty or feels like prison through emotional repression'
+    ]
+  },
+
+  'Leo': {
+    name: 'Full Moon in Leo',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Leo represents creativity, self-expression, joy, confidence, recognition, leadership, romance, and the radiant performer. It\'s the urge to shine, to create, to be seen and celebrated for who you truly are.',
+    eventMeaning: 'The Full Moon in Leo brings creative expression, romance, and self-confidence to peak visibility. This is culmination of what you started expressing or creating six months ago. Your need for recognition, joy, and authentic self-expression reaches maximum intensity. Tension between being yourself and serving others becomes obvious. Recognition arrives or you realize you don\'t need it. Creative projects show results.',
+    loveRelationships: 'Romance reaches dramatic peak - passionate declarations, grand gestures, or relationship becomes public. You see clearly whether partner celebrates your authentic self or requires you to dim your light. Need for playfulness and passion either fulfilled beautifully or glaringly absent. Some relationships deepen through mutual celebration, others end if joy and passion are missing. Love becomes visible.',
+    familyHome: 'Children or creative projects reach important milestone or crisis. Parenting challenges peak. You see clearly whether family celebrates your individuality or requires conformity. Home either supports creative expression or feels like it stifles it. Recognition from family arrives or you realize you\'ve been seeking validation in wrong places. Family drama reaches theatrical climax.',
+    businessCareer: 'Creative work or leadership reaches public visibility - success and recognition or exposure of flaws. Your talents and self-expression at work either get celebrated or ignored, making career satisfaction obvious. Creative projects you launched show results. Leadership abilities tested publicly. You see whether work allows you to shine or keeps you invisible.',
+    moneyFinances: 'Financial results of creative work, speculative investments, or generous spending become visible. Money earned through self-expression and creativity shows profit or loss. Spending on joy and celebration either feels worth it or reveals overindulgence. Creative investments pay off or prove too risky. Relationship between confidence and financial success becomes obvious.',
+    predictions: [
+      'Creative project or performance reaches completion and public visibility',
+      'Recognition or award for creative work - or realization you don\'t need external validation',
+      'Romantic relationship reaches peak passion or dramatic ending',
+      'Child reaches important milestone or parenting challenge comes to head',
+      'You will be seen publicly - ready or not - for who you truly are',
+      'Creative risk you took shows results - success or valuable learning',
+      'Leadership ability tested in public situation',
+      'Joy you\'ve claimed attracts abundance or reveals where you\'ve been seeking wrong things',
+      'Confidence peaks - you finally see your own radiance',
+      'Decision point: keep shining or dim your light for others - choose wisely'
+    ]
+  },
+
+  'Virgo': {
+    name: 'Full Moon in Virgo',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Virgo represents service, health, organization, refinement, analysis, practical skill, and the dedicated craftsperson. It\'s the urge to improve, to be useful, to perfect your craft and serve meaningfully.',
+    eventMeaning: 'The Full Moon in Virgo illuminates health, work, daily routines, and service. This is culmination of health improvements or work reorganization you started six months ago. Your body\'s condition, work efficiency, and daily habits become crystal clear. Perfectionism vs. acceptance reaches peak tension. You see what\'s actually working practically vs. what you\'ve been telling yourself. Service and usefulness tested.',
+    loveRelationships: 'Practical realities of relationship become impossible to ignore. You see clearly who does what, who contributes, whether partnership is balanced in daily reality. Acts of service and practical care either feel reciprocated or glaringly one-sided. Communication about practical needs reaches peak honesty. Health issues may affect relationship. Love shows up in details or doesn\'t show up at all.',
+    familyHome: 'Home organization efforts show results or reveal deeper chaos. Health issues in family come to head. Daily routines and family systems either work smoothly or break down completely, showing what needs fixing. Caretaking of family members reaches peak - sustainable service or unsustainable sacrifice becomes obvious. Health of home environment gets truth check.',
+    businessCareer: 'Work efficiency and usefulness reach point of evaluation. Your skills, organization, and contribution either get recognized for their value or revealed as inadequate. Health affects work capacity. Job satisfaction based on meaningful service becomes clear issue. Perfectionism at work reaches breaking point - good enough or never enough? Your practical value shows.',
+    moneyFinances: 'Financial results of budgeting, organizing, or service work become visible. Money saved through efficiency shows up or disorganization costs you. Earning through practical skills and service reaches evaluation point. Health expenses may surface. Financial systems you created either work or need refinement. True value of your skills becomes monetarily obvious.',
+    predictions: [
+      'Health issue that\'s been developing becomes impossible to ignore - address it',
+      'Work project you\'ve perfected reaches completion or you realize it\'s good enough',
+      'Organization system you implemented shows its value through saved time and money',
+      'Relationship imbalance in daily contribution becomes obvious - must address',
+      'Skill you\'ve developed reaches mastery level or you see gaps requiring more work',
+      'Service you\'ve been providing reaches sustainable limit - boundaries needed',
+      'Perfectionism costs you - you finally accept "good enough" and feel relief',
+      'Health routine you started shows visible results in how you feel',
+      'Job evaluation shows your practical value - raise or reality check',
+      'Daily habits reveal themselves as health-supporting or health-destroying - choose different'
+    ]
+  },
+
+  'Libra': {
+    name: 'Full Moon in Libra',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Libra represents partnership, balance, harmony, beauty, fairness, diplomacy, and relating to others. It\'s the urge to connect, to create beauty and peace, to find yourself through relationship with another.',
+    eventMeaning: 'The Full Moon in Libra illuminates relationships, partnerships, and balance. This is culmination of relationship dynamics you\'ve been working on for six months. Partnership needs reach peak visibility. You see clearly whether relationships are balanced or you\'ve lost yourself. Tension between independence and partnership, between self and other, reaches maximum intensity. Fairness and beauty demand attention.',
+    loveRelationships: 'Relationship reaches turning point - deeper commitment or honest ending. Balance between give and take becomes crystal clear. You see whether partnership honors both people equally or requires one person to disappear. Conflict that\'s been avoided can\'t be avoided anymore. Some relationships achieve beautiful balance, others reveal imbalance is unfixable. Marriage, separation, or major relationship decision point.',
+    familyHome: 'Family relationship fairness becomes obvious issue. You see clearly whether family dynamics are reciprocal or exploitative. Home either feels harmonious and beautiful or reveals discord underneath surface peace. Partnership with family member around home reaches resolution. Aesthetic projects at home show results. Peace at home requires honest conflict resolution, not continued avoidance.',
+    businessCareer: 'Business partnerships reach evaluation point - working beautifully or falling apart. Collaboration vs. solo work tension reaches peak. You see whether work relationships are fair and productive. Career in relationship-oriented fields (counseling, mediation, design) reaches professional milestone. Client relationships show their true nature. Your diplomatic skills tested publicly.',
+    moneyFinances: 'Shared financial arrangements with partner reach truth moment. You see clearly whether money is being handled fairly. Business partnership finances become transparent - profit-sharing working or problematic. Investments in beauty, art, or aesthetic projects show financial return or prove costly. Money and relationship fairness directly linked - imbalance in one affects other.',
+    predictions: [
+      'Relationship reaches major decision point - commitment deepens or ends',
+      'Unfair dynamic you\'ve tolerated becomes unbearable - must address',
+      'Business partnership shows profit or reveals one person carrying unfair burden',
+      'Aesthetic project you created receives public appreciation or criticism',
+      'Conflict you\'ve avoided erupts - diplomacy required but honesty more important',
+      'You finally see yourself clearly in mirror of relationship - beautiful or concerning',
+      'Legal matter, contract, or agreement reaches resolution',
+      'Wedding, engagement, or relationship celebration - or separation finalized',
+      'Balance between independence and partnership achieved or revealed as impossible',
+      'Beauty you\'ve created becomes visible - in art, relationships, or environment'
+    ]
+  },
+
+  'Scorpio': {
+    name: 'Full Moon in Scorpio',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Scorpio represents transformation, depth, intensity, power, intimacy, shared resources, death and rebirth, and psychological truth. It\'s the urge to merge completely, to transform, to access hidden power.',
+    eventMeaning: 'The Full Moon in Scorpio brings transformation, power, and deep truth to maximum intensity. This is culmination of psychological work or transformation you started six months ago. Hidden things surface powerfully. Your relationship with power, intimacy, and shared resources reaches crisis and resolution. Death and rebirth cycle completes. Superficiality becomes impossible. Truth can\'t be avoided. Real power emerges or false power exposed.',
+    loveRelationships: 'Relationship intensity peaks - complete intimacy or total ending. Sexual and emotional depth either reaches transcendent union or reveals impossibility of true intimacy. Power struggles come to head. Jealousy, possessiveness, or control issues explode or transform. You see whether relationship can handle your full intensity and depth. Secrets revealed. Relationship either transforms completely or dies. No middle ground.',
+    familyHome: 'Family secrets reach point of revelation. Inheritance matters, shared family resources, or psychological family patterns come to head. Power dynamics in family become crystal clear - who has it, who abuses it, who reclaims it. Family member\'s crisis requires your depth and strength. Home either becomes sanctuary for transformation or scene of power struggles. Truth about family can\'t be hidden.',
+    businessCareer: 'Career power dynamics reach climax. You access your real professional power or see where you\'ve given it away. Work involving transformation, depth, psychology, finance, or investigation reaches major milestone. Power struggle with boss or colleague comes to head. Your psychological insight and intensity either get valued or threatening. Career transformation completes - old identity dies, new emerges.',
+    moneyFinances: 'Major financial transformation completes - inheritance received, debt paid or incurred, investment shows major gain or loss, divorce finances settled. Shared money with partner reaches truth point. Your relationship with money transforms completely - psychological patterns become obvious. Financial power you\'ve built shows itself. Hidden money matters revealed. Financial rebirth after financial death.',
+    predictions: [
+      'Secret revealed that changes everything - in relationship, family, or finances',
+      'Psychological breakthrough after sustained shadow work and therapy',
+      'Inheritance or shared financial matter finally resolved',
+      'Sexual intimacy reaches new depth or reveals relationship lacks real intimacy',
+      'Power you\'ve been building emerges fully - you claim it or lose it',
+      'Transformation you\'ve undergone becomes visible to others - you\'re different now',
+      'Intense emotional or psychological crisis leads to profound rebirth',
+      'Power struggle reaches breaking point - you win, lose, or transcend the game',
+      'Death (metaphorical or literal) completes a cycle - grief and liberation',
+      'Your real power accessed through surrendering false control - paradox understood'
+    ]
+  },
+
+  'Sagittarius': {
+    name: 'Full Moon in Sagittarius',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Sagittarius represents expansion, philosophy, truth-seeking, adventure, higher education, belief systems, foreign cultures, and the quest for meaning. It\'s the urge to grow beyond limits, seek truth, and find life\'s meaning.',
+    eventMeaning: 'The Full Moon in Sagittarius brings truth, meaning, and expansion to peak visibility. This is culmination of educational pursuits, travel plans, or philosophical growth you started six months ago. Your beliefs and worldview reach point of confirmation or crisis. Need for freedom, adventure, and growth reaches maximum intensity. Tension between details and big picture, between local and foreign, becomes obvious. Truth demands to be spoken.',
+    loveRelationships: 'Relationship philosophy and need for freedom reach peak visibility. You see clearly whether partner shares your values and vision for growth. Honesty in relationship reaches maximum - truth spoken or relationship built on lies exposed. Adventure and growth in partnership either happening beautifully or glaringly absent. Cultural or philosophical differences with partner come to head. Commitment vs. freedom tension peaks.',
+    familyHome: 'Family beliefs and values reach point of agreement or irreconcilable difference. You see clearly whether family supports your growth or holds you back. Geographic distance from family may reach resolution - moving far away or returning. Family travel plans culminate. Religious or philosophical differences in family come to head. Home either supports adventure or feels like cage.',
+    businessCareer: 'Educational pursuits reach completion or deadline. Teaching, publishing, or international work reaches major milestone. Career meaning and purpose either confirmed or questioned deeply. Work travel culminates in success or exhaustion. You see whether career offers growth and learning or has become stagnant. Professional philosophy tested publicly. Truth about career path becomes undeniable.',
+    moneyFinances: 'Financial results of educational investment, international ventures, or philosophical pursuits become visible. Tuition paid shows value through degree completion or questions arise about worth. Teaching income or international business shows profit or loss. Optimistic financial risks show results - wisdom or foolishness becomes clear. Generosity returns multiplied or proves unsustainable.',
+    predictions: [
+      'Educational program reaches graduation or you realize it\'s not serving growth',
+      'Travel experience or international opportunity reaches culmination point',
+      'Truth you\'ve been avoiding must be spoken - honesty can\'t be delayed',
+      'Philosophical or religious belief confirmed through experience or shattered by reality',
+      'Teaching or publishing project reaches public visibility',
+      'Relationship requires more freedom and honesty or ends due to restriction and dishonesty',
+      'Risk you took based on faith and optimism shows results - lesson learned either way',
+      'Foreign country or culture calls strongly - relocation decision point',
+      'Meaning and purpose in life becomes crystal clear or reaches crisis requiring new direction',
+      'Growth you\'ve pursued shows visible expansion in consciousness and worldview'
+    ]
+  },
+
+  'Capricorn': {
+    name: 'Full Moon in Capricorn',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Capricorn represents ambition, achievement, responsibility, structure, authority, mastery, and building lasting legacy. It\'s the urge to climb the mountain, master your craft, and build something that endures.',
+    eventMeaning: 'The Full Moon in Capricorn brings career, achievement, and public status to peak visibility. This is culmination of professional efforts you started six months ago. Your ambitions, responsibilities, and relationship with authority reach maximum intensity. Achievement arrives or goals prove unrealistic. Tension between public success and private life peaks. You see what you\'ve actually built vs. what you told yourself you were building. Legacy work shows itself.',
+    loveRelationships: 'Relationship commitment reaches peak visibility - serious partnership or realization it\'s not going anywhere. You see clearly whether relationship has solid foundation or just romantic fantasy. Partner\'s career ambitions may conflict with relationship needs. Age difference or maturity imbalance becomes highlighted issue. Some relationships formalize through marriage or commitment, others end if they lack structure and future. Building together or building apart becomes obvious.',
+    familyHome: 'Family responsibilities reach maximum intensity. Aging parent care, family business matters, or family legacy issues come to head. Relationship with father or authority figures reaches resolution or final break. Home becomes foundation for career success or career demands sacrifice home life. Family expectations about achievement and success reach crisis point. Traditional family structures either support you or constrain you - becomes obvious which.',
+    businessCareer: 'Major career achievement, promotion, recognition, or public milestone. Years of work show results - success or need to change direction. Professional reputation reaches peak visibility - celebrated or criticized publicly. Authority figures either support or block you definitively. Leadership abilities tested at highest level. You see whether current career path leads to mastery and legacy or just exhaustion and emptiness. Public success vs. personal fulfillment tension peaks.',
+    moneyFinances: 'Financial results of career efforts, business ventures, or long-term planning become visible. Major raise, bonus, or financial recognition arrives - or you see current path won\'t provide financial security you need. Business profit or loss becomes undeniable. Long-term investments show results. Financial maturity and discipline either pay off or reveal where you\'ve been unrealistic. Career and money directly linked - truth about earning potential becomes clear.',
+    predictions: [
+      'Major career achievement, promotion, or public recognition arrives',
+      'Professional goal reached after years of effort - celebration earned',
+      'Authority figure makes final decision affecting your career - support or obstacle',
+      'Public visibility increases dramatically - reputation solidifies',
+      'Relationship commitment decision based on solid foundation or lack thereof',
+      'Family responsibility reaches peak - you step up or step away',
+      'Business venture shows profit or reveals need for restructuring',
+      'Legacy work becomes visible - what you\'re building to last becomes clear',
+      'Work-life balance breaks - you must restructure priorities',
+      'Achievement unlocked through discipline and mastery - or you see mountain is wrong one'
+    ]
+  },
+
+  'Aquarius': {
+    name: 'Full Moon in Aquarius',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Aquarius represents innovation, revolution, community, friendship, humanitarian ideals, individuality, technology, and the future. It\'s the urge to be uniquely yourself while contributing to collective progress.',
+    eventMeaning: 'The Full Moon in Aquarius brings authenticity, innovation, and social connections to peak visibility. This is culmination of community involvement or innovation you started six months ago. Your unique individuality and contribution to collective reach maximum expression. Tension between fitting in and standing out peaks. Friendships reach point of deeper connection or ending. You see clearly where you\'ve been authentic vs. conforming. Revolutionary change completes or proves impossible.',
+    loveRelationships: 'Relationship need for freedom and authenticity reaches peak. You see clearly whether partner accepts your uniqueness or requires conformity. Friendship aspect of romance either strong or missing - becomes obvious which. Unconventional relationship structures either working beautifully or creating problems. Need for independence in partnership vs. togetherness reaches maximum tension. Some relationships deepen through accepting each other\'s authentic weirdness, others end if conformity is required.',
+    familyHome: 'Family acceptance of your authentic individuality reaches truth point. You see clearly whether family celebrates your uniqueness or rejects it. Unconventional family arrangements or living situations show results. Home either supports your innovation and freedom or feels restrictive. Community involvement or friendship networks may conflict with family expectations. Distance from family conformity pressure becomes necessary or family evolves to accept you.',
+    businessCareer: 'Innovative work, technology projects, or community ventures reach public visibility. Your unique contributions and ideas either get celebrated or rejected. Networking efforts show results - community support or isolation. Work requiring innovation and authenticity reaches milestone. Freelance or consulting work culminates. You see whether career honors your authentic genius or requires you to fit corporate mold. Contribution to collective progress becomes visible.',
+    moneyFinances: 'Financial results of innovative ventures, technology work, or community projects become clear. Unconventional income streams show profit or prove unstable. Networking for financial opportunities pays off or proves insufficient. Cryptocurrency or innovative investments show gains or losses. Money through being authentic vs. conforming becomes obvious - you see whether being yourself is financially viable. Community financially supports your work or doesn\'t.',
+    predictions: [
+      'Friendship reaches deeper level of authentic connection or ends due to different values',
+      'Innovative project or idea reaches public visibility - celebrated or criticized',
+      'You will choose authenticity over acceptance - consequences and liberation follow',
+      'Community or cause involvement reaches milestone or proves unsatisfying',
+      'Technology project you\'ve worked on launches or fails - lessons either way',
+      'Networking efforts pay off with perfect-fit opportunity or reveal wrong circles',
+      'Unique qualities you\'ve embraced become your greatest professional assets',
+      'Relationship requires more freedom or you realize you need more independence',
+      'Revolutionary change you\'ve sought completes or you see it\'s not coming - adapt',
+      'Vision of future you want becomes crystal clear - you commit fully or pivot completely'
+    ]
+  },
+
+  'Pisces': {
+    name: 'Full Moon in Pisces',
+    frequency: 'Once per year',
+    duration: '~2 weeks',
+    signEnergy: 'Pisces represents spirituality, compassion, imagination, surrender, transcendence, unity, dreams, and dissolution of boundaries. It\'s the urge to merge with something greater, to access infinite compassion and spiritual truth.',
+    eventMeaning: 'The Full Moon in Pisces brings spirituality, compassion, and creative inspiration to peak illumination. This is culmination of spiritual practice, creative projects, or compassionate service you started six months ago. Connection to something greater reaches maximum visibility. Boundaries dissolve completely - transcendent union or confusing merger becomes obvious. Dreams manifest or reveal themselves as illusions. Compassion reaches limit or deepens into unconditional love. Surrender completes.',
+    loveRelationships: 'Spiritual connection in relationship reaches peak visibility - soulmate union or disillusionment. You see clearly whether relationship is transcendent spiritual connection or codependent illusion. Boundaries in relationship either beautifully dissolved for intimacy or dangerously dissolved into loss of self. Compassion and forgiveness reach ultimate test. Fantasy about partner meets reality. Unconditional love or sacrificial martyrdom - becomes obvious which.',
+    familyHome: 'Family healing through forgiveness and compassion reaches culmination or proves impossible. You see clearly whether family wounds can heal or require distance for your wellbeing. Home either becomes spiritual sanctuary or needs to be released. Caring for family member reaches sustainable compassion or unsustainable sacrifice - truth becomes clear. Family secrets surface requiring forgiveness or boundary. Spiritual practice at home shows fruits.',
+    businessCareer: 'Creative or spiritual work reaches public visibility. Artistic projects complete or prove unfinishable. Healing practice, spiritual teaching, or compassionate service work reaches milestone or burnout. You see whether career feeds soul or drains it. Intuition in professional decisions either proven right or revealed as wishful thinking. Purpose-driven work shows meaning or reveals you\'ve been avoiding practical reality. Boundaries at work tested.',
+    moneyFinances: 'Financial results of creative work, healing services, or spiritual pursuits become visible. Money through art, spirituality, or compassion shows viability or proves financially unsustainable. You see clearly whether spiritual approach to money works or whether you\'ve been avoiding financial responsibility. Generosity either returns abundance or proves you gave more than you could afford. Financial illusions dissolve - reality check on money. Trust in divine provision tested.',
+    predictions: [
+      'Spiritual experience or mystical revelation confirms your faith or shatters illusions',
+      'Creative or artistic project reaches completion and public sharing',
+      'Forgiveness you offer creates profound healing or reveals you\'re forgiving the unforgivable',
+      'Compassionate service reaches beautiful fulfillment or complete burnout - boundaries needed',
+      'Dream or vision either manifests in reality or proves to be fantasy requiring release',
+      'Relationship reaches transcendent intimacy or reveals codependence - truth emerges',
+      'Artistic expression receives recognition or you realize you create for yourself, not others',
+      'Surrender to divine flow brings miracles or you see where you\'ve been avoiding responsibility',
+      'Boundary dissolution creates beautiful unity or dangerous merger - wisdom to know difference',
+      'Connection to something greater becomes undeniable foundation or you realize you\'ve been escaping reality'
+    ]
   }
 };
 
