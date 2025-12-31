@@ -1639,6 +1639,264 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Creative work requires both mystical inspiration and innovative honest structure',
       'Integration of awakening and transcendence creates mature conscious spirituality'
     ]
+  },
+
+  // ==========================================
+  // URANUS-PLUTO ASPECTS (All 5)
+  // ==========================================
+
+  'Uranus-Pluto-Conjunction': {
+    name: 'Uranus Conjunction Pluto',
+    frequency: 'Occurs approximately every 110-140 years (last in 1965-1966)',
+    duration: '3-4 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Generational revolutionary transformation and total evolutionary breakthrough! This extremely rare conjunction merges Uranus\'s revolution with Pluto\'s total transformation, creating massive societal upheaval, collective death-rebirth, radical empowerment, and quantum evolutionary leaps. The generation born under this transforms civilization through revolutionary power, radical truth, and total system change. Expect institutional collapse and rebirth, technological transformation, liberation through elimination, and empowerment through awakening. Nothing remains unchanged. Total revolutionary metamorphosis.',
+    loveRelationships: 'Relationship undergoes total revolutionary transformation or unconventional powerful connection emerges. Partnership must evolve or die - no middle ground. Power and freedom both essential. Relationship transformed through radical honesty and authentic empowerment. Unconventional committed depth. Neither control nor instability - revolutionary empowered partnership through total honesty. Transformed liberated love.',
+    familyHome: 'Family power structures revolutionize completely or unconventional family emerges from crisis. Old family patterns die through awakening; authentic family systems born. Family transformation through revolutionary truth-telling. Generational trauma eliminated through radical healing. Home completely transformed or relocated. Family liberation through empowered honesty. Revolutionary family rebirth.',
+    businessCareer: 'Career completely revolutionizes or powerful breakthrough in transformational work! May change careers entirely toward empowered authentic calling. Industry undergoes total revolutionary transformation. Success through radical innovation in transformation sectors. Professional liberation through powerful truth. Empire-building through revolutionary disruption. Career phoenix through awakening. Total professional metamorphosis.',
+    moneyFinances: 'Financial system completely transforms or wealth through revolutionary transformation. Traditional finance revolutionizes. May gain power through innovative transformation industries. Financial liberation through eliminating old money patterns entirely. Investments in revolutionary transformation sectors. Cryptocurrency, disruptive tech, transformation. However, volatile - revolutionary but risky. Total financial metamorphosis possible.',
+    predictions: [
+      'You participate in generational revolutionary transformation of societal power structures',
+      'Career undergoes complete metamorphosis toward authentic empowered calling',
+      'Financial approach revolutionizes - old money patterns die, innovative systems emerge',
+      'Relationship transforms totally through radical honesty or ends to allow authentic rebirth',
+      'You help disrupt and transform outdated systems through revolutionary empowered action',
+      'Family power dynamics undergo total revolutionary healing and restructuring',
+      'Professional success through innovative disruption in transformation industries',
+      'You will embody generational shift toward authentic power through revolutionary truth',
+      'Crisis or upheaval catalyzes total life transformation toward empowered freedom',
+      'Generational mission: transform civilization through revolutionary awakening to authentic power'
+    ]
+  },
+
+  'Uranus-Pluto-Square': {
+    name: 'Uranus Square Pluto',
+    frequency: 'Occurs several times during the long Uranus-Pluto cycle (like 2012-2015)',
+    duration: '2-3 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Revolutionary transformation through crisis and radical pressure! The square creates intense friction between liberation and elimination, forcing evolutionary change through upheaval. Systems break down, power structures crumble, sudden transformations occur. Impulsive revolution or compulsive transformation possible. However, the pressure produces necessary evolution. The challenge: transform systematically not chaotically, revolutionize consciously not destructively, empower authentically not manipulatively. Crisis catalyzes awakening.',
+    loveRelationships: 'Relationship crisis or sudden transformation creates intense pressure. Power struggles combined with freedom needs. May want to break free while relationship needs deep work. Sudden changes or control issues. However, stagnant power dynamics DO need revolutionizing. The key: transform through honest liberation not impulsive escape. Neither dominating nor fleeing - revolutionary empowerment through crisis work. Conscious relationship metamorphosis.',
+    familyHome: 'Family crisis involving power and freedom. Sudden family upheavals or revolutionary family changes. May feel trapped in family dynamics and want sudden freedom. Family power structures break down under pressure. However, toxic family patterns DO need revolutionary transformation. The key: transform family through authentic boundaries not impulsive rebellion. Crisis catalyzes family evolution.',
+    businessCareer: 'Career crisis or sudden revolutionary changes create pressure. Industry disruption, company transformation, or impulsive career change. Power struggles combined with need for freedom. May feel trapped and want sudden exit. However, dead career situations DO need revolutionary transformation. The key: revolutionize career consciously through crisis not impulsively. Strategic career transformation through disruption.',
+    moneyFinances: 'Financial crisis or sudden money transformation. Revolutionary financial changes or disruptive economic forces. May take impulsive financial risks or face sudden losses. However, dysfunctional money patterns DO need revolutionary transformation. The key: transform finances through conscious innovation not panic. Neither reckless revolution nor rigid control - wise financial metamorphosis through crisis.',
+    predictions: [
+      'You face crisis forcing sudden transformation and revolutionary change - ultimately evolutionary',
+      'Power struggle combined with freedom needs teaches authentic empowered liberation',
+      'Financial disruption or crisis ultimately produces revolutionary financial transformation',
+      'Career situation becomes intolerable forcing necessary revolutionary career metamorphosis',
+      'Relationship power dynamics and freedom needs collide requiring total honest transformation',
+      'You will learn that evolutionary change sometimes requires crisis and disruption',
+      'System or structure breaks down suddenly revealing it must transform entirely',
+      'Crisis pressure produces revolutionary awakening to authentic power',
+      'Sudden upheaval forces elimination of what can\'t evolve - makes space for rebirth',
+      'Transformation through accepting revolutionary change as evolutionary necessity'
+    ]
+  },
+
+  'Uranus-Pluto-Trine': {
+    name: 'Uranus Trine Pluto',
+    frequency: 'Occurs several times during the long Uranus-Pluto cycle',
+    duration: '2-3 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Effortless revolutionary transformation and empowered liberation! Awakening and metamorphosis flow naturally together. Revolutionary changes feel destined, transformational breakthroughs happen with grace, and empowered freedom flows easily. Perfect time for radical transformation, innovative depth work, or liberated empowerment. The universe supports evolutionary change. Revolution serves transformation, freedom empowers, and phoenix moments feel natural. Conscious evolution.',
+    loveRelationships: 'Relationship transforms naturally toward empowered freedom! Partnership evolves through authentic honesty and revolutionary depth work easily. Both transformation and liberation flow naturally. Power shared freely, freedom runs deep. Relationship becomes vehicle for mutual empowerment and awakening. Revolutionary intimacy through natural honesty. Transformed liberated partnership.',
+    familyHome: 'Family transformation and liberation flow naturally! Old patterns eliminated easily through awakening. Family power restructures toward authentic freedom. Generational trauma heals through natural revolutionary honesty. Home transforms or relocates successfully. Family empowerment through honest liberation. Revolutionary family healing happens gracefully. Empowered free family.',
+    businessCareer: 'Career revolutionary transformation flows beautifully! Perfect time for major career change, innovative transformation work, or empowered entrepreneurship. Success through disruptive innovation, transformation industries, or revolutionary leadership. Professional liberation through authentic power. Career evolves toward empowered freedom naturally. Revolutionary professional success.',
+    moneyFinances: 'Financial transformation through innovative liberation flows naturally! Wealth through revolutionary industries, transformation sectors, or disruptive innovation. Financial freedom through empowered strategic changes. Investments in breakthrough transformation technologies succeed. Money liberation through eliminating limiting patterns easily. Revolutionary financial empowerment.',
+    predictions: [
+      'Career transforms naturally toward more empowered authentic revolutionary calling',
+      'Financial breakthrough through innovative transformation or disruptive technology',
+      'Relationship evolves beautifully through natural deep honesty creating empowered freedom',
+      'Major life transformation happens gracefully producing liberation and authentic power',
+      'Professional success through revolutionary innovation in transformation fields',
+      'Family healing through natural elimination of toxic patterns and empowered truth',
+      'You eliminate what no longer serves effortlessly through awakening - space fills with power',
+      'Revolutionary changes you make flow easily and produce lasting empowerment',
+      'Crisis resolves naturally through deep revolutionary work producing unexpected freedom',
+      'Evolution feels natural not forced - phoenix liberation through graceful transformation'
+    ]
+  },
+
+  'Uranus-Pluto-Sextile': {
+    name: 'Uranus Sextile Pluto',
+    frequency: 'Occurs several times during the long Uranus-Pluto cycle',
+    duration: '2-3 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Opportunity for empowered revolution through conscious transformation! Doors open to integrate liberation with depth, innovation with elimination, freedom with power. Perfect time to begin revolutionary transformation projects, innovative depth work, or liberating empowerment practices. Small revolutionary transformative steps toward big empowered breakthroughs pay off. Opportunity favors those who combine awakening with shadow work, freedom with depth.',
+    loveRelationships: 'Opportunity to transform relationship through revolutionary honesty if you initiate. Suggest radical truth-telling, explore power dynamics authentically, or introduce liberating depth practices. Can empower partnership through honest revolutionary shadow work if both participate. Small authentic liberating conversations strengthen bond. Building relationship through empowered freedom takes courage but works powerfully.',
+    familyHome: 'Opportunity to revolutionize family dynamics through transformational work. Address family power patterns authentically, introduce revolutionary honesty, or courageously face family shadows. Small steps toward empowered family liberation pay off. Family healing through combining transformation with awakening. Works if you initiate - start the conversation, face the truth.',
+    businessCareer: 'Career opportunities in revolutionary transformation fields if you pursue them. Perfect time to develop disruptive innovation expertise, propose transformational breakthrough project, or network in revolutionary industries. Small strategic career moves toward empowered innovative transformation succeed. Mentorship in powerful transformational field possible.',
+    moneyFinances: 'Financial empowerment through revolutionary transformation work. Research investments in disruptive transformation technologies, innovative depth industries, or revolutionary change sectors. Start income through breakthrough transformation skills. Small amounts invested in revolutionary sectors accumulate powerfully. Building wealth through empowered innovative transformation.',
+    predictions: [
+      'Career opportunity in transformational innovation for those developing revolutionary expertise',
+      'Investment in disruptive transformation sector you research grows substantially',
+      'Relationship strengthens through revolutionary honesty or depth work you courageously initiate',
+      'Transformational breakthrough project combining innovation with depth you start succeeds',
+      'Family healing through addressing power dynamics or shadows you courageously raise',
+      'You will learn that conscious revolutionary transformation produces lasting empowerment',
+      'Mentor in powerful transformational innovation field offers guidance if you approach authentically',
+      'System or pattern you consciously revolutionize transforms powerfully',
+      'Crisis or shadow you face with revolutionary honesty produces unexpected liberation',
+      'Opportunity to empower life through combining awakening truth with transformational depth'
+    ]
+  },
+
+  'Uranus-Pluto-Opposition': {
+    name: 'Uranus Opposition Pluto',
+    frequency: 'Occurs once during the long Uranus-Pluto cycle',
+    duration: '2-3 years (with retrograde periods)',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Maximum tension between revolution and transformation, freedom and power, awakening and depth. Pulled between sudden change and deep process, liberation and elimination, breakthrough and metamorphosis. Must integrate both - neither impulsive rebellion nor controlling transformation works. The opposition demands you transform THROUGH awakening, empower THROUGH freedom, revolutionize THROUGH depth. True liberation requires shadow work. Real power needs authenticity. Integration creates conscious evolution.',
+    loveRelationships: 'Relationship tension between revolutionary freedom and transformational depth. May want sudden liberation while partner wants deep work (or vice versa). Pulled between breaking free and transforming together. Power dynamics conflict with freedom needs. Must balance both. Integration: revolutionize relationship through deep honest work. Neither impulsive escape nor controlling transformation - conscious empowered evolution.',
+    familyHome: 'Family tension between revolutionary independence and transformational healing. May want sudden freedom from family while deep work needed. Torn between liberation and facing family shadows. Power struggles combined with freedom needs. Must honor both. Integration: transform family through authentic liberation. Neither escaping shadows nor trapped in control - empowered honest family evolution.',
+    businessCareer: 'Career tension between revolutionary change and transformational depth. Want sudden career freedom while deep professional transformation needed. Pulled between disruptive innovation and strategic depth work. Must balance breakthrough with power. Integration: revolutionize career through transformational mastery. Neither impulsive change nor controlling preservation - strategic authentic career evolution.',
+    moneyFinances: 'Financial tension between revolutionary freedom and transformational power. Want sudden financial liberation while deep money work needed. Torn between disruptive financial innovation and strategic wealth transformation. Must balance both. Integration: revolutionize finances through transforming money psychology. Neither reckless freedom nor rigid control - empowered conscious financial evolution.',
+    predictions: [
+      'You face choice between sudden change and deep transformation - both needed, integrate',
+      'Relationship requires both revolutionary honesty and transformational depth work',
+      'Career balancing innovative breakthrough with strategic transformational mastery needed',
+      'Financial decision between disruptive innovation and transformational depth resolved through wisdom',
+      'Power struggle with authority while seeking freedom teaches authentic empowered liberation',
+      'You will learn that true revolution requires transformation and real power needs freedom',
+      'Family situation demands both liberating truth and transformational shadow work',
+      'Crisis reveals that neither escape nor control works - conscious evolution needed',
+      'Sudden awakening must integrate with deep transformation for lasting change',
+      'Integration of freedom and power, revolution and depth, creates conscious empowered evolution'
+    ]
+  },
+
+  // ==========================================
+  // NEPTUNE-PLUTO ASPECTS (All 5)
+  // ==========================================
+
+  'Neptune-Pluto-Sextile': {
+    name: 'Neptune Sextile Pluto',
+    frequency: 'Occurs for extended periods (like 1940s-1980s, 2025-2130s)',
+    duration: 'Active for decades as background generational influence',
+    planet1Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Generational opportunity for spiritual transformation through conscious action! This long-duration aspect creates background potential for integrating transcendence with depth, spirituality with power, compassion with transformation. Generations born under this have natural ability to transform spiritually and spiritualize transformation. Opportunity to heal collective through spiritual depth work, transform consciousness, or empower compassion. Must be activated consciously through individual initiative.',
+    loveRelationships: 'Opportunity for deep spiritual intimacy if you both commit to depth work. Relationship can access both mystical transcendence and transformational power through conscious practice. Suggest spiritual shadow work together, couples therapy with spiritual dimension, or deep soulful vulnerability practices. Building spiritually transformative partnership takes initiative but taps generational potential.',
+    familyHome: 'Opportunity to heal family karma through spiritual depth work. Generational family patterns can transform through combining spirituality with shadow work. Start family spiritual healing practices, address ancestral trauma with compassion, or create space for transcendent family intimacy. Transformational spiritual family healing possible through conscious commitment.',
+    businessCareer: 'Career in transformational spirituality or spiritual transformation work has generational support. Perfect for depth psychology with spiritual awareness, healing work combining shadow integration with divine connection, or compassionate transformation industries. Success through spiritual depth work. Must activate potential through developing expertise and initiative.',
+    moneyFinances: 'Financial abundance through spiritual transformation work possible. Money through healing, depth psychology, spiritual counseling, or transformational spirituality. Investments in spiritual healing or consciousness transformation sectors. Must activate generational potential through developing skills and taking action. Wealth through transformational spiritual service.',
+    predictions: [
+      'You can develop natural talent for spiritual depth work - psychology meets spirituality',
+      'Career in transformational healing or spiritual psychology taps generational potential',
+      'Relationship reaches transcendent depths through shadow work you both commit to',
+      'Family generational healing through spiritual depth practices you initiate',
+      'Financial abundance flows through developing spiritual transformation expertise',
+      'You bridge spirituality and psychology, transcendence and depth, for collective healing',
+      'Spiritual practice combined with shadow work you pursue produces profound transformation',
+      'Generational gift: ability to transform compassionately and spiritualize power',
+      'Professional success through combining spiritual wisdom with transformational depth',
+      'You activate generational potential through consciously developing spiritual depth skills'
+    ]
+  },
+
+  'Neptune-Pluto-Conjunction': {
+    name: 'Neptune Conjunction Pluto',
+    frequency: 'Occurs approximately every 492 years (last in 1890s)',
+    duration: 'Active for 10-15 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Generational spiritual transformation and mystical metamorphosis! This extremely rare conjunction represents massive collective consciousness evolution, spiritual death-rebirth of civilization, and transformation of collective mysticism. The generation embodies fusion of transcendence and power, compassion and depth, spirituality and transformation. Collective consciousness undergoes total spiritual regeneration. Mystical empowerment. Divine transformation.',
+    loveRelationships: 'Generational capacity for transcendent transformational love. Relationships can access profound spiritual depth and transformational intimacy. Love becomes vehicle for both divine connection and psychological healing. Spiritual soulmate bonds with transformational power. Deep mystical union through shadow work. Transcendent empowered love.',
+    familyHome: 'Generational family consciousness transformation. Family karma can undergo profound spiritual healing. Ancestral patterns transformed through divine compassion. Family becomes vehicle for collective consciousness evolution. Home as sacred space for transformational spirituality. Mystical family rebirth.',
+    businessCareer: 'Generational talent for transformational spiritual work. Career success through depth psychology, spiritual healing, consciousness transformation, or mystical arts. Professional mission involves transforming collective consciousness. Work as vehicle for spiritual evolution. Empowered spiritual service.',
+    moneyFinances: 'Generational relationship with money transforms spiritually. Wealth consciousness evolves toward spiritual values and transformational service. Money as energy for consciousness transformation. Financial power through spiritual depth work. Abundance through transformational spiritual service.',
+    predictions: [
+      'You embody generational capacity for profound spiritual transformation',
+      'Career in consciousness transformation or spiritual depth work is life purpose',
+      'Relationship accesses transcendent depths through transformational intimacy',
+      'You participate in collective consciousness evolution through spiritual depth work',
+      'Family generational karma transformed through spiritual shadow integration',
+      'Financial abundance through serving collective consciousness transformation',
+      'You bridge mysticism and psychology for collective spiritual evolution',
+      'Generational mission: transform civilization consciousness through spiritual depth',
+      'Professional success through empowered compassionate transformational work',
+      'You activate rare generational gift: mystical transformation power'
+    ]
+  },
+
+  'Neptune-Pluto-Square': {
+    name: 'Neptune Square Pluto',
+    frequency: 'Rare - occurs infrequently in the long cycle',
+    duration: 'Active for several years when it occurs',
+    planet1Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Spiritual transformation through crisis and collective shadow confrontation. Tension between transcendence and depth, spiritual ideals and transformational reality, compassion and power. Collective spiritual illusions surface for transformation. May experience spiritual disillusionment serving deeper awakening. The challenge: transform spirituality consciously, spiritualize transformation authentically. Crisis refines collective consciousness.',
+    loveRelationships: 'Relationship crisis around spiritual depth or transformational spirituality. Power struggles combined with spiritual confusion. Must transform spiritual idealization while deepening authentic mystical connection. Crisis serves deeper spiritual intimacy. Neither spiritual bypassing nor cynical depth - conscious transformational spirituality in partnership.',
+    familyHome: 'Family spiritual crisis or transformational pressure on family consciousness. Generational spiritual illusions surface. Family karma reaches crisis requiring deep spiritual transformation. Must face family shadows with compassion. Crisis catalyzes family spiritual evolution.',
+    businessCareer: 'Career crisis in spiritual or transformational work or spiritual confusion about power. Professional spiritual ideals challenged by transformational reality. Must ground spiritual work in authentic depth. Crisis refines spiritual professional mission.',
+    moneyFinances: 'Financial spiritual illusions or transformational money crisis. Spiritual abundance beliefs challenged by power realities. Must transform money consciousness through depth work. Crisis serves financial spiritual maturation.',
+    predictions: [
+      'You face spiritual crisis requiring transformation of consciousness',
+      'Collective spiritual illusions surface for healing transformation',
+      'Career spiritual ideals tested by transformational reality - integration needed',
+      'Relationship spiritual bypassing must transform into authentic depth work',
+      'Financial spiritual beliefs require grounding in transformational reality',
+      'You learn that true spirituality requires shadow work and real power needs compassion',
+      'Family spiritual illusions surface requiring honest transformational work',
+      'Crisis serves collective consciousness evolution through spiritual transformation',
+      'Spiritual disillusionment ultimately produces more authentic mystical depth',
+      'Transformation of spirituality through crisis creates conscious collective evolution'
+    ]
+  },
+
+  'Neptune-Pluto-Trine': {
+    name: 'Neptune Trine Pluto',
+    frequency: 'Rare - occurs infrequently in the long cycle',
+    duration: 'Active for several years when it occurs',
+    planet1Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Effortless spiritual transformation and mystical empowerment! Transcendence and depth flow naturally together. Collective consciousness evolution happens with grace. Spiritual metamorphosis feels destined. Perfect time for transformational spirituality, depth mysticism, or empowered compassion. The universe supports consciousness evolution. Spirituality transforms naturally, power spiritualizes, and collective healing flows.',
+    loveRelationships: 'Relationship spiritually transforms naturally! Partnership deepens through mystical intimacy and shadow work that flows easily. Transcendent love empowered by psychological depth. Spiritual connection strengthened by transformational honesty. Soulmate depths through natural authentic vulnerability. Mystically empowered love.',
+    familyHome: 'Family consciousness evolution flows naturally! Generational karma heals through spiritual depth work that feels right. Family transforms spiritually through compassionate shadow integration. Ancestral patterns released through divine grace. Home becomes sacred transformational space naturally. Spiritually empowered family.',
+    businessCareer: 'Career in transformational spirituality flows beautifully! Success through depth psychology, spiritual healing, consciousness transformation work. Professional mission of collective evolution manifests naturally. Recognition for authentic spiritual depth work. Career as vehicle for mystical empowerment. Abundant spiritual service.',
+    moneyFinances: 'Financial abundance through transformational spiritual work flows naturally! Wealth through consciousness evolution, spiritual depth work, or transformational healing. Money serves spiritual transformation mission. Financial empowerment through mystical service. Abundant spiritual prosperity.',
+    predictions: [
+      'Spiritual transformation happens naturally producing profound consciousness evolution',
+      'Career in transformational spirituality succeeds beautifully serving collective healing',
+      'Relationship reaches transcendent depths through shadow work flowing easily',
+      'Family generational healing through spiritual transformation happens gracefully',
+      'Financial abundance flows through authentic transformational spiritual service',
+      'You facilitate collective consciousness evolution through natural spiritual depth',
+      'Spiritual practice and shadow work integrate effortlessly producing empowerment',
+      'Professional success through authentic mystical transformation work',
+      'Collective healing happens through your spiritually empowered transformational work',
+      'Grace flows through transformation - mystical metamorphosis feels natural and destined'
+    ]
+  },
+
+  'Neptune-Pluto-Opposition': {
+    name: 'Neptune Opposition Pluto',
+    frequency: 'Extremely rare in the long cycle',
+    duration: 'Active for several years when it occurs',
+    planet1Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Maximum tension between spirituality and transformation, transcendence and depth, compassion and power. Collective consciousness torn between mystical dissolution and transformational empowerment. Must integrate both - neither spiritual bypassing nor psychological reductionism works. The opposition demands spirituality grounded in depth and transformation infused with compassion. Integration creates conscious collective evolution.',
+    loveRelationships: 'Relationship tension between spiritual idealization and transformational reality. Must balance transcendent connection with psychological depth work. Neither spiritual bypassing nor cynical analysis - integration of mystical love with honest shadow work. Conscious spiritually empowered partnership.',
+    familyHome: 'Family tension between spiritual unity and transformational truth. Must honor both compassionate connection and deep healing work. Neither spiritual denial nor destructive confrontation - wise family evolution through spiritual depth integration.',
+    businessCareer: 'Career tension between spiritual service and transformational power. Must balance mystical mission with authentic empowerment. Neither spiritual martyrdom nor ruthless transformation - integration of compassionate service with empowered depth work.',
+    moneyFinances: 'Financial tension between spiritual abundance consciousness and transformational money reality. Must integrate divine trust with deep money psychology work. Neither spiritual bypassing nor materialist reduction - wise spiritual financial transformation.',
+    predictions: [
+      'You face choice between spiritual ideals and transformational depth - integrate both',
+      'Collective consciousness requires both transcendent compassion and honest shadow work',
+      'Career balancing spiritual service with authentic transformational power needed',
+      'Relationship requiring both mystical connection and psychological depth work',
+      'You will learn that true spirituality requires depth and real transformation needs compassion',
+      'Financial approach integrating spiritual abundance with transformational money psychology',
+      'Family healing requiring both divine love and honest transformational work',
+      'Collective evolution through integrating spirituality and psychology',
+      'Spiritual maturation through accepting shadow and psychological depth through divine grace',
+      'Integration of transcendence and transformation creates conscious collective spiritual evolution'
+    ]
   }
 
 };
