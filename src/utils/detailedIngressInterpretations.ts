@@ -1229,6 +1229,310 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Mystical or spiritual experience connects you to something greater',
       'You learn that sometimes not knowing and trusting is wiser than controlling'
     ]
+  },
+
+  // ============================================================================
+  // JUPITER INGRESSES - Growth, expansion, wisdom (12-13 months per sign)
+  // ============================================================================
+
+  'Jupiter-Aries': {
+    name: 'Jupiter Ingress Aries',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Aries represents new beginnings, courage, independence, leadership, initiative, and the pioneering spirit. It\'s the spark of self-assertion, the drive to be first, and pure initiating force.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Aries brings bold expansion, courageous growth, and pioneering opportunities. This year favors starting new ventures, taking leadership risks, independent growth, and expanding through courage. Confidence increases. Opportunities come through initiative and boldness. Perfect time to launch new projects, expand independently, take calculated risks, or lead others. Growth comes from being first, bold, and self-reliant.',
+    loveRelationships: 'Romantic confidence and adventurous love opportunities expand. Single? Bold pursuit of romance brings luck - be the first to make a move. Existing relationships grow through more adventure, independence, and honesty. Attraction to confident, independent partners. Some relationships need more freedom and excitement to thrive. Honest, direct communication about relationship growth. Romance expands through courage and taking initiative.',
+    familyHome: 'Family grows through independent pursuits and leadership. Good year for asserting yourself in family, taking leadership role, or expanding family through birth or new members. Home may expand or move to larger space. Family adventures and physical activities strengthen bonds. Independence from family increases positively. Support family members\' individual growth. Optimistic, active family year.',
+    businessCareer: 'Major career expansion through bold initiatives and leadership. Excellent year for entrepreneurship, starting business, taking on leadership role, or pioneering new professional direction. Opportunities come through courage and initiative. Your confidence and vision attract success. Good for competitive fields, sales, athletics, or any work requiring boldness. Take calculated career risks - luck favors the brave. Expand independently.',
+    moneyFinances: 'Financial growth through bold action and independent ventures. Good year for starting new income streams, investing in yourself, entrepreneurship, or taking calculated financial risks. Money expands through initiative, leadership, sales, or competitive fields. Spending on adventure, self-development, or what builds confidence brings returns. Financial optimism strong - be bold but verify opportunities. Wealth grows through courage and action.',
+    predictions: [
+      'Major new beginning or venture succeeds beyond expectations through your courage',
+      'Leadership opportunity where your boldness and vision are exactly what\'s needed',
+      'Entrepreneurial or independent project launches successfully',
+      'Romantic adventure or bold pursuit leads to significant relationship',
+      'Physical or athletic goal achieved through confident, persistent effort',
+      'Financial opportunity through taking initiative others hesitated on',
+      'Confidence breakthrough - you become bolder and more self-assured',
+      'Travel or adventure expands your worldview significantly',
+      'Competitive situation where your courage gives you winning edge',
+      'You learn that growth comes from being bold, independent, and taking initiative'
+    ]
+  },
+
+  'Jupiter-Taurus': {
+    name: 'Jupiter Ingress Taurus',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Taurus represents stability, sensory pleasure, material security, patience, persistence, comfort, and tangible beauty. It\'s the energy of grounding, enjoying physical reality, and building lasting value.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Taurus brings tangible abundance, steady growth, and material expansion. This year favors building wealth, enjoying sensory pleasures, creating beauty, and expanding security. Growth comes slowly but solidly. Perfect time for financial growth, property investment, building lasting value, or developing skills with tangible results. Patience rewarded. Quality over quantity.',
+    loveRelationships: 'Relationships expand through commitment, stability, and sensory enjoyment. Love grows more grounded and physical. Good year for deepening commitment, marriage, or building future together. Attraction to stable, reliable, sensually oriented partners. Romance through quality time, physical pleasure, good food, nature, and beautiful experiences. Some relationships stabilize into long-term security. Love expands through patience and consistency.',
+    familyHome: 'Major year for home expansion, property investment, or family financial growth. Buy property, renovate extensively, beautify home significantly, or expand living space. Family wealth and security increase. Family time through enjoying meals together, creating comfort, or shared pleasures. Good year for family financial planning or building family legacy. Home becomes more beautiful and comfortable. Invest in lasting family value.',
+    businessCareer: 'Career growth through demonstrated value, quality work, and building tangible results. Excellent year for work in finance, real estate, agriculture, food, art, luxury goods, or any field producing material value. Raises and financial recognition for proven worth. Building business slowly and steadily succeeds better than rushing. Professional reputation for reliability and quality grows. Patient career development pays off.',
+    moneyFinances: 'Peak year for financial expansion and wealth building. Money grows through patient investment, quality work, proven value, or building tangible assets. Excellent for real estate investment, starting savings, building multiple income streams slowly, or increasing prices based on quality. Spending on lasting quality, comfort, and beauty brings satisfaction. Financial security expands significantly. Build wealth steadily and enjoy prosperity.',
+    predictions: [
+      'Major financial growth or windfall through patient, quality work',
+      'Property investment or home purchase increases security significantly',
+      'Relationship deepens into committed partnership with long-term security',
+      'Raise or financial recognition for your proven value and consistent quality',
+      'Sensory pleasure or beautiful purchase brings lasting satisfaction',
+      'Savings or investment account grows substantially through patient accumulation',
+      'Quality of life improves through enjoying pleasures and building comfort',
+      'Artistic or creative work gains financial value and recognition',
+      'Nature experience or outdoor investment brings peace and growth',
+      'You learn that slow, steady, quality-focused growth creates real abundance'
+    ]
+  },
+
+  'Jupiter-Gemini': {
+    name: 'Jupiter Ingress Gemini',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Gemini represents curiosity, versatility, communication, mental quickness, learning, connections, and seeing multiple perspectives. It\'s the energy of questions, conversations, and information exchange.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Gemini brings intellectual expansion, communication growth, and learning opportunities. This year favors education, writing, networking, teaching, and mental development. Opportunities through connections and information. Perfect time for taking classes, writing book, expanding social network, learning new skills, or teaching what you know. Mind expands. Multiple opportunities arise. Variety brings growth.',
+    loveRelationships: 'Romance expands through communication, intellectual connection, and variety. Meet partners through classes, social events, networking, or local activities. Attraction to intelligent, communicative, versatile partners. Existing relationships grow through more conversation, learning together, variety in activities, and mental stimulation. Some explore multiple romantic options or open relationship structures. Love grows through shared ideas and communication.',
+    familyHome: 'Family communication expands and improves. Excellent year for family education, learning together, short family trips, or strengthening sibling relationships. Home may become communication hub or study space. Local community connections increase. Family time through conversation, games, learning, and varied activities. Some families expand through welcoming relatives or guests. Growth through family intellectual stimulation.',
+    businessCareer: 'Major career expansion through communication, networking, education, or versatile skills. Excellent year for writing, teaching, media, sales, consulting, or any communication-based work. Multiple career opportunities or projects simultaneously. Professional education and skill development pay off. Networking opens significant doors. Speaking, presenting, or publishing brings recognition. Versatility and quick learning advance career.',
+    moneyFinances: 'Financial growth through communication, teaching, writing, or multiple income streams. Good year for freelance work, consulting, tutoring, sales, or any money-making using your voice and ideas. Diversified income sources work better than single focus. Spending on education, communication tools, books, and learning brings returns. Money flows through networking, information, and connections. Variety in financial approaches brings abundance.',
+    predictions: [
+      'Educational opportunity or class significantly expands your knowledge and opportunities',
+      'Writing project, book, or blog succeeds and reaches broader audience',
+      'Networking connection leads to major professional or romantic opportunity',
+      'Multiple opportunities arise simultaneously - your versatility handles them all',
+      'Teaching or sharing knowledge creates unexpected income or recognition',
+      'Short trip or local exploration opens new doors and connections',
+      'Communication skill you develop becomes major professional asset',
+      'Sibling or neighbor connection brings significant benefit or support',
+      'Learning new language, skill, or subject opens entirely new possibilities',
+      'You learn that growth comes through communication, learning, and diverse connections'
+    ]
+  },
+
+  'Jupiter-Cancer': {
+    name: 'Jupiter Ingress Cancer',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months (Jupiter is exalted in Cancer)',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Cancer represents nurturing, emotions, safety, family, roots, intuition, and the protective instinct. It\'s the energy of home, emotional security, and caring for yourself and others.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE (Jupiter Exalted): Jupiter in Cancer brings abundant emotional growth, family expansion, and home blessings. This is Jupiter at its most nurturing and protective. This year favors family growth, home improvement, emotional healing, creating security, and nurturing yourself and others. Luck comes through family, home, and emotional connections. Perfect time for buying property, family expansion, emotional development, or creating sanctuary. Growth through care and protection.',
+    loveRelationships: 'Relationships expand through emotional depth, nurturing, and creating home together. Love becomes more caring, protective, and family-oriented. Good year for moving in together, marriage, starting family, or deepening emotional intimacy. Attraction to nurturing, family-minded, emotionally available partners. Existing relationships grow through more vulnerability, creating home, or planning family future. Love expands through emotional security and care.',
+    familyHome: 'Peak year for family expansion and home growth. Excellent for buying property, major renovations, moving to larger home, or welcoming new family members (birth, adoption, marriage). Family relationships deepen and heal. Home becomes beautiful sanctuary. Family wealth or inheritance possible. Emotional bonds with family strengthen. Perfect time for creating family traditions or establishing roots. Home and family are major sources of joy and growth.',
+    businessCareer: 'Career expansion through nurturing professions, family business, real estate, food service, or creating emotionally supportive work environment. Working from home or family-oriented business thrive. Emotional intelligence advances career. Building professional family or supportive team succeeds. Good for work in childcare, counseling, hospitality, or care professions. Workplace feels more like family. Career security increases.',
+    moneyFinances: 'Major financial growth through real estate, family business, home-based work, or building security. Good year for property investment, saving for home, family financial planning, or building nest egg. Money expands through nurturing work, emotional intelligence, or caring services. Spending on home, family, and emotional security brings returns and satisfaction. Family financial support possible. Build wealth through protecting and nurturing resources.',
+    predictions: [
+      'Property purchase or major home improvement increases security and satisfaction significantly',
+      'Family expansion through birth, adoption, marriage, or welcoming new members',
+      'Emotional healing and growth transforms your life profoundly',
+      'Relationship commitment deepens into creating home and family together',
+      'Financial windfall or growth through real estate or family connections',
+      'Home becomes beautiful, comfortable sanctuary that nurtures you',
+      'Family relationships heal and deepen through increased caring and understanding',
+      'Work-from-home opportunity or family business succeeds',
+      'Emotional security and self-nurturing practices transform your wellbeing',
+      'You learn that growth comes through nurturing yourself and others, creating roots and security'
+    ]
+  },
+
+  'Jupiter-Leo': {
+    name: 'Jupiter Ingress Leo',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, romance, and radiant presence. It\'s the energy of shining brightly, creating from the heart, and celebrating life with enthusiasm.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Leo brings creative expansion, confidence growth, and joyful opportunities. This year favors self-expression, creative projects, romance, performance, and shining your light boldly. Luck comes through authenticity and creative courage. Perfect time for artistic pursuits, entertainment ventures, romantic adventures, or pursuing joy and passion. Confidence soars. Growth through expressing your authentic self.',
+    loveRelationships: 'Peak romance year! Love expands dramatically through joy, passion, and creative expression. Single? You\'re magnetic and confident - attract admirers easily. Dramatic romantic opportunities and grand gestures. Good year for engagement, lavish weddings, or passionate romantic adventures. Existing relationships reignite through more play, romance, and mutual celebration. Express love boldly and generously. Romance as theater - make it grand and memorable.',
+    familyHome: 'Family joy and pride increase. Excellent year for family celebrations, parties, creative family projects, or celebrating family achievements. Children (yours or others\') bring special joy and growth. Home becomes stage for entertaining and self-expression. Decorate boldly and create impressive, beautiful space. Family pride and loyalty strengthen. Lead family activities with warmth and generosity. Growth through family fun and celebration.',
+    businessCareer: 'Major career expansion through creative work, performance, leadership, or self-expression. Excellent year for entertainment, arts, teaching, leadership positions, working with children, or any field requiring charisma and confidence. Showcase your talents boldly - recognition and appreciation likely. Good for starting creative business, taking center stage professionally, or leading with warmth and vision. Confidence attracts success. Shine professionally.',
+    moneyFinances: 'Financial expansion through creative work, performance, leadership, or confident self-expression. Good year for increasing income through showcasing talents, charging what you\'re worth confidently, or starting creative ventures. Spending on creative expression, entertainment, luxury, or what makes you feel special brings joy but watch excess. Financial confidence strong - invest in yourself. Money through shining your unique gifts.',
+    predictions: [
+      'Creative project or performance receives major recognition and success',
+      'Romantic opportunity or relationship that feels magical and destined',
+      'Leadership role where your confidence and charisma shine and succeed',
+      'Financial opportunity through showcasing your creative talents boldly',
+      'Child or creative endeavor brings unexpected joy and fulfillment',
+      'Confidence transformation - you become bolder, more authentic, more radiant',
+      'Entertainment or social event where you shine and attract positive attention',
+      'Generous creative or romantic gesture creates deep appreciation and connection',
+      'Artistic or self-expression breakthrough leads to new opportunities',
+      'You learn that growth comes through confident, authentic, joyful self-expression'
+    ]
+  },
+
+  'Jupiter-Virgo': {
+    name: 'Jupiter Ingress Virgo',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Virgo represents refinement, service, health, organization, discernment, and practical improvement. It\'s the energy of making things better through detailed attention and skillful craft.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Virgo brings growth through improvement, skill development, health focus, and practical service. This year favors refining skills, improving health, organizing life systems, and serving others skillfully. Expansion comes through attention to detail and quality work. Perfect time for health improvements, skill mastery, organizing projects, or developing expertise. Growth through precision and service.',
+    loveRelationships: 'Relationships grow through practical improvements, health and wellness together, and useful service to each other. Love expands by making relationship work better daily - better communication systems, healthier routines, practical problem-solving. Attraction to competent, health-conscious, helpful partners. Existing relationships improve through addressing practical issues and establishing beneficial routines. Love through acts of service and attention to details.',
+    familyHome: 'Home and family improve through organization, health focus, and practical service. Excellent year for home organization projects, family health improvements, creating efficient systems, or helping family members practically. Family wellness routines benefit everyone. Home becomes more efficient, healthy, and beautifully organized. Family growth through useful assistance to each other. Practical improvements create lasting family benefit.',
+    businessCareer: 'Career expansion through skill development, quality work, practical expertise, or service excellence. Excellent year for healthcare, crafts, editing, analytics, quality control, organization, or service professions. Professional development through education and skill refinement pays off significantly. Recognition for competence and attention to detail. Build career through being the best at what you do. Helpful service advances professional standing.',
+    moneyFinances: 'Financial growth through skilled work, practical service, health professions, or improving financial systems. Good year for organizing finances, cutting waste, budgeting efficiently, or earning through expertise and competence. Spending on health, quality tools, professional development, or practical improvements brings returns. Money expands through skillful work and wise money management. Build wealth through quality and efficiency.',
+    predictions: [
+      'Health improvement or wellness routine significantly enhances your quality of life',
+      'Skill development or professional training opens major career opportunities',
+      'Organization or system you implement creates efficiency and growth',
+      'Service or help you provide creates unexpectedly large positive impact',
+      'Financial organization or budget refinement increases savings significantly',
+      'Work quality or expertise gets recognized with raise or promotion',
+      'Home organization project transforms your daily life for the better',
+      'Practical improvement in relationship strengthens bond substantially',
+      'Health professional or wellness practice creates breakthrough in wellbeing',
+      'You learn that growth comes through skill refinement, practical improvement, and quality service'
+    ]
+  },
+
+  'Jupiter-Libra': {
+    name: 'Jupiter Ingress Libra',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Libra represents balance, partnership, beauty, harmony, diplomacy, and fairness. It\'s the energy of relationships, aesthetics, and seeking equilibrium through connection with others.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Libra brings relationship expansion, partnership opportunities, and aesthetic growth. This year favors partnerships (romantic and business), marriage, collaboration, creating beauty, and seeking balance. Luck comes through others and cooperation. Perfect time for commitment, forming partnerships, beautifying life, diplomatic ventures, or legal matters. Growth through relationships and balance.',
+    loveRelationships: 'Peak year for romance, partnership, and commitment! Single? Major romantic opportunities, possibly marriage-quality partnerships. Existing relationships expand through commitment, marriage, or deepening partnership. Attraction to charming, balanced, aesthetically aware partners. Romance becomes more harmonious, balanced, and aesthetically beautiful. Good year for weddings, relationship counseling, or improving partnership dynamics. Love expands through equality and mutual growth.',
+    familyHome: 'Family harmony and balance increase. Excellent year for family partnerships, mediating family relationships diplomatically, or beautifying home aesthetically. Family weddings or commitment celebrations. Home becomes showcase of beauty, balance, and peaceful atmosphere. Family relationships improve through fairness, consideration, and diplomacy. Family growth through partnership and collaboration. Create more beauty and harmony at home.',
+    businessCareer: 'Major career expansion through partnerships, collaboration, diplomacy, or aesthetic work. Excellent year for law, counseling, design, fashion, beauty, mediation, sales through charm, or relationship-oriented fields. Form beneficial professional partnerships or collaborations. Client relationships expand significantly. Work requiring fairness, balance, or beauty thrives. Networking and diplomatic skills advance career. Partnership opportunities are golden.',
+    moneyFinances: 'Financial growth through partnerships, collaborative ventures, beauty work, law, counseling, or balanced money management. Good year for partnership business ventures, marriage financially benefiting you, or earning through aesthetic sense and relationship skills. Spending on beauty, art, fashion, or relationship harmony brings satisfaction. Partnership income or shared financial growth. Money through charm, fairness, and collaboration.',
+    predictions: [
+      'Major romantic partnership or marriage opportunity that transforms your life',
+      'Business partnership or collaboration creates significant financial success',
+      'Aesthetic project, design work, or beauty venture receives recognition and profit',
+      'Legal matter or contract negotiation resolves favorably through fairness',
+      'Home beautification or decoration creates harmonious, impressive space',
+      'Relationship improves dramatically through counseling or mutual commitment to balance',
+      'Social network or partnership circle expands your opportunities significantly',
+      'Diplomatic skill or mediation you provide creates major positive outcome',
+      'Wedding or commitment celebration (yours or someone close) brings joy',
+      'You learn that growth comes through partnership, balance, beauty, and cooperation with others'
+    ]
+  },
+
+  'Jupiter-Scorpio': {
+    name: 'Jupiter Ingress Scorpio',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Scorpio represents depth, transformation, power, intimacy, truth, and regeneration. It\'s the energy of diving deep, facing shadows, and emerging transformed through intensity.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Scorpio brings transformative expansion, deep growth, and power development. This year favors psychological growth, intimate connections, financial investments, facing shadows, and personal transformation. Growth through depth and intensity. Perfect time for therapy, research, investments, intimate bonding, or profound personal change. Luck comes through facing truth and embracing transformation.',
+    loveRelationships: 'Relationships expand and transform through deep intimacy, emotional honesty, and facing relationship shadows. Love becomes more intense, passionate, and profoundly bonding. Good year for deepening commitment, transforming relationship through honesty, or healing relationship wounds. Attraction to deep, intense, emotionally powerful partners. Sexual intimacy reaches new depths. Some relationships transform completely or end to make room for deeper connections. Growth through emotional truth.',
+    familyHome: 'Family transformation and deep healing. Excellent year for addressing family shadows, secrets, or hidden dynamics honestly. Family financial matters like inheritance or shared resources expand. Deep family therapy or healing conversations transform relationships. Home renovation or complete transformation. Uncover family history or roots. Family growth through facing difficult truths together. Emotional depth heals family patterns.',
+    businessCareer: 'Career expansion through depth work, transformation, research, or power development. Excellent year for psychology, research, investigation, crisis management, surgery, finance (especially investments), or depth consulting. Uncover hidden professional opportunities or information. Career may transform completely. Building professional power and influence. Work requiring deep focus and transformation thrives. Strategic career power moves succeed.',
+    moneyFinances: 'Major financial expansion through investments, shared resources, managing others\' money, inheritance, or transforming financial situation completely. Excellent year for strategic investments, dealing with debt or taxes successfully, or building wealth through depth understanding of finances. Money through transformation work, research, or managing resources. Financial power and control increase. Transform your relationship with money.',
+    predictions: [
+      'Investment or financial transformation creates significant wealth increase',
+      'Inheritance or shared financial resource expands your security',
+      'Psychological growth or therapy produces life-changing breakthrough',
+      'Intimate relationship deepens profoundly or transforms completely',
+      'Hidden information or research you uncover opens major opportunities',
+      'Career transformation or power increase changes your professional trajectory',
+      'Family secret or hidden dynamic surfaces and heals through honesty',
+      'Sexual or emotional intimacy reaches unprecedented transformative depth',
+      'Personal transformation through facing shadows creates authentic power',
+      'You learn that growth comes through depth, truth, transformation, and embracing intensity'
+    ]
+  },
+
+  'Jupiter-Sagittarius': {
+    name: 'Jupiter Ingress Sagittarius',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months (Jupiter rules Sagittarius)',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, and finding meaning through broadening horizons.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE (Jupiter at Home): Jupiter in Sagittarius brings maximum expansion, optimism, adventure, and philosophical growth. This is Jupiter at its most expansive and optimistic. This year favors travel, higher education, teaching, publishing, adventure, exploring beliefs, and expanding horizons dramatically. Luck and opportunity abound. Perfect time for major adventures, educational pursuits, teaching, travel, or pursuing meaning. Growth comes naturally and abundantly.',
+    loveRelationships: 'Romance expands through adventure, honesty, freedom, and shared exploration. Love becomes more optimistic, honest, and growth-oriented. Good year for meeting partners while traveling, long-distance relationships thriving, or exploring relationship through adventures together. Attraction to adventurous, honest, philosophical, freedom-loving partners. Existing relationships grow through travel, learning, honesty, and giving each other space. Love expands through freedom and shared meaning.',
+    familyHome: 'Family expands through travel, education, cultural exploration, or welcoming new members from different backgrounds. Excellent year for family travel, international family connections, educational family pursuits, or exploring family beliefs and philosophy. Home may feel confining - expand space or travel frequently. Family relationships improve through more honesty, freedom, and optimism. Growth through family adventures and shared exploration.',
+    businessCareer: 'Major career expansion through teaching, travel, publishing, international work, higher education, or philosophical/spiritual fields. Excellent year for education, travel industry, publishing, international business, teaching, coaching, or inspirational work. Career opportunities expand dramatically. Your vision and optimism attract success. Good for career risks, expanding business internationally, or taking on teaching/leadership role. Opportunities abound - say yes to growth.',
+    moneyFinances: 'Financial expansion through education, travel, teaching, publishing, international work, or growth investments. Good year for expanding income through teaching what you know, international opportunities, or taking calculated financial risks based on vision. Spending on travel, education, and experiences brings growth and opportunities. Financial optimism strong and often justified. Money flows through sharing knowledge, travel, and expansion. Take wise risks.',
+    predictions: [
+      'Major travel adventure or international opportunity transforms your worldview',
+      'Educational pursuit (degree, certification, teaching) expands career dramatically',
+      'Publishing or teaching opportunity reaches broad audience successfully',
+      'International connection or cross-cultural experience opens major doors',
+      'Romantic adventure or meeting partner while traveling creates significant relationship',
+      'Financial opportunity through bold vision and calculated risk-taking',
+      'Philosophical or spiritual growth changes your entire life perspective',
+      'Freedom or independence you pursue brings unexpected opportunities',
+      'Optimistic leap of faith (job change, move, adventure) succeeds beyond expectations',
+      'You learn that growth comes through courage, honesty, adventure, and expanding horizons'
+    ]
+  },
+
+  'Jupiter-Capricorn': {
+    name: 'Jupiter Ingress Capricorn',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Capricorn represents ambition, responsibility, discipline, achievement, mastery, and building lasting structures. It\'s the energy of climbing the mountain through persistent effort and mature commitment.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Capricorn brings structured expansion, ambitious growth, and career advancement. This year favors building lasting success, career advancement, strategic planning, achieving goals, and expanding through discipline. Growth comes through responsibility and maturity. Perfect time for career advancement, building business, achieving ambitious goals, or expanding influence and authority. Patience and strategy bring real success.',
+    loveRelationships: 'Relationships expand through commitment, building future together, and achieving goals as partnership. Love becomes more mature, responsible, and goal-oriented. Good year for engagement, marriage, or deepening commitment through building security together. Attraction to ambitious, mature, successful, responsible partners. Existing relationships grow through shared goals, traditional commitments, or building empire together. Love expands through mature partnership and shared achievement.',
+    familyHome: 'Family expansion through property investment, building family legacy, or taking on family leadership role. Excellent year for buying property as investment, major home improvement increasing value, building family business, or creating family traditions and structure. Family wealth and status may increase. Family relationships improve through more structure and respect. Lead family wisely. Build lasting family security and legacy.',
+    businessCareer: 'Peak year for career expansion and professional achievement. Major career advancement, promotions, starting successful business, building professional authority, or achieving ambitious career goals. Excellent for business, management, traditional fields, building systems, or work requiring strategic discipline. Professional recognition and success through competence and maturity. Build career empire patiently and strategically. Your ambition and discipline pay off handsomely.',
+    moneyFinances: 'Major financial expansion through career advancement, business building, strategic investments, or disciplined wealth accumulation. Excellent year for building lasting wealth, property investment, increasing income through professional advancement, or starting profitable business. Spending on quality investments and career development brings returns. Financial growth through strategy, discipline, and building value. Conservative but expansive financial approach succeeds. Build empire systematically.',
+    predictions: [
+      'Major career advancement or promotion significantly increases status and income',
+      'Business you start or build achieves success through strategic planning',
+      'Property investment or real estate purchase increases wealth substantially',
+      'Relationship commitment (engagement, marriage) creates lasting partnership',
+      'Professional recognition or achievement establishes your authority in field',
+      'Financial goal achieved through disciplined, persistent effort over the year',
+      'Leadership role or increased responsibility advances your career trajectory',
+      'Long-term goal you\'ve worked toward finally reaches fruition',
+      'Building project (business, career, property) creates lasting value and success',
+      'You learn that growth comes through discipline, strategy, responsibility, and patient building'
+    ]
+  },
+
+  'Jupiter-Aquarius': {
+    name: 'Jupiter Ingress Aquarius',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Aquarius represents innovation, individuality, friendship, progress, humanitarian ideals, and revolutionary thinking. It\'s the energy of breaking from tradition to create a better future for all.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Aquarius brings progressive expansion, innovative growth, and humanitarian opportunities. This year favors technology, social causes, networking, unconventional approaches, community involvement, and expanding through innovation. Growth comes through being unique and serving collective. Perfect time for technology ventures, social activism, networking widely, or pursuing progressive vision. Future-oriented opportunities abound.',
+    loveRelationships: 'Romance expands through friendship, intellectual connection, unconventional approaches, and shared ideals. Love becomes more free, equal, unique, and friendship-based. Good year for friendships becoming romantic, unconventional relationship structures, or connecting through social causes and communities. Attraction to unique, independent, progressive, humanitarian partners. Existing relationships grow through more friendship, freedom, equality, and shared vision for better world. Love expands through authenticity and progressive values.',
+    familyHome: 'Family expands through accepting uniqueness, progressive approaches, technology, or community involvement. Excellent year for modernizing home with technology, creating space for friends and community, or exploring unconventional family structures. Family relationships improve through more freedom, equality, and accepting everyone\'s individuality. Some families expand through adoption, fostering, or welcoming diverse members. Growth through family embracing progress and uniqueness.',
+    businessCareer: 'Major career expansion through technology, innovation, networking, social causes, or progressive work. Excellent year for tech industry, social entrepreneurship, networking-based work, innovation, humanitarian fields, or unconventional career paths. Professional network expands dramatically. Your innovative thinking and progressive approach attract opportunities. Good for launching tech ventures, networking widely, or advocating for workplace progress. Future-focused career moves succeed.',
+    moneyFinances: 'Financial expansion through technology, innovation, networking, social causes, or unconventional income sources. Good year for tech investments, cryptocurrency, crowdfunding, network marketing (ethical), or earning through progressive work. Spending on technology, innovation, and causes you believe in brings opportunities. Financial growth through unique approaches and serving collective needs. Money flows through networking, innovation, and progressive thinking. Think outside traditional financial box.',
+    predictions: [
+      'Technology venture or innovation creates unexpected financial success',
+      'Network or community connection leads to major professional opportunity',
+      'Social cause or humanitarian work you engage in expands your influence',
+      'Unconventional approach or unique idea opens doors traditional methods couldn\'t',
+      'Friendship deepens into romantic relationship or business partnership',
+      'Tech investment or progressive financial approach increases wealth significantly',
+      'Group project or collaborative venture achieves success through shared vision',
+      'Freedom or independence you assert creates new opportunities',
+      'Progressive career move or unconventional path proves more successful than traditional',
+      'You learn that growth comes through innovation, networking, embracing uniqueness, and serving collective'
+    ]
+  },
+
+  'Jupiter-Pisces': {
+    name: 'Jupiter Ingress Pisces',
+    frequency: 'Approximately every 12 years',
+    duration: '~12-13 months',
+    planetEnergy: 'Jupiter represents expansion, growth, optimism, wisdom, luck, philosophy, higher learning, and abundance. It\'s how you grow, what you believe in, and where life expands.',
+    signEnergy: 'Pisces represents compassion, spirituality, imagination, transcendence, unity, and dissolving boundaries. It\'s the energy of mystical connection, artistic inspiration, and merging with the infinite.',
+    eventMeaning: '🌟 MAJOR YEAR-LONG CYCLE: Jupiter in Pisces brings spiritual expansion, compassionate growth, and creative abundance. This year favors spiritual development, creative arts, compassionate service, imagination, transcendence, and expanding through surrendering to flow. Growth comes through faith, compassion, and connecting to something greater. Perfect time for spiritual practice, artistic creation, healing work, or service to others. Mystical and creative opportunities abound.',
+    loveRelationships: 'Romance expands through spiritual connection, unconditional love, compassion, and creative expression. Love becomes more transcendent, selfless, romantic, and spiritually oriented. Good year for soul mate connections, spiritual partnerships, or deepening relationship through shared spirituality, creativity, or service. Attraction to sensitive, artistic, spiritual, compassionate partners. Existing relationships grow through forgiveness, spiritual practice together, or creative collaboration. Love expands through compassion and spiritual unity.',
+    familyHome: 'Family expands through compassion, forgiveness, spiritual connection, or creative pursuits. Excellent year for family healing through forgiveness, spiritual or artistic family activities, or creating peaceful sanctuary at home. Family relationships improve through more compassion, acceptance, and letting go. Some families expand through helping others or spiritual community. Home becomes spiritual and creative retreat. Growth through family compassion and spiritual understanding.',
+    businessCareer: 'Major career expansion through creative, healing, spiritual, or compassionate work. Excellent year for arts, music, film, photography, healing professions, spiritual services, nonprofit work, or helping professions. Your creativity, compassion, and imagination attract professional success. Good for artistic projects, compassionate service work, or connecting career to spiritual purpose. Intuition guides career wisely. Work that serves others and expresses soul thrives. Trust the process.',
+    moneyFinances: 'Financial expansion through creative work, healing services, spiritual work, or compassionate service. Good year for earning through arts, healing, spiritual services, or work you believe in spiritually. Spending on art, music, spiritual development, and charitable giving feels right and brings blessings. Financial intuition strong - trust subtle guidance but maintain practical grounding. Money flows through imagination, compassion, and service. Sometimes trust and generosity create abundance mysteriously.',
+    predictions: [
+      'Spiritual awakening or practice produces profound transformation and peace',
+      'Creative or artistic project succeeds beyond expectations through inspired flow',
+      'Compassionate service or helping others creates deep meaning and unexpected blessings',
+      'Soul mate connection or spiritually profound relationship enters your life',
+      'Artistic work gains recognition and financial success through authentic expression',
+      'Forgiveness or letting go creates healing and freedom you didn\'t expect',
+      'Financial blessing comes through unexpected source or mysterious timing',
+      'Dream or intuitive guidance leads to important opportunity or decision',
+      'Charitable giving or service to others returns to you multiplied',
+      'You learn that growth comes through faith, compassion, creativity, surrender, and spiritual connection'
+    ]
   }
 };
 
