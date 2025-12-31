@@ -1,3 +1,5 @@
+import { getAspectFrequency, getAspectDuration, getAspectRemainingInfo } from './aspectCalculations';
+
 /**
  * General Transit-to-Transit Aspect Interpretations
  * Pure planet-to-planet aspects without house considerations
@@ -8,6 +10,10 @@ export interface GeneralAspectInterpretation {
   name: string;
   frequency: string;
   duration: string;
+  remainingDays?: number;
+  direction?: 'approaching' | 'leaving' | 'exact';
+  currentOrb?: number;
+  maxOrb?: number;
   planet1Energy: string;
   planet2Energy: string;
   aspectMeaning: string;
@@ -18,41 +24,6 @@ export interface GeneralAspectInterpretation {
   predictions: string[];
 }
 
-// Aspect frequency data
-const ASPECT_FREQUENCY: Record<string, { rarity: string; timing: string }> = {
-  'Conjunction': { rarity: 'Varies by planets involved', timing: 'When planets align at same degree' },
-  'Opposition': { rarity: 'Varies by planets involved', timing: 'When planets are 180° apart' },
-  'Trine': { rarity: 'Harmonious, moderately common', timing: 'When planets are 120° apart' },
-  'Square': { rarity: 'Challenging, moderately common', timing: 'When planets are 90° apart' },
-  'Sextile': { rarity: 'Opportunistic, fairly common', timing: 'When planets are 60° apart' }
-};
-
-// Planet speed for duration calculation
-const PLANET_DAILY_MOTION: Record<string, number> = {
-  'Sun': 1.0,
-  'Moon': 13.2,
-  'Mercury': 1.4,
-  'Venus': 1.2,
-  'Mars': 0.6,
-  'Jupiter': 0.08,
-  'Saturn': 0.03,
-  'Uranus': 0.01,
-  'Neptune': 0.006,
-  'Pluto': 0.004
-};
-
-function calculateDuration(planet1: string, planet2: string, orb: number = 8): string {
-  const speed1 = PLANET_DAILY_MOTION[planet1] || 0.5;
-  const speed2 = PLANET_DAILY_MOTION[planet2] || 0.5;
-  const combinedSpeed = speed1 + speed2;
-  const days = Math.ceil((orb * 2) / combinedSpeed);
-
-  if (days < 7) return `${days} days`;
-  if (days < 60) return `${Math.ceil(days / 7)} weeks`;
-  if (days < 365) return `${Math.ceil(days / 30)} months`;
-  return `${Math.ceil(days / 365)} years`;
-}
-
 /**
  * Get general interpretation for a transit-to-transit aspect
  */
@@ -60,7 +31,8 @@ export function getGeneralAspectInterpretation(
   planet1: string,
   planet2: string,
   aspectType: string,
-  orb: number = 5
+  currentOrb: number = 5,
+  maxOrb?: number
 ): GeneralAspectInterpretation | null {
   const key = `${planet1}-${planet2}-${aspectType}`;
   const reverseKey = `${planet2}-${planet1}-${aspectType}`;
@@ -70,14 +42,24 @@ export function getGeneralAspectInterpretation(
 
   if (!interpretation) return null;
 
-  // Calculate duration
-  const duration = calculateDuration(planet1, planet2, orb);
-  const frequency = ASPECT_FREQUENCY[aspectType];
+  // Use currentOrb as maxOrb if maxOrb is not provided (for backward compatibility)
+  const orbToUse = maxOrb || currentOrb;
+
+  // Calculate duration and frequency using the accurate functions
+  const duration = getAspectDuration(planet1, planet2, aspectType, orbToUse);
+  const frequency = getAspectFrequency(planet1, planet2, aspectType);
+
+  // Calculate remaining days and direction
+  const remainingInfo = getAspectRemainingInfo(planet1, planet2, aspectType, currentOrb, orbToUse);
 
   return {
     ...interpretation,
-    duration: `${duration} (given ${orb}° orb). ${frequency.rarity}.`,
-    frequency: `${frequency.timing}. ${frequency.rarity}.`
+    duration: `Total duration: ${duration} (from entering to leaving ${orbToUse}° orb, accounting for retrograde motion)`,
+    frequency: `Frequency: ${frequency}`,
+    remainingDays: remainingInfo.remainingDays,
+    direction: remainingInfo.direction,
+    currentOrb: currentOrb,
+    maxOrb: orbToUse
   };
 }
 
@@ -474,3 +456,7 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
 };
 
 export default GENERAL_ASPECTS;
+
+
+
+

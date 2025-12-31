@@ -570,11 +570,16 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
       return;
     }
 
+    // Get the max orb for this aspect type
+    const maxOrb = getTransitOrb(aspect.planet1, aspect.planet2, aspect.aspect);
+    const currentOrb = parseFloat(aspect.orb);
+
     const interpretation = getGeneralAspectInterpretation(
       aspect.planet1,
       aspect.planet2,
       aspect.aspect,
-      parseFloat(aspect.orb)
+      currentOrb,
+      maxOrb
     );
 
     console.log('📖 Interpretation found:', interpretation ? 'Yes' : 'No');
@@ -1011,7 +1016,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                     <div>
                       <h2 style={{ margin: 0, marginBottom: '8px' }}>{selectedAspect.interpretation.name}</h2>
                       <div style={{ fontSize: '14px', opacity: 0.9 }}>
-                        Orb: {selectedAspect.orb}° | {selectedAspect.interpretation.frequency}
+                        {selectedAspect.interpretation.frequency}
                       </div>
                     </div>
                     <button
@@ -1041,6 +1046,13 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                   <div style={{ marginBottom: '20px', padding: '12px', background: '#fff3cd', borderRadius: '6px', borderLeft: '4px solid #ffc107' }}>
                     <strong>⏱️ Duration:</strong> {selectedAspect.interpretation.duration}
                   </div>
+
+                  {/* Remaining Time */}
+                  {selectedAspect.interpretation.remainingDays !== undefined && selectedAspect.interpretation.direction && (
+                    <div style={{ marginBottom: '20px', padding: '12px', background: '#e8f4ff', borderRadius: '6px', borderLeft: '4px solid #4a90e2' }}>
+                      <strong>📅 Aspect Status:</strong> Currently {selectedAspect.interpretation.currentOrb?.toFixed(2)}° from exact, {selectedAspect.interpretation.direction === 'exact' ? 'at exact aspect now' : selectedAspect.interpretation.direction === 'approaching' ? `approaching exact (${selectedAspect.interpretation.remainingDays} days until aspect leaves orb)` : `separating from exact (${selectedAspect.interpretation.remainingDays} days until aspect leaves orb)`}
+                    </div>
+                  )}
 
                   {/* Planet Energies */}
                   <div style={{ marginBottom: '20px' }}>
@@ -1151,3 +1163,5 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
 };
 
 export default TransitCalendar;
+
+
