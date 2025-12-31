@@ -104,6 +104,81 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Information you need arrives at perfect time from unexpected source',
       'Your curiosity and questions lead to insight or breakthrough understanding'
     ]
+  },
+
+  'Sun-Aries': {
+    name: 'Sun Ingress Aries',
+    frequency: 'Once per year (around March 20-21)',
+    duration: '~30 days',
+    planetEnergy: 'The Sun represents conscious identity, ego, purpose, vitality, creative life force, and how you shine. It\'s your core self, your will, and your primary drive.',
+    signEnergy: 'Aries represents new beginnings, courage, independence, leadership, initiative, and the pioneering spirit. It\'s the spark of self-assertion, the drive to be first, and pure initiating force.',
+    eventMeaning: 'Sun in Aries marks the astrological new year and spring equinox - pure initiating energy. Your conscious focus shifts to starting fresh, asserting yourself, and taking bold action. This is the month for new beginnings, launching projects, and pioneering efforts. Courage, independence, and leadership come to the forefront. Energy runs high. Perfect time to start what you\'ve been planning.',
+    loveRelationships: 'Take initiative in romance - make the first move, ask someone out, or reignite passion in existing relationship. Be direct about what you want. Independence and excitement matter more than security this month. Attract partners through confidence and boldness. Some relationships need more space and adventure. Sexual energy and physical chemistry intensify.',
+    familyHome: 'Assert yourself with family rather than accommodating everyone else. Take leadership in family matters or home projects. Good time to start home renovations requiring quick action. Family dynamics may become more competitive or direct. Independence from family patterns feels important. Physical activity at home or with family recommended.',
+    businessCareer: 'Excellent month for career initiative - start new project, launch business, apply for promotion, or take on leadership role. Your confidence and direct approach impress others. Bold moves succeed. Entrepreneurship and independent work favored. Competition brings out your best. Assert yourself with boss or clients. Take calculated risks.',
+    moneyFinances: 'Start new income streams or invest in yourself. Earning through independent action, leadership, or competitive fields increases. Good time to ask for raise directly or negotiate aggressively. Be bold but not reckless with money. Financial courage serves you. Money flows to those who take initiative and assert their worth.',
+    predictions: [
+      'You will start something new with unusual confidence and courage',
+      'Bold career move or business launch succeeds through pure initiative',
+      'Physical energy peaks - perfect time to begin fitness routine or compete',
+      'Leadership opportunity where your directness is exactly what\'s needed',
+      'Romantic pursuit through direct approach works better than subtle hints',
+      'Conflict that\'s been simmering comes to head - address it directly',
+      'Impatience leads to quick decision that turns out right',
+      'Competitor challenges you and brings out your fighting spirit',
+      'Quick action on time-sensitive opportunity pays off',
+      'Assertiveness breakthrough - you say or do something brave'
+    ]
+  },
+
+  'Sun-Taurus': {
+    name: 'Sun Ingress Taurus',
+    frequency: 'Once per year (around April 20-21)',
+    duration: '~30 days',
+    planetEnergy: 'The Sun represents conscious identity, ego, purpose, vitality, creative life force, and how you shine. It\'s your core self, your will, and your primary drive.',
+    signEnergy: 'Taurus represents stability, sensory pleasure, material security, patience, persistence, comfort, and tangible beauty. It\'s the energy of grounding, enjoying physical reality, and building lasting value.',
+    eventMeaning: 'Sun in Taurus shifts focus to stability, pleasure, and building lasting value. This month favors slowing down, enjoying sensory experiences, and working patiently toward tangible goals. Quality over quantity. Beauty, comfort, and security matter most. Ground your energy in physical reality. Perfect time for financial planning, creating beauty, and deepening commitments.',
+    loveRelationships: 'Romance becomes sensual, stable, and grounded. Physical touch, good food, nature dates, and quality time deepen bonds. Show love through tangible actions and gifts. Relationships stabilize and become more committed. Slow-building romance favored over quick passion. Loyalty and consistency matter. Enjoy simple pleasures together.',
+    familyHome: 'Home becomes sanctuary - make it beautiful and comfortable. Good time for decorating, buying quality furniture, gardening, or creating cozy atmosphere. Family financial planning and building security favored. Cooking family meals and enjoying simple pleasures strengthens bonds. Slow, patient approach to family matters works best.',
+    businessCareer: 'Career success through demonstrating value, quality work, and patient persistence. Build your reputation through reliability and delivering excellence. Good time to ask for raise based on proven worth. Work related to beauty, food, finance, art, or luxury goods thrives. Slow, steady progress beats rushing.',
+    moneyFinances: 'Excellent month for financial planning, saving, and building security. Money flows through quality work and proven value. Good time to increase prices, invest wisely, or build multiple income streams patiently. Spending on lasting quality better than cheap quick fixes. Build wealth steadily.',
+    predictions: [
+      'Financial reward for consistent quality work and proven value',
+      'Purchase of quality item or luxury that brings lasting pleasure',
+      'Romance deepens through sensory pleasures and physical touch',
+      'Home improvement makes space significantly more beautiful',
+      'Relationship commitment deepens through stability and shared values',
+      'Slowing down and enjoying process brings more satisfaction',
+      'Financial opportunity through beauty, art, food, or tangible service',
+      'Nature experience grounds and restores you',
+      'Realization of your true worth leads to better treatment',
+      'Sensory pleasure brings deep satisfaction and contentment'
+    ]
+  },
+
+  'Sun-Gemini': {
+    name: 'Sun Ingress Gemini',
+    frequency: 'Once per year (around May 21-22)',
+    duration: '~30 days',
+    planetEnergy: 'The Sun represents conscious identity, ego, purpose, vitality, creative life force, and how you shine. It\'s your core self, your will, and your primary drive.',
+    signEnergy: 'Gemini represents curiosity, versatility, communication, mental quickness, learning, connections, and seeing multiple perspectives. It\'s the energy of questions, conversations, and information exchange.',
+    eventMeaning: 'Sun in Gemini shifts focus to communication, learning, and mental stimulation. This month favors networking, writing, teaching, and gathering information. Curiosity drives you. Variety prevents boredom. Perfect time for short trips, taking classes, starting conversations, and exploring multiple interests. Your mind is sharp and quick.',
+    loveRelationships: 'Communication and mental connection take center stage in romance. Interesting conversations, witty banter, and learning together deepen bonds. Attraction to intelligent, versatile partners. Keep romance light, fun, and varied - too much intensity feels heavy. Flirting through clever conversation. Text and message communication flows easily.',
+    familyHome: 'Excellent communication with siblings, neighbors, and local community. Family conversations flow easily - good time for family meetings or catching up. Home benefits from organization, creating communication hub, or study space. Short family trips or local exploration. Variety and mental stimulation at home important.',
+    businessCareer: 'Peak time for communication-based work - writing, teaching, presenting, sales, media, networking, consulting. Your ideas are sharp and articulate. Excellent for networking, pitching proposals, learning new skills quickly. Multiple projects and variety keep you productive. Multitasking ability peaks.',
+    moneyFinances: 'Financial opportunities through communication, information, teaching, or selling. Freelance writing, consulting, tutoring, or social media work increases income. Multiple small income sources effective. Research investments and gather financial information - your mind processes it quickly. Money through networking and connections.',
+    predictions: [
+      'Conversation or networking connection leads to unexpected opportunity',
+      'Writing, presentation, or social media content gets strong response',
+      'Learning new skill or taking class opens unexpected door',
+      'Communication project goes exceptionally well',
+      'Sibling or neighbor provides valuable information or support',
+      'Quick thinking solves problem that\'s been stuck',
+      'Multiple opportunities arise - your versatility handles them',
+      'Short trip or local exploration leads to discovery',
+      'Information arrives at perfect time from unexpected source',
+      'Curiosity and questions lead to breakthrough understanding'
+    ]
   }
 };
 
