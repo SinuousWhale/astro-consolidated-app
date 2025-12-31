@@ -1,4 +1,4 @@
-import { getAspectFrequency, getAspectDuration, getAspectRemainingInfo } from './aspectCalculations';
+import { getAspectFrequency, getAspectDuration, getAspectDirection } from './aspectCalculations';
 
 /**
  * General Transit-to-Transit Aspect Interpretations
@@ -49,15 +49,15 @@ export function getGeneralAspectInterpretation(
   const duration = getAspectDuration(planet1, planet2, aspectType, orbToUse);
   const frequency = getAspectFrequency(planet1, planet2, aspectType);
 
-  // Calculate remaining days and direction
-  const remainingInfo = getAspectRemainingInfo(planet1, planet2, aspectType, currentOrb, orbToUse);
+  // Determine aspect direction (approaching/exact/separating)
+  const direction = getAspectDirection(planet1, planet2, aspectType, currentOrb, orbToUse);
 
   return {
     ...interpretation,
     duration: `Total duration: ${duration} (from entering to leaving ${orbToUse}° orb, accounting for retrograde motion)`,
     frequency: `Frequency: ${frequency}`,
     remainingDays: remainingInfo.remainingDays,
-    direction: remainingInfo.direction,
+    direction: direction,
     currentOrb: currentOrb,
     maxOrb: orbToUse
   };
@@ -456,6 +456,8 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
 };
 
 export default GENERAL_ASPECTS;
+
+
 
 
 

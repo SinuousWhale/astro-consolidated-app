@@ -1047,10 +1047,10 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                     <strong>⏱️ Duration:</strong> {selectedAspect.interpretation.duration}
                   </div>
 
-                  {/* Remaining Time */}
-                  {selectedAspect.interpretation.remainingDays !== undefined && selectedAspect.interpretation.direction && (
+                  {/* Aspect Status */}
+                  {selectedAspect.interpretation.currentOrb !== undefined && selectedAspect.interpretation.direction && (
                     <div style={{ marginBottom: '20px', padding: '12px', background: '#e8f4ff', borderRadius: '6px', borderLeft: '4px solid #4a90e2' }}>
-                      <strong>📅 Aspect Status:</strong> Currently {selectedAspect.interpretation.currentOrb?.toFixed(2)}° from exact, {selectedAspect.interpretation.direction === 'exact' ? 'at exact aspect now' : selectedAspect.interpretation.direction === 'approaching' ? `approaching exact (${selectedAspect.interpretation.remainingDays} days until aspect leaves orb)` : `separating from exact (${selectedAspect.interpretation.remainingDays} days until aspect leaves orb)`}
+                      <strong>📅 Aspect Status:</strong> Currently {selectedAspect.interpretation.currentOrb?.toFixed(2)}° from exact{selectedAspect.interpretation.direction === 'exact' ? ' — at exact aspect now' : selectedAspect.interpretation.direction === 'approaching' ? ' — approaching exact' : ' — separating from exact'}
                     </div>
                   )}
 
@@ -1163,5 +1163,6 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
 };
 
 export default TransitCalendar;
+
 
 
