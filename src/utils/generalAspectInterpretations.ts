@@ -10,7 +10,6 @@ export interface GeneralAspectInterpretation {
   name: string;
   frequency: string;
   duration: string;
-  remainingDays?: number;
   direction?: 'approaching' | 'leaving' | 'exact';
   currentOrb?: number;
   maxOrb?: number;
@@ -56,7 +55,6 @@ export function getGeneralAspectInterpretation(
     ...interpretation,
     duration: `Total duration: ${duration} (from entering to leaving ${orbToUse}° orb, accounting for retrograde motion)`,
     frequency: `Frequency: ${frequency}`,
-    remainingDays: remainingInfo.remainingDays,
     direction: direction,
     currentOrb: currentOrb,
     maxOrb: orbToUse
