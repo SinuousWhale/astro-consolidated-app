@@ -1252,6 +1252,264 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Research or investigation project you pursue reveals powerful insights and opportunities',
       'Opportunity to expand power through combining wisdom with psychological depth work'
     ]
+  },
+
+  // ==========================================
+  // SATURN-URANUS ASPECTS (All 5)
+  // ==========================================
+
+  'Saturn-Uranus-Conjunction': {
+    name: 'Saturn Conjunction Uranus',
+    frequency: 'Occurs approximately every 45 years',
+    duration: '8-14 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Revolutionary restructuring and breakthrough discipline! This rare generational conjunction merges Saturn\'s structure with Uranus\'s revolution, creating innovative systems, structured freedom, disciplined awakening, and radical responsibility. Old structures that must evolve will break; new systems that honor both order and innovation emerge. Expect sudden changes to established systems, revolutionary approaches to tradition, structured breakthroughs, and freedom through wise discipline. Neither pure rebellion nor rigid control - conscious evolution of structures.',
+    loveRelationships: 'Relationship structure revolutionizes or commitment becomes more authentic and free. May suddenly commit to unconventional partnership or restructure existing relationship for more freedom. Traditional relationship forms evolve into progressive structures. Need commitment that honors both stability and individuality. Sudden relationship changes that ultimately create better foundation. Marriage or partnership based on authentic freedom not just convention. Neither complete instability nor rigid tradition - conscious committed authenticity.',
+    familyHome: 'Family structures undergo revolutionary changes. Old family rules that no longer serve break down; progressive family systems emerge. May suddenly relocate or completely restructure home life. Parenting approaches become more progressive yet disciplined. Family traditions evolve to honor both roots and innovation. Sudden family changes create ultimately more authentic foundation. Home becomes space for both stability and freedom. Generational patterns consciously revolutionized.',
+    businessCareer: 'Career structure revolutionizes completely! May suddenly change careers to more authentic path or restructure existing work for more freedom. Industry undergoes major systematic innovation. Leadership style becomes more progressive yet responsible. Success through innovative yet disciplined approaches. Entrepreneurship combining structure with breakthrough thinking. Traditional career path evolves or breaks entirely. Professional liberation through strategic revolution. New career systems emerge.',
+    moneyFinances: 'Financial structures undergo revolutionary change. Traditional financial approaches break down; innovative systems emerge. May suddenly restructure finances for more freedom or completely change money management. Investments in both stable and revolutionary sectors. Financial liberation through disciplined innovation. Budget systems that honor both security and flexibility. Cryptocurrency meets traditional finance. Financial breakthroughs through systematic innovation. New financial foundation.',
+    predictions: [
+      'Major life structure suddenly changes - career, relationship, or living situation revolutionizes',
+      'You break free from limiting tradition or system but build something better in its place',
+      'Sudden career change toward more authentic work that still provides stability',
+      'Relationship commits in unconventional way or traditional partnership gains more freedom',
+      'Financial system you create balances security with innovation successfully',
+      'Industry or field undergoes major systematic innovation you participate in or lead',
+      'You will learn that true freedom requires structure and real structure allows freedom',
+      'Old established pattern suddenly breaks - initially disruptive but ultimately liberating',
+      'Revolutionary idea you implement with discipline creates lasting systematic change',
+      'Generational shift happens - old ways evolve into progressive systems through your work'
+    ]
+  },
+
+  'Saturn-Uranus-Opposition': {
+    name: 'Saturn Opposition Uranus',
+    frequency: 'Occurs approximately every 45 years (midpoint of Saturn-Uranus cycle)',
+    duration: '8-14 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Maximum tension between structure and freedom, tradition and revolution, control and liberation. Pulled between established order and breakthrough change, security and authenticity, discipline and rebellion. Must integrate both - neither pure conformity nor pure chaos works. The opposition demands you find freedom WITHIN structure, innovate WITHIN responsibility, rebel CONSCIOUSLY not reactively. True liberation requires some foundation. Real structure allows some flexibility. Integration essential.',
+    loveRelationships: 'Relationship tension between commitment and freedom. Feel torn between wanting security and needing space. Partner may want more structure while you need liberation (or vice versa). Traditional relationship expectations conflict with authentic needs. Must balance commitment with individuality. Neither total merger nor complete independence works. Integration: create committed partnership that honors both stability and freedom. Conscious relationship restructuring. Mature liberation.',
+    familyHome: 'Family tension between tradition and progress. Old family rules feel limiting; complete rebellion seems irresponsible. Torn between family obligations and personal freedom. Established home structure conflicts with need for change. Must honor both family stability and individual authenticity. Integration: evolve family traditions consciously, create progressive yet stable home life. Neither rigid control nor abandoning responsibilities - wise family evolution.',
+    businessCareer: 'Career tension between security and authentic calling. Established career path feels limiting; complete career change seems risky. Authority conflicts or workplace restrictions challenge you. Torn between conventional success and revolutionary path. Must balance security with authenticity. Integration: bring innovation into established field or add structure to revolutionary work. Neither selling out nor reckless rebellion - strategic authentic career evolution.',
+    moneyFinances: 'Financial tension between security and freedom. Traditional investments feel limiting; pure innovation feels risky. May want financial freedom but need stability. Torn between conservative money management and revolutionary financial approaches. Must balance both. Integration: diversify between stable foundations and innovative opportunities. Neither pure safety nor pure risk - wise financial structure with flexibility.',
+    predictions: [
+      'You face choice between security and freedom in major life area - synthesis required',
+      'Relationship requires balancing commitment with space - neither extreme works long-term',
+      'Career tension between established position and authentic calling needs integration',
+      'Financial decision between safety and innovation best resolved through balanced approach',
+      'Authority conflict teaches you to honor both structure and authentic self-expression',
+      'You will learn that true freedom requires foundation and real security allows flexibility',
+      'Family situation demands both honoring tradition and allowing progressive evolution',
+      'Sudden disruption to established order ultimately serves conscious restructuring',
+      'Rebellion or restriction that seems intolerable reveals need for mature integration',
+      'Breakthrough comes through finding freedom within responsibility not choosing one'
+    ]
+  },
+
+  'Saturn-Uranus-Trine': {
+    name: 'Saturn Trine Uranus',
+    frequency: 'Occurs approximately 2-3 times during the 45-year Saturn-Uranus cycle',
+    duration: '6-12 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Effortless innovative structure and breakthrough discipline! Structure and freedom flow naturally together. Revolutionary ideas gain practical foundation, established systems innovate gracefully, and authentic change happens with stability. Perfect time for systematic innovation, structured breakthroughs, disciplined liberation, and progressive institution-building. The universe supports conscious evolution. Innovation feels practical, structure feels freeing, and change happens with grace. Build new systems naturally.',
+    loveRelationships: 'Relationship structure and freedom balance beautifully! Commitment deepens while both partners maintain authentic individuality. May formalize unconventional partnership naturally. Relationship evolves progressively while remaining stable. Both tradition and innovation honored. Partnership provides security and freedom simultaneously. Relationship agreements that honor both people work easily. Committed authentic love flows naturally. Stable liberation.',
+    familyHome: 'Family structure evolves naturally toward more progressive yet stable form! Family traditions update gracefully. Home life balances routine with flexibility beautifully. May relocate or restructure home in ways that work for everyone. Progressive parenting approaches combine with healthy boundaries. Family provides both roots and wings naturally. Generational evolution happens smoothly. Stable innovative family.',
+    businessCareer: 'Career innovation and professional structure flow beautifully! Perfect time for systematic career advancement, structured entrepreneurship, or innovative professional development. Leadership style balances tradition with progress naturally. Success through bringing innovation into established field. Professional reputation grows through reliable innovation. Career provides both security and authentic expression. Strategic breakthroughs work.',
+    moneyFinances: 'Financial structure and innovation balance perfectly! Money management system that honors both security and growth works beautifully. Investments balanced between stable foundations and innovative opportunities succeed. Financial planning allows both discipline and flexibility. Innovative financial strategies implemented with wisdom. Wealth through systematic innovation. Secure financial freedom flows naturally.',
+    predictions: [
+      'Career advancement through innovative yet disciplined approach happens naturally',
+      'Financial system balancing security and growth you create works beautifully long-term',
+      'Relationship commitment deepens while both partners maintain authentic freedom',
+      'Revolutionary idea you implement with structure gains recognition and lasting success',
+      'Professional innovation within established field brings advancement and respect',
+      'Home or life restructuring happens smoothly and improves both stability and freedom',
+      'You build something new that honors both tradition and progress successfully',
+      'Breakthrough happens through patient systematic innovation not rushed revolution',
+      'Authority supports your progressive ideas because you present them strategically',
+      'Perfect balance of structure and freedom creates lasting positive life changes'
+    ]
+  },
+
+  'Saturn-Uranus-Square': {
+    name: 'Saturn Square Uranus',
+    frequency: 'Occurs approximately 4-5 times during the 45-year Saturn-Uranus cycle',
+    duration: '6-12 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Revolutionary change through structural challenge and breaking tension! The square creates maximum friction between order and chaos, forcing evolution through crisis. Structures break under pressure for awakening, restrictions trigger rebellion, or impulsive changes create instability. May feel trapped and want to break free reactively or resist necessary change rigidly. However, tension produces crucial evolution if worked with consciously. The challenge: restructure wisely not destroy recklessly, liberate authentically not rebel impulsively, change progressively not chaotically.',
+    loveRelationships: 'Relationship restrictions or sudden changes create growth challenges. May feel trapped in partnership and want to break free impulsively. Or partner suddenly changes creating instability. Commitment feels limiting; freedom feels scary. Relationship structures that worked no longer do. However, stagnant relationship patterns DO need evolving. The key: restructure partnership consciously not abandon impulsively. Neither staying in dead relationship nor leaving without working on patterns - conscious evolution through honest communication.',
+    familyHome: 'Family structures feel restrictive or sudden family disruptions occur. May want to break free from family obligations impulsively. Or family member\'s rebellion creates chaos. Old family rules no longer work but complete chaos problematic. Torn between honoring family and personal freedom. However, unhealthy family patterns DO need changing. The key: evolve family dynamics consciously not escape or control. Restructure family relating through boundaries and authenticity.',
+    businessCareer: 'Career restrictions or sudden workplace changes create intense pressure. May feel trapped in job and want to quit impulsively. Or company restructures suddenly creating uncertainty. Conflict with authority or rigid systems. However, stagnant career DOES need revolutionizing. The key: change career strategically not impulsively. Plan exit or negotiate changes rather than burning bridges. Neither tolerating intolerable situation nor quitting without preparation - strategic career revolution.',
+    moneyFinances: 'Financial restrictions or sudden money disruptions. Traditional financial approaches feel limiting but impulsive changes risky. May want financial freedom but fear instability. Unexpected expenses disrupt budget. Financial structure breaks down requiring rebuilding. However, limiting money patterns DO need changing. The key: restructure finances consciously not reactively. Neither rigid limitation nor reckless freedom - wise financial evolution through strategic changes.',
+    predictions: [
+      'You feel intensely trapped in situation and tempted to break free impulsively - pause first',
+      'Sudden disruption to established structure initially feels catastrophic but forces needed evolution',
+      'Career or relationship that feels restrictive requires conscious restructuring not escape',
+      'Financial pressure or unexpected expense forces examination of money patterns',
+      'Authority conflict or restriction triggers rebellion - respond strategically not reactively',
+      'You will learn difference between conscious liberation and impulsive destruction',
+      'Structure you built breaks down revealing it wasn\'t serving authentic self anymore',
+      'Tension between security and freedom ultimately produces more conscious balanced approach',
+      'Crisis forces necessary change you were avoiding - ultimately growth opportunity',
+      'Evolution happens through accepting that some structures must change not holding rigid'
+    ]
+  },
+
+  'Saturn-Uranus-Sextile': {
+    name: 'Saturn Sextile Uranus',
+    frequency: 'Occurs approximately 2-3 times during the 45-year Saturn-Uranus cycle',
+    duration: '5-10 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Opportunity for structured innovation through conscious initiative! Not automatic like the trine - you must reach for progressive evolution. Perfect time to begin systematic changes, structured experimentation, disciplined innovation, or conscious pattern-breaking. Doors to evolutionary change open if you knock strategically. Small progressive steps toward big structural change pay off. Opportunity favors those who combine discipline with innovation, wisdom with breakthrough thinking.',
+    loveRelationships: 'Opportunity to evolve relationship structure consciously if you initiate it. Suggest new relationship agreement, try progressive date format, or renegotiate commitments authentically. Won\'t happen automatically - requires honest conversation. Can strengthen partnership through allowing more freedom within commitment if both participate. Small experiments in relationship structure succeed. Building partnership that honors both stability and authenticity takes initiative but works.',
+    familyHome: 'Opportunity to update family structures through conscious innovation. Introduce progressive family rule, experiment with new home routine, or try unconventional family activity. Small changes toward more authentic family structure pay off. Family harmony grows through combining tradition with innovation. Works if you take action - propose the change, start the conversation, try the experiment. Building family environment that honors both roots and growth.',
+    businessCareer: 'Career evolution opportunities through innovative yet strategic action. Perfect time to propose progressive project within established role, add innovative skill to traditional expertise, or network between conventional and progressive fields. Won\'t fall in lap - must demonstrate both reliability and innovation. Small strategic career experiments succeed. Mentorship bridging tradition and innovation if you seek it. Building career through progressive professionalism.',
+    moneyFinances: 'Financial growth through smart systematic innovation. Research balanced investment approach then implement wisely. Update budget to allow both savings and flexibility. Learn about innovative financial tools while maintaining foundation. Small amounts invested in both stable and growth sectors work well. Financial education in progressive yet responsible wealth-building pays off. Building prosperity through strategic financial evolution.',
+    predictions: [
+      'Career opportunity for those who\'ve demonstrated both reliability and innovative thinking',
+      'Financial strategy balancing security with calculated innovation you create works long-term',
+      'Relationship evolves positively through conversation about structure and freedom you initiate',
+      'Progressive skill or approach you systematically develop opens professional doors',
+      'System or structure you consciously update works better than old rigid or chaotic approaches',
+      'Mentor who bridges traditional expertise and innovative thinking offers guidance',
+      'Small systematic experiments in life structure you try prove successful',
+      'You will learn that conscious incremental change produces lasting evolution',
+      'Authority receptive to progressive proposal you present professionally with planning',
+      'Opportunity to evolve life structure through combining discipline with authentic innovation'
+    ]
+  },
+
+  // ==========================================
+  // SATURN-PLUTO ASPECTS (All 5)
+  // ==========================================
+
+  'Saturn-Pluto-Conjunction': {
+    name: 'Saturn Conjunction Pluto',
+    frequency: 'Occurs approximately every 33-38 years',
+    duration: '10-18 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Generational structural transformation and disciplined metamorphosis! This rare conjunction merges Saturn\'s structure with Pluto\'s total transformation, creating profound systematic change, empowered responsibility, death of old orders, and rebirth of foundations. Established systems that no longer serve will be eliminated; powerful new structures emerge from the ashes. Expect societal restructuring, institutional transformation, disciplined elimination of dead patterns, and profound empowerment through facing shadow of authority. Build through destruction. Empower through discipline. Phoenix institutions.',
+    loveRelationships: 'Relationship structure undergoes total transformation or commitment is profoundly tested. Partnership must eliminate what\'s dead and rebuild on authentic foundation. Power dynamics in relationship reach crisis requiring restructuring. May formalize relationship through shadow work or end relationships that can\'t transform. Commitment becomes real through facing relationship depths honestly. Marriage or partnership rebuilt on psychological truth and authentic power-sharing. Neither surface relating nor power struggles - deep committed transformation.',
+    familyHome: 'Family structures undergo generational transformation. Old family power dynamics or ancestral patterns must die; healthier family systems emerge. May deal with family crisis involving authority, control, or resources that ultimately restructures everything. Inheritance or family power transitions. Home foundation literally or metaphorically rebuilt. Family healing through confronting power shadows and rebuilding on truth. Generational karma resolved through disciplined shadow work. Family phoenix.',
+    businessCareer: 'Career and professional structures undergo total transformation! May rise to positions of significant power and responsibility through crisis or elimination of old guard. Industry restructuring or total career metamorphosis. Success requires both strategic discipline and psychological depth. Leadership tested through pressure - emerge more powerful. Professional mastery through confronting career shadows. Build empire through disciplined elimination of what doesn\'t serve. Institutional transformation. Career rebirth through crisis.',
+    moneyFinances: 'Financial structures undergo profound transformation and disciplined rebuilding. May face financial crisis requiring total restructuring or gain significant wealth through strategic transformation. Eliminate debt and rebuild finances systematically. Investments in transformation and restructuring sectors. Financial empowerment through disciplined shadow work around money and power. Wealth built through strategic elimination and focused discipline. Financial phoenix through systematic transformation. Power through fiscal responsibility.',
+    predictions: [
+      'Major life structure undergoes death-rebirth - career, family, or foundation transforms totally',
+      'You gain significant power and authority through facing crisis with discipline and depth',
+      'Financial restructuring or crisis ultimately creates stronger more empowered foundation',
+      'Career reaches position of real responsibility through elimination of old guard or systems',
+      'Relationship transforms through shadow work and rebuilding on authentic foundation or ends',
+      'Family power dynamics reach crisis requiring confronting ancestral patterns and rebuilding',
+      'You will learn that true power requires both discipline and psychological transformation',
+      'Institutional or systematic change you participate in reshapes field or society',
+      'Crisis or pressure reveals what structures must die so stronger ones can emerge',
+      'Generational transformation happens - you become authority through disciplined depth work'
+    ]
+  },
+
+  'Saturn-Pluto-Opposition': {
+    name: 'Saturn Opposition Pluto',
+    frequency: 'Occurs approximately every 33-38 years (midpoint of Saturn-Pluto cycle)',
+    duration: '10-18 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Maximum tension between structure and transformation, control and power, preservation and elimination. Pulled between maintaining order and total change, building up and tearing down, responsibility and metamorphosis. Must integrate both - neither rigid control nor destructive chaos works. The opposition demands you transform THROUGH discipline, empower THROUGH responsibility, rebuild THROUGH systematic elimination. Real power requires structure. True transformation needs wise timing. Integration creates lasting empowerment.',
+    loveRelationships: 'Relationship tension between stability and transformation. May want security while partner wants total change (or vice versa). Pulled between commitment to existing structure and need for relationship rebirth. Power struggles over who controls relationship direction. Must balance preservation with transformation. Integration: restructure relationship through disciplined shadow work. Neither avoiding depth nor forcing transformation - wise committed metamorphosis. Empower partnership through honest structure.',
+    familyHome: 'Family tension between maintaining traditions and transforming patterns. Torn between family responsibilities and need for liberation from toxic dynamics. Power struggles with family authority figures. Must honor both family structure and transformation needs. Family patterns that need dying conflict with desire for stability. Integration: transform family dynamics through disciplined boundaries and honest depth work. Neither perpetuating dysfunction nor abandoning family - empowered family restructuring.',
+    businessCareer: 'Career tension between structural advancement and total career transformation. Offered authority role in dying system or drawn to transformational work without security. Power struggles with established authority. Must balance professional responsibility with authentic empowerment. Integration: bring disciplined transformation into established field or add structure to transformational work. Neither serving dead system nor destroying career - strategic empowered evolution.',
+    moneyFinances: 'Financial tension between security and transformation. Traditional financial structure feels dead but complete overhaul feels risky. Power struggles over resources or control of finances. Must balance fiscal responsibility with necessary financial transformation. Integration: restructure finances through disciplined elimination of what doesn\'t serve. Neither rigid preservation nor destructive change - wise systematic financial metamorphosis. Empowered through balanced approach.',
+    predictions: [
+      'You face choice between maintaining dying structure and transforming completely - integrate both',
+      'Relationship requires both commitment and transformation - can\'t have one without other',
+      'Power struggle with authority teaches integration of structure and empowerment',
+      'Career tension between secure position in old system and transformational calling',
+      'Financial decision between preservation and transformation best resolved through discipline',
+      'You will learn that real transformation requires structure and true power needs responsibility',
+      'Family situation demands both honoring stability and allowing necessary elimination',
+      'Authority crisis or power conflict ultimately produces more empowered structural wisdom',
+      'Structure that feels dead must transform but chaos isn\'t answer - wise systematic change',
+      'Integration of discipline and depth, structure and transformation, creates lasting power'
+    ]
+  },
+
+  'Saturn-Pluto-Trine': {
+    name: 'Saturn Trine Pluto',
+    frequency: 'Occurs approximately 2-3 times during the 33-38 year Saturn-Pluto cycle',
+    duration: '8-14 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Effortless structural transformation and disciplined empowerment! Structure and depth work flow naturally together. Systematic elimination feels wise, disciplined transformation seems destined, and empowered building happens with grace. Perfect time for strategic metamorphosis, structured depth work, disciplined shadow integration, and building power through wisdom. The universe supports systematic transformation. Elimination feels right, discipline empowers, and phoenix moments have foundation. Transform systematically.',
+    loveRelationships: 'Relationship transforms through natural disciplined depth work! Partnership evolves through structured shadow work and psychological honesty that feels right. Commitment deepens through facing relationship depths together systematically. Power shared wisely and lovingly. Relationship rebuilt on stronger foundation through natural elimination of dysfunctional patterns. Deep intimacy through disciplined vulnerability. Both partners empowered through committed transformation. Stable profound love.',
+    familyHome: 'Family transformation through disciplined depth work flows naturally! Family patterns transform through systematic healing conversations. Old dysfunctions eliminated through natural honest confrontations. Family power restructures wisely. Home rebuilt or restructured powerfully and successfully. Family empowerment through facing shadows together with discipline. Generational patterns heal through committed work. Family foundation strengthened through transformation. Empowered family structure.',
+    businessCareer: 'Career transformation and power building flow beautifully! Perfect time for strategic career transformation, systematic professional development, or disciplined empire-building. Rise to position of real authority through depth expertise. Success through research, strategy, psychology, or transformation industries. Professional empowerment through disciplined mastery. Career rebuilt on stronger foundation naturally. Strategic advancement through depth work. Powerful professional success.',
+    moneyFinances: 'Financial transformation through disciplined strategic work! Wealth builds through systematic investment, strategic elimination of debt, and focused financial discipline. Perfect time for major financial restructuring - works smoothly. Money psychology transforms through shadow work. Investments in transformation sectors with good structure succeed. Financial empowerment through strategic planning and depth work. Systematic wealth-building. Empowered prosperity.',
+    predictions: [
+      'Career transformation happens naturally through disciplined depth work and strategic planning',
+      'Financial restructuring or wealth-building through systematic discipline succeeds powerfully',
+      'Relationship deepens through structured shadow work - commitment strengthens through depth',
+      'Professional advancement to position of real authority flows through demonstrated mastery',
+      'Systematic elimination of life patterns that don\'t serve creates space for empowerment',
+      'Family healing through disciplined confrontation of dysfunction happens successfully',
+      'You build something powerful and lasting through combining structure with transformation',
+      'Strategic planning for major life change you create and implement systematically works',
+      'Depth expertise or research you pursue with discipline brings recognition and power',
+      'Transformation feels natural when approached with structure - phoenix with foundation'
+    ]
+  },
+
+  'Saturn-Pluto-Square': {
+    name: 'Saturn Square Pluto',
+    frequency: 'Occurs approximately 4-5 times during the 33-38 year Saturn-Pluto cycle',
+    duration: '8-14 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Transformational challenge through structural crisis and power pressure! The square creates intense friction between preservation and elimination, forcing profound change through crushing pressure. Structures collapse under transformation pressure, control fails under power challenges, or resistance creates crisis. May feel oppressed by authority, trapped in dying system, or compulsively controlling. However, the crucible produces profound empowerment if worked with consciously. The challenge: transform systematically not chaotically, empower authentically not manipulatively, eliminate consciously not destructively.',
+    loveRelationships: 'Relationship crisis or power struggles create transformational pressure. Control issues, manipulation, or toxic power dynamics surface. May feel trapped in relationship or compulsively try to change partner. Commitment feels oppressive or responsibility overwhelms. However, dysfunctional relationship patterns DO need eliminating. The key: transform relationship through honest boundaries and shadow work not control or avoidance. Neither dominating nor submitting - mutual empowerment through difficult honest work. Crisis catalyzes necessary relationship transformation.',
+    familyHome: 'Family crisis involving power, control, or oppressive structures. May feel crushed by family responsibilities or face family member\'s destructive behavior. Toxic family authority or dysfunctional family systems reach breaking point. However, unhealthy family patterns DO need total elimination. The key: transform family dynamics through boundaries and depth work not replicating control patterns. Neither enabling dysfunction nor becoming tyrant - empowered authentic family restructuring through crisis.',
+    businessCareer: 'Career crisis or oppressive workplace situations create intense pressure. May face abusive authority, toxic work environment, or company collapse. Feel trapped in career or face ruthless power dynamics. Intense pressure to perform or maintain control. However, dead-end career situations DO need eliminating. The key: transform career strategically through crisis not impulsively. Neither tolerating abuse nor becoming abusive - empowered professional transformation through facing shadow. Career phoenix through pressure.',
+    moneyFinances: 'Financial crisis or power struggles around money. Debt pressure, financial collapse, or money control issues. May feel financially trapped or obsess about financial control. Resource conflicts or financial manipulation. However, dysfunctional money patterns DO need total transformation. The key: restructure finances through disciplined elimination not panic or rigidity. Neither financial chaos nor rigid control - empowered financial transformation through facing money shadows. Crisis catalyzes financial rebirth.',
+    predictions: [
+      'You face intense structural crisis or crushing pressure that forces profound transformation',
+      'Power struggle or oppressive situation teaches difference between control and empowerment',
+      'Financial crisis or debt pressure ultimately produces total financial restructuring',
+      'Career situation becomes intolerable forcing necessary career transformation through crisis',
+      'Relationship power dynamics reach breaking point requiring total honest restructuring',
+      'You will learn that systems must sometimes collapse completely to rebuild stronger',
+      'Authority oppression or control issues reveal where you must claim authentic power',
+      'Crisis that feels overwhelming ultimately produces profound empowerment through depth work',
+      'Responsibility pressure or structural demands force elimination of what you can\'t sustain',
+      'Transformation happens through accepting crisis as catalyst not avoiding necessary change'
+    ]
+  },
+
+  'Saturn-Pluto-Sextile': {
+    name: 'Saturn Sextile Pluto',
+    frequency: 'Occurs approximately 2-3 times during the 33-38 year Saturn-Pluto cycle',
+    duration: '6-12 months (with retrograde periods)',
+    planet1Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    planet2Energy: 'Pluto represents transformation, power, death-rebirth, depth psychology, elimination, regeneration, and total metamorphosis. It destroys to rebuild stronger.',
+    aspectMeaning: 'Opportunity for disciplined transformation through strategic initiative! Not automatic like the trine - you must reach for systematic depth work. Perfect time to begin structured shadow work, strategic elimination of patterns, disciplined psychological transformation, or systematic empowerment projects. Doors to power open if you knock strategically with depth. Small disciplined transformative steps toward big empowerment pay off. Opportunity favors those who combine structure with depth work, responsibility with shadow integration.',
+    loveRelationships: 'Opportunity to strengthen relationship through disciplined depth work if you initiate. Suggest structured couples therapy, commit to shadow work schedule, or create framework for honest communication. Won\'t happen automatically - requires committed effort. Can empower partnership through systematic psychological honesty if both participate. Small regular depth conversations or structured intimacy practices strengthen bond. Building relationship through committed transformation takes discipline but works powerfully.',
+    familyHome: 'Opportunity to transform family dynamics through systematic work. Start family therapy with structure, create framework for addressing family issues, or systematically work on generational patterns. Small disciplined steps toward family healing pay off. Family empowerment grows through combining structure with depth work. Works if you commit - schedule the sessions, create the framework, do the work systematically. Building healthy family through disciplined transformation.',
+    businessCareer: 'Career empowerment opportunities through strategic depth work and discipline. Perfect time to systematically develop powerful expertise, research deeply with structure, or propose transformational project with solid planning. Won\'t fall in lap - must demonstrate both discipline and depth. Small systematic career moves toward power positions succeed. Mentorship with powerful person if you approach strategically. Building career authority through disciplined mastery.',
+    moneyFinances: 'Financial empowerment through systematic transformation work. Create disciplined plan to eliminate debt, systematically research powerful investments, or structure financial psychology work. Small regular financial discipline combined with shadow work on money accumulates powerfully. Financial education in strategic wealth-building with psychological awareness pays off. Building prosperity through systematic financial transformation. Strategic empowered wealth.',
+    predictions: [
+      'Career opportunity in position of authority for those systematically building depth expertise',
+      'Financial strategy combining disciplined savings with strategic transformation works long-term',
+      'Relationship strengthens through committed regular shadow work or therapy you both commit to',
+      'Systematic research or depth study you pursue with discipline produces powerful results',
+      'Debt elimination plan or financial restructuring you create and follow systematically succeeds',
+      'Mentor in position of power offers guidance if you approach with demonstrated discipline',
+      'Family healing through structured therapy or committed depth work you initiate',
+      'You will learn that systematic transformation produces lasting empowerment',
+      'Professional project combining strategic planning with depth produces recognition',
+      'Opportunity to build power through combining disciplined structure with psychological depth'
+    ]
   }
 
 };
