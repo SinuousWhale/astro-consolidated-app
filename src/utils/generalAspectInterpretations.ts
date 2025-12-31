@@ -736,6 +736,135 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Social or romantic invitation if you\'ve been putting yourself out there',
       'You will learn that combining charm with initiative creates opportunities'
     ]
+  },
+
+  // ============================================================================
+  // JUPITER - SATURN ASPECTS (Major social/generational cycle ~20 years)
+  // ============================================================================
+
+  'Jupiter-Saturn-Conjunction': {
+    name: 'Jupiter Conjunction Saturn',
+    frequency: 'Occurs approximately every 20 years',
+    duration: '6-10 months',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'The Great Conjunction merges expansion with contraction, optimism with realism, growth with responsibility. This rare generational aspect marks major societal shifts and personal turning points where dreams must meet reality. You must balance hope with hard work, vision with practical planning, faith with discipline. Neither pure optimism nor pessimism works - mature, grounded expansion is required.',
+    loveRelationships: 'Relationship becomes serious and growth-oriented simultaneously. You may commit to partnership that also allows growth, or grow in ways that require more commitment. Optimism about love tempered by realistic expectations. Marriage or serious commitment possible if both expansion and responsibility are honored. Some relationships end if they prevent growth or lack commitment. Mature love that\'s both hopeful and realistic.',
+    familyHome: 'Family expansion (children, extended family) requires more responsibility and structure. Growing family needs practical planning and discipline. Or family limitations force you to grow in constrained circumstances. Balancing family freedom with family duty becomes essential. Home expansion or improvement requires realistic budgeting and patient work. Finding meaning in family responsibilities.',
+    businessCareer: 'Major career turning point where opportunity meets responsibility. Growth opportunity requires disciplined commitment to succeed. Or limited circumstances force innovative growth strategies. Best time in 20 years to start ambitious long-term career project if you\'re willing to work hard consistently. Promotion possible if you\'ve earned it. Career expansion must be structured and sustainable. Building something meaningful that lasts.',
+    moneyFinances: 'Financial growth through disciplined expansion. Investment opportunities require research and long-term commitment. Speculation must be grounded in reality. Or financial limitations force you to grow income through hard work and skill development. Best time to start building long-term wealth if you combine vision with discipline. Neither reckless optimism nor fearful contraction - wise, measured growth.',
+    predictions: [
+      'Major life opportunity appears that requires serious long-term commitment to fulfill',
+      'Career advancement possible if you\'ve built solid foundation through consistent work',
+      'Relationship becomes both more committed and more growth-oriented simultaneously',
+      'Financial investment or business venture succeeds through combining vision with discipline',
+      'Educational opportunity requires balancing optimism about learning with hard work required',
+      'You will learn to dream big but plan realistically',
+      'Family expansion or commitment brings both joy and responsibility',
+      'Long-term goal becomes achievable through patient, consistent effort',
+      'Authority figures may support your growth if you demonstrate maturity',
+      'Integration of hope and realism creates sustainable success over next 20 years'
+    ]
+  },
+
+  'Jupiter-Saturn-Opposition': {
+    name: 'Jupiter Opposition Saturn',
+    frequency: 'Occurs approximately once per 20-year cycle',
+    duration: '5-9 months',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Maximum tension between expansion and limitation, opportunity and obstacle, optimism and pessimism. Jupiter says "grow, take risks" while Saturn says "be cautious, work hard." This opposition forces you to find balance - neither reckless expansion nor fearful contraction works. Choose integration: grow responsibly, expand within realistic limits, dream but plan carefully. Crisis pushes maturity.',
+    loveRelationships: 'Relationship pulled between growth/freedom (Jupiter) and commitment/responsibility (Saturn). One partner may want expansion while other wants security. Or you feel torn between staying in committed relationship and pursuing personal growth opportunities. Neither abandoning commitment nor sacrificing all growth works. Integration requires growing together within committed framework. Mature compromises needed.',
+    familyHome: 'Family responsibilities (Saturn) conflict with desire for growth or adventure (Jupiter). Children need care when career opportunity beckons. Aging parents need help when you want to travel or study. Home repairs drain money you wanted for enrichment. Balancing family duty with personal expansion essential. Neither extreme works - find sustainable middle ground that honors both needs.',
+    businessCareer: 'Career tension between playing it safe (Saturn) and seizing growth opportunities (Jupiter). Stable job feels limiting but risky venture feels irresponsible. Or promotion opportunity requires more commitment than you want to give. Authority figures may resist your expansion plans. Success requires proving that growth can be responsible and discipline can enable expansion. Demonstrate your vision is grounded.',
+    moneyFinances: 'Financial tension between conservative saving (Saturn) and optimistic investing/spending (Jupiter). Fear of loss vs. faith in abundance. Investment opportunity that feels risky but promising requires careful evaluation. Or expenses for growth (education, travel) conflict with need to save. Balance required - neither hoarding nor gambling works. Verify opportunities thoroughly, then invest wisely in growth.',
+    predictions: [
+      'Major opportunity appears but requires more commitment or work than you anticipated',
+      'Relationship crisis between growth needs and commitment responsibilities forces maturity',
+      'Financial decision between safe option and growth opportunity requires careful evaluation',
+      'Career choice between security and expansion teaches you to find responsible middle ground',
+      'Family duty conflicts with personal growth goal - must honor both somehow',
+      'Authority figure blocks your expansion plans forcing you to prove your responsibility',
+      'Educational or travel opportunity conflicts with practical obligations',
+      'You will learn that true growth happens within structure, not by avoiding it',
+      'Optimism tested by reality but faith matures rather than dies',
+      'Integration of expansion and limitation creates sustainable long-term success'
+    ]
+  },
+
+  'Jupiter-Saturn-Trine': {
+    name: 'Jupiter Trine Saturn',
+    frequency: 'Occurs approximately twice per 20-year cycle',
+    duration: '4-7 months',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Harmonious flow between expansion and structure, opportunity and discipline. This is the aspect of building dreams into reality through patient work. Jupiter provides vision and opportunity, Saturn provides plan and persistence. Perfect time for ambitious projects that succeed through combining optimism with realism. Growth feels natural and sustainable. Work pays off. Luck favors the prepared.',
+    loveRelationships: 'Relationships grow stronger through both commitment and expansion. You can deepen commitment while still growing individually. Long-term relationship planning succeeds - marriage, buying house together, starting family. Mature love that\'s both stable and enriching. Partners support each other\'s growth within committed framework. Relationship becomes both anchor and launching pad. Realistic romantic dreams come true.',
+    familyHome: 'Family growth handled responsibly and successfully. Having children or expanding family goes smoothly with good planning. Home purchase or improvement succeeds through patient work and wise budgeting. Family provides both stability and growth opportunities. Balancing family duty with personal growth works naturally. Building family traditions and creating family legacy. Home becomes stable yet enriching environment.',
+    businessCareer: 'Excellent period for major career building. Hard work pays off with real advancement. Education or training leads to better position. Starting business succeeds if you\'ve planned well. Promotion or recognition comes from sustained effort. Mentors support your growth. Authority figures help rather than hinder. Building professional reputation that lasts. Career expansion on solid foundation. Patient effort yields substantial results.',
+    moneyFinances: 'Financial growth through wise planning and disciplined action. Investments chosen carefully pay off over time. Savings plans succeed through consistent contributions. Income increases through skill development and hard work. Building wealth slowly but surely. Financial risks calculated carefully work out well. Budget that funds both security and growth succeeds. Long-term financial goals become achievable through patient effort.',
+    predictions: [
+      'Career advancement or promotion comes from your sustained excellent performance',
+      'Long-term goal you\'ve been working toward patiently finally succeeds',
+      'Educational achievement or certification opens doors to better opportunities',
+      'Relationship commitment deepens while still allowing individual growth',
+      'Financial investment or savings plan shows solid returns from patient accumulation',
+      'Business or project you\'ve built carefully begins to thrive',
+      'Authority figure or mentor actively supports your growth and advancement',
+      'Home purchase or major improvement succeeds through wise planning',
+      'You will build something meaningful that provides both stability and growth',
+      'Integration of vision and discipline creates lasting success'
+    ]
+  },
+
+  'Jupiter-Saturn-Square': {
+    name: 'Jupiter Square Saturn',
+    frequency: 'Occurs approximately twice per 20-year cycle',
+    duration: '5-8 months',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Friction between expansion desires and practical limitations forces growth through challenge. Jupiter\'s optimism crashes into Saturn\'s reality checks. Opportunities appear but harder to achieve than expected. Limitations frustrate but force you to develop better strategies. This square teaches mature ambition - dream big but work hard, take risks but plan carefully, grow but within reality\'s constraints. Success through proving yourself.',
+    loveRelationships: 'Relationship growth blocked by practical obstacles or commitment fears. Want to expand relationship but money, time, or fear limits it. Or commitment feels limiting to growth. Frustration pushes you to either work harder for what you want or reconsider if it\'s realistic. Some relationships end if incompatible growth vs. security needs can\'t be reconciled. Others deepen through working through obstacles together. Love matures through challenge.',
+    familyHome: 'Family expansion desires meet practical limitations. Want children but money or timing problematic. Want larger home but can\'t afford it. Or family responsibilities limit your growth opportunities. Frustration forces creative solutions or acceptance of reality. Neither giving up dreams nor ignoring limits works. Must develop realistic plan and work patiently toward it. Family challenges teach resourcefulness.',
+    businessCareer: 'Career opportunity appears but harder to achieve than hoped. Promotion requires more work or qualifications than expected. Business idea needs more capital or preparation. Or established job limits growth causing frustration. Authority figures may seem to block advancement. Success requires proving yourself through consistent excellence, getting needed education, or building better plan. Work obstacles teach discipline and skill.',
+    moneyFinances: 'Financial growth blocked by lack of capital, debt, or unexpected expenses. Want to invest or expand but money is tight. Or risky opportunity appears when you should be conservative. Frustration forces you to work harder, earn more, budget better, or reconsider your approach. Neither reckless risk nor complete avoidance works. Develop solid plan and execute it patiently. Financial challenges teach wisdom.',
+    predictions: [
+      'Career goal proves harder to achieve than hoped - requires more work, time, or qualifications',
+      'Financial opportunity appears but lacks capital or has more risk than you realized',
+      'Relationship growth blocked by practical obstacles requiring creative problem-solving',
+      'Educational or travel plans delayed by money or responsibilities - patience needed',
+      'Business venture requires more work or resources than anticipated to succeed',
+      'You will learn to work harder and smarter when easy path is blocked',
+      'Authority figure criticism, though harsh, contains truth that helps you improve',
+      'Optimism tested by obstacles but perseverance develops into mature determination',
+      'Family expansion desires must wait or require more practical preparation',
+      'Integration crisis - you must develop realistic optimism and disciplined growth'
+    ]
+  },
+
+  'Jupiter-Saturn-Sextile': {
+    name: 'Jupiter Sextile Saturn',
+    frequency: 'Occurs approximately twice per 20-year cycle',
+    duration: '3-6 months',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Opportunity to blend growth with discipline through conscious effort. Not automatic like the trine - you must reach for it. Perfect time to start long-term growth projects, take calculated risks, or work toward ambitious goals through patient effort. Small consistent steps toward big dreams pay off. Doors open if you show up prepared and work hard. Opportunity favors those who combine vision with discipline.',
+    loveRelationships: 'Opportunity to strengthen relationship through small consistent efforts. Regular date nights, savings plan for future together, or relationship counseling to grow together. Won\'t happen automatically - requires initiative and follow-through. Can deepen commitment while respecting growth needs if both work at it. Small steps toward relationship goals succeed. Building partnership that\'s both stable and enriching takes effort but works.',
+    familyHome: 'Opportunity to improve family life through practical planning. Start college fund for children, create family routines that work, or begin home improvement project. Small consistent family investments pay off. Family harmony grows through combining structure with encouragement. Works if you take action - create the plan, start the fund, begin the project. Building stable yet growth-oriented family environment.',
+    businessCareer: 'Career growth opportunities appear if you\'ve been preparing for them. Networking, extra training, or professional development pay off. Won\'t fall in lap - must pursue actively and professionally. Small career moves toward bigger goals succeed. Mentorship opportunity if you seek it. Authority figures receptive if you demonstrate competence and commitment. Building career advancement through steady professional effort.',
+    moneyFinances: 'Financial growth through smart planning and consistent action. Start retirement fund, begin conservative investment program, or create realistic budget. Research opportunities then invest wisely. Small amounts saved or invested consistently accumulate well. Financial education in practical investing pays off. Building wealth requires effort but clear path exists. Take first steps toward financial goals.',
+    predictions: [
+      'Career opportunity appears if you\'ve been building skills and networking',
+      'Small consistent savings or investment plan you start now grows substantially over time',
+      'Relationship deepens through regular date nights or counseling you initiate',
+      'Educational class or certification you pursue opens career doors later',
+      'Financial plan combining security and growth works if you create and follow it',
+      'Mentor offers guidance if you seek it professionally and respectfully',
+      'Home improvement or family project succeeds through planning and steady work',
+      'You will learn that small disciplined steps toward big dreams actually work',
+      'Authority figure supports your initiative if you demonstrate preparedness',
+      'Opportunity to build something lasting if you combine vision with consistent effort'
+    ]
   }
 
 };
