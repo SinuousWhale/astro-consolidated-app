@@ -607,6 +607,135 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'You will release relationship or value system that\'s familiar but no longer authentic',
       'Growing toward new way of loving and valuing that feels destined even if uncomfortable'
     ]
+  },
+
+  // ============================================================================
+  // VENUS - MARS ASPECTS
+  // ============================================================================
+
+  'Venus-Mars-Conjunction': {
+    name: 'Venus Conjunction Mars',
+    frequency: 'Approximately every 2 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful.',
+    planet2Energy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    aspectMeaning: 'Venus and Mars unite, merging love with desire, attraction with pursuit, pleasure with passion. This is the classic lovers\' aspect - magnetic attraction, sexual chemistry, and the perfect blend of receptivity and assertion. Relationships heat up. Creative passion ignites. You know what you want and go after it with charm and confidence. Art meets action. Beauty seeks expression through bold creation.',
+    loveRelationships: 'Peak time for romance, attraction, and sexual chemistry. Single? You\'re magnetic - attraction is mutual and electric. Pursue who you want boldly but charmingly. In relationship? Passion reignites. Physical intimacy intensifies. Perfect time to seduce your partner or be seduced. Chemistry is undeniable. New relationships starting now have strong physical component. Romance and desire beautifully balanced.',
+    familyHome: 'Creative projects at home succeed beautifully. Decorating or beautifying space with energetic action works well. Family dynamics benefit from combining assertiveness with charm. Some family passion or conflict around values, money, or relationships - address it directly but diplomatically. Good time for family creative projects or active enjoyment together.',
+    businessCareer: 'Excellent for work combining creativity with action - design, sales, entertainment, beauty industry, athletics, or anything requiring both artistic vision and competitive drive. Charm and assertiveness make you magnetic to clients and bosses. Perfect time to pursue what you want at work boldly. Creative passion translates into productive action.',
+    moneyFinances: 'Money opportunities through combining charm with initiative. Sales, creative work, or beautification services generate income. Spending on pleasure or beauty feels right but don\'t overspend on impulse. Financial assertiveness combined with social grace succeeds. Good time to negotiate raise charmingly but firmly. Money flows through passion and creative action.',
+    predictions: [
+      'Powerful attraction to someone - chemistry is immediate and mutual',
+      'Creative project you\'re passionate about comes together beautifully',
+      'Existing relationship passion reignites through bold romantic gesture',
+      'Sales, negotiation, or persuasion succeeds through charm plus confidence',
+      'Purchase or indulgence brings genuine pleasure and satisfaction',
+      'Artistic or creative work benefits from decisive action and energy',
+      'You will pursue what you want romantically and succeed',
+      'Physical chemistry and sexual attraction peak',
+      'Money opportunity through creative, passionate, or beautifying work',
+      'Perfect balance of giving and taking, receiving and pursuing in love'
+    ]
+  },
+
+  'Venus-Mars-Opposition': {
+    name: 'Venus Opposition Mars',
+    frequency: 'Approximately once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful.',
+    planet2Energy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    aspectMeaning: 'Venus and Mars stand opposite, creating magnetic tension between desire and values, passion and harmony, assertion and accommodation. Attraction is strong but challenging - what you want vs. what feels good, pursuing vs. receiving. Relationships face push-pull dynamic. Creative tension is productive if balanced, exhausting if extremes. Integration requires honoring both planets.',
+    loveRelationships: 'Attraction mixed with friction. Strong chemistry but different wants or values create tension. One partner wants action while other wants harmony. Sexual attraction intense but timing or approach differs. Arguments about giving vs. taking, independence vs. togetherness. This isn\'t bad - it\'s passion showing itself through contrast. Balance assertiveness with receptivity. Neither dominance nor passivity - equal partnership.',
+    familyHome: 'Family conflicts about values, money, beauty, or action likely. You want to beautify home but others want different action. Money disagreements about spending on pleasure vs. other priorities. Creative vision for family meets resistance. Neither force your will nor accommodate everyone - find middle ground that honors all needs.',
+    businessCareer: 'Work tension between creative vision and aggressive execution. Your artistic approach may clash with others\' direct methods, or vice versa. Sales or client work requires balancing charm with assertiveness - too much of either fails. Competition in beauty, creative, or relationship-based fields. Use tension productively - contrast creates interest.',
+    moneyFinances: 'Financial tension between spending on pleasure (Venus) and investing in action or goals (Mars). Money conflicts with partner possible. Impulsive spending on beauty or pleasure vs. saving for active pursuits. Neither extreme works - budget for both pleasure and action. Financial assertiveness balanced with grace succeeds better than either alone.',
+    predictions: [
+      'Attraction to someone challenging - chemistry mixed with friction',
+      'Relationship argument that actually increases passion if resolved well',
+      'Creative project requires balancing artistic vision with decisive action',
+      'Money disagreement with partner about spending priorities',
+      'You must assert yourself diplomatically - neither aggressive nor passive',
+      'Sexual tension or timing differences with partner require communication',
+      'Competition or conflict in creative or relationship arena pushes you to improve',
+      'Purchase decision between beautiful option and practical action',
+      'You will learn to balance receiving and pursuing, harmony and assertion',
+      'Productive tension creates better result than either approach alone would'
+    ]
+  },
+
+  'Venus-Mars-Trine': {
+    name: 'Venus Trine Mars',
+    frequency: 'Approximately twice per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful.',
+    planet2Energy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    aspectMeaning: 'Venus and Mars flow harmoniously together, creating effortless attraction, natural passion, and easy balance between giving and taking. This is grace meeting courage, beauty meeting action. Romance flows easily. Creative projects manifest smoothly. You pursue what you want charmingly. Physical energy and aesthetic sense align perfectly. Attraction is mutual and comfortable.',
+    loveRelationships: 'Romance and relationships flow beautifully. Attraction is natural and reciprocated. Dating goes smoothly - you know how to pursue charmingly and receive graciously. Sexual chemistry is easy and satisfying. Giving and taking balance naturally. Perfect time for romantic dates, honest conversations, or physical intimacy. Existing relationships find renewed harmony between independence and togetherness.',
+    familyHome: 'Family harmony achieved through balanced assertiveness and accommodation. Home beautification projects proceed smoothly with everyone\'s energy aligned. Creative family activities bring joy and connection. Money decisions about home improvements or family pleasures made easily. Good time for family gatherings combining beauty, pleasure, and active enjoyment.',
+    businessCareer: 'Excellent flow in work combining creativity and action. Design, sales, entertainment, beauty, athletics - all succeed through natural integration of vision and execution. Charm and confidence work together to advance career. Client relationships thrive. Creative passion translates effortlessly into productive work. Perfect time to pursue career goals in artistic or people-oriented fields.',
+    moneyFinances: 'Money flows through work you enjoy that also energizes you. Creative efforts, sales, beautification services, or active pursuits generate income easily. Spending on both pleasure and action feels balanced and right. Financial decisions made smoothly. Income from combining charm with initiative. Money and enjoyment align naturally.',
+    predictions: [
+      'Romance or date goes smoothly with natural chemistry and easy conversation',
+      'Creative project flows effortlessly from vision to completion',
+      'Sales, negotiation, or persuasion succeeds through natural charm and confidence',
+      'Physical activity or athletic pursuit brings both pleasure and achievement',
+      'Relationship finds perfect balance of passion and harmony',
+      'Purchase brings genuine satisfaction without buyer\'s remorse',
+      'Work project combining creativity and action succeeds beautifully',
+      'You pursue what you want and it comes to you easily',
+      'Sexual chemistry flows naturally and satisfies both partners',
+      'Money earned through work you genuinely enjoy and feel energized by'
+    ]
+  },
+
+  'Venus-Mars-Square': {
+    name: 'Venus Square Mars',
+    frequency: 'Approximately twice per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful.',
+    planet2Energy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    aspectMeaning: 'Venus and Mars clash, creating friction between what you want and how you pursue it, between pleasure and action, harmony and assertion. Desire is strong but expression is awkward. Timing feels off. Too aggressive or too passive - finding balance is the challenge. This square forces you to mature how you pursue what you want and create what you value. Productive friction if you work with it.',
+    loveRelationships: 'Attraction exists but pursuit is clumsy or timing is off. Come on too strong or not strong enough. Want romance but act aggressively, or want passion but act too accommodating. Relationship tension between what each person wants and how they\'re asking for it. Arguments about sex, money, values, or independence. Learn to assert desires without demands, to accommodate without erasing yourself.',
+    familyHome: 'Family friction about money, values, beauty, or action. Disagreements about home improvements - you want beautification but family wants different action. Creative vision meets resistance or criticism. Money conflicts about pleasure spending. Neither force your will aggressively nor accommodate resentfully. Express what you want clearly but hear others too.',
+    businessCareer: 'Work frustration between creative vision and execution challenges. Timing feels off. Client or boss wants different approach than what feels right to you. Sales or persuasion requires recalibrating - too pushy or too passive, find right pressure. Creative blocks from trying too hard or not trying hard enough. Success requires adjusting your approach, not abandoning your vision.',
+    moneyFinances: 'Financial friction between pleasure spending and active pursuits. Impulse purchases don\'t satisfy as expected. Want to spend on beauty but angry you can\'t afford it. Earning requires more aggressive action than feels comfortable, or charm isn\'t enough without push. Budget tension about allocating money. Learn realistic financial assertiveness - neither reckless nor deprived.',
+    predictions: [
+      'Romantic pursuit that\'s awkward but teaches you better approach',
+      'Argument with partner about sex, money, or values leads to clearer communication',
+      'Purchase that seems desirable proves disappointing - teaches discernment',
+      'Creative project frustrated by poor execution - requires refining your process',
+      'Financial decision between pleasure and action creates tension - budget for both',
+      'Sales or negotiation fails from wrong approach - too aggressive or too accommodating',
+      'Attraction to someone inappropriate or poorly timed teaches you about your desires',
+      'You will learn to assert what you want without aggression',
+      'Work requires balancing artistic vision with practical action',
+      'Relationship growth through navigating friction between independence and connection'
+    ]
+  },
+
+  'Venus-Mars-Sextile': {
+    name: 'Venus Sextile Mars',
+    frequency: 'Approximately twice per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, beauty, pleasure, values, attraction, relationships, harmony, and what brings joy. It\'s how you love, what you value, and what you find beautiful.',
+    planet2Energy: 'Mars represents action, drive, passion, assertiveness, courage, anger, physical energy, and the warrior spirit. It\'s how you pursue what you want, assert your will, and take initiative.',
+    aspectMeaning: 'Venus and Mars create supportive opportunity to blend attraction with action, pleasure with pursuit. Not automatic like the trine - requires conscious effort, but rewards it. Perfect time to take initiative in romance, combine creativity with action, or pursue what brings you joy. Opportunities arise if you reach for them. Charm plus confidence opens doors.',
+    loveRelationships: 'Good opportunity for romance if you take action. Make the first move, plan a special date, or express attraction directly. Chemistry is there but won\'t develop without initiative. Existing relationships improve through small efforts - romantic gesture, honest conversation, or physical affection. Sexual connection deepens if you initiate. Balance of giving and taking works if both participate.',
+    familyHome: 'Opportunity to improve family harmony or home beauty through small active efforts. Start decorating project, initiate family activity, or address relationship friction directly but kindly. Money decisions about home or family made cooperatively. Good time to combine aesthetic vision with practical action at home. Works if you take the step.',
+    businessCareer: 'Career opportunities in creative, people-oriented, or aesthetically focused work if you pursue them actively. Network in your field, pitch your ideas, or take initiative on projects combining creativity and action. Sales, design, entertainment, beauty fields favor action now. Charm plus confidence gets you noticed. Follow through on opportunities.',
+    moneyFinances: 'Financial opportunities through combining pleasure with productivity. Side income from creative work, sales, or beautification services if you pursue it. Good time to ask for raise diplomatically but confidently. Spending on both pleasure and productive pursuits feels balanced. Small financial initiatives toward what you value pay off.',
+    predictions: [
+      'Romantic opportunity if you make the first move or accept invitation',
+      'Creative project succeeds if you take concrete action steps',
+      'Sales or networking opportunity opens if you show up and engage',
+      'Small romantic gesture you initiate improves relationship significantly',
+      'Purchase of something beautiful and useful brings satisfaction',
+      'Initiative in creative or people-oriented work gets recognized',
+      'Physical activity you enjoy also improves your health or appearance',
+      'Money opportunity through work you find both pleasant and energizing',
+      'Social or romantic invitation if you\'ve been putting yourself out there',
+      'You will learn that combining charm with initiative creates opportunities'
+    ]
   }
 
 };
