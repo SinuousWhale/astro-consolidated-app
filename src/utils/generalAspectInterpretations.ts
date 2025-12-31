@@ -994,6 +994,135 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Progressive idea you present to authority figure gets supportive reception',
       'Opportunity to expand life through innovation if you combine wisdom with authentic action'
     ]
+  },
+
+  // ==========================================
+  // JUPITER-NEPTUNE ASPECTS (All 5)
+  // ==========================================
+
+  'Jupiter-Neptune-Conjunction': {
+    name: 'Jupiter Conjunction Neptune',
+    frequency: 'Occurs approximately every 13 years',
+    duration: '6-10 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Mystical expansion and spiritual abundance! This rare conjunction merges Jupiter\'s growth with Neptune\'s transcendence, creating profound spiritual awakening, divine guidance, inspired creativity, and compassionate expansion. Faith deepens into mystical knowing, abundance flows through surrender, and dreams manifest through belief. The veil thins - expect synchronicities, spiritual breakthroughs, inspired visions, and connection to something greater. Compassion and creativity flourish. Beware: illusions about opportunities or excessive idealism possible. Trust intuition but verify facts.',
+    loveRelationships: 'Deeply romantic and spiritually connected relationship experiences. May meet soulmate or twin flame connection. Existing relationship reaches transcendent depths through vulnerability and spiritual sharing. Unconditional love and compassion flourish. Idealization of partner possible - see them clearly. Romantic dreams come true but stay grounded. Spiritual growth through partnership. Artistic or creative collaboration deepens bond. Forgiveness and surrender heal wounds. Divine timing in love.',
+    familyHome: 'Family life blessed with compassion, forgiveness, and spiritual connection. Home becomes sanctuary for creativity and meditation. Family healing through empathy and understanding. May welcome family member through adoption or spiritual means. Creative projects beautify home. However, boundary issues possible - compassion with clarity needed. Fantasy about family perfection vs. reality. Spiritual practices strengthen family bonds. Unconditional love expressed.',
+    businessCareer: 'Career expansion through creative, spiritual, or compassionate work! Perfect time to launch artistic venture, healing practice, or mission-driven business. Teaching spiritual wisdom or creative arts flourishes. International or cross-cultural work expands. Inspired vision guides career. However, verify business details - confusion or deception possible. Dream big but check contracts. Abundance through service and creativity. Work feels meaningful and inspired.',
+    moneyFinances: 'Financial abundance through faith, creativity, or spiritual work. Money flows through inspired action and divine timing. Generosity attracts more. Investments in art, spirituality, or compassionate ventures. However, financial illusions possible - verify before investing. Confusion about money or unrealistic expectations. Don\'t give money to questionable schemes. Abundance real if grounded. Wealth through inspired service. Trust but verify.',
+    predictions: [
+      'Profound spiritual awakening or mystical experience opens new dimension of consciousness',
+      'Creative inspiration flows abundantly - perfect time for artistic or imaginative projects',
+      'You may meet deeply spiritual person or soulmate connection that feels divinely guided',
+      'Compassionate service or healing work expands - you help many through empathy',
+      'Financial opportunity through creative or spiritual means - but verify all details',
+      'Dreams, visions, or synchronicities provide genuine guidance and inspiration',
+      'Career takes more meaningful direction toward service, creativity, or spirituality',
+      'You will learn to trust divine timing while staying grounded in practical reality',
+      'Boundary confusion or idealization of opportunity requires discernment',
+      'Faith and imagination combine to manifest beautiful dreams into reality'
+    ]
+  },
+
+  'Jupiter-Neptune-Opposition': {
+    name: 'Jupiter Opposition Neptune',
+    frequency: 'Occurs approximately every 13 years (midpoint of Jupiter-Neptune cycle)',
+    duration: '6-10 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Tension between faith and illusion, optimism and escapism, wisdom and confusion. Pulled between expansive growth and dissolving boundaries, concrete opportunity and intangible dreams, philosophical truth and mystical mystery. Must integrate both - neither pure logic nor pure fantasy works. The opposition demands discernment between genuine spiritual insight and deceptive illusion, real opportunity and false promise. Growth requires faith AND clarity. Expansion needs inspiration AND grounding.',
+    loveRelationships: 'Tension between romantic idealization and relationship reality. May project fantasy onto partner or feel disillusioned when they\'re human. Drawn between authentic commitment and escapist romance. Must balance spiritual connection with practical partnership. Compassion essential but boundaries also needed. May struggle between deep soulmate feeling and concerning red flags. Integration: honor spiritual connection while seeing partner clearly. Neither cynicism nor idealization - compassionate realism.',
+    familyHome: 'Tension between family ideals and reality. May feel disappointed family doesn\'t match dream. Torn between self-sacrifice for family and own spiritual needs. Balancing compassion with healthy boundaries challenging. Family member\'s issues require wisdom not enabling. Must honor both family connection and individual spiritual path. Integration: create family life that\'s both grounded and spiritually nourishing. Neither martyrdom nor escape - loving presence with clarity.',
+    businessCareer: 'Career tension between inspired vision and practical reality. Dream job may have concerning aspects. Spiritual calling may conflict with financial needs. Must balance meaningful work with realistic income. May face deception in business - trust but verify. Torn between faith in venture and legitimate concerns. Integration: pursue inspired work while protecting yourself practically. Neither pure idealism nor cynicism - wise faith.',
+    moneyFinances: 'Financial tension between abundance faith and realistic assessment. May over-extend based on optimistic assumptions or spiritual beliefs about money. Alternatively, may miss real opportunities through excessive caution. Investment that seems blessed may have hidden issues. Must balance faith with due diligence. Integration: trust divine abundance while checking facts thoroughly. Neither gambling on faith nor blocking blessings - discerning openness.',
+    predictions: [
+      'You face choice between inspiring opportunity and practical concerns - investigate thoroughly',
+      'Romantic attraction feels spiritually significant but may involve idealization or projection',
+      'Financial opportunity requires careful verification - some details don\'t add up',
+      'Career vision inspires you but implementation needs grounding in realistic planning',
+      'You will learn difference between genuine intuition and wishful thinking',
+      'Family situation requires both compassion and boundaries - neither guilt nor detachment',
+      'Spiritual teaching or opportunity needs discernment - trust inner wisdom not charisma',
+      'Creative project inspires you but needs practical structure to succeed',
+      'You learn that faith AND wisdom are both necessary for true expansion',
+      'Integration of spiritual ideals with practical reality creates genuine growth'
+    ]
+  },
+
+  'Jupiter-Neptune-Trine': {
+    name: 'Jupiter Trine Neptune',
+    frequency: 'Occurs approximately 2-3 times during the 13-year Jupiter-Neptune cycle',
+    duration: '4-8 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Effortless spiritual expansion and blessed abundance! Growth and transcendence flow naturally together. Miracles, synchronicities, and divine guidance happen with ease. Perfect time for spiritual practices, creative projects, compassionate service, and faith-based ventures. The universe supports your dreams. Inspiration feels natural, abundance seems destined, and spiritual paths feel right. Trust divine timing and follow inspired guidance. Creativity and compassion aligned. Grace flows.',
+    loveRelationships: 'Beautiful romantic and spiritual connection flows naturally! May meet soulmate through perfect timing. Existing relationship deepens through spiritual sharing and unconditional love. Forgiveness and compassion heal easily. Creative or artistic collaboration brings joy. Romantic dreams manifest effortlessly. Both partners grow spiritually through love. Boundaries healthy, connection deep. Relationship feels blessed and divinely guided. Unconditional love expressed naturally.',
+    familyHome: 'Family life blessed with harmony, creativity, and spiritual connection! Family healing happens naturally through forgiveness. Home becomes beautiful sanctuary. May expand family through joyful means. Creative projects or spiritual practices unite family. Compassion and understanding flow easily. Family member experiences positive breakthrough. Home improvements inspired and successful. Generational healing. Family feels like blessing.',
+    businessCareer: 'Career expansion through creative or spiritual work flows beautifully! Perfect time to launch artistic venture, healing practice, or meaningful business. Inspired ideas succeed naturally. Teaching or sharing wisdom flourishes. International opportunities appear easily. Work feels purposeful and abundant. Creative recognition. Career aligns with soul purpose effortlessly. Meaningful success through authentic service. Abundance through inspired action.',
+    moneyFinances: 'Financial blessings and abundance flow naturally! Money comes through creative work, spiritual service, or perfect timing. Generous spirit attracts more. Investments in meaningful ventures succeed. Financial intuition accurate. Abundance through faith and inspired action. Giving and receiving balanced beautifully. Wealth through purposeful work. Financial dreams manifest. Divine providence real and tangible.',
+    predictions: [
+      'Spiritual breakthrough or mystical experience happens naturally and transforms perspective',
+      'Creative project flows with inspiration and gains recognition or success',
+      'Soulmate connection or deep spiritual friendship enters life through perfect timing',
+      'Financial abundance flows through inspired creative or spiritual work',
+      'Compassionate service expands naturally - helping others brings joy and meaning',
+      'Dream or vision provides accurate guidance that leads to positive opportunity',
+      'Career opportunity aligns perfectly with soul purpose and brings both meaning and abundance',
+      'Family healing happens through natural forgiveness and compassionate understanding',
+      'Artistic or creative talents flourish - perfect time to share gifts with world',
+      'Faith in divine timing proven accurate as blessings unfold effortlessly'
+    ]
+  },
+
+  'Jupiter-Neptune-Square': {
+    name: 'Jupiter Square Neptune',
+    frequency: 'Occurs approximately 3-4 times during the 13-year Jupiter-Neptune cycle',
+    duration: '4-8 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Inspired growth through creative tension between faith and illusion! The square creates friction between expansion and dissolution, forcing discernment through discomfort. May be overly optimistic, idealistic, or confused about opportunities. Spiritual bypassing or escapism tempting. However, the tension also produces profound creativity, deepened faith, and refined intuition. The challenge: pursue dreams with eyes open, expand with discernment, believe but verify. Friction refines ability to distinguish genuine inspiration from wishful thinking.',
+    loveRelationships: 'Romantic idealization or confusion creates growth challenges. May fall for fantasy of person rather than reality. Spiritual connection feels strong but practical incompatibilities exist. Tempted to ignore red flags through compassion or hope. However, stagnant relationships DO need more romance and spiritual depth. The key: bring inspiration to partnership while staying honest about issues. Love with eyes open. Neither cynicism nor fantasy - compassionate clarity. Growth through honest romantic discernment.',
+    familyHome: 'Family idealism or boundary confusion creates tension. May sacrifice too much for family or enable rather than help. Alternatively, may escape family through spirituality or fantasy. Home renovation ideas may be unrealistic or confusing. However, family DOES need more compassion and creativity. The key: serve family from wholeness not martyrdom. Compassion with boundaries. Neither enabling nor abandoning - present clarity. Family healing through grounded spirituality.',
+    businessCareer: 'Career confusion or over-optimism drives necessary learning. Business opportunity may seem more promising than reality. Spiritual calling may lack practical foundation. May be deceived or self-deceived about venture. However, career DOES need more meaning and inspiration. The key: ground inspired vision in realistic planning. Verify all details. Neither pure fantasy nor giving up on dreams - wise faith. Career breakthrough through discerning inspiration.',
+    moneyFinances: 'Financial over-optimism or confusion possible. May invest based on hope rather than research. Spiritual beliefs about abundance may bypass practical financial planning. Confusing money situation or deceptive opportunity. However, financial approach MAY need more faith and generosity. The key: trust abundance while checking facts thoroughly. Neither reckless faith nor fearful hoarding - wise generosity. Financial growth through grounded spiritual prosperity.',
+    predictions: [
+      'You feel drawn to opportunity that seems divinely guided - but verify all details first',
+      'Romantic attraction feels like soulmate but may involve idealization or projection',
+      'Financial investment or spiritual venture requires more research than you think',
+      'Career opportunity inspiring but practical concerns valid - investigate thoroughly',
+      'You will learn to distinguish genuine intuition from wishful thinking',
+      'Spiritual teaching or guru charismatic but requires discernment - trust yourself',
+      'Creative project needs grounding in reality to manifest successfully',
+      'Family situation requires compassion AND boundaries - both simultaneously',
+      'Confusion or disappointment ultimately refines your spiritual discernment',
+      'Growth happens through pursuing inspired dreams while staying practically grounded'
+    ]
+  },
+
+  'Jupiter-Neptune-Sextile': {
+    name: 'Jupiter Sextile Neptune',
+    frequency: 'Occurs approximately 2-3 times during the 13-year Jupiter-Neptune cycle',
+    duration: '3-6 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, dreams, compassion, imagination, illusion, and divine connection. It dissolves boundaries and merges with the infinite.',
+    aspectMeaning: 'Opportunity for spiritual expansion through conscious initiative! Not automatic like the trine - you must reach for inspired possibilities. Perfect time to begin spiritual practices, creative projects, compassionate service, or faith-based ventures. Doors to transcendence and abundance open if you knock. Small inspired steps toward big dreams pay off. Opportunity favors those who combine faith with action, dreams with initiative. Grace available but requires participation.',
+    loveRelationships: 'Opportunity to deepen relationship spiritually if you initiate it. Suggest meditation together, attend spiritual event, or share creative project. Won\'t happen automatically - requires vulnerable sharing. Can strengthen bond through compassion and forgiveness if both participate. Small romantic gestures or spiritual conversations deepen intimacy. Building relationship that\'s both grounded and soulful takes effort but works beautifully.',
+    familyHome: 'Opportunity to improve family life through creative or spiritual approaches. Start family meditation, introduce artistic activities, or create beautiful home space. Small changes toward more compassionate family expression pay off. Family harmony grows through combining practical care with spiritual awareness. Works if you take action - create the ritual, start the conversation, beautify the space. Building family environment that\'s both functional and inspired.',
+    businessCareer: 'Career growth opportunities through meaningful or creative work if you pursue them. Perfect time to pitch inspired idea, propose artistic project, or network in spiritual/creative communities. Won\'t fall in lap - must demonstrate vision and initiative. Small career moves toward more purposeful work succeed. Mentorship in creative field if you seek it. Authority figures receptive to well-presented inspired ideas. Building career through service and creativity.',
+    moneyFinances: 'Financial growth through smart spiritual/creative investing and conscious action. Research socially responsible investments then commit wisely. Start side income through creative or healing skills. Learn about values-based financial planning. Small amounts invested in meaningful ventures accumulate well. Financial education in ethical prosperity pays off. Building wealth through purpose-driven choices. Take first inspired steps.',
+    predictions: [
+      'Career opportunity in creative or spiritual field appears for those actively developing talents',
+      'Small investment in meaningful venture or values-based fund you research grows over time',
+      'Relationship deepens through spiritual conversation or creative activity you initiate',
+      'Class, retreat, or workshop in spirituality or arts you attend opens doors later',
+      'Financial strategy combining abundance mindset with practical planning works if you create it',
+      'Mentor in creative or spiritual field offers guidance if you reach out with sincere interest',
+      'Family ritual or creative project you suggest brings beauty and deeper connection',
+      'You will learn that inspired action produces results - dreams need doing',
+      'Spiritual practice or creative hobby you begin now becomes ongoing source of growth',
+      'Opportunity to expand life meaningfully if you combine faith with conscious initiative'
+    ]
   }
 
 };
