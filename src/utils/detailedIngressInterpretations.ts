@@ -1533,6 +1533,310 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Charitable giving or service to others returns to you multiplied',
       'You learn that growth comes through faith, compassion, creativity, surrender, and spiritual connection'
     ]
+  },
+
+  // ============================================================================
+  // SATURN INGRESSES - Mastery, discipline, responsibility (~2.5 years per sign)
+  // ============================================================================
+
+  'Saturn-Aries': {
+    name: 'Saturn Ingress Aries',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Aries represents boldness, initiative, independence, courage, action, and pioneering spirit. It\'s the energy of self-assertion, leadership, new beginnings, and direct action.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Aries brings mastery through bold initiative, disciplined action, and mature independence. This cycle requires you to build lasting leadership, develop courageous self-reliance, and master the art of strategic action. You must learn to assert yourself with wisdom, take initiative with responsibility, and pioneer with patience. This is about developing mature courage, disciplined boldness, and sustainable self-assertion. Structure meets fire, patience meets action.',
+    loveRelationships: 'Romance matures through honest assertion, independent commitment, and courageous vulnerability. Relationships require direct communication, personal responsibility, and mutual respect for individuality. You learn to love with strength yet wisdom, passion yet patience. Long-term partnerships deepen through shared initiative, adventurous commitment, and mature honesty. Dating becomes more direct and purposeful. You attract partners who value courage, independence, and authentic self-expression. Commitment requires both passion and responsibility.',
+    familyHome: 'Family responsibility requires leadership, independence, and mature initiative. Home life needs structure yet spontaneity, discipline yet adventure. You may take on family leadership roles, establish new family traditions, or pioneer new living arrangements. Responsibility for aging parents or younger family members requires courageous action. Home improvements favor bold projects with long-term value. Family relationships mature through honest boundaries and direct communication. You learn to balance independence with family commitment.',
+    businessCareer: 'Major career development through disciplined leadership, strategic initiative, and mature boldness. Professional success requires courage plus patience, action plus planning, independence plus responsibility. You may pioneer new career directions, start your own business, or take on significant leadership roles. Authority comes through demonstrated competence and courageous decision-making. Career advancement requires sustained effort over the full 2.5 years. Professional reputation builds through reliable initiative and strategic action. Entrepreneurship favored with proper planning.',
+    moneyFinances: 'Financial mastery through disciplined action, strategic investment, and independent money management. Money requires bold decisions with careful planning, initiative with responsibility. You learn to invest in yourself with wisdom, take calculated financial risks, and build sustainable income through entrepreneurial effort. Financial independence becomes priority. Budget discipline supports bold financial moves. Long-term wealth builds through patient action and strategic positioning. Financial lessons teach that courage without wisdom is reckless, but wisdom without courage leads nowhere.',
+    predictions: [
+      'You initiate a major 2.5-year project or commitment that requires sustained courage and effort',
+      'Leadership opportunity or responsibility tests your ability to balance boldness with wisdom',
+      'Financial independence becomes urgent priority, leading to disciplined action plan',
+      'Relationship or partnership requires more honest assertion and mature boundaries',
+      'Career advancement comes through pioneering initiative backed by solid preparation',
+      'Physical discipline (fitness, martial arts, athletics) becomes important for confidence building',
+      'You learn to say "no" with strength yet grace, establishing healthy boundaries',
+      'Major decision requires both courage to act and wisdom to plan strategically',
+      'Independence achieved through sustained effort rather than impulsive action',
+      'You master the art of being both bold and responsible, passionate yet patient'
+    ]
+  },
+
+  'Saturn-Taurus': {
+    name: 'Saturn Ingress Taurus',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Taurus represents stability, security, material comfort, sensory pleasure, values, and persistence. It\'s the energy of building, maintaining, enjoying physical reality, and valuing quality over quantity.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Taurus brings mastery through patient building, disciplined finances, and mature values. This cycle requires you to establish solid foundations, develop financial discipline, and build lasting material security. You must learn what has real value versus temporary pleasure, practice sustainable abundance, and commit to quality over quantity. This is about developing financial maturity, building enduring resources, and mastering the physical world through patience and persistence.',
+    loveRelationships: 'Romance matures through stability, loyalty, consistent affection, and shared values. Relationships require demonstration of commitment through actions not just words, financial responsibility, and building together toward security. You learn to love with patience, provide steadily, and value quality connection over quantity of romance. Long-term partnerships deepen through shared financial planning, creating comfortable home together, and consistent reliability. Dating becomes more practical and value-focused. You attract partners who are stable, reliable, and financially responsible. Commitment means building something tangible together.',
+    familyHome: 'Family responsibility centers on financial security, stable home environment, and material provision. Home life needs solid foundation, comfortable environment, and financial discipline. You may purchase property, make lasting home improvements, or take on financial responsibility for family. Building family wealth or managing family resources becomes important. Home becomes sanctuary requiring investment and maintenance. Family relationships mature through shared values and practical support. You learn to provide steadily and create lasting security for loved ones.',
+    businessCareer: 'Major career development through patient building, financial acumen, and demonstrable value creation. Professional success requires persistence, quality work, practical skills, and long-term vision. You may build your own business slowly but surely, develop valuable expertise, or create tangible professional assets. Authority comes through proven competence and reliable performance. Career advancement is gradual but solid over the full 2.5 years. Professional reputation builds through consistent quality and financial wisdom. Finance, real estate, agriculture, art, or luxury goods sectors favored.',
+    moneyFinances: 'Financial mastery through disciplined saving, strategic investing, and building lasting wealth. Money requires patience, conservative approach, and long-term thinking. You learn to budget rigorously, invest in tangible assets (real estate, precious metals, quality goods), and build sustainable income streams. Financial security becomes top priority. Debt reduction essential. Long-term wealth builds through compound growth and patient accumulation. Financial lessons teach that slow and steady wins, quality beats quantity, and real wealth comes from what you keep not what you earn.',
+    predictions: [
+      'You commit to serious 2.5-year financial plan (debt elimination, savings goal, investment strategy)',
+      'Major purchase or investment in tangible asset (home, land, business, quality goods) that lasts',
+      'Career shift toward more stable, financially rewarding, or materially productive work',
+      'Relationship or partnership requires more financial responsibility and practical commitment',
+      'You develop valuable skill or expertise that becomes long-term income source',
+      'Budget discipline becomes non-negotiable, leading to significant financial progress',
+      'Physical health requires attention to diet, exercise, or chronic conditions - body demands respect',
+      'You learn to distinguish between what has real value versus what merely looks good',
+      'Property matter (purchase, sale, improvement, management) becomes significant focus',
+      'You master the art of building slowly but surely, valuing quality, and creating lasting security'
+    ]
+  },
+
+  'Saturn-Gemini': {
+    name: 'Saturn Ingress Gemini',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Gemini represents communication, learning, curiosity, versatility, connection, and information exchange. It\'s the energy of thinking, speaking, writing, learning, networking, and intellectual exploration.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Gemini brings mastery through disciplined communication, structured learning, and mature thinking. This cycle requires you to develop mental discipline, improve communication skills, and build lasting knowledge. You must learn to think critically yet thoroughly, speak with authority yet clarity, and commit to intellectual growth. This is about developing mental maturity, mastering communication, and building intellectual credibility through focused study and practice.',
+    loveRelationships: 'Romance matures through honest communication, intellectual connection, and meaningful conversation. Relationships require clear communication, mental compatibility, and shared learning. You learn to love through words that matter, conversations that deepen, and mental stimulation that endures. Long-term partnerships deepen through improved communication skills, shared intellectual interests, and mature dialogue. Dating becomes more communication-focused. You attract partners who value intelligence, honesty, and good conversation. Commitment requires both mental connection and verbal clarity.',
+    familyHome: 'Family responsibility centers on communication, education, and sibling relationships. Home life needs better communication systems, space for learning, and intellectual stimulation. You may take responsibility for siblings, support family education, or improve family communication. Relationship with siblings may mature or require attention. Home becomes learning environment or communication hub. Family relationships mature through clearer communication and shared learning. You learn to communicate family needs clearly and listen more carefully.',
+    businessCareer: 'Major career development through communication mastery, educational credentials, or information expertise. Professional success requires writing skills, public speaking, teaching ability, or technical knowledge. You may pursue advanced education, develop training programs, master new technology, or build communication-based career. Authority comes through demonstrated expertise and clear communication. Career advancement requires intellectual discipline over the full 2.5 years. Professional reputation builds through published work, teaching, or thought leadership. Writing, teaching, media, technology, or sales sectors favored.',
+    moneyFinances: 'Financial mastery through information, communication skills, and intellectual assets. Money comes through teaching, writing, consulting, speaking, or knowledge work. You learn to monetize your mind, sell your expertise, and build income through intellectual property. Financial planning requires research and education. Multiple income streams favored over single source. Long-term wealth builds through developed expertise and communication platforms. Financial lessons teach that knowledge is profitable, information has value, and clear communication attracts opportunities.',
+    predictions: [
+      'You commit to major educational goal (degree, certification, skill mastery) requiring 2.5 years of focused study',
+      'Writing project (book, blog, course, publication) becomes serious long-term commitment',
+      'Communication skills dramatically improve through practice, training, or professional necessity',
+      'Relationship with sibling matures or requires increased responsibility and better communication',
+      'Career advancement tied to teaching, writing, public speaking, or demonstrating expertise',
+      'You develop intellectual discipline - less scattered thinking, more focused learning and mastery',
+      'Social media or online presence becomes professional asset requiring strategic management',
+      'Important contract, negotiation, or agreement requires careful wording and clear communication',
+      'You learn to think before speaking, commit to truth over gossip, and value quality information',
+      'You master the art of clear communication, focused learning, and intellectual credibility'
+    ]
+  },
+
+  'Saturn-Cancer': {
+    name: 'Saturn Ingress Cancer',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Cancer represents nurturing, emotions, family, home, roots, security, and protection. It\'s the energy of caring, belonging, emotional safety, and creating sanctuary.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Cancer brings mastery through emotional maturity, family responsibility, and creating lasting security. This cycle requires you to build solid foundations in home and family, develop emotional discipline, and take on nurturing responsibilities. You must learn to care wisely, protect without smothering, and create sustainable emotional security. This is about maturing emotionally, honoring family commitments, and building a home that endures.',
+    loveRelationships: 'Romance matures through emotional responsibility, nurturing commitment, and building family together. Relationships require emotional honesty, creating safe space for vulnerability, and demonstrating care through action. You learn to love by providing emotional security, honoring feelings while maintaining boundaries. Long-term partnerships deepen through discussing family plans, creating home together, and emotional maturity. Dating becomes more family-oriented. You attract partners who value emotional depth, family, and creating home. Commitment means building family and emotional security together.',
+    familyHome: 'Family responsibility becomes central focus for 2.5 years. Home life needs solid foundation, emotional safety, and proper structure. You may care for aging parents, raise children with more discipline, or establish family traditions that last. Purchase or improvement of home property likely. Family relationships mature through clear boundaries and consistent care. Relationship with mother figure may require attention or reach new maturity. You learn to be both nurturing and boundaried, caring yet strong. Home becomes emotional sanctuary requiring investment and protection.',
+    businessCareer: 'Major career development through businesses related to home, family, food, real estate, or caregiving. Professional success requires emotional intelligence, creating safe environments, and demonstrating care for others. You may start family business, work in real estate or hospitality, or build career around nurturing others. Authority comes through demonstrated care and emotional maturity. Career advancement requires balancing professional ambition with family needs over 2.5 years. Professional reputation builds through creating security for others.',
+    moneyFinances: 'Financial mastery through real estate, family business, or security-focused investing. Money requires emotional discipline, protecting resources, and building family wealth. You learn to budget for family needs, invest in property or security, and create financial safety net. Financial security for family becomes top priority. Home purchase or improvement likely financial focus. Long-term wealth builds through real estate, family assets, and conservative protection of resources. Financial lessons teach that security beats risk, family wealth matters, and home is valuable investment.',
+    predictions: [
+      'You take on major family responsibility (caring for parent, raising child, supporting family member)',
+      'Home purchase, major renovation, or relocation creates lasting foundation for family',
+      'Emotional maturity deepens through family challenges requiring both care and boundaries',
+      'Relationship becomes more serious with discussions of living together, marriage, or children',
+      'Career shift toward work involving home, family, real estate, food, or caregiving',
+      'Relationship with mother or mother figure reaches new level of maturity or requires increased care',
+      'You establish family traditions, routines, or structures that provide lasting emotional security',
+      'Financial planning centers on family security, home investment, or building family wealth',
+      'You learn to care without losing yourself, nurture without enabling, protect without controlling',
+      'You master the art of emotional maturity, family responsibility, and creating lasting home'
+    ]
+  },
+
+  'Saturn-Leo': {
+    name: 'Saturn Ingress Leo',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, leadership, and recognition. It\'s the energy of shining, creating, celebrating, leading, and expressing authentic self.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Leo brings mastery through disciplined creativity, mature leadership, and authentic self-expression. This cycle requires you to develop your creative gifts seriously, step into leadership with humility, and express yourself with both confidence and wisdom. You must learn to shine without arrogance, lead without domination, and create with discipline. This is about developing mature confidence, mastering creative skills, and building lasting legacy through authentic expression.',
+    loveRelationships: 'Romance matures through authentic self-expression, generous giving, and playful commitment. Relationships require showing your true self, taking romantic leadership, and celebrating each other. You learn to love with both passion and maturity, generosity and boundaries. Long-term partnerships deepen through creative projects together, supporting each other\'s self-expression, and mature romance. Dating becomes more authentic and confident. You attract partners who appreciate your uniqueness and creative spirit. Commitment requires mutual recognition and celebrating each other\'s light.',
+    familyHome: 'Family responsibility involves supporting children\'s development, creating joyful home environment, and modeling authentic leadership. Home life needs creative expression, celebration, and space for individual shine. You may take serious responsibility for children\'s education or creative development. Family relationships mature through encouraging individual expression while maintaining respect. Relationship with father figure may require attention. You learn to lead family with both strength and heart. Home becomes stage for creative expression and celebration.',
+    businessCareer: 'Major career development through creative mastery, leadership roles, or performance-based work. Professional success requires developing creative skills seriously, stepping into leadership positions, and building personal brand. You may launch creative business, take on management role, or develop expertise in entertainment, arts, or leadership. Authority comes through demonstrated creative excellence and authentic leadership. Career advancement requires both confidence and humility over 2.5 years. Professional reputation builds through quality creative work and mature leadership.',
+    moneyFinances: 'Financial mastery through creative work, leadership positions, or performance-based income. Money requires investing in your creative development, building your personal brand, and monetizing your unique talents. You learn to value your creative work appropriately, negotiate confidently, and build income through authentic self-expression. Financial success comes from what makes you uniquely you. Long-term wealth builds through developed creative mastery and leadership positions. Financial lessons teach that your authentic gifts have value, confidence attracts abundance, and creative mastery pays.',
+    predictions: [
+      'You commit seriously to creative project, artistic mastery, or performance skill over 2.5 years',
+      'Leadership role or responsibility requires you to step up with both confidence and humility',
+      'Creative work becomes professional career or serious income source through disciplined development',
+      'Relationship with child or father figure matures or requires increased responsibility and attention',
+      'You overcome fear of being seen and step into authentic self-expression publicly',
+      'Creative talent reaches new level of mastery through consistent practice and discipline',
+      'Career advancement comes through demonstrating creative excellence and mature leadership',
+      'You learn to balance confidence with humility, self-expression with consideration for others',
+      'Personal brand or public presence becomes important professional asset requiring strategic development',
+      'You master the art of authentic leadership, disciplined creativity, and confident self-expression'
+    ]
+  },
+
+  'Saturn-Virgo': {
+    name: 'Saturn Ingress Virgo',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Virgo represents analysis, refinement, service, health, organization, and practical skill. It\'s the energy of improvement, discernment, efficiency, helping, and mastering craft.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Virgo brings mastery through skill refinement, service excellence, and health discipline. This cycle requires you to perfect your craft, improve your systems, and commit to service and wellness. You must learn to analyze wisely, improve without perfectionism, and serve without losing yourself. This is about developing practical mastery, improving health habits, and building excellence through attention to detail and consistent refinement.',
+    loveRelationships: 'Romance matures through practical service, helpful actions, and attention to details that matter. Relationships require showing care through helpful deeds, improving together, and supporting each other\'s health and growth. You learn to love by being useful, noticing what partner needs, and helping without criticizing. Long-term partnerships deepen through daily routines together, health habits, and practical support. Dating becomes more discerning and health-conscious. You attract partners who value competence, health, and practical support. Commitment means improving life together through service and care.',
+    familyHome: 'Family responsibility involves health matters, daily routines, and practical service. Home life needs better organization, efficient systems, and health-supporting environment. You may care for family member\'s health, improve home organization, or take on practical family tasks. Family relationships mature through helpful service and reducing criticism. You learn to help without enabling, improve without perfectionizing. Home becomes well-organized, health-supporting space. Daily family routines and chores require better systems and shared responsibility.',
+    businessCareer: 'Major career development through technical mastery, analytical skills, or service excellence. Professional success requires attention to detail, continuous improvement, and practical problem-solving. You may develop specialized expertise, build efficient systems, or create service-based career. Authority comes through demonstrated competence and useful contribution. Career advancement requires skill mastery over 2.5 years. Professional reputation builds through quality work, reliability, and practical solutions. Healthcare, analysis, editing, crafts, administration, or technical services favored.',
+    moneyFinances: 'Financial mastery through budgeting excellence, expense analysis, and efficient resource management. Money requires detailed tracking, reducing waste, and practical financial systems. You learn to analyze spending patterns, improve financial efficiency, and build wealth through careful management. Financial health requires same discipline as physical health. Long-term wealth builds through consistent saving, reducing unnecessary expenses, and practical investing. Financial lessons teach that small improvements compound, efficiency creates wealth, and financial wellness requires daily attention.',
+    predictions: [
+      'You commit to serious health improvement plan (diet, exercise, medical treatment) over 2.5 years',
+      'Professional skill mastery becomes focus - you develop expertise through detailed study and practice',
+      'Work systems and daily routines dramatically improve through better organization and efficiency',
+      'Health issue requires attention and commitment to better habits and possibly medical care',
+      'Career advancement comes through demonstrating technical competence and practical problem-solving',
+      'You learn to improve without perfectionism, serve without losing yourself, analyze without criticizing',
+      'Financial systems improve dramatically through budgeting discipline and expense analysis',
+      'Relationship or partnership benefits from practical support and reducing critical tendencies',
+      'Daily habits and routines become more structured, efficient, and health-supporting',
+      'You master the art of practical excellence, useful service, and sustainable improvement'
+    ]
+  },
+
+  'Saturn-Libra': {
+    name: 'Saturn Ingress Libra',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years (Saturn is exalted in Libra)',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Libra represents balance, partnership, harmony, aesthetics, diplomacy, and fairness. It\'s the energy of relating, cooperating, creating beauty, and seeking equilibrium.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE (Saturn Exalted): Saturn in Libra brings mastery through balanced relationships, diplomatic maturity, and committed partnerships. This is Saturn at its most balanced and fair. This cycle requires you to build lasting partnerships, develop diplomatic skills, and commit to fairness and beauty. You must learn to relate with maturity, balance giving with receiving, and create harmony through structure. This is about developing relationship mastery, building committed partnerships, and balancing all areas of life with wisdom and grace.',
+    loveRelationships: 'Romance matures through serious commitment, balanced partnership, and mature relating. Relationships require equality, fairness, clear agreements, and mutual commitment. You learn to love through balanced give-and-take, diplomatic communication, and committed partnership. Long-term partnerships deepen through marriage or serious commitment, working through relationship challenges, and creating lasting harmony. Dating becomes more serious and commitment-focused. Singles often meet serious partner during this cycle. You attract partners ready for mature commitment. This is prime time for engagement, marriage, or deepening existing commitment.',
+    familyHome: 'Family responsibility involves creating harmony, mediating conflicts, and establishing fair systems. Home life needs balance, beauty, and peaceful environment. You may formalize family partnerships, improve home aesthetics, or create more equitable family arrangements. Family relationships mature through addressing imbalances and establishing fairness. Relationship with spouse or partner becomes more structured and committed. You learn to balance family needs with partnership needs. Home becomes beautiful, balanced sanctuary.',
+    businessCareer: 'Major career development through partnership work, legal matters, design fields, or diplomatic roles. Professional success requires collaboration skills, aesthetic sense, and ability to create win-win solutions. You may form serious business partnership, work in law or mediation, or build career in arts or aesthetics. Authority comes through demonstrated fairness and diplomatic skill. Career advancement requires balancing independence with collaboration over 2.5 years. Professional reputation builds through creating harmony and beauty. Law, mediation, design, counseling, or partnership businesses favored.',
+    moneyFinances: 'Financial mastery through partnership resources, balanced investing, and fair financial agreements. Money requires addressing financial imbalances, creating equitable arrangements, and building wealth through partnerships. You learn to balance earning with spending, investment with preservation, and mine with ours. Financial partnerships (marriage, business) require clear agreements and fairness. Long-term wealth builds through balanced approach and partnership assets. Financial lessons teach that fairness creates prosperity, balance beats extremes, and partnership wealth can exceed individual wealth.',
+    predictions: [
+      'Major relationship commitment (engagement, marriage, serious partnership) formalizes over this 2.5-year period',
+      'Business partnership forms with clear agreements, roles, and commitment to shared success',
+      'Legal matter (contract, marriage, divorce, lawsuit) requires serious attention and fair resolution',
+      'You learn to balance career with relationship, independence with partnership, self with other',
+      'Relationship challenges force you to develop diplomacy, fairness, and mature communication',
+      'Career advancement comes through collaboration skills and ability to create win-win solutions',
+      'Financial partnership (marriage, business) requires clear agreements about money and resources',
+      'You develop aesthetic sense or appreciation for beauty that becomes important to you',
+      'Imbalances in any area of life become obvious and require correction for peace',
+      'You master the art of balanced partnership, diplomatic maturity, and committed relationships'
+    ]
+  },
+
+  'Saturn-Scorpio': {
+    name: 'Saturn Ingress Scorpio',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Scorpio represents intensity, transformation, depth, power, intimacy, and regeneration. It\'s the energy of probing beneath surface, merging deeply, wielding power, and transforming through crisis.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Scorpio brings mastery through emotional depth, psychological work, and transformative power. This cycle requires you to face your shadows, develop emotional resilience, and build through crisis and transformation. You must learn to handle power wisely, merge resources responsibly, and transform through deep work. This is about developing psychological maturity, mastering shared resources, and building strength through facing what is hidden or difficult.',
+    loveRelationships: 'Romance matures through emotional depth, sexual intimacy, and psychological honesty. Relationships require facing difficult truths, sharing vulnerabilities, and building trust through crisis. You learn to love deeply yet wisely, merge yet maintain self, be intimate yet boundaried. Long-term partnerships deepen through working through jealousy, control issues, or power dynamics. Relationships either transform and deepen or end if trust is broken. Dating becomes more intense and psychologically focused. You attract partners who are deep, intense, and transformative. Commitment requires emotional and psychological honesty.',
+    familyHome: 'Family responsibility involves dealing with difficult topics (death, inheritance, sexuality, power), shared resources, or family secrets. Home life needs emotional safety for depth and transformation. You may deal with family inheritance, care for dying family member, or address family psychological issues. Family relationships mature through addressing what was hidden or taboo. Shared family resources require responsible management. You learn to handle family power dynamics with maturity. Home becomes space for deep emotional work and transformation.',
+    businessCareer: 'Major career development through crisis management, psychological work, financial services, or transformation work. Professional success requires handling difficult situations, managing shared resources, and facilitating transformation. You may work in psychology, finance, medicine, research, or crisis management. Authority comes through demonstrated ability to handle intensity and complexity. Career advancement requires emotional resilience over 2.5 years. Professional reputation builds through depth work and transformative impact. Psychology, finance, medicine, research, or detective work favored.',
+    moneyFinances: 'Financial mastery through managing shared resources, investments, debt elimination, and strategic financial transformation. Money requires dealing with debt, taxes, inheritance, or joint finances. You learn to manage other people\'s money responsibly, invest strategically, and build wealth through transformation. Debt elimination becomes serious focus. Shared financial resources (marriage, inheritance, investment) require wise management. Long-term wealth builds through strategic investing and eliminating financial drain. Financial lessons teach that debt is bondage, shared money requires trust, and transformation creates wealth.',
+    predictions: [
+      'Major debt elimination or financial transformation occurs over this 2.5-year period',
+      'Psychological work (therapy, shadow work, healing) becomes important for growth and maturity',
+      'Inheritance matter, shared resources, or financial partnership requires serious attention',
+      'Relationship deepens through crisis, emotional honesty, or facing difficult truths together',
+      'Career shift toward work involving depth, crisis, transformation, finance, or psychology',
+      'You face fears, shadows, or psychological patterns that have limited you',
+      'Power dynamics in relationship or career must be addressed and transformed',
+      'Sexual intimacy deepens through emotional honesty and vulnerability',
+      'You develop resilience through facing difficulty rather than avoiding it',
+      'You master the art of emotional depth, wise power use, and transformation through crisis'
+    ]
+  },
+
+  'Saturn-Sagittarius': {
+    name: 'Saturn Ingress Sagittarius',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, teaching, and finding meaning through broadening horizons.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Sagittarius brings mastery through disciplined learning, structured expansion, and mature philosophy. This cycle requires you to commit to higher education, develop teaching expertise, and build wisdom through structured exploration. You must learn to expand with planning, seek truth with discipline, and teach with authority. This is about developing intellectual maturity, mastering educational or philosophical domains, and building credibility as teacher or expert.',
+    loveRelationships: 'Romance matures through shared philosophy, adventurous commitment, and intellectual growth together. Relationships require honesty, shared beliefs, and freedom within commitment. You learn to love through truth-telling, growing together, and respecting each other\'s need for expansion. Long-term partnerships deepen through travel together, shared educational pursuits, and philosophical alignment. Dating may involve people from different cultures or backgrounds. You attract partners who value truth, growth, and adventure. Commitment requires shared vision and room for individual growth.',
+    familyHome: 'Family responsibility involves education, cultural connection, or supporting family member\'s growth and expansion. Home life needs space for learning, books, and cultural expression. You may support family member\'s education, integrate different cultural backgrounds in family, or teach family members. Family relationships mature through honesty and respecting each other\'s paths. You learn to provide freedom within family structure. Home becomes learning center and launch pad for adventures.',
+    businessCareer: 'Major career development through higher education, teaching, publishing, international work, or philosophical pursuits. Professional success requires advanced credentials, teaching ability, or cross-cultural competence. You may pursue graduate degree, publish book or research, teach professionally, or work internationally. Authority comes through demonstrated expertise and teaching ability. Career advancement requires educational commitment over 2.5 years. Professional reputation builds through published work, teaching, or thought leadership. Education, publishing, travel, law, or philosophy sectors favored.',
+    moneyFinances: 'Financial mastery through education, teaching income, international business, or publishing. Money requires investing in education, building expertise that pays, and creating teaching or consulting income. You learn to monetize your knowledge, charge appropriately for expertise, and build wealth through intellectual assets. Educational investment pays off long-term. International business or diverse income streams favored. Long-term wealth builds through educational credentials and teaching platforms. Financial lessons teach that expertise has value, education is investment, and teaching creates sustainable income.',
+    predictions: [
+      'You commit to major educational pursuit (advanced degree, certification, mastery training) over 2.5 years',
+      'Teaching, training, or mentoring becomes significant part of your work and income',
+      'Publishing project (book, research, blog, course) requires disciplined commitment',
+      'International travel, relocation, or cross-cultural connection becomes important',
+      'Your philosophy or belief system matures through testing, experience, and deeper study',
+      'Career advancement requires educational credentials or demonstrated expertise',
+      'Relationship or partnership involves different cultural backgrounds or philosophical alignment',
+      'You learn to balance freedom with responsibility, expansion with planning',
+      'Legal matter or ethical situation requires you to stand for truth and principle',
+      'You master the art of disciplined learning, structured expansion, and authoritative teaching'
+    ]
+  },
+
+  'Saturn-Capricorn': {
+    name: 'Saturn Ingress Capricorn',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years (Saturn rules Capricorn)',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Capricorn represents ambition, achievement, structure, mastery, responsibility, and authority. It\'s the energy of building, achieving, leading with integrity, and reaching the mountain top through persistent effort.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE (Saturn at Home): Saturn in Capricorn brings maximum mastery through ambition, achievement, and building lasting structures. This is Saturn at its most disciplined and achievement-focused. This cycle requires you to commit to long-term goals, build professional authority, and achieve mastery in your chosen field. You must learn to work strategically, accept responsibility, and build something that lasts. This is about reaching professional maturity, building enduring achievements, and becoming an authority in your domain.',
+    loveRelationships: 'Romance matures through serious commitment, traditional values, and building together toward shared goals. Relationships require responsibility, long-term vision, and demonstrating commitment through achievement. You learn to love through providing security, building together, and respecting ambition. Long-term partnerships deepen through supporting each other\'s goals, traditional commitment (marriage), and building legacy together. Dating becomes very serious and goal-oriented. You attract partners who are ambitious, responsible, and focused on achievement. Commitment means building something lasting together.',
+    familyHome: 'Family responsibility reaches peak importance - caring for elders, providing for family, or establishing family legacy. Home life needs solid structure, traditional values, and respect for authority. You may become family provider, care for aging parents, or establish family business or wealth. Family relationships mature through accepting responsibility and honoring tradition. Relationship with father or authority figures becomes significant. You learn to lead family with wisdom and integrity. Home becomes foundation for achievement and legacy building.',
+    businessCareer: 'Major career achievement and professional mastery during this critical 2.5-year period. Professional success requires strategic planning, accepting responsibility, and consistent excellent performance. You may achieve major promotion, start serious business, become recognized authority, or reach career pinnacle. Authority comes through demonstrated mastery and integrity over time. This is peak career-building period - what you build now lasts. Professional reputation solidifies. Career advancement requires total commitment. Management, executive roles, professional services, or mastery fields favored.',
+    moneyFinances: 'Financial mastery through strategic planning, conservative investing, and building lasting wealth. Money requires disciplined saving, long-term investing, and building multiple income sources. You learn to manage money professionally, invest for retirement, and build wealth systematically. Financial security through achievement becomes top priority. Real estate, business ownership, and traditional investments favored. Long-term wealth builds through patient accumulation and strategic positioning. Financial lessons teach that wealth is built not found, time is friend, and discipline creates freedom.',
+    predictions: [
+      'Major career achievement or promotion recognizes your years of effort and positions you as authority',
+      'You commit to ambitious 2.5-year goal that requires total focus and strategic execution',
+      'Business launch or professional credentialing establishes you as expert in your field',
+      'Relationship with father, mentor, or authority figure matures or requires serious responsibility',
+      'Financial planning becomes highly disciplined with focus on retirement, property, or wealth building',
+      'You accept major responsibility that tests your maturity and builds lasting credibility',
+      'Career advancement requires balancing ambition with integrity, success with character',
+      'Professional reputation solidifies - what you build now defines your legacy',
+      'You learn that achievement without integrity is hollow, but principled success creates lasting respect',
+      'You master the art of ambitious achievement, strategic building, and professional mastery'
+    ]
+  },
+
+  'Saturn-Aquarius': {
+    name: 'Saturn Ingress Aquarius',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years (Saturn co-rules Aquarius with Uranus)',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Aquarius represents innovation, community, individuality, progress, friendship, and humanitarian vision. It\'s the energy of awakening, connecting, revolutionizing, and serving collective evolution.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE (Saturn Co-Rules): Saturn in Aquarius brings mastery through structured innovation, committed community building, and disciplined progress. This cycle requires you to build lasting friendships, develop unique expertise, and commit to progressive causes. You must learn to innovate with planning, rebel with purpose, and serve community with consistency. This is about developing mature individuality, building community structures, and achieving mastery through unique approaches.',
+    loveRelationships: 'Romance matures through friendship foundation, intellectual connection, and respecting individuality within commitment. Relationships require mental compatibility, shared ideals, and freedom within structure. You learn to love as best friend, honor uniqueness, and commit without possessing. Long-term partnerships deepen through shared community involvement, intellectual pursuits, and supporting each other\'s individuality. Dating often begins as friendship. You attract partners who are unique, intellectual, and community-minded. Commitment requires both togetherness and independence.',
+    familyHome: 'Family responsibility involves creating community, supporting unique expression, and building progressive family culture. Home life needs space for individuality, technology, and community connection. You may create chosen family, integrate diverse people into family, or establish progressive family values. Family relationships mature through respecting differences and reducing judgment. You learn to balance family tradition with progressive values. Home becomes community hub or technology center.',
+    businessCareer: 'Major career development through technology, innovation, community work, or unique expertise. Professional success requires developing specialized knowledge, networking strategically, and building community platforms. You may work in technology, social causes, community organizing, or innovative fields. Authority comes through demonstrated expertise and community contribution. Career advancement requires balancing independence with collaboration over 2.5 years. Professional reputation builds through unique contributions and network connections. Technology, social work, innovation, or community leadership favored.',
+    moneyFinances: 'Financial mastery through network building, technology investments, and group economics. Money requires investing in innovation, building income through networks, and participating in collective wealth building. You learn to leverage technology for income, invest in future industries, and build wealth through communities. Financial planning includes cryptocurrency, technology stocks, or innovative investments. Group financial ventures favored over solo wealth building. Long-term wealth builds through networks, technology, and future-focused investing. Financial lessons teach that networks are net worth, innovation pays, and collective success beats solo effort.',
+    predictions: [
+      'You build or join community, group, or network that becomes central to your life over 2.5 years',
+      'Technology skill or innovative expertise becomes serious professional asset and income source',
+      'Friendship deepens into serious commitment (business partnership, romantic relationship, lifelong bond)',
+      'Career shift toward work involving technology, community, innovation, or social causes',
+      'You develop unique expertise or unconventional approach that distinguishes you professionally',
+      'Community leadership role or social cause requires sustained commitment and organizational skill',
+      'Financial strategy includes technology investments or participation in group wealth building',
+      'You learn to balance independence with collaboration, uniqueness with belonging',
+      'Progressive values or humanitarian vision require you to commit with action not just words',
+      'You master the art of structured innovation, committed community building, and unique contribution'
+    ]
+  },
+
+  'Saturn-Pisces': {
+    name: 'Saturn Ingress Pisces',
+    frequency: 'Approximately every 29 years',
+    duration: '~2.5 years',
+    planetEnergy: 'Saturn represents discipline, responsibility, mastery, structure, limitation, maturity, and time. It\'s where you build, commit, face challenges, and achieve lasting accomplishment through effort.',
+    signEnergy: 'Pisces represents spirituality, compassion, imagination, transcendence, unity, and dissolution. It\'s the energy of connecting to divine, serving selflessly, creating artistically, and transcending ego boundaries.',
+    eventMeaning: '⏰ MAJOR 2.5-YEAR CYCLE: Saturn in Pisces brings mastery through spiritual discipline, compassionate service, and creative structure. This cycle requires you to build spiritual practice, develop artistic mastery, and serve with boundaries. You must learn to structure the formless, discipline your imagination, and serve without martyrdom. This is about developing spiritual maturity, mastering creative arts, and building lasting connection to the divine through consistent practice.',
+    loveRelationships: 'Romance matures through spiritual connection, compassionate service, and transcendent love. Relationships require forgiveness, unconditional love, and spiritual alignment. You learn to love selflessly yet wisely, merge spiritually yet maintain boundaries. Long-term partnerships deepen through spiritual practice together, serving others as couple, and creating art or music together. Dating becomes more spiritually focused. You attract partners who are compassionate, artistic, and spiritually aware. Commitment requires both transcendent love and practical boundaries.',
+    familyHome: 'Family responsibility involves caring for those who cannot care for themselves, spiritual support, or healing family wounds. Home life needs space for spirituality, art, music, and retreat. You may care for ill or addicted family member, provide spiritual guidance, or create healing family environment. Family relationships mature through forgiveness and compassion. You learn to serve family without losing yourself. Home becomes sanctuary, art studio, or spiritual retreat.',
+    businessCareer: 'Major career development through spiritual work, healing arts, creative mastery, or compassionate service. Professional success requires developing intuitive gifts, artistic skills, or healing abilities. You may work in healthcare, spirituality, arts, music, film, or service to marginalized. Authority comes through demonstrated compassion and creative excellence. Career advancement requires balancing idealism with practicality over 2.5 years. Professional reputation builds through healing impact and artistic beauty. Healthcare, spirituality, arts, film, music, or charity work favored.',
+    moneyFinances: 'Financial mastery through creative work, healing services, or spiritual teaching. Money requires monetizing artistic gifts, charging for healing work, and building income through compassion and creativity. You learn to value your spiritual or creative gifts financially, charge appropriately for healing work, and build sustainable income from what feels like calling. Financial boundaries become essential - you cannot serve from empty cup. Long-term wealth builds through developed artistic mastery or healing expertise. Financial lessons teach that spiritual gifts have material value, compassion can pay, and you must receive to continue giving.',
+    predictions: [
+      'You commit to serious spiritual practice (meditation, yoga, prayer) that becomes daily discipline over 2.5 years',
+      'Creative or artistic mastery develops through consistent practice and potential formal training',
+      'Healing work or compassionate service becomes central to your life and possibly career',
+      'You care for someone who is ill, addicted, or suffering, learning balance between service and boundaries',
+      'Artistic work (music, film, photography, dance, poetry) becomes serious pursuit or profession',
+      'You face and heal addiction, escapism, or victim patterns through spiritual or therapeutic work',
+      'Career shift toward work involving healing, creativity, spirituality, or service to suffering',
+      'You develop intuitive or psychic gifts through disciplined practice and study',
+      'Financial boundaries become necessary - you learn to charge for spiritual/creative gifts',
+      'You master the art of spiritual discipline, creative structure, and compassionate service with boundaries'
+    ]
   }
 };
 
