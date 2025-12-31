@@ -133,6 +133,8 @@ export const getAspectDuration = (planet1: string, planet2: string, _aspectName:
 };
 
 // Calculate remaining days until aspect leaves orb and determine direction
+// Note: This is a simplified estimation. Actual duration varies due to retrograde motion.
+// The "remaining days" represents approximate time until aspect goes out of orb.
 export const getAspectRemainingInfo = (
   planet1: string,
   planet2: string,
@@ -146,31 +148,31 @@ export const getAspectRemainingInfo = (
 
   if (relativeSpeed === 0) return { remainingDays: 0, direction: 'exact' };
 
-  // Degrees remaining until out of orb
-  const degreesRemaining = maxOrb - currentOrb;
-
-  // Base calculation for remaining days
-  let remainingDays = degreesRemaining / relativeSpeed;
-
-  // Apply retrograde multiplier
-  const outerPlanets = ['Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
-  if (outerPlanets.includes(planet1) && outerPlanets.includes(planet2)) {
-    remainingDays *= 3;
-  } else if (outerPlanets.includes(planet1) || outerPlanets.includes(planet2)) {
-    remainingDays *= 2;
-  }
-
-  // Determine direction: if orb is very small (< 0.5°), consider it exact
-  // Otherwise, we consider it approaching if typical aspect behavior
-  // For simplicity, we'll consider < maxOrb/2 as approaching, > maxOrb/2 as leaving
+  // Determine direction based on how close to exact (0°) we are
+  // If orb is very small, we're at exact
+  // Otherwise, since we only see the aspect when it's in orb,
+  // we assume it's in the "leaving" phase (widening)
+  // This is a simplification - true direction would require tracking over multiple days
   let direction: 'approaching' | 'leaving' | 'exact';
-  if (currentOrb < 0.5) {
+  if (currentOrb < 0.3) {
     direction = 'exact';
-  } else if (currentOrb <= maxOrb / 2) {
-    direction = 'approaching';
+  } else if (currentOrb < 1.0) {
+    // Very tight orb, likely near exact, assume approaching or just past exact
+    direction = 'leaving';
   } else {
+    // Wider orb - assume leaving (most conservative estimate)
     direction = 'leaving';
   }
+
+  // Calculate days until aspect leaves orb (simple linear estimate)
+  // This is just the distance from current orb to maxOrb divided by relative speed
+  const degreesRemaining = maxOrb - currentOrb;
+  const remainingDays = degreesRemaining / relativeSpeed;
+
+  // NOTE: We do NOT apply retrograde multiplier here.
+  // The retrograde multiplier (2x or 3x) is for TOTAL duration from entering to leaving orb,
+  // which accounts for the aspect going in and out of orb multiple times due to retrogrades.
+  // For "remaining days", we just want a simple linear estimate of current trajectory.
 
   return { remainingDays: Math.round(remainingDays), direction };
 };
