@@ -81,6 +81,56 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
     ]
   },
 
+  'Mercury-Aries': {
+    name: 'Mercury Ingress Aries',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Aries represents new beginnings, courage, independence, leadership, initiative, and the pioneering spirit. It\'s the spark of self-assertion, the drive to be first, and pure initiating force.',
+    eventMeaning: 'Mercury in Aries brings quick, direct, bold communication and thinking. Mental energy runs high and fast. The next 2-3 weeks favor speaking up assertively, making quick decisions, starting new learning projects, and direct communication. Thoughts and words become more straightforward, sometimes blunt. Excellent for debates, competitive thinking, or pioneering new ideas. Mind works quickly but may lack patience for details.',
+    loveRelationships: 'Communication in relationships becomes more direct and honest - say what you mean clearly. Good time to initiate important conversations or express desires boldly. Flirting through confident, assertive communication. Mental attraction to bold, independent thinkers. Arguments may arise but resolve quickly if addressed directly. Text first, think about what to say later. Impatience with indirect communication - speak up.',
+    familyHome: 'Direct, honest family communication favored - say what needs saying. Good time to initiate family discussions, assert your perspective, or make quick family decisions. Communication with siblings becomes more competitive or playful sparring. Home projects requiring quick thinking and action. Less patience for family small talk - get to the point. Lead family conversations.',
+    businessCareer: 'Excellent for work requiring quick thinking, bold communication, or pioneering ideas. Pitch new ideas assertively, lead meetings confidently, or make fast decisions. Sales through direct approach, debates, or competitive fields. Your mental quickness and courage impress others. Start new communication projects. Speak up in meetings. Network boldly. Avoid impulsive emails you\'ll regret - speed is good, but think first.',
+    moneyFinances: 'Quick financial decisions and bold money communication. Good time to negotiate raise assertively, pitch business ideas directly, or start new income stream requiring mental initiative. Money through competitive thinking, sales, or pioneering ventures. Research investments quickly but verify facts. Impulsive purchases possible - channel mental energy into smart financial action, not reactive spending.',
+    predictions: [
+      'Direct conversation you\'ve been avoiding finally happens and resolves issue',
+      'Quick thinking or bold idea solves problem others have been overthinking',
+      'Assertive communication gets you what diplomatic approach couldn\'t',
+      'Competitive discussion or debate where your mental quickness shines',
+      'New learning project or study you initiate with enthusiasm',
+      'Fast decision that others hesitate on turns out to be right',
+      'Email, message, or conversation where your directness is exactly what\'s needed',
+      'Pioneering idea or unconventional thinking opens new possibility',
+      'Argument that clears air and improves relationship through honesty',
+      'Mental breakthrough through decisive action rather than endless analysis'
+    ]
+  },
+
+  'Mercury-Taurus': {
+    name: 'Mercury Ingress Taurus',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Taurus represents stability, sensory pleasure, material security, patience, persistence, comfort, and tangible beauty. It\'s the energy of grounding, enjoying physical reality, and building lasting value.',
+    eventMeaning: 'Mercury in Taurus brings slower, more deliberate, practical thinking and communication. Mental energy becomes grounded and patient. The next 2-3 weeks favor practical planning, learning tangible skills, financial discussions, and thoughtful communication. Thoughts focus on what\'s real, useful, and valuable. Excellent for financial analysis, learning crafts, or thorough study. Mind resists rushing - takes time to process but reaches sound conclusions.',
+    loveRelationships: 'Communication in relationships becomes more sensual, practical, and grounded. Express affection through voice tone, thoughtful words, or discussing shared values and future security. Good time for serious relationship discussions about money, commitment, or building future together. Words matter less than consistent, reliable communication. Some prefer physical presence to texting. Show love through practical communication and discussing tangible plans.',
+    familyHome: 'Family communication about money, property, values, or practical matters flows well. Good time for family financial planning, discussing home improvements, or conversations about inheritance or shared resources. Communication with family becomes more reliable and grounded. Stubborn family discussions require patience. Practical home projects benefit from thorough planning. Voice your values clearly but patiently.',
+    businessCareer: 'Excellent for work requiring practical thinking, financial analysis, or building tangible value through communication. Sales through demonstrating quality and value. Teaching practical, hands-on skills. Writing about finance, food, nature, or material topics. Your thorough, reliable thinking gets recognized. Good for contracts, salary negotiations, or business planning. Avoid rushing decisions - take time to think through implications. Quality communication over quick responses.',
+    moneyFinances: 'Peak time for financial planning, budgeting, and practical money discussions. Think through investments carefully and thoroughly. Good time to negotiate salary based on proven value, discuss financial security, or plan long-term financial strategy. Earning through practical thinking, financial analysis, or valuing your skills appropriately. Money decisions should be slow and deliberate - avoid pressure to decide quickly. Build financial security through sound thinking.',
+    predictions: [
+      'Financial discussion or negotiation where your practical thinking gets you fair value',
+      'Thorough analysis or patient study reveals insight others missed by rushing',
+      'Communication about values or money that strengthens relationship or security',
+      'Learning practical skill that has tangible, lasting value',
+      'Slow, deliberate decision that proves wiser than quick choice would have been',
+      'Contract or agreement reached through patient, thorough discussion',
+      'Your consistent, reliable communication builds trust with someone important',
+      'Financial plan or budget you create thoughtfully improves your security',
+      'Stubborn discussion where patience and persistence finally reach resolution',
+      'You learn that taking time to think thoroughly prevents costly mistakes'
+    ]
+  },
+
   'Mercury-Gemini': {
     name: 'Mercury Ingress Gemini',
     frequency: 'Approximately once per year',
@@ -103,6 +153,231 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Short trip or local exploration leads to interesting discovery',
       'Information you need arrives at perfect time from unexpected source',
       'Your curiosity and questions lead to insight or breakthrough understanding'
+    ]
+  },
+
+  'Mercury-Cancer': {
+    name: 'Mercury Ingress Cancer',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Cancer represents nurturing, emotions, safety, family, roots, intuition, and the protective instinct. It\'s the energy of home, emotional security, and caring for yourself and others.',
+    eventMeaning: 'Mercury in Cancer brings emotional, intuitive, memory-focused thinking and communication. Mental energy connects to feelings and past experiences. The next 2-3 weeks favor emotional conversations, family discussions, journaling, memory work, and intuitive thinking. Thoughts and words carry more emotional content. Excellent for therapy, family communication, or understanding emotional patterns. Mind remembers vividly but may get stuck in past or moody thinking.',
+    loveRelationships: 'Communication in relationships becomes more emotional, nurturing, and vulnerable. Perfect time for sharing feelings, discussing family or future, or emotionally intimate conversations. Express care through supportive words and emotional attunement. Attraction to partners who feel emotionally safe. Listen to feelings, not just words. Text or call to check in emotionally. Some conversations trigger past relationship memories - address patterns compassionately.',
+    familyHome: 'Peak time for family communication and emotional discussions. Excellent for talking with parents, siblings, or family about feelings, memories, or family history. Home planning conversations flow well. Emotional needs in family require expression. Memories surface in family discussions. Good time for family therapy or healing conversations. Create safe space for emotional communication. Listen with nurturing attention.',
+    businessCareer: 'Excellent for work requiring emotional intelligence, nurturing communication, or memory/history. Counseling, childcare, family business, real estate, food service, or care professions thrive. Your empathy and emotional attunement help in professional communication. Good for workplace discussions about needs and feelings. Trust intuition about work decisions. Create emotionally safe work environment through caring communication. Avoid being too subjective or moody in professional settings.',
+    moneyFinances: 'Financial discussions about security, family needs, home, or emotional comfort. Good time to talk about financial safety, savings for family, or money for home. Earning through nurturing work, emotional intelligence, or family-oriented services. Financial decisions consider emotional security, not just numbers. Intuition about money opportunities strong but verify feelings with facts. Money discussions with family require emotional sensitivity.',
+    predictions: [
+      'Emotional conversation deepens relationship through vulnerable sharing',
+      'Memory or past experience surfaces with important lesson for present',
+      'Family discussion where listening with empathy resolves longstanding issue',
+      'Intuitive feeling about person or situation proves accurate',
+      'Journal entry or emotional writing provides clarity and healing',
+      'Nurturing words you offer someone provide exactly the comfort they need',
+      'Discussion about home, family, or security moves important decision forward',
+      'Therapy or emotional conversation produces breakthrough in understanding',
+      'Communication about needs and feelings improves relationship safety',
+      'You learn that honoring emotional truth in communication deepens connection'
+    ]
+  },
+
+  'Mercury-Leo': {
+    name: 'Mercury Ingress Leo',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, romance, and radiant presence. It\'s the energy of shining brightly, creating from the heart, and celebrating life with enthusiasm.',
+    eventMeaning: 'Mercury in Leo brings confident, creative, dramatic communication and thinking. Mental energy becomes bold and expressive. The next 2-3 weeks favor creative writing, public speaking, teaching with flair, storytelling, and confident self-expression. Thoughts and words carry more warmth, enthusiasm, and personal style. Excellent for presentations, performance, creative projects, or inspiring others. Mind is creative but may be overly proud or dramatic.',
+    loveRelationships: 'Communication in relationships becomes more romantic, playful, and expressive. Perfect time for love letters, romantic declarations, or playful banter. Express affection through creative, generous words and compliments. Flirting through confident, entertaining conversation. Attraction to partners who appreciate your expressive style. Conversations should be fun and uplifting. Some may be more dramatic in communication - enjoy the theater but stay genuine.',
+    familyHome: 'Family communication becomes more playful, warm, and expressive. Good time for family storytelling, creative projects, or entertaining conversations. Express appreciation for family members generously. Communication with children flows especially well - play with words and ideas. Home discussions benefit from optimism and creativity. Pride in family increases. Lead family conversations with warmth and confidence. Avoid being too dominating in family discussions.',
+    businessCareer: 'Excellent for work requiring confident communication, creativity, or performance. Teaching, entertainment, sales through charisma, public speaking, creative writing, or leadership communication thrives. Your bold, warm communication style impresses others. Perfect time for presentations, pitching creative ideas, or taking center stage professionally. Inspiring others through words. Networking through generous, confident engagement. Avoid arrogance - confidence works, but humility helps too.',
+    moneyFinances: 'Financial discussions benefit from confidence and creative thinking. Good time to pitch business ideas boldly, negotiate with flair, or sell through enthusiastic presentation. Earning through creative communication, performance, teaching, or inspiring others. Financial optimism strong but verify bold ideas with practical analysis. Money through expressing your unique talents and shining professionally. Generous spending on creative expression or entertainment within budget.',
+    predictions: [
+      'Presentation or public speaking where your confidence and creativity shine',
+      'Creative idea or project you express boldly receives enthusiastic response',
+      'Romantic conversation or love letter that expresses feelings beautifully',
+      'Teaching or sharing knowledge where your warmth and enthusiasm inspire others',
+      'Compliment or generous words you offer brightens someone\'s day significantly',
+      'Communication where your authentic self-expression is your greatest asset',
+      'Storytelling or entertaining conversation that captivates your audience',
+      'Pitch or proposal delivered with confidence succeeds through your charisma',
+      'Playful, joyful conversation restores your energy and enthusiasm',
+      'You learn that confident, authentic self-expression attracts right opportunities'
+    ]
+  },
+
+  'Mercury-Virgo': {
+    name: 'Mercury Ingress Virgo',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Virgo represents refinement, service, health, organization, discernment, and practical improvement. It\'s the energy of making things better through detailed attention and skillful craft.',
+    eventMeaning: 'Mercury in Virgo is the analyst in his home sign - Mercury rules Virgo, so this placement maximizes analytical thinking, precision, and practical problem-solving. Mental energy becomes detailed, critical, and service-oriented. The next 2-3 weeks favor organizing information, analyzing systems, practical learning, editing, and helpful communication. This is the most precise, analytical, detail-oriented Mercury transit. Mind excels at refinement but may get lost in perfectionism.',
+    loveRelationships: 'Communication in relationships becomes more practical, helpful, and analytical. Express love through useful advice, noticing details about partner\'s needs, or helpful conversations. Good time for practical relationship discussions about daily life, health, or improvements. Attraction to intelligent, competent communicators. Listen analytically and offer solutions. Text or talk about practical matters. Some may be overly critical - offer help, not criticism.',
+    familyHome: 'Family communication benefits from practical problem-solving and attention to details. Excellent for discussing home organization, health issues, daily routines, or improvements. Help family members through useful advice and practical assistance. Home planning conversations become more detailed and analytical. Create systems for better family communication. Organize family schedules and responsibilities. Avoid being too critical of family - help, don\'t nitpick.',
+    businessCareer: 'Peak time for work requiring precision, analysis, editing, organization, or practical problem-solving. Writing with attention to detail, teaching skills, healthcare communication, technical work, or quality analysis excels. Your analytical thinking and helpful communication impress others. Perfect time for refining proposals, organizing information, solving practical work problems, or improving communication systems. Detail-oriented projects succeed. Avoid analysis paralysis - sometimes done is better than perfect.',
+    moneyFinances: 'Excellent for financial analysis, budgeting, organizing financial information, or practical money planning. Think through financial details carefully and catch errors others miss. Good time for financial consulting, accounting work, or earning through analytical skills. Money discussions focus on practical details and efficiency. Cut financial waste through careful analysis. Invest after thorough research. Financial communication should be precise and helpful.',
+    predictions: [
+      'Detail you notice in communication, contract, or information prevents problem',
+      'Analytical thinking solves practical problem that\'s been causing inefficiency',
+      'Helpful advice or useful information you share assists someone significantly',
+      'Editing, organizing, or refining project improves its quality noticeably',
+      'Health information or practical wellness communication improves your wellbeing',
+      'Financial analysis reveals opportunity for savings or efficiency',
+      'Practical discussion about daily life improves relationship or work situation',
+      'Skill you learn or refine increases your competence and value',
+      'Discernment helps you communicate clearly and avoid misunderstanding',
+      'You learn that attention to detail in communication prevents larger problems'
+    ]
+  },
+
+  'Mercury-Libra': {
+    name: 'Mercury Ingress Libra',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Libra represents balance, partnership, beauty, harmony, diplomacy, and fairness. It\'s the energy of relationships, aesthetics, and seeking equilibrium through connection with others.',
+    eventMeaning: 'Mercury in Libra brings diplomatic, balanced, relational thinking and communication. Mental energy seeks harmony and considers multiple perspectives. The next 2-3 weeks favor negotiations, partnerships discussions, diplomatic communication, and aesthetic thinking. Thoughts and words become more considerate, fair, and relationship-focused. Excellent for mediation, collaboration, contracts, or beautifying language. Mind sees both sides but may struggle with decisions.',
+    loveRelationships: 'Communication in relationships becomes more harmonious, considerate, and partnership-focused. Perfect time for important relationship discussions, commitment talks, or resolving conflicts diplomatically. Express affection through beautiful words, listening to partner\'s perspective, and seeking balance. Flirting through charm and intellectual conversation. Attraction to articulate, fair-minded partners. Text or talk about relationship equality and mutual needs. Some may avoid difficult topics for harmony - address issues tactfully but honestly.',
+    familyHome: 'Family communication benefits from diplomacy, fairness, and balance. Excellent for mediating family conflicts, discussing partnership or marriage in family, or beautifying home communication. Consider all family perspectives before speaking. Create more harmonious family discussions through tactful communication. Home planning conversations focus on aesthetics and balance. Negotiate family decisions fairly. Avoid indecision - seek balance but make choices.',
+    businessCareer: 'Excellent for work requiring diplomacy, partnership, negotiation, or aesthetic communication. Law, counseling, design communication, sales through charm, mediation, or collaborative projects thrive. Your fair, balanced communication style impresses others. Perfect time for contracts, partnership discussions, client relationships, or presenting ideas beautifully. Network through gracious, considerate engagement. Balance professional relationships. Communicate with both logic and charm.',
+    moneyFinances: 'Financial discussions benefit from balanced thinking and fair negotiation. Good time for partnership financial agreements, collaborative business deals, or balanced budget planning. Earning through diplomatic communication, design work, relationship-oriented services, or consulting. Money decisions consider fairness and balance between parties. Negotiate financial arrangements that work for everyone. Financial communication should be both logical and considerate.',
+    predictions: [
+      'Diplomatic conversation resolves conflict better than force or avoidance',
+      'Partnership discussion where listening to both sides reaches fair solution',
+      'Contract or agreement negotiated with balance benefits everyone involved',
+      'Aesthetic idea or beautiful communication elevates quality of your work',
+      'Relationship conversation about equality and fairness improves connection',
+      'Mediation or balanced thinking helps resolve someone else\'s dispute',
+      'Charming, considerate communication opens opportunity that demands wouldn\'t',
+      'Decision made by weighing both perspectives proves wiser than one-sided choice',
+      'Collaboration or discussion demonstrates power of considering multiple viewpoints',
+      'You learn that diplomatic, fair communication builds better relationships than being right'
+    ]
+  },
+
+  'Mercury-Scorpio': {
+    name: 'Mercury Ingress Scorpio',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Scorpio represents depth, transformation, power, intimacy, truth, and regeneration. It\'s the energy of diving deep, facing shadows, and emerging transformed through intensity.',
+    eventMeaning: 'Mercury in Scorpio brings deep, intense, investigative thinking and communication. Mental energy penetrates beneath surface to hidden truths. The next 2-3 weeks favor research, investigation, deep conversations, psychology, and transformative thinking. Thoughts and words carry more intensity and power. Excellent for therapy, detective work, understanding hidden dynamics, or speaking difficult truths. Mind is laser-focused but may become obsessive or suspicious.',
+    loveRelationships: 'Communication in relationships becomes more intense, honest, and depth-seeking. Perfect time for deep emotional conversations, discussing relationship shadows, or intimate truth-telling. Express feelings with intensity and authenticity - superficial words feel empty. Attraction to partners who communicate deeply and honestly. Address relationship power dynamics or hidden issues. Sexual communication or discussion of intimacy. Some conversations may feel confrontational - depth doesn\'t always feel comfortable, but it transforms.',
+    familyHome: 'Family communication surfaces hidden dynamics, secrets, or unspoken truths. Excellent for addressing family issues that have been avoided, discussing inheritance or shared resources, or healing family shadows through honest conversation. Intense family discussions transform relationships. Investigate family history or patterns. Home discussions about privacy, boundaries, or shared power. Avoid manipulation - use communication power for healing, not control.',
+    businessCareer: 'Excellent for work requiring investigation, research, depth analysis, or transformative communication. Psychology, research, detective work, crisis management, finance, or depth consulting thrives. Your penetrating thinking and powerful communication impress others. Perfect time for uncovering hidden information, strategic thinking, or addressing workplace power dynamics honestly. Deep focused work over superficial networking. Communicate truths others avoid. Avoid being too intense or suspicious professionally.',
+    moneyFinances: 'Financial investigations, research, and discussions about shared resources, taxes, debt, or investments. Think deeply about money and uncover hidden financial truths or opportunities. Good time for discussing joint finances, inheritance, or financial transformation. Earning through research, investigation, transformation work, or depth services. Money discussions require honesty about power and control. Financial decisions penetrate beneath surface appearances to real value.',
+    predictions: [
+      'Deep conversation or investigation uncovers hidden truth that changes everything',
+      'Research or analytical thinking reveals information others missed',
+      'Honest, intense discussion transforms relationship through confronting shadow',
+      'Financial or resource investigation surfaces important hidden information',
+      'Psychological insight through deep thinking helps you understand pattern or behavior',
+      'Secret or unspoken truth finally communicated, freeing stuck situation',
+      'Therapy or transformative conversation produces breakthrough in understanding',
+      'Detective work or investigation solves mystery or reveals crucial detail',
+      'Power dynamic finally addressed through honest, direct communication',
+      'You learn that truth and depth, though intense, bring real transformation and power'
+    ]
+  },
+
+  'Mercury-Sagittarius': {
+    name: 'Mercury Ingress Sagittarius',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, and finding meaning through broadening horizons.',
+    eventMeaning: 'Mercury in Sagittarius brings optimistic, philosophical, big-picture thinking and communication. Mental energy expands toward meaning and truth. The next 2-3 weeks favor learning, teaching, travel planning, philosophical discussions, and honest direct communication. Thoughts and words become more optimistic, broad, and truth-seeking. Excellent for education, publishing, adventure planning, or exploring ideas. Mind sees big picture but may miss important details.',
+    loveRelationships: 'Communication in relationships becomes more honest, optimistic, and philosophical. Perfect time for discussing life philosophy, future adventures, or sharing beliefs and meaning. Express feelings honestly and directly - say what you mean. Attraction to partners with broad minds and adventurous spirits. Talk about growth, learning, travel, or exploring together. Keep communication light and optimistic. Some may be too blunt - honesty is good, but tact helps.',
+    familyHome: 'Family communication becomes more open, honest, and educational. Excellent for discussing family travel, cultural experiences, beliefs, or education. Share knowledge and teach family members. Family discussions benefit from optimism and big-picture thinking. Plan family adventures or learning experiences. International family connections. Home conversations explore meaning and philosophy. Avoid being preachy or too blunt - inspire, don\'t lecture.',
+    businessCareer: 'Excellent for work requiring teaching, publishing, travel, international communication, or philosophical thinking. Education, travel industry, publishing, consulting, or inspirational work thrives. Your optimistic, big-picture communication impresses others. Perfect time for presenting vision, teaching what you know, networking internationally, or expanding professional horizons. Think strategically and communicate expansively. Avoid overpromising - enthusiasm is great, but be realistic too.',
+    moneyFinances: 'Financial discussions benefit from optimistic thinking and big-picture strategy. Good time for discussing growth investments, international opportunities, or expanding income through teaching or travel. Earning through education, publishing, travel work, or inspirational services. Money decisions consider growth and opportunity, not just security. Financial communication should be honest and direct. Avoid excessive optimism - faith is good, but verify facts.',
+    predictions: [
+      'Educational opportunity or class that expands your mind and horizons',
+      'Honest, direct conversation resolves issue through truth-telling',
+      'Travel discussion or planning that excites you about future adventure',
+      'Teaching or sharing knowledge where your enthusiasm inspires others',
+      'Big-picture thinking or strategy that solves problem stuck in details',
+      'International connection or cross-cultural communication broadens perspective',
+      'Philosophical or meaningful conversation answers question you\'ve been pondering',
+      'Optimistic words you speak lift someone\'s spirits or confidence',
+      'Publishing, writing, or content creation reaches broader audience',
+      'You learn that honest, expansive communication opens more doors than careful hedging'
+    ]
+  },
+
+  'Mercury-Capricorn': {
+    name: 'Mercury Ingress Capricorn',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Capricorn represents ambition, responsibility, discipline, achievement, mastery, and building lasting structures. It\'s the energy of climbing the mountain through persistent effort and mature commitment.',
+    eventMeaning: 'Mercury in Capricorn brings serious, strategic, goal-oriented thinking and communication. Mental energy becomes disciplined and focused on achievement. The next 2-3 weeks favor business planning, strategic thinking, serious discussions, learning practical skills, and professional communication. Thoughts and words become more mature, structured, and authority-building. Excellent for career planning, business communication, or mastering complex subjects. Mind is strategic but may be overly pessimistic or rigid.',
+    loveRelationships: 'Communication in relationships becomes more serious, practical, and goal-oriented. Perfect time for discussing long-term commitment, relationship goals, or building future together. Express feelings through responsible, mature words and practical planning. Attraction to partners who communicate seriously and reliably. Talk about ambitions, careers, or serious matters. Less small talk, more meaningful discussion. Some may be too serious - commitment is good, but enjoy lightness too.',
+    familyHome: 'Family communication becomes more structured, responsible, and focused on long-term planning. Excellent for discussing family finances, property, responsibilities, or long-term family goals. Respect family hierarchy and traditions in communication. Home planning conversations become practical and strategic. Family business or career discussions. Address family responsibilities maturely. Create family communication structures. Avoid being too controlling or rigid - guide, don\'t dictate.',
+    businessCareer: 'Peak time for professional communication, business planning, career strategy, and building authority. Business proposals, professional presentations, career discussions, management communication, or strategic planning excels. Your serious, competent communication impresses others. Perfect time for networking with authority figures, negotiating career advancement, or demonstrating expertise. Communicate with professionalism and strategic thinking. Build professional reputation through reliable, high-quality communication.',
+    moneyFinances: 'Excellent for financial planning, business strategy, investment analysis, and serious money discussions. Think long-term about wealth-building and financial goals. Good time for financial consulting, discussing career income growth, or planning financial security. Earning through professional expertise, business acumen, or demonstrating competence. Money discussions should be strategic and realistic. Conservative financial thinking prevents costly mistakes. Build wealth systematically through disciplined financial communication and planning.',
+    predictions: [
+      'Strategic thinking or business plan that positions you for long-term success',
+      'Professional communication where your competence and maturity impress authority',
+      'Career discussion or negotiation that advances your professional goals',
+      'Financial plan or serious money conversation improves long-term security',
+      'Responsibility you communicate or take on builds your authority and reputation',
+      'Business proposal or presentation delivered professionally achieves its goal',
+      'Practical learning or skill mastery that increases your professional value',
+      'Serious relationship conversation about commitment or future moves things forward',
+      'Disciplined thinking prevents impulsive decision and saves you from mistake',
+      'You learn that strategic, professional communication builds lasting success'
+    ]
+  },
+
+  'Mercury-Aquarius': {
+    name: 'Mercury Ingress Aquarius',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Aquarius represents innovation, individuality, friendship, progress, humanitarian ideals, and revolutionary thinking. It\'s the energy of breaking from tradition to create a better future for all.',
+    eventMeaning: 'Mercury in Aquarius brings innovative, unconventional, progressive thinking and communication. Mental energy becomes original and future-focused. The next 2-3 weeks favor brainstorming, networking, technological communication, humanitarian discussions, and thinking outside the box. Thoughts and words become more unique, inventive, and community-oriented. Excellent for technology projects, social causes, group communication, or revolutionary ideas. Mind is brilliant but may be too detached or erratic.',
+    loveRelationships: 'Communication in relationships becomes more friendly, intellectual, and unconventional. Perfect time for discussing freedom within relationship, future vision, or progressive relationship approaches. Express feelings through intellectual connection and friendship. Attraction to unique, independent communicators. Talk about ideas, social causes, or future possibilities. Text or message about interesting concepts. Some may be too detached - intellectual connection is good, but emotions matter too.',
+    familyHome: 'Family communication benefits from giving space for individuality and unconventional ideas. Excellent for discussing progressive family approaches, technology at home, or humanitarian family values. Respect each family member\'s unique perspective. Home planning conversations become innovative and future-focused. Family group chats or online communication. Discuss social issues or community involvement with family. Avoid being too rebellious or detached - innovate within connection.',
+    businessCareer: 'Excellent for work requiring innovation, technology, networking, or progressive thinking. Tech communication, social media, networking, team collaboration, humanitarian work, or innovative fields thrive. Your original, progressive thinking impresses others. Perfect time for brainstorming, launching tech projects, networking widely, or communicating revolutionary ideas. Collaborate with groups. Think about future and progress. Communicate your unique perspective boldly.',
+    moneyFinances: 'Financial discussions benefit from innovative thinking and unconventional approaches. Good time for discussing cryptocurrency, tech investments, crowdfunding, or progressive financial strategies. Earning through technology, networking, innovation, or social causes. Money decisions consider future and community, not just personal gain. Financial communication should be forward-thinking and collaborative. Network for financial opportunities. Think outside traditional financial box.',
+    predictions: [
+      'Innovative idea or unconventional thinking solves problem traditional approach couldn\'t',
+      'Networking or social communication leads to unexpected opportunity',
+      'Technology or social media communication succeeds through your unique approach',
+      'Group discussion or collaboration where your original perspective adds value',
+      'Humanitarian conversation or discussion of social cause inspires meaningful action',
+      'Brainstorming session produces brilliant, unconventional solution',
+      'Friendship or intellectual connection deepens through idea exchange',
+      'Communication about freedom or individuality improves relationship understanding',
+      'Progressive thinking about career or money opens new possibility',
+      'You learn that your unique perspective and innovative thinking are valuable assets'
+    ]
+  },
+
+  'Mercury-Pisces': {
+    name: 'Mercury Ingress Pisces',
+    frequency: 'Approximately once per year',
+    duration: '~2-3 weeks',
+    planetEnergy: 'Mercury represents communication, thinking, learning, information processing, connections, and mental agility. It\'s how you think, speak, learn, and exchange information with the world.',
+    signEnergy: 'Pisces represents compassion, spirituality, imagination, transcendence, unity, and dissolving boundaries. It\'s the energy of mystical connection, artistic inspiration, and merging with the infinite.',
+    eventMeaning: 'Mercury in Pisces brings intuitive, imaginative, compassionate thinking and communication. Mental energy becomes fluid and spiritually attuned. The next 2-3 weeks favor creative writing, poetry, spiritual discussions, compassionate communication, and intuitive thinking. Thoughts and words become more empathetic, artistic, and subtle. Excellent for art, music, therapy communication, or spiritual learning. Mind is inspired but may be confused, vague, or overly escapist.',
+    loveRelationships: 'Communication in relationships becomes more romantic, empathetic, and spiritually connected. Perfect time for poetic love expressions, compassionate listening, or discussing dreams and spirituality together. Express feelings through creative words, music, or subtle hints. Attraction to romantic, sensitive communicators. Listen to unspoken communication and emotional undercurrents. Some may avoid direct communication - imagination is beautiful, but clarity helps too.',
+    familyHome: 'Family communication benefits from compassion, forgiveness, and emotional sensitivity. Excellent for healing family conversations, discussing spirituality or creativity with family, or listening to unspoken family needs. Express love for family through empathetic understanding. Home planning conversations consider emotional and spiritual atmosphere. Music, art, or spiritual practice in family communication. Avoid vagueness or passive-aggressive hints - be compassionate but clear.',
+    businessCareer: 'Excellent for work requiring creativity, compassion, intuition, or artistic communication. Writing, arts, music, healing professions, counseling, photography, or spiritual work thrives. Your empathetic, imaginative communication impresses others. Perfect time for creative projects, compassionate client work, or artistic presentations. Trust intuition about professional communication. Network through empathy and creativity. Communicate with both heart and inspiration.',
+    moneyFinances: 'Financial discussions benefit from intuition and creative thinking. Good time for earning through creative work, healing services, or artistic communication. Money decisions consider emotional and spiritual factors, not just logic. Trust financial intuition but verify with practical analysis. Earning through compassion, imagination, or helping others. Financial communication should be gentle and understanding. Avoid financial vagueness or escapism - dreams need practical grounding.',
+    predictions: [
+      'Intuitive feeling about communication or person proves remarkably accurate',
+      'Creative or poetic expression of idea communicates better than literal words',
+      'Compassionate conversation provides healing or comfort to someone struggling',
+      'Dream or subconscious insight reveals answer to question you\'ve been pondering',
+      'Artistic or musical communication expresses what words alone cannot',
+      'Empathetic listening helps you understand unspoken needs or feelings',
+      'Spiritual or philosophical discussion deepens your understanding beautifully',
+      'Imagination or creative thinking solves problem logical approach couldn\'t',
+      'Forgiveness or compassionate words you speak heal relationship wound',
+      'You learn that intuitive, heart-centered communication often conveys more than logic'
     ]
   },
 
