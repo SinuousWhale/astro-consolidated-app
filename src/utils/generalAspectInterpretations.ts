@@ -2542,6 +2542,651 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Vulnerability you risk with psychological awareness creates deep healing connection',
       'Opportunity for transformative empowerment through conscious initiative and courageous depth work'
     ]
+  },
+
+  // ============================================================================
+  // MERCURY-JUPITER ASPECTS (Annual growth and learning cycles)
+  // ============================================================================
+
+  'Mercury-Jupiter-Conjunction': {
+    name: 'Mercury Conjunction Jupiter',
+    frequency: 'Occurs 1-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Thinking expands with optimism and vision! Mercury\'s mind merges with Jupiter\'s wisdom, creating expansive thinking, optimistic communication, and abundant learning opportunities. Perfect time for studying, teaching, writing, publishing, exploring ideas. Mental horizons broaden. Communication becomes generous and inspiring. Excellent for big-picture thinking, philosophical discussions, educational pursuits. Risk of over-promising or exaggerating - temper enthusiasm with realism. Overall: mind opens to possibility and growth.',
+    loveRelationships: 'Relationship communication expands with optimism! Conversations feel inspiring and growth-oriented. Perfect time for discussing future together, sharing philosophies, planning adventures. Optimistic about relationship possibilities. Good time to explore new relationship territories, be generous with words, share big dreams. Warning: avoid making unrealistic promises - enthusiasm should be balanced with follow-through.',
+    familyHome: 'Family communication becomes optimistic and expansive! Perfect time for inspiring family discussions, educational family activities, sharing wisdom across generations. Home feels intellectually stimulating. Good time for family travel planning, discussing family values and beliefs, teaching family members. Generous communication creates family growth. Avoid exaggerating or over-promising family commitments.',
+    businessCareer: 'Professional communication expands with vision! Excellent time for pitching big ideas, pursuing learning opportunities, networking expansively, publishing professional work. Thinking big about career possibilities. Good time for professional development, teaching others, sharing expertise widely. Your ideas attract recognition. Warning: back up enthusiasm with realistic plans - avoid over-promising professionally.',
+    moneyFinances: 'Financial thinking becomes optimistic and expansive! Good time to explore financial growth opportunities, learn about investments, plan abundant financial future. Mental approach to money expands. Excellent for financial education, discussing financial philosophy, thinking big about income possibilities. Warning: temper financial optimism with practical analysis - avoid risky financial decisions based solely on enthusiasm.',
+    predictions: [
+      'Big idea you communicate attracts enthusiastic support and growth opportunity',
+      'Your optimistic communication inspires others and opens unexpected doors',
+      'Learning opportunity you pursue with enthusiasm expands your mental horizons significantly',
+      'Conversation about future possibilities creates exciting shared vision and connection',
+      'Writing or teaching you do reaches wider audience than expected',
+      'Your generous sharing of knowledge or ideas creates beneficial ripple effect',
+      'Philosophical discussion you engage in broadens your perspective profoundly',
+      'Educational pursuit or study you begin with excitement proves highly rewarding',
+      'Optimistic message you send receives better response than you anticipated',
+      'Opportunity to expand your mind and communication creates lasting growth and wisdom'
+    ]
+  },
+
+  'Mercury-Jupiter-Opposition': {
+    name: 'Mercury Opposition Jupiter',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Tension between details and big picture requiring balance! Mercury\'s focus on specifics faces Jupiter\'s expansive vision, creating challenge between precision and possibility. Risk of mental overload, scattered thinking, or communication that promises more than it delivers. Challenge is integrating careful thinking with optimistic vision. Too much detail causes paralysis; too much expansion causes impracticality. Balance needed between analysis and faith, facts and philosophy. Integration creates wise, realistic optimism.',
+    loveRelationships: 'Relationship communication requires balancing ideals and reality! Tension between discussing practical relationship details and future dreams. Partner\'s communication may seem either too limiting or too unrealistic. Challenge is honoring both day-to-day communication AND inspiring future vision. Good time to balance romantic idealism with honest practical discussions. Integrate relationship facts with relationship faith.',
+    familyHome: 'Family communication requires balancing practicality and vision! Tension between focusing on home details and discussing big family possibilities. Challenge is honoring both practical family needs AND expansive family dreams. Good time to balance realistic family discussions with inspiring family philosophy. Avoid getting lost in details OR unrealistic family expectations. Integration of practicality and optimism needed.',
+    businessCareer: 'Professional communication requires balancing details and vision! Tension between focusing on work specifics and thinking big about career. Challenge is honoring both careful professional analysis AND expansive career possibilities. Good time to balance realistic project details with inspiring professional vision. Avoid paralysis in details OR unrealistic professional promises. Integrate precision with possibility.',
+    moneyFinances: 'Financial thinking requires balancing caution and opportunity! Tension between careful financial analysis and optimistic financial expansion. Challenge is honoring both realistic financial assessment AND growth-oriented financial thinking. Good time to balance practical financial management with exploring financial opportunities. Avoid financial paralysis through over-analysis OR risky decisions through excessive optimism. Wise balance essential.',
+    predictions: [
+      'Tension between your detailed thinking and big vision forces wise integration',
+      'Your tendency to over-promise requires conscious balance with realistic delivery',
+      'Communication challenge reveals need to integrate facts with optimistic possibility',
+      'Mental overload you feel resolves when you prioritize and balance focus',
+      'Conflict between practical details and inspiring vision creates breakthrough synthesis',
+      'Your scattered thinking consolidates when you balance analysis with faith',
+      'Challenge to communicate both honestly AND optimistically produces mature wisdom',
+      'Tension between precision and expansion resolved through conscious integration',
+      'You learn to balance careful thinking with optimistic growth-oriented mindset',
+      'Opportunity to integrate detailed analysis with expansive vision creates wise realistic optimism'
+    ]
+  },
+
+  'Mercury-Jupiter-Trine': {
+    name: 'Mercury Trine Jupiter',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Thinking and communication flow with natural optimism and growth! Mercury\'s mind harmonizes gracefully with Jupiter\'s wisdom, creating effortless learning, inspiring communication, and abundant mental opportunities. Perfect time for teaching, studying, writing, publishing, networking. Ideas flow generously and optimistically. Communication inspires without exaggeration. Excellent for philosophical discussions, educational pursuits, expanding knowledge. Mental growth feels natural and joyful. Wisdom and communication align beautifully.',
+    loveRelationships: 'Relationship communication flows with natural optimism and inspiration! Conversations feel uplifting and growth-oriented effortlessly. Perfect time for discussing future dreams, sharing philosophies, exploring together intellectually. Generosity in communication deepens connection naturally. Good time for inspiring relationship talks, learning together, growing through shared ideas. Optimism and honesty balance perfectly. Communication creates relationship growth.',
+    familyHome: 'Family communication flows with natural wisdom and inspiration! Perfect time for uplifting family discussions, educational family activities, sharing knowledge across generations. Home conversations feel expansive and positive. Good time for family learning, discussing family values joyfully, teaching family members naturally. Generous communication creates family harmony and growth effortlessly. Wisdom flows through family connections.',
+    businessCareer: 'Professional communication flows with natural vision and growth! Excellent time for presenting ideas, pursuing professional development, networking effectively, publishing work. Career thinking expands naturally and realistically. Good time for teaching professionally, learning new skills, sharing expertise. Your ideas attract recognition effortlessly. Communication creates professional opportunities and advancement naturally. Wisdom and career align.',
+    moneyFinances: 'Financial thinking flows with natural optimism and wisdom! Good time to explore financial growth opportunities, learn about smart investments, plan abundant financial future realistically. Mental approach to money expands wisely. Excellent for financial education, discussing sound financial philosophy, thinking optimistically yet practically about income. Financial growth through wise thinking flows naturally. Abundance mindset meets financial wisdom.',
+    predictions: [
+      'Idea you communicate effortlessly attracts enthusiastic support and opportunity',
+      'Your naturally optimistic communication inspires others and opens doors smoothly',
+      'Learning opportunity flows to you and expands your knowledge joyfully',
+      'Conversation about possibilities creates inspiring shared vision without effort',
+      'Writing or teaching you do resonates widely and produces natural success',
+      'Your generous knowledge-sharing creates beneficial connections effortlessly',
+      'Philosophical discussion you enjoy broadens your perspective naturally and pleasantly',
+      'Educational pursuit you begin flows smoothly and proves highly rewarding',
+      'Optimistic message you share receives warm enthusiastic response naturally',
+      'Opportunity for mental and communicative growth flows to you effortlessly and abundantly'
+    ]
+  },
+
+  'Mercury-Jupiter-Square': {
+    name: 'Mercury Square Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Growth through mental friction and excessive optimism requiring discipline! Mercury\'s thinking clashes with Jupiter\'s expansion, creating scattered focus, over-promising, or unrealistic mental expectations. Challenge is channeling enthusiasm into realistic plans rather than empty promises. Tension between wanting to learn everything and mastering something specific. Risk of saying too much, promising too much, or thinking too big without follow-through. Crisis teaches balance between optimism and realism. Conscious discipline transforms enthusiasm into wisdom.',
+    loveRelationships: 'Relationship communication friction through unrealistic expectations! Tendency to over-promise in relationship or discuss future without realistic foundation. Partner may seem to exaggerate or make empty promises. Challenge is expressing enthusiasm while maintaining honest realistic communication. Good time to consciously balance romantic idealism with truthful practical discussions. Crisis teaches value of promises you can keep. Transform excessive optimism into mature realistic hope.',
+    familyHome: 'Family communication friction through scattered focus or exaggeration! Home discussions may involve unrealistic expectations or broken promises. Challenge is expressing family optimism while maintaining practical honest communication. Good time to consciously balance inspiring family vision with realistic family commitments. Crisis reveals importance of follow-through on family promises. Transform scattered family communication into focused realistic optimism.',
+    businessCareer: 'Professional communication friction through over-promising or scattered focus! Work discussions may involve unrealistic commitments or inability to deliver what you promised. Challenge is expressing professional enthusiasm while maintaining realistic honest communication. Good time to consciously balance big career vision with practical achievable steps. Crisis teaches value of under-promising and over-delivering. Transform scattered professional thinking into disciplined focused growth.',
+    moneyFinances: 'Financial thinking friction through excessive optimism or risky decisions! Money decisions may involve unrealistic expectations or financial over-extension. Challenge is maintaining financial enthusiasm while exercising practical cautious analysis. Good time to consciously balance financial growth mindset with realistic risk assessment. Crisis teaches value of financial discipline and honest assessment. Transform financial over-optimism into wise balanced financial thinking.',
+    predictions: [
+      'Over-promise you make teaches important lesson about realistic commitments',
+      'Your scattered focus consolidates when you consciously prioritize and discipline thinking',
+      'Communication that promised too much requires honest correction and follow-through',
+      'Excessive optimism you feel requires conscious grounding in practical reality',
+      'Mental friction forces you to balance enthusiasm with realistic achievable plans',
+      'Your tendency to exaggerate requires conscious discipline toward honest communication',
+      'Scattered learning or thinking consolidates into focused meaningful growth',
+      'Crisis of unrealistic expectations teaches value of under-promising and over-delivering',
+      'You learn to channel enthusiasm into disciplined realistic optimistic action',
+      'Opportunity to transform excessive optimism into wise balanced growth-oriented thinking'
+    ]
+  },
+
+  'Mercury-Jupiter-Sextile': {
+    name: 'Mercury Sextile Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Opportunity for mental growth through communicative initiative! Mercury\'s thinking harmonizes with Jupiter\'s wisdom, creating potential for learning, inspiring communication, and knowledge expansion IF you take action. Opportunities for study, teaching, writing, networking appear - but require your engagement. Perfect time to pursue education, share ideas actively, explore philosophies. Success through initiative in learning and communication. Passive approach wastes potential; active mental engagement creates growth and opportunity.',
+    loveRelationships: 'Relationship communication opportunity through initiative! Potential for inspiring conversations, shared learning, intellectual growth together IF you initiate. Perfect time to suggest meaningful discussions, plan learning experiences together, share philosophies actively. Opportunity for relationship growth through communication IF you take the lead. Initiative in generous honest communication deepens connection. Active engagement brings inspiring results.',
+    familyHome: 'Family communication opportunity through initiative! Potential for uplifting family discussions, educational family activities, wisdom-sharing IF you initiate. Perfect time to suggest family learning experiences, share knowledge with family members, discuss family values actively. Family receptive to inspiring communication IF you present it. Initiative in generous family communication creates harmony and growth. Active engagement brings positive results.',
+    businessCareer: 'Professional communication opportunity through initiative! Potential for career advancement through presenting ideas, pursuing learning, networking IF you take action. Perfect time to pitch proposals, pursue professional development actively, share expertise. Recognition available IF you step forward with ideas. Initiative in professional learning and communication creates opportunities. Active engagement brings career growth and success.',
+    moneyFinances: 'Financial growth opportunity through learning and initiative! Potential for improved financial situation through financial education, wise planning IF you pursue it actively. Perfect time to learn about investments, explore income opportunities, discuss financial growth strategies. Financial expansion available through knowledgeable initiative. Active financial learning and wise action bring improvement. Passive approach wastes opportunity.',
+    predictions: [
+      'Learning opportunity appears - pursue it actively for significant mental growth',
+      'Your initiative to communicate ideas attracts support and creates opportunity',
+      'Chance to teach or share knowledge succeeds IF you step forward actively',
+      'Educational pursuit you begin with enthusiasm produces rewarding results',
+      'Networking or communication you initiate actively creates beneficial connections',
+      'Opportunity to expand thinking through study appears - initiative required to actualize',
+      'Philosophical discussion you initiate broadens your and others\' perspectives',
+      'Writing or publishing opportunity you pursue actively succeeds and resonates',
+      'Your active generous sharing of ideas creates unexpected positive ripple effect',
+      'Opportunity for mental communicative growth through conscious initiative and active engagement'
+    ]
+  },
+
+  // ============================================================================
+  // MERCURY-SATURN ASPECTS (Annual discipline and mastery cycles)
+  // ============================================================================
+
+  'Mercury-Saturn-Conjunction': {
+    name: 'Mercury Conjunction Saturn',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Thinking becomes serious, disciplined, and structured! Mercury\'s mind merges with Saturn\'s discipline, creating focused concentration, serious communication, and methodical learning. Perfect time for serious study, strategic planning, structured writing, important conversations requiring maturity. Mental focus sharpens. Communication becomes more careful and authoritative. Excellent for detailed work, long-term planning, professional communications. May feel mentally heavy or pessimistic - but produces lasting results. Depth over breadth.',
+    loveRelationships: 'Relationship communication becomes serious and committed! Conversations feel mature and realistic. Perfect time for discussing long-term commitment, addressing relationship responsibilities, having serious important talks. Communication may feel heavy but builds lasting foundation. Good time for practical relationship planning, addressing challenges honestly, making mature relationship commitments. Depth and honesty over lighthearted chitchat.',
+    familyHome: 'Family communication becomes serious and structured! Perfect time for important family discussions, addressing family responsibilities, planning long-term family matters. Home conversations feel mature and realistic. Good time for discussing family obligations, addressing family challenges honestly, making family commitments. Communication may feel heavy but creates lasting family structure. Responsibility and honesty emphasized.',
+    businessCareer: 'Professional communication becomes disciplined and authoritative! Excellent time for serious work discussions, strategic career planning, structured professional writing, important business meetings. Thinking sharpens for detailed professional work. Good time for demonstrating professional maturity, communicating with authority, making long-term career commitments. Your serious communication attracts professional respect. Discipline and mastery in professional expression.',
+    moneyFinances: 'Financial thinking becomes serious and disciplined! Good time for careful financial planning, serious budgeting, structured financial decisions, long-term financial strategy. Mental approach to money becomes realistic and conservative. Excellent for detailed financial analysis, addressing financial responsibilities, making mature financial commitments. Cautious financial thinking prevents mistakes. Discipline creates lasting financial security.',
+    predictions: [
+      'Serious conversation you have creates lasting understanding and commitment',
+      'Your disciplined focused thinking produces important breakthrough or achievement',
+      'Structured plan you create carefully provides solid foundation for success',
+      'Important message you communicate with maturity attracts respect and recognition',
+      'Detailed work or study you undertake with discipline yields lasting valuable results',
+      'Serious commitment you make through careful communication proves enduring and significant',
+      'Professional communication demonstrating expertise and maturity advances your career',
+      'Realistic honest conversation you initiate resolves long-standing issue',
+      'Focused concentration you apply to complex problem produces important solution',
+      'Opportunity to communicate with authority and discipline creates lasting achievement and respect'
+    ]
+  },
+
+  'Mercury-Saturn-Opposition': {
+    name: 'Mercury Opposition Saturn',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Tension between free thinking and mental limitation requiring balance! Mercury\'s curiosity faces Saturn\'s restriction, creating mental blocks, communication obstacles, or self-doubt in thinking. Challenge is honoring both open inquiry AND disciplined focus. Risk of mental pessimism, fear of speaking, or excessive criticism. Resistance to structure creates chaos; excessive structure stifles creativity. Integration needed between curiosity and discipline, flexibility and rigor. Balance creates mature discernment.',
+    loveRelationships: 'Relationship communication faces obstacles requiring patience! Tension between free expression and fear of judgment or rejection. Partner\'s communication may seem critical or limiting. Challenge is honoring both authentic expression AND mature responsible communication. Good time to work through communication blocks, address fears about speaking truth, balance honesty with sensitivity. Integration of freedom and responsibility in communication needed.',
+    familyHome: 'Family communication faces blocks requiring maturity! Tension between wanting to speak freely and feeling limited by family judgment or responsibility. Challenge is honoring both authentic family expression AND mature responsible family communication. Good time to work through family communication patterns, address critical family voices, balance truth-telling with respect. Integration of openness and structure needed in family communication.',
+    businessCareer: 'Professional communication faces obstacles requiring discipline! Tension between creative professional thinking and limiting professional structures or authority. Challenge is honoring both innovative professional ideas AND realistic professional constraints. Good time to work through professional communication blocks, address fear of authority judgment, balance creativity with professionalism. Integration of innovation and discipline creates professional maturity.',
+    moneyFinances: 'Financial thinking faces blocks requiring realistic assessment! Tension between financial optimism and limiting financial reality or fears. Challenge is honoring both positive financial thinking AND realistic financial constraints. Good time to work through financial mental blocks, address money fears honestly, balance hope with practical assessment. Integration of financial faith and financial discipline creates wise money management.',
+    predictions: [
+      'Communication block you experience reveals fear or pattern requiring conscious work',
+      'Your mental limitation or self-doubt requires addressing underlying critical voice',
+      'Tension between free thinking and disciplined structure forces wise integration',
+      'Critical feedback you receive, though painful, ultimately improves your thinking',
+      'Mental obstacle you face teaches importance of balancing curiosity with focus',
+      'Fear of speaking or expressing you confront requires courage to overcome',
+      'Conflict between your ideas and authority/structure forces mature consideration',
+      'Self-doubt in thinking you work through produces stronger discernment',
+      'Communication challenge requires balancing authentic expression with responsibility',
+      'Opportunity to integrate free inquiry with disciplined structure creates mature wisdom'
+    ]
+  },
+
+  'Mercury-Saturn-Trine': {
+    name: 'Mercury Trine Saturn',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Thinking and communication flow with natural discipline and mastery! Mercury\'s mind harmonizes gracefully with Saturn\'s structure, creating effortless focus, authoritative communication, and productive mental discipline. Perfect time for serious study, detailed work, professional writing, important strategic planning. Concentration comes naturally. Communication carries natural authority without harshness. Excellent for complex problem-solving, structured learning, mature conversations. Mental discipline feels easy and rewarding. Wisdom and focus align beautifully.',
+    loveRelationships: 'Relationship communication flows with natural maturity and depth! Conversations feel serious yet comfortable, committed yet authentic. Perfect time for discussing long-term plans, addressing relationship realities honestly, making mature commitments naturally. Communication depth without heaviness. Good time for realistic relationship planning, speaking truth with sensitivity, building lasting communication patterns. Maturity and honesty combine effortlessly. Communication strengthens commitment.',
+    familyHome: 'Family communication flows with natural wisdom and structure! Perfect time for important family discussions, addressing family responsibilities comfortably, planning family matters wisely. Home conversations feel mature and productive naturally. Good time for structured family planning, honest family communication, making family commitments. Seriousness and warmth balance perfectly. Family communication creates lasting foundation effortlessly.',
+    businessCareer: 'Professional communication flows with natural authority and discipline! Excellent time for important work presentations, strategic career planning, professional writing, serious business discussions. Your communication carries natural professional weight and respect. Good time for demonstrating expertise, communicating with authority, planning long-term career strategy. Discipline and professionalism come naturally. Career advancement through communication flows smoothly.',
+    moneyFinances: 'Financial thinking flows with natural discipline and wisdom! Good time for serious financial planning, structured budgeting, wise financial decisions, long-term financial strategy. Mental approach to money becomes naturally realistic and disciplined. Excellent for detailed financial analysis, making sound financial commitments, implementing financial structure. Cautious wise financial thinking comes naturally. Financial security through disciplined thinking builds effortlessly.',
+    predictions: [
+      'Serious conversation you have naturally creates lasting understanding and commitment',
+      'Your disciplined thinking effortlessly produces important achievement or breakthrough',
+      'Complex problem you approach with focus resolves smoothly and permanently',
+      'Professional communication demonstrating natural expertise advances your career',
+      'Detailed work or study you undertake flows productively and yields lasting results',
+      'Mature honest communication you offer naturally earns respect and deepens connection',
+      'Strategic plan you create with discipline provides solid successful foundation',
+      'Your naturally authoritative communication attracts recognition and opportunity',
+      'Focused concentration comes easily and produces significant valuable results',
+      'Opportunity for communication with natural discipline and wisdom creates lasting achievement'
+    ]
+  },
+
+  'Mercury-Saturn-Square': {
+    name: 'Mercury Square Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Growth through mental blocks and communication obstacles requiring discipline! Mercury\'s thinking clashes with Saturn\'s limitation, creating self-doubt, mental pessimism, or fear of expression. Challenge is pushing through mental obstacles rather than accepting limitation as permanent. Tendency toward negative thinking, excessive self-criticism, or communication anxiety. Crisis forces development of mental discipline and mature discernment. Conscious effort transforms obstacles into mastery. Persistence through difficulty builds lasting mental strength.',
+    loveRelationships: 'Relationship communication friction through fear or criticism! Communication may feel blocked, awkward, or judged. Self-doubt in expressing feelings or fear of partner\'s judgment. Challenge is speaking truth despite fear of rejection or criticism. Good time to consciously work through communication blocks, address critical inner voice, practice vulnerable honest expression. Crisis teaches communication courage. Persistence through difficulty builds authentic mature relationship communication.',
+    familyHome: 'Family communication friction through blocks or criticism! Home conversations may feel stifled, critical, or difficult. Self-doubt about family expression or fear of family judgment. Challenge is communicating authentically despite family criticism or limiting patterns. Good time to consciously work through family communication obstacles, address critical family voices, speak truth with maturity. Crisis forces family communication growth. Persistence builds healthier family expression.',
+    businessCareer: 'Professional communication friction through obstacles or self-doubt! Work communication may feel blocked, judged, or inadequate. Fear of authority judgment or excessive professional self-criticism. Challenge is expressing professional ideas despite fear or obstacles. Good time to consciously push through professional communication blocks, address imposter syndrome, communicate competently despite doubts. Crisis builds professional communication strength. Persistence creates career advancement.',
+    moneyFinances: 'Financial thinking friction through pessimism or fear! Money thoughts may feel anxious, limited, or overwhelmingly responsible. Excessive financial worry or paralyzing financial fear. Challenge is thinking practically about money without mental paralysis or pessimism. Good time to consciously work through financial mental blocks, address money anxiety, think realistically without catastrophizing. Crisis develops financial mental discipline. Persistence builds wise financial thinking.',
+    predictions: [
+      'Communication block you face requires conscious courage to speak truth anyway',
+      'Your mental self-doubt reveals critical inner voice requiring compassionate challenge',
+      'Obstacle in thinking or expression you push through builds lasting mental strength',
+      'Fear of judgment you confront consciously frees your authentic communication',
+      'Mental difficulty or pessimism you work through develops mature discernment',
+      'Critical feedback you receive, though difficult, ultimately improves your mastery',
+      'Communication challenge forces you to develop discipline and mental persistence',
+      'Self-doubt you consciously overcome produces stronger confidence and competence',
+      'Mental friction you navigate with discipline transforms into lasting achievement',
+      'Opportunity to transform mental obstacles into mastery through conscious persistent effort'
+    ]
+  },
+
+  'Mercury-Saturn-Sextile': {
+    name: 'Mercury Sextile Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Opportunity for mental mastery through disciplined initiative! Mercury\'s thinking harmonizes with Saturn\'s structure, creating potential for focused achievement, authoritative communication, and disciplined learning IF you take action. Opportunities for serious study, strategic planning, professional communication appear - but require your effort. Perfect time to pursue structured learning, practice discipline, communicate with authority. Success through mental discipline and initiative. Passive approach wastes potential; active disciplined effort creates lasting results.',
+    loveRelationships: 'Relationship communication opportunity through mature initiative! Potential for serious important conversations, long-term planning, committed communication IF you initiate. Perfect time to suggest meaningful relationship discussions, address important topics maturely, make relationship commitments actively. Opportunity for relationship depth through honest communication IF you have the courage. Initiative in mature authentic communication strengthens relationship. Active engagement brings lasting results.',
+    familyHome: 'Family communication opportunity through responsible initiative! Potential for important family discussions, structured family planning, mature family communication IF you initiate. Perfect time to suggest serious family conversations, address family responsibilities actively, make family commitments. Family receptive to mature honest communication IF you present it. Initiative in responsible family communication creates harmony and structure. Active engagement brings positive results.',
+    businessCareer: 'Professional communication opportunity through disciplined initiative! Potential for career advancement through demonstrating expertise, strategic planning, professional communication IF you take action. Perfect time to present professional ideas with authority, pursue structured professional development, communicate maturely. Recognition available IF you step forward with discipline and competence. Initiative in professional mastery creates opportunities. Active disciplined effort brings career success.',
+    moneyFinances: 'Financial planning opportunity through disciplined initiative! Potential for improved financial situation through serious planning, structured budgeting, responsible financial decisions IF you pursue it actively. Perfect time to create financial plan, implement financial discipline, make wise financial commitments. Financial security available through disciplined initiative. Active responsible financial action brings improvement. Passive approach wastes opportunity.',
+    predictions: [
+      'Opportunity for serious study or planning appears - pursue it with discipline for success',
+      'Your initiative to communicate with authority attracts respect and recognition',
+      'Chance to demonstrate expertise or maturity succeeds IF you step forward actively',
+      'Important conversation you initiate maturely resolves issue and strengthens connection',
+      'Structured plan you create with discipline provides foundation for lasting achievement',
+      'Opportunity to show professional competence appears - initiative required to actualize',
+      'Serious commitment you make after careful thought proves enduring and significant',
+      'Detailed work you undertake with disciplined effort yields valuable lasting results',
+      'Your active practice of mental discipline creates breakthrough in mastery',
+      'Opportunity for achievement through disciplined communication and focused initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MERCURY-URANUS ASPECTS (Revolutionary thinking and innovative communication)
+  // ============================================================================
+
+  'Mercury-Uranus-Conjunction': {
+    name: 'Mercury Conjunction Uranus',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Mind awakens with revolutionary brilliance! Mercury\'s thinking merges with Uranus\'s innovation, creating breakthrough insights, unconventional communication, and mental liberation. Perfect time for innovative thinking, expressing unique ideas, learning progressive subjects, sudden mental breakthroughs. Mind operates at accelerated innovative pace. Communication becomes electric and original. Excellent for technology, invention, radical new perspectives. May feel mentally restless - channel energy into creative problem-solving. Genius flows through authenticity.',
+    loveRelationships: 'Relationship communication becomes exciting and unconventional! Conversations feel electric and liberating. Perfect time for honest authentic discussions, trying new communication styles, expressing your unique perspective in relationship. Sudden relationship insights or breakthroughs possible. Freedom of thought and expression essential. Good time for refreshing relationship through innovative communication. Excitement and authenticity over predictability.',
+    familyHome: 'Family communication becomes innovative and liberating! Perfect time for introducing progressive ideas to family, having breakthrough family conversations, trying new family communication styles. Home discussions feel fresh and authentic. Good time for family brainstorming, embracing family uniqueness, communicating with radical honesty. Technology may facilitate family connection. Liberation from limiting family communication patterns.',
+    businessCareer: 'Professional communication becomes innovative and breakthrough-oriented! Excellent time for pitching revolutionary ideas, embracing new professional technology, expressing unique professional perspective, making innovative professional connections. Thinking accelerates professionally. Good time for creative problem-solving, unconventional professional approaches, communicating authentic professional vision. Your innovative ideas attract recognition. Professional liberation through authentic expression.',
+    moneyFinances: 'Financial thinking becomes innovative and liberating! Good time to explore unconventional income ideas, learn about innovative investments, think creatively about financial freedom. Mental approach to money becomes progressive and original. Excellent for financial brainstorming, exploring tech-based income, thinking outside financial boxes. Sudden financial insights possible. Liberation from limiting financial thinking patterns.',
+    predictions: [
+      'Sudden brilliant insight appears that solves problem in completely new way',
+      'Your unconventional idea communicated authentically attracts enthusiastic support',
+      'Breakthrough in thinking liberates you from limiting mental pattern',
+      'Innovative approach to communication you try creates exciting new connections',
+      'Technology or progressive idea you learn accelerates your mental capabilities',
+      'Unexpected conversation produces revolutionary insight or opportunity',
+      'Your authentic unique perspective expressed boldly receives recognition',
+      'Mental breakthrough you experience changes how you see important situation',
+      'Innovative communication style you adopt refreshes relationships and opportunities',
+      'Opportunity to express genius through revolutionary authentic thinking and communication'
+    ]
+  },
+
+  'Mercury-Uranus-Opposition': {
+    name: 'Mercury Opposition Uranus',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Tension between conventional thinking and revolutionary insight requiring integration! Mercury\'s logical mind faces Uranus\'s radical innovation, creating mental tension between conformity and breakthrough. Challenge is honoring both practical communication AND revolutionary authentic expression. Risk of mental chaos, scattered brilliance, or rebellious communication lacking follow-through. Resistance to new ideas creates stagnation; excessive novelty creates instability. Integration of tradition and innovation needed. Balance creates grounded genius.',
+    loveRelationships: 'Relationship communication tension between stability and excitement! Conflict between conventional relationship discussion and radical authentic expression. Partner may seem unpredictably communicative or too conventional. Challenge is honoring both stable practical communication AND exciting authentic expression. Good time to integrate reliable communication with refreshing honesty, predictability with spontaneity. Balance needed between communication safety and liberation.',
+    familyHome: 'Family communication tension between tradition and progressive ideas! Conflict between conventional family discussion patterns and revolutionary family communication. Challenge is honoring both family communication traditions AND innovative authentic family expression. Good time to integrate family communication stability with progressive honest family dialogue. Balance needed between respecting family norms and expressing authentic family truth.',
+    businessCareer: 'Professional communication tension between conventional and innovative! Conflict between traditional professional communication and radical new professional ideas. Challenge is honoring both professional communication norms AND innovative breakthrough professional thinking. Good time to integrate professional conventions with authentic innovative professional expression. Balance needed between career stability and professional revolution.',
+    moneyFinances: 'Financial thinking tension between conventional and radical! Conflict between traditional financial thinking and innovative unconventional financial ideas. Challenge is honoring both proven financial wisdom AND progressive innovative financial approaches. Good time to integrate conservative financial thinking with calculated innovative financial strategies. Balance needed between financial security and liberating financial innovation.',
+    predictions: [
+      'Mental tension forces you to integrate conventional wisdom with revolutionary insight',
+      'Your scattered brilliant ideas require conscious organization and practical application',
+      'Communication conflict reveals need to balance authenticity with consideration',
+      'Tension between old thinking patterns and new insights creates breakthrough synthesis',
+      'Rebellious communication you temper with wisdom creates productive change',
+      'Mental restlessness you channel constructively produces innovative practical solution',
+      'Challenge to communicate both reliably AND authentically produces mature integration',
+      'Conflict between conventional and radical thinking resolved through balanced innovation',
+      'You learn to express unique ideas in ways others can actually receive and use',
+      'Opportunity to integrate traditional communication with revolutionary authentic expression'
+    ]
+  },
+
+  'Mercury-Uranus-Trine': {
+    name: 'Mercury Trine Uranus',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Thinking and communication flow with natural innovation and brilliance! Mercury\'s mind harmonizes gracefully with Uranus\'s genius, creating effortless breakthroughs, inspiring innovative communication, and liberated authentic expression. Perfect time for creative problem-solving, learning new technology, expressing unique ideas, embracing progressive thinking. Mental brilliance flows naturally without chaos. Communication innovates effortlessly. Excellent for inventive work, unconventional learning, authentic dialogue. Genius and practicality align beautifully.',
+    loveRelationships: 'Relationship communication flows with natural excitement and authenticity! Conversations feel fresh, honest, and liberating effortlessly. Perfect time for spontaneous meaningful talks, trying new communication approaches, expressing authentic unique perspective in relationship. Freedom and connection balance perfectly. Good time for refreshing relationship dialogue, sharing innovative ideas, communicating with joyful honesty. Excitement and depth combine naturally.',
+    familyHome: 'Family communication flows with natural innovation and authenticity! Perfect time for progressive family discussions, introducing new family ideas naturally, communicating with refreshing family honesty. Home conversations feel exciting and liberated comfortably. Good time for family brainstorming, embracing family uniqueness joyfully, trying new family communication styles. Innovation and family warmth combine effortlessly.',
+    businessCareer: 'Professional communication flows with natural innovation and breakthrough! Excellent time for presenting innovative ideas, adopting new professional technology, expressing unique professional perspective. Brilliant professional thinking emerges naturally and practically. Good time for creative professional problem-solving, unconventional yet effective professional approaches, authentic professional networking. Your innovative professionalism attracts recognition effortlessly.',
+    moneyFinances: 'Financial thinking flows with natural innovation and insight! Good time to discover innovative income opportunities, learn progressive financial approaches, think creatively about financial freedom naturally. Mental approach to money becomes refreshingly original yet practical. Excellent for exploring new financial technologies, unconventional yet sound financial strategies, liberating financial thinking. Financial innovation flows wisely and naturally.',
+    predictions: [
+      'Brilliant solution appears naturally and works perfectly when implemented',
+      'Your innovative idea communicated effortlessly attracts enthusiastic support',
+      'Breakthrough in thinking flows to you naturally and changes everything positively',
+      'Technology or progressive approach you adopt enhances capabilities smoothly',
+      'Unexpected conversation produces exciting insight that proves highly valuable',
+      'Your authentic unique communication naturally creates beneficial new connections',
+      'Mental innovation you apply effortlessly solves long-standing problem',
+      'Progressive idea you express naturally resonates and creates positive change',
+      'Learning new skill or technology flows easily and proves immediately useful',
+      'Opportunity for genius expression through natural innovative authentic communication'
+    ]
+  },
+
+  'Mercury-Uranus-Square': {
+    name: 'Mercury Square Uranus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Growth through mental restlessness and disruptive communication requiring focus! Mercury\'s thinking clashes with Uranus\'s revolution, creating scattered mental energy, impulsive communication, or rebellious thinking lacking grounding. Challenge is channeling innovative energy into productive breakthroughs rather than scattered chaos. Tendency toward mental overload, saying shocking things impulsively, or brilliant ideas without follow-through. Crisis forces disciplined innovation. Conscious focus transforms mental chaos into grounded genius.',
+    loveRelationships: 'Relationship communication friction through impulsiveness or chaos! Communication may feel scattered, shocking, or disruptively honest. Tendency to say things impulsively that upset partner. Challenge is expressing authentic truth while maintaining relationship consideration. Good time to consciously channel honest communication into productive dialogue, temper impulsive expression with wisdom. Crisis teaches value of grounded authentic communication. Transform rebellious speech into constructive honesty.',
+    familyHome: 'Family communication friction through disruption or rebellion! Home discussions may feel chaotic, shocking, or rebelliously honest. Impulsive family communication creates upset. Challenge is expressing family authenticity while maintaining family respect. Good time to consciously channel family truth-telling into constructive family dialogue, balance radical honesty with family sensitivity. Crisis forces family communication maturity. Transform family rebellion into grounded family authenticity.',
+    businessCareer: 'Professional communication friction through impulsiveness or disruption! Work communication may feel scattered, inappropriately rebellious, or brilliantly chaotic. Tendency to express innovative ideas impulsively without professional consideration. Challenge is channeling professional innovation into productive professional breakthrough. Good time to consciously focus scattered professional brilliance, express innovative ideas with professional grounding. Crisis teaches disciplined innovation. Transform chaos into grounded professional genius.',
+    moneyFinances: 'Financial thinking friction through impulsiveness or scattered innovation! Money decisions may feel chaotic or impulsively radical. Tendency toward financial impulsiveness disguised as financial innovation. Challenge is channeling innovative financial thinking into grounded practical financial strategies. Good time to consciously focus scattered financial brilliance, balance financial innovation with financial wisdom. Crisis teaches disciplined financial innovation. Transform financial chaos into grounded creative financial thinking.',
+    predictions: [
+      'Impulsive communication you consciously moderate before speaking prevents later regret',
+      'Your scattered mental energy focused through discipline produces breakthrough',
+      'Rebellious expression you temper with wisdom creates productive change not chaos',
+      'Mental restlessness you channel into focused innovation solves important problem',
+      'Shocking truth you communicate with consideration creates growth not disruption',
+      'Brilliant scattered ideas you organize consciously produce practical valuable results',
+      'Communication friction teaches you to balance authentic expression with wisdom',
+      'Mental chaos you consciously focus transforms into grounded innovative thinking',
+      'Impulsive innovative idea you refine with discipline becomes genuinely useful',
+      'Opportunity to transform mental chaos into focused grounded genius through conscious discipline'
+    ]
+  },
+
+  'Mercury-Uranus-Sextile': {
+    name: 'Mercury Sextile Uranus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Opportunity for innovative breakthrough through mental initiative! Mercury\'s thinking harmonizes with Uranus\'s innovation, creating potential for brilliant insights, liberating communication, and mental breakthroughs IF you take action. Opportunities for learning new technology, expressing unique ideas, trying innovative approaches appear - but require your engagement. Perfect time to pursue progressive learning, communicate authentically, experiment with new thinking. Success through innovative mental initiative. Passive approach wastes potential; active innovative engagement creates breakthrough.',
+    loveRelationships: 'Relationship communication opportunity through innovative initiative! Potential for refreshing relationship dialogue, breakthrough relationship understanding, authentic connection IF you initiate. Perfect time to suggest trying new communication style, sharing unique perspective honestly, having spontaneous meaningful conversation. Opportunity for relationship breakthrough through authentic communication IF you take the risk. Initiative in honest innovative communication deepens connection.',
+    familyHome: 'Family communication opportunity through progressive initiative! Potential for family breakthrough, refreshed family dialogue, innovative family solutions IF you initiate. Perfect time to suggest progressive family discussion, share new family ideas actively, communicate family truth authentically. Family receptive to innovative honest communication IF you present it. Initiative in authentic progressive family communication creates positive change.',
+    businessCareer: 'Professional communication opportunity through innovative initiative! Potential for career breakthrough through expressing innovative ideas, adopting new professional approaches, networking unconventionally IF you take action. Perfect time to pitch creative professional ideas, learn new professional technology actively, communicate unique professional perspective. Recognition available IF you step forward innovatively. Initiative in professional innovation creates opportunities.',
+    moneyFinances: 'Financial innovation opportunity through mental initiative! Potential for improved financial situation through innovative financial thinking, learning new financial approaches, exploring unconventional income IF you pursue it actively. Perfect time to research innovative investments, explore progressive income strategies, think creatively about financial freedom. Financial breakthrough available through innovative initiative.',
+    predictions: [
+      'Innovative opportunity appears - seize it actively for breakthrough results',
+      'Your initiative to express unique idea attracts support and creates opportunity',
+      'Chance to learn new technology or approach succeeds IF you pursue it actively',
+      'Authentic communication you initiate courageously refreshes important relationship',
+      'Opportunity for mental breakthrough appears - initiative required to actualize',
+      'Progressive idea you pursue actively produces exciting valuable results',
+      'Innovative approach to problem you try proactively works brilliantly',
+      'Your active experimentation with new thinking creates unexpected breakthrough',
+      'Authentic honest communication you risk with courage liberates and connects',
+      'Opportunity for breakthrough through innovative mental initiative and authentic expression'
+    ]
+  },
+
+  // ============================================================================
+  // MERCURY-NEPTUNE ASPECTS (Mystical and creative communication)
+  // ============================================================================
+
+  'Mercury-Neptune-Conjunction': {
+    name: 'Mercury Conjunction Neptune',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Mind dissolves into mystical inspiration and creative imagination! Mercury\'s thinking merges with Neptune\'s transcendence, creating poetic communication, intuitive knowing, and spiritual mental connection. Perfect time for creative writing, spiritual study, compassionate communication, following intuitive guidance. Logical boundaries dissolve into inspiration. Communication becomes artistic and empathetic. Excellent for poetry, music, meditation, dream interpretation. Warning: verify practical details - discernment between divine inspiration and confusion essential. Magic and mystery in thinking.',
+    loveRelationships: 'Relationship communication becomes romantic and soul-connected! Conversations feel poetic, empathetic, and spiritually intimate. Perfect time for romantic communication, sharing dreams and ideals, expressing unconditional understanding. Deep soul-level communication possible. Good time for compassionate listening, forgiving communication, connecting through shared spirituality. Warning: maintain clarity - see partner\'s reality while honoring mystical connection. Balance romance with honesty.',
+    familyHome: 'Family communication becomes compassionate and imaginative! Perfect time for empathetic family discussions, sharing family dreams, creative family communication, expressing unconditional family love. Home conversations feel gentle and understanding. Good time for family creative projects, spiritual family connection, compassionate family forgiveness. Warning: maintain family boundaries - balance compassion with clarity about family reality.',
+    businessCareer: 'Professional communication becomes inspired and creative! Excellent time for creative professional work, compassionate professional communication, inspired professional vision, artistic career pursuits. Thinking becomes imaginative and intuitive professionally. Good time for helping professions, creative industries, spiritual career communication. Warning: verify professional details carefully - balance inspiration with practical professional clarity. Document everything.',
+    moneyFinances: 'Financial thinking becomes idealistic and intuitive! Good time to trust financial intuition while verifying practical details, pursue creative income, give generously, think spiritually about abundance. Mental approach to money becomes idealistic. Warning: financial confusion possible through unclear thinking or wishful financial thinking - verify all financial details carefully. Balance financial faith with financial facts. Avoid financial escapism.',
+    predictions: [
+      'Creative or spiritual inspiration flows through your thinking and communication',
+      'Your compassionate empathetic communication creates deep meaningful connection',
+      'Intuitive insight you trust (after verification) proves valuable and accurate',
+      'Artistic or poetic expression you create touches hearts and resonates deeply',
+      'Dream or mystical experience provides genuine insight about important situation',
+      'Your gentle compassionate words heal someone\'s pain or confusion',
+      'Spiritual study or practice deepens your understanding and inner peace',
+      'Creative writing or communication you produce flows beautifully and meaningfully',
+      'Empathetic listening you offer creates profound understanding and connection',
+      'Opportunity to express soul through creative compassionate inspired communication'
+    ]
+  },
+
+  'Mercury-Neptune-Opposition': {
+    name: 'Mercury Opposition Neptune',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Tension between logical clarity and mystical confusion requiring discernment! Mercury\'s rational mind faces Neptune\'s dissolution, creating mental fog, communication confusion, or challenge between facts and fantasy. Risk of deception, self-deception, or unclear thinking. Challenge is honoring both practical clarity AND spiritual intuition. Too much logic denies inspiration; too much mysticism denies reality. Integration needed between reason and intuition, facts and faith. Balance creates grounded spirituality. Verify everything.',
+    loveRelationships: 'Relationship communication confusion requiring honest clarity! Tension between seeing relationship clearly and romantic projection or illusion. Communication may feel unclear, confusing, or potentially deceptive. Challenge is honoring both spiritual connection AND honest realistic communication. Good time to verify relationship assumptions, practice compassionate honesty, balance romantic ideals with relationship reality. Clarify through gentle honest communication.',
+    familyHome: 'Family communication confusion requiring loving boundaries! Tension between family compassion and family clarity. Family communication may feel unclear, confusing, or enabling. Challenge is honoring both family empathy AND honest clear family communication. Good time to clarify family misunderstandings gently, establish compassionate family boundaries, balance family ideals with family reality. Integration of family love and family truth.',
+    businessCareer: 'Professional communication confusion requiring practical clarity! Tension between professional inspiration and professional clarity. Work communication may feel unclear, confusing, or unreliable. Challenge is honoring both creative professional vision AND practical professional clarity. Good time to verify professional information carefully, clarify professional misunderstandings, balance professional ideals with professional reality. Document professional communication clearly.',
+    moneyFinances: 'Financial confusion requiring practical discernment! Tension between financial intuition and financial clarity. Money situation may feel confusing, unclear, or potentially deceptive. Challenge is honoring both financial faith AND practical financial reality. Good time to verify all financial information carefully, clarify financial confusion, balance financial ideals with financial facts. Avoid financial wishful thinking - verify everything financially twice.',
+    predictions: [
+      'Confusion you experience reveals illusion requiring honest examination and clarity',
+      'Your tendency to see what you wish requires conscious grounding in actual facts',
+      'Communication misunderstanding you clarify gently resolves through compassionate honesty',
+      'Deception or self-deception revealed teaches importance of verification and discernment',
+      'Mental fog you navigate carefully by verifying details produces important clarity',
+      'Idealization you release painfully reveals more authentic grounded spiritual path',
+      'Challenge between inspiration and practicality resolved through balanced discernment',
+      'Confusion clears when you integrate spiritual trust with practical verification',
+      'Your honest examination of illusion creates more sustainable authentic understanding',
+      'Opportunity to integrate mystical intuition with practical clarity through compassionate discernment'
+    ]
+  },
+
+  'Mercury-Neptune-Trine': {
+    name: 'Mercury Trine Neptune',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Thinking and communication flow with natural inspiration and spiritual clarity! Mercury\'s mind harmonizes gracefully with Neptune\'s mysticism, creating effortless creative expression, clear intuitive knowing, and compassionate communication. Perfect time for creative writing, spiritual learning, empathetic dialogue, artistic communication. Inspiration and clarity align beautifully. Communication becomes naturally poetic without confusion. Excellent for music, art, meditation, helping others. Intuition and reason dance gracefully together.',
+    loveRelationships: 'Relationship communication flows with natural romance and soul connection! Conversations feel poetic, empathetic, and spiritually intimate effortlessly. Perfect time for romantic communication, sharing dreams naturally, expressing compassionate understanding. Soul-level understanding comes without trying. Good time for gentle meaningful talks, creative relationship expression, spiritual connection through communication. Magic and clarity combine perfectly.',
+    familyHome: 'Family communication flows with natural compassion and creativity! Perfect time for empathetic family discussions, creative family projects, spiritual family connection flowing naturally. Home conversations feel gentle, understanding, and inspired comfortably. Good time for compassionate family listening, imaginative family activities, expressing unconditional family love naturally. Family harmony through creative loving communication flows effortlessly.',
+    businessCareer: 'Professional communication flows with natural creativity and inspiration! Excellent time for creative professional work, compassionate professional communication, inspired professional ideas flowing practically. Thinking becomes naturally imaginative yet clear professionally. Good time for creative industries, helping professions, artistic career communication, inspired professional vision manifesting smoothly. Your inspired professionalism attracts recognition naturally.',
+    moneyFinances: 'Financial thinking flows with natural intuition and wisdom! Good time to trust verified financial intuition, pursue creative income naturally, think abundantly yet realistically about money. Mental approach to money becomes naturally idealistic yet grounded. Excellent for creative financial strategies, spiritual abundance mindset with practical application, generous giving flowing naturally. Financial intuition and financial clarity align beautifully.',
+    predictions: [
+      'Creative inspiration flows naturally and expresses beautifully and clearly',
+      'Your compassionate communication naturally creates deep healing connection',
+      'Intuitive insight emerges clearly and proves accurate and valuable',
+      'Artistic expression you create effortlessly resonates deeply and meaningfully',
+      'Spiritual understanding you gain feels both mystical and perfectly clear',
+      'Your gentle empathetic listening naturally heals and deepens connection',
+      'Creative writing or communication flows smoothly and touches hearts',
+      'Dream or vision you receive feels both transcendent and actionably clear',
+      'Compassionate words you speak naturally create understanding and peace',
+      'Opportunity for soul expression through creative inspired clear compassionate communication'
+    ]
+  },
+
+  'Mercury-Neptune-Square': {
+    name: 'Mercury Square Neptune',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Growth through mental confusion and communication illusion requiring discernment! Mercury\'s thinking clashes with Neptune\'s fog, creating mental chaos, unclear communication, or deceptive thinking. Challenge is developing discernment between divine inspiration and wishful fantasy. Tendency toward self-deception, communication confusion, or avoiding practical reality through escapism. Crisis forces development of grounded spirituality. Conscious verification transforms confusion into clear intuitive wisdom. Verify everything twice.',
+    loveRelationships: 'Relationship communication friction through confusion or deception! Communication may feel unclear, confusing, or potentially dishonest. Romantic illusions or misunderstandings likely. Challenge is seeing relationship truth clearly while maintaining compassion. Good time to consciously verify relationship assumptions, address unclear communication directly yet gently, practice honest empathetic communication. Crisis teaches importance of compassionate clarity. Transform romantic confusion into grounded loving honesty.',
+    familyHome: 'Family communication friction through confusion or enabling! Home discussions may feel unclear, confusing, or dishonestly compassionate. Family illusions or misunderstandings surface. Challenge is expressing family truth clearly while maintaining family love. Good time to consciously clarify family confusion, establish loving family boundaries, address family enabling patterns. Crisis forces family communication clarity. Transform family confusion into compassionate honest family communication.',
+    businessCareer: 'Professional communication friction through confusion or unreliability! Work communication may feel unclear, confusing, or professionally deceptive. Professional illusions or misunderstandings create problems. Challenge is maintaining professional clarity while pursuing creative professional vision. Good time to consciously verify all professional information, clarify professional confusion, document professional communication carefully. Crisis teaches professional discernment. Transform professional confusion into grounded creative professionalism.',
+    moneyFinances: 'Financial confusion friction requiring practical verification! Money thinking may feel confusing, unclear, or wishfully unrealistic. Financial illusions or potential financial deception. Challenge is maintaining practical financial clarity while trusting financial intuition. Good time to consciously verify all financial details carefully, address financial confusion directly, think realistically about money. Crisis forces financial mental clarity. Transform financial confusion into grounded wise financial thinking.',
+    predictions: [
+      'Communication confusion forces you to verify facts and distinguish truth from fantasy',
+      'Your tendency toward wishful thinking requires conscious grounding in reality',
+      'Deception or misunderstanding you clarify directly teaches importance of verification',
+      'Mental fog you navigate by checking details carefully produces important clarity',
+      'Escapist thinking you consciously address creates breakthrough to practical spirituality',
+      'Illusion you release painfully reveals more authentic grounded path forward',
+      'Confusion that seemed overwhelming clears when you verify facts compassionately',
+      'Communication misunderstanding you address honestly resolves and strengthens connection',
+      'Your conscious practice of discernment transforms confusion into clear grounded wisdom',
+      'Opportunity to transform mental confusion into grounded spiritual clarity through verification'
+    ]
+  },
+
+  'Mercury-Neptune-Sextile': {
+    name: 'Mercury Sextile Neptune',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Opportunity for inspired creative communication through intuitive initiative! Mercury\'s thinking harmonizes with Neptune\'s mysticism, creating potential for artistic expression, spiritual learning, compassionate communication IF you take action. Opportunities for creative writing, empathetic dialogue, spiritual study appear - but require your engagement. Perfect time to pursue creative communication, practice compassionate listening, trust verified intuition. Success through inspired mental initiative. Passive approach wastes potential; active creative engagement creates beautiful results.',
+    loveRelationships: 'Relationship communication opportunity through romantic initiative! Potential for poetic romantic dialogue, soul-level connection, compassionate understanding IF you initiate. Perfect time to suggest meaningful spiritual conversation, share dreams actively, express love creatively and compassionately. Opportunity for deep empathetic connection IF you open your heart. Initiative in romantic compassionate communication deepens love.',
+    familyHome: 'Family communication opportunity through compassionate initiative! Potential for empathetic family dialogue, creative family connection, spiritual family understanding IF you initiate. Perfect time to suggest creative family project, share family dreams actively, express compassionate family understanding. Family receptive to gentle creative communication IF you present it. Initiative in empathetic family communication creates harmony.',
+    businessCareer: 'Professional communication opportunity through creative initiative! Potential for career advancement through creative professional work, compassionate professional communication, inspired professional ideas IF you take action. Perfect time to pursue creative professional projects actively, communicate professionally with empathy, share inspired professional vision. Recognition available IF you step forward creatively and compassionately.',
+    moneyFinances: 'Financial opportunity through creative intuitive initiative! Potential for improved financial situation through creative income, intuitive financial strategies, generous giving IF you pursue it actively. Perfect time to explore creative income opportunities, trust verified financial intuition, practice abundant financial thinking with action. Financial improvement available through inspired initiative.',
+    predictions: [
+      'Creative opportunity appears - pursue it actively for beautiful meaningful results',
+      'Your initiative to communicate compassionately creates deep healing connection',
+      'Chance to express artistic or spiritual ideas succeeds IF you step forward actively',
+      'Intuitive insight you act upon with verification produces valuable outcome',
+      'Opportunity for soul-level communication appears - initiative required to actualize',
+      'Creative project you initiate with inspiration flows beautifully and resonates',
+      'Compassionate listening you offer actively creates profound understanding',
+      'Spiritual learning you pursue with openness deepens wisdom and peace',
+      'Your active creative expression touches hearts and creates meaningful impact',
+      'Opportunity for inspired communication through compassionate creative initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MERCURY-PLUTO ASPECTS (Deep psychological and transformative thinking)
+  // ============================================================================
+
+  'Mercury-Pluto-Conjunction': {
+    name: 'Mercury Conjunction Pluto',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Mind penetrates depths with psychological intensity and transformative power! Mercury\'s thinking merges with Pluto\'s depth, creating penetrating insight, powerful communication, and mental transformation. Perfect time for research, investigation, depth psychology, uncovering truth, powerful persuasive communication. Thinking becomes laser-focused and profound. Communication carries transformative weight. Excellent for detective work, therapy, shadow examination, strategic planning. Intensity and focus produce breakthrough. Mental power through depth.',
+    loveRelationships: 'Relationship communication becomes intensely deep and transformative! Conversations feel powerful, penetrating, and psychologically profound. Perfect time for deep vulnerable relationship discussions, addressing relationship shadows, transformative honest communication. Communication intensity can heal or overwhelm. Good time for couples therapy, profound truth-telling, addressing relationship power dynamics. Warning: intensity can become controlling - channel into healing depth, not manipulation.',
+    familyHome: 'Family communication becomes intensely deep and transformative! Perfect time for profound family conversations, addressing family shadows, transformative family truth-telling, healing family psychological patterns. Home discussions feel powerful and penetrating. Good time for family therapy, uncovering family secrets, addressing family power dynamics. Warning: intensity can overwhelm - channel into healing, not control or confrontation.',
+    businessCareer: 'Professional communication becomes powerfully strategic and penetrating! Excellent time for strategic professional planning, powerful professional presentations, research-oriented work, persuasive professional communication. Thinking becomes intensely focused professionally. Good time for investigations, negotiations, addressing professional power dynamics, transformative professional projects. Your powerful professional communication attracts recognition. Depth and strategy in professional expression.',
+    moneyFinances: 'Financial thinking becomes intensely strategic and transformative! Good time for deep financial research, strategic financial planning, addressing financial shadows, transformative financial decisions. Mental approach to money becomes powerfully focused. Excellent for financial investigation, addressing money psychology, powerful financial strategy, shared resource negotiations. Deep financial transformation through intense focused financial thinking.',
+    predictions: [
+      'Penetrating insight you gain reveals hidden truth that transforms your understanding',
+      'Your powerful focused communication persuades and creates significant impact',
+      'Deep research or investigation you undertake uncovers important valuable information',
+      'Psychological insight about yourself or situation produces profound breakthrough',
+      'Powerful conversation you have transforms relationship or situation permanently',
+      'Your mental focus and intensity accomplish what seemed impossible through depth',
+      'Truth you uncover through persistent investigation creates important change',
+      'Strategic plan you create with intense focus provides powerful foundation',
+      'Shadow aspect you examine mentally transforms into source of power and wisdom',
+      'Opportunity to transform thinking through deep psychological penetrating mental power'
+    ]
+  },
+
+  'Mercury-Pluto-Opposition': {
+    name: 'Mercury Opposition Pluto',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Tension between surface thinking and psychological depth requiring integration! Mercury\'s light communication faces Pluto\'s intense depth, creating mental power struggles, communication control issues, or obsessive thinking. Risk of manipulative communication, mental paranoia, or overwhelming psychological intensity. Challenge is honoring both light communication AND deep psychological truth. Too much surface denies depth; too much intensity overwhelms. Integration needed between ease and intensity, trust and investigation. Balance creates grounded psychological wisdom.',
+    loveRelationships: 'Relationship communication power struggles requiring honest depth! Tension between easy relationship communication and intense psychological truth. Communication may feel controlling, suspicious, or overwhelmingly intense. Challenge is honoring both comfortable communication AND necessary relationship depth. Good time to address communication control issues, balance trust with honesty, practice deep communication without manipulation. Integration of ease and psychological honesty.',
+    familyHome: 'Family communication power struggles requiring healing truth! Tension between easy family communication and intense family psychological truth. Family communication may feel controlling, secretive, or overwhelmingly confrontational. Challenge is honoring both family comfort AND necessary family depth and healing. Good time to address family control patterns, balance family trust with family truth, communicate family depth without family manipulation.',
+    businessCareer: 'Professional communication power struggles requiring strategic honesty! Tension between easy professional communication and intense professional truth or strategy. Work communication may feel controlling, political, or suspiciously intense. Challenge is honoring both professional diplomacy AND necessary professional depth and truth. Good time to address professional control dynamics, balance professional trust with professional honesty, communicate professionally with depth not manipulation.',
+    moneyFinances: 'Financial thinking power struggles requiring deep honesty! Tension between easy financial thinking and intense financial psychological truth. Money thoughts may feel controlling, paranoid, or obsessively intense. Challenge is honoring both financial optimism AND necessary deep financial examination. Good time to address financial control issues, balance financial trust with financial investigation, think deeply about money without financial paranoia.',
+    predictions: [
+      'Communication power struggle forces you to examine and transform control patterns',
+      'Your tendency toward mental intensity or suspicion requires conscious moderation',
+      'Conflict reveals need to balance light communication with psychological depth',
+      'Mental obsession or paranoia you work through consciously produces grounded wisdom',
+      'Power struggle in communication teaches importance of honesty without manipulation',
+      'Intense mental focus you balance with trust creates breakthrough understanding',
+      'Challenge to communicate both deeply AND respectfully produces psychological maturity',
+      'Tension between surface ease and necessary depth resolved through balanced integration',
+      'You learn to investigate truth thoroughly while maintaining communication trust',
+      'Opportunity to integrate light communication with psychological depth through balanced honesty'
+    ]
+  },
+
+  'Mercury-Pluto-Trine': {
+    name: 'Mercury Trine Pluto',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Thinking and communication flow with natural depth and transformative power! Mercury\'s mind harmonizes gracefully with Pluto\'s intensity, creating effortless penetrating insight, naturally powerful communication, and easy psychological understanding. Perfect time for research, therapy, strategic planning, deep meaningful communication. Mental depth comes naturally without overwhelm. Communication persuades effortlessly through authentic power. Excellent for investigation, psychology, transformation through understanding. Power and clarity align beautifully.',
+    loveRelationships: 'Relationship communication flows with natural depth and transformation! Conversations feel naturally deep, powerful, and psychologically honest without overwhelm. Perfect time for meaningful vulnerable talks, addressing relationship depth naturally, transformative honest communication. Deep understanding comes effortlessly. Good time for couples therapy flowing smoothly, profound truth-sharing naturally, addressing relationship psychology comfortably. Depth and ease combine perfectly.',
+    familyHome: 'Family communication flows with natural depth and healing! Perfect time for meaningful family discussions, addressing family psychology naturally, transformative family truth-telling comfortably. Home conversations feel naturally deep and healing without drama. Good time for family therapy flowing smoothly, uncovering family patterns gently, healing family shadows naturally. Family depth and family warmth combine effortlessly.',
+    businessCareer: 'Professional communication flows with natural strategic power! Excellent time for powerful professional presentations flowing smoothly, strategic career planning naturally, research work producing easy breakthroughs. Thinking becomes naturally deep and strategic professionally. Good time for persuasive professional communication, addressing professional depth comfortably, transformative professional projects flowing smoothly. Your natural professional depth attracts recognition effortlessly.',
+    moneyFinances: 'Financial thinking flows with natural strategic depth! Good time for financial research producing easy insights, strategic financial planning flowing naturally, addressing money psychology comfortably. Mental approach to money becomes naturally deep and powerful. Excellent for financial investigation flowing smoothly, transformative financial decisions made wisely, powerful financial strategy coming naturally. Financial depth and financial wisdom align beautifully.',
+    predictions: [
+      'Deep insight comes naturally and produces effortless breakthrough understanding',
+      'Your naturally powerful communication persuades and transforms without force',
+      'Research or investigation flows smoothly and uncovers valuable truth easily',
+      'Psychological understanding emerges naturally and creates profound positive change',
+      'Meaningful conversation flows naturally and transforms relationship beautifully',
+      'Your natural mental focus accomplishes complex task smoothly and powerfully',
+      'Truth you discover naturally creates important positive transformation',
+      'Strategic thinking flows effortlessly and produces excellent practical results',
+      'Shadow work or self-examination flows gently and produces empowering clarity',
+      'Opportunity for transformative understanding through natural depth and mental power'
+    ]
+  },
+
+  'Mercury-Pluto-Square': {
+    name: 'Mercury Square Pluto',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Growth through mental intensity and communication power struggles requiring conscious depth! Mercury\'s thinking clashes with Pluto\'s intensity, creating obsessive thinking, controlling communication, or mental power struggles. Challenge is channeling psychological intensity into healing depth rather than manipulation or paranoia. Tendency toward mental obsession, suspicious thinking, or controlling persuasive communication. Crisis forces development of grounded psychological wisdom. Conscious awareness transforms mental intensity into healing transformative power.',
+    loveRelationships: 'Relationship communication friction through intensity or control! Communication may feel controlling, suspicious, or obsessively focused. Tendency toward jealous thinking or manipulative relationship communication. Challenge is expressing deep relationship truth without control or manipulation. Good time to consciously address communication control patterns, work through relationship suspicions, communicate deeply yet respectfully. Crisis teaches healthy psychological relationship communication. Transform control into empowered vulnerability.',
+    familyHome: 'Family communication friction through intensity or control! Home discussions may feel controlling, secretive, or obsessively intense. Tendency toward family power struggles or manipulative family communication. Challenge is expressing deep family truth without family control or confrontation. Good time to consciously address family control patterns, work through family secrets healthily, communicate family depth without family manipulation. Crisis forces healthy family psychological communication.',
+    businessCareer: 'Professional communication friction through intensity or control! Work communication may feel controlling, politically manipulative, or obsessively strategic. Tendency toward professional power struggles or suspicious professional thinking. Challenge is expressing professional depth and strategy without manipulation or paranoia. Good time to consciously address professional control patterns, communicate professionally with depth yet respect. Crisis teaches ethical professional psychological power.',
+    moneyFinances: 'Financial thinking friction through obsession or control! Money thoughts may feel obsessively intense, controlling, or paranoidly suspicious. Tendency toward financial power struggles or compulsive financial thinking. Challenge is thinking deeply about money without financial obsession or control. Good time to consciously address financial control patterns, work through money psychology, think deeply about finances without paranoia. Crisis develops healthy financial psychological awareness.',
+    predictions: [
+      'Mental obsession you consciously moderate produces healthy focused determination',
+      'Your controlling communication you transform consciously becomes empowered honesty',
+      'Power struggle in thinking forces you to examine and heal control patterns',
+      'Suspicious thoughts you investigate rationally either confirm truth or reveal paranoia',
+      'Mental intensity you channel into therapy or shadow work produces breakthrough',
+      'Communication control tendency you address consciously transforms into authentic power',
+      'Obsessive thinking you work through consciously becomes productive focused research',
+      'Power struggle forces you to communicate deeply yet respectfully and honestly',
+      'Mental crisis you navigate through depth work produces psychological maturity',
+      'Opportunity to transform mental intensity into grounded healing psychological power'
+    ]
+  },
+
+  'Mercury-Pluto-Sextile': {
+    name: 'Mercury Sextile Pluto',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Opportunity for transformative understanding through focused mental initiative! Mercury\'s thinking harmonizes with Pluto\'s depth, creating potential for penetrating insight, powerful communication, and psychological breakthrough IF you take action. Opportunities for deep research, therapeutic work, strategic planning appear - but require your engagement. Perfect time to pursue depth psychology, investigate truth, communicate powerfully. Success through mental depth and initiative. Passive approach wastes potential; active depth work creates transformative results.',
+    loveRelationships: 'Relationship communication opportunity through deep initiative! Potential for profound relationship understanding, transformative relationship dialogue, healing relationship truth IF you initiate. Perfect time to suggest couples therapy actively, initiate deep meaningful conversation, address relationship shadows courageously. Opportunity for relationship transformation through honest depth IF you take the risk. Initiative in powerful vulnerable communication heals and deepens love.',
+    familyHome: 'Family communication opportunity through healing initiative! Potential for family psychological breakthrough, transformative family dialogue, deep family healing IF you initiate. Perfect time to suggest family therapy actively, initiate important family conversations, address family patterns courageously. Family receptive to deep honest communication IF you present it with care. Initiative in healing family communication creates positive transformation.',
+    businessCareer: 'Professional communication opportunity through strategic initiative! Potential for career advancement through powerful professional communication, strategic professional planning, deep professional work IF you take action. Perfect time to present powerful professional ideas actively, pursue strategic professional development, communicate professionally with depth. Recognition available IF you step forward with focused strategic power.',
+    moneyFinances: 'Financial transformation opportunity through strategic initiative! Potential for improved financial situation through deep financial research, strategic financial planning, addressing money psychology IF you pursue it actively. Perfect time to investigate financial opportunities thoroughly, address limiting money patterns, make powerful strategic financial decisions. Financial breakthrough available through focused financial initiative.',
+    predictions: [
+      'Opportunity for deep research appears - pursue it actively for powerful insights',
+      'Your initiative to communicate with depth and power creates significant impact',
+      'Chance to do therapeutic or shadow work succeeds IF you pursue it actively',
+      'Strategic plan you create with focused intensity provides powerful foundation',
+      'Opportunity for psychological breakthrough appears - initiative required to actualize',
+      'Deep conversation you initiate courageously transforms relationship profoundly',
+      'Investigation you pursue with focused determination uncovers important truth',
+      'Your active engagement with psychological depth produces empowering clarity',
+      'Powerful communication you risk with authenticity creates transformative results',
+      'Opportunity for mental transformation through focused depth work and strategic initiative'
+    ]
   }
 
 };
