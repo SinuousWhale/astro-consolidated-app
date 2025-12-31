@@ -865,6 +865,135 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Authority figure supports your initiative if you demonstrate preparedness',
       'Opportunity to build something lasting if you combine vision with consistent effort'
     ]
+  },
+
+  // ==========================================
+  // JUPITER-URANUS ASPECTS (All 5)
+  // ==========================================
+
+  'Jupiter-Uranus-Conjunction': {
+    name: 'Jupiter Conjunction Uranus',
+    frequency: 'Occurs approximately every 14 years',
+    duration: '6-10 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Revolutionary expansion and breakthrough growth! This rare conjunction merges Jupiter\'s expansion with Uranus\'s revolution, creating massive breakthrough opportunities, sudden abundance, lightning-bolt realizations, and quantum leaps forward. Expect the unexpected - windfalls, sudden travel, shocking opportunities, revolutionary beliefs, or liberation into greater freedom. The universe opens doors you didn\'t know existed. Break free from limiting philosophies and expand into radical authenticity. Innovation and faith combine.',
+    loveRelationships: 'Sudden exciting relationship developments or breakthroughs in existing partnership. May meet someone completely unexpected or relationship evolves in revolutionary ways. Unconventional romance flourishes - age gaps, long distance, different backgrounds. Freedom and growth both essential. Relationship breakthroughs through honesty and authenticity. May suddenly travel together or relationship takes unexpected turn. Need space to be individuals while growing together. Electric attraction and philosophical connection.',
+    familyHome: 'Unexpected family expansion or sudden positive changes in home life. May relocate suddenly to amazing opportunity. Family member has breakthrough success. Unconventional family arrangements work beautifully. Home renovation or move happens quickly and excitingly. Family gains freedom and growth simultaneously. Adopt progressive parenting approaches. Extended family connections through technology. Liberation from limiting family patterns while deepening authentic bonds.',
+    businessCareer: 'Major career breakthrough or sudden revolutionary opportunity! May launch innovative business, get unexpected promotion, or career takes exciting new direction. Technology and innovation central to success. International opportunities appear suddenly. Teaching, publishing, or sharing revolutionary ideas flourishes. Freedom and growth in work. Break free from conventional career path into authentic calling. Entrepreneurial ventures succeed through innovation. Sudden recognition or viral success possible.',
+    moneyFinances: 'Sudden financial windfall or unexpected money opportunity! Investment breakthroughs through technology or innovation. May profit from cryptocurrency, tech stocks, or progressive ventures. Sudden income increase through unconventional means. Financial freedom through innovative thinking. Lucky breaks with money. Risk-taking pays off spectacularly - but stay grounded. Abundance through authenticity. May receive unexpected inheritance or bonus. Financial liberation.',
+    predictions: [
+      'Sudden major opportunity appears that\'s unlike anything you\'ve experienced before',
+      'Unexpected financial windfall or income source emerges - possibly through technology',
+      'You will break free from limiting belief system into revolutionary new philosophy',
+      'Career takes exciting unexpected turn toward more authentic and innovative direction',
+      'May suddenly relocate or travel to amazing opportunity you didn\'t anticipate',
+      'Relationship breakthrough brings both freedom and deeper connection simultaneously',
+      'Revolutionary idea or innovation you develop gains recognition or goes viral',
+      'You will experience quantum leap in consciousness or life circumstances',
+      'Unconventional choice that seemed risky leads to spectacular expansion',
+      'Liberation into authentic self creates abundance beyond previous limitations'
+    ]
+  },
+
+  'Jupiter-Uranus-Opposition': {
+    name: 'Jupiter Opposition Uranus',
+    frequency: 'Occurs approximately every 14 years (midpoint of Jupiter-Uranus cycle)',
+    duration: '6-10 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Tension between expansion and revolution, tradition and innovation, faith and freedom. You\'re pulled between optimistic growth and radical change, conventional opportunity and revolutionary path, established wisdom and breakthrough insight. Must integrate both - neither pure optimism nor pure rebellion works. The opposition demands you find middle ground between expansion within system and breaking free entirely. Growth requires some risk, freedom requires some wisdom. Breakthroughs through balancing faith with authenticity.',
+    loveRelationships: 'Tension between relationship growth and personal freedom needs. Partner may want more commitment while you need more space (or vice versa). Must balance togetherness with independence. Relationship can\'t be too conventional or too unstable. Need partner who supports both growth and authenticity. May struggle between exciting new attraction and established relationship. Integration: grow together while honoring individuality. Neither total merger nor complete independence - mature freedom within commitment.',
+    familyHome: 'Tension between family expansion and personal liberation. May feel torn between family responsibilities and desire to break free. Home feels either too confining or too chaotic. Balancing family growth with individual authenticity challenging. Teenager\'s rebellion creates family tension. Must honor both family bonds and freedom needs. Integration: create family structure that allows everyone authentic expression. Neither rigid control nor total chaos - wise freedom.',
+    businessCareer: 'Career tension between conventional opportunity and revolutionary path. Offered promotion in established field while drawn to innovative venture. Must balance security with authentic calling. Traditional success may feel limiting; pure innovation may feel risky. Integration: bring innovation into established field or add structure to revolutionary ideas. Neither pure conformity nor reckless rebellion. Wise risk-taking. Breakthrough through synthesis.',
+    moneyFinances: 'Financial tension between conventional investments and revolutionary opportunities. Traditional savings feel limiting; cryptocurrency or innovation feel risky. Must balance security and growth. May over-extend financially through excessive optimism or miss opportunities through excessive caution. Integration: diversify between stable and innovative investments. Neither pure safety nor pure risk - wise allocation. Breakthrough through balanced portfolio.',
+    predictions: [
+      'You will face choice between conventional opportunity and revolutionary path - seek synthesis',
+      'Relationship requires balancing commitment with freedom - neither extreme works',
+      'Financial decision between security and innovation best resolved through diversification',
+      'Career tension between promotion in established field and authentic calling arises',
+      'You will learn that growth AND freedom are both possible through integration',
+      'Family situation requires honoring both togetherness and individual authenticity',
+      'Exciting opportunity that seems perfect may require sacrificing important freedom',
+      'Revolutionary path that seems exciting may need more wisdom and planning',
+      'You face tension between belief system and awakening insight - both have value',
+      'Breakthrough comes through synthesis of expansion and revolution, not choosing one'
+    ]
+  },
+
+  'Jupiter-Uranus-Trine': {
+    name: 'Jupiter Trine Uranus',
+    frequency: 'Occurs approximately 2-3 times during the 14-year Jupiter-Uranus cycle',
+    duration: '4-8 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Effortless revolutionary expansion! Growth and breakthrough flow naturally together. Lucky breaks, sudden opportunities, and exciting developments happen with ease. Perfect time for innovation, authentic risk-taking, progressive ventures, and quantum leaps forward. The universe supports your liberation and expansion. Breakthroughs feel natural, windfalls seem destined, and revolutionary paths feel right. Trust sudden insights and unexpected opportunities. Freedom and growth aligned. Grace meets revolution.',
+    loveRelationships: 'Exciting relationship developments flow naturally! May meet someone unexpectedly who\'s perfect for you. Existing relationship evolves in liberating and growth-oriented ways. Freedom and commitment both feel natural. Unconventional romance flourishes effortlessly. May travel together spontaneously with beautiful results. Relationship breakthrough happens with ease. Both partners grow individually while deepening connection. Authenticity attracts love. Electric harmony.',
+    familyHome: 'Family life expands in exciting unexpected ways! May relocate to wonderful opportunity that appears suddenly. Family member has breakthrough success. Unconventional family arrangements bring joy. Home improvements or changes flow smoothly. Family grows through adoption, extended family, or new additions. Liberation from old family patterns feels natural. Progressive parenting works beautifully. Family freedom and togetherness both thrive.',
+    businessCareer: 'Career breakthrough or exciting opportunity appears naturally! Perfect time to launch innovative venture, change careers, or take authentic risk. Technology, innovation, or progressive ideas central to success. International opportunities flow easily. Teaching or sharing revolutionary ideas flourishes. Recognition for authentic work. Freedom in career with growth and abundance. Entrepreneurial success through innovation. Lucky career breaks.',
+    moneyFinances: 'Financial breakthrough or unexpected windfall! Lucky with money, especially through innovation or technology. Perfect time to invest in progressive ventures, cryptocurrency, or innovative companies. Financial freedom through wise risk-taking. Income increases through authentic work. Generous opportunities appear. Abundance through being true to yourself. Financial experiments succeed. Trust intuition about money.',
+    predictions: [
+      'Unexpected opportunity appears that\'s both exciting and abundant - say yes!',
+      'Financial windfall through technology, innovation, or being in right place at right time',
+      'You will meet someone or encounter opportunity that changes life trajectory beautifully',
+      'Career breakthrough happens naturally through authentic expression of your gifts',
+      'Revolutionary idea or innovation flows easily and gains recognition',
+      'Perfect timing for major positive life change - relocation, career shift, or new venture',
+      'Relationship evolves in exciting liberating ways that also deepen connection',
+      'Freedom and abundance both increase through following authentic path',
+      'Lucky break rewards you for being true to yourself rather than conforming',
+      'Sudden insight or awakening leads to effortless expansion in life circumstances'
+    ]
+  },
+
+  'Jupiter-Uranus-Square': {
+    name: 'Jupiter Square Uranus',
+    frequency: 'Occurs approximately 3-4 times during the 14-year Jupiter-Uranus cycle',
+    duration: '4-8 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Revolutionary growth through creative tension and breakthrough challenges! The square creates friction between expansion and liberation, forcing innovation through discomfort. Restless for more freedom, growth, excitement, and authenticity. May take impulsive risks or rebel against limitations. The challenge: channel revolutionary energy wisely rather than burning bridges recklessly. You must grow AND break free, but with awareness. Tension produces breakthroughs if you work with it consciously. Impatience catalyzes necessary change.',
+    loveRelationships: 'Relationship restlessness or sudden changes create growth challenges. May feel confined and crave freedom or excitement. Tempted by new attraction or unconventional relationship. Impulsive relationship decisions possible - pause before major changes. However, stagnant relationships DO need shaking up. The key: pursue authentic freedom within relationship first, revolution only if truly necessary. Tension reveals what needs to evolve. Growth through honest communication about freedom needs.',
+    familyHome: 'Family tension from competing needs for expansion and liberation. May want to relocate suddenly or break free from family obligations. Teenager rebellion or family member\'s sudden changes create challenges. Impulsive home decisions possible - be mindful. However, truly limiting family patterns DO need breaking. The key: create space for everyone\'s authenticity rather than escaping. Family grows through navigating freedom needs consciously. Constructive rebellion.',
+    businessCareer: 'Career restlessness drives change - possibly too impulsively. May want to quit job suddenly, launch business without planning, or take excessive risks. However, stagnant career DOES need shaking up. The key: plan revolutionary career moves rather than burning bridges. Innovative ideas need grounding in reality. Entrepreneurial urges need business plans. Breakthrough through channeling rebellious energy into strategic innovation. Risk-taking with wisdom.',
+    moneyFinances: 'Financial impulsiveness or excessive risk-taking possible. May gamble on cryptocurrency, risky investments, or untested ventures. However, overly cautious financial approach MAY need disrupting. The key: take calculated risks, not reckless ones. Innovate financially but protect foundation. Diversify rather than betting everything. Revolutionary financial thinking good; impulsive financial decisions problematic. Breakthrough through balanced risk.',
+    predictions: [
+      'You will feel intense restlessness driving desire for more freedom and excitement',
+      'Impulsive decision to quit, relocate, or radically change life tempts you - pause first',
+      'Sudden opportunity appears but requires rushing decision - get more information',
+      'Relationship or career feels confining - address the feeling rather than escaping',
+      'Financial gamble seems exciting but carries real risk - calculate before committing',
+      'You learn difference between authentic liberation and impulsive rebellion',
+      'Tension or disruption forces innovation you were avoiding - ultimately beneficial',
+      'Revolutionary idea needs grounding in practical planning to succeed',
+      'Breakthrough happens through channeling restless energy into conscious change',
+      'You will grow by taking wise risks rather than either reckless or no risks'
+    ]
+  },
+
+  'Jupiter-Uranus-Sextile': {
+    name: 'Jupiter Sextile Uranus',
+    frequency: 'Occurs approximately 2-3 times during the 14-year Jupiter-Uranus cycle',
+    duration: '3-6 months (with retrograde periods)',
+    planet1Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, innovation, sudden breakthroughs, and radical authenticity. It breaks patterns, shocks systems, and demands freedom.',
+    aspectMeaning: 'Opportunity for breakthrough growth through conscious initiative! Not automatic like the trine - you must reach for revolutionary opportunities. Perfect time to launch innovative projects, take calculated risks toward freedom, or experiment with progressive ideas. Doors to expansion and liberation open if you knock. Small authentic steps toward big breakthroughs pay off. Opportunity favors those who combine wisdom with innovation, faith with authenticity.',
+    loveRelationships: 'Opportunity to bring exciting new energy into relationship if you initiate it. Plan spontaneous trip together, try unconventional date, or introduce progressive ideas to partnership. Won\'t happen automatically - requires creative effort. Can deepen connection through shared adventures and authentic communication if both participate. Small experiments in relationship freedom and growth succeed. Building partnership that\'s both committed and liberating takes initiative but works.',
+    familyHome: 'Opportunity to improve family life through innovative approaches. Try progressive parenting method, introduce new technology to home, or experiment with unconventional family activities. Small changes toward more authentic family expression pay off. Family harmony grows through combining tradition with innovation. Works if you take action - suggest the activity, research the method, introduce the change. Building family environment that honors both togetherness and individuality.',
+    businessCareer: 'Career growth opportunities through innovation if you pursue them actively. Perfect time to pitch creative idea, propose progressive project, or network in unconventional ways. Won\'t fall in lap - must demonstrate initiative and authenticity. Small career experiments toward bigger breakthrough succeed. Mentorship or collaboration opportunity if you seek it. Authority figures receptive to well-presented innovative ideas. Building career advancement through strategic innovation.',
+    moneyFinances: 'Financial growth through smart innovative investing and conscious action. Research cryptocurrency or tech investments then invest wisely. Start side income through progressive skills. Learn about innovative financial tools. Small amounts invested in growth sectors accumulate well. Financial education in emerging technologies pays off. Building wealth through balanced innovation - neither pure safety nor pure risk. Take first experimental steps.',
+    predictions: [
+      'Career opportunity appears for those who\'ve been developing innovative skills',
+      'Small investment in technology or progressive sector you research now grows over time',
+      'Relationship deepens through spontaneous adventure or authentic conversation you initiate',
+      'Class, workshop, or learning about emerging field you pursue opens doors later',
+      'Financial strategy combining security with calculated innovation works if you create it',
+      'Mentor in innovative field offers guidance if you reach out professionally',
+      'Family activity or home change you suggest brings fresh energy and connection',
+      'You will learn that conscious experimentation leads to breakthrough results',
+      'Progressive idea you present to authority figure gets supportive reception',
+      'Opportunity to expand life through innovation if you combine wisdom with authentic action'
+    ]
   }
 
 };
