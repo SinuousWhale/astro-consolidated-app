@@ -1837,6 +1837,310 @@ const DETAILED_INGRESSES: Record<string, DetailedIngressInterpretation> = {
       'Financial boundaries become necessary - you learn to charge for spiritual/creative gifts',
       'You master the art of spiritual discipline, creative structure, and compassionate service with boundaries'
     ]
+  },
+
+  // ============================================================================
+  // URANUS INGRESSES - Revolution, awakening, liberation (~7 years per sign)
+  // ============================================================================
+
+  'Uranus-Aries': {
+    name: 'Uranus Ingress Aries',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Aries represents boldness, initiative, independence, courage, action, and pioneering spirit. It\'s the energy of self-assertion, leadership, new beginnings, and direct action.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Aries brings revolutionary awakening through bold action, radical independence, and pioneering innovation. This rare generational cycle (happens once in 84 years) creates revolutionary leaders, breakthrough innovations, and total reinvention of identity. You must break free from limitations, pioneer new paths, and assert your authentic self fearlessly. This is about awakening to your unique genius, leading revolutions, and boldly creating brand new possibilities through courageous action.',
+    loveRelationships: 'Romance revolutionizes through sudden attractions, unconventional relationships, and freedom-based love. Relationships require total authenticity, independence within partnership, and excitement over security. You learn to love with both passion and freedom, commitment without caging. Sudden attractions or breakups possible as you awaken to what you really need. Long-term partnerships transform through more independence, honest expression, and exciting new dynamics. Dating becomes unpredictable and electric. You attract bold, independent, unconventional partners. Commitment requires freedom to be fully yourself.',
+    familyHome: 'Family dynamics revolutionize through independence movements, unconventional arrangements, or sudden changes. Home life needs radical change, freedom, and space for authentic self-expression. You may break from family tradition, create unconventional family structure, or experience sudden family changes. Family relationships transform through everyone claiming their individuality. You learn to be true to yourself within family context. Home becomes launch pad for new identity and revolutionary self-expression.',
+    businessCareer: 'Revolutionary 7-year career transformation through entrepreneurship, innovation, or radical reinvention. Professional success requires bold initiative, pioneering vision, and willingness to lead revolution. You may start groundbreaking business, pioneer new industry, or completely reinvent career direction. Authority comes through demonstrated courage and innovative leadership. Career path likely changes dramatically over these 7 years. Professional reputation builds through fearless innovation and authentic leadership. Entrepreneurship, technology, innovation, or revolutionary fields favored.',
+    moneyFinances: 'Financial revolution through entrepreneurship, innovative income streams, or radical financial independence. Money requires bold financial moves, investing in yourself and innovation, and building independent wealth. You learn to earn money your own way, invest in revolutionary ideas, and create financial freedom through bold action. Financial independence becomes urgent need. Traditional financial paths feel constraining. Long-term wealth builds through entrepreneurial ventures and innovative investments. Financial lessons teach that freedom requires bold action, innovation pays, and financial independence equals life independence.',
+    predictions: [
+      'Major life reinvention begins - you become almost unrecognizable from who you were 7 years prior',
+      'Entrepreneurial venture or bold career change allows you to be your own boss and express your genius',
+      'Sudden awakening to your true self requires breaking free from limiting relationships or situations',
+      'Revolutionary idea or innovation you pioneer could change your life and possibly impact many others',
+      'Relationship dynamics revolutionize - more freedom, authenticity, or possible sudden changes',
+      'You break free from family expectations and claim your right to live your own unique path',
+      'Financial independence becomes achieved through bold action, entrepreneurship, or innovative income',
+      'Physical appearance, style, or identity dramatically changes to reflect authentic self',
+      'You become leader or pioneer in your field through courageous innovation and authentic vision',
+      'You master the art of fearless authenticity, bold action, and revolutionary self-leadership'
+    ]
+  },
+
+  'Uranus-Taurus': {
+    name: 'Uranus Ingress Taurus',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Taurus represents stability, security, material comfort, sensory pleasure, values, and persistence. It\'s the energy of building, maintaining, enjoying physical reality, and valuing quality over quantity.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Taurus brings revolutionary transformation of values, finances, and material reality. This rare generational cycle revolutionizes money systems, environmental practices, and what we value. You must liberate yourself financially, revolutionize your relationship with money and resources, and discover what has real value beyond tradition. This is about financial awakening, revaluing everything, and building new relationship with physical reality and material security.',
+    loveRelationships: 'Romance revolutionizes through revaluing what matters, unconventional approaches to security, and liberating from material expectations. Relationships require authentic values alignment, freedom from material pressure, and redefining what security means together. You learn to love based on genuine values not social expectations, create security through innovation not tradition. Long-term partnerships transform through new financial arrangements, revalued priorities, and unconventional approaches to stability. Dating involves people with innovative values. You attract partners who value authenticity over appearances. Commitment requires shared authentic values.',
+    familyHome: 'Family finances revolutionize through innovative income, unexpected changes, or new values. Home life needs revolutionary changes in comfort, security systems, and material environment. You may experience unexpected financial changes, adopt eco-friendly or technological home systems, or completely revalue family priorities. Family relationships transform through changing what you value and how you provide security. You learn to create security through innovation not just tradition. Home becomes showcase for innovative living and authentic values.',
+    businessCareer: 'Revolutionary 7-year career transformation in finance, agriculture, environment, technology applied to physical world, or values-based business. Professional success requires innovative approach to material world, sustainable practices, or financial technology. You may revolutionize traditional industry, work in fintech or greentech, or build business based on new values. Authority comes through demonstrated innovation in practical fields. Career likely involves cryptocurrency, sustainable business, or innovative finance. Professional reputation builds through values-driven innovation.',
+    moneyFinances: 'Financial revolution through cryptocurrency, innovative investments, or completely new approach to money. Money requires embracing new financial technologies, investing in sustainable/innovative companies, and liberating from traditional financial systems. You learn about cryptocurrency, invest in future-focused assets, and build wealth through innovation. Financial security redefined - less about accumulation, more about freedom and alignment with values. Unexpected financial changes possible. Long-term wealth builds through investing in innovation, sustainability, and future. Financial lessons teach that value is changing, innovation disrupts markets, and authentic values create sustainable wealth.',
+    predictions: [
+      'Major financial revolution occurs - income sources, investment strategy, or relationship with money completely transforms',
+      'You discover cryptocurrency, sustainable investing, or other innovative financial technology',
+      'Unexpected financial change (windfall or loss) awakens you to new relationship with money and security',
+      'Career shift toward sustainable business, financial technology, environmental work, or values-driven enterprise',
+      'What you value completely transforms - possessions, relationships, or life priorities revolutionize',
+      'Home becomes more eco-friendly, technologically advanced, or unconventionally comfortable',
+      'Relationship requires renegotiating financial arrangements or redefining what security means together',
+      'You liberate yourself from materialism while still honoring genuine need for physical comfort',
+      'Body, health, or sensory experience revolutionizes through new approaches to wellness or pleasure',
+      'You master the art of innovative stability, values-driven wealth, and liberated relationship with material world'
+    ]
+  },
+
+  'Uranus-Gemini': {
+    name: 'Uranus Ingress Gemini',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Gemini represents communication, learning, curiosity, versatility, connection, and information exchange. It\'s the energy of thinking, speaking, writing, learning, networking, and intellectual exploration.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Gemini brings revolutionary transformation of communication, technology, and information systems. This rare generational cycle revolutionizes how we think, communicate, learn, and connect. You must innovate your communication, embrace breakthrough technologies, and liberate your mind from limiting beliefs. This is about mental awakening, communication revolution, and connecting in radically new ways through technology and authentic expression.',
+    loveRelationships: 'Romance revolutionizes through unconventional communication, mental connection, and freedom of expression. Relationships require intellectual excitement, authentic communication, and mental space. You learn to love through revolutionary honesty, exciting conversation, and mental stimulation. Sudden connections through technology or communication possible. Long-term partnerships transform through better communication technology, more authentic dialogue, and intellectual freedom. Dating often happens online or through unconventional communication. You attract intellectually innovative, communicative partners. Commitment requires mental freedom and authentic expression.',
+    familyHome: 'Family communication revolutionizes through new technologies, honest dialogue, or breakthrough understanding. Home life needs space for learning, communication technology, and intellectual freedom. You may adopt new family communication technologies, experience sudden news from or about family, or breakthrough in family understanding. Relationship with siblings may change dramatically. Family relationships transform through more authentic communication and respecting different viewpoints. Home becomes technology hub and learning center.',
+    businessCareer: 'Revolutionary 7-year career transformation through communication innovation, technology, education revolution, or information work. Professional success requires mastering new communication technologies, innovative thinking, or revolutionary teaching methods. You may work in tech communication, online education, social media innovation, or breakthrough information systems. Authority comes through demonstrated communication innovation. Career likely involves internet, AI, communication technology, or revolutionary education. Professional reputation builds through innovative ideas and communication mastery.',
+    moneyFinances: 'Financial revolution through online income, communication-based business, or innovative information work. Money requires monetizing communication skills, leveraging technology, and creating multiple innovative income streams. You learn to earn through online platforms, teach or communicate innovatively, and build wealth through information and technology. Online business or side hustles likely. Financial freedom through diversified tech-savvy income. Long-term wealth builds through communication platforms, information products, and technology leverage. Financial lessons teach that information is currency, communication creates income, and technology enables financial freedom.',
+    predictions: [
+      'Major communication breakthrough revolutionizes how you think, speak, or connect with others',
+      'You master new communication technology (AI, social media, online platforms) that transforms your work or life',
+      'Online business, blog, podcast, or digital platform becomes significant income source or influence',
+      'Relationship begins online or transforms through better communication technology and authentic dialogue',
+      'Educational path completely changes - online learning, self-education, or revolutionary teaching method',
+      'Sibling relationship transforms through breakthrough communication or unexpected changes',
+      'You develop innovative ideas or communication style that distinguishes you professionally',
+      'Information or news arrives suddenly that awakens you to new truth or perspective',
+      'Social connections revolutionize - online communities, diverse networks, or unconventional friendships',
+      'You master the art of revolutionary communication, mental freedom, and innovative connection'
+    ]
+  },
+
+  'Uranus-Cancer': {
+    name: 'Uranus Ingress Cancer',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Cancer represents nurturing, emotions, family, home, roots, security, and protection. It\'s the energy of caring, belonging, emotional safety, and creating sanctuary.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Cancer brings revolutionary transformation of family, home, and emotional life. This rare generational cycle revolutionizes family structures, home living, and emotional expression. You must liberate your emotions, create unconventional family or home arrangements, and redefine what security means. This is about emotional awakening, family revolution, and creating innovative approaches to nurture, belonging, and home.',
+    loveRelationships: 'Romance revolutionizes through unconventional family arrangements, emotional freedom, and redefining home together. Relationships require emotional authenticity, freedom to feel, and innovative approaches to family and home. You learn to love with emotional honesty not just comfortable patterns, create home that honors both freedom and belonging. Sudden emotional awakenings or changes in relationship possible. Long-term partnerships transform through unconventional living arrangements, emotional breakthroughs, or redefining family. Dating involves people with progressive family values. You attract emotionally authentic, unconventional partners. Commitment requires emotional freedom and innovative home life.',
+    familyHome: 'Family structure revolutionizes - unconventional arrangements, sudden changes, or liberation from family patterns. Home life needs radical changes, technological integration, or completely new living arrangement. You may create chosen family, adopt unconventional home (tiny house, community living, digital nomad), or experience sudden family changes. Family relationships transform through emotional honesty and accepting unconventional choices. You learn to honor both roots and freedom, belonging and authenticity. Home becomes innovative living space reflecting authentic values.',
+    businessCareer: 'Revolutionary 7-year career transformation through home-based business, family innovation, real estate technology, or emotional intelligence work. Professional success requires innovative approaches to home/family services, emotional authenticity at work, or home-based entrepreneurship. You may work from home, innovate family services, or build career in domestic technology. Authority comes through emotional authenticity and innovative family/home solutions. Career likely involves remote work, family tech, or domestic innovation. Professional reputation builds through work-life integration and emotional intelligence.',
+    moneyFinances: 'Financial revolution through home-based income, real estate innovation, or family finances transformation. Money requires creating income from home, investing in domestic technology or real estate innovation, and financial security through unconventional means. You learn to earn from home base, invest in family or property differently, and build wealth through domestic innovation. Work-from-home income likely. Unexpected family financial changes possible. Long-term wealth builds through home business, real estate technology, or family financial innovation. Financial lessons teach that home can create income, family finances can transform, and security comes through innovation.',
+    predictions: [
+      'Major home change over 7 years - move, renovation, unconventional living arrangement, or home revolution',
+      'Family structure transforms - chosen family, unconventional arrangement, or liberation from family patterns',
+      'Work-from-home opportunity or home-based business becomes primary income source',
+      'Emotional breakthrough awakens you to patterns limiting authentic feeling and expression',
+      'Relationship or family requires more emotional freedom and less adherence to traditional expectations',
+      'Unexpected family change (birth, adoption, someone leaving) transforms family dynamics',
+      'Mother or mother-figure relationship transforms through greater honesty and accepting differences',
+      'Home becomes smart-home, eco-home, tiny house, or other innovative living space',
+      'You create chosen family or community that provides belonging while honoring individuality',
+      'You master the art of emotional freedom, innovative homemaking, and liberated nurturing'
+    ]
+  },
+
+  'Uranus-Leo': {
+    name: 'Uranus Ingress Leo',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Leo represents creativity, self-expression, confidence, joy, leadership, and recognition. It\'s the energy of shining, creating, celebrating, leading, and expressing authentic self.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Leo brings revolutionary transformation of creativity, self-expression, and leadership. This rare generational cycle revolutionizes entertainment, creative industries, and how we express individuality. You must liberate your creative genius, express yourself authentically and boldly, and lead through unique vision. This is about creative awakening, revolutionary self-expression, and leading through being utterly and unapologetically yourself.',
+    loveRelationships: 'Romance revolutionizes through dramatic self-expression, unconventional romance, and freedom to shine. Relationships require celebrating each other\'s uniqueness, creative collaboration, and excitement over routine. You learn to love with dramatic authenticity, celebrate differences, and create exciting relationship. Sudden passionate attractions or dramatic relationship changes possible. Long-term partnerships transform through more creative expression, celebrating individuality, and exciting new adventures. Dating becomes more expressive and unconventional. You attract creative, confident, unique partners. Commitment requires mutual celebration and freedom to shine.',
+    familyHome: 'Family dynamics revolutionize through supporting creative expression, unconventional parenting, or dramatic changes. Home life needs space for creativity, performance, and individual expression. You may raise children very progressively, create home studio or creative space, or experience dramatic family changes. Family relationships transform through celebrating uniqueness rather than conformity. You learn to lead family while honoring each person\'s light. Home becomes stage for creative expression and authentic celebration.',
+    businessCareer: 'Revolutionary 7-year career transformation through creative innovation, entertainment technology, or unique leadership. Professional success requires expressing unique creative vision, innovative performance or art, or revolutionary leadership style. You may work in entertainment innovation, create breakthrough art, or lead through authentic self-expression. Authority comes through demonstrated creative genius and authentic leadership. Career likely involves creative technology, social media, entertainment innovation, or unique personal brand. Professional reputation builds through bold creative vision.',
+    moneyFinances: 'Financial revolution through creative work, performance income, or monetizing your unique self-expression. Money requires building personal brand, creating innovative entertainment or art, and earning through authentic self-expression. You learn to monetize your creativity innovatively, build income through social media or performance, and create wealth by being uniquely you. Creative entrepreneurship favored. Unexpected creative opportunities. Long-term wealth builds through developed creative platform and authentic personal brand. Financial lessons teach that authentic self-expression attracts abundance, creativity is valuable, and your uniqueness is your wealth.',
+    predictions: [
+      'Major creative breakthrough - your unique creative genius emerges and revolutionizes your life',
+      'You build significant social media presence, creative platform, or personal brand that generates income/influence',
+      'Romantic relationship becomes more exciting, expressive, or experiences dramatic transformation',
+      'Children (yours or others) inspire revolutionary changes in your life or you parent unconventionally',
+      'Career shift toward creative field, entertainment, performance, or work requiring authentic self-expression',
+      'You overcome fear of being seen and step boldly into public creative expression',
+      'Leadership role requires you to lead through authentic example rather than authority',
+      'Creative work (art, music, performance, content creation) becomes serious pursuit or profession',
+      'You liberate your self-expression from others\' expectations and shine with authentic confidence',
+      'You master the art of revolutionary creativity, authentic leadership, and bold self-expression'
+    ]
+  },
+
+  'Uranus-Virgo': {
+    name: 'Uranus Ingress Virgo',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Virgo represents analysis, refinement, service, health, organization, and practical skill. It\'s the energy of improvement, discernment, efficiency, helping, and mastering craft.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Virgo brings revolutionary transformation of health, work, and service. This rare generational cycle revolutionizes healthcare, work practices, and approaches to wellness and service. You must liberate your work life, revolutionize your health practices, and serve through innovative means. This is about health awakening, work revolution, and creating breakthrough approaches to service, wellness, and daily life.',
+    loveRelationships: 'Romance revolutionizes through practical innovation, health-conscious relating, and serving each other uniquely. Relationships require healthy routines, useful partnership, and freedom in daily life. You learn to love through innovative service, support health and growth, and create efficient life together. Long-term partnerships transform through better health practices, work-life balance innovation, or new daily routines. Dating involves health-conscious or work-progressive people. You attract partners who value wellness and practical innovation. Commitment requires healthy daily life and useful partnership.',
+    familyHome: 'Family health or daily routines revolutionize through new practices, technological healthcare, or service innovation. Home life needs health-supporting systems, efficient organization, or work-from-home setup. You may adopt revolutionary health practices for family, create highly organized or technological home, or innovate family service. Family relationships transform through better health awareness and more efficient systems. You learn to serve family through innovative means. Home becomes wellness center or highly efficient workspace.',
+    businessCareer: 'Revolutionary 7-year career transformation through healthcare innovation, work technology, or service revolution. Professional success requires innovative approaches to health/wellness, technological skill mastery, or revolutionary service delivery. You may work in health tech, automate work processes, or revolutionize service industry. Authority comes through demonstrated innovation in practical fields. Career likely involves health technology, AI/automation, remote work, or service innovation. Professional reputation builds through efficient innovation and useful breakthroughs.',
+    moneyFinances: 'Financial revolution through innovative work arrangements, health-based income, or efficiency creating wealth. Money requires working smarter not harder through technology, monetizing health or organization skills, and building wealth through efficient systems. You learn to automate income, work remotely or flexibly, and create passive income through systems. Gig economy or multiple income streams likely. Long-term wealth builds through technological skills, health expertise, or efficient business systems. Financial lessons teach that efficiency creates wealth, health is valuable, and smart work beats hard work.',
+    predictions: [
+      'Major health transformation - revolutionary diet, exercise, or wellness practice dramatically improves wellbeing',
+      'Work arrangements revolutionize - remote work, freelancing, or technological automation transforms career',
+      'You master breakthrough technology or skill that makes you highly valuable professionally',
+      'Daily routines completely transform through technological tools or innovative efficiency systems',
+      'Health breakthrough or crisis awakens you to importance of wellness and self-care',
+      'Work-life balance improves dramatically through remote work, automation, or boundary setting',
+      'Service work or helping profession adopts innovative approach or technology',
+      'You develop expertise in health technology, productivity systems, or practical innovation',
+      'Perfectionism releases as you embrace innovative experimentation over traditional perfection',
+      'You master the art of efficient innovation, health technology, and liberated service'
+    ]
+  },
+
+  'Uranus-Libra': {
+    name: 'Uranus Ingress Libra',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Libra represents balance, partnership, harmony, aesthetics, diplomacy, and fairness. It\'s the energy of relating, cooperating, creating beauty, and seeking equilibrium.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Libra brings revolutionary transformation of relationships, partnerships, and social justice. This rare generational cycle revolutionizes marriage, partnership structures, and approaches to fairness and beauty. You must liberate your relationships, create unconventional partnerships, and fight for authentic fairness. This is about relationship awakening, partnership revolution, and creating radically new approaches to relating, justice, and beauty.',
+    loveRelationships: 'Romance revolutionizes through unconventional commitments, equal partnerships, and freedom within relationship. Relationships require authentic equality, respect for independence, and innovative partnership structures. You learn to love with both commitment and freedom, togetherness without possession. Sudden relationship changes (meeting, commitment, or separation) possible. Long-term partnerships transform through renegotiating agreements, more equality, or unconventional arrangements (open relationship, living apart together). Dating becomes more progressive. You attract independent, unconventional, socially conscious partners. Commitment requires both partnership and independence.',
+    familyHome: 'Family partnerships revolutionize through more equality, unconventional arrangements, or social justice involvement. Home life needs aesthetic innovation, partnership equality, and space for individual freedom within family. You may create more equal domestic arrangements, advocate for family member\'s rights, or redesign home beautifully. Family relationships transform through fairness and respecting each person\'s independence. You learn to balance family togetherness with individual freedom. Home becomes beautiful, harmonious space honoring both connection and autonomy.',
+    businessCareer: 'Revolutionary 7-year career transformation through partnership innovation, social justice work, design revolution, or legal reform. Professional success requires innovative collaboration, fighting for fairness, or revolutionary aesthetics. You may form unconventional business partnerships, work in social justice or legal reform, or revolutionize design/aesthetics. Authority comes through demonstrated fairness and innovative collaboration. Career likely involves partnership law, social justice, design innovation, or mediation. Professional reputation builds through championing equality and creating beauty.',
+    moneyFinances: 'Financial revolution through partnership finances, fair trade, or aesthetic innovation income. Money requires fair financial partnerships, investing in social justice or beauty, and earning through collaboration. You learn to share finances fairly, invest in companies with values alignment, and build wealth through partnerships. Financial equality in relationships becomes important. Long-term wealth builds through fair partnerships and values-driven investments. Financial lessons teach that financial fairness creates prosperity, partnership can increase wealth, and beauty/justice have economic value.',
+    predictions: [
+      'Major relationship transformation - marriage, divorce, or complete renegotiation of partnership terms',
+      'Business partnership forms with innovative structure, equality, and unconventional agreements',
+      'You become involved in social justice cause fighting for equality, fairness, or civil rights',
+      'Relationship requires more equality, independence, or unconventional arrangement to survive/thrive',
+      'Career shift toward partnership work, social justice, legal reform, design, or mediation',
+      'You liberate yourself from codependency and learn to be both partnered and independent',
+      'Aesthetic sense revolutionizes - your style, home design, or creative work becomes more innovative',
+      'Legal matter or contract requires innovative solution or fighting for fairness',
+      'You learn to balance partnership with independence, togetherness with freedom',
+      'You master the art of revolutionary partnership, authentic fairness, and liberated relating'
+    ]
+  },
+
+  'Uranus-Scorpio': {
+    name: 'Uranus Ingress Scorpio',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Scorpio represents intensity, transformation, depth, power, intimacy, and regeneration. It\'s the energy of probing beneath surface, merging deeply, wielding power, and transforming through crisis.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Scorpio brings revolutionary transformation through crisis, sexuality liberation, and power shifts. This rare generational cycle revolutionizes sexuality, death/rebirth practices, and power structures. You must liberate your sexuality, transform through sudden crisis, and claim authentic power. This is about sexual awakening, power revolution, and creating radically new relationship to intimacy, transformation, and shared resources.',
+    loveRelationships: 'Romance revolutionizes through sexual liberation, psychological breakthroughs, and power equality. Relationships require sexual authenticity, psychological honesty, and power sharing. You learn to love with both intensity and freedom, merge deeply yet maintain self. Sudden intense attractions or transformative breakups possible. Long-term partnerships transform through sexual exploration, psychological work together, or power rebalancing. Dating becomes more intense and psychologically honest. You attract deep, intense, transformative partners. Commitment requires sexual and psychological freedom.',
+    familyHome: 'Family undergoes major transformation through crisis, inheritance, or power shifts. Home life needs psychological safety, privacy for intimacy, and space for transformation. You may deal with family death, receive inheritance, or experience family power dynamics shift. Family relationships transform through addressing secrets, power issues, or shared resources. You learn to handle family intensity with both depth and boundaries. Home becomes sanctuary for deep emotional work and transformation.',
+    businessCareer: 'Revolutionary 7-year career transformation through financial innovation, psychology breakthrough, crisis management revolution, or power shifts. Professional success requires mastering new financial technologies, psychological depth, or transformative work. You may work in financial technology (cryptocurrency, fintech), psychology/therapy innovation, or crisis transformation. Authority comes through handling intensity and facilitating transformation. Career likely involves finance innovation, depth psychology, sexuality work, or crisis management. Professional reputation builds through transformative impact.',
+    moneyFinances: 'Financial revolution through cryptocurrency, investment innovation, or shared resources transformation. Money requires understanding new financial technologies, strategic investing, and managing shared finances innovatively. You learn about cryptocurrency/blockchain, invest in transformative companies, and build wealth through strategic financial transformation. Debt elimination or inheritance possible. Unexpected financial transformation likely. Long-term wealth builds through financial innovation and strategic power moves. Financial lessons teach that financial power requires knowledge, transformation creates wealth, and shared resources need clear agreements.',
+    predictions: [
+      'Major sexual awakening or liberation transforms your intimate life and self-understanding',
+      'Cryptocurrency, blockchain, or financial technology becomes important income or investment',
+      'Psychological breakthrough through therapy, shadow work, or sudden crisis reveals deep truth',
+      'Inheritance matter, debt elimination, or shared financial resources undergo major transformation',
+      'Relationship deepens through sexual exploration, psychological honesty, or crisis weathered together',
+      'Power dynamics in relationship, family, or career must shift toward equality and authenticity',
+      'Career shift toward depth psychology, financial technology, sexuality work, or crisis transformation',
+      'You face and transform fear, shame, or psychological pattern through sudden awakening',
+      'Death or major loss triggers profound transformation and spiritual/psychological rebirth',
+      'You master the art of sexual liberation, psychological depth, and authentic power'
+    ]
+  },
+
+  'Uranus-Sagittarius': {
+    name: 'Uranus Ingress Sagittarius',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years (Uranus is exalted in Sagittarius traditionally)',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Sagittarius represents expansion, optimism, adventure, truth-seeking, freedom, and philosophical understanding. It\'s the energy of growth, exploration, teaching, and finding meaning through broadening horizons.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Sagittarius brings revolutionary transformation of beliefs, education, and freedom. This rare generational cycle revolutionizes religion, higher education, and global connection. You must liberate your beliefs, explore radically, and seek truth through breakthrough experiences. This is about philosophical awakening, educational revolution, and creating radically new approaches to meaning, truth, and expansion.',
+    loveRelationships: 'Romance revolutionizes through cross-cultural connection, philosophical alignment, and adventure together. Relationships require shared vision for growth, intellectual freedom, and adventurous spirit. You learn to love with both passion and freedom, commitment to growth not just person. Sudden connections with people from different cultures/backgrounds possible. Long-term partnerships transform through travel together, shared educational pursuits, or philosophical breakthroughs. Dating involves people from diverse backgrounds. You attract adventurous, philosophically minded, freedom-loving partners. Commitment requires shared growth vision.',
+    familyHome: 'Family expands through international connection, educational pursuits, or philosophical transformation. Home life needs space for learning, cultural diversity, and freedom to roam. You may have international family connections, support family member\'s education abroad, or integrate different cultures in family. Family relationships transform through accepting different beliefs and paths. You learn to honor family connection while respecting freedom to explore. Home becomes multicultural space and launch pad for adventures.',
+    businessCareer: 'Revolutionary 7-year career transformation through educational innovation, international work, online teaching, or philosophical revolution. Professional success requires innovative teaching methods, cross-cultural expertise, or revolutionary ideas. You may teach online, work internationally, publish breakthrough ideas, or revolutionize education. Authority comes through demonstrated visionary thinking and teaching innovation. Career likely involves online education, international business, publishing innovation, or thought leadership. Professional reputation builds through revolutionary ideas.',
+    moneyFinances: 'Financial revolution through international income, online education, or publishing innovation. Money requires earning internationally, teaching online, or monetizing revolutionary ideas. You learn to earn globally, build income through online courses or content, and create wealth through visionary ideas. International business or cryptocurrency likely. Location-independent income favored. Long-term wealth builds through intellectual property, online education, or global business. Financial lessons teach that ideas are valuable globally, online teaching creates freedom, and vision creates wealth.',
+    predictions: [
+      'Major international experience - extended travel, living abroad, or global business transforms worldview',
+      'Philosophical or spiritual awakening completely revolutionizes your beliefs and life direction',
+      'Online teaching, course creation, or content platform becomes significant income source',
+      'Educational path revolutionizes - online learning, self-education, or completely new field of study',
+      'Relationship with person from different culture/country expands your perspective dramatically',
+      'Career becomes location-independent through online work or international opportunities',
+      'You publish book, blog, or course sharing revolutionary ideas or experiences',
+      'Religious or philosophical beliefs transform through direct experience challenging old certainties',
+      'Legal matter or higher education opportunity creates breakthrough and expansion',
+      'You master the art of philosophical freedom, global connection, and revolutionary vision'
+    ]
+  },
+
+  'Uranus-Capricorn': {
+    name: 'Uranus Ingress Capricorn',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Capricorn represents ambition, achievement, structure, mastery, responsibility, and authority. It\'s the energy of building, achieving, leading with integrity, and reaching the mountain top through persistent effort.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Capricorn brings revolutionary transformation of structures, career, and authority. This rare generational cycle revolutionizes government, corporations, and traditional power structures. You must liberate your career, revolutionize your approach to achievement, and claim authentic authority. This is about career awakening, structural revolution, and creating radically new approaches to success, leadership, and building lasting achievements.',
+    loveRelationships: 'Romance revolutionizes through unconventional commitment structures, career-partnership balance, and redefining success together. Relationships require respecting career ambitions, innovative approach to commitment, and building together differently. You learn to love with both ambition and partnership, success and relationship. Long-term partnerships transform through new approaches to career balance, unconventional commitments, or building business together. Dating involves ambitious or unconventional professionals. You attract partners redefining success. Commitment requires supporting each other\'s authentic ambitions.',
+    familyHome: 'Family structures revolutionize through unconventional authority, career changes affecting family, or breaking from family tradition. Home life needs balance between career and family, structured freedom, and respect for individual ambitions. You may become unconventional authority in family, experience family career shake-ups, or break from family business/expectations. Family relationships transform through honoring different definitions of success. You learn to balance family responsibility with authentic career path. Home becomes both foundation and launch pad for achievement.',
+    businessCareer: 'Revolutionary 7-year career transformation through entrepreneurship, industry disruption, or complete career reinvention. Professional success requires innovative leadership, disrupting traditional structures, or building something revolutionary. You may start disruptive business, leave corporate for entrepreneurship, or revolutionize your industry. Authority comes through demonstrated innovation and authentic leadership. Career path likely completely transforms. Professional reputation builds through revolutionary achievements and structural innovation. Technology disrupting traditional industries favored.',
+    moneyFinances: 'Financial revolution through entrepreneurship, cryptocurrency, or completely new income structures. Money requires building innovative income, investing in disruptive companies/technologies, and creating wealth through revolutionary achievement. You learn to build sustainable wealth innovatively, invest in future industries, and create financial freedom through authentic achievement. Traditional career paths feel limiting. Long-term wealth builds through entrepreneurial success and disruptive innovation. Financial lessons teach that old structures are crumbling, innovation disrupts industries, and authentic achievement creates sustainable wealth.',
+    predictions: [
+      'Major career revolution - you leave traditional path for entrepreneurship or completely reinvent profession',
+      'You disrupt your industry or build innovative business that challenges traditional structures',
+      'Relationship with authority figures (boss, father, mentor) transforms or breaks completely',
+      'Corporate structure collapses or transforms, forcing you to rebuild career on authentic foundation',
+      'You claim authentic authority and lead through innovation rather than tradition',
+      'Financial independence achieved through entrepreneurship, cryptocurrency, or disruptive innovation',
+      'Career-relationship balance revolutionizes through remote work, entrepreneurship, or new agreements',
+      'You break from family expectations about career/success and build achievement your own way',
+      'Professional reputation transforms from traditional success to innovative leadership',
+      'You master the art of revolutionary leadership, authentic authority, and structural innovation'
+    ]
+  },
+
+  'Uranus-Aquarius': {
+    name: 'Uranus Ingress Aquarius',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years (Uranus rules Aquarius)',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Aquarius represents innovation, community, individuality, progress, friendship, and humanitarian vision. It\'s the energy of awakening, connecting, revolutionizing, and serving collective evolution.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE (Uranus at Home): Uranus in Aquarius brings maximum revolutionary transformation of society, technology, and consciousness. This is Uranus at its most revolutionary and transformative. This rare generational cycle creates quantum leaps in technology, social revolution, and collective awakening. You must awaken fully, contribute to collective evolution, and become vehicle for progressive change. This is about total awakening, joining revolutionary community, and serving the future through radical innovation and authentic uniqueness.',
+    loveRelationships: 'Romance revolutionizes through friendship-based love, poly/open relating options, and complete freedom within commitment. Relationships require absolute authenticity, mental connection, and progressive values. You learn to love as best friend, honor total freedom, and create relationship structure that has never existed before. Sudden electric attractions or sudden freedom-seeking separations possible. Long-term partnerships transform into friendship-partnerships with radical freedom and authenticity. Dating happens through communities or online. You attract revolutionary, brilliant, socially conscious partners. Commitment requires total authenticity and progressive structure.',
+    familyHome: 'Family structure completely revolutionizes - chosen family, community living, or radically progressive arrangements. Home life needs technology, community space, and total freedom for authentic expression. You may create intentional community, adopt futuristic home technology, or build chosen family that replaces traditional family. Family relationships transform through accepting everyone\'s uniqueness and progressive values. You learn that family is who you choose and love is freedom. Home becomes community hub, technology showcase, or revolutionary living experiment.',
+    businessCareer: 'Revolutionary 7-year career transformation through breakthrough technology, social revolution, or community building. Professional success requires mastering emerging technology, building community platforms, or leading social change. You may work in AI, blockchain, social movements, community organizing, or revolutionary technology. Authority comes through demonstrated innovation and community contribution. Career likely involves technology revolution or social change. Professional reputation builds through revolutionary contribution to collective evolution. Technology, social change, community building, or humanitarian work essential.',
+    moneyFinances: 'Financial revolution through cryptocurrency, technology income, or community economics. Money requires understanding cryptocurrency/blockchain deeply, earning through technology or community platforms, and building wealth through revolutionary participation. You learn to leverage technology for income, participate in decentralized finance, and build wealth through community and innovation. Traditional finance feels obsolete. Cryptocurrency and technology investments essential. Long-term wealth builds through technological expertise and community platforms. Financial lessons teach that future of money is here, technology enables financial freedom, and community creates collective wealth.',
+    predictions: [
+      'Total life awakening - you become unrecognizable from who you were, fully authentic and free',
+      'You master breakthrough technology (AI, blockchain, etc.) that defines the future',
+      'Community or network becomes your true family - chosen family replaces or supplements biological',
+      'Career becomes vehicle for social change, technological revolution, or community building',
+      'Cryptocurrency and blockchain become important income source and investment focus',
+      'Friendship transforms into romantic partnership or partnership evolves into authentic friendship',
+      'You become leader in social movement, technology revolution, or community transformation',
+      'Home becomes futuristic, technologically advanced, or community living space',
+      'You contribute to collective evolution through innovation, teaching, or community building',
+      'You master the art of total authenticity, revolutionary innovation, and collective service'
+    ]
+  },
+
+  'Uranus-Pisces': {
+    name: 'Uranus Ingress Pisces',
+    frequency: 'Approximately every 84 years',
+    duration: '~7 years',
+    planetEnergy: 'Uranus represents revolution, awakening, innovation, liberation, sudden change, and authentic individuality. It\'s where you break free, innovate, rebel, awaken, and express your unique genius.',
+    signEnergy: 'Pisces represents spirituality, compassion, imagination, transcendence, unity, and dissolution. It\'s the energy of connecting to divine, serving selflessly, creating artistically, and transcending ego boundaries.',
+    eventMeaning: '🔮 REVOLUTIONARY 7-YEAR CYCLE: Uranus in Pisces brings revolutionary transformation of spirituality, creativity, and consciousness. This rare generational cycle revolutionizes religion, mysticism, and collective compassion. You must awaken spiritually, liberate your creativity, and serve the collective through transcendent vision. This is about spiritual awakening, creative revolution, and creating radically new approaches to divinity, imagination, and unity consciousness.',
+    loveRelationships: 'Romance revolutionizes through spiritual connection, unconditional love awakening, and transcendent partnership. Relationships require spiritual alignment, compassionate acceptance, and freedom to merge spiritually. You learn to love unconditionally yet wisely, merge souls yet maintain boundaries. Twin flame or soulmate connections possible through sudden spiritual awakening. Long-term partnerships transform through spiritual practice together, compassionate service as couple, or artistic collaboration. Dating becomes spiritually focused. You attract spiritually awakened, compassionate, artistic partners. Commitment requires spiritual resonance and transcendent vision.',
+    familyHome: 'Family spirituality revolutionizes through awakening, healing ancestral wounds, or creating spiritual family culture. Home life needs space for spirituality, creativity, meditation, and retreat. You may guide family\'s spiritual awakening, heal family through forgiveness/compassion, or create home as sanctuary and spiritual center. Family relationships transform through unconditional love and spiritual acceptance. You learn to serve family spiritually while maintaining energetic boundaries. Home becomes temple, art studio, or healing sanctuary.',
+    businessCareer: 'Revolutionary 7-year career transformation through spiritual innovation, healing arts revolution, or creative breakthrough. Professional success requires innovative spiritual teaching, revolutionary healing methods, or breakthrough artistic vision. You may work in spiritual technology, innovative healing, revolutionary art/music/film, or consciousness work. Authority comes through demonstrated spiritual wisdom and creative genius. Career likely involves spirituality, healing arts, creative innovation, or consciousness evolution. Professional reputation builds through transcendent impact and artistic beauty.',
+    moneyFinances: 'Financial revolution through spiritual/creative work, healing services innovation, or transcendent art. Money requires monetizing spiritual gifts innovatively, creating revolutionary healing services, or building income through transcendent creativity. You learn to receive abundantly for spiritual work, charge appropriately for healing, and build wealth through gifts that feel divinely given. Financial boundaries essential - you cannot serve from empty cup. Long-term wealth builds through spiritual mastery, healing expertise, or artistic genius. Financial lessons teach that spiritual gifts have material value, healing creates abundance, and divine service deserves compensation.',
+    predictions: [
+      'Spiritual awakening completely transforms your consciousness and life direction',
+      'Artistic or creative breakthrough - music, film, art, or writing emerges from divine inspiration',
+      'Healing gifts or psychic abilities suddenly awaken and may become professional work',
+      'You heal addiction, victimhood, or escapism through sudden spiritual awakening or crisis',
+      'Career shifts toward spiritual teaching, healing arts, creative work, or consciousness evolution',
+      'Relationship becomes spiritually focused - meditation together, healing work, or soul connection',
+      'You develop innovative spiritual practice or healing method that helps many others',
+      'Compassion awakens and you begin serving marginalized, suffering, or forgotten populations',
+      'Dreams, visions, or psychic experiences guide you toward your authentic spiritual path',
+      'You master the art of spiritual innovation, healing creativity, and transcendent service'
+    ]
   }
 };
 
