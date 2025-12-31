@@ -592,15 +592,13 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
         console.error('Error loading lunation interpretation:', error);
       }
 
-      if (interpretation) {
-        setSelectedAspect({
-          planet1: aspect.planet1,
-          planet2: aspect.planet2,
-          aspect: aspect.aspect,
-          orb: aspect.orb,
-          interpretation
-        });
-      }
+      setSelectedAspect({
+        planet1: aspect.planet1,
+        planet2: aspect.planet2,
+        aspect: aspect.aspect,
+        orb: aspect.orb,
+        interpretation
+      });
       return;
     }
 
@@ -617,15 +615,13 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
         console.error('Error loading ingress interpretation:', error);
       }
 
-      if (interpretation) {
-        setSelectedAspect({
-          planet1: aspect.planet1,
-          planet2: aspect.signName,
-          aspect: 'Ingress',
-          orb: aspect.orb,
-          interpretation
-        });
-      }
+      setSelectedAspect({
+        planet1: aspect.planet1,
+        planet2: aspect.signName,
+        aspect: 'Ingress',
+        orb: aspect.orb,
+        interpretation
+      });
       return;
     }
 
