@@ -1897,6 +1897,264 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Spiritual maturation through accepting shadow and psychological depth through divine grace',
       'Integration of transcendence and transformation creates conscious collective spiritual evolution'
     ]
+  },
+
+  // ==========================================
+  // SUN-JUPITER ASPECTS (All 5)
+  // ==========================================
+
+  'Sun-Jupiter-Conjunction': {
+    name: 'Sun Conjunction Jupiter',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Annual renewal of optimism, growth, and life purpose expansion! The Sun\'s identity merges with Jupiter\'s growth, creating opportunities, confidence, and expansive self-expression. Perfect time for new beginnings, taking risks, pursuing goals, and believing in yourself. Luck and abundance flow naturally. Your authentic self attracts opportunities. Generosity and faith combine. Annual boost of optimism and life force.',
+    loveRelationships: 'Relationship optimism and growth! Love feels abundant and expansive. Great time to take relationship to next level, plan adventures together, or express generous love. Confidence in partnership attracts positive developments. May meet someone inspiring or relationship grows through shared optimism. Authentic self-expression in love. Generous affection.',
+    familyHome: 'Family joy and expansion! Perfect time for family celebrations, gatherings, or positive developments. Generosity with family. May expand family through new addition or deepen family bonds. Home improvement projects succeed. Family members feel optimistic. Your vitality uplifts family. Abundant family love.',
+    businessCareer: 'Career opportunities and professional growth! Excellent time to pursue advancement, pitch ideas, or take professional risks. Confidence and optimism attract success. Leadership shines. May receive recognition or new opportunities. Perfect for launching projects or expanding business. Professional abundance. Authentic career expression.',
+    moneyFinances: 'Financial opportunities and abundance! Money flows more easily. Good time for investments, asking for raise, or financial expansion. Generosity attracts abundance. However, avoid overconfidence or overspending. Trust but verify opportunities. Financial optimism grounded in reality works best. Prosperous period.',
+    predictions: [
+      'Significant opportunity appears this week - pursue it with confidence',
+      'Your authentic self-expression attracts positive recognition and growth',
+      'Financial opportunity or increase comes through being generous and optimistic',
+      'Relationship grows through shared adventure, optimism, or taking next step',
+      'Career advancement possible through confident authentic leadership',
+      'Perfect timing to launch project, pursue goal, or take calculated risk',
+      'You feel more confident, optimistic, and purposeful than usual',
+      'Generosity you show returns as abundance and opportunities',
+      'Teaching, sharing wisdom, or inspiring others brings joy and growth',
+      'Annual renewal of faith in yourself and life purpose'
+    ]
+  },
+
+  'Sun-Jupiter-Opposition': {
+    name: 'Sun Opposition Jupiter',
+    frequency: 'Occurs once per year (opposite the conjunction)',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Tension between ego and expansion, identity and growth, confidence and overconfidence. May feel pulled between authentic self and desire for more. Risk of overextending, exaggerating, or excessive optimism. However, also brings perspective on growth needs. Must integrate both - authentic self-expression AND growth. Neither arrogance nor self-limitation. Balance confidence with wisdom.',
+    loveRelationships: 'Relationship tension between individual needs and relationship growth. May want more while partner wants stability (or vice versa). Exaggeration or unrealistic expectations possible. Must balance authentic self with relationship expansion. Neither sacrificing self nor demanding too much. Integrate: grow together while honoring individuality.',
+    familyHome: 'Family tension between personal goals and family expansion. May feel torn between self-focus and family generosity. Overcommitment possible. Must balance vitality with family growth. Neither selfish nor over-giving. Family harmony through balanced authentic presence.',
+    businessCareer: 'Career tension between ambition and realistic capacity. May overestimate abilities or take excessive risks. Overconfidence possible. However, may also play too small. Must balance authentic confidence with wise growth. Neither arrogance nor timidity. Strategic ambitious expansion.',
+    moneyFinances: 'Financial tension between spending and growing. May overspend or overestimate income. Excessive optimism about money possible. Must balance generosity with wisdom. Neither stinginess nor recklessness. Financial growth through balanced confident planning.',
+    predictions: [
+      'Temptation to overcommit or take excessive risk - check realistic capacity first',
+      'Opportunity seems bigger than reality - verify details before committing',
+      'Balance between confidence and humility needed in professional situations',
+      'Relationship requires balancing individual authenticity with shared growth',
+      'Financial decision between expanding and overextending - choose wisely',
+      'You learn that true confidence doesn\'t require exaggeration',
+      'Perspective gained on where authentic growth is needed versus ego inflation',
+      'Opportunity teaches difference between authentic expansion and overreach',
+      'Integration of self-expression and growth wisdom creates maturity',
+      'Balance of being yourself fully while staying humble and realistic'
+    ]
+  },
+
+  'Sun-Jupiter-Trine': {
+    name: 'Sun Trine Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Effortless growth and abundant self-expression! Opportunities flow naturally, confidence feels right, and authentic self attracts success. Perfect timing for advancement, creative projects, and joyful expansion. Luck seems to favor you. Generous spirit brings returns. Faith and vitality aligned. Trust the flow of abundance.',
+    loveRelationships: 'Love flows beautifully! Relationship grows naturally through authentic expression. May meet someone wonderful through perfect timing. Existing partnership expands through shared joy and optimism. Generous love attracts generous love. Romantic opportunities appear effortlessly. Authentic affection.',
+    familyHome: 'Family life blessed with harmony and growth! Family celebrations or positive developments happen naturally. Generosity with family feels right and reciprocated. Home improvements or family expansion flow smoothly. Family members support your authentic self-expression. Abundant family joy.',
+    businessCareer: 'Career advancement flows naturally! Opportunities appear at perfect timing. Your authentic leadership recognized and rewarded. Professional growth through being yourself. Projects succeed easily. Recognition or promotion possible. Confident authentic work attracts success. Professional abundance.',
+    moneyFinances: 'Financial blessings flow naturally! Money comes through being generous and authentic. Opportunities appear at right time. Investments or financial decisions work out well. Income increases through doing what you love. Financial confidence grounded in reality. Natural prosperity.',
+    predictions: [
+      'Opportunity appears at perfect timing and feels absolutely right - say yes!',
+      'Your authentic self-expression attracts success effortlessly this week',
+      'Financial increase or opportunity comes through doing what you genuinely love',
+      'Relationship grows beautifully through natural generous authentic connection',
+      'Career recognition for being authentically yourself in professional role',
+      'Perfect week to pursue goals - timing favors you and doors open easily',
+      'Generosity and optimism you naturally express returns as abundance',
+      'Teaching, inspiring, or uplifting others brings joy and opportunities',
+      'Faith in yourself and life justified by positive developments',
+      'Grace period where being yourself is enough to attract growth'
+    ]
+  },
+
+  'Sun-Jupiter-Square': {
+    name: 'Sun Square Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Growth through creative tension and overcoming excess! The square creates friction between self-expression and expansion, forcing growth through challenges. Restlessness for more, risk of overdoing, or excessive confidence. However, tension produces necessary growth. The challenge: expand authentically not arrogantly, grow wisely not recklessly. Friction refines authentic ambitious expression.',
+    loveRelationships: 'Relationship restlessness or excessive demands. May want more excitement or growth in partnership. Risk of overreacting or expecting too much. However, stagnant relationship patterns DO need shaking up. The key: pursue authentic growth in relationship not ego satisfaction. Neither settling nor demanding perfection. Growth through honest confident communication.',
+    familyHome: 'Family tension from competing commitments or excessive generosity. May overextend with family or neglect family for personal goals. Balancing self-expression with family needs challenging. However, growth IS needed. The key: expand family life authentically not escape it. Neither over-giving nor selfish. Family growth through balanced presence.',
+    businessCareer: 'Career restlessness drives ambitious moves - possibly overambitious. May take excessive risks or overestimate abilities. However, playing too small also problem. The key: pursue authentic career growth not ego inflation. Plan ambitious moves realistically. Neither timid nor reckless. Career growth through confident wise action.',
+    moneyFinances: 'Financial overconfidence or excessive spending possible. May take risky financial moves or overestimate income. However, financial caution that limits growth also problem. The key: expand finances wisely not recklessly. Calculated risks grounded in reality. Neither fearful nor gambling. Financial growth through balanced confidence.',
+    predictions: [
+      'Restlessness drives desire for more - channel into authentic purposeful growth',
+      'Temptation to take excessive risk or overcommit - pause and plan realistically',
+      'Opportunity seems urgent requiring quick decision - get more information first',
+      'Relationship or career feels limiting - address authentically don\'t escape impulsively',
+      'Financial gamble tempts - calculate real risk versus optimistic assumptions',
+      'You learn difference between authentic confident growth and ego-driven excess',
+      'Tension forces examination of where you\'re playing too small or too big',
+      'Challenge teaches balancing faith in yourself with realistic planning',
+      'Growth happens through pursuing authentic expansion with wisdom',
+      'Friction refines ability to be confident AND humble simultaneously'
+    ]
+  },
+
+  'Sun-Jupiter-Sextile': {
+    name: 'Sun Sextile Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Opportunity for growth through conscious initiative! Doors open if you knock with confidence and authenticity. Perfect timing to pursue opportunities, take calculated risks, or express yourself boldly. Won\'t happen automatically - requires authentic action. Growth favors those who believe in themselves and act. Opportunity period for confident expansion.',
+    loveRelationships: 'Relationship growth opportunity if you initiate. Perfect time to express feelings, plan adventure together, or take relationship forward. Won\'t happen alone - requires generous authentic expression. Can deepen through shared optimism and growth if both participate. Romantic opportunity if you pursue with confidence.',
+    familyHome: 'Family growth opportunity through generous initiative. Plan family celebration, express appreciation, or invest in family expansion. Small generous acts create family abundance. Family harmony through authentic joyful presence. Works if you show up confidently and generously.',
+    businessCareer: 'Career opportunity appears for those who pursue confidently. Perfect time to pitch ideas, ask for advancement, or take professional risk. Must demonstrate confidence and authentic value. Opportunities favor those showing initiative. Professional growth through confident authentic action.',
+    moneyFinances: 'Financial opportunity through wise confident action. Ask for raise, pursue income opportunity, or invest wisely. Research then act with confidence. Small calculated financial risks succeed. Financial growth through combining optimism with initiative. Must take action to activate opportunity.',
+    predictions: [
+      'Career opportunity appears for those who\'ve been confidently developing skills',
+      'Financial increase possible if you ask confidently or pursue opportunity actively',
+      'Relationship grows through romantic gesture or adventure you confidently initiate',
+      'Learning opportunity or course you pursue with enthusiasm opens doors later',
+      'Business expansion or project you launch with confidence gains traction',
+      'Professional connection or mentor appears if you network with authentic confidence',
+      'Family celebration or gathering you organize brings joy and strengthens bonds',
+      'You learn that confident authentic initiative activates opportunities',
+      'Goal you pursue with optimism and action this week progresses significantly',
+      'Opportunity to expand life if you combine authentic self-expression with action'
+    ]
+  },
+
+  // ==========================================
+  // SUN-SATURN ASPECTS (All 5)
+  // ==========================================
+
+  'Sun-Saturn-Conjunction': {
+    name: 'Sun Conjunction Saturn',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Annual reality check and disciplined purpose alignment! The Sun\'s identity meets Saturn\'s structure, creating serious self-assessment, mature responsibility, and disciplined goal-setting. Time to commit to long-term goals, accept necessary limitations, and build lasting foundations. Maturity and authority increase. May feel heavy but productive. Annual realism strengthens authentic purpose.',
+    loveRelationships: 'Relationship seriousness and commitment focus. Perfect time to formalize commitment, have serious relationship talk, or strengthen partnership through discipline. May feel less romantic but more real. Relationship matures through honest realistic assessment. Commitment deepens through accepting reality and working together.',
+    familyHome: 'Family responsibilities and structure focus. Must address family obligations or establish better family boundaries. Time to be responsible family member or create sustainable family systems. May feel burdened but builds lasting family strength. Mature authentic family relating.',
+    businessCareer: 'Career discipline and professional advancement through hard work. Perfect time to commit to career goals, demonstrate responsibility, or pursue authority positions. Recognition for consistent effort. Must prove competence through discipline. Career advancement through mature professional presence. Build career foundation.',
+    moneyFinances: 'Financial discipline and realistic planning. Time to create budget, eliminate debt, or commit to savings plan. Must face financial reality honestly. Restrict spending, increase discipline. Financial security through structured responsible money management. Long-term financial foundation building.',
+    predictions: [
+      'Important commitment or responsibility appears requiring serious decision',
+      'Career advancement possible through demonstrating discipline and competence',
+      'Financial reality check leads to creating sustainable budget or savings plan',
+      'Relationship deepens through honest conversation about commitment and future',
+      'You gain maturity and authority through accepting responsibility',
+      'Perfect time to commit to long-term goal with realistic disciplined plan',
+      'Recognition or respect earned through consistent responsible effort',
+      'Limitation or challenge reveals what authentic goals truly matter',
+      'Authority figure acknowledges your competence and maturity',
+      'Annual assessment of purpose leads to recommitment with greater wisdom'
+    ]
+  },
+
+  'Sun-Saturn-Opposition': {
+    name: 'Sun Opposition Saturn',
+    frequency: 'Occurs once per year (opposite the conjunction)',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Tension between self-expression and limitation, vitality and responsibility, individual will and authority. Feel pulled between what you want and what\'s required. Restriction or authority challenge possible. Must integrate both - authentic expression AND discipline. Neither rebellion nor submission. Balance freedom with responsibility.',
+    loveRelationships: 'Relationship tension between individual needs and commitment requirements. May feel restricted by partnership or partner feels you\'re uncommitted. Must balance self-expression with relationship responsibility. Neither losing self nor avoiding commitment. Integration through authentic committed individuality.',
+    familyHome: 'Family tension between personal goals and family obligations. Feel torn between self-focus and family duty. Must balance authentic self-expression with mature family responsibility. Neither escaping family nor sacrificing self. Wise integration of both.',
+    businessCareer: 'Career tension between authentic calling and practical requirements. Authority conflict or career restrictions possible. Must balance creative self-expression with professional discipline. Neither selling out nor sabotaging career. Strategic authentic professional presence.',
+    moneyFinances: 'Financial tension between wants and limitations. Feel restricted financially or financial discipline feels oppressive. Must balance authentic desires with fiscal responsibility. Neither deprivation nor recklessness. Wise financial maturity through realistic planning.',
+    predictions: [
+      'Authority figure or restriction challenges your authentic self-expression',
+      'Choice between what you want and what\'s responsible requires wisdom',
+      'Relationship requires balancing individuality with commitment - both needed',
+      'Career limitation or requirement conflicts with authentic desires - integrate',
+      'Financial reality limits wants - maturity means accepting and planning wisely',
+      'You learn that true freedom requires accepting some limitations',
+      'Conflict with authority teaches standing up for self while respecting structure',
+      'Restriction reveals where discipline actually serves authentic purpose',
+      'Challenge forces maturity - neither rebellious nor compliant but wise',
+      'Integration of self-expression and responsibility creates authentic maturity'
+    ]
+  },
+
+  'Sun-Saturn-Trine': {
+    name: 'Sun Trine Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Effortless disciplined achievement and mature self-expression! Purpose and structure flow naturally together. Hard work feels right and produces results. Authority respects you, responsibility feels manageable, and goals progress steadily. Perfect timing for commitments, career advancement, and building lasting success. Discipline serves authentic purpose naturally.',
+    loveRelationships: 'Relationship commitment and stability flow naturally! Perfect time to formalize relationship, make long-term plans, or strengthen partnership through mature communication. Commitment feels right not restrictive. Building lasting love through natural discipline and respect. Stable authentic partnership.',
+    familyHome: 'Family responsibility and harmony flow naturally! Family obligations feel manageable and meaningful. Perfect time to establish family structures or fulfill family duties. Building lasting family foundation through natural mature presence. Family respects authentic leadership.',
+    businessCareer: 'Career advancement through natural disciplined effort! Hard work produces recognition and results. Authority figures support you. Perfect time for professional commitments, leadership roles, or career building. Success through authentic competent presence. Deserved professional advancement.',
+    moneyFinances: 'Financial discipline and security building flow naturally! Savings plans work, budgets feel sustainable, financial goals progress. Building lasting wealth through natural responsible money management. Financial maturity produces tangible results. Secure prosperity.',
+    predictions: [
+      'Career advancement or recognition earned through consistent disciplined effort',
+      'Financial plan or savings strategy you implement works steadily and reliably',
+      'Relationship commitment deepens naturally through mature realistic partnership',
+      'Authority figure respects your competence and grants responsibility or advancement',
+      'Long-term goal progresses significantly through disciplined consistent action',
+      'Professional project or responsibility you handle competently brings recognition',
+      'Family structure or commitment you establish creates lasting stability',
+      'Hard work feels purposeful and produces visible tangible results',
+      'Maturity and authenticity combine to attract respect and opportunities',
+      'Discipline serves your authentic purpose - effort feels meaningful not burdensome'
+    ]
+  },
+
+  'Sun-Saturn-Square': {
+    name: 'Sun Square Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Growth through challenge, limitation, and maturity tests! The square creates friction between self-expression and restriction, forcing authentic growth through obstacles. May feel blocked, criticized, or burdened. However, challenges build strength and character. The challenge: persist through difficulty not give up, mature through limits not rebel. Friction builds authentic resilient purpose.',
+    loveRelationships: 'Relationship challenges or commitment pressures. May feel relationship is too much work or partner criticizes. Must address relationship limitations honestly. However, easy relationships may lack depth. The key: work through challenges maturely not escape them. Build stronger relationship through facing difficulties together. Mature committed love.',
+    familyHome: 'Family burdens or responsibility pressures. May feel overwhelmed by family obligations or criticized by family. Must face family difficulties maturely. However, avoiding family also problem. The key: address family challenges responsibly with boundaries. Neither escaping nor martyrdom. Mature family presence.',
+    businessCareer: 'Career obstacles or authority challenges. May face criticism, delays, or extra work requirements. Must prove competence through difficulty. However, giving up also failure. The key: persist through challenges professionally. Build career strength through overcoming obstacles. Neither quitting nor complaining. Professional maturity.',
+    moneyFinances: 'Financial pressure or restrictions. May face expenses, income challenges, or financial reality checks. Must address money problems disciplined. However, ignoring finances worsens situation. The key: face financial reality and create sustainable plan. Neither panic nor denial. Financial maturity through difficulty.',
+    predictions: [
+      'Challenge or obstacle tests your commitment to authentic goals - persist wisely',
+      'Authority criticism or restriction ultimately strengthens your competence',
+      'Financial pressure forces creating realistic sustainable budget or plan',
+      'Relationship difficulty requiring mature honest work - builds stronger foundation',
+      'Career obstacle or delay teaches patience and persistence - proves character',
+      'You learn that authentic success requires working through challenges not avoiding them',
+      'Limitation reveals where unrealistic approaches need maturing',
+      'Burden or responsibility forces developing discipline and strength',
+      'Criticism or feedback, though harsh, ultimately improves your work or approach',
+      'Character building through accepting challenges as growth opportunities'
+    ]
+  },
+
+  'Sun-Saturn-Sextile': {
+    name: 'Sun Sextile Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, tradition, limitations, and the established order. It asks us to build, commit, and work within boundaries.',
+    aspectMeaning: 'Opportunity for advancement through disciplined initiative! Doors to success open if you demonstrate competence and responsibility. Perfect timing for commitments, taking on responsibility, or proving yourself professionally. Won\'t happen automatically - requires disciplined action. Advancement favors those who work hard and show maturity.',
+    loveRelationships: 'Relationship growth opportunity through mature initiative. Perfect time to have serious conversation, make commitment, or strengthen partnership through responsible action. Won\'t deepen alone - requires mature honest communication. Can build stronger relationship if both commit to work.',
+    familyHome: 'Family stability opportunity through responsible initiative. Establish family structure, address family issue maturely, or commit to family improvement. Small disciplined family actions create lasting results. Family harmony through mature authentic presence.',
+    businessCareer: 'Career opportunity through demonstrating competence. Perfect time to take on responsibility, prove yourself to authority, or pursue advancement through hard work. Must show discipline and capability. Opportunities favor those demonstrating professional maturity.',
+    moneyFinances: 'Financial opportunity through disciplined action. Create savings plan, eliminate debt strategically, or invest wisely. Small consistent financial discipline accumulates results. Financial security through responsible committed money management.',
+    predictions: [
+      'Career opportunity appears for those who\'ve demonstrated consistent competence',
+      'Financial strategy combining discipline with realistic goals you create works long-term',
+      'Relationship deepens through serious conversation or commitment you initiate maturely',
+      'Authority figure notices your reliable work and grants responsibility or advancement',
+      'Long-term goal you commit to with disciplined plan progresses significantly',
+      'Professional responsibility you accept competently leads to recognition later',
+      'Family structure or commitment you establish creates lasting positive foundation',
+      'You learn that consistent disciplined action produces real advancement',
+      'Mature approach to challenge you take earns respect and opportunities',
+      'Opportunity to build success through combining authentic purpose with discipline'
+    ]
   }
 
 };
