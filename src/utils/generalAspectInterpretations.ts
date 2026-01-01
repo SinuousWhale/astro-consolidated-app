@@ -4477,6 +4477,502 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Your courageous powerful assertion actively pursued creates profound positive change',
       'Opportunity for profound transformation through powerful courageous decisive transformative initiative'
     ]
+  },
+
+  // ============================================================================
+  // INNER-TO-INNER PLANET ASPECTS
+  // Sun-Mercury, Sun-Venus, Sun-Mars, Mercury-Venus, Mercury-Mars
+  // (Venus-Mars already complete earlier in file)
+  // ============================================================================
+
+  // SUN-MERCURY: These aspects occur frequently (multiple times per year) as Mercury never gets far from the Sun
+  // Only Conjunction and Sextile are possible due to Mercury's maximum elongation from Sun (~28°)
+
+  'Sun-Mercury-Conjunction': {
+    name: 'Sun Conjunction Mercury',
+    frequency: 'Occurs 3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    aspectMeaning: 'Mind and identity merge with focused clarity! The Sun\'s purpose combines with Mercury\'s thinking, creating clear self-expression, purposeful communication, and aligned thinking. Perfect time for important communications, expressing your truth, mental clarity about life direction, purposeful learning. Thoughts and identity align. Communication feels authentic. Excellent for writing, speaking, decisions, learning. Warning: can create subjective thinking - seek outside perspectives. Overall: clear authentic self-expression.',
+    loveRelationships: 'Relationship communication becomes clear and authentic! Perfect time for honest relationship discussions, expressing true feelings clearly, understanding relationship purpose. Communication aligns with authentic self. Good time for important relationship conversations, clarifying relationship direction, authentic emotional expression through words.',
+    familyHome: 'Family communication becomes purposeful and clear! Perfect time for important family discussions, expressing family truth clearly, understanding family direction. Family communication aligns with authentic family identity. Good time for family decisions, clarifying family purpose, authentic family expression.',
+    businessCareer: 'Professional communication becomes focused and purposeful! Excellent time for important professional discussions, expressing career direction clearly, presenting ideas authentically. Professional thinking aligns with career identity. Good time for career decisions, professional presentations, authentic professional expression.',
+    moneyFinances: 'Financial thinking becomes clear and purposeful! Good time for important financial decisions, understanding financial direction clearly, expressing financial truth. Financial thinking aligns with financial identity. Excellent for financial planning, clarifying financial purpose, authentic financial communication.',
+    predictions: [
+      'Important message you communicate clearly expresses your authentic truth powerfully',
+      'Your thinking aligns with your purpose creating clarity about life direction',
+      'Decision you make with clear mind aligns perfectly with who you are becoming',
+      'Communication expressing your authentic self resonates and creates understanding',
+      'Mental clarity about your identity produces important insight and decision',
+      'Your purposeful expression of ideas attracts recognition and opportunity',
+      'Writing or speaking from authentic self creates meaningful impact',
+      'Clear thinking about your path reveals important next steps',
+      'Honest communication of your truth strengthens all relationships',
+      'Opportunity for authentic self-expression through clear purposeful communication'
+    ]
+  },
+
+  'Sun-Mercury-Sextile': {
+    name: 'Sun Sextile Mercury',
+    frequency: 'Occurs several times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    aspectMeaning: 'Opportunity for clear communication through purposeful initiative! The Sun\'s identity harmonizes with Mercury\'s mind, creating potential for effective communication, learning, clear self-expression IF you take action. Opportunities for important conversations, learning, writing appear - require engagement. Perfect time to communicate actively, learn purposefully, express ideas. Success through communicative initiative. Passive wastes potential; active engagement creates clarity.',
+    loveRelationships: 'Relationship communication opportunity through initiative! Potential for clear relationship discussions, authentic expression, deeper understanding IF you initiate. Perfect time to start important conversation actively, express feelings clearly, discuss relationship honestly. Opportunity for relationship clarity through communication IF you engage. Initiative creates understanding.',
+    familyHome: 'Family communication opportunity through initiative! Potential for clear family discussions, purposeful family expression, family understanding IF you initiate. Perfect time to start family conversation actively, express family truth clearly, discuss family matters honestly. Family receptive to authentic communication IF presented. Initiative creates family clarity.',
+    businessCareer: 'Professional communication opportunity through initiative! Potential for effective professional discussions, clear career expression, professional understanding IF you take action. Perfect time to present ideas actively, communicate professionally, discuss career clearly. Recognition available IF you step forward. Initiative creates professional clarity.',
+    moneyFinances: 'Financial clarity opportunity through communicative initiative! Potential for clear financial understanding, effective money discussions, financial learning IF you pursue actively. Perfect time to discuss finances actively, learn about money, express financial needs clearly. Financial clarity available through communication. Initiative creates understanding.',
+    predictions: [
+      'Communication opportunity appears - engage actively for clear understanding',
+      'Your initiative to express clearly creates meaningful connection',
+      'Chance for important conversation succeeds IF pursued actively',
+      'Learning opportunity you engage with purposefully produces valuable knowledge',
+      'Initiative to communicate truth clearly strengthens relationships',
+      'Your active expression of ideas attracts positive response',
+      'Conversation you initiate actively creates important clarity',
+      'Learning you pursue with purpose enhances your self-understanding',
+      'Your communicative initiative creates beneficial outcomes',
+      'Opportunity for clarity through purposeful active communication'
+    ]
+  },
+
+  // SUN-VENUS: Occurs frequently as Venus never gets far from Sun (~47° maximum elongation)
+  // Only Conjunction and Sextile possible
+
+  'Sun-Venus-Conjunction': {
+    name: 'Sun Conjunction Venus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Identity and love merge with radiant attraction! The Sun\'s purpose combines with Venus\'s affection, creating magnetic self-expression, values aligned with identity, and radiant attractiveness. Perfect time for expressing love authentically, creative self-expression, aligning values with purpose, attracting what you desire. Love and identity unite. Attractiveness increases. Excellent for romance, creativity, beauty, values clarity. Authentic expression attracts. Self-love empowers.',
+    loveRelationships: 'Relationship love becomes authentic and radiant! Romance feels aligned with true self, attractive naturally, authentically expressed. Perfect time for authentic romantic expression, attracting aligned love, expressing true romantic self, deepening through authenticity. Your true self attracts right love. Authenticity magnetic.',
+    familyHome: 'Family love becomes authentic and expressive! Perfect time for expressing genuine family affection, creating family beauty, aligning family values with family identity. Home feels loving and authentic. Good time for family creativity, beautifying home authentically, expressing real family love.',
+    businessCareer: 'Professional values become authentic and attractive! Excellent time for expressing professional values clearly, attracting career aligned with values, creative professional expression. Work feels aligned with true professional identity. Good time for professional creativity, values-based career moves, authentic professional relationships.',
+    moneyFinances: 'Financial values become clear and authentic! Good time for aligning spending with values, attracting income through authentic work, clarity about what you truly value financially. Financial identity clarifies. Excellent for values-based financial decisions, authentic income, financial self-love.',
+    predictions: [
+      'Authentic expression of your values attracts aligned opportunities and people',
+      'Your radiant self-love increases attractiveness and magnetism naturally',
+      'Creative expression flowing from authentic self resonates and succeeds',
+      'Love you attract when being your true self proves genuine and aligned',
+      'Values clarity you gain aligns spending and choices with true purpose',
+      'Your authentic beauty and charm naturally draw positive attention',
+      'Expression of genuine affection strengthens all relationships beautifully',
+      'Creative work expressing your authentic self brings joy and recognition',
+      'Financial decisions aligned with true values prove satisfying long-term',
+      'Opportunity for authentic love and beauty through radiant self-expression'
+    ]
+  },
+
+  'Sun-Venus-Sextile': {
+    name: 'Sun Sextile Venus',
+    frequency: 'Occurs several times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Opportunity for love and beauty through authentic initiative! The Sun\'s purpose harmonizes with Venus\'s affection, creating potential for romantic connection, creative success, values alignment IF you take action. Opportunities for love, beauty, creative expression appear - require initiative. Perfect time to express affection actively, create beauty purposefully, pursue pleasure. Success through loving initiative. Passive wastes potential; active engagement attracts.',
+    loveRelationships: 'Relationship love opportunity through authentic initiative! Potential for romantic connection, affection deepening, attraction IF you initiate. Perfect time to express love actively, pursue romantic opportunity, show affection genuinely. Opportunity for romance through authentic expression IF you engage. Initiative attracts love.',
+    familyHome: 'Family love opportunity through expressive initiative! Potential for family harmony, beautiful home, family affection IF you initiate. Perfect time to express family love actively, beautify home, create family pleasure. Family receptive to loving initiatives IF presented. Initiative creates family beauty.',
+    businessCareer: 'Professional values opportunity through creative initiative! Potential for career satisfaction, creative success, values-aligned work IF you take action. Perfect time to pursue creative projects actively, express professional values, seek values-aligned work. Recognition available IF you step forward creatively. Initiative creates professional satisfaction.',
+    moneyFinances: 'Financial values opportunity through purposeful initiative! Potential for values-aligned income, financial pleasure, wise spending IF you pursue actively. Perfect time to seek values-based income actively, invest in what you value, enjoy financial resources wisely. Financial satisfaction available through aligned action. Initiative creates financial harmony.',
+    predictions: [
+      'Romantic opportunity appears - express interest actively for positive results',
+      'Your initiative to create beauty produces satisfying successful outcome',
+      'Chance for love connection succeeds IF you show authentic interest',
+      'Creative project you pursue actively brings joy and recognition',
+      'Initiative to express affection genuinely strengthens relationship beautifully',
+      'Your active pursuit of pleasure creates balanced satisfying experience',
+      'Values-aligned choice you make actively proves deeply satisfying',
+      'Expression of appreciation you offer actively deepens connection',
+      'Your creative initiative attracts positive attention and opportunity',
+      'Opportunity for love and beauty through authentic purposeful initiative'
+    ]
+  },
+
+  // SUN-MARS: All 5 aspects possible (occurs every ~2 years as Mars orbits)
+
+  'Sun-Mars-Conjunction': {
+    name: 'Sun Conjunction Mars',
+    frequency: 'Occurs every 2 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    aspectMeaning: 'Identity and action unite with powerful drive! The Sun\'s purpose merges with Mars\'s courage, creating purposeful action, authentic assertion, and empowered self-expression. Perfect time for bold initiatives aligned with purpose, courageous self-expression, fighting for authentic goals, assertive identity expression. Energy peaks powerfully. Action feels purposeful. Excellent for new beginnings, competitive pursuits, courageous moves. Warning: manage anger consciously - channel intensity constructively. Overall: empowered purposeful action.',
+    loveRelationships: 'Relationship passion becomes authentic and purposeful! Romance feels passionately aligned with true self, actively expressed, courageously pursued. Perfect time for authentic passionate expression, fighting for relationship authentically, bold romantic initiatives aligned with truth. Passion serves authentic connection.',
+    familyHome: 'Family action becomes purposeful and courageous! Perfect time for bold family initiatives aligned with family identity, authentic family leadership, fighting for family authentically. Home energy feels active and purposeful. Good time for family courage, authentic family assertion, purpose-driven family action.',
+    businessCareer: 'Professional action becomes purposeful and bold! Excellent time for career initiatives aligned with professional identity, courageous career moves, authentic professional assertion, competitive pursuit of career purpose. Work energy feels empowered and directed. Good time for bold career action, authentic professional fighting, purpose-driven competition.',
+    moneyFinances: 'Financial action becomes purposeful and bold! Good time for financial initiatives aligned with values, courageous financial moves, fighting for financial goals authentically. Financial energy feels empowered and purposeful. Excellent for bold financial action, authentic financial assertion, purpose-driven financial pursuit.',
+    predictions: [
+      'Bold action aligned with your authentic purpose succeeds powerfully',
+      'Your courageous expression of true self attracts recognition and opportunity',
+      'Initiative you take passionately proves both authentic and effective',
+      'Fight you engage in for authentic cause achieves important victory',
+      'Passionate action serving your real purpose produces significant results',
+      'Your authentic assertion of needs and desires creates positive change',
+      'Courageous move aligned with who you are proves exactly right',
+      'Energy you direct toward true purpose accomplishes impressive goals',
+      'Authentic competitive effort produces satisfying successful outcome',
+      'Opportunity for empowered action through purposeful courageous authentic assertion'
+    ]
+  },
+
+  'Sun-Mars-Opposition': {
+    name: 'Sun Opposition Mars',
+    frequency: 'Occurs every 2 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    aspectMeaning: 'Tension between identity and action requiring integration! The Sun\'s ego faces Mars\'s drive, creating conflict between who you are and what you do, purpose versus passion. Challenge: honor authentic self AND courageous action. Risk: acting against values, ego battles, purposeless assertion. Resistance to action creates stagnation; excessive action loses purpose. Integration needed. Balance creates purposeful empowered action.',
+    loveRelationships: 'Relationship tension between authenticity and passion! Romance requires balancing true self with passionate action. Tendency: passionate behavior misaligned with authentic needs. Partner may seem demanding or conflicting. Challenge: express passion while staying authentic. Good time: integrate romantic passion with authentic self, balance desire with truth.',
+    familyHome: 'Family tension between identity and action! Home requires balancing authentic family self with family action. Tendency: family action misaligned with family values. Challenge: take family action while honoring family authenticity. Good time: integrate family action with family identity, balance family assertion with family truth.',
+    businessCareer: 'Professional tension between identity and action! Career requires balancing authentic professional self with career action. Tendency: career moves misaligned with professional values. Challenge: pursue career boldly while honoring professional authenticity. Good time: integrate career action with professional identity, balance ambition with authenticity.',
+    moneyFinances: 'Financial tension between values and action! Money requires balancing authentic financial values with financial action. Tendency: financial behavior misaligned with money values. Challenge: take financial action while honoring financial authenticity. Good time: integrate financial action with financial values, balance financial assertion with financial truth.',
+    predictions: [
+      'Conflict between your values and actions forces authentic realignment',
+      'Tension reveals where your behavior contradicts your true purpose',
+      'Challenge to act authentically despite passionate impulses produces maturity',
+      'Your integration of true self with courageous action creates power',
+      'Conflict forces clarification of authentic purpose guiding action',
+      'Balance between being and doing creates effective authentic expression',
+      'Tension resolved through aligning passionate action with authentic values',
+      'You learn that real power requires authentic purpose not just force',
+      'Challenge produces integration of courageous action with true identity',
+      'Opportunity: integrate authentic self with empowered action through conscious balance'
+    ]
+  },
+
+  'Sun-Mars-Trine': {
+    name: 'Sun Trine Mars',
+    frequency: 'Occurs every 2 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    aspectMeaning: 'Identity and action flow naturally with empowered grace! The Sun\'s purpose harmonizes beautifully with Mars\'s drive, creating effortless purposeful action, natural courageous self-expression, graceful empowered achievement. Perfect time: purposeful action flowing smoothly, authentic assertion succeeding naturally, courageous moves working effortlessly. Purpose and passion align perfectly. Success natural. Excellent: competitions, initiatives, authentic assertion. Empowerment feels authentic. Action serves purpose gracefully.',
+    loveRelationships: 'Relationship passion flows naturally with authentic grace! Romance feels passionately aligned with true self naturally, authentically expressed effortlessly. Perfect time: authentic romantic action flowing smoothly, passionate expression succeeding naturally, courageous romantic moves working effortlessly. Passion and authenticity balance perfectly. Romantic action serves connection naturally.',
+    familyHome: 'Family action flows naturally with authentic purpose! Perfect time: family initiatives succeeding smoothly, authentic family leadership flowing naturally, purposeful family action working effortlessly. Home energy feels active and authentic naturally. Family action and family identity align beautifully. Family courage serves family purpose naturally.',
+    businessCareer: 'Professional action flows naturally with career purpose! Excellent time: career initiatives succeeding smoothly, authentic professional assertion flowing naturally, purposeful career moves working effortlessly. Professional energy feels empowered and authentic naturally. Career action and professional identity align perfectly. Professional courage serves career naturally.',
+    moneyFinances: 'Financial action flows naturally with authentic values! Good time: financial initiatives succeeding smoothly, values-aligned financial action flowing naturally, purposeful money moves working effortlessly. Financial energy feels empowered and authentic naturally. Financial action and financial values align beautifully. Financial courage serves values naturally.',
+    predictions: [
+      'Purposeful action flows naturally and achieves success effortlessly',
+      'Your authentic courageous expression naturally attracts recognition smoothly',
+      'Initiative aligned with purpose naturally succeeds without struggle',
+      'Passionate action naturally serves your authentic goals perfectly',
+      'Courageous move feels natural and proves exactly right effortlessly',
+      'Your authentic assertion naturally creates positive change smoothly',
+      'Competitive effort naturally produces satisfying successful outcome',
+      'Energy naturally directed toward purpose accomplishes goals effortlessly',
+      'Authentic bold action naturally flows and succeeds beautifully',
+      'Opportunity: purposeful empowered action through natural authentic courageous grace'
+    ]
+  },
+
+  'Sun-Mars-Square': {
+    name: 'Sun Square Mars',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    aspectMeaning: 'Growth through friction between identity and action requiring conscious alignment! The Sun\'s ego clashes with Mars\'s drive, creating impulsive action contradicting purpose, ego battles, or frustrated assertion. Challenge: align passionate action with authentic purpose. Tendency: acting against values, purposeless aggression, frustrated ego. Crisis forces conscious purposeful action. Awareness transforms frustrated impulse into aligned empowered action. Growth through conscious integration.',
+    loveRelationships: 'Relationship friction through misaligned passion! Romance involves passionate behavior contradicting authentic needs, ego conflicts, or impulsive romantic action. Tendency: acting romantically against true desires. Challenge: align passion with authentic romantic self. Good time: consciously align romantic action with real needs, channel passion authentically. Crisis teaches purposeful authentic passion.',
+    familyHome: 'Family friction through misaligned action! Home involves family action contradicting family values, family ego battles, or impulsive family behavior. Tendency: family action against family authenticity. Challenge: align family action with family identity. Good time: consciously align family behavior with family values, channel family energy authentically. Crisis forces authentic family action.',
+    businessCareer: 'Professional friction through misaligned career action! Career involves professional moves contradicting professional values, career ego battles, or impulsive career behavior. Tendency: career action against professional authenticity. Challenge: align career action with professional identity. Good time: consciously align career moves with professional values. Crisis teaches authentic professional action.',
+    moneyFinances: 'Financial friction through misaligned money behavior! Money involves financial action contradicting financial values, money ego battles, or impulsive financial behavior. Tendency: financial action against financial authenticity. Challenge: align financial behavior with financial values. Good time: consciously align money action with financial truth. Crisis develops authentic financial action.',
+    predictions: [
+      'Impulsive action you align consciously with purpose produces success not regret',
+      'Your frustrated energy channeled toward authentic goals achieves breakthrough',
+      'Friction forces you to examine whether actions serve authentic purpose',
+      'Crisis of misalignment teaches importance of purposeful conscious action',
+      'You learn real power requires aligning action with authentic identity',
+      'Frustrated assertion redirected to authentic needs creates effective results',
+      'Conflict forces clarification of purpose guiding all action',
+      'Conscious alignment of passion with values transforms friction into power',
+      'Challenge teaches that effective action must serve authentic self',
+      'Opportunity: transform misaligned action into conscious purposeful empowered assertion'
+    ]
+  },
+
+  'Sun-Mars-Sextile': {
+    name: 'Sun Sextile Mars',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    aspectMeaning: 'Opportunity for empowerment through purposeful initiative! The Sun\'s identity harmonizes with Mars\'s action, creating potential for purposeful achievement, authentic assertion, empowered success IF you take action. Opportunities for courageous moves, purposeful action, authentic fighting appear - require initiative. Perfect time: pursue goals boldly, assert authentically, act courageously. Success through purposeful initiative. Passive wastes potential; active purposeful engagement creates empowerment.',
+    loveRelationships: 'Relationship opportunity for authentic passion through initiative! Potential: romantic empowerment, passionate connection, authentic desire expression IF you initiate. Perfect time: pursue romantic desires actively, express passion authentically, take courageous romantic action. Opportunity: romantic empowerment through authentic initiative IF engaged. Initiative creates passionate authentic connection.',
+    familyHome: 'Family opportunity for empowerment through courageous initiative! Potential: family strength, purposeful family action, authentic family leadership IF you initiate. Perfect time: lead family courageously, take purposeful family action, assert family needs authentically. Family receptive to authentic courageous initiatives IF presented. Initiative creates family empowerment.',
+    businessCareer: 'Professional opportunity for advancement through purposeful initiative! Potential: career growth, authentic professional assertion, purposeful competition IF you take action. Perfect time: pursue career goals actively, compete authentically, assert professional needs courageously. Recognition available IF you step forward purposefully. Initiative creates professional empowerment.',
+    moneyFinances: 'Financial opportunity for empowerment through purposeful initiative! Potential: financial growth, values-aligned action, authentic financial assertion IF you pursue actively. Perfect time: take financial action purposefully, pursue income courageously, assert financial needs authentically. Financial empowerment available through purposeful action. Initiative creates financial strength.',
+    predictions: [
+      'Opportunity for success appears - pursue it purposefully for empowered results',
+      'Your initiative to act authentically and courageously creates achievement',
+      'Chance to assert authentic needs succeeds IF pursued actively',
+      'Purposeful action you take courageously produces empowering results',
+      'Opportunity for empowerment appears - initiative required to actualize',
+      'Your courageous authentic action naturally attracts positive outcomes',
+      'Initiative aligned with purpose you take actively succeeds meaningfully',
+      'Assertion of authentic needs you make courageously improves situation',
+      'Your purposeful bold engagement creates beneficial empowering change',
+      'Opportunity: empowerment through purposeful authentic courageous bold initiative'
+    ]
+  },
+
+  // MERCURY-VENUS: Occurs frequently (multiple times per year)
+  // All 5 aspects possible
+
+  'Mercury-Venus-Conjunction': {
+    name: 'Mercury Conjunction Venus',
+    frequency: 'Occurs several times per year',
+    duration: '1 week',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Communication and love merge with graceful charm! Mercury\'s thinking combines with Venus\'s affection, creating charming communication, aesthetic thinking, and harmonious expression. Perfect time: diplomatic communication, aesthetic learning, charming expression, harmonious discussions. Words attract. Thinking beautifies. Excellent: romantic communication, artistic learning, diplomatic conversations, aesthetic decisions. Warning: avoid superficiality - seek substance with charm. Overall: charming graceful communication.',
+    loveRelationships: 'Relationship communication becomes charming and affectionate! Romance feels beautifully expressed, harmoniously discussed, charmingly communicated. Perfect time: romantic conversations, expressing love verbally, charming romantic communication, discussing relationship beautifully. Words of love flow naturally. Communication deepens romantic connection.',
+    familyHome: 'Family communication becomes harmonious and pleasant! Perfect time: diplomatic family discussions, expressing family love verbally, charming family communication, discussing family beautifully. Home conversations feel pleasant and harmonious. Good time: family aesthetic discussions, expressing family affection through words.',
+    businessCareer: 'Professional communication becomes diplomatic and pleasant! Excellent time: diplomatic professional discussions, aesthetic professional communication, charming professional expression, harmonious workplace communication. Professional words attract positive response. Good time: diplomatic negotiations, aesthetic presentations, harmonious professional relationships.',
+    moneyFinances: 'Financial thinking becomes values-based and pleasant! Good time: discussing finances diplomatically, thinking about financial values aesthetically, making pleasant financial decisions. Financial communication feels harmonious. Excellent: values-based financial thinking, pleasant money discussions, aesthetic financial choices.',
+    predictions: [
+      'Charming communication you offer attracts positive warm response',
+      'Your diplomatic words resolve potential conflict harmoniously',
+      'Romantic conversation flows beautifully and deepens connection',
+      'Aesthetic idea you express charmingly receives enthusiastic reception',
+      'Pleasant communication creates harmonious atmosphere benefiting everyone',
+      'Your words of appreciation strengthen relationships meaningfully',
+      'Diplomatic approach to difficult discussion produces peaceful resolution',
+      'Charming expression of needs attracts cooperative helpful response',
+      'Beautiful words you share touch hearts and create connection',
+      'Opportunity: harmonious connection through charming graceful diplomatic communication'
+    ]
+  },
+
+  'Mercury-Venus-Opposition': {
+    name: 'Mercury Opposition Venus',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1 week',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Tension between thinking and feeling requiring integration! Mercury\'s logic faces Venus\'s emotion, creating conflict between head and heart, analysis versus harmony. Challenge: honor rational thought AND emotional values. Risk: over-intellectualizing feelings, letting emotions cloud judgment. Resistance to feelings creates coldness; excessive emotion obscures thinking. Integration needed. Balance creates wise compassionate communication.',
+    loveRelationships: 'Relationship tension between thinking and feeling! Romance requires balancing rational analysis with emotional needs. Tendency: over-analyzing relationship or emotionally avoiding honest assessment. Challenge: think clearly about love while honoring feelings. Good time: integrate head and heart in relationship, balance romantic emotion with realistic thinking.',
+    familyHome: 'Family tension between logic and emotion! Home requires balancing rational family discussions with emotional family needs. Tendency: over-intellectualizing family or emotionally avoiding family reality. Challenge: think clearly about family while honoring family feelings. Good time: integrate family logic with family emotion, balance family sentiment with family reality.',
+    businessCareer: 'Professional tension between analysis and values! Career requires balancing rational professional decisions with professional values. Tendency: over-analyzing career or letting professional emotions cloud judgment. Challenge: think clearly professionally while honoring professional values. Good time: integrate career analysis with career values, balance professional logic with professional heart.',
+    moneyFinances: 'Financial tension between logic and values! Money requires balancing rational financial analysis with financial values. Tendency: over-analyzing finances or letting money emotions cloud judgment. Challenge: think clearly about money while honoring financial values. Good time: integrate financial logic with financial values, balance money analysis with money heart.',
+    predictions: [
+      'Conflict between head and heart forces wise integration of both',
+      'Tension reveals need to balance rational thinking with emotional truth',
+      'Challenge to communicate both logically and compassionately produces maturity',
+      'Your integration of thinking and feeling creates wise balanced decisions',
+      'Conflict forces clarification of values guiding rational choices',
+      'Balance between analysis and emotion creates effective compassionate communication',
+      'Tension resolved through honoring both rational truth and emotional needs',
+      'You learn real wisdom requires both clear thinking and emotional intelligence',
+      'Challenge produces integration of logical analysis with compassionate values',
+      'Opportunity: integrate rational thinking with emotional values through conscious balance'
+    ]
+  },
+
+  'Mercury-Venus-Trine': {
+    name: 'Mercury Trine Venus',
+    frequency: 'Occurs 1-2 times per year',
+    duration: '1 week',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Communication and affection flow naturally with graceful ease! Mercury\'s mind harmonizes beautifully with Venus\'s love, creating effortless charming communication, natural aesthetic thinking, and graceful harmonious expression. Perfect time: diplomatic communication flowing smoothly, romantic conversations succeeding naturally, aesthetic learning flowing effortlessly. Charm and intelligence unite perfectly. Harmony natural. Excellent: romantic expression, artistic communication, diplomatic success. Charm feels authentic. Beauty expressed gracefully.',
+    loveRelationships: 'Relationship communication flows naturally with affectionate grace! Romance feels beautifully expressed naturally, harmoniously discussed effortlessly. Perfect time: romantic conversations flowing smoothly, expressing love verbally naturally, charming communication succeeding effortlessly. Words and feelings align perfectly. Romantic communication deepens connection naturally and beautifully.',
+    familyHome: 'Family communication flows naturally with harmonious ease! Perfect time: diplomatic family discussions flowing smoothly, expressing family affection verbally naturally, pleasant family communication succeeding effortlessly. Home conversations feel naturally harmonious. Family words and family feelings unite beautifully creating natural family harmony.',
+    businessCareer: 'Professional communication flows naturally with diplomatic grace! Excellent time: diplomatic professional discussions flowing smoothly, charming professional expression succeeding naturally, harmonious workplace communication flowing effortlessly. Professional charm and professional intelligence unite naturally. Diplomatic professional success flows naturally and creates positive professional relationships.',
+    moneyFinances: 'Financial thinking flows naturally with values-based wisdom! Good time: discussing finances diplomatically flowing smoothly, values-based financial thinking succeeding naturally, pleasant financial decisions flowing effortlessly. Financial logic and financial values unite naturally. Values-based financial choices flow naturally creating financial harmony.',
+    predictions: [
+      'Charming communication flows naturally and attracts positive response effortlessly',
+      'Your naturally diplomatic words create harmony smoothly and effectively',
+      'Romantic conversation flows beautifully naturally and deepens connection effortlessly',
+      'Aesthetic idea naturally expressed resonates widely and succeeds smoothly',
+      'Pleasant natural communication creates harmonious beneficial atmosphere effortlessly',
+      'Your sincere appreciation naturally strengthens all relationships beautifully',
+      'Diplomatic approach naturally resolves situation peacefully and effectively',
+      'Charming authentic expression naturally attracts cooperative response',
+      'Beautiful heartfelt words naturally touch hearts and create deep connection',
+      'Opportunity: harmonious connection through natural graceful charming authentic communication'
+    ]
+  },
+
+  'Mercury-Venus-Square': {
+    name: 'Mercury Square Venus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1 week',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Growth through friction between thinking and values requiring conscious integration! Mercury\'s logic clashes with Venus\'s emotion, creating superficial charm, intellectualized feelings, or emotionalized thinking. Challenge: align thinking with values consciously. Tendency: saying pleasing things without substance, thinking overriding feelings. Crisis forces authentic values-based communication. Awareness transforms superficial charm into authentic graceful communication. Growth through conscious integration.',
+    loveRelationships: 'Relationship friction through superficial or conflicted communication! Romance involves saying pleasing things without substance, over-intellectualizing feelings, or emotional thinking. Tendency: romantic communication lacking authentic depth. Challenge: communicate both charmingly and authentically. Good time: consciously align romantic words with genuine feelings, balance charm with substance. Crisis teaches authentic charming communication.',
+    familyHome: 'Family friction through superficial or conflicted family communication! Home involves pleasing family communication lacking substance, intellectualized family feelings, or emotional family thinking. Tendency: family words not matching family truth. Challenge: communicate both diplomatically and authentically with family. Good time: consciously align family words with genuine family feelings. Crisis forces authentic family communication.',
+    businessCareer: 'Professional friction through superficial or conflicted professional communication! Career involves pleasing professional communication lacking substance, intellectualized professional values, or emotional professional thinking. Tendency: professional charm without authentic backing. Challenge: communicate both diplomatically and authentically professionally. Good time: consciously align professional words with genuine professional values. Crisis teaches authentic professional communication.',
+    moneyFinances: 'Financial friction through superficial or conflicted financial thinking! Money involves pleasing financial words lacking substance, intellectualized financial values, or emotional financial thinking. Tendency: financial communication not matching financial reality. Challenge: think about money both pleasantly and authentically. Good time: consciously align financial thinking with genuine financial values. Crisis develops authentic financial communication.',
+    predictions: [
+      'Superficial charm you deepen consciously with substance creates real connection',
+      'Conflict between pleasing words and authentic truth forces genuine communication',
+      'Tendency to intellectualize feelings you address creates authentic emotional expression',
+      'Crisis of superficiality teaches importance of aligning words with genuine values',
+      'You learn real charm requires authentic substance not just pleasant surface',
+      'Friction forces examination of whether communication truly serves values',
+      'Challenge to speak both pleasantly and truthfully produces mature authentic expression',
+      'Conscious integration of charm with authenticity creates effective graceful communication',
+      'You discover that real beauty requires genuine depth not just surface appeal',
+      'Opportunity: transform superficial charm into authentic graceful values-based communication'
+    ]
+  },
+
+  'Mercury-Venus-Sextile': {
+    name: 'Mercury Sextile Venus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1 week',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    aspectMeaning: 'Opportunity for harmony through charming initiative! Mercury\'s thinking harmonizes with Venus\'s affection, creating potential for diplomatic success, romantic communication, aesthetic expression IF you take action. Opportunities for charming communication, romantic conversations, aesthetic learning appear - require initiative. Perfect time: communicate charmingly actively, express affection verbally, learn aesthetically. Success through graceful initiative. Passive wastes potential; active charming engagement creates harmony.',
+    loveRelationships: 'Relationship opportunity for romantic communication through initiative! Potential: romantic connection, affectionate expression, charming communication IF you initiate. Perfect time: start romantic conversation actively, express affection verbally, communicate charmingly. Opportunity: romantic deepening through charming communication IF engaged. Initiative creates romantic harmony.',
+    familyHome: 'Family opportunity for harmony through diplomatic initiative! Potential: family harmony, pleasant family communication, diplomatic family resolution IF you initiate. Perfect time: start diplomatic family conversation actively, express family affection verbally, communicate family charm. Family receptive to pleasant communication IF presented. Initiative creates family harmony.',
+    businessCareer: 'Professional opportunity for success through diplomatic initiative! Potential: professional harmony, diplomatic success, charming professional communication IF you take action. Perfect time: communicate professionally and charmingly actively, negotiate diplomatically, express professional values pleasantly. Recognition available IF you step forward gracefully. Initiative creates professional harmony.',
+    moneyFinances: 'Financial opportunity for harmony through values-based initiative! Potential: financial harmony, values-aligned financial choices, pleasant financial communication IF you pursue actively. Perfect time: discuss finances diplomatically actively, make values-based financial choices, think about money pleasantly yet realistically. Financial harmony available through conscious action. Initiative creates financial balance.',
+    predictions: [
+      'Communication opportunity appears - engage charmingly actively for harmonious results',
+      'Your initiative to express affection verbally strengthens connection meaningfully',
+      'Chance for romantic conversation succeeds beautifully IF pursued actively',
+      'Diplomatic initiative you take actively creates harmony and resolves tension',
+      'Opportunity for aesthetic learning appears - initiative required to engage',
+      'Your charming active communication naturally attracts positive cooperative response',
+      'Romantic words you express actively deepen connection and create joy',
+      'Initiative to communicate values clearly creates beneficial understanding',
+      'Your graceful diplomatic engagement actively pursued creates pleasant outcomes',
+      'Opportunity: harmony and connection through charming graceful diplomatic active initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MERCURY-MARS ASPECTS (5 aspects)
+  // ============================================================================
+
+  'Mercury-Mars-Conjunction': {
+    name: 'Mercury Conjunction Mars',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    aspectMeaning: 'Sharp decisive assertive communication! Mercury\'s thinking merges with Mars\'s action, creating direct forceful expression, quick decisions, mental energy. Perfect time for decisive communication, assertive thinking, bold learning, strategic action. Words become weapons or catalysts. Mental sharpness and quick wit peak. Debates, negotiations, assertive expression favored. Speak your mind boldly. Think-then-act becomes think-and-act simultaneously. Annual boost of mental warrior energy.',
+    loveRelationships: 'Direct passionate communication in love! Perfect time to speak desires directly, assert relationship needs boldly, have passionate discussions. Say what you want clearly and courageously. Good for clearing air through honest assertive dialogue. Romantic debates or passionate conversations likely. Express attraction directly. Mental chemistry and passionate communication merge. Potential for sharp words - channel energy constructively.',
+    familyHome: 'Assertive family communication and decisive home action! Perfect time for direct family discussions, assert family boundaries, make quick home decisions. Good for physically active home projects requiring mental planning and energetic execution. Family debates possible - stay constructive. Defend family assertively if needed. Quick decisive action on home matters favored. Mental energy directed toward domestic improvements.',
+    businessCareer: 'Sharp professional communication and strategic action! Excellent time for assertive negotiations, quick professional decisions, bold presentations, strategic planning with immediate action. Your words carry force and conviction. Good for competitive situations, debates, persuasive communication, decisive leadership. Mental sharpness gives professional edge. Act on ideas immediately. Think strategically, execute boldly.',
+    moneyFinances: 'Decisive financial communication and bold money action! Perfect time for assertive financial negotiations, quick financial decisions, bold money moves based on sharp analysis. Good for discussing finances directly, defending financial interests, strategic financial planning with immediate execution. Mental analysis meets action orientation - research then act decisively. Competitive financial situations favored.',
+    predictions: [
+      'Your direct assertive communication cuts through confusion and creates clarity',
+      'Quick decisive action based on sharp mental analysis brings success',
+      'Bold idea you express forcefully receives strong positive response',
+      'Strategic plan you execute energetically produces tangible results quickly',
+      'Your mental sharpness and quick wit give you competitive advantage today',
+      'Assertive negotiation or direct communication achieves desired outcome',
+      'Passionate discussion or debate you engage in clarifies important issue',
+      'Quick decision you make boldly proves correct and moves things forward',
+      'Your ability to think strategically and act decisively creates opportunity',
+      'Words spoken with conviction and courage catalyze important positive change'
+    ]
+  },
+
+  'Mercury-Mars-Opposition': {
+    name: 'Mercury Opposition Mars',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    aspectMeaning: 'Tension between thinking and acting requiring integration! Mercury\'s communication opposes Mars\'s assertion, creating potential for argumentative communication, impulsive words, or mental-action conflict. Challenge: integrate thoughtful communication WITH decisive action. Avoid: speaking without thinking, arguing aggressively, mental impatience. Opportunity: find balance between careful thinking and bold action, diplomatic assertion, strategic courage. Can manifest as debates, disagreements, or hasty communication requiring conscious restraint and integration.',
+    loveRelationships: 'Relationship communication challenges requiring balance! Tension between what you think and what you assert in love. Potential for arguments, harsh words, or impulsive communication. Challenge: speak your truth assertively BUT thoughtfully. Listen actively while also expressing needs. Avoid reactive arguing. Opportunity: integrate honest direct communication with diplomatic consideration. Passionate discussions can clear air IF managed consciously.',
+    familyHome: 'Family communication tension requiring diplomatic assertion! Potential for family arguments, disagreements, or communication conflicts. Challenge: assert family needs clearly WITHOUT aggressive communication. Think before speaking sharply. Opportunity: find balance between direct honesty and diplomatic consideration. Family discussions may be tense but can resolve issues if approached with conscious integration of clarity and sensitivity.',
+    businessCareer: 'Professional communication challenges requiring strategic balance! Tension between thoughtful analysis and decisive action at work. Potential for professional disagreements, hasty decisions, or argumentative communication. Challenge: integrate strategic thinking WITH bold action. Avoid: impulsive professional communication, aggressive debates. Opportunity: balance assertive leadership with thoughtful consideration. Competitive situations require diplomatic strength.',
+    moneyFinances: 'Financial communication tension requiring careful assertion! Potential for impulsive financial decisions or argumentative money discussions. Challenge: think carefully before making bold financial moves. Balance analysis with action. Avoid: hasty financial decisions, aggressive financial negotiations. Opportunity: integrate strategic financial thinking with decisive action through conscious restraint. Financial disagreements possible - stay diplomatic but clear.',
+    predictions: [
+      'Communication challenge requires you to think carefully before speaking assertively',
+      'Potential argument or disagreement becomes opportunity for conscious integration',
+      'Your ability to balance direct honesty with diplomatic sensitivity resolves tension',
+      'Impulsive urge to speak sharply - pause, think, then express assertively but kindly',
+      'Disagreement or debate tests your capacity for strategic yet bold communication',
+      'Challenge to act quickly balanced by need to think carefully creates wise decision',
+      'Tension between your thoughts and actions requires conscious alignment',
+      'Opportunity to integrate passionate expression with thoughtful consideration',
+      'Communication conflict resolved through diplomatic assertion and active listening',
+      'Balance sharp mental analysis with decisive action through conscious integration'
+    ]
+  },
+
+  'Mercury-Mars-Trine': {
+    name: 'Mercury Trine Mars',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    aspectMeaning: 'Effortless sharp decisive communication and strategic action! Mercury\'s thinking flows naturally with Mars\'s energy, creating natural assertive eloquence, quick strategic decisions, productive mental-physical coordination. Perfect time: express ideas boldly and clearly, make quick confident decisions, engage assertive communication, execute strategic plans. Mental sharpness and action drive harmonize beautifully. Debates, negotiations, learning-by-doing all flow naturally. Words translate to action seamlessly. Natural confidence in communication.',
+    loveRelationships: 'Natural passionate assertive love communication! Romantic conversations flow with passion and clarity. Perfect time: express desires directly and naturally, have honest passionate discussions, say what you want clearly. Mental chemistry and physical attraction harmonize. Romantic communication feels confident and clear. Good for playful debates, passionate dialogue, assertive romantic expression. Attraction communicated naturally and received well.',
+    familyHome: 'Natural assertive family communication and energetic home action! Family discussions flow productively and directly. Perfect time: address family matters assertively yet naturally, execute home projects combining planning and action, have direct family conversations. Home improvements requiring mental planning and physical energy flow smoothly. Family appreciates your clear decisive communication.',
+    businessCareer: 'Natural professional assertiveness and strategic execution! Professional communication flows with confidence and force. Excellent time: present ideas boldly and clearly, negotiate assertively, make quick strategic decisions, lead decisively. Mental sharpness and action orientation combine naturally. Competitive situations handled with natural strategic confidence. Ideas translate to action effortlessly. Professional debates or presentations flow brilliantly.',
+    moneyFinances: 'Natural financial assertiveness and decisive money action! Financial decisions made quickly and confidently based on sharp analysis. Perfect time: negotiate financial matters assertively, make bold financial moves strategically, discuss money directly and clearly. Research and action harmonize - analyze then execute naturally. Financial competitive situations handled with strategic confidence.',
+    predictions: [
+      'Your assertive clear communication naturally achieves desired outcome effortlessly',
+      'Strategic decision you make quickly and confidently proves highly successful',
+      'Bold idea you express with natural conviction receives enthusiastic support',
+      'Mental sharpness and action drive combine to create productive achievement',
+      'Negotiation or debate you engage in flows naturally toward favorable result',
+      'Your ability to think strategically and act decisively creates smooth progress',
+      'Passionate communication you express naturally deepens connection meaningfully',
+      'Quick confident action based on sharp thinking produces tangible success',
+      'Your natural assertive eloquence inspires and motivates others effectively',
+      'Perfect alignment of thinking and action creates effortless productive flow'
+    ]
+  },
+
+  'Mercury-Mars-Square': {
+    name: 'Mercury Square Mars',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    aspectMeaning: 'Growth through communication challenges and impulsive friction! Mercury\'s thinking squares Mars\'s action, creating argumentative tendencies, hasty words, mental impatience, or impulsive communication. Challenge forces growth: learn conscious communication restraint, strategic assertiveness, thoughtful action. Friction reveals: where you speak without thinking, argue reactively, act impulsively. Growth opportunity: develop diplomatic assertion, strategic courage, conscious direct communication. Can produce sharp insights THROUGH challenging debates or conflicts.',
+    loveRelationships: 'Love communication challenges forcing growth in assertion! Friction: impulsive words, arguments, harsh communication in relationships. Challenge reveals: reactive communication patterns, where you need diplomatic assertiveness. Growth: learn to express desires directly BUT thoughtfully, assert needs without aggression, communicate passionately yet consciously. Arguments or disagreements FORCE you to develop better communication courage and sensitivity integration.',
+    familyHome: 'Family communication friction forcing growth in clarity! Challenge: family arguments, disagreements, impulsive family communication. Friction reveals: where family communication needs more consciousness, assertion requires more diplomacy. Growth: develop ability to speak family truth boldly yet kindly, assert boundaries clearly yet sensitively. Family conflicts FORCE development of diplomatic courage and conscious direct expression.',
+    businessCareer: 'Professional communication challenges forcing strategic growth! Friction: hasty professional decisions, argumentative workplace communication, impulsive career moves. Challenge reveals: where professional assertion needs more strategy, communication needs more restraint. Growth: develop diplomatic professional assertiveness, strategic decisive leadership, conscious bold communication. Professional conflicts or debates FORCE development of integrated thinking-action approach.',
+    moneyFinances: 'Financial communication friction forcing growth in decision-making! Challenge: impulsive financial decisions, argumentative money discussions, hasty financial actions. Friction reveals: where financial thinking needs more strategic action, financial assertion needs more analysis. Growth: develop ability to make bold financial moves thoughtfully, communicate financial needs assertively yet diplomatically. Financial challenges FORCE integration of analysis and decisive action.',
+    predictions: [
+      'Communication challenge forces you to develop more conscious assertive expression',
+      'Impulsive urge to speak sharply teaches importance of thinking before acting',
+      'Argument or disagreement reveals pattern requiring diplomatic assertion growth',
+      'Hasty decision impulse forces you to integrate careful thinking with bold action',
+      'Friction in communication shows where you need strategic courage development',
+      'Challenge to assert yourself consciously rather than reactively creates growth',
+      'Debate or conflict forces you to balance passionate expression with consideration',
+      'Impulsive communication pattern revealed - opportunity for conscious restraint',
+      'Professional or personal friction forces integration of assertion and diplomacy',
+      'Growth through learning to speak boldly yet thoughtfully, act decisively yet wisely'
+    ]
+  },
+
+  'Mercury-Mars-Sextile': {
+    name: 'Mercury Sextile Mars',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    aspectMeaning: 'Opportunity for success through assertive communicative initiative! Mercury\'s thinking harmonizes with Mars\'s action, creating potential for sharp strategic communication, decisive action, productive mental energy IF you take initiative. Opportunities for assertive expression, quick decisions, strategic execution appear - require active engagement. Perfect time: communicate boldly actively, make quick decisions deliberately, act on ideas strategically. Success through conscious assertive initiative. Passive wastes potential; active strategic communication creates results.',
+    loveRelationships: 'Relationship opportunity for passionate communication through initiative! Potential: passionate romantic dialogue, assertive desire expression, clear relationship communication IF you initiate. Perfect time: express desires directly and actively, start passionate conversations deliberately, communicate attraction assertively. Opportunity: romantic deepening through bold honest communication IF pursued actively. Initiative creates passionate connection.',
+    familyHome: 'Family opportunity for clear communication through assertive initiative! Potential: productive family discussions, decisive home action, assertive family boundary-setting IF you take action. Perfect time: address family matters directly and actively, execute home projects energetically, communicate family needs assertively. Family receptive to clear direct communication IF initiated. Active engagement creates family progress.',
+    businessCareer: 'Professional opportunity for success through strategic initiative! Potential: professional advancement, successful negotiations, decisive career action IF you step forward assertively. Perfect time: present ideas boldly and actively, negotiate strategically, make career decisions decisively, lead assertively. Recognition and success available through conscious strategic action. Initiative creates professional advancement.',
+    moneyFinances: 'Financial opportunity for success through decisive initiative! Potential: favorable financial negotiations, smart bold money moves, successful financial communication IF pursued actively. Perfect time: discuss finances assertively and actively, make strategic financial decisions deliberately, act on financial opportunities boldly. Financial success available through conscious decisive action. Initiative creates financial progress.',
+    predictions: [
+      'Communication opportunity appears - engage assertively and actively for strong results',
+      'Your initiative to express ideas boldly creates favorable professional response',
+      'Chance for strategic decisive action succeeds powerfully IF pursued actively',
+      'Assertive initiative you take actively advances goals and creates progress',
+      'Opportunity for passionate communication appears - initiative required to engage',
+      'Your bold active strategic communication naturally attracts positive response',
+      'Direct words you express actively with confidence create desired outcome',
+      'Initiative to act decisively on sharp mental insights creates tangible success',
+      'Your assertive engagement actively pursued creates productive momentum',
+      'Opportunity: achievement through sharp strategic assertive bold active initiative'
+    ]
   }
 
 };
