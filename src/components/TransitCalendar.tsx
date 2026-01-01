@@ -625,6 +625,29 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
       return;
     }
 
+    // Handle eclipse aspects (e.g., Solar Eclipse square Uranus)
+    if (aspect.isEclipseAspect) {
+      try {
+        const { getEclipseAspectInterpretation } =
+          await import('../utils/eclipseAspectInterpretations');
+
+        interpretation = getEclipseAspectInterpretation(aspect.planet2, aspect.aspect);
+        console.log('🌑 Eclipse aspect interpretation found:', interpretation ? 'Yes' : 'No',
+                    'Planet:', aspect.planet2, 'Aspect:', aspect.aspect);
+      } catch (error) {
+        console.error('Error loading eclipse aspect interpretation:', error);
+      }
+
+      setSelectedAspect({
+        planet1: aspect.planet1,
+        planet2: aspect.planet2,
+        aspect: aspect.aspect,
+        orb: aspect.orb,
+        interpretation
+      });
+      return;
+    }
+
     // Handle regular transit-to-transit aspects
     const maxOrb = getTransitOrb(aspect.planet1, aspect.planet2, aspect.aspect);
     const currentOrb = parseFloat(aspect.orb);
@@ -912,7 +935,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                             borderRadius: '3px',
                             borderLeft: `3px solid ${aspect.color}`,
                             fontSize: '10px',
-                            cursor: aspect.isEclipseAspect ? 'default' : 'pointer',
+                            cursor: 'pointer',
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -1021,7 +1044,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
 
         {/* Tip */}
         <div style={{ marginTop: '15px', padding: '10px', background: '#e8f4ff', borderRadius: '6px', fontSize: '12px', color: '#2c5aa0' }}>
-          💡 <strong>Tip:</strong> Click on aspects, lunations (New/Full Moons/Eclipses), and ingresses to view detailed interpretations. Eclipse Aspects are informational only.
+          💡 <strong>Tip:</strong> Click on aspects, lunations (New/Full Moons/Eclipses), eclipse aspects (e.g., Solar Eclipse square Uranus), and ingresses to view detailed interpretations.
         </div>
       </div>
 

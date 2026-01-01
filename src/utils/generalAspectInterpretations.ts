@@ -6322,6 +6322,32 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  'Sun-South Node-Opposition': {
+    name: 'Sun Opposition South Node',
+    frequency: 'Occurs once every 19 years (same as Sun-North Node-Conjunction)',
+    duration: '2-3 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL IDENTITY DESTINY ALIGNMENT! (This is the same as Sun-North Node-Conjunction) Your core self opposes old patterns while perfectly aligning with soul purpose. Who you ARE merges with karmic mission - your identity, vitality, creative expression meant to serve destiny. Past comfortable identity fully releases as NEW purposeful authentic self emerges. You become instrument of soul evolution. Life purpose clarity flows naturally now.',
+    loveRelationships: 'Destined love aligned with authentic purposeful self! Romantic expression moves AWAY from familiar patterns TOWARD purposeful authentic connection. Love from destiny not comfort, be who you\'re meant to be IN relationships. Love transforms - old comfortable romantic identity releases, NEW purposeful love self emerges. Fated romantic connections happen now - they serve your karmic mission.',
+    familyHome: 'Family identity aligned with life purpose! Home self-expression moves AWAY from old patterns TOWARD purposeful family authentic self. Who you are IN family serves collective destiny, domestic identity transforms beyond comfortable limitation. Your presence IN family becomes purposeful - old familiar home identity releases, NEW destiny-aligned family self emerges. Home environment shifts through purposeful authentic self-expression.',
+    businessCareer: 'MAJOR CAREER IDENTITY DESTINY ALIGNMENT! Professional self and work identity perfectly aligned with karmic mission. Career expression moves AWAY from comfortable work identity TOWARD purposeful destined authentic professional self. Your professional presence transforms - be who you\'re meant to be in destined work, shine beyond familiar career patterns. Fated career opportunities through purposeful authentic professional identity.',
+    moneyFinances: 'Financial identity aligned with purposeful prosperity! Money self-expression moves AWAY from comfortable patterns TOWARD destiny-aligned abundance identity. Financial presence serves soul purpose - be authentic about money, shine through prosperity beyond familiar limitation. Old comfortable financial identity releases - NEW purposeful money self emerges naturally. Financial clarity through destiny-aligned authentic self-expression.',
+    predictions: [
+      'Major identity clarity about life purpose - you SEE who you\'re meant to become',
+      'Core self becomes instrument of soul mission - shine purposeful authentic light naturally',
+      'Fated recognition and opportunities happen now - they reveal or advance your destiny',
+      'Past comfortable identity fully releases - NEW purposeful authentic self emerges',
+      'Your true essence aligned with soul purpose - BE who you\'re meant to express',
+      'Vitality and life force directed toward destined path - energy serves purpose',
+      'Professional identity breakthrough - shine your light in career aligned with destiny',
+      'Relationship identity transforms - love self-expression serves soul evolution purpose',
+      'Creative gifts and self-expression talents now expressed IN SERVICE of karmic mission',
+      'Clear purposeful authentic identity replaces comfortable limited self - evolution complete'
+    ]
+  },
+
+
   'Sun-South Node-Square': {
     name: 'Sun Square South Node',
     frequency: 'Occurs twice every 19 years',
