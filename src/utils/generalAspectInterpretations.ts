@@ -4973,6 +4973,775 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Your assertive engagement actively pursued creates productive momentum',
       'Opportunity: achievement through sharp strategic assertive bold active initiative'
     ]
+  },
+
+  // ============================================================================
+  // PERSONAL PLANETS TO NODES ASPECTS
+  // Lunar Nodes represent karmic direction, life purpose, soul evolution
+  // North Node = destiny, growth edge, what you're meant to develop
+  // South Node = past patterns, comfort zone, what to release
+  // ============================================================================
+
+  // SUN-NORTH NODE ASPECTS (4 aspects)
+
+  'Sun-North Node-Conjunction': {
+    name: 'Sun Conjunction North Node',
+    frequency: 'Occurs once every 19 years (nodal cycle)',
+    duration: '2-3 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL DESTINY ALIGNMENT! Your core identity merges with your soul\'s purpose. This is a rare 19-year cycle where who you are becoming aligns perfectly with your karmic mission. Your authentic self-expression IS your destiny path. Perfect time to step fully into your life purpose, embrace your destined role, express your unique identity courageously. What feels most authentically YOU is exactly what the universe needs from you. Major soul mission activation. Your light serves the collective evolution.',
+    loveRelationships: 'Destined love connections aligned with soul purpose! Relationships now serve your highest evolution. People drawn to you are karmic allies supporting your mission. Perfect time to attract or deepen partnerships aligned with your authentic purpose. Love relationships become vehicles for soul growth. Your heart\'s desires align with destiny. Fated romantic encounters possible. Express your authentic self in love - this attracts destined connections.',
+    familyHome: 'Family and home aligned with life purpose! Your domestic life supports your soul mission. Perfect time to create home environment that reflects your authentic identity and supports your destiny. Family relationships evolve to support your growth. Home becomes base for purposeful work. Destined family developments or home changes that align with your path. Your true self can shine in family context.',
+    businessCareer: 'MAJOR CAREER DESTINY ALIGNMENT! Professional path merges with soul purpose. This is your time to step into your destined career role, express leadership authentically, pursue work that reflects your true identity. Career opportunities now are fated - they serve your evolution and the collective. Your unique gifts are needed professionally. Perfect time for major career moves toward authentic purposeful work. Recognition for being truly yourself.',
+    moneyFinances: 'Financial abundance through authentic purposeful expression! Money flows when you express your true identity and serve your soul mission. Perfect time to monetize your unique gifts, earn income aligned with your purpose, invest in your destined path. Financial opportunities are karmically aligned - they support your evolution. Prosperity through authenticity and purposeful action. Your true value recognized materially.',
+    predictions: [
+      'Major life purpose clarity emerges - you see your destined path clearly now',
+      'Fated opportunity perfectly aligned with your authentic identity appears',
+      'Person enters your life who is karmic ally supporting your soul mission',
+      'Career or creative opportunity that IS your destiny becomes available',
+      'Your authentic self-expression attracts recognition and destined opportunities',
+      'Decision to step fully into your purpose creates powerful positive momentum',
+      'What you do authentically and joyfully turns out to be exactly what\'s needed',
+      'Destined role or position opens up that perfectly fits your unique identity',
+      'Your light shining authentically catalyzes others\' awakening to their purpose',
+      'Rare alignment of who you are with what you\'re meant to do - embrace it fully'
+    ]
+  },
+
+  'Sun-North Node-Sextile': {
+    name: 'Sun Sextile North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Opportunity to align identity with destiny through initiative! Your authentic self-expression harmonizes with your soul\'s growth direction, creating potential for purposeful action, destined connections, meaningful progress IF you take action. Opportunities to step toward your life purpose, express your true self in service of growth, meet karmic allies appear - require initiative. Perfect time: actively pursue purpose-aligned goals, express authentic identity deliberately, take steps toward destiny. Success through purposeful initiative.',
+    loveRelationships: 'Relationship opportunity aligned with soul growth through initiative! Potential for destined romantic connection, purposeful relationship development, love that supports evolution IF you initiate. Perfect time to express authentic self in love actively, pursue relationships aligned with your path, connect with potential karmic partners. Romantic opportunities serve your growth IF pursued actively. Initiative creates purposeful connection.',
+    familyHome: 'Family opportunity supporting soul purpose through initiative! Potential for home improvements aligned with growth, family connections supporting your path, domestic changes serving evolution IF you take action. Perfect time to create home environment supporting your purpose actively, strengthen family bonds that aid your mission. Family receptive to your authentic expression IF initiated.',
+    businessCareer: 'Career opportunity aligned with life purpose through initiative! Potential for professional advancement serving your destiny, purposeful work opportunities, career moves supporting soul growth IF you step forward. Perfect time to pursue career goals aligned with authentic identity actively, express unique professional gifts, move toward destined career path. Purpose-aligned success available through initiative.',
+    moneyFinances: 'Financial opportunity through purpose-aligned initiative! Potential for income from authentic gifts, investments in your growth path, money flow supporting destiny IF pursued actively. Perfect time to monetize unique talents actively, make financial choices aligned with purpose, invest in your evolution. Prosperity through purposeful initiative.',
+    predictions: [
+      'Opportunity aligned with your life purpose appears - initiative required to engage',
+      'Your authentic expression actively pursued attracts destined opportunity',
+      'Chance to meet karmic ally or purposeful connection succeeds IF initiated actively',
+      'Career move toward authentic purposeful work available through your initiative',
+      'Opportunity to develop soul-level gift appears - requires active engagement',
+      'Your purposeful initiative actively pursued creates meaningful progress',
+      'Authentic self-expression you share actively attracts supportive response',
+      'Initiative to align daily life with higher purpose creates beneficial change',
+      'Your active step toward destiny opens doors and attracts allies',
+      'Opportunity: soul growth and purposeful progress through authentic initiative'
+    ]
+  },
+
+  'Sun-North Node-Trine': {
+    name: 'Sun Trine North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Effortless alignment of identity with destiny! Your authentic self-expression flows naturally toward your soul\'s purpose. Perfect time to shine your light authentically, pursue purpose-aligned goals, express your unique identity - it all flows toward growth and destiny naturally. What feels most joyful and authentic IS what serves your evolution. Creative self-expression supports soul mission. Leadership and visibility align with karmic path. Natural purposeful confidence and destined recognition.',
+    loveRelationships: 'Natural love connections supporting soul growth! Romantic relationships flow toward purposeful authentic connection. Perfect time to express your true self in love naturally, attract or deepen relationships aligned with your evolution, connect authentically. Love feels purposeful and growth-supporting. Romantic authenticity serves your destiny. Partnerships naturally support your mission. Heart and purpose aligned beautifully.',
+    familyHome: 'Natural family harmony supporting life purpose! Home and family life flows in support of your soul growth. Perfect time to express authentic self in family naturally, create domestic environment supporting your path, strengthen family bonds that aid your mission. Family appreciates and supports your true identity. Home becomes natural base for purposeful living.',
+    businessCareer: 'Natural career success through authentic purposeful expression! Professional path flows toward destiny naturally. Excellent time to express unique professional gifts naturally, pursue purpose-aligned career goals, lead authentically. Career opportunities naturally align with soul mission. Your authentic professional identity serves your evolution. Recognition flows naturally when you\'re truly yourself. Purposeful work feels effortless.',
+    moneyFinances: 'Natural prosperity through authentic purposeful living! Money flows naturally when you express your true identity and live your purpose. Perfect time to earn from authentic gifts naturally, make purpose-aligned financial choices, invest in your growth path. Financial flow supports your evolution naturally. Abundance through being authentically yourself.',
+    predictions: [
+      'Your authentic self-expression naturally attracts purposeful opportunity effortlessly',
+      'What you do joyfully and authentically naturally serves your soul mission',
+      'Karmic ally or destined connection appears naturally in your life',
+      'Career success flows naturally when you express your unique authentic gifts',
+      'Your natural confidence and authentic presence create purposeful recognition',
+      'Purpose-aligned opportunity flows to you effortlessly through authentic being',
+      'What feels most natural and joyful turns out to support your destiny',
+      'Your authentic leadership naturally inspires and serves collective evolution',
+      'Financial abundance flows naturally through purposeful authentic expression',
+      'Perfect natural alignment of who you are with what you\'re meant to become'
+    ]
+  },
+
+  'Sun-South Node-Trine': {
+    name: 'Sun Trine South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Natural access to past life gifts and familiar patterns! Your identity easily taps into old soul wisdom and comfortable patterns. While this feels natural and easy, be mindful: South Node comfort can keep you from growth. Opportunity: Use past gifts IN SERVICE of North Node growth, not as escape from evolution. You have natural talents from the past - apply them to your destined future. Comfort and ease available, but avoid stagnation. Integrate past wisdom while moving forward.',
+    loveRelationships: 'Familiar comfortable love patterns activated! Romantic relationships feel easy and natural, possibly too comfortable. Opportunity: Appreciate familiar connections while ensuring they support growth, not stagnation. Past life romantic patterns surface - use wisdom gained but don\'t repeat limiting patterns. Comfortable love is fine IF it serves evolution. Balance ease with purposeful growth in relationships.',
+    familyHome: 'Comfortable familiar family and home patterns! Domestic life feels easy and natural. Opportunity: Enjoy home comfort while ensuring it supports forward growth, not regression. Past family patterns surface - take the wisdom, release the limitation. Create home that honors past while supporting future. Comfort zone in family is fine IF it doesn\'t prevent soul growth.',
+    businessCareer: 'Easy access to familiar professional skills and patterns! Career feels comfortable using old talents. Opportunity: Apply past life professional gifts to NEW growth-edge work, not just comfortable repetition. Your familiar skills are valuable - use them to BUILD toward destiny, not stay stuck. Professional ease is gift IF directed toward evolution. Balance mastery with growth.',
+    moneyFinances: 'Comfortable familiar financial patterns and easy income! Money flows through familiar comfortable channels. Opportunity: Use past financial wisdom to SUPPORT purpose-aligned growth, not maintain comfortable limitation. Financial ease is fine IF it serves evolution. Avoid letting comfortable income prevent purposeful financial risk. Past money skills serve future growth.',
+    predictions: [
+      'Past life talent or comfortable skill becomes available - use it to serve growth',
+      'Familiar pattern resurfaces - take the wisdom, release the limitation',
+      'Easy comfortable opportunity appears - ensure it supports evolution, not stagnation',
+      'Your natural gifts from the past can BUILD your destined future IF applied wisely',
+      'Comfortable relationship or situation is fine IF it doesn\'t prevent soul growth',
+      'Access to old wisdom that can serve your new purpose IF you apply it forward',
+      'Familiar role or pattern feels easy - use it as foundation for growth, not escape',
+      'Past success patterns available - integrate wisdom while evolving beyond comfort',
+      'Easy income or opportunity is gift IF directed toward purposeful evolution',
+      'Balance comfort and mastery with continued growth toward your North Node destiny'
+    ]
+  },
+
+  // MERCURY-NORTH NODE ASPECTS (5 aspects)
+
+  'Mercury-North Node-Conjunction': {
+    name: 'Mercury Conjunction North Node',
+    frequency: 'Occurs once every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'DESTINED MENTAL BREAKTHROUGH! Your mind aligns with your soul\'s purpose. Thoughts, ideas, communications now serve your karmic mission. Perfect time for purposeful learning, destined conversations, sharing ideas that serve collective evolution. Your voice carries destiny. What you think, say, write, learn IS your soul\'s work. Mental clarity about life purpose. Fated information or connections. Your curiosity leads to growth. Speak your truth - it serves the universe.',
+    loveRelationships: 'Destined conversations and meaningful communication in love! Romantic dialogue serves soul growth. Perfect time for purposeful relationship communication, deep meaningful discussions, expressing thoughts that deepen connection authentically. What you say in love serves evolution. Fated romantic conversations or communications. Your words can transform relationships toward higher purpose. Mental connection aligned with destiny.',
+    familyHome: 'Purposeful family communication and destined learning at home! Family discussions serve collective growth. Perfect time for meaningful family conversations, sharing ideas at home, learning that supports family evolution. Your communication within family IS part of your mission. Destined family discussions or decisions. Home becomes place of purposeful mental activity. Speak family truth that serves growth.',
+    businessCareer: 'CAREER BREAKTHROUGH THROUGH DESTINED COMMUNICATION! Professional ideas and communication align with soul purpose. Excellent time to share professional ideas, communicate purposefully at work, learn skills serving your mission, express thoughts that advance your destined career. Your professional voice matters. Fated business communications or ideas. What you say or learn professionally IS your purpose work.',
+    moneyFinances: 'Financial insight and destined money communication! Mental clarity about finances serves soul purpose. Perfect time for purposeful financial discussions, learning about money in service of mission, communicating financial ideas aligned with destiny. Your financial thoughts and communications serve evolution. Destined financial information or conversations. Purposeful financial learning creates prosperity.',
+    predictions: [
+      'Destined conversation or communication opportunity that serves your soul mission appears',
+      'Idea or insight you receive provides perfect clarity about your life purpose',
+      'Person you meet or talk to becomes karmic ally through meaningful exchange',
+      'Your authentic communication or teaching IS part of your destined contribution',
+      'Book, course, or information that perfectly serves your evolution finds you',
+      'What you say, write, or share serves collective awakening and your mission',
+      'Fated decision or choice becomes clear through mental clarity about purpose',
+      'Your curiosity about specific topic turns out to be soul-guided toward growth',
+      'Communication skill you develop IS essential for your destined work',
+      'Mental breakthrough about your path creates powerful purposeful momentum'
+    ]
+  },
+
+  'Mercury-North Node-Opposition': {
+    name: 'Mercury Opposition North Node',
+    frequency: 'Occurs once every 19 years (conjunction to South Node)',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Mental pull toward comfortable old patterns vs. growth! Mercury conjunct South Node opposes North Node, activating familiar thoughts, comfortable ideas, past mental patterns. Challenge: Your thinking may gravitate toward what\'s easy and familiar rather than growth-edge learning. Opportunity: Recognize old mental comfort zones, take wisdom from past, but THINK toward your destiny. Use familiar knowledge to BUILD new understanding. Balance mental comfort with purposeful curiosity about growth areas.',
+    loveRelationships: 'Relationship communication pulled between comfort and growth! Tension between familiar relationship discussions and growth-edge vulnerability. Challenge: Talking about comfortable safe topics vs. meaningful purposeful dialogue. Opportunity: Use communication skills you have to EXPRESS new vulnerable truths. Familiar relationship talk is fine IF it leads to evolutionary conversations. Balance ease with authentic depth.',
+    familyHome: 'Family communication between familiar and purposeful! Tension between comfortable family discussions and growth-serving dialogue. Challenge: Falling into familiar family communication patterns that prevent evolution. Opportunity: Speak family truth that serves growth, not just comfort. Use familiar family language to BRIDGE to new understanding. Balance comfortable family talk with purposeful conversations.',
+    businessCareer: 'Professional thinking between old patterns and destined direction! Tension between comfortable professional ideas and growth-edge innovative thinking. Challenge: Relying on familiar professional knowledge vs. learning what your destiny requires. Opportunity: Use professional expertise you have to DEVELOP new purpose-aligned skills. Familiar career thinking serves evolution IF directed toward growth.',
+    moneyFinances: 'Financial thinking between comfortable and purposeful! Tension between familiar money mindset and financial growth required for purpose. Challenge: Comfortable financial ideas that may limit evolution. Opportunity: Use past financial wisdom to INFORM new purpose-aligned financial thinking. Familiar money patterns fine IF supporting destined prosperity. Balance comfort with growth.',
+    predictions: [
+      'Mental comfort zone revealed - opportunity to think beyond familiar patterns',
+      'Familiar idea or knowledge becomes foundation for NEW growth-edge learning',
+      'Communication challenge between what\'s easy and what serves your evolution',
+      'Your comfortable expertise can BUILD toward your destiny IF applied consciously',
+      'Conversation reveals old mental pattern - opportunity to integrate and evolve',
+      'What you already know SUPPORTS what you need to learn for soul growth',
+      'Familiar communication style serves evolution when directed toward purpose',
+      'Mental tension between comfort and growth creates opportunity for integration',
+      'Past learning becomes wisdom that INFORMS your destined future thinking',
+      'Balance comfortable thinking with purposeful curiosity about your growth edge'
+    ]
+  },
+
+  'Mercury-North Node-Sextile': {
+    name: 'Mercury Sextile North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Opportunity for purposeful communication and learning through initiative! Your thinking harmonizes with your soul\'s growth direction, creating potential for destined conversations, meaningful learning, purposeful communication IF you take initiative. Opportunities to share ideas serving evolution, learn what supports your mission, connect with karmic allies appear - require active engagement. Perfect time: communicate purposefully actively, learn growth-supporting skills, share thoughts deliberately. Success through purposeful mental initiative.',
+    loveRelationships: 'Relationship opportunity for meaningful communication through initiative! Potential for purposeful romantic dialogue, deep conversations supporting growth, authentic expression serving love evolution IF you initiate. Perfect time to share meaningful thoughts in love actively, have purposeful relationship discussions, express authentically. Romantic communication serves soul growth IF pursued actively. Initiative creates deep connection.',
+    familyHome: 'Family opportunity for purposeful dialogue through initiative! Potential for meaningful family communication, learning at home supporting growth, family discussions serving evolution IF you take action. Perfect time to initiate purposeful family conversations actively, share ideas at home, learn what supports family mission. Family receptive to meaningful communication IF initiated.',
+    businessCareer: 'Career opportunity through purposeful communication and learning! Potential for professional advancement through meaningful ideas, career-serving learning, purposeful professional communication IF you step forward. Perfect time to share professional ideas actively, learn skills for destined work, communicate career purpose. Purpose-aligned professional success available through initiative.',
+    moneyFinances: 'Financial opportunity through purposeful learning and communication! Potential for money growth through meaningful financial ideas, learning about prosperity supporting purpose, financial communication serving evolution IF pursued actively. Perfect time to discuss finances purposefully, learn money skills for mission, communicate financial ideas. Prosperity through purposeful initiative.',
+    predictions: [
+      'Communication opportunity serving your soul purpose appears - initiative required',
+      'Your purposeful idea actively shared attracts receptive response and support',
+      'Chance to learn something perfectly aligned with your growth IF pursued actively',
+      'Conversation you initiate meaningfully becomes catalyst for purposeful progress',
+      'Opportunity to connect with karmic ally through communication appears - engage actively',
+      'Your authentic thoughts expressed actively serve collective evolution and your mission',
+      'Learning opportunity aligned with your destiny available through your initiative',
+      'Initiative to communicate purposefully creates meaningful connection and growth',
+      'Your active curiosity about growth-supporting topic leads to important insight',
+      'Opportunity: soul growth through purposeful communication and conscious learning'
+    ]
+  },
+
+  'Mercury-North Node-Trine': {
+    name: 'Mercury Trine North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Effortless purposeful thinking and destined communication! Your mind flows naturally toward your soul\'s purpose. Perfect time for natural meaningful communication, learning that serves your mission, sharing ideas effortlessly aligned with destiny. What you think, say, learn naturally supports evolution. Your curiosity naturally leads to growth. Communications flow purposefully. Mental clarity about purpose comes naturally. Destined information and connections arrive easily.',
+    loveRelationships: 'Natural meaningful love communication! Romantic conversations flow toward depth and purpose naturally. Perfect time to share thoughts authentically in love, have naturally meaningful discussions, express yourself in ways that deepen connection. What you say in love naturally serves growth. Romantic dialogue flows purposefully and authentically. Mental connection supports soul-level intimacy naturally.',
+    familyHome: 'Natural purposeful family communication! Family discussions flow meaningfully and support collective growth naturally. Perfect time to share ideas at home naturally, have family conversations that naturally deepen understanding, communicate authentically. Family communication naturally serves evolution. Home becomes natural place of meaningful mental exchange. Learning at home flows naturally.',
+    businessCareer: 'Natural career communication serving purpose! Professional ideas and communication flow toward your mission naturally. Excellent time to share professional thoughts naturally, learn career skills effortlessly, communicate at work in ways that naturally serve your destiny. Your professional voice naturally matters. Career communication flows purposefully. Business ideas naturally aligned with soul purpose.',
+    moneyFinances: 'Natural financial clarity serving purpose! Money thinking flows toward prosperity aligned with mission naturally. Perfect time for natural financial discussions, learning about money that naturally supports purpose, thinking about finances in ways that naturally serve growth. Financial clarity comes naturally. Money communication flows purposefully. Prosperity thinking natural.',
+    predictions: [
+      'Your natural communication effortlessly serves your soul purpose and evolution',
+      'What you naturally think and say turns out to perfectly support your growth',
+      'Destined conversation or connection flows to you naturally and meaningfully',
+      'Learning opportunity perfectly aligned with your mission appears naturally',
+      'Your natural curiosity leads you effortlessly to growth-supporting information',
+      'Ideas you share naturally inspire others and serve collective awakening',
+      'Mental clarity about your purpose flows to you naturally and easily',
+      'What you naturally express or communicate creates purposeful positive impact',
+      'Karmic ally or meaningful connection appears naturally through conversation',
+      'Perfect natural flow of purposeful thinking, meaningful learning, destined communication'
+    ]
+  },
+
+  'Mercury-North Node-Square': {
+    name: 'Mercury Square North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Mental challenge forcing purposeful growth! Your thinking squares both Nodes, creating friction between comfortable mental patterns and growth-edge learning. Challenge forces evolution: develop new ways of thinking, communicate beyond comfort zone, learn what destiny requires. Friction reveals: where your thinking limits growth, what you need to learn for soul purpose. Growth opportunity: transform mental patterns, embrace uncomfortable learning, think purposefully. Mental discomfort FORCES necessary evolution.',
+    loveRelationships: 'Love communication challenges forcing growth! Friction: comfortable relationship communication doesn\'t serve evolution. Challenge reveals: where you need deeper more purposeful dialogue, how familiar love language limits soul growth. Growth: learn to communicate in relationships in NEW ways serving evolution, express uncomfortable truths, have meaningful conversations beyond comfort zone. Relationship friction FORCES communication evolution.',
+    familyHome: 'Family communication friction forcing purposeful evolution! Challenge: familiar family discussions don\'t support growth, comfortable home thinking limits soul purpose. Friction reveals: where family communication needs transformation, what learning at home serves mission. Growth: develop new family dialogue patterns, think about home in purpose-aligned ways, communicate family truth serving evolution. Family challenges FORCE mental growth.',
+    businessCareer: 'Professional thinking challenges forcing career evolution! Friction: comfortable career ideas don\'t support destiny, familiar professional thinking limits purpose. Challenge reveals: where you need NEW professional learning, how old career mindset prevents mission. Growth: develop destined professional skills, think about career in growth-supporting ways, communicate at work beyond comfort. Career friction FORCES purposeful mental evolution.',
+    moneyFinances: 'Financial thinking friction forcing prosperity evolution! Challenge: comfortable money mindset doesn\'t serve purpose, familiar financial thinking limits growth. Friction reveals: where financial ideas need transformation for destiny. Growth: learn NEW money thinking aligned with purpose, communicate about finances in evolved ways, think about prosperity serving soul mission. Financial challenges FORCE money mindset evolution.',
+    predictions: [
+      'Mental challenge forces you to learn what your soul purpose actually requires',
+      'Communication discomfort reveals where you need to express truth beyond comfort',
+      'Learning challenge that feels difficult IS exactly what your destiny needs',
+      'Your familiar thinking pattern revealed as limiting - opportunity to evolve',
+      'Uncomfortable conversation or idea FORCES necessary growth beyond mental comfort',
+      'What you need to learn feels challenging because it\'s your actual growth edge',
+      'Mental friction reveals gap between comfortable ideas and purposeful thinking',
+      'Challenge to communicate or think differently FORCES soul-level mental evolution',
+      'Uncomfortable learning experience IS the exact lesson your purpose requires',
+      'Growth through developing NEW mental patterns and purposeful communication beyond comfort'
+    ]
+  },
+
+  'Mercury-South Node-Conjunction': {
+    name: 'Mercury Conjunction South Node',
+    frequency: 'Occurs once every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Comfortable familiar mental patterns activated strongly! Your mind easily accesses past life knowledge, old communication styles, familiar thinking. This feels natural and easy - that\'s the challenge. Opportunity: Recognize which mental patterns serve growth vs. keep you stuck. Use past wisdom to BUILD new understanding, not just repeat comfortable ideas. Release limiting mental comfort zones. Your old knowledge is valuable IF directed toward evolution. Think forward using past wisdom, not backward into comfort.',
+    loveRelationships: 'Familiar comfortable relationship communication patterns! You easily fall into old relationship dialogue, comfortable love language, past romantic thinking. Opportunity: Notice which relationship communication serves growth vs. limits evolution. Use familiar love language to EXPRESS new truths, not avoid authentic depth. Comfortable relationship talk is fine IF it leads forward. Think about love in evolved ways using past wisdom.',
+    familyHome: 'Comfortable familiar family communication and home thinking! Old family patterns of dialogue feel natural and easy. Opportunity: Recognize which family communication serves collective evolution vs. maintains comfortable limitation. Use familiar family language to BRIDGE to new understanding. Think about home in purposeful ways. Comfortable family talk serves growth IF directed consciously forward.',
+    businessCareer: 'Comfortable familiar professional thinking and communication! Old career ideas and professional dialogue come easily. Opportunity: Notice which professional knowledge serves destined work vs. keeps you in comfortable limitation. Use expertise you have to DEVELOP purpose-aligned skills. Think about career evolution using past mastery as foundation, not destination. Familiar professional thinking serves IF directed toward growth.',
+    moneyFinances: 'Comfortable familiar financial thinking and money communication! Old money mindset and comfortable financial ideas flow easily. Opportunity: Recognize which financial patterns serve purposeful prosperity vs. maintain comfortable limitation. Use past money wisdom to INFORM evolved financial thinking. Think about money in purpose-aligned ways. Familiar financial ideas serve IF supporting evolutionary prosperity.',
+    predictions: [
+      'Familiar mental pattern or old knowledge resurfaces - use it to serve growth, not escape',
+      'Comfortable way of thinking feels easy - ensure it supports evolution, not stagnation',
+      'Past life communication skill available - apply it to NEW purposeful expression',
+      'Old idea or familiar thought pattern - take the wisdom, release the limitation',
+      'Your comfortable expertise becomes foundation for NEW learning IF directed consciously',
+      'Familiar communication style is fine IF it serves authentic purposeful dialogue',
+      'Past knowledge or old learning can BUILD your destined future thinking',
+      'Comfortable mental comfort zone revealed - opportunity to integrate and evolve',
+      'What you already know from the past SUPPORTS what you need to learn forward',
+      'Use familiar thinking wisdom to develop NEW mental patterns serving soul growth'
+    ]
+  },
+
+  'Mercury-South Node-Sextile': {
+    name: 'Mercury Sextile South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Opportunity to use past knowledge in service of growth through initiative! Your thinking harmonizes with past wisdom, creating potential to apply old knowledge purposefully, communicate using familiar skills in NEW ways, learn from past to BUILD future IF you take initiative. Opportunity: Use comfortable mental skills to SERVE North Node growth actively. Past knowledge available as resource - apply it forward deliberately. Success through consciously directing familiar thinking toward evolution.',
+    loveRelationships: 'Relationship opportunity to use past love wisdom for growth! Potential to apply familiar relationship communication in NEW purposeful ways, use past romantic understanding to SERVE evolutionary love IF you initiate. Perfect time to take relationship wisdom gained and actively apply it to deeper authentic connection. Past love knowledge serves present growth IF used consciously.',
+    familyHome: 'Family opportunity to apply past wisdom for evolution! Potential to use familiar family communication skills in NEW purposeful ways, direct past home knowledge toward evolutionary family growth IF you take action. Perfect time to take family wisdom and actively apply it to create purposeful home environment. Past family knowledge serves present evolution IF directed consciously.',
+    businessCareer: 'Career opportunity to apply past professional knowledge for destined work! Potential to use familiar skills in NEW purpose-aligned ways, direct professional expertise toward evolutionary career growth IF you step forward. Perfect time to take career mastery and actively apply it to destined professional path. Past professional knowledge serves future purpose IF used consciously.',
+    moneyFinances: 'Financial opportunity to use past money wisdom for purposeful prosperity! Potential to apply familiar financial knowledge in NEW purpose-aligned ways, direct past money skills toward evolutionary prosperity IF pursued actively. Perfect time to take financial wisdom and actively apply it to purpose-serving abundance. Past money knowledge serves future prosperity IF directed consciously.',
+    predictions: [
+      'Past knowledge or familiar skill becomes resource for growth IF applied forward actively',
+      'Your comfortable expertise actively directed toward new purpose creates success',
+      'Opportunity to use what you know well in NEW evolutionary ways appears',
+      'Familiar communication skill applied to purposeful expression creates positive impact',
+      'Past wisdom you actively share in service of growth helps others evolve',
+      'Your initiative to apply old knowledge to new challenge creates breakthrough',
+      'Comfortable mental skill becomes foundation for NEW purposeful learning',
+      'Past experience actively used to BUILD future growth creates meaningful progress',
+      'Your familiar thinking consciously directed toward evolution serves soul mission',
+      'Opportunity: Apply past knowledge and comfortable skills in service of North Node growth'
+    ]
+  },
+
+  'Mercury-South Node-Trine': {
+    name: 'Mercury Trine South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Effortless access to past mental mastery and comfortable knowledge! Your thinking flows naturally to familiar patterns, old wisdom, comfortable ideas. This feels easy and natural - be mindful of stagnation. Opportunity: Your past life mental gifts are available - use them to BUILD toward North Node destiny, not as escape from growth. Familiar knowledge flows easily - apply it forward toward evolution. Natural mental comfort serves growth IF directed purposefully beyond comfort zone.',
+    loveRelationships: 'Natural comfortable relationship communication flowing easily! Familiar love language and comfortable romantic dialogue feel effortless. Opportunity: Enjoy ease while ensuring communication serves growth, not just comfort. Natural relationship communication is gift IF it deepens authentic connection toward evolution. Use familiar love dialogue to BUILD purposeful intimacy, not maintain comfortable surface.',
+    familyHome: 'Natural comfortable family communication and familiar home thinking! Family dialogue and domestic ideas flow easily through familiar patterns. Opportunity: Appreciate family ease while directing communication toward collective evolution. Comfortable home thinking is fine IF it supports purposeful growth. Natural family communication serves IF leading family forward, not keeping everyone stuck in comfortable patterns.',
+    businessCareer: 'Natural professional expertise and comfortable career thinking! Familiar professional ideas and comfortable career communication flow effortlessly. Opportunity: Your professional mastery is gift - use it to DEVELOP destined career direction, not just repeat comfortable work. Natural career thinking serves IF building toward purpose-aligned professional evolution. Apply expertise forward, not in circles.',
+    moneyFinances: 'Natural comfortable financial thinking and familiar money wisdom! Past money knowledge and comfortable financial ideas flow easily. Opportunity: Financial wisdom from past is valuable - apply it to BUILD purposeful prosperity, not maintain comfortable limitation. Natural money thinking serves IF directed toward evolutionary abundance. Use financial mastery to grow toward destiny, not stay stuck in comfortable earning.',
+    predictions: [
+      'Past mental mastery flows naturally to you - use it to BUILD future, not escape growth',
+      'Your comfortable knowledge easily accessible - apply it forward toward evolution',
+      'Familiar communication skill flows naturally - direct it toward purposeful expression',
+      'Natural easy thinking is gift IF you consciously apply it to growth-edge learning',
+      'Past wisdom surfaces easily - integrate it while moving forward toward destiny',
+      'Your expertise comes naturally - use it as foundation for NEW purposeful development',
+      'Comfortable mental pattern flows easily - ensure it serves evolution, not stagnation',
+      'Natural knowledge and familiar skills available - apply them to support North Node growth',
+      'Easy comfortable thinking is fine IF directed consciously toward purposeful evolution',
+      'Your past life mental gifts naturally accessible - use them to serve your destined future'
+    ]
+  },
+
+  'Mercury-South Node-Square': {
+    name: 'Mercury Square South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Mental friction forcing release of limiting comfortable thinking! Your communication squares both Nodes, creating discomfort with old mental patterns and challenge learning new ways. Friction FORCES evolution: release limiting comfortable ideas, develop uncomfortable new thinking, communicate beyond familiar patterns. Challenge reveals: which mental comfort zones actually limit your growth. Growth: transform thinking through necessary discomfort, embrace unfamiliar learning, release old mental limitations. Mental challenge FORCES purposeful evolution.',
+    loveRelationships: 'Relationship communication friction forcing evolved dialogue! Discomfort with comfortable love language, challenge expressing in familiar romantic ways. Friction reveals: old relationship communication patterns that limit soul growth. Growth: develop NEW ways of love communication beyond comfort, express uncomfortable relationship truths, release limiting familiar romantic dialogue. Relationship friction FORCES communication evolution toward authentic depth.',
+    familyHome: 'Family communication friction forcing evolved home dialogue! Discomfort with familiar family communication, challenge with comfortable home thinking. Friction reveals: old family patterns that prevent collective evolution. Growth: develop NEW family communication beyond comfort zones, think about home in unfamiliar purposeful ways, release limiting comfortable domestic dialogue. Family challenges FORCE mental evolution toward purposeful family expression.',
+    businessCareer: 'Professional thinking friction forcing career evolution! Discomfort with comfortable career ideas, challenge with familiar professional thinking. Friction reveals: old career mental patterns preventing destined work. Growth: develop NEW professional thinking beyond expertise comfort zone, learn unfamiliar skills for purpose, release limiting comfortable career ideas. Professional friction FORCES mental evolution toward destined career.',
+    moneyFinances: 'Financial thinking friction forcing prosperity evolution! Discomfort with comfortable money mindset, challenge with familiar financial ideas. Friction reveals: old money patterns preventing purposeful abundance. Growth: develop NEW financial thinking beyond comfort, embrace unfamiliar prosperity mindset for purpose, release limiting comfortable money ideas. Financial friction FORCES money mindset evolution toward purpose-aligned prosperity.',
+    predictions: [
+      'Mental discomfort with comfortable patterns reveals what you need to release for growth',
+      'Challenge to think differently feels uncomfortable because it\'s actual evolution edge',
+      'Communication friction FORCES you to express beyond familiar limiting patterns',
+      'Uncomfortable learning challenge IS the exact mental evolution your soul needs',
+      'Old mental pattern creates friction - signal to release it and develop new thinking',
+      'Your familiar comfortable ideas challenged - opportunity to transform and evolve',
+      'Discomfort with past communication style FORCES necessary authentic expression',
+      'Mental challenge reveals limiting comfort zone - embrace unfamiliar purposeful thinking',
+      'Friction between old knowledge and new learning FORCES necessary mental transformation',
+      'Growth through releasing comfortable limiting mental patterns and embracing evolutionary thinking'
+    ]
+  },
+
+  // VENUS-NORTH NODE ASPECTS (4 aspects - Opposition already exists as Venus-South Node-Opposition)
+
+  'Venus-North Node-Conjunction': {
+    name: 'Venus Conjunction North Node',
+    frequency: 'Occurs once every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'DESTINED LOVE AND VALUES ALIGNMENT! Your heart merges with your soul\'s purpose. What you love, value, attract IS your karmic path. Perfect time for soul-mate connections, purposeful relationships, discovering values aligned with destiny. Love becomes vehicle for evolution. Your attractions serve growth. What brings you joy IS what serves your mission. Fated romantic encounters possible. Your beauty and values express your purpose. Relationships now are karmic and transformative.',
+    loveRelationships: 'FATED LOVE CONNECTION! Romantic relationships align with soul destiny. People you attract now are karmic partners supporting your evolution. Perfect time for soul-mate meeting or deepening destined partnership. Love serves your growth and purpose. What you desire romantically IS what your soul needs. Relationships become vehicles for mutual evolution. Your heart\'s truth aligns with destiny. Express love authentically - it attracts purposeful connection.',
+    familyHome: 'Family harmony aligned with soul purpose! Domestic relationships serve your evolution. Perfect time to create beautiful home environment supporting your mission, strengthen family bonds aligned with growth, experience family love that nurtures your destiny. Family becomes source of purposeful joy and support. Home reflects your authentic values. Domestic beauty serves evolution.',
+    businessCareer: 'Career success through authentic values and purposeful connection! Professional relationships align with soul mission. Excellent time for partnerships serving your destiny, work that reflects your true values, career expressing your authentic aesthetic or relational gifts. Business connections are karmic and purposeful. Your professional charm and values serve your mission. Money through purposeful beautiful work.',
+    moneyFinances: 'Financial prosperity through value-aligned purposeful work! Money flows when you honor authentic values and serve your purpose. Perfect time to earn from what you truly value, invest in your evolution, attract abundance aligned with destiny. Financial opportunities serve your growth. Your worth recognized materially. Prosperity through authentic values and purposeful pleasure.',
+    predictions: [
+      'Fated romantic encounter or destined relationship deepening that serves soul growth',
+      'Person you attract IS karmic partner perfectly aligned with your evolution',
+      'Your authentic values and what you truly love revealed as your actual purpose',
+      'Career or creative opportunity reflecting your deepest values becomes available',
+      'Financial abundance flows through expressing what you authentically value',
+      'What brings you genuine joy turns out to serve your destiny perfectly',
+      'Relationship or connection that IS part of your soul mission appears now',
+      'Your heart\'s desire and your soul\'s purpose align beautifully and powerfully',
+      'Beautiful purposeful opportunity that honors your values attracts you',
+      'Love, beauty, and values you express authentically ARE your destined contribution'
+    ]
+  },
+
+  'Venus-North Node-Sextile': {
+    name: 'Venus Sextile North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Opportunity for purposeful love and values alignment through initiative! Your affections harmonize with soul\'s growth direction, creating potential for destined connections, meaningful relationships, value-aligned choices IF you take initiative. Opportunities for karmic partnerships, purposeful pleasure, authentic values expression appear - require active engagement. Perfect time: pursue love actively, honor authentic values deliberately, create beauty serving purpose. Success through purposeful heart initiative.',
+    loveRelationships: 'Relationship opportunity for soul-aligned love through initiative! Potential for purposeful romantic connection, destined partnership development, love supporting evolution IF you initiate. Perfect time to pursue authentic romantic desires actively, express love in purpose-aligned ways, connect with potential karmic partners. Romantic opportunities serve growth IF pursued actively. Initiative creates destined love connection.',
+    familyHome: 'Family opportunity for purposeful harmony through initiative! Potential for domestic beauty supporting growth, family connections serving purpose, home improvements aligned with evolution IF you take action. Perfect time to create beautiful purposeful home actively, strengthen family bonds serving mission. Family relationships receptive to authentic values IF initiated.',
+    businessCareer: 'Career opportunity through purposeful partnerships and values! Potential for professional connections serving destiny, work reflecting authentic values, partnerships aligned with mission IF you step forward. Perfect time to pursue career relationships actively, express professional values purposefully, create beauty in work. Purpose-aligned success through relational initiative.',
+    moneyFinances: 'Financial opportunity through value-aligned purposeful action! Potential for income from authentic values, prosperity supporting purpose, financial choices serving evolution IF pursued actively. Perfect time to earn from what you value actively, invest in growth path, attract abundance aligned with mission. Prosperity through purposeful values initiative.',
+    predictions: [
+      'Romantic opportunity aligned with your soul purpose appears - initiative required',
+      'Your initiative to express authentic values attracts purposeful positive response',
+      'Chance for destined connection or karmic partnership succeeds IF pursued actively',
+      'Opportunity to create beauty serving your mission available through your action',
+      'Your authentic affection actively expressed draws soul-aligned relationship',
+      'Partnership or connection serving your evolution appears - engage actively',
+      'Initiative to honor your true values creates purposeful prosperity and joy',
+      'Your active pursuit of authentic pleasure leads to growth-supporting experience',
+      'Opportunity to align relationships with purpose available through initiative',
+      'Soul growth through expressing authentic love, values, beauty actively'
+    ]
+  },
+
+  'Venus-North Node-Trine': {
+    name: 'Venus Trine North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Effortless love and values aligned with destiny! Your affections flow naturally toward soul purpose. Perfect time for natural destined connections, joyful purposeful relationships, beauty that serves evolution. What you love naturally supports growth. Attractions flow toward karmic partners. Values naturally align with mission. Pleasure and purpose harmonize beautifully. Relationships feel meaningful and evolutionary. Natural purposeful joy and authentic connection.',
+    loveRelationships: 'Natural soul-aligned love flowing effortlessly! Romantic connections flow toward purposeful authentic partnership naturally. Perfect time to attract or deepen love naturally, experience romance supporting evolution, connect with karmic partners effortlessly. What you desire romantically naturally serves your soul growth. Love flows purposefully and joyfully. Relationships naturally meaningful and transformative.',
+    familyHome: 'Natural family harmony supporting purpose! Domestic relationships and home beauty flow in support of soul mission naturally. Perfect time to create beautiful purposeful home naturally, experience family love supporting growth, strengthen bonds serving evolution effortlessly. Family naturally appreciates your authentic values. Home becomes natural haven for purposeful living.',
+    businessCareer: 'Natural career success through authentic values and purpose! Professional relationships and work flow toward mission naturally. Excellent time to experience natural career partnerships, work reflecting authentic values effortlessly, professional beauty and harmony serving destiny. Business connections naturally purposeful and supportive. Values-aligned career success flows naturally.',
+    moneyFinances: 'Natural prosperity through authentic values and purpose! Money flows naturally when you honor true values and live purpose. Perfect time for natural financial abundance, earning from authentic values effortlessly, prosperity aligned with mission. Financial flow naturally supports evolution. Abundance through being authentically yourself and honoring what you truly value.',
+    predictions: [
+      'Your authentic affections naturally attract purposeful soul-aligned relationship',
+      'What you naturally love and value turns out to perfectly support your destiny',
+      'Karmic partner or destined connection appears naturally and effortlessly',
+      'Your natural expression of beauty and values serves your evolution perfectly',
+      'Romantic connection that naturally feels meaningful IS aligned with soul purpose',
+      'Financial abundance flows naturally through honoring your authentic values',
+      'What brings you natural joy and pleasure supports your growth beautifully',
+      'Partnership or relationship that naturally develops serves mutual evolution',
+      'Your authentic values naturally expressed create purposeful positive impact',
+      'Perfect natural flow of purposeful love, authentic values, destined connection'
+    ]
+  },
+
+  'Venus-North Node-Square': {
+    name: 'Venus Square North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Love and values challenge forcing purposeful evolution! Your affections square both Nodes, creating friction between comfortable relationship patterns and growth-edge love. Challenge forces transformation: develop new values, love beyond comfort zone, attract what serves evolution not just comfort. Friction reveals: which relationships or values limit growth, what you need to value for destiny. Growth: transform love patterns, embrace uncomfortable authentic values, relate purposefully. Relationship challenges FORCE values evolution.',
+    loveRelationships: 'Love friction forcing relationship evolution! Challenge: comfortable romantic patterns don\'t serve soul growth, familiar relationship values limit evolution. Friction reveals: where you need NEW relationship patterns, how old love comfort zones prevent destiny. Growth: develop uncomfortable but authentic love expression, value relationships that challenge and grow you, release limiting romantic patterns. Love challenges FORCE evolution toward purposeful authentic partnership.',
+    familyHome: 'Family values friction forcing purposeful evolution! Challenge: comfortable domestic patterns don\'t support purpose, familiar family values limit growth. Friction reveals: where family relationships need transformation, what values at home serve mission. Growth: develop NEW family relationship patterns, create domestic environment challenging comfort but serving evolution, value family dynamics that support growth. Family friction FORCES values transformation.',
+    businessCareer: 'Professional values friction forcing career evolution! Challenge: comfortable career relationships don\'t serve destiny, familiar professional values limit purpose. Friction reveals: where you need NEW professional partnerships, how old career values prevent mission. Growth: develop uncomfortable but authentic professional relationships, value work that challenges and evolves you, release limiting career comfort. Professional friction FORCES values evolution.',
+    moneyFinances: 'Financial values friction forcing prosperity evolution! Challenge: comfortable money values don\'t serve purpose, familiar financial patterns limit growth. Friction reveals: where financial values need transformation for destiny. Growth: develop NEW prosperity values aligned with purpose, value financial choices that challenge comfort but serve evolution, embrace uncomfortable but authentic money relationship. Financial friction FORCES values transformation.',
+    predictions: [
+      'Relationship challenge reveals comfortable love patterns that actually limit growth',
+      'What you comfortably value revealed as limiting - opportunity to transform values',
+      'Love friction FORCES you to develop authentic relationship patterns beyond comfort',
+      'Uncomfortable attraction or connection IS exactly what your soul growth needs',
+      'Challenge to value what truly serves evolution, not just what feels comfortable',
+      'Relationship discomfort reveals where you need purposeful authentic love beyond ease',
+      'Your comfortable values or attractions challenged - embrace evolutionary transformation',
+      'Love challenge that feels difficult IS the exact relationship evolution required',
+      'Friction between comfortable affections and destined love FORCES necessary growth',
+      'Transform through valuing what serves purpose, loving beyond comfort zone'
+    ]
+  },
+
+  // VENUS-SOUTH NODE ASPECTS (3 aspects - Opposition already exists)
+
+  'Venus-South Node-Conjunction': {
+    name: 'Venus Conjunction South Node',
+    frequency: 'Occurs once every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Comfortable familiar love and values patterns activated! Your affections easily access past relationship styles, old values, comfortable attractions. This feels natural and pleasant - that\'s the challenge. Opportunity: Recognize which love patterns serve growth vs. keep you stuck in familiar but limiting relationships. Use past relationship wisdom to BUILD new authentic connections, not repeat comfortable patterns. Your old values are familiar - evolve them toward purpose. Love forward using past wisdom, not backward into comfortable limitation.',
+    loveRelationships: 'Familiar comfortable romantic patterns strongly activated! You easily fall into old relationship dynamics, comfortable love expressions, past romantic values. Opportunity: Notice which relationship patterns serve evolution vs. maintain comfortable limitation. Past love wisdom is valuable IF it supports NEW authentic vulnerable connection. Comfortable romance is fine IF it deepens toward purpose, not keeps you in familiar surface patterns. Evolve love using past experience.',
+    familyHome: 'Comfortable familiar family values and domestic patterns! Old family relationship styles and comfortable home values feel natural and easy. Opportunity: Recognize which family patterns serve collective growth vs. maintain comfortable limitation. Use familiar family wisdom to BUILD evolved understanding, not just repeat comfortable dynamics. Past domestic values inform present IF directed toward purposeful family evolution. Balance comfort with growth.',
+    businessCareer: 'Comfortable familiar professional relationship values! Old career partnership patterns and comfortable professional values flow easily. Opportunity: Notice which professional relationships serve destined work vs. keep you in comfortable limitation. Use career relationship expertise to DEVELOP purpose-aligned partnerships, not just repeat comfortable professional patterns. Past professional values serve IF supporting evolutionary work.',
+    moneyFinances: 'Comfortable familiar financial values and money patterns! Old prosperity values and comfortable earning patterns flow easily. Opportunity: Recognize which money values serve purposeful abundance vs. maintain comfortable financial limitation. Use past financial values wisdom to INFORM evolved prosperity consciousness, not just repeat comfortable earning. Past money patterns serve IF supporting purpose-aligned abundance.',
+    predictions: [
+      'Familiar love pattern or comfortable relationship resurfaces - evolve it forward',
+      'Comfortable values or attractions feel easy - ensure they support growth, not stagnation',
+      'Past relationship wisdom available - use it to BUILD new authentic love, not repeat past',
+      'Old romantic pattern - take the wisdom of experience, release the limiting familiarity',
+      'Your comfortable relationship style becomes foundation for NEW evolved love IF conscious',
+      'Familiar values are fine IF they serve authentic purposeful living, not just comfort',
+      'Past love or relationship knowledge can inform your destined future connections',
+      'Comfortable attraction or value revealed - opportunity to integrate and evolve',
+      'What you naturally value from past SUPPORTS what you need to value for growth',
+      'Use familiar love wisdom to develop NEW relationship patterns serving soul evolution'
+    ]
+  },
+
+  'Venus-South Node-Sextile': {
+    name: 'Venus Sextile South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Opportunity to use past relationship wisdom for growth through initiative! Your affections harmonize with past values, creating potential to apply old relationship knowledge purposefully, love using familiar patterns in NEW evolved ways, value what serves forward growth IF you take initiative. Opportunity: Use comfortable relationship skills to SERVE North Node growth actively. Past love wisdom available as resource - apply it toward evolutionary love deliberately. Success through consciously directing familiar values toward purpose.',
+    loveRelationships: 'Relationship opportunity to use past love wisdom for evolution! Potential to apply familiar romantic patterns in NEW purposeful authentic ways, use past relationship understanding to SERVE evolutionary love IF you initiate. Perfect time to take relationship experience and actively apply it to deeper soul-aligned partnership. Past love knowledge serves present growth IF used consciously to build forward.',
+    familyHome: 'Family opportunity to apply past domestic wisdom for evolution! Potential to use familiar family values in NEW purposeful ways, direct past home relationship knowledge toward evolutionary family growth IF you take action. Perfect time to take family relationship wisdom and actively create purposeful home environment. Past domestic knowledge serves evolution IF directed consciously forward.',
+    businessCareer: 'Career opportunity to apply past professional relationship wisdom! Potential to use familiar partnership skills in NEW purpose-aligned ways, direct professional relationship expertise toward evolutionary career growth IF you step forward. Perfect time to take career partnership mastery and actively apply it to destined work. Past professional values serve future purpose IF used consciously.',
+    moneyFinances: 'Financial opportunity to use past prosperity values for purposeful abundance! Potential to apply familiar money values in NEW purpose-aligned ways, direct past financial relationship wisdom toward evolutionary prosperity IF pursued actively. Perfect time to take financial values wisdom and actively apply it to purpose-serving abundance. Past money values serve future prosperity IF directed consciously.',
+    predictions: [
+      'Past relationship wisdom becomes resource for growth IF applied forward actively',
+      'Your comfortable relationship skills actively directed toward purpose create success',
+      'Opportunity to use familiar values in NEW evolutionary ways appears',
+      'Past love experience applied to authentic purposeful connection creates depth',
+      'Your initiative to apply old relationship knowledge to new partnership creates breakthrough',
+      'Comfortable relational skill becomes foundation for NEW purposeful love',
+      'Past relationship wisdom actively used to BUILD future growth creates meaningful progress',
+      'Your familiar values consciously directed toward evolution serve soul mission',
+      'Opportunity to share past love wisdom in service of others\' growth',
+      'Apply past relationship knowledge and comfortable values in service of North Node love evolution'
+    ]
+  },
+
+  'Venus-South Node-Trine': {
+    name: 'Venus Trine South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Effortless access to past relationship mastery and comfortable values! Your affections flow naturally to familiar love patterns, old relationship wisdom, comfortable values. This feels pleasant and easy - be mindful of stagnation in comfort. Opportunity: Your past life relationship gifts are available - use them to BUILD toward North Node evolutionary love, not as escape from growth. Familiar values flow easily - apply them forward toward purposeful authentic living. Natural relationship comfort serves growth IF directed beyond comfortable limitation.',
+    loveRelationships: 'Natural comfortable love and familiar relationship patterns flowing easily! Past romantic wisdom and comfortable love expressions feel effortless. Opportunity: Enjoy relationship ease while ensuring love serves growth, not just comfort. Natural familiar romance is gift IF it deepens authentic soul-aligned connection toward evolution. Use comfortable love patterns to BUILD purposeful intimacy, not maintain pleasant but limiting surface connection. Balance ease with evolutionary depth.',
+    familyHome: 'Natural comfortable family values and familiar domestic harmony! Past family relationship patterns and comfortable home values flow effortlessly. Opportunity: Appreciate family ease while directing relationships toward collective evolution. Comfortable domestic patterns are fine IF they support purposeful growth. Natural family harmony serves IF leading everyone forward toward authentic purposeful living, not keeping family stuck in comfortable familiar limitation.',
+    businessCareer: 'Natural professional relationship mastery and comfortable career values! Familiar partnership skills and comfortable professional values flow effortlessly. Opportunity: Your professional relationship mastery is gift - use it to DEVELOP destined career partnerships, not just maintain comfortable professional patterns. Natural career values serve IF building toward purpose-aligned work evolution. Apply relationship expertise forward toward mission, not in comfortable circles.',
+    moneyFinances: 'Natural comfortable financial values and familiar prosperity patterns! Past money relationship wisdom and comfortable financial values flow easily. Opportunity: Financial values wisdom from past is valuable - apply it to BUILD purposeful prosperity, not maintain comfortable financial limitation. Natural money values serve IF directed toward evolutionary abundance aligned with purpose. Use financial relationship mastery to grow toward destiny, not stay stuck in comfortable familiar earning.',
+    predictions: [
+      'Past relationship mastery flows naturally to you - use it to BUILD future love, not escape growth',
+      'Your comfortable values easily accessible - apply them forward toward purposeful living',
+      'Familiar love pattern flows naturally - direct it toward evolutionary authentic connection',
+      'Natural easy affection is gift IF you consciously apply it to growth-edge relating',
+      'Past relationship wisdom surfaces easily - integrate it while moving forward toward destiny',
+      'Your relationship expertise comes naturally - use it as foundation for NEW purposeful love',
+      'Comfortable familiar values flow easily - ensure they serve evolution, not stagnation',
+      'Natural relationship knowledge and familiar skills available - apply them to support North Node growth',
+      'Easy comfortable love is fine IF directed consciously toward purposeful soul-aligned partnership',
+      'Your past life relationship gifts naturally accessible - use them to serve destined evolutionary love'
+    ]
+  },
+
+  'Venus-South Node-Square': {
+    name: 'Venus Square South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Relationship and values friction forcing release of comfortable patterns! Your affections square both Nodes, creating discomfort with old love patterns and challenge developing new values. Friction FORCES evolution: release limiting comfortable relationship dynamics, develop uncomfortable authentic values, love beyond familiar safe patterns. Challenge reveals: which comfortable love patterns actually limit growth, what values you need to release. Growth: transform relationships through necessary discomfort, embrace unfamiliar authentic values, release old love limitations. Relationship friction FORCES values evolution.',
+    loveRelationships: 'Love friction forcing release of comfortable romantic patterns! Discomfort with familiar relationship dynamics, challenge loving in comfortable old ways. Friction reveals: old romantic patterns that prevent soul growth and authentic love. Growth: develop NEW ways of loving beyond comfort, express uncomfortable vulnerable authentic affection, release limiting familiar safe relationship patterns. Love discomfort FORCES evolution toward authentic soul-aligned vulnerable partnership beyond safety.',
+    familyHome: 'Family relationship friction forcing release of comfortable domestic patterns! Discomfort with familiar family values, challenge relating at home in comfortable old ways. Friction reveals: old family patterns preventing collective evolution and authentic connection. Growth: develop NEW family relationship dynamics beyond comfort, embrace unfamiliar authentic domestic values, release limiting comfortable family patterns. Family friction FORCES values evolution toward purposeful authentic family connection.',
+    businessCareer: 'Professional relationship friction forcing career values evolution! Discomfort with comfortable career partnership patterns, challenge with familiar professional values. Friction reveals: old professional relationship patterns preventing destined work and authentic collaboration. Growth: develop NEW professional partnerships beyond comfort zone, embrace unfamiliar authentic career values, release limiting comfortable professional patterns. Career friction FORCES relationship and values evolution toward purposeful work.',
+    moneyFinances: 'Financial values friction forcing prosperity evolution! Discomfort with comfortable money values, challenge with familiar financial relationship patterns. Friction reveals: old money values preventing purposeful abundance and authentic prosperity. Growth: develop NEW financial values beyond comfort, embrace unfamiliar authentic prosperity consciousness, release limiting comfortable money patterns. Financial friction FORCES values evolution toward purpose-aligned abundance.',
+    predictions: [
+      'Relationship discomfort with comfortable patterns reveals what you need to release for growth',
+      'Challenge to love differently feels uncomfortable because it\'s actual evolution edge',
+      'Values friction FORCES you to embrace authentic purposeful values beyond familiar comfort',
+      'Uncomfortable relationship challenge IS the exact love evolution your soul needs',
+      'Old comfortable love pattern creates friction - signal to release and develop new relating',
+      'Your familiar comfortable values challenged - opportunity to transform toward authenticity',
+      'Discomfort with past relationship style FORCES necessary authentic vulnerable expression',
+      'Relationship challenge reveals limiting comfort zone - embrace unfamiliar purposeful love',
+      'Friction between old comfortable values and new authentic values FORCES transformation',
+      'Growth through releasing comfortable limiting relationship patterns and embracing evolutionary love'
+    ]
+  },
+
+  // MARS-NORTH NODE ASPECTS (5 aspects)
+
+  'Mars-North Node-Conjunction': {
+    name: 'Mars Conjunction North Node',
+    frequency: 'Occurs once every 2 years (Mars cycle)',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL DESTINED ACTION! Your drive aligns with soul purpose. Actions you take now serve your karmic mission. Perfect time for courageous purposeful action, pursuing destiny actively, asserting your soul truth boldly. What you desire and pursue IS what serves evolution. Your will aligned with universal will. Energy directed toward growth. Fated initiatives and bold purposeful moves. Your warrior spirit serves your mission. Act on your destiny courageously.',
+    loveRelationships: 'Passionate destined romantic action! Desire and pursuit in love align with soul growth. Perfect time for courageous romantic pursuit, passionate purposeful relationship action, asserting authentic desires serving evolution. What you want romantically IS what serves your soul. Bold love actions are fated. Pursue authentic passion courageously. Sexual and romantic energy serves destiny. Relationship initiative aligned with purpose.',
+    familyHome: 'Purposeful assertive family action! Drive and energy at home serve soul mission. Perfect time for bold domestic action aligned with purpose, assertively creating home supporting evolution, taking initiative in family serving growth. Home improvements and family assertion serve destiny. Your action at home matters. Protective energy serves family evolution. Bold purposeful domestic moves.',
+    businessCareer: 'MAJOR CAREER ACTION ALIGNED WITH DESTINY! Professional drive and ambition serve soul purpose. Excellent time for bold career moves toward mission, courageous professional action, pursuing destined work passionately. Career initiative now is fated - serves your evolution. Your professional warrior energy matters. Take bold purposeful career action. Leadership through authentic purposeful assertion. Destined career conquest.',
+    moneyFinances: 'Financial action and drive serving purpose! Energy toward money aligned with mission. Perfect time for bold financial moves serving destiny, courageous money action, pursuing prosperity purposefully. Financial initiative serves evolution. Your drive toward abundance matters. Compete for resources aligned with purpose. Bold purposeful financial action creates destined prosperity.',
+    predictions: [
+      'Bold action you take courageously IS exactly what your soul mission requires',
+      'Initiative or pursuit you courageously undertake serves your destiny perfectly',
+      'Your assertive purposeful action creates powerful momentum toward soul purpose',
+      'What you passionately desire and boldly pursue turns out to serve your evolution',
+      'Courageous move you make IS destined action advancing your karmic mission',
+      'Your warrior energy courageously directed toward purpose creates breakthrough',
+      'Bold initiative you take assertively opens doors to your destined path',
+      'What you fight for or courageously defend IS aligned with your soul growth',
+      'Your passionate action serving higher purpose catalyzes important evolution',
+      'Destined conquest or achievement through bold courageous purposeful action'
+    ]
+  },
+
+  'Mars-North Node-Opposition': {
+    name: 'Mars Opposition North Node',
+    frequency: 'Occurs once every 2 years (conjunction to South Node)',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Action and desire pulled toward comfortable patterns vs. growth! Mars conjunct South Node opposes North Node, activating familiar drives, comfortable action patterns, past assertion styles. Challenge: Your energy may gravitate toward what\'s easy and familiar rather than growth-edge bold action. Opportunity: Recognize old action comfort zones, take courage from past, but ACT toward your destiny. Use familiar drive to FUEL new purposeful action. Balance action comfort with courageous growth-serving pursuit.',
+    loveRelationships: 'Romantic action pulled between comfortable and purposeful! Tension between familiar desire expression and growth-edge vulnerability in pursuit. Challenge: Acting on comfortable safe attractions vs. courageously pursuing what serves evolution. Opportunity: Use passion you have to EXPRESS new vulnerable authentic desires. Familiar romantic action is fine IF it leads to evolutionary bold pursuit. Balance ease with purposeful courage in love.',
+    familyHome: 'Family action between familiar and purposeful! Tension between comfortable domestic drive and growth-serving bold initiative at home. Challenge: Falling into familiar family action patterns that prevent evolution. Opportunity: Assert family needs that serve growth, not just comfortable peace. Use familiar family protective energy to BUILD new purposeful domestic action. Balance comfortable family assertion with bold purposeful home initiatives.',
+    businessCareer: 'Professional action between old patterns and destined direction! Tension between comfortable career drive and growth-edge bold professional initiative. Challenge: Relying on familiar career action vs. pursuing what your destiny requires courageously. Opportunity: Use professional drive you have to PURSUE new purpose-aligned career goals. Familiar career action serves evolution IF directed toward bold growth.',
+    moneyFinances: 'Financial action between comfortable and purposeful! Tension between familiar money drive and financial growth required for purpose. Challenge: Comfortable financial pursuit patterns that may limit evolution. Opportunity: Use past financial drive to FUEL new purpose-aligned bold money action. Familiar financial action fine IF supporting destined prosperity. Balance comfort with courageous growth.',
+    predictions: [
+      'Action comfort zone revealed - opportunity to act beyond familiar patterns courageously',
+      'Familiar drive or energy becomes fuel for NEW growth-edge bold initiative',
+      'Action challenge between what\'s easy and what serves your evolution courageously',
+      'Your comfortable drive can FUEL your destiny IF applied consciously and boldly',
+      'Action reveals old assertive pattern - opportunity to integrate and evolve courageously',
+      'What you already know how to do SUPPORTS what you need to pursue for soul growth',
+      'Familiar action style serves evolution when directed toward purposeful bold pursuit',
+      'Energy tension between comfort and growth creates opportunity for brave integration',
+      'Past action courage becomes fuel that POWERS your destined future bold moves',
+      'Balance comfortable drive with purposeful courageous pursuit of your growth edge'
+    ]
+  },
+
+  'Mars-North Node-Sextile': {
+    name: 'Mars Sextile North Node',
+    frequency: 'Occurs twice every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Opportunity for purposeful action and destined pursuit through initiative! Your drive harmonizes with soul\'s growth direction, creating potential for meaningful action, purposeful assertion, destined initiatives IF you take action boldly. Opportunities to act on purpose, pursue growth-aligned goals, assert soul truth appear - require courageous engagement. Perfect time: act purposefully and boldly, pursue destiny actively, assert authentic will deliberately. Success through courageous purposeful initiative.',
+    loveRelationships: 'Relationship opportunity for passionate purposeful pursuit through initiative! Potential for destined romantic action, bold love pursuit serving growth, passionate assertion supporting evolution IF you initiate courageously. Perfect time to pursue authentic romantic desires actively, take bold love action purposefully, assert relationship needs courageously. Romantic action serves soul growth IF pursued boldly. Initiative creates purposeful passionate connection.',
+    familyHome: 'Family opportunity for purposeful bold action through initiative! Potential for domestic action supporting growth, family assertion serving purpose, home improvements aligned with evolution IF you take action. Perfect time to initiate purposeful family action actively, assert domestic needs boldly, take home initiatives courageously. Family receptive to purposeful assertion IF initiated boldly.',
+    businessCareer: 'Career opportunity through purposeful bold action and initiative! Potential for professional advancement through meaningful drive, career-serving bold action, purposeful assertion IF you step forward courageously. Perfect time to pursue career goals actively, take bold professional action, assert career purpose. Purpose-aligned success available through courageous initiative.',
+    moneyFinances: 'Financial opportunity through purposeful bold action and drive! Potential for money growth through meaningful financial initiative, prosperity-supporting bold action, financial assertion serving evolution IF pursued courageously. Perfect time to take bold financial action actively, pursue money goals purposefully, assert financial needs. Prosperity through courageous purposeful initiative.',
+    predictions: [
+      'Action opportunity serving your soul purpose appears - courageous initiative required',
+      'Your purposeful bold initiative actively pursued attracts successful results',
+      'Chance to pursue something perfectly aligned with your growth IF acted upon courageously',
+      'Initiative you take courageously becomes catalyst for purposeful powerful progress',
+      'Opportunity to assert your authentic will appears - engage actively and boldly',
+      'Your purposeful action courageously taken serves collective evolution and your mission',
+      'Bold opportunity aligned with your destiny available through your courageous initiative',
+      'Initiative to act purposefully and boldly creates meaningful momentum and growth',
+      'Your active courageous pursuit of growth-supporting goal leads to breakthrough',
+      'Opportunity: soul growth through purposeful bold action and courageous initiative'
+    ]
+  },
+
+  'Mars-North Node-Trine': {
+    name: 'Mars Trine North Node',
+    frequency: 'Occurs twice every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Effortless purposeful action and destined drive! Your energy flows naturally toward soul purpose. Perfect time for natural bold action serving mission, pursuing destiny effortlessly, asserting soul truth naturally. What you desire and pursue naturally supports evolution. Drive flows purposefully. Action aligned with mission feels natural. Courageous purposeful initiative flows easily. Energy naturally serves growth. Natural warrior spirit aligned with destiny.',
+    loveRelationships: 'Natural passionate pursuit aligned with soul growth! Romantic desire and action flow toward purposeful authentic partnership naturally. Perfect time to pursue love naturally and boldly, take romantic action effortlessly serving evolution, assert authentic desires naturally. What you want romantically naturally serves your soul. Passionate pursuit flows purposefully. Sexual and romantic energy naturally aligned with destiny.',
+    familyHome: 'Natural purposeful family action and bold domestic initiative! Family action and home energy flow in support of soul mission naturally. Perfect time to take family action naturally and boldly, assert domestic needs effortlessly, initiate home improvements naturally serving evolution. Family protective energy naturally purposeful. Home action naturally supports mission. Domestic courage flows naturally.',
+    businessCareer: 'Natural career action serving purpose and bold professional drive! Professional energy and ambition flow toward mission naturally. Excellent time to pursue career goals naturally and boldly, take professional action effortlessly serving destiny, assert career purpose naturally. Career drive naturally aligned with soul mission. Professional warrior energy naturally purposeful. Bold career action flows naturally toward destined work.',
+    moneyFinances: 'Natural financial action serving purpose and bold prosperity drive! Money energy and financial ambition flow toward mission naturally. Perfect time for natural bold financial action, pursuing prosperity effortlessly aligned with purpose, asserting financial needs naturally. Financial drive naturally serves evolution. Money action naturally purposeful. Bold financial pursuit flows naturally toward destined abundance.',
+    predictions: [
+      'Your natural bold action effortlessly serves your soul purpose and mission',
+      'What you naturally desire and pursue turns out to perfectly support your destiny',
+      'Destined goal or initiative flows to you naturally through courageous action',
+      'Action opportunity perfectly aligned with your mission appears naturally',
+      'Your natural drive and energy lead you effortlessly to growth-supporting pursuits',
+      'Bold initiative you take naturally serves collective evolution and your purpose',
+      'Energy naturally directed toward purpose creates effortless purposeful momentum',
+      'What you naturally fight for or pursue courageously supports your soul growth',
+      'Natural warrior spirit and courageous action aligned perfectly with destiny',
+      'Perfect natural flow of purposeful action, bold initiative, destined achievement'
+    ]
+  },
+
+  'Mars-North Node-Square': {
+    name: 'Mars Square North Node',
+    frequency: 'Occurs twice every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Action and desire challenge forcing purposeful growth! Your drive squares both Nodes, creating friction between comfortable action patterns and growth-edge bold pursuit. Challenge forces evolution: take unfamiliar courageous action, pursue beyond comfort zone, assert what destiny requires. Friction reveals: where your drive limits growth, what bold action soul purpose needs. Growth opportunity: transform action patterns, embrace uncomfortable bold pursuit, act courageously beyond familiar. Action discomfort FORCES necessary evolution.',
+    loveRelationships: 'Love action challenges forcing passionate growth! Friction: comfortable romantic pursuit doesn\'t serve evolution, familiar desire expression limits soul growth. Challenge reveals: where you need bolder more purposeful romantic action, how old love pursuit patterns prevent authentic passion. Growth: take NEW bold love action beyond comfort, pursue uncomfortable authentic desires, assert relationship needs courageously serving evolution. Love friction FORCES passionate action evolution.',
+    familyHome: 'Family action friction forcing purposeful domestic evolution! Challenge: familiar family assertion doesn\'t support growth, comfortable home action limits soul purpose. Friction reveals: where family action needs bold transformation, what courageous home initiatives serve mission. Growth: take NEW bold family action beyond comfort, assert domestic needs courageously, initiate home improvements challenging comfort but serving evolution. Family friction FORCES action transformation.',
+    businessCareer: 'Professional action challenges forcing career evolution! Friction: comfortable career drive doesn\'t support destiny, familiar professional action limits purpose. Challenge reveals: where you need NEW bold career action, how old professional drive patterns prevent mission. Growth: take unfamiliar courageous career action, pursue destined work boldly beyond comfort, assert professional purpose courageously. Career friction FORCES purposeful action evolution.',
+    moneyFinances: 'Financial action friction forcing prosperity evolution! Challenge: comfortable money drive doesn\'t serve purpose, familiar financial action limits growth. Friction reveals: where financial drive needs bold transformation for destiny. Growth: take NEW courageous financial action beyond comfort, pursue prosperity boldly aligned with purpose, assert money needs courageously. Financial friction FORCES action evolution toward purpose-aligned abundance.',
+    predictions: [
+      'Action challenge forces you to pursue what your soul purpose actually requires courageously',
+      'Drive discomfort reveals where you need to take bold action beyond comfort patterns',
+      'Pursuit challenge that feels difficult IS exactly what your destiny needs boldly',
+      'Your familiar action pattern revealed as limiting - opportunity to evolve courageously',
+      'Uncomfortable bold action FORCES necessary growth beyond familiar comfortable drive',
+      'What you need to pursue feels challenging because it\'s your actual growth edge',
+      'Action friction reveals gap between comfortable drive and purposeful bold pursuit',
+      'Challenge to act differently and courageously FORCES soul-level action evolution',
+      'Uncomfortable bold initiative IS the exact action your purpose requires',
+      'Growth through taking NEW bold action and purposeful courageous pursuit beyond comfort'
+    ]
+  },
+
+  // MARS-SOUTH NODE ASPECTS (4 aspects - Opposition is Mars-North Node-Opposition)
+
+  'Mars-South Node-Conjunction': {
+    name: 'Mars Conjunction South Node',
+    frequency: 'Occurs once every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Comfortable familiar action patterns activated! Your drive easily accesses past assertion styles, old action patterns, familiar pursuit methods. This feels natural and easy - that\'s the challenge. Opportunity: Recognize which action patterns serve growth vs. keep you stuck in comfortable familiar drive. Use past warrior energy to FUEL new purposeful action, not just repeat comfortable pursuit. Your old courage is valuable IF directed toward evolution. Act forward using past drive, not backward into comfort.',
+    loveRelationships: 'Familiar comfortable romantic pursuit patterns! You easily fall into old desire expression, comfortable passion patterns, past romantic action styles. Opportunity: Notice which romantic action serves evolution vs. limits authentic bold love. Use familiar passion to FUEL new vulnerable authentic pursuit, not avoid growth-edge romantic action. Comfortable desire is fine IF it leads to evolutionary bold authentic passion. Act in love using past courage toward purpose.',
+    familyHome: 'Comfortable familiar family action and domestic drive! Old family assertion patterns and comfortable home action feel natural and easy. Opportunity: Recognize which family action serves collective evolution vs. maintains comfortable limitation. Use familiar family protective energy to FUEL new purposeful domestic action, not just repeat comfortable patterns. Past home action courage serves present IF directed consciously toward evolutionary family growth.',
+    businessCareer: 'Comfortable familiar professional action and career drive! Old career assertion patterns and comfortable professional drive come easily. Opportunity: Notice which professional action serves destined work vs. keeps you in comfortable limitation. Use career drive expertise to FUEL purpose-aligned bold action, not just repeat comfortable professional patterns. Familiar career action serves IF directed toward evolutionary destined work.',
+    moneyFinances: 'Comfortable familiar financial action and money drive! Old money pursuit patterns and comfortable financial drive flow easily. Opportunity: Recognize which financial action serves purposeful prosperity vs. maintains comfortable limitation. Use past financial drive to FUEL evolved bold money action aligned with purpose, not just repeat comfortable earning patterns. Familiar money action serves IF supporting evolutionary abundance.',
+    predictions: [
+      'Familiar action pattern or old drive resurfaces - use it to fuel growth, not escape',
+      'Comfortable way of acting feels easy - ensure it supports evolution, not stagnation',
+      'Past life warrior energy available - apply it to NEW purposeful bold action',
+      'Old action pattern or familiar pursuit - take the courage, release the comfortable limitation',
+      'Your comfortable drive becomes fuel for NEW bold action IF directed consciously',
+      'Familiar assertion style is fine IF it serves authentic purposeful bold pursuit',
+      'Past courage or old action energy can FUEL your destined future bold initiatives',
+      'Comfortable action comfort zone revealed - opportunity to integrate courage and evolve',
+      'What you already know how to do from past FUELS what you need to pursue forward',
+      'Use familiar action courage to take NEW bold initiatives serving soul growth'
+    ]
+  },
+
+  'Mars-South Node-Sextile': {
+    name: 'Mars Sextile South Node',
+    frequency: 'Occurs twice every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Opportunity to use past action mastery for growth through initiative! Your drive harmonizes with past courage, creating potential to apply old warrior energy purposefully, act using familiar patterns in NEW ways, pursue using past drive to BUILD future IF you take initiative boldly. Opportunity: Use comfortable action skills to SERVE North Node growth actively. Past courage available as resource - apply it forward deliberately and boldly. Success through consciously directing familiar drive toward evolution.',
+    loveRelationships: 'Relationship opportunity to use past passion for evolutionary love! Potential to apply familiar romantic action in NEW purposeful ways, use past desire courage to SERVE evolutionary bold authentic love IF you initiate. Perfect time to take romantic action courage and actively apply it to deeper soul-aligned passionate pursuit. Past love passion serves present growth IF used consciously to build forward boldly.',
+    familyHome: 'Family opportunity to apply past protective action for evolution! Potential to use familiar family assertion in NEW purposeful ways, direct past home action courage toward evolutionary family growth IF you take initiative. Perfect time to take family protective energy and actively create purposeful bold home environment. Past domestic action serves evolution IF directed consciously forward courageously.',
+    businessCareer: 'Career opportunity to apply past professional drive for destined work! Potential to use familiar career action in NEW purpose-aligned ways, direct professional drive expertise toward evolutionary bold career growth IF you step forward. Perfect time to take career action mastery and actively apply it to destined professional path boldly. Past professional drive serves future purpose IF used consciously and courageously.',
+    moneyFinances: 'Financial opportunity to use past money drive for purposeful prosperity! Potential to apply familiar financial action in NEW purpose-aligned ways, direct past money drive toward evolutionary bold prosperity IF pursued actively. Perfect time to take financial action courage and actively apply it to purpose-serving abundance boldly. Past money drive serves future prosperity IF directed consciously forward.',
+    predictions: [
+      'Past action mastery becomes resource for growth IF applied forward actively and boldly',
+      'Your comfortable drive actively directed toward new purpose creates powerful success',
+      'Opportunity to use familiar courage in NEW evolutionary bold ways appears',
+      'Past action courage applied to purposeful pursuit creates breakthrough momentum',
+      'Your initiative to apply old drive to new challenge creates bold achievement',
+      'Comfortable action skill becomes fuel for NEW purposeful bold initiative',
+      'Past warrior energy actively used to BUILD future growth creates meaningful bold progress',
+      'Your familiar drive consciously directed toward evolution serves soul mission courageously',
+      'Opportunity to share past action wisdom in service of others\' growth appears',
+      'Apply past courage and comfortable drive in service of North Node bold growth'
+    ]
+  },
+
+  'Mars-South Node-Trine': {
+    name: 'Mars Trine South Node',
+    frequency: 'Occurs twice every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Effortless access to past warrior mastery and comfortable drive! Your action flows naturally to familiar courage patterns, old drive, comfortable pursuit methods. This feels easy and powerful - be mindful of stagnation in comfort. Opportunity: Your past life warrior gifts are available - use them to BUILD toward North Node bold destiny, not as escape from growth-edge action. Familiar drive flows easily - apply it forward toward evolutionary bold purpose. Natural action comfort serves growth IF directed courageously beyond comfortable limitation.',
+    loveRelationships: 'Natural comfortable passion and familiar romantic action flowing easily! Past desire courage and comfortable love pursuit feel effortless and powerful. Opportunity: Enjoy passionate ease while ensuring action serves growth, not just comfortable familiar passion. Natural romantic drive is gift IF it fuels authentic vulnerable bold pursuit toward evolution. Use comfortable passion to BUILD purposeful intimacy, not maintain comfortable familiar romantic patterns. Balance ease with evolutionary bold depth.',
+    familyHome: 'Natural comfortable family assertion and familiar domestic action! Past family protective energy and comfortable home action flow effortlessly. Opportunity: Appreciate family action ease while directing drive toward collective evolution boldly. Comfortable domestic action is fine IF it supports purposeful growth beyond familiar. Natural family assertion serves IF leading family forward courageously, not keeping everyone stuck in comfortable familiar safe patterns.',
+    businessCareer: 'Natural professional action mastery and comfortable career drive! Familiar career assertion and comfortable professional drive flow effortlessly and powerfully. Opportunity: Your professional action mastery is gift - use it to BUILD destined bold career direction, not just repeat comfortable familiar work patterns. Natural career drive serves IF building toward purpose-aligned professional evolution courageously. Apply action expertise forward boldly, not in comfortable circles.',
+    moneyFinances: 'Natural comfortable financial drive and familiar money action! Past money action courage and comfortable financial drive flow easily. Opportunity: Financial drive wisdom from past is valuable - apply it to BUILD purposeful prosperity boldly, not maintain comfortable financial limitation. Natural money drive serves IF directed toward evolutionary abundance aligned with purpose. Use financial action mastery to grow toward destiny courageously, not stay stuck in comfortable familiar earning.',
+    predictions: [
+      'Past warrior mastery flows naturally to you - use it to BUILD bold future, not escape growth',
+      'Your comfortable drive easily accessible - apply it forward toward evolutionary bold purpose',
+      'Familiar action courage flows naturally - direct it toward purposeful bold pursuit',
+      'Natural easy drive is gift IF you consciously apply it to growth-edge bold action',
+      'Past courage surfaces easily - integrate it while moving forward toward bold destiny',
+      'Your action expertise comes naturally - use it as fuel for NEW purposeful bold development',
+      'Comfortable familiar drive flows easily - ensure it serves evolution, not stagnation',
+      'Natural courage and familiar action skills available - apply them to support North Node growth',
+      'Easy comfortable drive is fine IF directed consciously toward purposeful evolutionary bold action',
+      'Your past life warrior gifts naturally accessible - use them to serve destined bold future'
+    ]
+  },
+
+  'Mars-South Node-Square': {
+    name: 'Mars Square South Node',
+    frequency: 'Occurs twice every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, desire, energy, assertion, courage, passion, competition, and initiative. It\'s how you pursue what you want and express your will.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Action friction forcing release of comfortable familiar drive! Your action squares both Nodes, creating discomfort with old action patterns and challenge taking new bold unfamiliar action. Friction FORCES evolution: release limiting comfortable drive, take uncomfortable bold new action, pursue beyond familiar safe patterns. Challenge reveals: which comfortable action patterns actually limit growth. Growth: transform drive through necessary discomfort, embrace unfamiliar bold action, release old comfortable limitations. Action friction FORCES purposeful courageous evolution.',
+    loveRelationships: 'Romantic action friction forcing evolved bold passion! Discomfort with comfortable desire expression, challenge pursuing in familiar romantic ways. Friction reveals: old romantic action patterns that prevent soul growth and authentic bold passion. Growth: take NEW bold love action beyond comfort, pursue uncomfortable vulnerable authentic desires courageously, release limiting familiar safe romantic patterns. Love friction FORCES passionate action evolution toward authentic bold vulnerable partnership.',
+    familyHome: 'Family action friction forcing evolved bold domestic drive! Discomfort with familiar family assertion, challenge acting at home in comfortable old ways. Friction reveals: old family action patterns preventing collective evolution and authentic bold protection. Growth: take NEW bold family action beyond comfort, assert domestic needs courageously beyond familiar, release limiting comfortable safe family patterns. Family friction FORCES action evolution toward purposeful bold authentic family energy.',
+    businessCareer: 'Professional action friction forcing career evolution courageously! Discomfort with comfortable career drive, challenge with familiar professional action. Friction reveals: old career action patterns preventing destined work and authentic bold professional pursuit. Growth: take NEW bold professional action beyond comfort zone, embrace unfamiliar courageous career initiatives, release limiting comfortable safe professional patterns. Career friction FORCES action evolution toward purposeful bold destined work.',
+    moneyFinances: 'Financial action friction forcing prosperity evolution boldly! Discomfort with comfortable money drive, challenge with familiar financial action. Friction reveals: old money action patterns preventing purposeful abundance and authentic bold prosperity pursuit. Growth: take NEW bold financial action beyond comfort, embrace unfamiliar courageous money initiatives aligned with purpose, release limiting comfortable safe financial patterns. Financial friction FORCES action evolution toward purpose-aligned bold abundant prosperity.',
+    predictions: [
+      'Action discomfort with comfortable patterns reveals what you need to release for bold growth',
+      'Challenge to act differently feels uncomfortable because it\'s actual evolution requiring courage',
+      'Action friction FORCES you to pursue beyond familiar limiting comfortable safe patterns',
+      'Uncomfortable bold action challenge IS the exact courage evolution your soul needs',
+      'Old comfortable action pattern creates friction - signal to release and take new bold action',
+      'Your familiar comfortable drive challenged - opportunity to transform toward bold authenticity',
+      'Discomfort with past action style FORCES necessary bold authentic courageous expression',
+      'Action challenge reveals limiting comfort zone - embrace unfamiliar purposeful bold pursuit',
+      'Friction between old comfortable action and new bold action FORCES necessary transformation',
+      'Growth through releasing comfortable limiting action patterns and embracing evolutionary bold courage'
+    ]
   }
 
 };
