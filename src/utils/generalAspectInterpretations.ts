@@ -6008,6 +6008,262 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Deep transformational work on comfortable pattern - complete release for growth',
       'Rare generational cycle of profound elimination from past serving destined future'
     ]
+  },
+
+  // ============================================================================
+  // OUTER PLANETS SQUARE NODES ASPECTS
+  // Critical karmic crossroads - tension requiring conscious choice
+  // Planet squares BOTH Nodes simultaneously - neither destiny nor past feels comfortable
+  // ============================================================================
+
+  'Jupiter-North Node-Square': {
+    name: 'Jupiter Square North Node',
+    frequency: 'Occurs twice approximately every 12-13 years',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Growth friction forcing purposeful expansion evolution! Your expansion squares both Nodes, creating tension between comfortable growth patterns and growth-edge meaningful expansion. Challenge forces evolution: expand beyond familiar comfort, grow toward authentic purpose, find meaning serving destiny. Friction reveals: where growth patterns limit soul purpose, what expansion truly serves mission. Growth opportunity: transform expansion through necessary discomfort, embrace unfamiliar meaningful growth, expand purposefully. Expansion friction FORCES purposeful evolution.',
+    loveRelationships: 'Love expansion friction forcing purposeful relationship growth! Tension: comfortable romantic growth doesn\'t serve soul purpose, familiar love expansion limits evolutionary depth. Challenge reveals: where relationship expansion needs purposeful redirection, how comfortable love growth prevents authentic soul-aligned partnership. Growth: expand love BEYOND comfortable patterns toward purposeful authentic depth, grow relationships serving evolution. Love expansion friction FORCES purposeful romantic growth.',
+    familyHome: 'Family expansion friction forcing purposeful domestic growth! Challenge: comfortable family growth doesn\'t support soul mission, familiar home expansion limits evolutionary family connection. Friction reveals: where domestic expansion needs purposeful transformation, what family growth truly serves collective evolution. Growth: expand family life BEYOND comfort toward purposeful authentic connection, grow home serving mission. Family expansion friction FORCES purposeful growth.',
+    businessCareer: 'Career expansion friction forcing purposeful professional growth! Tension: comfortable career growth doesn\'t serve destiny, familiar professional expansion limits soul-aligned work. Challenge reveals: where career expansion needs purposeful redirection toward mission, how comfortable professional growth prevents destined work. Growth: expand career BEYOND familiar patterns toward purposeful authentic destined work. Career expansion friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial expansion friction forcing purposeful prosperity growth! Challenge: comfortable money growth doesn\'t serve soul purpose, familiar financial expansion limits evolutionary abundance. Friction reveals: where financial expansion needs purposeful transformation for destiny. Growth: expand prosperity BEYOND comfortable patterns toward purposeful authentic abundance aligned with mission. Financial expansion friction FORCES purposeful money evolution.',
+    predictions: [
+      'Growth challenge forces you to expand toward what soul purpose actually requires',
+      'Expansion friction reveals where comfortable growth limits authentic purposeful evolution',
+      'Opportunity that feels too comfortable ISN\'T aligned - seek meaningful purposeful growth',
+      'Your familiar expansion pattern revealed as limiting - evolve toward purposeful growth',
+      'Uncomfortable meaningful expansion FORCES necessary growth beyond familiar comfort',
+      'What you need to expand toward feels challenging because it\'s actual growth edge',
+      'Growth friction reveals gap between comfortable expansion and purposeful meaningful growth',
+      'Challenge to grow differently and meaningfully FORCES soul-level expansion evolution',
+      'Uncomfortable purposeful expansion IS the exact growth your soul requires',
+      'Evolution through expanding BEYOND comfortable patterns toward meaningful purposeful growth'
+    ]
+  },
+
+  'Jupiter-South Node-Square': {
+    name: 'Jupiter Square South Node',
+    frequency: 'Occurs twice approximately every 12-13 years',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Expansion friction forcing release of comfortable growth patterns! Your growth squares both Nodes, creating discomfort with old expansion patterns and challenge growing in new meaningful ways. Friction FORCES evolution: release limiting comfortable expansion, grow in unfamiliar purposeful directions, find meaning beyond familiar. Challenge reveals: which comfortable expansion patterns actually limit soul growth. Growth: transform expansion through necessary discomfort, embrace unfamiliar meaningful growth, release old comfortable limitations. Expansion friction FORCES purposeful evolution.',
+    loveRelationships: 'Love expansion friction forcing release of comfortable romantic growth! Discomfort with familiar relationship expansion, challenge growing love in comfortable old ways. Friction reveals: old romantic expansion patterns preventing soul growth and authentic meaningful love. Growth: expand love in NEW purposeful directions beyond comfort, grow relationships serving evolution not familiar patterns, release limiting comfortable romantic expansion. Love friction FORCES expansion evolution toward authentic purposeful partnership.',
+    familyHome: 'Family expansion friction forcing release of comfortable domestic growth! Discomfort with familiar family expansion, challenge growing home in comfortable old ways. Friction reveals: old family growth patterns preventing collective evolution and authentic meaningful connection. Growth: expand family in NEW purposeful directions beyond comfort, grow home serving evolution not familiar patterns, release limiting comfortable family expansion. Family friction FORCES growth evolution toward purposeful authentic family.',
+    businessCareer: 'Career expansion friction forcing release of comfortable professional growth! Discomfort with familiar career expansion, challenge growing professionally in comfortable old ways. Friction reveals: old career growth patterns preventing destined work and authentic meaningful professional development. Growth: expand career in NEW purposeful directions beyond comfort, grow professionally serving destiny not familiar patterns, release limiting comfortable career expansion. Career friction FORCES growth evolution toward purposeful destined work.',
+    moneyFinances: 'Financial expansion friction forcing release of comfortable money growth! Discomfort with familiar financial expansion, challenge growing prosperity in comfortable old ways. Friction reveals: old money growth patterns preventing purposeful abundance and authentic meaningful prosperity. Growth: expand finances in NEW purposeful directions beyond comfort, grow prosperity serving evolution not familiar patterns, release limiting comfortable financial expansion. Financial friction FORCES expansion evolution toward purposeful abundant prosperity.',
+    predictions: [
+      'Expansion discomfort reveals comfortable growth patterns that actually limit evolution',
+      'Challenge to grow differently feels uncomfortable because it requires releasing familiar',
+      'Growth friction FORCES you to expand beyond comfortable limiting familiar patterns',
+      'Uncomfortable meaningful growth challenge IS exactly what soul evolution needs',
+      'Old comfortable expansion pattern creates friction - release and grow in new directions',
+      'Your familiar comfortable growth challenged - opportunity to expand toward authenticity',
+      'Discomfort with past expansion style FORCES necessary purposeful meaningful growth',
+      'Expansion challenge reveals limiting comfort zone - embrace unfamiliar purposeful growth',
+      'Friction between old comfortable growth and new meaningful expansion FORCES transformation',
+      'Evolution through releasing comfortable limiting expansion and embracing purposeful growth'
+    ]
+  },
+
+  'Saturn-North Node-Square': {
+    name: 'Saturn Square North Node',
+    frequency: 'Occurs twice approximately every 18-19 years',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Discipline friction forcing purposeful mastery evolution! Your responsibility squares both Nodes, creating tension between comfortable discipline patterns and growth-edge purposeful mastery. Challenge forces evolution: accept new responsibilities serving destiny, build beyond familiar structures, master what soul purpose requires. Friction reveals: where discipline limits soul growth, what mastery truly serves mission. Growth opportunity: transform responsibility through necessary challenge, embrace unfamiliar purposeful discipline, mature toward destiny. Discipline friction FORCES purposeful karmic evolution.',
+    loveRelationships: 'Love responsibility friction forcing purposeful committed growth! Tension: comfortable relationship discipline doesn\'t serve soul purpose, familiar love responsibility limits evolutionary commitment. Challenge reveals: where relationship responsibility needs purposeful transformation, how comfortable love discipline prevents authentic soul-aligned mature partnership. Growth: accept NEW love responsibilities serving evolution beyond comfort, commit to relationships aligned with destiny. Love discipline friction FORCES purposeful mature partnership evolution.',
+    familyHome: 'Family responsibility friction forcing purposeful domestic mastery! Challenge: comfortable family discipline doesn\'t support soul mission, familiar home responsibility limits evolutionary family structure. Friction reveals: where domestic responsibility needs purposeful transformation, what family discipline truly serves collective evolution. Growth: accept NEW family responsibilities serving mission beyond comfort, build home structures aligned with purpose. Family responsibility friction FORCES purposeful domestic evolution.',
+    businessCareer: 'Career responsibility friction forcing purposeful professional mastery! Tension: comfortable career discipline doesn\'t serve destiny, familiar professional responsibility limits soul-aligned work mastery. Challenge reveals: where career responsibility needs purposeful redirection toward mission, how comfortable professional discipline prevents destined work. Growth: accept NEW career responsibilities serving destiny beyond familiar, master profession aligned with purpose. Career discipline friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial responsibility friction forcing purposeful prosperity mastery! Challenge: comfortable money discipline doesn\'t serve soul purpose, familiar financial responsibility limits evolutionary abundance. Friction reveals: where financial responsibility needs purposeful transformation for destiny. Growth: accept NEW financial responsibilities serving mission beyond comfort, master prosperity aligned with purpose. Financial discipline friction FORCES purposeful money evolution.',
+    predictions: [
+      'Responsibility challenge forces you to master what soul purpose actually requires',
+      'Discipline friction reveals where comfortable responsibility limits authentic purposeful growth',
+      'Limitation that feels frustrating IS teaching lesson essential for your destiny',
+      'Your familiar discipline pattern revealed as limiting - evolve toward purposeful mastery',
+      'Uncomfortable purposeful responsibility FORCES necessary maturity beyond familiar comfort',
+      'What you need to master feels challenging because it\'s actual karmic growth edge',
+      'Discipline friction reveals gap between comfortable responsibility and purposeful mastery',
+      'Challenge to build differently and purposefully FORCES soul-level discipline evolution',
+      'Uncomfortable purposeful responsibility IS the exact maturity your soul requires',
+      'Evolution through accepting NEW responsibilities serving destiny beyond comfortable patterns'
+    ]
+  },
+
+  'Saturn-South Node-Square': {
+    name: 'Saturn Square South Node',
+    frequency: 'Occurs twice approximately every 18-19 years',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Discipline friction forcing release of comfortable responsibility! Your structure squares both Nodes, creating discomfort with old discipline patterns and challenge mastering new purposeful ways. Friction FORCES evolution: release limiting comfortable structures, build in unfamiliar purposeful directions, master what destiny requires beyond familiar. Challenge reveals: which comfortable discipline patterns actually limit soul growth. Growth: transform responsibility through necessary discomfort, embrace unfamiliar purposeful mastery, release old structural limitations. Discipline friction FORCES purposeful karmic evolution.',
+    loveRelationships: 'Love responsibility friction forcing release of comfortable relationship discipline! Discomfort with familiar love responsibility, challenge committing in comfortable old ways. Friction reveals: old relationship discipline patterns preventing soul growth and authentic mature partnership. Growth: accept NEW love responsibilities beyond comfort serving evolution, commit to relationships in unfamiliar purposeful ways, release limiting comfortable romantic discipline. Love friction FORCES responsibility evolution toward authentic purposeful mature partnership.',
+    familyHome: 'Family responsibility friction forcing release of comfortable domestic discipline! Discomfort with familiar family responsibility, challenge building home in comfortable old ways. Friction reveals: old family discipline patterns preventing collective evolution and authentic purposeful structure. Growth: accept NEW family responsibilities beyond comfort, build home in unfamiliar purposeful ways serving evolution, release limiting comfortable family discipline. Family friction FORCES responsibility evolution toward purposeful authentic family structure.',
+    businessCareer: 'Career responsibility friction forcing release of comfortable professional discipline! Discomfort with familiar career responsibility, challenge mastering profession in comfortable old ways. Friction reveals: old career discipline patterns preventing destined work and authentic purposeful mastery. Growth: accept NEW career responsibilities beyond comfort, master profession in unfamiliar purposeful ways serving destiny, release limiting comfortable professional discipline. Career friction FORCES responsibility evolution toward purposeful destined work mastery.',
+    moneyFinances: 'Financial responsibility friction forcing release of comfortable money discipline! Discomfort with familiar financial responsibility, challenge mastering prosperity in comfortable old ways. Friction reveals: old money discipline patterns preventing purposeful abundance and authentic meaningful prosperity. Growth: accept NEW financial responsibilities beyond comfort, master prosperity in unfamiliar purposeful ways serving evolution, release limiting comfortable money discipline. Financial friction FORCES responsibility evolution toward purposeful abundant prosperity.',
+    predictions: [
+      'Responsibility discomfort reveals comfortable discipline patterns that actually limit growth',
+      'Challenge to build differently feels uncomfortable because it requires releasing familiar structures',
+      'Discipline friction FORCES you to master beyond comfortable limiting familiar responsibility',
+      'Uncomfortable purposeful mastery challenge IS exactly what karmic evolution needs',
+      'Old comfortable responsibility pattern creates friction - release and build in new directions',
+      'Your familiar comfortable discipline challenged - opportunity to master toward authenticity',
+      'Discomfort with past responsibility style FORCES necessary purposeful meaningful maturity',
+      'Discipline challenge reveals limiting comfort zone - embrace unfamiliar purposeful mastery',
+      'Friction between old comfortable responsibility and new purposeful mastery FORCES transformation',
+      'Evolution through releasing comfortable limiting discipline and embracing purposeful growth'
+    ]
+  },
+
+  'Uranus-North Node-Square': {
+    name: 'Uranus Square North Node',
+    frequency: 'Occurs twice approximately every 84 years (rare)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Revolutionary friction forcing purposeful liberation evolution! Your awakening squares both Nodes, creating tension between comfortable authenticity and growth-edge destined breakthrough. Challenge forces evolution: liberate toward authentic destiny, revolutionize beyond familiar freedom, break through toward purpose. Friction reveals: where revolution limits soul growth, what breakthrough truly serves mission. Growth opportunity: transform liberation through necessary challenge, embrace unfamiliar purposeful awakening, free yourself toward destiny. Revolutionary friction FORCES purposeful authentic evolution.',
+    loveRelationships: 'Love liberation friction forcing purposeful romantic awakening! Tension: comfortable relationship freedom doesn\'t serve soul purpose, familiar love revolution limits evolutionary authentic partnership. Challenge reveals: where romantic liberation needs purposeful transformation, how comfortable love freedom prevents destined soul-aligned authentic partnership. Growth: liberate love BEYOND comfortable freedom toward purposeful authentic vulnerable partnership serving evolution. Love revolution friction FORCES purposeful romantic awakening evolution.',
+    familyHome: 'Family liberation friction forcing purposeful domestic awakening! Challenge: comfortable family freedom doesn\'t support soul mission, familiar home revolution limits evolutionary authentic family connection. Friction reveals: where domestic liberation needs purposeful transformation, what family breakthrough truly serves collective evolution. Growth: revolutionize family BEYOND comfortable freedom toward purposeful authentic connection serving mission. Family awakening friction FORCES purposeful domestic evolution.',
+    businessCareer: 'Career liberation friction forcing purposeful professional awakening! Tension: comfortable career freedom doesn\'t serve destiny, familiar professional revolution limits soul-aligned authentic work. Challenge reveals: where career liberation needs purposeful redirection toward mission, how comfortable professional freedom prevents destined authentic work. Growth: revolutionize career BEYOND familiar freedom toward purposeful authentic destined work. Career awakening friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial liberation friction forcing purposeful prosperity awakening! Challenge: comfortable money freedom doesn\'t serve soul purpose, familiar financial revolution limits evolutionary authentic abundance. Friction reveals: where financial liberation needs purposeful transformation for destiny. Growth: revolutionize prosperity BEYOND comfortable freedom toward purposeful authentic abundance aligned with mission. Financial awakening friction FORCES purposeful money evolution.',
+    predictions: [
+      'Revolutionary challenge forces you to liberate toward what soul purpose actually requires',
+      'Liberation friction reveals where comfortable freedom limits authentic purposeful evolution',
+      'Breakthrough that feels too comfortable ISN\'T aligned - seek purposeful destined awakening',
+      'Your familiar revolution pattern revealed as limiting - evolve toward purposeful liberation',
+      'Uncomfortable purposeful awakening FORCES necessary freedom beyond familiar comfort',
+      'What you need to liberate toward feels challenging because it\'s actual growth edge',
+      'Revolutionary friction reveals gap between comfortable freedom and purposeful breakthrough',
+      'Challenge to revolutionize differently and purposefully FORCES soul-level liberation evolution',
+      'Uncomfortable purposeful breakthrough IS the exact awakening your soul requires',
+      'Evolution through liberating BEYOND comfortable patterns toward purposeful destined freedom'
+    ]
+  },
+
+  'Uranus-South Node-Square': {
+    name: 'Uranus Square South Node',
+    frequency: 'Occurs twice approximately every 84 years (rare)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Revolutionary friction forcing release of comfortable liberation! Your awakening squares both Nodes, creating discomfort with old freedom patterns and challenge liberating in new purposeful ways. Friction FORCES evolution: release limiting comfortable revolution, break free in unfamiliar purposeful directions, awaken toward destiny beyond familiar. Challenge reveals: which comfortable freedom patterns actually limit soul growth. Growth: transform liberation through necessary discomfort, embrace unfamiliar purposeful awakening, release old revolutionary limitations. Liberation friction FORCES purposeful authentic evolution.',
+    loveRelationships: 'Love liberation friction forcing release of comfortable romantic freedom! Discomfort with familiar relationship freedom, challenge liberating love in comfortable old ways. Friction reveals: old romantic revolution patterns preventing soul growth and authentic purposeful vulnerable partnership. Growth: liberate love in NEW purposeful directions beyond comfort, free relationships serving evolution not familiar patterns, release limiting comfortable romantic freedom. Love friction FORCES liberation evolution toward authentic purposeful vulnerable partnership.',
+    familyHome: 'Family liberation friction forcing release of comfortable domestic freedom! Discomfort with familiar family freedom, challenge revolutionizing home in comfortable old ways. Friction reveals: old family revolution patterns preventing collective evolution and authentic purposeful connection. Growth: liberate family in NEW purposeful directions beyond comfort, revolutionize home serving evolution not familiar patterns, release limiting comfortable family freedom. Family friction FORCES liberation evolution toward purposeful authentic family.',
+    businessCareer: 'Career liberation friction forcing release of comfortable professional freedom! Discomfort with familiar career freedom, challenge revolutionizing profession in comfortable old ways. Friction reveals: old career revolution patterns preventing destined work and authentic purposeful breakthrough. Growth: liberate career in NEW purposeful directions beyond comfort, revolutionize professionally serving destiny not familiar patterns, release limiting comfortable career freedom. Career friction FORCES liberation evolution toward purposeful destined authentic work.',
+    moneyFinances: 'Financial liberation friction forcing release of comfortable money freedom! Discomfort with familiar financial freedom, challenge revolutionizing prosperity in comfortable old ways. Friction reveals: old money revolution patterns preventing purposeful abundance and authentic meaningful prosperity. Growth: liberate finances in NEW purposeful directions beyond comfort, revolutionize prosperity serving evolution not familiar patterns, release limiting comfortable financial freedom. Financial friction FORCES liberation evolution toward purposeful abundant prosperity.',
+    predictions: [
+      'Liberation discomfort reveals comfortable freedom patterns that actually limit evolution',
+      'Challenge to revolutionize differently feels uncomfortable because it requires releasing familiar',
+      'Revolutionary friction FORCES you to break free beyond comfortable limiting familiar patterns',
+      'Uncomfortable purposeful awakening challenge IS exactly what soul evolution needs',
+      'Old comfortable freedom pattern creates friction - release and liberate in new directions',
+      'Your familiar comfortable revolution challenged - opportunity to awaken toward authenticity',
+      'Discomfort with past liberation style FORCES necessary purposeful meaningful breakthrough',
+      'Revolutionary challenge reveals limiting comfort zone - embrace unfamiliar purposeful freedom',
+      'Friction between old comfortable freedom and new purposeful liberation FORCES transformation',
+      'Evolution through releasing comfortable limiting revolution and embracing purposeful awakening'
+    ]
+  },
+
+  'Neptune-North Node-Square': {
+    name: 'Neptune Square North Node',
+    frequency: 'Occurs twice approximately every 164 years (extremely rare)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'s meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Spiritual friction forcing purposeful transcendence evolution! Your spirituality squares both Nodes, creating confusion between comfortable spirituality and growth-edge destined divine connection. Challenge forces evolution: transcend toward authentic destiny, dissolve boundaries serving purpose, connect to divine through discernment. Friction reveals: where spirituality limits soul growth through illusion, what transcendence truly serves mission. Growth opportunity: transform spirituality through necessary discernment, embrace unfamiliar purposeful divine connection, transcend toward destiny beyond spiritual bypass. Spiritual friction FORCES purposeful mystical evolution.',
+    loveRelationships: 'Love spirituality friction forcing purposeful soul-level connection! Tension: comfortable spiritual love doesn\'t serve soul purpose, familiar romantic transcendence limits evolutionary authentic divine partnership. Challenge reveals: where spiritual love needs purposeful discernment, how comfortable mystical romance prevents destined soul-aligned authentic vulnerable partnership. Growth: transcend love BEYOND comfortable spirituality toward purposeful authentic divine vulnerable partnership serving evolution. Love spirituality friction FORCES purposeful soul-level partnership evolution.',
+    familyHome: 'Family spirituality friction forcing purposeful divine domestic connection! Challenge: comfortable family spirituality doesn\'t support soul mission, familiar home transcendence limits evolutionary authentic family connection. Friction reveals: where domestic spirituality needs purposeful discernment, what family divine connection truly serves collective evolution. Growth: transcend family BEYOND comfortable spirituality toward purposeful authentic divine connection serving mission. Family spirituality friction FORCES purposeful domestic evolution.',
+    businessCareer: 'Career spirituality friction forcing purposeful divine professional calling! Tension: comfortable spiritual career doesn\'t serve destiny, familiar professional transcendence limits soul-aligned authentic compassionate work. Challenge reveals: where career spirituality needs purposeful discernment toward mission, how comfortable spiritual work prevents destined authentic calling. Growth: transcend career BEYOND familiar spirituality toward purposeful authentic divine destined work. Career spirituality friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial spirituality friction forcing purposeful divine prosperity! Challenge: comfortable spiritual money doesn\'t serve soul purpose, familiar financial transcendence limits evolutionary authentic abundance. Friction reveals: where financial spirituality needs purposeful discernment for destiny. Growth: transcend prosperity BEYOND comfortable spirituality toward purposeful authentic divine abundance aligned with mission. Financial spirituality friction FORCES purposeful money evolution.',
+    predictions: [
+      'Spiritual challenge forces you to discern what divine connection actually serves purpose',
+      'Spirituality friction reveals where comfortable transcendence limits through illusion',
+      'Mystical experience requiring discernment - spiritual bypass vs. authentic divine connection',
+      'Your familiar spirituality pattern revealed as potentially illusory - evolve toward authentic',
+      'Uncomfortable purposeful divine connection FORCES necessary discernment beyond spiritual bypass',
+      'What needs spiritual discernment feels challenging because it reveals comfortable illusion',
+      'Spirituality friction reveals gap between comfortable transcendence and purposeful divine truth',
+      'Challenge to transcend with discernment FORCES soul-level spiritual evolution beyond bypass',
+      'Uncomfortable purposeful spirituality IS the exact divine connection your soul requires',
+      'Evolution through discerning authentic divine connection from comfortable spiritual escapism'
+    ]
+  },
+
+  'Neptune-South Node-Square': {
+    name: 'Neptune Square South Node',
+    frequency: 'Occurs twice approximately every 164 years (extremely rare)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Spiritual friction forcing release of comfortable transcendence illusion! Your spirituality squares both Nodes, creating discomfort with old mystical patterns and challenge connecting divinely in new authentic ways. Friction FORCES evolution: release limiting comfortable spiritual bypass, transcend in unfamiliar authentic directions, connect to divine with discernment beyond familiar. Challenge reveals: which comfortable spirituality patterns are actually illusions limiting soul growth. Growth: transform transcendence through necessary discernment, embrace unfamiliar authentic divine connection, release old spiritual limitations and illusions. Spirituality friction FORCES purposeful mystical evolution.',
+    loveRelationships: 'Love spirituality friction forcing release of comfortable romantic illusion! Discomfort with familiar spiritual love, challenge transcending romance in comfortable illusory ways. Friction reveals: old spiritual romantic patterns preventing soul growth through escapism and illusion. Growth: transcend love in NEW authentic directions beyond spiritual bypass, connect romantically through divine discernment not familiar illusion, release limiting comfortable romantic spiritual escapism. Love friction FORCES transcendence evolution toward authentic purposeful divine vulnerable partnership.',
+    familyHome: 'Family spirituality friction forcing release of comfortable domestic illusion! Discomfort with familiar family spirituality, challenge transcending home in comfortable illusory ways. Friction reveals: old family spiritual patterns preventing collective evolution through escapism. Growth: transcend family in NEW authentic directions beyond spiritual bypass, connect with family through divine discernment not familiar illusion, release limiting comfortable family spiritual escapism. Family friction FORCES transcendence evolution toward purposeful authentic divine family.',
+    businessCareer: 'Career spirituality friction forcing release of comfortable professional illusion! Discomfort with familiar spiritual career, challenge transcending profession in comfortable illusory ways. Friction reveals: old career spiritual patterns preventing destined work through escapism. Growth: transcend career in NEW authentic directions beyond spiritual bypass, work through divine discernment not familiar illusion, release limiting comfortable career spiritual escapism. Career friction FORCES transcendence evolution toward purposeful authentic divine destined work.',
+    moneyFinances: 'Financial spirituality friction forcing release of comfortable prosperity illusion! Discomfort with familiar spiritual money, challenge transcending prosperity in comfortable illusory ways. Friction reveals: old financial spiritual patterns preventing purposeful abundance through escapism. Growth: transcend finances in NEW authentic directions beyond spiritual bypass, prosper through divine discernment not familiar illusion, release limiting comfortable financial spiritual escapism. Financial friction FORCES transcendence evolution toward purposeful authentic divine abundant prosperity.',
+    predictions: [
+      'Spirituality discomfort reveals comfortable transcendence patterns that are actually illusions',
+      'Challenge to discern authentic divine connection feels uncomfortable - releasing spiritual bypass',
+      'Spiritual friction FORCES you to transcend beyond comfortable illusory familiar patterns',
+      'Uncomfortable authentic divine connection challenge IS exactly what soul evolution needs',
+      'Old comfortable spiritual pattern creates friction - illusion revealed requiring discernment',
+      'Your familiar comfortable spirituality challenged - opportunity to connect divinely with authenticity',
+      'Discomfort with past transcendence style FORCES necessary authentic meaningful divine connection',
+      'Spiritual challenge reveals limiting illusion - embrace unfamiliar authentic divine truth',
+      'Friction between comfortable spiritual bypass and authentic divine connection FORCES transformation',
+      'Evolution through releasing comfortable spiritual illusions and embracing authentic transcendence'
+    ]
+  },
+
+  'Pluto-North Node-Square': {
+    name: 'Pluto Square North Node',
+    frequency: 'Occurs twice approximately every 247 years (extremely rare)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Transformation friction forcing purposeful metamorphosis evolution! Your power squares both Nodes, creating intense tension between comfortable transformation and growth-edge destined death-rebirth. Challenge forces evolution: transform toward authentic destiny, die-rebirth serving purpose, integrate shadow aligned with mission. Friction reveals: where transformation limits soul growth, what metamorphosis truly serves destiny. Growth opportunity: transform completely through necessary intensity, embrace unfamiliar purposeful shadow work, rebirth toward mission. Transformation friction FORCES purposeful profound evolution.',
+    loveRelationships: 'Love transformation friction forcing purposeful intimate metamorphosis! Tension: comfortable relationship transformation doesn\'t serve soul purpose, familiar love death-rebirth limits evolutionary authentic soul-level partnership. Challenge reveals: where intimate transformation needs purposeful shadow work, how comfortable love metamorphosis prevents destined soul-aligned authentic vulnerable partnership. Growth: transform love BEYOND comfortable death-rebirth toward purposeful authentic profound vulnerable partnership serving evolution. Love transformation friction FORCES purposeful intimate evolution.',
+    familyHome: 'Family transformation friction forcing purposeful domestic metamorphosis! Challenge: comfortable family transformation doesn\'t support soul mission, familiar home death-rebirth limits evolutionary authentic family connection. Friction reveals: where domestic transformation needs purposeful shadow work, what family metamorphosis truly serves collective evolution. Growth: transform family BEYOND comfortable death-rebirth toward purposeful authentic profound connection serving mission. Family transformation friction FORCES purposeful domestic evolution.',
+    businessCareer: 'Career transformation friction forcing purposeful professional metamorphosis! Tension: comfortable career transformation doesn\'t serve destiny, familiar professional death-rebirth limits soul-aligned authentic powerful work. Challenge reveals: where career transformation needs purposeful shadow work toward mission, how comfortable professional metamorphosis prevents destined authentic work. Growth: transform career BEYOND familiar death-rebirth toward purposeful authentic profound destined work. Career transformation friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial transformation friction forcing purposeful prosperity metamorphosis! Challenge: comfortable money transformation doesn\'t serve soul purpose, familiar financial death-rebirth limits evolutionary authentic abundance. Friction reveals: where financial transformation needs purposeful shadow work for destiny. Growth: transform prosperity BEYOND comfortable death-rebirth toward purposeful authentic profound abundance aligned with mission. Financial transformation friction FORCES purposeful money evolution.',
+    predictions: [
+      'Transformation challenge forces you to die-rebirth toward what soul purpose actually requires',
+      'Power friction reveals where comfortable metamorphosis limits authentic purposeful evolution',
+      'Shadow work that feels too intense IS necessary for your destined profound transformation',
+      'Your familiar transformation pattern revealed as limiting - evolve toward purposeful metamorphosis',
+      'Uncomfortable purposeful death-rebirth FORCES necessary profound change beyond familiar comfort',
+      'What you need to transform feels challenging because it\'s actual deep growth edge',
+      'Transformation friction reveals gap between comfortable change and purposeful profound metamorphosis',
+      'Challenge to transform profoundly and purposefully FORCES soul-level death-rebirth evolution',
+      'Uncomfortable purposeful metamorphosis IS the exact transformation your soul requires',
+      'Evolution through transforming BEYOND comfortable patterns toward purposeful destined rebirth'
+    ]
+  },
+
+  'Pluto-South Node-Square': {
+    name: 'Pluto Square South Node',
+    frequency: 'Occurs twice approximately every 247 years (extremely rare)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Transformation friction forcing release of comfortable metamorphosis! Your power squares both Nodes, creating discomfort with old transformation patterns and challenge dying-rebirthing in new profound ways. Friction FORCES evolution: release limiting comfortable death-rebirth, transform in unfamiliar purposeful directions, integrate shadow toward destiny beyond familiar. Challenge reveals: which comfortable transformation patterns actually limit soul growth. Growth: metamorphose through necessary intense discomfort, embrace unfamiliar purposeful profound shadow work, release old transformational limitations completely. Transformation friction FORCES purposeful profound evolution.',
+    loveRelationships: 'Love transformation friction forcing release of comfortable intimate metamorphosis! Discomfort with familiar relationship transformation, challenge dying-rebirthing love in comfortable old ways. Friction reveals: old intimate transformation patterns preventing soul growth through comfortable but limiting metamorphosis. Growth: transform love in NEW profound directions beyond comfort, die-rebirth relationships serving evolution not familiar patterns, release limiting comfortable romantic transformation completely. Love friction FORCES transformation evolution toward authentic purposeful profound vulnerable soul-level partnership.',
+    familyHome: 'Family transformation friction forcing release of comfortable domestic metamorphosis! Discomfort with familiar family transformation, challenge dying-rebirthing home in comfortable old ways. Friction reveals: old family transformation patterns preventing collective evolution through comfortable but limiting metamorphosis. Growth: transform family in NEW profound directions beyond comfort, die-rebirth home serving evolution not familiar patterns, release limiting comfortable family transformation completely. Family friction FORCES transformation evolution toward purposeful authentic profound powerful family.',
+    businessCareer: 'Career transformation friction forcing release of comfortable professional metamorphosis! Discomfort with familiar career transformation, challenge dying-rebirthing profession in comfortable old ways. Friction reveals: old career transformation patterns preventing destined work through comfortable but limiting metamorphosis. Growth: transform career in NEW profound directions beyond comfort, die-rebirth professionally serving destiny not familiar patterns, release limiting comfortable career transformation completely. Career friction FORCES transformation evolution toward purposeful authentic profound destined powerful work.',
+    moneyFinances: 'Financial transformation friction forcing release of comfortable prosperity metamorphosis! Discomfort with familiar financial transformation, challenge dying-rebirthing prosperity in comfortable old ways. Friction reveals: old money transformation patterns preventing purposeful abundance through comfortable but limiting metamorphosis. Growth: transform finances in NEW profound directions beyond comfort, die-rebirth prosperity serving evolution not familiar patterns, release limiting comfortable financial transformation completely. Financial friction FORCES transformation evolution toward purposeful authentic profound abundant powerful prosperity.',
+    predictions: [
+      'Transformation discomfort reveals comfortable metamorphosis patterns that actually limit evolution',
+      'Challenge to transform profoundly feels uncomfortable - releasing familiar comfortable death-rebirth',
+      'Transformation friction FORCES you to die-rebirth beyond comfortable limiting familiar patterns',
+      'Uncomfortable purposeful profound metamorphosis challenge IS exactly what soul evolution needs',
+      'Old comfortable transformation pattern creates friction - release completely and transform in new directions',
+      'Your familiar comfortable metamorphosis challenged - opportunity to transform toward authentic power',
+      'Discomfort with past transformation style FORCES necessary purposeful profound meaningful shadow work',
+      'Transformation challenge reveals limiting comfort zone - embrace unfamiliar purposeful profound rebirth',
+      'Friction between comfortable familiar metamorphosis and purposeful profound transformation FORCES evolution',
+      'Evolution through releasing comfortable limiting transformation and embracing purposeful profound rebirth'
+    ]
   }
 
 };
