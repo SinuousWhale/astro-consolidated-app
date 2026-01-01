@@ -279,8 +279,7 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Eclipse sextile = OPPORTUNITY through action',
       'Conscious communication brings breakthrough!'
     ]
-  }
-,
+  },
 
   // VENUS ECLIPSE ASPECTS
   'Venus-Conjunction': {
@@ -406,8 +405,7 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Eclipse sextile = OPPORTUNITY through heart action',
       'Conscious love and value choices bring blessings!'
     ]
-  }
-,
+  },
 
   // MARS ECLIPSE ASPECTS
   'Mars-Conjunction': {
@@ -533,7 +531,7 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Eclipse sextile = OPPORTUNITY through courageous action',
       'Conscious bold choices activate warrior spirit!'
     ]
-,
+  },
 
   // JUPITER ECLIPSE ASPECTS
   'Jupiter-Conjunction': {
@@ -659,8 +657,7 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Eclipse sextile = OPPORTUNITY through optimistic action',
       'Conscious growth choices activate blessings!'
     ]
-  }
-,
+  },
 
   // SATURN ECLIPSE ASPECTS
   'Saturn-Conjunction': {
