@@ -3187,6 +3187,651 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Powerful communication you risk with authenticity creates transformative results',
       'Opportunity for mental transformation through focused depth work and strategic initiative'
     ]
+  },
+
+  // ============================================================================
+  // VENUS-JUPITER ASPECTS (Love expansion and abundant attraction)
+  // ============================================================================
+
+  'Venus-Jupiter-Conjunction': {
+    name: 'Venus Conjunction Jupiter',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Love and abundance merge with joyful expansion! Venus\'s affection combines with Jupiter\'s generosity, creating abundant love, optimistic relationships, expanded beauty and pleasure. Perfect time for romance, socializing, enjoying life, expressing generosity, attracting abundance. Love feels expansive and generous. Beauty and joy multiply. Excellent for celebrations, artistic expression, romantic adventures, financial growth. Warning: avoid excess or overindulgence - balance enjoyment with moderation. Overall: love and luck flow abundantly.',
+    loveRelationships: 'Relationship love expands with abundant joy! Romance feels generous, optimistic, and blessed. Perfect time for romantic adventures, expressing love abundantly, taking relationship to next level, celebrating love together. Attraction intensifies positively. Good time for romantic travel, lavish romantic gestures, optimistic relationship discussions. New love may blossom. Warning: avoid over-promising or excessive romantic idealism - balance enthusiasm with realism.',
+    familyHome: 'Family love and home joy expand abundantly! Perfect time for family celebrations, generous family expressions, beautifying home lavishly, enjoying family togetherness. Home feels abundant and joyful. Good time for family gatherings, expressing family generosity, creating beautiful family memories. Family relationships deepen through shared joy. Warning: avoid family overindulgence or excessive family spending.',
+    businessCareer: 'Professional success and career growth expand! Excellent time for career advancement, professional recognition, beneficial professional networking, successful professional ventures. Work feels rewarding and abundant. Good time for professional celebrations, generous professional gestures, expanding professional opportunities. Your professional value recognized and rewarded. Warning: avoid professional overconfidence or unrealistic career expectations.',
+    moneyFinances: 'Financial abundance and money luck expand! Money flows more easily and abundantly. Good time for wise financial growth, beneficial investments, generous giving, attracting financial opportunity. Financial optimism justified but verify details. Excellent for expanding income, enjoying financial blessings, sharing financial abundance. Warning: avoid financial overindulgence or excessive spending - enjoy abundance while maintaining financial wisdom.',
+    predictions: [
+      'Abundant love or financial blessing flows to you naturally and joyfully',
+      'Your generous expression of affection attracts reciprocal love and appreciation',
+      'Romantic opportunity appears that feels blessed and genuinely promising',
+      'Social event or celebration you attend creates joyful beneficial connections',
+      'Artistic or creative expression you share receives enthusiastic warm response',
+      'Financial opportunity you pursue with optimism succeeds and rewards you well',
+      'Your joyful generous energy attracts abundant positive opportunities',
+      'Beautiful experience or pleasure you enjoy multiplies your joy and gratitude',
+      'Relationship deepens through shared celebration, adventure, or generosity',
+      'Opportunity for abundant love, beauty, and prosperity through joyful generous expression'
+    ]
+  },
+
+  'Venus-Jupiter-Opposition': {
+    name: 'Venus Opposition Jupiter',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Tension between love and excess requiring balance! Venus\'s pleasure faces Jupiter\'s expansion, creating tendency toward overindulgence, unrealistic romantic expectations, or excessive spending. Challenge is enjoying abundance while maintaining healthy limits. Risk of romantic idealization, financial extravagance, or seeking too much pleasure. Resistance to limits creates problems; conscious moderation creates sustainable joy. Integration of enjoyment and wisdom needed. Balance pleasure with responsibility.',
+    loveRelationships: 'Relationship tension between romance and reality! Love may feel either excessively idealized or disappointingly limited. Tendency toward unrealistic romantic expectations or fear relationship can\'t meet your needs. Challenge is balancing romantic idealism with realistic love appreciation. Good time to examine romantic expectations, practice grateful love while maintaining healthy standards. Integrate romantic dreams with relationship reality.',
+    familyHome: 'Family tension between generosity and boundaries! Home life requires balancing family generosity with healthy family limits. Tendency toward family overindulgence or resentment about family demands. Challenge is expressing family love generously while maintaining sustainable family boundaries. Good time to balance family giving with family receiving, integrate family joy with family responsibility.',
+    businessCareer: 'Professional tension between ambition and satisfaction! Career requires balancing professional growth desires with current professional appreciation. Tendency toward unrealistic career expectations or settling for less than you deserve. Challenge is pursuing career growth while valuing current professional blessings. Good time to balance career ambition with career gratitude, integrate professional expansion with professional contentment.',
+    moneyFinances: 'Financial tension between abundance and excess! Money requires balancing financial enjoyment with financial responsibility. Tendency toward overspending or excessive financial restriction. Challenge is enjoying financial blessings while maintaining financial wisdom. Good time to balance financial pleasure with financial prudence, integrate financial abundance mindset with practical financial management.',
+    predictions: [
+      'Overindulgence you moderate consciously prevents later regret or consequence',
+      'Your unrealistic expectation examined honestly becomes wise balanced hope',
+      'Tension between desire and reality forces gratitude for actual blessings',
+      'Excessive spending or giving you balance creates sustainable generosity',
+      'Romantic idealization you temper with reality creates authentic appreciation',
+      'Challenge between wanting more and enjoying what you have produces contentment',
+      'Financial excess you moderate wisely prevents financial problems later',
+      'Relationship expectation you adjust realistically strengthens actual love',
+      'You learn to balance joyful abundance with wise healthy boundaries',
+      'Opportunity to integrate abundant enjoyment with wise moderation and balance'
+    ]
+  },
+
+  'Venus-Jupiter-Trine': {
+    name: 'Venus Trine Jupiter',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Love and abundance flow naturally with joyful grace! Venus\'s affection harmonizes beautifully with Jupiter\'s generosity, creating effortless love expansion, natural financial abundance, and graceful beautiful experiences. Perfect time for romance, socializing, artistic expression, attracting blessings. Love and luck flow without excess. Beauty and joy multiply naturally. Excellent for celebrations, relationships, creative work, wise financial growth. Enjoyment and wisdom balance perfectly. Blessings feel deserved and sustainable.',
+    loveRelationships: 'Relationship love flows with natural abundant joy! Romance feels generous, blessed, and beautifully expansive effortlessly. Perfect time for romantic adventures flowing smoothly, expressing love generously naturally, celebrating relationship joyfully. Deep appreciation and attraction flow without trying. Good time for romantic travel, meaningful romantic gestures, relationship growth through shared joy. Love feels both abundant and authentic.',
+    familyHome: 'Family love and home beauty flow abundantly and naturally! Perfect time for joyful family gatherings, beautifying home easily, generous family expressions flowing smoothly. Home feels blessed and harmonious naturally. Good time for family celebrations, creating beautiful family memories effortlessly, enjoying family togetherness. Family love expands gracefully and sustainably.',
+    businessCareer: 'Professional success and recognition flow naturally! Excellent time for career advancement flowing smoothly, beneficial professional networking naturally, professional value recognized effortlessly. Work feels rewarding and blessed without struggle. Good time for professional opportunities appearing naturally, successful professional ventures, expanding career gracefully. Your professional worth appreciated and rewarded naturally.',
+    moneyFinances: 'Financial abundance and wise growth flow naturally! Money opportunities appear effortlessly and succeed smoothly. Good time for wise investments flowing naturally, financial blessings arriving gracefully, generous giving flowing from abundance. Financial growth feels natural and sustainable. Excellent for attracting income effortlessly, enjoying financial blessings wisely, sharing abundance generously. Prosperity and wisdom align beautifully.',
+    predictions: [
+      'Abundant blessing flows to you naturally and feels deserved and joyful',
+      'Your generous affection naturally attracts reciprocal love and appreciation',
+      'Romantic opportunity appears effortlessly and feels genuinely promising and blessed',
+      'Social connection or celebration creates joyful meaningful relationship naturally',
+      'Artistic expression you share resonates widely and brings joyful success',
+      'Financial opportunity flows to you naturally and succeeds smoothly',
+      'Your joyful energy effortlessly attracts abundant positive opportunities',
+      'Beautiful experience you enjoy naturally multiplies joy and deepens gratitude',
+      'Relationship deepens naturally through shared celebration, joy, and appreciation',
+      'Opportunity for love, beauty, and abundance flows naturally through joyful generous grace'
+    ]
+  },
+
+  'Venus-Jupiter-Square': {
+    name: 'Venus Square Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Growth through excess and overindulgence requiring conscious moderation! Venus\'s pleasure clashes with Jupiter\'s expansion, creating tendency toward overindulgence, wasteful spending, or unrealistic romantic expectations. Challenge is channeling joy into sustainable pleasure rather than excessive consumption. Tension between enjoying life and maintaining balance. Risk of romantic idealization, financial extravagance, or pleasure-seeking without limits. Crisis teaches moderation. Conscious wisdom transforms excess into sustainable abundant joy.',
+    loveRelationships: 'Relationship friction through romantic excess or unrealistic expectations! Love may involve overidealization, excessive romantic demands, or disappointment from unrealistic hopes. Tendency toward romantic extravagance or feeling relationship never enough. Challenge is expressing love generously while maintaining realistic expectations. Good time to consciously moderate romantic idealization, balance romantic enthusiasm with honest appreciation. Crisis teaches sustainable realistic love. Transform excess into wise affection.',
+    familyHome: 'Family friction through overindulgence or excessive demands! Home life may involve family extravagance, unrealistic family expectations, or resentment about family boundaries. Tendency toward spoiling family or feeling family never appreciates enough. Challenge is expressing family love while maintaining healthy family limits. Good time to consciously balance family generosity with family boundaries. Crisis teaches sustainable family love. Transform family excess into wise family affection.',
+    businessCareer: 'Professional friction through unrealistic ambition or overconfidence! Career may involve overestimating opportunities, unrealistic professional expectations, or professional extravagance. Tendency toward professional overconfidence or feeling undervalued professionally. Challenge is pursuing career growth while maintaining realistic professional assessment. Good time to consciously balance career ambition with career realism. Crisis teaches wise professional growth. Transform professional excess into sustainable career expansion.',
+    moneyFinances: 'Financial friction through overspending or unrealistic expectations! Money may involve excessive spending, financial overextension, or unrealistic financial hopes. Tendency toward financial extravagance or feeling money never enough. Challenge is enjoying financial abundance while maintaining financial responsibility. Good time to consciously moderate spending, balance financial optimism with financial wisdom. Crisis teaches sustainable prosperity. Transform financial excess into wise abundant financial management.',
+    predictions: [
+      'Overindulgence you consciously moderate before consequences teaches wise pleasure',
+      'Your unrealistic expectation you adjust realistically creates sustainable satisfaction',
+      'Excessive spending you catch and correct prevents financial problems and regret',
+      'Romantic idealization you temper consciously creates authentic appreciation',
+      'Tendency to want more you balance with gratitude produces contentment',
+      'Extravagant gesture you moderate wisely becomes meaningful sustainable generosity',
+      'Financial overextension you address early prevents larger financial crisis',
+      'Professional overconfidence you moderate creates realistic successful advancement',
+      'You learn that sustainable joy requires wisdom, not just endless excess',
+      'Opportunity to transform excessive desires into wise sustainable abundant joy'
+    ]
+  },
+
+  'Venus-Jupiter-Sextile': {
+    name: 'Venus Sextile Jupiter',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Opportunity for love and abundance through joyful initiative! Venus\'s affection harmonizes with Jupiter\'s generosity, creating potential for romantic expansion, financial growth, and beautiful experiences IF you take action. Opportunities for love, prosperity, and joy appear - but require your engagement. Perfect time to pursue romance actively, express generosity, create beauty, take social initiative. Success through joyful action. Passive approach wastes potential; active joyful engagement creates blessings.',
+    loveRelationships: 'Relationship opportunity for abundant love through initiative! Potential for romantic growth, joyful connection, relationship expansion IF you initiate. Perfect time to plan romantic adventure actively, express love generously, suggest meaningful celebration. Opportunity for deepening love through shared joy IF you take the lead. Initiative in generous affection creates relationship blessings. Active engagement brings romantic abundance.',
+    familyHome: 'Family opportunity for joyful connection through initiative! Potential for family celebration, home beautification, generous family expressions IF you initiate. Perfect time to suggest family gathering actively, beautify home with effort, express family generosity. Family receptive to joyful initiatives IF you present them. Initiative in family love creates family harmony and joy. Active engagement brings family blessings.',
+    businessCareer: 'Professional opportunity for growth through initiative! Potential for career advancement, professional recognition, beneficial networking IF you take action. Perfect time to pursue professional opportunities actively, express professional value, expand professional connections. Recognition available IF you step forward with confidence. Initiative in professional excellence creates career blessings. Active engagement brings professional abundance.',
+    moneyFinances: 'Financial opportunity for growth through wise initiative! Potential for income increase, beneficial investments, financial expansion IF you pursue it actively. Perfect time to explore income opportunities, make wise financial moves, express financial confidence. Financial growth available through knowledgeable action. Initiative in wise financial strategies creates prosperity. Active engagement brings financial abundance.',
+    predictions: [
+      'Opportunity for love or abundance appears - seize it actively for joyful results',
+      'Your initiative to express affection or generosity attracts reciprocal blessings',
+      'Chance for romantic connection or adventure succeeds IF you pursue it actively',
+      'Social or creative initiative you take creates joyful beneficial outcomes',
+      'Financial opportunity you pursue with confidence produces rewarding results',
+      'Opportunity to beautify or enhance your life appears - action required to actualize',
+      'Your active generosity or kindness creates unexpected positive ripple effects',
+      'Celebration or joy you initiate actively brings people together meaningfully',
+      'Initiative in expressing your values attracts aligned abundant opportunities',
+      'Opportunity for love, beauty, and prosperity through joyful generous initiative'
+    ]
+  },
+
+  // ============================================================================
+  // VENUS-SATURN ASPECTS (Love maturity and committed values)
+  // ============================================================================
+
+  'Venus-Saturn-Conjunction': {
+    name: 'Venus Conjunction Saturn',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Love and values become serious, committed, and enduring! Venus\'s affection merges with Saturn\'s commitment, creating mature love, serious relationships, and enduring values. Perfect time for relationship commitments, serious love discussions, building lasting beauty, valuing quality over quantity. Love feels deep and responsible. Relationships mature. Excellent for long-term relationship planning, commitment ceremonies, creating enduring art, wise financial planning. May feel emotionally reserved - but builds lasting foundation. Depth over superficiality.',
+    loveRelationships: 'Relationship love becomes serious and committed! Romance feels mature, realistic, and deeply committed. Perfect time for serious relationship discussions, making relationship commitments, addressing relationship responsibilities, planning long-term future together. Love deepens through mutual responsibility. Good time for engagement, marriage planning, addressing relationship challenges honestly, building lasting relationship foundation. Commitment over casual romance.',
+    familyHome: 'Family love and home become structured and responsible! Perfect time for serious family commitments, addressing family responsibilities, creating lasting family structure, investing in home quality. Home feels stable and mature. Good time for family duty fulfillment, important family discussions, building enduring family legacy, making wise home investments. Responsibility and family depth emphasized.',
+    businessCareer: 'Professional values and work become disciplined and committed! Excellent time for demonstrating professional commitment, building lasting professional reputation, making wise career investments, valuing professional quality. Work feels serious and meaningful. Good time for professional commitments, long-term career planning, demonstrating professional maturity, building enduring professional excellence. Mastery and professional depth valued.',
+    moneyFinances: 'Financial values become serious and disciplined! Good time for serious financial planning, wise long-term investments, financial commitment and responsibility, valuing financial quality and security. Financial approach becomes conservative and mature. Excellent for building lasting financial foundation, addressing financial responsibilities, making serious financial commitments, investing in enduring financial security. Discipline creates lasting prosperity.',
+    predictions: [
+      'Serious relationship commitment you make proves enduring and deeply meaningful',
+      'Your mature responsible approach to love attracts genuine lasting connection',
+      'Financial discipline you practice builds solid foundation for future security',
+      'Important commitment you make carefully proves wise and enduringly valuable',
+      'Relationship challenge you address honestly strengthens bond permanently',
+      'Quality investment you make in beauty or value proves lastingly worthwhile',
+      'Your demonstration of loyalty and commitment earns deep respect and trust',
+      'Serious love conversation you have creates lasting understanding and clarity',
+      'Responsible choice you make about values proves wise over time',
+      'Opportunity to build lasting love, beauty, and value through committed mature effort'
+    ]
+  },
+
+  'Venus-Saturn-Opposition': {
+    name: 'Venus Opposition Saturn',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Tension between love and limitation requiring integration! Venus\'s pleasure faces Saturn\'s restriction, creating emotional coldness, relationship obstacles, or feelings of unworthiness. Challenge is honoring both love\'s need for warmth AND relationship\'s need for commitment. Risk of emotional withdrawal, fear of rejection, or excessive relationship duty. Resistance to commitment creates loneliness; excessive duty stifles joy. Integration of love and responsibility needed. Balance creates mature sustainable affection.',
+    loveRelationships: 'Relationship tension between love and fear! Romance may feel blocked, rejected, or burdened by duty. Fear of vulnerability or commitment versus need for connection. Partner may seem cold or overly demanding. Challenge is expressing authentic affection while honoring relationship responsibilities. Good time to work through fear of rejection, balance relationship freedom with relationship commitment, practice vulnerable committed love. Integration of warmth and maturity.',
+    familyHome: 'Family tension between love and duty! Home life requires balancing family affection with family responsibilities. May feel family duty overwhelms family joy or family coldness blocks connection. Challenge is expressing family love while fulfilling family obligations. Good time to balance family warmth with family responsibility, work through family emotional blocks, integrate family joy with family duty.',
+    businessCareer: 'Professional tension between values and limitations! Career requires balancing professional values with professional constraints or demands. May feel undervalued professionally or professional duty overwhelming. Challenge is honoring your professional worth while meeting professional responsibilities. Good time to balance professional satisfaction with professional duty, address professional worth issues, integrate professional joy with professional commitment.',
+    moneyFinances: 'Financial tension between pleasure and restriction! Money requires balancing financial enjoyment with financial responsibility or limitations. May feel financially deprived or financially burdened. Challenge is enjoying financial resources while maintaining financial discipline. Good time to balance financial pleasure with financial responsibility, work through scarcity fears, integrate financial joy with financial wisdom.',
+    predictions: [
+      'Emotional block or fear you work through consciously opens path to mature love',
+      'Your fear of rejection you face courageously allows authentic vulnerable connection',
+      'Relationship obstacle forces you to clarify commitment level and emotional needs',
+      'Financial limitation teaches you to value quality and appreciate what you have',
+      'Feeling of unworthiness you address heals and allows receiving deserved love',
+      'Challenge between duty and joy resolved through conscious integration',
+      'Cold period in relationship you navigate patiently leads to deeper commitment',
+      'Responsibility you accept while maintaining self-love creates sustainable balance',
+      'You learn to balance authentic emotional warmth with mature responsibility',
+      'Opportunity to integrate love and limitation through patient mature commitment'
+    ]
+  },
+
+  'Venus-Saturn-Trine': {
+    name: 'Venus Trine Saturn',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Love and commitment flow naturally with mature grace! Venus\'s affection harmonizes beautifully with Saturn\'s commitment, creating effortless mature love, natural lasting relationships, and graceful enduring values. Perfect time for relationship commitments flowing smoothly, demonstrating love through reliability, creating lasting beauty naturally. Love and responsibility balance perfectly without heaviness. Commitment feels natural and joyful. Excellent for serious relationship steps, enduring artistic creation, wise financial decisions. Maturity and affection unite beautifully.',
+    loveRelationships: 'Relationship love flows with natural commitment and maturity! Romance feels both warm and reliable, joyful and committed effortlessly. Perfect time for relationship commitments made naturally, demonstrating love through consistent actions, building lasting relationship foundation smoothly. Deep affection and responsibility combine without conflict. Good time for engagement flowing naturally, addressing relationship realities comfortably, expressing committed love. Maturity and warmth balanced perfectly.',
+    familyHome: 'Family love and responsibility flow naturally together! Perfect time for family commitments made comfortably, demonstrating family love through reliability, creating lasting family structure naturally. Home feels both warm and stable effortlessly. Good time for family obligations met joyfully, important family planning flowing smoothly, building enduring family legacy naturally. Family duty and family affection unite beautifully.',
+    businessCareer: 'Professional values and commitment flow naturally! Excellent time for demonstrating professional excellence effortlessly, building lasting professional reputation naturally, making wise career commitments smoothly. Professional worth recognized and rewarded naturally. Good time for career advancement through reliability, professional maturity demonstrated gracefully, long-term professional success building naturally. Quality work flows with natural discipline.',
+    moneyFinances: 'Financial wisdom and value flow naturally! Good time for wise financial decisions made comfortably, building lasting financial security naturally, demonstrating financial discipline effortlessly. Financial stability and financial enjoyment balance perfectly. Excellent for long-term investments flowing smoothly, financial planning coming naturally, creating enduring prosperity wisely. Financial maturity feels natural and rewarding.',
+    predictions: [
+      'Relationship commitment you make naturally proves enduring and deeply fulfilling',
+      'Your reliable demonstration of love naturally strengthens bond and deepens trust',
+      'Financial decision you make wisely builds lasting security and proves valuable',
+      'Quality investment in beauty or value you make naturally proves worthwhile',
+      'Mature approach to love you take naturally attracts genuine committed connection',
+      'Responsibility you accept comfortably creates stable foundation for lasting joy',
+      'Your consistent loyalty naturally earns deep respect and reciprocal commitment',
+      'Serious conversation flows naturally and creates lasting understanding',
+      'Wise choice about values you make comfortably proves beneficial over time',
+      'Opportunity for lasting love and value through natural mature committed grace'
+    ]
+  },
+
+  'Venus-Saturn-Square': {
+    name: 'Venus Square Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Growth through love obstacles and feelings of unworthiness requiring courage! Venus\'s affection clashes with Saturn\'s limitation, creating emotional blocks, fear of rejection, or feelings of being unlovable. Challenge is pushing through fear to receive deserved love. Tendency toward emotional withdrawal, self-denial of pleasure, or excessive relationship duty. Crisis forces development of self-worth and mature love capacity. Conscious courage transforms fear into worthy authentic mature affection.',
+    loveRelationships: 'Relationship friction through fear or emotional blocks! Love may feel blocked, rejected, or burdened by excessive duty. Fear of vulnerability or feelings of unworthiness block connection. Challenge is risking emotional openness despite fear of rejection. Good time to consciously work through love fears, address feelings of unworthiness, practice vulnerable despite fear. Crisis teaches emotional courage. Persistence through fear builds capacity for mature authentic love.',
+    familyHome: 'Family friction through duty or emotional coldness! Home life may feel emotionally restricted, burdened by family duty, or blocked by family coldness. Feelings of family unworthiness or excessive family obligation. Challenge is expressing family affection despite family emotional blocks. Good time to consciously work through family fears, balance family duty with family warmth, address family worth issues. Crisis forces family emotional growth.',
+    businessCareer: 'Professional friction through feeling undervalued or blocked! Career may feel limited, underappreciated, or burdened by professional duty. Feelings of professional unworthiness or blocked professional advancement. Challenge is asserting professional worth despite professional obstacles. Good time to consciously address professional worth, work through career blocks, balance professional duty with professional satisfaction. Crisis teaches professional self-worth.',
+    moneyFinances: 'Financial friction through scarcity or restriction! Money may feel limited, blocked, or burdened by financial duty. Feelings of financial unworthiness or excessive financial restriction. Challenge is valuing yourself financially despite financial blocks. Good time to consciously work through scarcity mentality, address financial worth issues, balance financial discipline with financial enjoyment. Crisis develops financial self-worth and discipline.',
+    predictions: [
+      'Emotional block or rejection you face courageously teaches self-worth and resilience',
+      'Your fear of vulnerability you push through consciously opens path to authentic love',
+      'Feeling of unworthiness you address directly heals and allows receiving deserved affection',
+      'Financial limitation you navigate builds appreciation and wise financial discipline',
+      'Love obstacle you work through patiently strengthens commitment and maturity',
+      'Duty that feels burdensome you reframe creates meaningful contribution',
+      'Fear of rejection you face anyway develops emotional courage and authenticity',
+      'You learn that you are worthy of love despite fears or past rejections',
+      'Financial or emotional restriction you work through builds lasting inner worth',
+      'Opportunity to transform fear and unworthiness into mature worthy authentic love'
+    ]
+  },
+
+  'Venus-Saturn-Sextile': {
+    name: 'Venus Sextile Saturn',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Opportunity for lasting love through committed initiative! Venus\'s affection harmonizes with Saturn\'s commitment, creating potential for mature relationships, enduring values, and lasting beauty IF you take action. Opportunities for serious relationship steps, wise financial decisions, quality investments appear - but require your effort. Perfect time to pursue committed love actively, demonstrate reliability, invest in quality. Success through mature initiative. Passive approach wastes potential; active committed effort creates enduring results.',
+    loveRelationships: 'Relationship opportunity for lasting commitment through initiative! Potential for serious relationship deepening, meaningful commitment, mature love IF you initiate. Perfect time to suggest commitment actively, demonstrate love through reliable actions, address relationship future seriously. Opportunity for enduring relationship through committed action IF you take the step. Initiative in mature reliable love creates lasting bond.',
+    familyHome: 'Family opportunity for lasting structure through initiative! Potential for important family commitments, enduring family planning, stable home foundation IF you initiate. Perfect time to suggest family commitments actively, invest in home quality, create family structure. Family receptive to responsible initiatives IF you present them thoughtfully. Initiative in family reliability creates lasting family harmony.',
+    businessCareer: 'Professional opportunity for lasting advancement through committed initiative! Potential for career growth through demonstrated reliability, professional commitment, quality work IF you take action. Perfect time to demonstrate professional excellence actively, make career commitments, invest in professional quality. Recognition available IF you step forward with mature competence. Initiative in professional reliability creates lasting career success.',
+    moneyFinances: 'Financial opportunity for lasting security through wise initiative! Potential for financial growth through wise planning, quality investments, financial discipline IF you pursue it actively. Perfect time to make wise financial commitments, invest in quality and value, practice financial discipline actively. Financial security available through committed action. Initiative in wise financial management creates lasting prosperity.',
+    predictions: [
+      'Opportunity for serious relationship step appears - pursue it actively for lasting bond',
+      'Your initiative to demonstrate reliable love strengthens commitment and trust',
+      'Chance to make wise financial investment succeeds IF you pursue it actively',
+      'Quality over quantity choice you make actively proves valuable over time',
+      'Opportunity for lasting commitment appears - initiative required to actualize',
+      'Responsible action you take actively creates stable foundation for enduring joy',
+      'Your active demonstration of loyalty earns deep respect and reciprocal commitment',
+      'Wise investment in beauty or value you make actively proves worthwhile',
+      'Initiative in mature love or values you take creates meaningful lasting results',
+      'Opportunity for enduring love and prosperity through committed mature initiative'
+    ]
+  },
+
+  // ============================================================================
+  // VENUS-URANUS ASPECTS (Love liberation and authentic attraction)
+  // ============================================================================
+
+  'Venus-Uranus-Conjunction': {
+    name: 'Venus Conjunction Uranus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Love awakens with electric authentic attraction! Venus\'s affection merges with Uranus\'s liberation, creating sudden romantic breakthroughs, unconventional relationships, and authentic attraction. Perfect time for exciting new love, refreshing existing relationships, expressing unique values, liberating artistic expression. Love feels electric and free. Attraction to the unusual. Excellent for authentic self-expression, unconventional beauty, freedom in love, innovative art. May bring sudden relationship changes - embrace authentic evolution. Excitement over predictability.',
+    loveRelationships: 'Relationship love becomes electric and liberating! Romance feels exciting, unconventional, and authentically free. Perfect time for sudden romantic attraction, refreshing relationship through innovation, expressing authentic self in love, trying new relationship approaches. Sudden romantic breakthroughs or changes possible. Good time for honest authentic love, unconventional romance, freedom within relationship, exciting romantic adventures. Liberation from limiting relationship patterns.',
+    familyHome: 'Family love and home become innovative and liberating! Perfect time for refreshing family relationships through honesty, embracing family uniqueness, trying unconventional home approaches, expressing authentic family values. Home feels fresh and free. Good time for innovative home improvements, progressive family communication, celebrating family individuality, breaking limiting family patterns. Liberation in family love.',
+    businessCareer: 'Professional values become innovative and authentic! Excellent time for unconventional career moves, expressing unique professional values, innovative professional approaches, authentic professional self-expression. Work feels exciting and liberating. Good time for creative professional breakthroughs, progressive professional values, authentic professional identity, innovative artistic work. Your unique professional approach attracts recognition.',
+    moneyFinances: 'Financial values become innovative and liberating! Good time for unconventional income opportunities, innovative financial approaches, expressing unique financial values, financial liberation. Financial approach becomes progressive and original. Excellent for exploring innovative income, breaking limiting financial patterns, valuing financial freedom, unexpected financial opportunities. Liberation from conventional financial thinking.',
+    predictions: [
+      'Sudden exciting romantic attraction appears that feels authentic and liberating',
+      'Your authentic unique self-expression attracts genuine aligned connection',
+      'Unexpected relationship breakthrough liberates you from limiting pattern',
+      'Innovation or change you embrace in love creates refreshing exciting energy',
+      'Financial opportunity through unconventional channel appears unexpectedly',
+      'Your expression of authentic values attracts like-minded exciting people',
+      'Sudden change in relationship or values leads to greater authentic freedom',
+      'Unconventional approach to beauty or love you try succeeds brilliantly',
+      'Liberating choice in relationship you make courageously proves right',
+      'Opportunity for electric authentic love and liberation through honest unique expression'
+    ]
+  },
+
+  'Venus-Uranus-Opposition': {
+    name: 'Venus Opposition Uranus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Tension between stability and freedom in love requiring integration! Venus\'s harmony faces Uranus\'s disruption, creating relationship unpredictability, sudden attractions or separations, or conflict between security and excitement. Challenge is honoring both connection AND freedom. Risk of relationship instability, sudden breakups, or choosing chaos over commitment. Resistance to change creates stagnation; excessive change destroys connection. Integration of stability and authenticity needed. Balance creates dynamic sustainable love.',
+    loveRelationships: 'Relationship tension between commitment and freedom! Love requires balancing togetherness with independence. Partner may seem unpredictable or relationship feels restricting. Sudden romantic disruptions or unexpected attractions possible. Challenge is honoring both connection AND authentic freedom needs. Good time to renegotiate relationship freedom, integrate stability with excitement, address relationship authenticity. Balance needed between security and liberation.',
+    familyHome: 'Family tension between tradition and freedom! Home life requires balancing family connection with individual freedom. Sudden family disruptions or family members seeking independence. Challenge is honoring both family bonds AND individual authenticity. Good time to integrate family stability with family freedom, allow family individuality while maintaining connection. Balance needed between family security and family liberation.',
+    businessCareer: 'Professional tension between stability and innovation! Career requires balancing professional security with authentic professional expression. Sudden professional changes or tension between conventional and unique professional approaches. Challenge is honoring both career stability AND authentic professional values. Good time to integrate professional security with professional authenticity. Balance needed between career safety and career freedom.',
+    moneyFinances: 'Financial tension between security and freedom! Money requires balancing financial stability with financial innovation or freedom. Sudden financial changes or tension between conventional and unconventional financial approaches. Challenge is honoring both financial security AND financial freedom needs. Good time to integrate financial stability with financial innovation. Balance needed between financial safety and financial liberation.',
+    predictions: [
+      'Relationship disruption forces you to balance authentic freedom with genuine connection',
+      'Your need for both security and excitement requires conscious integration',
+      'Sudden change in relationship or finances teaches importance of balance',
+      'Tension between stability and freedom resolved through conscious negotiation',
+      'Unexpected attraction or disruption reveals what needs to evolve in relationships',
+      'You learn to maintain connection while honoring authentic individual freedom',
+      'Financial or romantic instability teaches value of balancing security with innovation',
+      'Challenge between predictability and excitement creates dynamic sustainable approach',
+      'Sudden change you initially resist ultimately creates healthier balance',
+      'Opportunity to integrate commitment and freedom through conscious balanced evolution'
+    ]
+  },
+
+  'Venus-Uranus-Trine': {
+    name: 'Venus Trine Uranus',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Love and freedom flow naturally with exciting authentic grace! Venus\'s affection harmonizes beautifully with Uranus\'s liberation, creating effortless romantic excitement, natural authentic attraction, and graceful innovative beauty. Perfect time for exciting love flowing smoothly, refreshing relationships naturally, expressing unique values effortlessly. Love and freedom balance perfectly. Attraction feels both exciting and comfortable. Excellent for unconventional romance, authentic self-expression, innovative art, liberated pleasure. Excitement enhances rather than threatens connection.',
+    loveRelationships: 'Relationship love flows with natural excitement and authenticity! Romance feels both thrilling and comfortable, free and connected effortlessly. Perfect time for exciting romantic adventures flowing naturally, refreshing relationship spontaneously, expressing authentic self in love easily. Freedom and intimacy balance beautifully. Good time for trying new relationship experiences naturally, honest authentic communication flowing smoothly, exciting romantic spontaneity. Electric connection without disruption.',
+    familyHome: 'Family love and freedom flow naturally together! Perfect time for exciting family experiences flowing smoothly, refreshing family relationships naturally, expressing authentic family individuality comfortably. Home feels both stable and exciting effortlessly. Good time for innovative home improvements flowing easily, progressive family communication naturally, celebrating family uniqueness joyfully. Family freedom and family connection unite beautifully.',
+    businessCareer: 'Professional values and innovation flow naturally! Excellent time for exciting career opportunities appearing naturally, expressing unique professional values effortlessly, innovative professional approaches succeeding smoothly. Professional authenticity and professional success align perfectly. Good time for unconventional career moves flowing naturally, creative professional breakthroughs, authentic professional self-expression attracting recognition naturally.',
+    moneyFinances: 'Financial innovation and prosperity flow naturally! Good time for unexpected income opportunities appearing smoothly, innovative financial approaches succeeding naturally, financial freedom and financial security balancing perfectly. Financial breakthroughs flow effortlessly. Excellent for unconventional income flowing naturally, wise innovative financial decisions, progressive financial approaches proving successful. Abundance through authentic innovation.',
+    predictions: [
+      'Exciting romantic opportunity appears naturally and feels both thrilling and right',
+      'Your authentic unique expression naturally attracts aligned exciting connection',
+      'Unexpected blessing or opportunity flows to you effortlessly through being yourself',
+      'Relationship refreshes naturally through spontaneous exciting shared experience',
+      'Financial breakthrough appears unexpectedly and succeeds smoothly',
+      'Your innovation or unique approach naturally attracts recognition and success',
+      'Exciting change flows naturally and enhances rather than disrupts your life',
+      'Authentic self-expression you risk effortlessly attracts positive response',
+      'Freedom and connection balance perfectly in relationship naturally',
+      'Opportunity for exciting authentic love and liberation flowing naturally through genuine grace'
+    ]
+  },
+
+  'Venus-Uranus-Square': {
+    name: 'Venus Square Uranus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Growth through relationship disruption and restless freedom-seeking requiring conscious choice! Venus\'s harmony clashes with Uranus\'s rebellion, creating sudden relationship upsets, impulsive attractions, or restless dissatisfaction with status quo. Challenge is channeling freedom needs into conscious evolution rather than destructive rebellion. Tendency toward relationship chaos, impulsive breakups, or sabotaging stability for novelty. Crisis forces conscious choice between authentic freedom and destructive disruption. Awareness transforms restlessness into conscious liberation.',
+    loveRelationships: 'Relationship friction through disruption or restless freedom-seeking! Love may feel suddenly disrupted, impulsively changing, or suffocatingly restrictive. Tendency toward sudden attractions, impulsive relationship decisions, or sabotaging stable love for excitement. Challenge is consciously addressing authentic freedom needs without destructive chaos. Good time to consciously examine what truly needs changing versus fear of intimacy. Crisis teaches difference between authentic liberation and avoidance. Transform impulsive disruption into conscious relationship evolution.',
+    familyHome: 'Family friction through disruption or rebellion! Home life may feel suddenly chaotic, restrictively conventional, or impulsively changing. Tendency toward family disruptions, rebellious family behavior, or rejecting family stability for freedom. Challenge is consciously expressing family authenticity without destructive family disruption. Good time to consciously address real family limitations versus rebellion against connection. Crisis forces conscious family evolution. Transform family rebellion into authentic family freedom.',
+    businessCareer: 'Professional friction through disruption or restless change! Career may feel suddenly unstable, restrictively conventional, or impulsively changing. Tendency toward sudden career changes, sabotaging professional stability, or rebellious professional behavior. Challenge is consciously pursuing authentic professional freedom without destructive professional chaos. Good time to consciously examine what truly needs professional evolution versus fear of professional commitment. Crisis teaches wise professional innovation.',
+    moneyFinances: 'Financial friction through impulsive disruption! Money may feel suddenly unstable or restrictively limited. Tendency toward impulsive financial decisions, sudden financial disruptions, or rebellious financial behavior. Challenge is consciously pursuing financial freedom without destructive financial chaos. Good time to consciously address real financial limitations versus impulsive financial rebellion. Crisis teaches wise financial innovation. Transform financial impulsiveness into conscious financial liberation.',
+    predictions: [
+      'Sudden relationship disruption forces you to examine authentic freedom needs versus fear',
+      'Your restless dissatisfaction reveals what truly needs conscious evolution not destruction',
+      'Impulsive attraction or decision you moderate consciously prevents later regret',
+      'Sudden upset you navigate awareness reveals authentic need requiring honest address',
+      'Tendency to sabotage stability you recognize consciously transforms into wise change',
+      'Financial or romantic impulsiveness you moderate creates conscious beneficial innovation',
+      'Crisis forces you to distinguish authentic liberation from destructive disruption',
+      'You learn that real freedom comes through conscious choice not reactive rebellion',
+      'Relationship or value challenge you address consciously creates authentic evolution',
+      'Opportunity to transform restless disruption into conscious authentic liberation'
+    ]
+  },
+
+  'Venus-Uranus-Sextile': {
+    name: 'Venus Sextile Uranus',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Opportunity for exciting authentic love through liberating initiative! Venus\'s affection harmonizes with Uranus\'s freedom, creating potential for romantic excitement, authentic attraction, liberating self-expression IF you take action. Opportunities for unconventional love, innovative beauty, refreshing connections appear - but require your courage. Perfect time to try new approaches in love actively, express unique values boldly, pursue authentic connections. Success through courageous authenticity. Passive approach wastes potential; active authentic engagement creates exciting results.',
+    loveRelationships: 'Relationship opportunity for exciting renewal through initiative! Potential for romantic adventure, refreshing connection, authentic deepening IF you initiate. Perfect time to suggest spontaneous romantic experience actively, try new relationship approach courageously, express authentic self boldly in relationship. Opportunity for exciting breakthrough through honest initiative IF you risk authenticity. Initiative in authentic freedom-honoring love creates exciting connection.',
+    familyHome: 'Family opportunity for refreshing connection through initiative! Potential for family liberation, innovative family experiences, authentic family expression IF you initiate. Perfect time to suggest progressive family activity actively, try unconventional family approach, express authentic family individuality. Family receptive to honest innovative initiatives IF you present them courageously. Initiative in authentic family freedom creates positive family evolution.',
+    businessCareer: 'Professional opportunity for innovative breakthrough through initiative! Potential for exciting career advancement, unconventional professional success, authentic professional expression IF you take action. Perfect time to try innovative professional approach actively, express unique professional values boldly, pursue unconventional career opportunity. Recognition available IF you step forward authentically and courageously. Initiative in professional authenticity creates exciting career breakthrough.',
+    moneyFinances: 'Financial opportunity for innovative income through initiative! Potential for unexpected financial gain, unconventional income, financial liberation IF you pursue it actively. Perfect time to explore innovative income opportunities courageously, try progressive financial approaches, express authentic financial values. Financial breakthrough available through innovative action. Initiative in authentic financial innovation creates unexpected prosperity.',
+    predictions: [
+      'Opportunity for exciting love or connection appears - pursue it actively for thrilling results',
+      'Your initiative to express authentic unique self attracts aligned exciting people',
+      'Chance for refreshing relationship breakthrough succeeds IF you take the risk actively',
+      'Unconventional approach to love or beauty you try courageously works wonderfully',
+      'Opportunity for financial innovation appears - initiative required to actualize',
+      'Your authentic bold self-expression attracts unexpected positive recognition',
+      'Spontaneous romantic or social initiative you take creates exciting meaningful connection',
+      'Innovation you pursue actively creates refreshing beneficial change',
+      'Your courageous honest expression liberates and attracts authentic connection',
+      'Opportunity for exciting authentic love and liberation through courageous innovative initiative'
+    ]
+  },
+
+  // ============================================================================
+  // VENUS-NEPTUNE ASPECTS (Transcendent and unconditional love)
+  // ============================================================================
+
+  'Venus-Neptune-Conjunction': {
+    name: 'Venus Conjunction Neptune',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Love dissolves into transcendent divine beauty! Venus\'s affection merges with Neptune\'s spirituality, creating soul-level romantic connection, unconditional love, and transcendent beauty appreciation. Perfect time for spiritual romantic love, artistic inspiration, compassionate connection, idealizing love and beauty. Love feels mystical and boundless. Beauty becomes divine. Excellent for romantic idealism, spiritual love, artistic creation, compassionate giving. Warning: maintain discernment - distinguish genuine soul connection from projection or illusion. Verify reality while honoring magic.',
+    loveRelationships: 'Relationship love becomes transcendent and soul-connected! Romance feels mystical, compassionate, and divinely inspired. Perfect time for soul-level romantic connection, expressing unconditional love, romantic idealism, spiritual intimacy. Love transcends ordinary boundaries. Good time for romantic fantasy, forgiving love, compassionate understanding, connecting through shared spirituality. Warning: see partner clearly while honoring divine connection - balance romantic idealization with relationship reality.',
+    familyHome: 'Family love becomes unconditional and compassionate! Perfect time for forgiving family wounds, expressing unconditional family love, compassionate family understanding, spiritual family connection. Home becomes sanctuary. Good time for creating beautiful home sanctuary, compassionate family forgiveness, artistic family expression, dissolving family boundaries through love. Warning: maintain healthy family boundaries while expressing family compassion.',
+    businessCareer: 'Professional values become inspired and compassionate! Excellent time for artistic career work, compassionate professional expression, inspired professional vision, spiritual career pursuits. Work becomes inspired and meaningful. Good time for creative industries, helping professions, spiritual career work, artistic professional expression. Warning: verify professional reality while following professional inspiration - balance vision with practical professional clarity.',
+    moneyFinances: 'Financial values become idealistic and spiritual! Good time for trusting divine financial abundance, generous financial giving, valuing spiritual over material, inspired financial intuition. Financial approach becomes idealistic. Warning: financial confusion possible through unclear thinking or wishful financial fantasy - verify all financial details carefully while honoring financial faith. Balance financial idealism with financial reality.',
+    predictions: [
+      'Soul-level romantic connection appears that feels divinely orchestrated and magical',
+      'Your compassionate loving expression creates profound healing and deep connection',
+      'Artistic or creative inspiration flows through you and creates transcendent beauty',
+      'Romantic experience feels mystical and reveals spiritual dimension of love',
+      'Your unconditional acceptance and compassion transforms relationship profoundly',
+      'Financial or romantic blessing appears through surrendering to divine flow',
+      'Creative or romantic inspiration you trust (with verification) proves genuine',
+      'Compassionate forgiving act of love creates miraculous relationship healing',
+      'Beauty or art that touches your soul reveals divine presence in ordinary life',
+      'Opportunity for transcendent soul-level love through compassionate spiritual connection'
+    ]
+  },
+
+  'Venus-Neptune-Opposition': {
+    name: 'Venus Opposition Neptune',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Tension between real love and romantic illusion requiring discernment! Venus\'s affection faces Neptune\'s fog, creating romantic confusion, idealization, or potential deception in love. Challenge is honoring both soul-level connection AND seeing relationship reality clearly. Risk of romantic illusion, deception, or escapist fantasy in love. Resistance to reality creates disillusionment; excessive skepticism denies spiritual love. Integration of romantic idealism and honest clarity needed. Balance creates grounded spiritual love.',
+    loveRelationships: 'Relationship confusion between soul connection and projection! Love requires distinguishing genuine spiritual bond from romantic fantasy. Tendency toward romantic idealization or potential romantic deception. Partner may seem perfect (projection) or confusing (reality unclear). Challenge is honoring soul connection while seeing partner clearly. Good time to verify romantic assumptions compassionately, balance romantic ideals with relationship reality, practice discerning love. Clarify gently through honest compassionate communication.',
+    familyHome: 'Family confusion between compassion and boundaries! Home life requires balancing unconditional family love with clear family boundaries. Tendency toward family enabling or family confusion through unclear family dynamics. Challenge is expressing family compassion while maintaining family clarity. Good time to clarify family confusion gently, establish loving family boundaries, balance family ideals with family reality. Integration of family compassion and family truth.',
+    businessCareer: 'Professional confusion between vision and reality! Career requires balancing professional idealism with professional clarity. Tendency toward professional idealization or professional confusion through unclear professional situation. Challenge is honoring professional vision while seeing professional reality clearly. Good time to verify professional assumptions, clarify professional confusion, balance professional ideals with professional reality. Discernment between professional inspiration and professional fantasy.',
+    moneyFinances: 'Financial confusion between faith and reality! Money requires balancing financial idealism with financial clarity. Tendency toward financial confusion, wishful financial thinking, or potential financial deception. Challenge is honoring financial faith while verifying financial reality carefully. Good time to clarify financial confusion, verify all financial details compassionately, balance financial ideals with financial facts. Discernment between financial intuition and financial fantasy.',
+    predictions: [
+      'Romantic confusion reveals illusion requiring honest compassionate examination',
+      'Your idealization of person or situation dissolves - painful but clarifying truth emerges',
+      'Deception or self-deception in love revealed teaches importance of clear seeing',
+      'Financial or romantic confusion clears through gentle honest verification',
+      'Boundary issue in love forces you to balance compassion with self-protection',
+      'Disappointment you feel reveals unrealistic expectation requiring reality adjustment',
+      'Challenge between romantic ideal and relationship reality resolved through discernment',
+      'Confusion about values or love clears when you verify facts compassionately',
+      'You learn to honor soul connection while seeing people clearly and honestly',
+      'Opportunity to integrate romantic spirituality with clear grounded honest discernment'
+    ]
+  },
+
+  'Venus-Neptune-Trine': {
+    name: 'Venus Trine Neptune',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Love and spirituality flow naturally with divine grace! Venus\'s affection harmonizes beautifully with Neptune\'s transcendence, creating effortless soul-level connection, natural artistic inspiration, and graceful compassionate love. Perfect time for romantic spirituality flowing smoothly, artistic creation flowing beautifully, compassionate love naturally expressed. Soul connection and clarity balance perfectly. Beauty feels divine yet real. Excellent for spiritual romance, inspired art, unconditional love, transcendent beauty. Magic and reality unite gracefully.',
+    loveRelationships: 'Relationship love flows with natural soul connection and clarity! Romance feels both mystical and real, compassionate and clear effortlessly. Perfect time for soul-level romantic intimacy flowing naturally, expressing unconditional love easily, spiritual romantic connection without confusion. Deep divine love and honest clarity combine perfectly. Good time for romantic magic flowing naturally, compassionate understanding naturally deepening connection, forgiveness flowing effortlessly. Transcendent love grounded in reality.',
+    familyHome: 'Family love flows with natural compassion and beauty! Perfect time for unconditional family love expressed naturally, beautiful home creation flowing easily, compassionate family forgiveness naturally healing. Home feels like spiritual sanctuary effortlessly. Good time for artistic family expression flowing naturally, family compassion creating harmony gracefully, beautiful family memories created effortlessly. Family love transcends without confusion.',
+    businessCareer: 'Professional values flow with natural inspiration and clarity! Excellent time for artistic career work flowing beautifully, compassionate professional expression naturally resonating, inspired professional vision manifesting smoothly. Creative professional work and practical professional success align perfectly. Good time for helping professions naturally rewarding, artistic career naturally successful, inspired professional work naturally recognized. Vision and professionalism unite gracefully.',
+    moneyFinances: 'Financial values flow with natural abundance and wisdom! Good time for financial blessings appearing naturally, generous giving flowing from abundance naturally, financial faith and financial clarity balancing perfectly. Financial intuition and financial reality align beautifully. Excellent for inspired financial decisions proving wise naturally, abundance mindset attracting prosperity naturally, financial generosity creating more abundance. Spiritual and material prosperity unite gracefully.',
+    predictions: [
+      'Soul-level connection appears naturally and feels both magical and genuinely real',
+      'Your compassionate loving expression naturally creates profound healing and deep bond',
+      'Artistic inspiration flows effortlessly and creates beauty that touches hearts deeply',
+      'Romantic experience feels naturally transcendent yet grounded in genuine connection',
+      'Financial or romantic blessing flows to you naturally through divine grace',
+      'Your unconditional compassion naturally transforms relationship beautifully',
+      'Creative work you produce effortlessly resonates deeply and proves successful',
+      'Forgiving compassionate act naturally heals relationship and deepens authentic love',
+      'Beauty that touches your soul appears naturally and reveals divine in everyday life',
+      'Opportunity for soul-level love through natural compassionate spiritual graceful connection'
+    ]
+  },
+
+  'Venus-Neptune-Square': {
+    name: 'Venus Square Neptune',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Growth through romantic illusion and escapist fantasy requiring conscious discernment! Venus\'s affection clashes with Neptune\'s fog, creating romantic delusion, financial escapism, or self-deceptive idealization. Challenge is developing discernment between divine inspiration and wishful fantasy in love. Tendency toward romantic escapism, financial confusion, or avoiding relationship reality through idealization. Crisis forces development of grounded spirituality in love. Conscious verification transforms illusion into clear authentic spiritual connection.',
+    loveRelationships: 'Relationship friction through romantic illusion or deception! Love may involve idealization, deception, or escapist romantic fantasy. Tendency toward seeing what you wish rather than relationship reality or being deceived romantically. Challenge is seeing love clearly while maintaining compassion. Good time to consciously verify romantic assumptions, address romantic illusions honestly, practice discerning compassionate love. Crisis teaches importance of clear seeing in love. Transform romantic fantasy into grounded genuine spiritual connection.',
+    familyHome: 'Family friction through enabling or confusion! Home life may involve family deception, enabling family dysfunction, or escapist family fantasy. Tendency toward family idealization or confusing unclear family dynamics. Challenge is expressing family compassion while maintaining family clarity and boundaries. Good time to consciously address family illusions, establish loving clear family boundaries, verify family reality compassionately. Crisis forces healthy family discernment. Transform family confusion into grounded family compassion.',
+    businessCareer: 'Professional friction through idealistic confusion! Career may involve professional deception, unrealistic professional expectations, or escapist professional fantasy. Tendency toward professional idealization or confusing unclear professional situation. Challenge is pursuing meaningful professional work while maintaining professional clarity. Good time to consciously verify professional details, address professional illusions, ground professional vision in professional reality. Crisis teaches professional discernment.',
+    moneyFinances: 'Financial friction through wishful thinking or deception! Money may involve financial deception, financial escapism, or wishful unrealistic financial thinking. Tendency toward financial confusion or avoiding financial reality through financial fantasy. Challenge is trusting financial intuition while verifying financial reality carefully. Good time to consciously verify all financial details, address financial illusions, balance financial faith with financial facts. Crisis forces financial clarity. Transform financial fantasy into wise grounded financial spirituality.',
+    predictions: [
+      'Romantic illusion you address courageously reveals reality requiring honest acceptance',
+      'Your tendency toward escapist fantasy you recognize consciously grounds your spirituality',
+      'Deception or self-deception in love forces you to see clearly with compassion',
+      'Financial or romantic confusion you clarify through verification produces important wisdom',
+      'Idealization that causes suffering you release painfully leads to authentic grounded love',
+      'Boundary you establish while maintaining compassion creates healthy sustainable connection',
+      'Wishful thinking about love or money you address honestly creates realistic foundation',
+      'Enabling pattern you recognize and change transforms into healthy compassionate boundaries',
+      'You learn that real spiritual love requires seeing clearly not just ideally',
+      'Opportunity to transform romantic illusion into clear grounded compassionate authentic love'
+    ]
+  },
+
+  'Venus-Neptune-Sextile': {
+    name: 'Venus Sextile Neptune',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Opportunity for soul-level love through compassionate initiative! Venus\'s affection harmonizes with Neptune\'s spirituality, creating potential for transcendent romantic connection, artistic inspiration, spiritual beauty IF you take action. Opportunities for soul-level love, creative inspiration, compassionate connection appear - but require your openness. Perfect time to pursue spiritual romance actively, create art from inspiration, express unconditional love. Success through compassionate initiative. Passive approach wastes potential; active spiritual engagement creates beautiful results.',
+    loveRelationships: 'Relationship opportunity for soul connection through compassionate initiative! Potential for transcendent romantic intimacy, spiritual romantic deepening, unconditional love IF you initiate. Perfect time to suggest spiritual romantic experience actively, express unconditional compassionate love, share romantic dreams. Opportunity for soul-level connection through compassionate openness IF you risk vulnerability. Initiative in spiritual compassionate love deepens romantic bond.',
+    familyHome: 'Family opportunity for healing compassion through initiative! Potential for family forgiveness, beautiful home creation, spiritual family connection IF you initiate. Perfect time to suggest compassionate family healing actively, create beautiful home sanctuary, express unconditional family love. Family receptive to compassionate spiritual initiatives IF you present them gently. Initiative in family compassion creates profound family healing.',
+    businessCareer: 'Professional opportunity for inspired work through creative initiative! Potential for artistic career success, compassionate professional impact, inspired professional vision IF you take action. Perfect time to pursue creative professional work actively, express professional compassion, share inspired professional vision. Recognition available IF you step forward with creative compassionate authenticity. Initiative in inspired professional work creates meaningful career success.',
+    moneyFinances: 'Financial opportunity for abundant blessings through generous initiative! Potential for financial growth through creative income, spiritual abundance, generous giving IF you pursue it actively. Perfect time to trust verified financial intuition, give generously from abundance, pursue creative income. Financial blessings available through faithful action. Initiative in spiritual financial approaches creates unexpected prosperity.',
+    predictions: [
+      'Opportunity for soul-level romantic connection appears - pursue it actively with open heart',
+      'Your initiative to express compassionate love creates profound healing and deep bond',
+      'Chance for artistic creation or inspiration succeeds beautifully IF you act upon it',
+      'Spiritual or romantic experience you initiate actively creates transcendent meaningful connection',
+      'Opportunity for financial blessing appears through creative or compassionate channel',
+      'Your active expression of unconditional love naturally attracts reciprocal deep affection',
+      'Creative project you initiate with inspiration flows beautifully and resonates deeply',
+      'Compassionate forgiving initiative you take actively heals relationship profoundly',
+      'Your active pursuit of beauty or spiritual love creates magical meaningful results',
+      'Opportunity for soul-level connection through compassionate spiritual creative initiative'
+    ]
+  },
+
+  // ============================================================================
+  // VENUS-PLUTO ASPECTS (Transformative and intense love)
+  // ============================================================================
+
+  'Venus-Pluto-Conjunction': {
+    name: 'Venus Conjunction Pluto',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Love transforms through intense depth and passionate power! Venus\'s affection merges with Pluto\'s intensity, creating deep transformative love, powerful attraction, and profound value transformation. Perfect time for intense romantic connection, transformative relationship work, deep artistic expression, addressing love shadows. Love feels all-consuming and transformative. Attraction becomes magnetic and powerful. Excellent for depth psychology in love, passionate intimacy, transformative art, reclaiming power in relationships. Warning: intensity can overwhelm or control - channel into healing depth not manipulation. Transformation through love.',
+    loveRelationships: 'Relationship love becomes intensely transformative and powerful! Romance feels deep, passionate, and soul-transforming. Perfect time for profound vulnerable intimacy, addressing relationship shadows, transformative honest communication, powerful sexual connection. Love intensity can heal or overwhelm. Good time for couples therapy, profound truth-telling, addressing relationship power dynamics, transformative relationship commitment. Warning: intensity can become obsessive or controlling - channel into healing vulnerable depth not manipulation or possession.',
+    familyHome: 'Family love becomes intensely deep and transformative! Perfect time for profound family healing, addressing family shadows, transformative family truth-telling, deep family psychological work. Home becomes place of transformation. Good time for family therapy, uncovering family patterns, addressing family power dynamics, deep family forgiveness through shadow work. Warning: intensity can overwhelm - channel into healing not family control or manipulation.',
+    businessCareer: 'Professional values become powerfully transformative! Excellent time for transformative career decisions, powerful professional impact, deep meaningful professional work, reclaiming professional power. Work becomes intensely meaningful. Good time for addressing professional power dynamics, transformative professional projects, powerful professional expression, career transformation through deep work. Your powerful professional values attract recognition.',
+    moneyFinances: 'Financial values transform through powerful depth! Good time for transformative financial decisions, addressing money shadows, powerful financial strategy, shared resource transformation. Financial approach becomes intensely focused. Excellent for deep financial psychology work, eliminating limiting money patterns, powerful financial transformation, reclaiming financial power. Financial regeneration through release and empowerment.',
+    predictions: [
+      'Powerful transformative romantic connection appears that feels destined and deeply intense',
+      'Your vulnerable depth in love creates profound transformation and powerful healing bond',
+      'Financial or romantic shadow you address courageously transforms into source of power',
+      'Intense attraction you feel leads to transformative soul-level connection',
+      'Your willingness to go deep in love creates powerful profound authentic intimacy',
+      'Powerful choice about values or love you make transforms your life direction',
+      'Intense experience in love or finances forces powerful psychological transformation',
+      'Your courage to address love shadows produces liberating empowering breakthrough',
+      'Powerful passionate connection transforms both you and partner profoundly',
+      'Opportunity for profound love transformation through intense powerful vulnerable depth'
+    ]
+  },
+
+  'Venus-Pluto-Opposition': {
+    name: 'Venus Opposition Pluto',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Tension between light love and intense transformation requiring integration! Venus\'s harmony faces Pluto\'s intensity, creating love power struggles, obsessive attraction, or control issues in relationships. Challenge is honoring both affection AND depth transformation. Risk of possessiveness, jealousy, or manipulative love dynamics. Resistance to depth creates superficiality; excessive intensity overwhelms. Integration of lightness and depth needed. Balance creates powerful sustainable love.',
+    loveRelationships: 'Relationship power struggles requiring deep transformation! Love involves intense power dynamics, control issues, or deep psychological challenges. Tendency toward jealousy, possessiveness, or manipulative love patterns. Partner may trigger your shadows or power issues. Challenge is loving deeply while maintaining healthy power balance. Good time to address love power dynamics honestly, release toxic love patterns, practice empowered vulnerable love. Integration of affection and transformation.',
+    familyHome: 'Family power struggles requiring healing transformation! Home life involves intense family dynamics, control issues, or deep family psychological work. Tendency toward family power struggles or toxic family patterns surfacing. Challenge is loving family while addressing family power imbalances. Good time to address family control patterns, release toxic family dynamics, reclaim healthy family power. Integration of family affection and family transformation.',
+    businessCareer: 'Professional power struggles requiring value transformation! Career involves intense professional dynamics, power struggles, or deep professional challenges. Tendency toward professional control issues or feeling professionally controlled. Challenge is valuing your professional worth while navigating professional power realities. Good time to address professional power dynamics, reclaim professional power constructively, transform professional values. Integration of professional affection and professional power.',
+    moneyFinances: 'Financial power struggles requiring money transformation! Money involves control issues, shared resource conflicts, or deep financial psychology. Tendency toward financial power struggles or toxic financial patterns. Challenge is valuing yourself financially while addressing financial power dynamics. Good time to address financial control issues, heal money shadows, reclaim financial power. Integration of financial enjoyment and financial transformation.',
+    predictions: [
+      'Love power struggle forces you to examine and transform unhealthy relationship patterns',
+      'Your resistance to relationship transformation creates crisis - embrace of depth resolves it',
+      'Jealousy or control issue reveals shadow requiring conscious psychological healing work',
+      'Intense relationship challenge forces you to choose between toxic patterns and empowered love',
+      'Financial or romantic power dynamic surfaces requiring conscious transformation',
+      'Challenge between light affection and deep intensity resolved through conscious integration',
+      'Control issue you address honestly transforms into empowered vulnerable authentic connection',
+      'You learn to love deeply and powerfully while maintaining healthy equal power balance',
+      'Toxic love pattern you release painfully creates space for authentic empowered love',
+      'Opportunity to integrate light loving affection with deep transformative psychological power'
+    ]
+  },
+
+  'Venus-Pluto-Trine': {
+    name: 'Venus Trine Pluto',
+    frequency: 'Occurs once per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Love and transformation flow naturally with powerful grace! Venus\'s affection harmonizes beautifully with Pluto\'s depth, creating effortless profound connection, natural powerful attraction, and graceful transformative love. Perfect time for deep intimacy flowing smoothly, transformative relationship work flowing naturally, powerful artistic expression flowing effortlessly. Love and power balance perfectly without drama. Depth feels natural and comfortable. Excellent for profound romantic connection, shadow work in love, passionate intimacy, powerful beauty creation. Transformation enhances rather than threatens love.',
+    loveRelationships: 'Relationship love flows with natural transformative depth! Romance feels both tender and powerful, gentle and intense effortlessly. Perfect time for profound vulnerable intimacy flowing naturally, addressing relationship depth comfortably, powerful sexual connection without drama. Deep transformation and comfortable affection combine perfectly. Good time for couples therapy flowing smoothly, profound truth-sharing naturally, powerful commitment naturally deepening. Depth and ease unite beautifully.',
+    familyHome: 'Family love flows with natural transformative healing! Perfect time for profound family healing flowing naturally, addressing family psychology comfortably, deep family forgiveness naturally transforming. Home feels both comfortable and deeply meaningful effortlessly. Good time for family therapy flowing smoothly, uncovering family patterns gently, healing family wounds naturally. Family depth and family warmth combine beautifully.',
+    businessCareer: 'Professional values flow with natural transformative power! Excellent time for powerful professional impact flowing naturally, transformative career decisions made wisely, deep meaningful professional work succeeding smoothly. Professional power and professional affection align perfectly. Good time for influential professional work, transformative professional projects flowing naturally, powerful professional values naturally recognized. Impact and harmony unite gracefully.',
+    moneyFinances: 'Financial values flow with natural transformative power! Good time for powerful financial decisions made wisely, financial transformation flowing naturally, money shadows healing comfortably. Financial power and financial enjoyment balance perfectly. Excellent for shared resource harmony flowing naturally, wise financial transformation, powerful financial strategy succeeding smoothly. Financial depth and financial prosperity unite beautifully.',
+    predictions: [
+      'Profound romantic connection flows naturally and feels both powerful and comfortable',
+      'Your naturally powerful loving presence creates deep transformation without drama',
+      'Financial or romantic transformation happens gracefully and produces lasting positive change',
+      'Deep intimate conversation flows naturally and transforms relationship beautifully',
+      'Powerful attraction you feel naturally develops into meaningful profound connection',
+      'Your natural depth and intensity in love naturally attracts reciprocal deep affection',
+      'Shadow work in love or values flows gently and produces empowering clarity naturally',
+      'Powerful choice about love or values you make naturally proves profoundly wise',
+      'Transformative experience in love feels natural and enhances rather than disrupts',
+      'Opportunity for profound transformative love through natural powerful graceful depth'
+    ]
+  },
+
+  'Venus-Pluto-Square': {
+    name: 'Venus Square Pluto',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Growth through love intensity and power struggles requiring conscious transformation! Venus\'s affection clashes with Pluto\'s intensity, creating obsessive love, control struggles, or compulsive attraction. Challenge is channeling passionate intensity into healing transformation not destructive possession. Tendency toward jealousy, obsessive attraction, or toxic love patterns. Crisis forces development of empowered authentic love. Conscious awareness transforms love obsession into profound empowered vulnerable connection.',
+    loveRelationships: 'Relationship friction through intensity or control! Love may feel obsessive, controlling, or intensely conflicted. Tendency toward jealousy, possessiveness, or manipulative love behavior. Attraction feels compulsive or overwhelming. Challenge is loving deeply without controlling or being controlled. Good time to consciously address love power issues, work through love obsession, release toxic love patterns. Crisis teaches empowered vulnerable love. Transform controlling love into healing powerful authentic connection.',
+    familyHome: 'Family friction through intensity or control! Home life may feel intensely controlling or emotionally overwhelming. Tendency toward family power struggles, family manipulation, or toxic family emotional intensity. Challenge is loving family deeply without family control dynamics. Good time to consciously address family power issues, work through family psychological patterns, release toxic family dynamics. Crisis forces healthy family transformation. Transform family control into empowered family love.',
+    businessCareer: 'Professional friction through power struggles or obsession! Career may feel intensely competitive, controlling, or obsessively consuming. Tendency toward professional power struggles or compulsive professional ambition. Challenge is valuing professional success without obsessive professional control. Good time to consciously address professional power issues, balance professional intensity with professional wellbeing. Crisis teaches professional empowerment. Transform professional obsession into powerful balanced career passion.',
+    moneyFinances: 'Financial friction through obsession or control! Money may feel obsessively important or involve financial power struggles. Tendency toward compulsive financial behavior or financial control issues. Challenge is valuing financial security without obsessive financial control or fear. Good time to consciously address money psychology, work through financial shadows, release toxic financial patterns. Crisis develops healthy financial empowerment. Transform financial obsession into wise powerful financial management.',
+    predictions: [
+      'Love intensity or obsession you work through consciously transforms into empowered depth',
+      'Your tendency toward jealousy or control you address honestly heals and opens authentic love',
+      'Power struggle in love forces you to choose empowered vulnerability over destructive control',
+      'Compulsive attraction you examine consciously either transforms healthily or releases wisely',
+      'Financial or romantic shadow you confront courageously produces liberating breakthrough',
+      'Toxic love pattern you recognize and release creates space for authentic empowered connection',
+      'Control issue you address through therapy or shadow work transforms into healthy power',
+      'Obsessive feeling you work through consciously becomes passionate healthy depth',
+      'You learn that real power in love comes through vulnerability not control',
+      'Opportunity to transform love intensity into conscious empowered vulnerable authentic depth'
+    ]
+  },
+
+  'Venus-Pluto-Sextile': {
+    name: 'Venus Sextile Pluto',
+    frequency: 'Occurs 2-3 times per year',
+    duration: '1-2 weeks',
+    planet1Energy: 'Venus represents love, relationships, beauty, values, pleasure, harmony, art, attraction, and connection. It\'s how you give and receive love, what you value, and what brings you joy.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Opportunity for transformative love through vulnerable initiative! Venus\'s affection harmonizes with Pluto\'s depth, creating potential for profound romantic connection, powerful attraction, transformative beauty IF you take action. Opportunities for deep intimacy, shadow work in love, passionate connection appear - but require your courage. Perfect time to pursue deep love actively, address love shadows courageously, express powerful passion. Success through vulnerable depth. Passive approach wastes potential; active transformative engagement creates profound results.',
+    loveRelationships: 'Relationship opportunity for profound intimacy through vulnerable initiative! Potential for deep transformative connection, powerful romantic depth, soul-level intimacy IF you initiate. Perfect time to suggest couples therapy actively, initiate profound conversation courageously, express deep passionate love. Opportunity for transformative relationship through vulnerable depth IF you risk openness. Initiative in powerful vulnerable love creates profound romantic transformation.',
+    familyHome: 'Family opportunity for deep healing through courageous initiative! Potential for family transformation, profound family healing, deep family connection IF you initiate. Perfect time to suggest family therapy actively, address family shadows courageously, express deep family love. Family receptive to healing depth work IF you present it with care and courage. Initiative in transformative family work creates profound family healing.',
+    businessCareer: 'Professional opportunity for powerful impact through deep initiative! Potential for transformative career advancement, powerful professional success, meaningful professional depth IF you take action. Perfect time to pursue influential professional work actively, express powerful professional values, address professional depth courageously. Recognition available IF you step forward with authentic powerful depth. Initiative in transformative professional work creates powerful career impact.',
+    moneyFinances: 'Financial opportunity for transformation through strategic initiative! Potential for financial growth through deep financial work, powerful financial decisions, shared resource transformation IF you pursue it actively. Perfect time to address money shadows actively, make powerful strategic financial decisions, transform limiting financial patterns. Financial empowerment available through courageous financial depth work.',
+    predictions: [
+      'Opportunity for profound romantic connection appears - pursue it courageously for deep results',
+      'Your initiative to risk vulnerable depth in love creates transformative powerful intimacy',
+      'Chance to address love or financial shadows succeeds profoundly IF you pursue it actively',
+      'Deep conversation you initiate courageously transforms relationship powerfully and permanently',
+      'Opportunity for powerful attraction appears - initiative required to develop into depth',
+      'Your courageous expression of passionate depth attracts reciprocal powerful love',
+      'Shadow work in love or values you pursue actively produces empowering liberating clarity',
+      'Powerful choice about love or finances you make courageously proves transformatively wise',
+      'Your active engagement with love depth creates profound meaningful lasting transformation',
+      'Opportunity for transformative powerful love through courageous vulnerable depth initiative'
+    ]
   }
 
 };
