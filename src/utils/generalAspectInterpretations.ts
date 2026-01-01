@@ -6264,7 +6264,115 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Friction between comfortable familiar metamorphosis and purposeful profound transformation FORCES evolution',
       'Evolution through releasing comfortable limiting transformation and embracing purposeful profound rebirth'
     ]
-  }
+  },
+
+  // ============================================================================
+  // PERSONAL PLANETS SQUARE NODES (Sun, Mercury)
+  // Mars and Venus squares were included earlier
+  // ============================================================================
+
+  'Sun-North Node-Square': {
+    name: 'Sun Square North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Identity friction forcing purposeful self-expression evolution! Your core self squares both Nodes, creating tension between comfortable identity and growth-edge destined authentic self. Challenge forces evolution: express yourself toward destiny, shine light serving purpose, become who soul mission requires. Friction reveals: where ego limits soul growth, what authentic expression truly serves mission. Growth opportunity: transform identity through necessary challenge, embrace unfamiliar purposeful self-expression, shine toward destiny. Identity friction FORCES purposeful authentic evolution.',
+    loveRelationships: 'Love identity friction forcing purposeful authentic romantic expression! Tension: comfortable self in relationships doesn\'t serve soul purpose, familiar romantic identity limits evolutionary authentic partnership. Challenge reveals: where relationship identity needs purposeful transformation, how comfortable self-expression in love prevents destined authentic vulnerable partnership. Growth: express authentic self in love BEYOND comfortable patterns toward purposeful vulnerable soul-aligned partnership. Identity friction in love FORCES purposeful romantic evolution.',
+    familyHome: 'Family identity friction forcing purposeful authentic domestic expression! Challenge: comfortable self in family doesn\'t support soul mission, familiar identity at home limits evolutionary authentic family connection. Friction reveals: where domestic identity needs purposeful transformation, what authentic family self-expression truly serves collective evolution. Growth: be authentic self in family BEYOND comfort toward purposeful genuine connection. Family identity friction FORCES purposeful domestic evolution.',
+    businessCareer: 'Career identity friction forcing purposeful authentic professional expression! Tension: comfortable professional identity doesn\'t serve destiny, familiar career self limits soul-aligned authentic work. Challenge reveals: where professional identity needs purposeful redirection toward mission, how comfortable career self prevents destined authentic work. Growth: express professional identity BEYOND familiar toward purposeful authentic destined career. Career identity friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial identity friction forcing purposeful prosperity self-expression! Challenge: comfortable money identity doesn\'t serve soul purpose, familiar financial self limits evolutionary authentic abundance. Friction reveals: where financial identity needs purposeful transformation for destiny. Growth: express money self BEYOND comfortable toward purposeful authentic abundance aligned with mission. Financial identity friction FORCES purposeful prosperity evolution.',
+    predictions: [
+      'Identity challenge forces you to become who your soul purpose actually requires',
+      'Self-expression friction reveals where comfortable ego limits authentic purposeful evolution',
+      'Who you think you are vs. who you\'re meant to become creates necessary tension',
+      'Your familiar identity pattern revealed as limiting - evolve toward purposeful authentic self',
+      'Uncomfortable purposeful self-expression FORCES necessary identity evolution beyond ego comfort',
+      'Who you need to become feels challenging because it\'s actual growth edge',
+      'Identity friction reveals gap between comfortable self and purposeful destined authentic being',
+      'Challenge to shine differently and purposefully FORCES soul-level identity evolution',
+      'Uncomfortable purposeful authentic self-expression IS who your soul requires you to be',
+      'Evolution through becoming BEYOND comfortable identity toward purposeful destined authentic self'
+    ]
+  },
+
+  'Sun-South Node-Square': {
+    name: 'Sun Square South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'The Sun represents core identity, life purpose, vitality, ego, creative self-expression, and conscious will. It\'s who you are meant to become.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Identity friction forcing release of comfortable self-expression! Your core self squares both Nodes, creating discomfort with old identity and challenge expressing authentically in new ways. Friction FORCES evolution: release limiting comfortable ego, shine in unfamiliar purposeful directions, express authentic self beyond familiar. Challenge reveals: which comfortable identity patterns actually limit soul growth. Growth: transform self through necessary discomfort, embrace unfamiliar purposeful authentic expression, release old ego limitations. Identity friction FORCES purposeful authentic evolution.',
+    loveRelationships: 'Love identity friction forcing release of comfortable romantic self! Discomfort with familiar relationship identity, challenge expressing self in love in comfortable old ways. Friction reveals: old romantic identity patterns preventing soul growth and authentic purposeful vulnerable partnership. Growth: express NEW authentic self in love beyond comfort, shine in relationships serving evolution not familiar ego, release limiting comfortable romantic identity. Love friction FORCES identity evolution toward authentic purposeful vulnerable partnership.',
+    familyHome: 'Family identity friction forcing release of comfortable domestic self! Discomfort with familiar family identity, challenge expressing self at home in comfortable old ways. Friction reveals: old family identity patterns preventing collective evolution and authentic purposeful connection. Growth: express NEW authentic self in family beyond comfort, shine at home serving evolution not familiar ego, release limiting comfortable family identity. Family friction FORCES identity evolution toward purposeful authentic family self.',
+    businessCareer: 'Career identity friction forcing release of comfortable professional self! Discomfort with familiar career identity, challenge expressing self professionally in comfortable old ways. Friction reveals: old professional identity patterns preventing destined work and authentic purposeful career. Growth: express NEW authentic professional self beyond comfort, shine at work serving destiny not familiar ego, release limiting comfortable career identity. Career friction FORCES identity evolution toward purposeful authentic destined professional self.',
+    moneyFinances: 'Financial identity friction forcing release of comfortable money self! Discomfort with familiar financial identity, challenge expressing self with money in comfortable old ways. Friction reveals: old money identity patterns preventing purposeful abundance and authentic meaningful prosperity. Growth: express NEW authentic financial self beyond comfort, shine with money serving evolution not familiar ego, release limiting comfortable financial identity. Financial friction FORCES identity evolution toward purposeful authentic abundant self.',
+    predictions: [
+      'Identity discomfort reveals comfortable self-expression patterns that actually limit evolution',
+      'Challenge to be differently feels uncomfortable because it requires releasing familiar ego',
+      'Identity friction FORCES you to express authentic self beyond comfortable limiting familiar patterns',
+      'Uncomfortable purposeful authentic self-expression challenge IS exactly what soul evolution needs',
+      'Old comfortable identity creates friction - release and shine in new authentic directions',
+      'Your familiar comfortable self challenged - opportunity to express toward true authenticity',
+      'Discomfort with past identity style FORCES necessary purposeful meaningful self-expression',
+      'Identity challenge reveals limiting ego comfort zone - embrace unfamiliar purposeful authentic being',
+      'Friction between old comfortable self and new authentic expression FORCES transformation',
+      'Evolution through releasing comfortable limiting identity and embracing purposeful authentic self'
+    ]
+  },
+
+  'Mercury-North Node-Square': {
+    name: 'Mercury Square North Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Mental friction forcing purposeful communication evolution! Your thinking squares both Nodes, creating tension between comfortable mental patterns and growth-edge destined purposeful thinking. Challenge forces evolution: think toward destiny, communicate serving purpose, learn what soul mission requires. Friction reveals: where thinking limits soul growth, what communication truly serves mission. Growth opportunity: transform mind through necessary challenge, embrace unfamiliar purposeful learning, think toward destiny. Mental friction FORCES purposeful communication evolution.',
+    loveRelationships: 'Love communication friction forcing purposeful authentic dialogue! Tension: comfortable relationship communication doesn\'t serve soul purpose, familiar love dialogue limits evolutionary authentic connection. Challenge reveals: where relationship communication needs purposeful transformation, how comfortable love thinking prevents destined authentic vulnerable dialogue. Growth: communicate in love BEYOND comfortable patterns toward purposeful authentic vulnerable meaningful exchange. Communication friction in love FORCES purposeful dialogue evolution.',
+    familyHome: 'Family communication friction forcing purposeful authentic dialogue! Challenge: comfortable family thinking doesn\'t support soul mission, familiar home communication limits evolutionary authentic family exchange. Friction reveals: where domestic communication needs purposeful transformation, what family dialogue truly serves collective evolution. Growth: think and communicate in family BEYOND comfort toward purposeful authentic meaningful connection. Family communication friction FORCES purposeful dialogue evolution.',
+    businessCareer: 'Career communication friction forcing purposeful authentic professional dialogue! Tension: comfortable professional thinking doesn\'t serve destiny, familiar career communication limits soul-aligned authentic work expression. Challenge reveals: where professional communication needs purposeful redirection toward mission, how comfortable career thinking prevents destined authentic work. Growth: communicate professionally BEYOND familiar toward purposeful authentic destined career expression. Career communication friction FORCES purposeful professional evolution.',
+    moneyFinances: 'Financial communication friction forcing purposeful prosperity thinking! Challenge: comfortable money thinking doesn\'t serve soul purpose, familiar financial communication limits evolutionary authentic abundance. Friction reveals: where financial thinking needs purposeful transformation for destiny. Growth: think about money BEYOND comfortable toward purposeful authentic abundance aligned with mission. Financial communication friction FORCES purposeful prosperity evolution.',
+    predictions: [
+      'Communication challenge forces you to think toward what soul purpose actually requires',
+      'Mental friction reveals where comfortable thinking limits authentic purposeful evolution',
+      'What you think vs. what destiny requires you to learn creates necessary tension',
+      'Your familiar thinking pattern revealed as limiting - evolve toward purposeful communication',
+      'Uncomfortable purposeful dialogue FORCES necessary mental evolution beyond comfort',
+      'What you need to learn feels challenging because it\'s actual growth edge',
+      'Mental friction reveals gap between comfortable thinking and purposeful destined learning',
+      'Challenge to communicate differently and purposefully FORCES soul-level mental evolution',
+      'Uncomfortable purposeful authentic communication IS what your soul requires',
+      'Evolution through thinking BEYOND comfortable patterns toward purposeful destined learning'
+    ]
+  },
+
+  'Mercury-South Node-Square': {
+    name: 'Mercury Square South Node',
+    frequency: 'Occurs twice every 19 years',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Mental friction forcing release of comfortable thinking! Your communication squares both Nodes, creating discomfort with old mental patterns and challenge thinking in new purposeful ways. Friction FORCES evolution: release limiting comfortable ideas, think in unfamiliar purposeful directions, learn beyond familiar. Challenge reveals: which comfortable thinking patterns actually limit soul growth. Growth: transform mind through necessary discomfort, embrace unfamiliar purposeful learning, release old mental limitations. Communication friction FORCES purposeful evolution.',
+    loveRelationships: 'Love communication friction forcing release of comfortable romantic dialogue! Discomfort with familiar relationship thinking, challenge communicating in love in comfortable old ways. Friction reveals: old romantic communication patterns preventing soul growth and authentic purposeful vulnerable dialogue. Growth: think and communicate in love in NEW purposeful directions beyond comfort, express in relationships serving evolution not familiar patterns, release limiting comfortable love dialogue. Love friction FORCES communication evolution toward authentic purposeful vulnerable partnership.',
+    familyHome: 'Family communication friction forcing release of comfortable domestic dialogue! Discomfort with familiar family thinking, challenge communicating at home in comfortable old ways. Friction reveals: old family communication patterns preventing collective evolution and authentic purposeful connection. Growth: think and communicate in family in NEW purposeful directions beyond comfort, express at home serving evolution not familiar patterns, release limiting comfortable family dialogue. Family friction FORCES communication evolution toward purposeful authentic family exchange.',
+    businessCareer: 'Career communication friction forcing release of comfortable professional thinking! Discomfort with familiar career communication, challenge thinking professionally in comfortable old ways. Friction reveals: old professional thinking patterns preventing destined work and authentic purposeful career expression. Growth: think and communicate professionally in NEW purposeful directions beyond comfort, express at work serving destiny not familiar patterns, release limiting comfortable career communication. Career friction FORCES thinking evolution toward purposeful authentic destined professional expression.',
+    moneyFinances: 'Financial communication friction forcing release of comfortable money thinking! Discomfort with familiar financial thinking, challenge communicating about money in comfortable old ways. Friction reveals: old money thinking patterns preventing purposeful abundance and authentic meaningful prosperity. Growth: think and communicate about money in NEW purposeful directions beyond comfort, express financially serving evolution not familiar patterns, release limiting comfortable financial thinking. Financial friction FORCES communication evolution toward purposeful authentic abundant thinking.',
+    predictions: [
+      'Mental discomfort reveals comfortable thinking patterns that actually limit evolution',
+      'Challenge to think differently feels uncomfortable because it requires releasing familiar ideas',
+      'Communication friction FORCES you to learn beyond comfortable limiting familiar patterns',
+      'Uncomfortable purposeful learning challenge IS exactly what soul evolution needs',
+      'Old comfortable thinking creates friction - release and learn in new directions',
+      'Your familiar comfortable ideas challenged - opportunity to think toward authenticity',
+      'Discomfort with past communication style FORCES necessary purposeful meaningful learning',
+      'Mental challenge reveals limiting comfort zone - embrace unfamiliar purposeful thinking',
+      'Friction between old comfortable thinking and new purposeful learning FORCES transformation',
+      'Evolution through releasing comfortable limiting mental patterns and embracing purposeful learning'
+    ]
+  },
+
+  // Note: Venus-North Node-Opposition already exists as it's the same as Venus-South Node-Opposition which was created earlier
+  // Jupiter, Saturn, Uranus, Neptune, Pluto oppositions to North Node are the same as conjunctions to South Node (already exist)
 
 };
 
