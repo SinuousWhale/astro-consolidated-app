@@ -153,4 +153,131 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Seize opportunities actively - conscious action brings liberation and innovation!'
     ]
   }
+,
+
+  // MERCURY ECLIPSE ASPECTS
+  'Mercury-Conjunction': {
+    name: 'Solar Eclipse Conjunction Mercury',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year (MAJOR mental transformation cycle)',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset, destiny activation, fated endings and beginnings, shadow work, and powerful transformational cycles.',
+    planet2Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    aspectMeaning: 'Powerful mental and communication reset! The eclipse conjuncts your Mercury, bringing karmic shifts in thinking, communication, learning, and perception. This is a MAJOR 6-month to 1-year cycle of mental transformation. Old thought patterns, communication styles, or learning approaches end while NEW purposeful mental clarity emerges. Fated conversations, breakthrough insights, or significant communication events happen now.',
+    loveRelationships: 'Fated romantic conversation or communication breakthrough transforms love life! Important relationship dialogue happens now that changes romantic direction. Mental clarity about love needs and desires emerges. Communication in partnership transforms - old patterns release, new authentic dialogue begins.',
+    familyHome: 'Family communication breakthrough or important domestic conversation transforms home life! Mental clarity about family needs and home direction emerges. Communication in family transforms - old patterns release, new authentic dialogue begins.',
+    businessCareer: 'MAJOR career communication breakthrough or professional mental transformation! Important work conversation, business decision, or career-related information that changes professional direction. Mental clarity about career path and work purpose emerges.',
+    moneyFinances: 'Financial decision clarity or important money communication transforms abundance! Mental breakthrough about financial strategy and prosperity approach. Money conversations or information that changes resource direction.',
+    predictions: [
+      'MAJOR communication breakthrough or transformation in how you think/speak',
+      'Fated conversation or news that changes your mental perspective permanently',
+      'Learning or educational opportunity aligned with karmic path',
+      'Decision or mental clarity about important life direction',
+      'Communication project, writing, or teaching mission begins or transforms',
+      'Technology, information, or connection shift aligns with destiny',
+      'Mental release of old limiting beliefs - NEW empowered thinking emerges',
+      'Karmic message, insight, or information revealed at perfect timing',
+      'Eclipse-Mercury conjunction = DESTINY MENTAL RESET',
+      'Your mind becomes instrument of your soul purpose!'
+    ]
+  },
+
+  'Mercury-Opposition': {
+    name: 'Solar Eclipse Opposition Mercury',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset and destiny activation.',
+    planet2Energy: 'Mercury represents communication, thinking, learning, information.',
+    aspectMeaning: 'Mental tension requiring integration! Communication challenges push authentic expression. Mental friction creates opportunity for deeper understanding and honest dialogue.',
+    loveRelationships: 'Communication challenge forces authentic romantic expression. Conversation tension reveals true feelings. Relationship dialogue friction creates deeper connection opportunity.',
+    familyHome: 'Family communication challenge forces honest expression. Domestic conversation tension reveals true feelings. Home dialogue friction creates deeper family connection.',
+    businessCareer: 'Professional communication challenge forces authentic career expression. Work conversation tension reveals true thinking. Career dialogue friction creates purposeful opportunity.',
+    moneyFinances: 'Financial communication challenge forces authentic money dialogue. Resource conversation tension reveals true abundance thinking. Money dialogue friction creates prosperity opportunity.',
+    predictions: [
+      'Communication challenge forces authentic truth vs. comfortable words',
+      'Mental tension reveals true thinking vs. habitual expression',
+      'Partnership conversation requires vulnerable honest communication',
+      'Information creates mental conflict requiring integration',
+      'Learning challenge: integrate opposing viewpoints',
+      'Decision between familiar and necessary new perspective',
+      'Shadow mental pattern revealed through communication',
+      'Authentic expression emerges through friction',
+      'Eclipse opposition creates healthy mental tension',
+      'Integration leads to authentic communication!'
+    ]
+  },
+
+  'Mercury-Square': {
+    name: 'Solar Eclipse Square Mercury',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset.',
+    planet2Energy: 'Mercury represents communication and thinking.',
+    aspectMeaning: 'Mental crisis and communication breakthrough! Challenges force transformation through friction. Uncomfortable truths emerge, breakthrough understanding through difficulty.',
+    loveRelationships: 'Love communication breakdown FORCES authentic dialogue! Relationship friction catalyzes breakthrough honest expression. Crisis creates deeper connection.',
+    familyHome: 'Family communication breakdown FORCES authentic dialogue! Home friction catalyzes breakthrough honest expression. Crisis creates deeper family connection.',
+    businessCareer: 'Career communication breakdown FORCES authentic dialogue! Work friction catalyzes breakthrough purposeful expression. Crisis creates professional breakthrough.',
+    moneyFinances: 'Financial communication breakdown FORCES authentic dialogue! Money friction catalyzes breakthrough purposeful expression. Crisis creates abundance breakthrough.',
+    predictions: [
+      'Communication breakdown FORCES mental transformation',
+      'Information crisis reveals limiting thought patterns',
+      'Difficult conversation pushes necessary growth',
+      'Learning challenge forces new skills development',
+      'Technology breakdown requires new approach',
+      'Decision crisis: must develop new framework',
+      'Uncomfortable truth revealed through challenge',
+      'Mental breakthrough emerges through friction',
+      'Crisis FORCES necessary mental evolution',
+      'Breakdown creates breakthrough in thinking!'
+    ]
+  },
+
+  'Mercury-Trine': {
+    name: 'Solar Eclipse Trine Mercury',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset.',
+    planet2Energy: 'Mercury represents communication and thinking.',
+    aspectMeaning: 'Flowing mental transformation! EASY communication breakthroughs, effortless mental clarity. Smooth integration of new ideas, harmonious communication.',
+    loveRelationships: 'Natural love communication flows effortlessly! Important conversations happen smoothly. Mental clarity emerges naturally. Authentic connection deepens with ease.',
+    familyHome: 'Natural family communication flows effortlessly! Important conversations happen smoothly. Mental clarity emerges naturally. Authentic connection deepens with ease.',
+    businessCareer: 'Natural career communication flows effortlessly! Important conversations happen smoothly. Mental clarity emerges naturally. Purposeful expression flows with ease.',
+    moneyFinances: 'Natural financial communication flows effortlessly! Important conversations happen smoothly. Mental clarity emerges naturally. Prosperity flows with ease.',
+    predictions: [
+      'Mental breakthrough arrives effortlessly at perfect timing',
+      'Communication flows smoothly with ease and grace',
+      'Learning opportunity appears naturally',
+      'Information arrives easily, providing clarity',
+      'Writing, speaking, teaching flows naturally',
+      'Technology upgrade happens smoothly',
+      'Mental clarity emerges naturally without struggle',
+      'Fated conversation happens gracefully',
+      'Eclipse trine = GIFT of effortless transformation',
+      'Mental evolution flows naturally!'
+    ]
+  },
+
+  'Mercury-Sextile': {
+    name: 'Solar Eclipse Sextile Mercury',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset.',
+    planet2Energy: 'Mercury represents communication and thinking.',
+    aspectMeaning: 'Communication opportunity through initiative! Openings for transformation IF you take action. Growth potential requires conscious engagement.',
+    loveRelationships: 'Love communication opportunity through initiative! Conversation potential - engage actively. Mental clarity through conscious reflection. Take action for transformation.',
+    familyHome: 'Family communication opportunity through initiative! Conversation potential - engage actively. Mental clarity through conscious reflection. Take action for transformation.',
+    businessCareer: 'Career communication opportunity through initiative! Conversation potential - engage actively. Mental clarity through conscious reflection. Take action for transformation.',
+    moneyFinances: 'Financial communication opportunity through initiative! Conversation potential - engage actively. Mental clarity through conscious reflection. Take action for transformation.',
+    predictions: [
+      'Communication opportunity - take initiative',
+      'Learning opening - act on it for growth',
+      'Important conversation opportunity - pursue it',
+      'Information available - seek it actively',
+      'Writing/speaking opportunity - manifest it',
+      'Technology tool available - use it',
+      'Mental clarity through conscious thinking',
+      'Connection opportunity - engage deliberately',
+      'Eclipse sextile = OPPORTUNITY through action',
+      'Conscious communication brings breakthrough!'
+    ]
+  }
 };
