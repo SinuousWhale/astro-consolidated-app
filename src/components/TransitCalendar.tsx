@@ -818,187 +818,411 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
 
       {/* Calendar Grid - Table Layout for Aligned Aspects */}
       <div style={{ overflowX: 'auto' }}>
-        <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0' }}>
-          {/* Header Row with Dates */}
-          <thead>
-            <tr>
-              <th style={{
-                padding: '8px 4px',
-                textAlign: 'center',
-                borderBottom: '2px solid #4a90e2',
-                position: 'sticky',
-                left: 0,
-                backgroundColor: '#f9f9f9',
-                fontSize: '11px',
-                fontWeight: 'bold',
-                width: '100px',
-                minWidth: '100px',
-                zIndex: 2
-              }}>
-                Aspect
-              </th>
-              {aspectsByDay.map((dayData, idx) => {
-                const today = new Date();
-                const isToday = dayData.date.toDateString() === today.toDateString();
-                return (
-                  <th key={idx} style={{
-                    padding: '8px 4px',
-                    textAlign: 'center',
-                    borderBottom: '2px solid #4a90e2',
-                    backgroundColor: isToday ? '#f0fff4' : 'white',
-                    minWidth: '80px'
-                  }}>
-                    <div style={{ fontSize: '12px', fontWeight: 'bold', color: isToday ? '#28a745' : '#333' }}>
-                      {dayData.date.toLocaleDateString('en-US', { weekday: 'short' })}
-                    </div>
-                    <div style={{ fontSize: '10px', color: '#666' }}>
-                      {dayData.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                    </div>
-                    {isToday && <div style={{ color: '#28a745', fontSize: '9px', fontWeight: 'bold' }}>Today</div>}
-                  </th>
-                );
-              })}
-            </tr>
-          </thead>
+        {/* Split days into weeks for 2week/3week/month views, otherwise show all days in one table */}
+        {(() => {
+          // Helper function to split days into weeks (7-day chunks)
+          const splitIntoWeeks = (days: typeof aspectsByDay) => {
+            const weeks = [];
+            for (let i = 0; i < days.length; i += 7) {
+              weeks.push(days.slice(i, i + 7));
+            }
+            return weeks;
+          };
 
-          {/* Aspect Rows */}
-          <tbody>
-            {sortedAspects.map((aspectTemplate, rowIdx) => (
-              <tr key={rowIdx} style={{ borderBottom: '1px solid #eee' }}>
-                {/* Aspect Label Column */}
-                <td
-                  style={{
-                    padding: '8px 4px',
-                    fontWeight: 'bold',
-                    fontSize: '11px',
-                    position: 'sticky',
-                    left: 0,
-                    backgroundColor: '#f9f9f9',
-                    borderRight: '1px solid #ddd',
-                    zIndex: 1,
-                    width: '100px',
-                    minWidth: '100px',
-                    textAlign: 'center'
-                  }}
-                >
-                  {aspectTemplate.isLunation ? (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
-                      <span>{aspectTemplate.symbol}</span>
-                    </div>
-                  ) : aspectTemplate.isIngress ? (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2px', flexWrap: 'wrap' }}>
-                      <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
-                      <span>→</span>
-                      <span style={{ fontSize: '9px' }}>{aspectTemplate.signName}</span>
-                    </div>
-                  ) : aspectTemplate.isEclipseAspect ? (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px', flexWrap: 'wrap' }}>
-                      <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
-                      <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
-                      <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
-                    </div>
-                  ) : (
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
-                      <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
-                      <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
-                      <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
-                    </div>
-                  )}
-                </td>
-
-                {/* Day Columns */}
-                {aspectsByDay.map((dayData, colIdx) => {
-                  const today = new Date();
-                  const isToday = dayData.date.toDateString() === today.toDateString();
-                  const aspect = dayData.aspectMap.get(aspectTemplate.key);
-
-                  return (
-                    <td key={colIdx} style={{
-                      padding: '4px',
+          // For 7-day view, show single horizontal table
+          if (viewMode === '7day') {
+            const weekDays = aspectsByDay;
+            return (
+              <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0' }}>
+                {/* Header Row with Dates */}
+                <thead>
+                  <tr>
+                    <th style={{
+                      padding: '8px 4px',
                       textAlign: 'center',
-                      backgroundColor: isToday ? '#f0fff4' : 'white',
-                      borderRight: '1px solid #f0f0f0'
+                      borderBottom: '2px solid #4a90e2',
+                      position: 'sticky',
+                      left: 0,
+                      backgroundColor: '#f9f9f9',
+                      fontSize: '11px',
+                      fontWeight: 'bold',
+                      width: '100px',
+                      minWidth: '100px',
+                      zIndex: 2
                     }}>
-                      {aspect ? (
-                        <div
-                          onClick={() => handleAspectClick(aspect)}
-                          title={
-                            aspect.isLunation
-                              ? `${aspect.aspect} at ${aspect.position} (${aspect.phase})`
-                              : aspect.isIngress
-                                ? `${aspect.planet1} enters ${aspect.signName}`
-                                : aspect.isEclipseAspect
-                                  ? `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb (Eclipse Aspect)`
-                                  : `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb`
-                          }
-                          style={{
-                            padding: '6px 4px',
-                            backgroundColor: aspect.isLunation ? '#fff3cd' : aspect.isEclipseAspect ? '#ffe4e4' : hexToRgba(aspect.color1, 0.2),
-                            borderRadius: '3px',
-                            borderLeft: `3px solid ${aspect.color}`,
-                            fontSize: '10px',
-                            cursor: 'pointer',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            minHeight: '50px',
-                            gap: '2px'
-                          }}
-                        >
-                          {aspect.isLunation ? (
-                            <div style={{ textAlign: 'center' }}>
-                              <div style={{ fontWeight: 'bold', fontSize: '10px' }}>{aspect.aspectSymbol} {aspect.aspect}</div>
-                              <div style={{ fontSize: '8px', color: '#666' }}>at {aspect.position}</div>
-                              <div style={{ fontSize: '8px', color: '#666' }}>({aspect.phase})</div>
-                            </div>
-                          ) : aspect.isIngress ? (
-                            <div style={{ textAlign: 'center' }}>
-                              <div style={{ fontWeight: 'bold', fontSize: '10px' }}>
-                                <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
-                                {' '}→{' '}
-                                <span>{aspect.symbol2}</span>
+                      Aspect
+                    </th>
+                    {weekDays.map((dayData, idx) => {
+                      const today = new Date();
+                      const isToday = dayData.date.toDateString() === today.toDateString();
+                      return (
+                        <th key={idx} style={{
+                          padding: '8px 4px',
+                          textAlign: 'center',
+                          borderBottom: '2px solid #4a90e2',
+                          backgroundColor: isToday ? '#f0fff4' : 'white',
+                          minWidth: '80px'
+                        }}>
+                          <div style={{ fontSize: '12px', fontWeight: 'bold', color: isToday ? '#28a745' : '#333' }}>
+                            {dayData.date.toLocaleDateString('en-US', { weekday: 'short' })}
+                          </div>
+                          <div style={{ fontSize: '10px', color: '#666' }}>
+                            {dayData.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                          </div>
+                          {isToday && <div style={{ color: '#28a745', fontSize: '9px', fontWeight: 'bold' }}>Today</div>}
+                        </th>
+                      );
+                    })}
+                  </tr>
+                </thead>
+
+                {/* Aspect Rows */}
+                <tbody>
+                  {sortedAspects.map((aspectTemplate, rowIdx) => (
+                    <tr key={rowIdx} style={{ borderBottom: '1px solid #eee' }}>
+                      {/* Aspect Label Column */}
+                      <td
+                        style={{
+                          padding: '8px 4px',
+                          fontWeight: 'bold',
+                          fontSize: '11px',
+                          position: 'sticky',
+                          left: 0,
+                          backgroundColor: '#f9f9f9',
+                          borderRight: '1px solid #ddd',
+                          zIndex: 1,
+                          width: '100px',
+                          minWidth: '100px',
+                          textAlign: 'center'
+                        }}
+                      >
+                        {aspectTemplate.isLunation ? (
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
+                            <span>{aspectTemplate.symbol}</span>
+                          </div>
+                        ) : aspectTemplate.isIngress ? (
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2px', flexWrap: 'wrap' }}>
+                            <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                            <span>→</span>
+                            <span style={{ fontSize: '9px' }}>{aspectTemplate.signName}</span>
+                          </div>
+                        ) : aspectTemplate.isEclipseAspect ? (
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px', flexWrap: 'wrap' }}>
+                            <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                            <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
+                            <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
+                          </div>
+                        ) : (
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
+                            <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                            <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
+                            <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
+                          </div>
+                        )}
+                      </td>
+
+                      {/* Day Columns */}
+                      {weekDays.map((dayData, colIdx) => {
+                        const today = new Date();
+                        const isToday = dayData.date.toDateString() === today.toDateString();
+                        const aspect = dayData.aspectMap.get(aspectTemplate.key);
+
+                        return (
+                          <td key={colIdx} style={{
+                            padding: '4px',
+                            textAlign: 'center',
+                            backgroundColor: isToday ? '#f0fff4' : 'white',
+                            borderRight: '1px solid #f0f0f0'
+                          }}>
+                            {aspect ? (
+                              <div
+                                onClick={() => handleAspectClick(aspect)}
+                                title={
+                                  aspect.isLunation
+                                    ? `${aspect.aspect} at ${aspect.position} (${aspect.phase})`
+                                    : aspect.isIngress
+                                      ? `${aspect.planet1} enters ${aspect.signName}`
+                                      : aspect.isEclipseAspect
+                                        ? `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb (Eclipse Aspect)`
+                                        : `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb`
+                                }
+                                style={{
+                                  padding: '6px 4px',
+                                  backgroundColor: aspect.isLunation ? '#fff3cd' : aspect.isEclipseAspect ? '#ffe4e4' : hexToRgba(aspect.color1, 0.2),
+                                  borderRadius: '3px',
+                                  borderLeft: `3px solid ${aspect.color}`,
+                                  fontSize: '10px',
+                                  cursor: 'pointer',
+                                  display: 'flex',
+                                  flexDirection: 'column',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  minHeight: '50px',
+                                  gap: '2px'
+                                }}
+                              >
+                                {aspect.isLunation ? (
+                                  <div style={{ textAlign: 'center' }}>
+                                    <div style={{ fontWeight: 'bold', fontSize: '10px' }}>{aspect.aspectSymbol} {aspect.aspect}</div>
+                                    <div style={{ fontSize: '8px', color: '#666' }}>at {aspect.position}</div>
+                                    <div style={{ fontSize: '8px', color: '#666' }}>({aspect.phase})</div>
+                                  </div>
+                                ) : aspect.isIngress ? (
+                                  <div style={{ textAlign: 'center' }}>
+                                    <div style={{ fontWeight: 'bold', fontSize: '10px' }}>
+                                      <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                      {' '}→{' '}
+                                      <span>{aspect.symbol2}</span>
+                                    </div>
+                                    <div style={{ fontSize: '8px', color: '#666' }}>{aspect.planet1} enters {aspect.signName}</div>
+                                    <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}° in</div>
+                                  </div>
+                                ) : aspect.isEclipseAspect ? (
+                                  <div style={{ textAlign: 'center' }}>
+                                    <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
+                                      <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                      {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
+                                      <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                                    </div>
+                                    <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
+                                      {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                                    </div>
+                                    <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
+                                    <div style={{ fontSize: '7px', color: '#8B0000', fontWeight: 'bold' }}>ECLIPSE</div>
+                                  </div>
+                                ) : (
+                                  <div style={{ textAlign: 'center' }}>
+                                    <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
+                                      <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                      {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
+                                      <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                                    </div>
+                                    <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
+                                      {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                                    </div>
+                                    <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
+                                  </div>
+                                )}
                               </div>
-                              <div style={{ fontSize: '8px', color: '#666' }}>{aspect.planet1} enters {aspect.signName}</div>
-                              <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}° in</div>
-                            </div>
-                          ) : aspect.isEclipseAspect ? (
-                            <div style={{ textAlign: 'center' }}>
-                              <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
-                                <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
-                                {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
-                                <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                            ) : (
+                              <div style={{ minHeight: '50px' }}></div>
+                            )}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            );
+          }
+
+          // For 2week/3week/month views, split into weeks and stack vertically
+          const weeks = splitIntoWeeks(aspectsByDay);
+          return (
+            <>
+              {weeks.map((weekDays, weekIdx) => (
+                <div key={weekIdx} style={{ marginBottom: weekIdx < weeks.length - 1 ? '30px' : '0' }}>
+                  {/* Week Label */}
+                  <div style={{
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                    color: '#4a90e2',
+                    marginBottom: '8px',
+                    padding: '8px 12px',
+                    backgroundColor: '#f0f8ff',
+                    borderRadius: '4px',
+                    borderLeft: '4px solid #4a90e2'
+                  }}>
+                    Week {weekIdx + 1}
+                  </div>
+
+                  <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0' }}>
+                    {/* Header Row with Dates */}
+                    <thead>
+                      <tr>
+                        <th style={{
+                          padding: '8px 4px',
+                          textAlign: 'center',
+                          borderBottom: '2px solid #4a90e2',
+                          position: 'sticky',
+                          left: 0,
+                          backgroundColor: '#f9f9f9',
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          width: '100px',
+                          minWidth: '100px',
+                          zIndex: 2
+                        }}>
+                          Aspect
+                        </th>
+                        {weekDays.map((dayData, idx) => {
+                          const today = new Date();
+                          const isToday = dayData.date.toDateString() === today.toDateString();
+                          return (
+                            <th key={idx} style={{
+                              padding: '8px 4px',
+                              textAlign: 'center',
+                              borderBottom: '2px solid #4a90e2',
+                              backgroundColor: isToday ? '#f0fff4' : 'white',
+                              minWidth: '80px'
+                            }}>
+                              <div style={{ fontSize: '12px', fontWeight: 'bold', color: isToday ? '#28a745' : '#333' }}>
+                                {dayData.date.toLocaleDateString('en-US', { weekday: 'short' })}
                               </div>
-                              <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
-                                {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                              <div style={{ fontSize: '10px', color: '#666' }}>
+                                {dayData.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                               </div>
-                              <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
-                              <div style={{ fontSize: '7px', color: '#8B0000', fontWeight: 'bold' }}>ECLIPSE</div>
-                            </div>
-                          ) : (
-                            <div style={{ textAlign: 'center' }}>
-                              <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
-                                <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
-                                {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
-                                <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                              {isToday && <div style={{ color: '#28a745', fontSize: '9px', fontWeight: 'bold' }}>Today</div>}
+                            </th>
+                          );
+                        })}
+                      </tr>
+                    </thead>
+
+                    {/* Aspect Rows */}
+                    <tbody>
+                      {sortedAspects.map((aspectTemplate, rowIdx) => (
+                        <tr key={rowIdx} style={{ borderBottom: '1px solid #eee' }}>
+                          {/* Aspect Label Column */}
+                          <td
+                            style={{
+                              padding: '8px 4px',
+                              fontWeight: 'bold',
+                              fontSize: '11px',
+                              position: 'sticky',
+                              left: 0,
+                              backgroundColor: '#f9f9f9',
+                              borderRight: '1px solid #ddd',
+                              zIndex: 1,
+                              width: '100px',
+                              minWidth: '100px',
+                              textAlign: 'center'
+                            }}
+                          >
+                            {aspectTemplate.isLunation ? (
+                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
+                                <span>{aspectTemplate.symbol}</span>
                               </div>
-                              <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
-                                {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                            ) : aspectTemplate.isIngress ? (
+                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2px', flexWrap: 'wrap' }}>
+                                <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                                <span>→</span>
+                                <span style={{ fontSize: '9px' }}>{aspectTemplate.signName}</span>
                               </div>
-                              <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
-                            </div>
-                          )}
-                        </div>
-                      ) : (
-                        <div style={{ minHeight: '50px' }}></div>
-                      )}
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                            ) : aspectTemplate.isEclipseAspect ? (
+                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px', flexWrap: 'wrap' }}>
+                                <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                                <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
+                                <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
+                              </div>
+                            ) : (
+                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '3px' }}>
+                                <span style={{ color: aspectTemplate.color1 }}>{aspectTemplate.symbol1}</span>
+                                <span style={{ color: aspectTemplate.color }}>{aspectTemplate.symbol}</span>
+                                <span style={{ color: aspectTemplate.color2 }}>{aspectTemplate.symbol2}</span>
+                              </div>
+                            )}
+                          </td>
+
+                          {/* Day Columns */}
+                          {weekDays.map((dayData, colIdx) => {
+                            const today = new Date();
+                            const isToday = dayData.date.toDateString() === today.toDateString();
+                            const aspect = dayData.aspectMap.get(aspectTemplate.key);
+
+                            return (
+                              <td key={colIdx} style={{
+                                padding: '4px',
+                                textAlign: 'center',
+                                backgroundColor: isToday ? '#f0fff4' : 'white',
+                                borderRight: '1px solid #f0f0f0'
+                              }}>
+                                {aspect ? (
+                                  <div
+                                    onClick={() => handleAspectClick(aspect)}
+                                    title={
+                                      aspect.isLunation
+                                        ? `${aspect.aspect} at ${aspect.position} (${aspect.phase})`
+                                        : aspect.isIngress
+                                          ? `${aspect.planet1} enters ${aspect.signName}`
+                                          : aspect.isEclipseAspect
+                                            ? `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb (Eclipse Aspect)`
+                                            : `${aspect.planet1} ${aspect.aspect} ${aspect.planet2}, ${aspect.orb}° orb`
+                                    }
+                                    style={{
+                                      padding: '6px 4px',
+                                      backgroundColor: aspect.isLunation ? '#fff3cd' : aspect.isEclipseAspect ? '#ffe4e4' : hexToRgba(aspect.color1, 0.2),
+                                      borderRadius: '3px',
+                                      borderLeft: `3px solid ${aspect.color}`,
+                                      fontSize: '10px',
+                                      cursor: 'pointer',
+                                      display: 'flex',
+                                      flexDirection: 'column',
+                                      alignItems: 'center',
+                                      justifyContent: 'center',
+                                      minHeight: '50px',
+                                      gap: '2px'
+                                    }}
+                                  >
+                                    {aspect.isLunation ? (
+                                      <div style={{ textAlign: 'center' }}>
+                                        <div style={{ fontWeight: 'bold', fontSize: '10px' }}>{aspect.aspectSymbol} {aspect.aspect}</div>
+                                        <div style={{ fontSize: '8px', color: '#666' }}>at {aspect.position}</div>
+                                        <div style={{ fontSize: '8px', color: '#666' }}>({aspect.phase})</div>
+                                      </div>
+                                    ) : aspect.isIngress ? (
+                                      <div style={{ textAlign: 'center' }}>
+                                        <div style={{ fontWeight: 'bold', fontSize: '10px' }}>
+                                          <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                          {' '}→{' '}
+                                          <span>{aspect.symbol2}</span>
+                                        </div>
+                                        <div style={{ fontSize: '8px', color: '#666' }}>{aspect.planet1} enters {aspect.signName}</div>
+                                        <div style={{ fontSize: '8px', color: '#666' }}>{aspect.orb}° in</div>
+                                      </div>
+                                    ) : aspect.isEclipseAspect ? (
+                                      <div style={{ textAlign: 'center' }}>
+                                        <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
+                                          <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                          {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
+                                          <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                                        </div>
+                                        <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
+                                          {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                                        </div>
+                                        <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
+                                        <div style={{ fontSize: '7px', color: '#8B0000', fontWeight: 'bold' }}>ECLIPSE</div>
+                                      </div>
+                                    ) : (
+                                      <div style={{ textAlign: 'center' }}>
+                                        <div style={{ fontWeight: 'bold', fontSize: '11px', marginBottom: '2px' }}>
+                                          <span style={{ color: aspect.color1 }}>{aspect.symbol1}</span>
+                                          {' '}<span style={{ color: aspect.color }}>{aspect.symbol}</span>{' '}
+                                          <span style={{ color: aspect.color2 }}>{aspect.symbol2}</span>
+                                        </div>
+                                        <div style={{ fontSize: '9px', color: '#555', lineHeight: '1.2' }}>
+                                          {aspect.planet1} {aspect.aspect} {aspect.planet2}
+                                        </div>
+                                        <div style={{ fontSize: '8px', color: '#999' }}>{aspect.orb}° orb</div>
+                                      </div>
+                                    )}
+                                  </div>
+                                ) : (
+                                  <div style={{ minHeight: '50px' }}></div>
+                                )}
+                              </td>
+                            );
+                          })}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ))}
+            </>
+          );
+        })()}
       </div>
 
       {/* Legend */}
