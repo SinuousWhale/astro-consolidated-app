@@ -1035,5 +1035,107 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Eclipse sextile = OPPORTUNITY through transformational action',
       'Conscious deep choices activate metamorphosis!'
     ]
+  },
+
+  // NORTH NODE ECLIPSE ASPECTS
+  'North Node-Conjunction': {
+    name: 'Solar Eclipse Conjunction North Node',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year (MAJOR destiny activation cycle)',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset, destiny activation, fated endings and beginnings, shadow work, and powerful transformational cycles.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, karmic mission, destiny path, what you\'re meant to develop, and where life is calling you to evolve. It\'s your future self and purpose.',
+    aspectMeaning: 'POWERFUL destiny activation and soul mission alignment! The eclipse conjuncts your North Node, bringing MAJOR karmic opportunities aligned with your soul purpose. This is a FATED 6-month to 1-year cycle where new beginnings, opportunities, and blessings arrive that align with your destiny path. You\'re being PULLED toward your future - karmic doors open, soul mission activates, destiny calling intensifies. This is about RECEIVING what your soul needs for growth.',
+    loveRelationships: 'FATED romantic opportunity aligned with soul growth! Destined love connection manifests or relationship evolves toward soul purpose. New romantic beginning brings growth and evolution. Partner who supports your destiny path appears or existing relationship deepens in purposeful direction. Love that serves your highest evolution arrives.',
+    familyHome: 'Family opportunity and home evolution aligned with destiny! Domestic situation shifts to support soul growth. New family beginning or home change serves karmic mission. Family relationships evolve in purposeful direction, home becomes sanctuary for destiny work. Blessings in family and home life.',
+    businessCareer: 'MAJOR career opportunity aligned with soul purpose! Professional destiny activates - new job, promotion, or business opportunity serves karmic mission. Work becomes aligned with life purpose, career path evolves toward soul calling. Fated professional beginning brings growth and fulfillment.',
+    moneyFinances: 'Financial opportunity and abundance aligned with destiny! Money flows increase to support soul mission. Income opportunity serves karmic purpose, financial growth accelerates. Prosperity aligned with values and life calling manifests. Abundance that supports your evolution arrives.',
+    predictions: [
+      'MAJOR destiny opportunity manifests - say YES to soul calling',
+      'Karmic doors open - fated beginnings aligned with purpose',
+      'Growth opportunities arrive that serve your evolution',
+      'Soul mission activates - clarity about life purpose increases',
+      'Destiny partner, job, or opportunity appears at perfect timing',
+      'You\'re PULLED toward your future self powerfully',
+      'Blessings and rewards for soul growth arrive',
+      'New beginning aligned with karmic mission starts',
+      'Eclipse at North Node = DESTINY ACTIVATION',
+      'Your future is calling - answer with courage and faith!'
+    ]
+  },
+
+  'North Node-Opposition': {
+    name: 'Lunar Eclipse Opposition North Node',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year (MAJOR karmic release cycle)',
+    planet1Energy: 'Lunar Eclipse represents MAJOR emotional release, karmic completion, endings, letting go, and purging old patterns. It\'s the Full Moon on steroids - what must be released.',
+    planet2Energy: 'When the Lunar Eclipse opposes the North Node, it conjuncts the South Node (past patterns, comfort zone, what you\'re releasing). This is about emotional purging of the old to make space for destiny.',
+    aspectMeaning: 'POWERFUL emotional release and karmic completion! The Lunar Eclipse opposes your North Node (conjuncts South Node), bringing MAJOR emotional purging of past patterns that block your destiny. This is a 6-month to 1-year cycle of letting go - old comfortable patterns, relationships, or situations that no longer serve your soul growth must be released. Emotional endings clear space for North Node blessings to arrive. This is about RELEASING what you\'ve outgrown.',
+    loveRelationships: 'Karmic relationship release or emotional completion in love! Relationship pattern from the past ends or transforms. You emotionally release codependency, people-pleasing, or love patterns that kept you from growth. Comfortable but limiting relationship may end. Emotional purging creates space for destined love aligned with North Node.',
+    familyHome: 'Family pattern completion and emotional home release! Old family dynamics or domestic patterns end. You release emotional dependence on family or ancestral patterns that limited growth. Home situation that felt comfortable but kept you stuck completes. Emotional purging creates space for destiny-aligned family life.',
+    businessCareer: 'Career pattern completion and professional release! Old work approach or comfortable job that limited growth ends. You emotionally release career patterns from the past - fear-based choices, playing small, or work that felt safe but unfulfilling. Professional purging creates space for soul-purpose career.',
+    moneyFinances: 'Financial pattern release and money comfort zone completion! Old earning approach or financial dependence ends. You emotionally release scarcity consciousness, poverty patterns, or money habits from the past. Financial situations that felt safe but limited abundance complete. Purging creates space for destiny-aligned prosperity.',
+    predictions: [
+      'Emotional release of past patterns that block destiny - necessary endings',
+      'Karmic completion - old comfortable situations must be let go',
+      'Relationship, job, or living situation from the past ends or transforms',
+      'You emotionally purge what you\'ve outgrown - making space for growth',
+      'Past-life or ancestral patterns surface for final release',
+      'Comfort zone dissolves - you must step toward destiny path',
+      'What worked before no longer serves - surrender to evolution',
+      'Emotional catharsis clears karmic baggage blocking North Node',
+      'Lunar Eclipse opposite North Node = KARMIC RELEASE',
+      'Let go of the past to receive your future - trust the process!'
+    ]
+  },
+
+  // SOUTH NODE ECLIPSE ASPECTS
+  'South Node-Conjunction': {
+    name: 'Lunar Eclipse Conjunction South Node',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year (MAJOR karmic release cycle)',
+    planet1Energy: 'Lunar Eclipse represents MAJOR emotional release, karmic completion, endings, letting go, and purging old patterns. It\'s the Full Moon on steroids - what must be released.',
+    planet2Energy: 'South Node represents your past patterns, comfort zone, what you\'re releasing, karmic baggage, ancestral patterns, and where you\'re meant to let go. It\'s your past self and old habits.',
+    aspectMeaning: 'POWERFUL emotional release and karmic completion! The Lunar Eclipse conjuncts your South Node, bringing MAJOR emotional purging of past patterns, comfort zones, and old karma. This is a FATED 6-month to 1-year cycle of endings and release - what you\'ve been clinging to out of fear or comfort must be emotionally let go. Ancestral patterns surface for healing, past-life karma completes, old identity dissolves. This is about PURGING the past to make space for North Node destiny.',
+    loveRelationships: 'Karmic relationship release or emotional love completion! Past relationship pattern ends dramatically or old love karma completes. You emotionally release codependency, people-pleasing, or romantic patterns from past lives or childhood. Comfortable but soul-limiting relationship may end. Emotional purging of old love wounds creates space for destined partnership.',
+    familyHome: 'Ancestral pattern completion and family karma release! Old family dynamics or generational patterns end powerfully. You emotionally release family dependence, ancestral wounds, or home patterns that kept you stuck. Comfortable but limiting domestic situation completes. Emotional purging of family karma creates space for evolved home life.',
+    businessCareer: 'Past career pattern completion and old work release! Comfortable job or professional approach from the past ends. You emotionally release work patterns, fear-based career choices, or professional identity that no longer serves evolution. Old career karma completes. Purging creates space for soul-purpose work.',
+    moneyFinances: 'Past financial pattern release and old money karma completion! Earning approach or financial dependence from the past ends. You emotionally release poverty consciousness, scarcity from childhood, or money patterns inherited from family. Old financial karma completes. Purging creates space for destiny-aligned abundance.',
+    predictions: [
+      'MAJOR emotional release of past patterns - karmic completion intensifies',
+      'Ancestral or past-life patterns surface for final healing and release',
+      'Comfortable situations from the past must be let go - fated endings',
+      'You emotionally purge old identity, relationships, or life approach',
+      'Family karma or generational patterns complete through release',
+      'What felt safe and familiar no longer serves - surrender required',
+      'Old wounds surface for final healing - emotional catharsis',
+      'Past-life relationship or soul contract completes',
+      'Lunar Eclipse at South Node = KARMIC PURGING',
+      'Release the past completely - make space for your destiny!'
+    ]
+  },
+
+  'South Node-Opposition': {
+    name: 'Solar Eclipse Opposition South Node',
+    frequency: 'Occurs during eclipses',
+    duration: '6 months to 1 year (MAJOR destiny activation cycle)',
+    planet1Energy: 'Solar Eclipse represents MAJOR karmic reset, destiny activation, fated endings and beginnings, shadow work, and powerful transformational cycles.',
+    planet2Energy: 'When the Solar Eclipse opposes the South Node, it conjuncts the North Node (destiny path, soul mission, future self). This is about new beginnings aligned with purpose while releasing the past.',
+    aspectMeaning: 'POWERFUL destiny activation and soul mission alignment! The Solar Eclipse opposes your South Node (conjuncts North Node), bringing MAJOR karmic opportunities aligned with your soul purpose while simultaneously requiring release of past patterns. This is a FATED 6-month to 1-year cycle where new beginnings arrive AS you let go of the old. Destiny doors open while comfort zones close. You\'re being called toward your future while the past completes. This is about RECEIVING destiny while RELEASING history.',
+    loveRelationships: 'FATED romantic opportunity aligned with destiny while past love patterns complete! Destined love connection manifests as old relationship karma releases. New romantic beginning serves soul growth while comfortable but limiting love patterns end. Partner aligned with North Node appears as South Node relationship completes. Evolution in love.',
+    familyHome: 'Family opportunity aligned with destiny while ancestral patterns complete! New family beginning or home evolution serves soul purpose while old family karma releases. Domestic situation shifts to support growth while comfortable but limiting home patterns end. Evolved family life emerges as past completes.',
+    businessCareer: 'MAJOR career opportunity aligned with soul purpose while old work completes! Professional destiny activates - new job or path serves karmic mission while past career approach releases. Work becomes aligned with life purpose as old professional patterns complete. Fated career beginning as comfortable job ends.',
+    moneyFinances: 'Financial opportunity aligned with destiny while old money patterns complete! Abundance flows to support soul mission while past financial approach releases. Income opportunity serves purpose while comfortable but limiting earning patterns end. Prosperity aligned with evolution emerges as scarcity completes.',
+    predictions: [
+      'MAJOR destiny opportunity arrives as past patterns complete - simultaneous',
+      'New beginning aligned with soul purpose while old comfort zone releases',
+      'Karmic doors open - say YES to future while surrendering past',
+      'Growth opportunity serves evolution while familiar patterns end',
+      'Destiny partner, job, or path appears as old situation completes',
+      'You\'re PULLED toward future while past completes naturally',
+      'Blessings arrive as you release what no longer serves',
+      'New chapter begins - aligned with North Node mission',
+      'Solar Eclipse opposite South Node = DESTINY ACTIVATION + COMPLETION',
+      'Step into your future - the past is complete, the calling is clear!'
+    ]
   }
 };
