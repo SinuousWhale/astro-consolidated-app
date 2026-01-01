@@ -570,7 +570,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
     // Handle lunations (New Moon, Full Moon, Solar Eclipse, Lunar Eclipse)
     if (aspect.isLunation) {
       try {
-        const { getSolarEclipseInterpretation, getNewMoonInterpretation, getFullMoonInterpretation } =
+        const { getSolarEclipseInterpretation, getNewMoonInterpretation, getFullMoonInterpretation, getLunarEclipseInterpretation } =
           await import('../utils/eclipseAndLunationInterpretations');
 
         // Extract sign from position string (e.g., "15°23' Aries" -> "Aries")
@@ -582,7 +582,9 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
             interpretation = getSolarEclipseInterpretation(sign);
           } else if (aspect.aspect === 'New Moon') {
             interpretation = getNewMoonInterpretation(sign);
-          } else if (aspect.aspect === 'Full Moon' || aspect.aspect === 'Lunar Eclipse') {
+          } else if (aspect.aspect === 'Lunar Eclipse') {
+            interpretation = getLunarEclipseInterpretation(sign);
+          } else if (aspect.aspect === 'Full Moon') {
             interpretation = getFullMoonInterpretation(sign);
           }
         }

@@ -43,6 +43,19 @@ export interface FullMoonInterpretation {
   predictions: string[];
 }
 
+export interface LunarEclipseInterpretation {
+  name: string;
+  frequency: string;
+  duration: string;
+  signEnergy: string;
+  eventMeaning: string;
+  loveRelationships: string;
+  familyHome: string;
+  businessCareer: string;
+  moneyFinances: string;
+  predictions: string[];
+}
+
 /**
  * Get Solar Eclipse interpretation by sign
  */
@@ -62,6 +75,13 @@ export function getNewMoonInterpretation(sign: string): NewMoonInterpretation | 
  */
 export function getFullMoonInterpretation(sign: string): FullMoonInterpretation | null {
   return FULL_MOONS[sign] || null;
+}
+
+/**
+ * Get Lunar Eclipse interpretation by sign
+ */
+export function getLunarEclipseInterpretation(sign: string): LunarEclipseInterpretation | null {
+  return LUNAR_ECLIPSES[sign] || null;
 }
 
 // ============================================================================
@@ -946,8 +966,304 @@ const FULL_MOONS: Record<string, FullMoonInterpretation> = {
   }
 };
 
+
+// ============================================================================
+// LUNAR ECLIPSE INTERPRETATIONS
+// ============================================================================
+
+const LUNAR_ECLIPSES: Record<string, LunarEclipseInterpretation> = {
+  'Aries': {
+    name: 'Lunar Eclipse in Aries',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Aries represents courage, independence, leadership, initiative, self-assertion, passion, and the warrior spirit. It\'s the drive to be first, the spark of new beginnings, and the courage to stand alone.',
+    eventMeaning: 'A Lunar Eclipse in Aries brings intense emotional release around independence, self-assertion, and identity. This is a karmic completion point for patterns of people-pleasing, self-sacrifice, or losing yourself in relationships. Major endings occur in how you assert yourself - old anger, suppressed rage, or codependent patterns purge from your system. This eclipse demands you let go of who you thought you should be and release all the ways you\'ve dimmed your authentic power. Expect emotional catharsis around independence, courage, and standing alone. This is about ending cycles of weakness and birthing fierce self-reliance.',
+    loveRelationships: 'Relationship patterns around independence and identity reach karmic completion and emotional release. You may finally end relationships where you\'ve lost yourself, or purge codependent patterns that have haunted you for years. Anger and resentment you\'ve suppressed erupts and clears. Some relationships end dramatically if they require you to be less than you are. Others transform through your emotional honesty about needing autonomy. This is about releasing the need to dim your light for love, letting go of partnerships that kept you small, and emotionally purging all the ways you\'ve betrayed yourself for acceptance.',
+    familyHome: 'Family patterns around assertion and boundaries reach karmic ending. You emotionally release generations of people-pleasing, finally let go of family members who try to control you, or complete a cycle of suppressing your true self for family approval. Old anger at family dynamics surfaces for final purging. You may physically or emotionally leave family situations that have kept you weak. This eclipse completes your journey of reclaiming power from family, ending cycles where you had to be someone you\'re not to belong, and releasing the emotional weight of family expectations.',
+    businessCareer: 'Career patterns of passivity, fear of leadership, or working for others\' approval reach karmic completion. You emotionally release jobs, bosses, or professional identities that kept you playing small. Suppressed frustration with authority or career limitations erupts and clears. This eclipse may bring endings in employment where you couldn\'t be autonomous, completion of professional cycles where you couldn\'t lead, or emotional purging of all the ways work has drained your courage. You release what must die professionally so fierce independence can be born.',
+    moneyFinances: 'Financial codependence patterns reach karmic completion. You emotionally release dependence on others\' money, let go of financial situations that kept you powerless, or complete cycles of earning that required you to sacrifice autonomy. Financial anger or resentment surfaces and clears. This eclipse brings endings to income that came at the cost of your independence, completion of debt cycles that kept you controlled, and emotional purging of all shame around financial self-reliance. You must let go of financial security that costs you your soul.',
+    predictions: [
+      'Relationship ends dramatically after years of losing yourself - liberation through painful release',
+      'Suppressed anger erupts and clears completely - you finally express what you\'ve held for years',
+      'Job resignation or firing that completes cycle of working where you couldn\'t be authentic',
+      'Emotional breakdown and breakthrough around self-worth - old patterns purge from system',
+      'Family relationship reaches final ending or transformation through brutal honesty',
+      'Physical symptoms related to suppressed rage finally surface and begin healing',
+      'You will stop apologizing for your existence - people-pleasing pattern ends',
+      'Karmic relationship completion - you understand the lesson and can finally let go',
+      'Identity crisis that feels like death but is actually rebirth into authentic self',
+      'Release of all the ways you\'ve made yourself small - emergence of fierce wholeness'
+    ]
+  },
+
+  'Taurus': {
+    name: 'Lunar Eclipse in Taurus',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Taurus represents material security, stability, sensory pleasure, values, persistence, patience, and building lasting worth. It\'s the energy of grounding, tangible reality, and what you can touch and keep.',
+    eventMeaning: 'A Lunar Eclipse in Taurus brings intense emotional release around security, values, and self-worth. This is a karmic completion point for patterns of clinging to material security at the cost of growth, hoarding out of fear, or defining your worth by possessions. Major endings occur in your relationship with money, comfort, and stability - what you\'ve held onto out of fear must be released. This eclipse demands you let go of false security, release attachments to things that no longer serve your evolution, and emotionally purge all the ways you\'ve confused having with being. Expect dramatic loss or willing release of what seemed permanent but was actually imprisoning.',
+    loveRelationships: 'Relationship patterns around security and possession reach karmic completion. You may finally release relationships you\'ve clung to out of fear of being alone, or let go of partners you\'ve tried to own or control. Patterns of staying for security rather than love end dramatically. This eclipse brings emotional release of all the ways you\'ve confused love with having someone, or valued relationships for what they provide rather than who someone is. You must let go of love that felt safe but kept you stuck, releasing possessiveness and fear-based attachment to find real emotional freedom.',
+    familyHome: 'Family patterns around inheritance, material security, and home stability reach karmic ending. You may lose inherited property, release family wealth patterns that kept you trapped, or let go of the family home that represented false security. Emotional attachment to family resources or generational wealth completes its cycle. This eclipse purges your soul of the belief that family and material stability are the same thing, releases emotional dependence on family financial support, and completes cycles where you sacrificed growth for comfort at home.',
+    businessCareer: 'Career patterns of staying in stable but soul-deadening work reach karmic completion. You emotionally release jobs that paid well but cost you your values, let go of career paths chosen for security rather than meaning, or complete cycles of building worth in work that doesn\'t matter. This eclipse brings endings to professional situations where you sold your soul for a paycheck, completion of careers that felt permanent but trapped you, and purging of all the ways you\'ve measured your worth by your salary or position.',
+    moneyFinances: 'Major financial release and karmic completion around money patterns. You may lose money or possessions you were attached to, release financial security that was actually limiting your growth, or complete cycles of earning and hoarding out of fear. Material loss teaches spiritual lessons. This eclipse purges your soul of the belief that money equals security, releases poverty consciousness and scarcity wounds, and completes karmic patterns of defining self-worth by net worth. What must be financially released for your soul\'s evolution will be taken or surrendered.',
+    predictions: [
+      'Job loss or career ending that completes cycle of valuing security over meaning',
+      'Financial loss that hurts but teaches you that you are not what you own',
+      'Home you\'ve been attached to must be released - physical move completes karmic cycle',
+      'Relationship ends because you realize you were clinging for security not love',
+      'Inheritance issues complete - you release attachment to family money or property',
+      'Possessions you valued lose meaning or must be sold - material attachment purges',
+      'Self-worth crisis when external securities disappear - emergence of real value',
+      'Pattern of hoarding or holding on ends through loss or conscious release',
+      'You discover what really matters when what seemed permanent disappears',
+      'Complete release of false security - birth of real trust in your inherent worth'
+    ]
+  },
+
+  'Gemini': {
+    name: 'Lunar Eclipse in Gemini',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Gemini represents communication, curiosity, learning, connections, mental agility, information exchange, and versatility. It\'s the energy of questions, conversations, short trips, siblings, and multiple perspectives.',
+    eventMeaning: 'A Lunar Eclipse in Gemini brings intense emotional release around communication, information, and mental patterns. This is a karmic completion point for patterns of overthinking, mental anxiety, superficial connections, or saying what others want to hear. Major endings occur in how you communicate and think - old stories you\'ve told yourself, relationships based on talk rather than truth, or mental patterns that have kept you scattered must be released. This eclipse demands you let go of lies you\'ve told, mental distractions that have kept you from feeling, and all the ways you\'ve used words to avoid emotional truth. Expect emotional purging of conversations never had, truths never spoken, and mental noise that has drowned out your intuition.',
+    loveRelationships: 'Communication patterns and superficial relating reach karmic completion. You may finally end relationships that were all talk and no depth, release partners with whom you could never have real conversations, or purge patterns of saying what you think others want to hear. Lies in relationships - yours or theirs - get exposed for final clearing. This eclipse brings emotional release of all the ways you\'ve avoided vulnerable communication, completes cycles of mental connection without emotional intimacy, and purges your soul of the need to be interesting rather than honest in love.',
+    familyHome: 'Sibling relationships, family communication patterns, and neighborhood connections reach karmic ending. You may release toxic sibling dynamics, complete cycles of family gossip or superficial talk, or let go of communities where you never felt truly known. Family secrets that have been talked around finally surface for completion. This eclipse purges patterns of family communication that avoided real issues, releases the emotional weight of unsaid family truths, and completes karmic cycles with siblings or extended family that have kept you mentally exhausted but emotionally disconnected.',
+    businessCareer: 'Career patterns around communication, teaching, or information work reach karmic completion. You may leave jobs that required you to speak without meaning, release professional identities built on superficial expertise, or complete cycles of networking that kept you busy but unfulfilled. This eclipse brings endings to work that was all data and no wisdom, completion of professional relationships based on exchange rather than connection, and emotional purging of careers where your words had no real impact or truth.',
+    moneyFinances: 'Financial patterns around multiple income streams, communication work, or scattered earning reach karmic completion. You emotionally release income that came from talking rather than substance, let go of financial strategies based on distraction or mental cleverness, or complete cycles of earning that kept you busy but not prosperous. This eclipse purges financial anxiety rooted in mental rather than practical reality, releases the need to have backup plans for your backup plans, and completes patterns of financial decision-making based on information overwhelm rather than inner knowing.',
+    predictions: [
+      'Truth you\'ve avoided speaking finally erupts - conversation that changes everything',
+      'Relationship ends when you realize you\'ve never really talked about what matters',
+      'Sibling relationship reaches final completion or transformation through honesty',
+      'Mental breakdown from information overwhelm leads to surrender and intuitive knowing',
+      'Job involving communication or teaching ends - cycle of empty words completes',
+      'Social media, networking, or communication platform you\'ve relied on becomes obsolete',
+      'You stop lying to yourself - mental stories that kept you safe but stuck collapse',
+      'Gossip or casual talk you engaged in comes back with karmic consequences',
+      'Learning or education path you\'ve been on completes - you know enough, time to feel',
+      'Release of mental anxiety through finally admitting you don\'t have to know everything'
+    ]
+  },
+
+  'Cancer': {
+    name: 'Lunar Eclipse in Cancer',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Cancer represents emotions, nurturing, family, home, roots, security, intuition, and the protective mother energy. It\'s the urge to belong, to care for others, and to create emotional safety.',
+    eventMeaning: 'A Lunar Eclipse in Cancer brings the most intense emotional release and karmic completion around family, home, and emotional needs. This is the ultimate purging of family wounds, mother issues, and patterns of over-caring or emotional smothering. Major endings occur in family dynamics - relationships with parents, especially mother, reach crisis and completion. Old emotional patterns of seeking security through others, caring for everyone but yourself, or staying in situations because they\'re familiar must be emotionally purged. This eclipse demands you release family karma, let go of the past that has defined you, and emotionally complete your childhood so you can be born as your own person.',
+    loveRelationships: 'Codependent relationship patterns and emotional enmeshment reach karmic completion. You may finally leave relationships where you\'ve been the caretaker to your own detriment, release partners who needed mothering rather than partnership, or purge patterns of seeking partners to fill childhood emotional voids. This eclipse brings massive emotional release of all the ways you\'ve confused nurturing with enabling, caring with controlling, or emotional intensity with intimacy. You must let go of relationships that kept you emotionally regressed, release the need to be needed, and complete family patterns you\'ve been repeating in romantic relationships.',
+    familyHome: 'Family relationships reach ultimate karmic completion and emotional crisis. Mother relationships especially highlighted - final healing or final break. You may lose family members, home, or family structure you\'ve clung to. Childhood wounds surface for final purging and release. This eclipse completes your emotional umbilical cord to family - you must separate to survive. Endings with family that feel like death but are actually liberation. Home you\'ve lived in may be lost or left. All the ways your family has kept you emotionally imprisoned complete their cycle. Grief and freedom arrive together.',
+    businessCareer: 'Career patterns of sacrificing professional success for family needs reach karmic completion. You emotionally release work situations where you were treated like family in unhealthy ways, let go of jobs that exploited your nurturing nature, or complete cycles of working in family business that drained your soul. This eclipse brings endings to careers where emotional labor was expected without compensation, completes professional identities built on caretaking, and purges the belief that work should feel like family rather than honorable exchange.',
+    moneyFinances: 'Financial patterns around family support, home investments, or emotional spending reach karmic completion. You may lose money supporting family members who never reciprocated, release home or property with deep emotional attachment, or complete cycles of financial codependence with family. This eclipse purges financial patterns rooted in emotional need for security, releases money spent buying love or belonging, and completes karmic cycles where family and finances were unhealthily entangled. Financial separation from family becomes necessary for survival.',
+    predictions: [
+      'Mother relationship reaches final crisis - healing or permanent separation',
+      'Home you\'ve lived in must be released - physical move completes emotional cycle',
+      'Family member\'s death or permanent estrangement completes karmic pattern',
+      'Emotional breakdown so complete you finally release childhood wounds',
+      'Caretaking relationship ends when you realize you can\'t save anyone but yourself',
+      'Family secrets surface that change everything you thought you knew',
+      'You stop seeking family\'s approval - emotional umbilical cord finally cut',
+      'Childhood home sold or lost - grief and liberation as past physically disappears',
+      'Pattern of emotional eating, drinking, or numbing reaches crisis requiring change',
+      'You birth yourself as your own parent - family patterns complete, you are free'
+    ]
+  },
+
+  'Leo': {
+    name: 'Lunar Eclipse in Leo',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Leo represents creativity, self-expression, joy, confidence, recognition, leadership, romance, and the radiant performer. It\'s the urge to shine, to create, to be seen and celebrated for who you truly are.',
+    eventMeaning: 'A Lunar Eclipse in Leo brings intense emotional release around self-expression, creativity, and the need for recognition. This is a karmic completion point for patterns of performing for approval, creating for validation, or basing your worth on external applause. Major endings occur in creative projects, romantic relationships, or anything related to your authentic self-expression - what you\'ve created for the wrong reasons or who you\'ve performed being must be released. This eclipse demands you let go of the need to be special, release creative works that no longer represent who you are, and emotionally purge all the ways you\'ve confused being seen with being loved. Expect dramatic endings in romance, creative completion, or ego death.',
+    loveRelationships: 'Romantic patterns and dramatic love dynamics reach karmic completion. You may finally end relationships that were passionate but unsustainable, release partners who couldn\'t truly see or celebrate you, or purge patterns of loving people for how special they made you feel. Grand romantic gestures reveal themselves as empty. This eclipse brings emotional release of all the ways you\'ve performed in relationships, completes cycles of being with partners who needed your radiance but couldn\'t match it, and purges addiction to romantic drama. Love that was theater rather than truth must end.',
+    familyHome: 'Family patterns around favoritism, specialness, or parental approval reach karmic ending. You may release the role of golden child or family star, let go of needing to be the center of family attention, or complete cycles of performing for parental love. Relationships with children reach crisis points requiring release and transformation. This eclipse purges family dynamics where love was conditional on achievement or performance, releases the emotional wound of never being enough no matter how you shined, and completes patterns of seeking family validation through being special.',
+    businessCareer: 'Creative career patterns and need for professional recognition reach karmic completion. You may leave careers in performance, leadership, or creative fields that have drained your authentic joy, release work where your value was measured by applause, or complete cycles of professional identity built on being admired. This eclipse brings endings to creative projects that no longer represent your truth, completes leadership roles that required you to perform rather than serve, and emotionally purges the need for professional fame or recognition to feel worthy.',
+    moneyFinances: 'Financial patterns around creative work, speculative risks, or earning through performance reach karmic completion. You emotionally release income streams that required you to perform or be "on," let go of investments made from ego rather than wisdom, or complete cycles of spending to look special or impress others. This eclipse purges financial patterns rooted in compensating for unworthiness through lavish spending, releases money lost in creative or romantic pursuits that fed ego but not soul, and completes the karmic lesson that your worth isn\'t your net worth or your ability to shine.',
+    predictions: [
+      'Major romantic relationship ends dramatically - passion that burned too bright burns out',
+      'Creative project you invested heart in must be abandoned or completely transformed',
+      'Public humiliation or exposure strips away performed persona to reveal authentic self',
+      'Relationship with child reaches crisis requiring you to release control and expectations',
+      'Performance, leadership role, or creative work that defined you suddenly ends',
+      'You realize people love your performance but not you - painful but liberating truth',
+      'Creative block so complete you must surrender creating for approval and find authentic joy',
+      'Investment in being special collapses - ego death births real self-worth',
+      'You stop performing and watch who leaves - those who stay see real you',
+      'Complete release of needing to be extraordinary - freedom of being ordinary and whole'
+    ]
+  },
+
+  'Virgo': {
+    name: 'Lunar Eclipse in Virgo',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Virgo represents service, health, organization, refinement, analysis, practical skill, and the dedicated craftsperson. It\'s the urge to improve, to be useful, to perfect your craft and serve meaningfully.',
+    eventMeaning: 'A Lunar Eclipse in Virgo brings intense emotional release around perfectionism, health, and service patterns. This is a karmic completion point for patterns of self-criticism, over-working, serving others while neglecting yourself, or trying to perfect your way to worthiness. Major endings occur in work situations, health crises that force change, or service dynamics where you\'ve given too much - what you\'ve done out of fear of not being good enough must be released. This eclipse demands you let go of impossible standards, release work that has consumed you, and emotionally purge all the ways you\'ve tried to earn love through usefulness. Expect health breakdowns that demand attention, work endings that free you, or emotional collapse of perfectionist patterns.',
+    loveRelationships: 'Relationship patterns of fixing, criticizing, or serving reach karmic completion. You may finally leave relationships where you\'ve been the healer to broken partners, release partnerships where you were valued for usefulness but not essence, or purge patterns of nitpicking and criticism that mask fear of intimacy. This eclipse brings emotional release of all the ways you\'ve tried to perfect partners or be perfect for them, completes cycles of relationships where you were appreciated for what you did but not who you are, and purges the belief that love must be earned through flawless service.',
+    familyHome: 'Family patterns around caretaking, criticism, and never being good enough reach karmic ending. You may release the role of family servant or problem-solver, let go of family members whose constant needs have drained you, or complete cycles of trying to organize or fix your family. This eclipse purges family dynamics where love was conditional on perfection or usefulness, releases the emotional weight of family health issues you\'ve managed, and completes patterns of sacrificial service to family that has cost you your own wellbeing.',
+    businessCareer: 'Work patterns of over-functioning, perfectionism, and unsustainable service reach karmic completion. You may quit jobs where you were overworked and undervalued, leave careers in service fields that have led to burnout, or release professional identities built on being indispensable. This eclipse brings endings to work situations where your health suffered for the job, completes cycles of trying to perfect your way to career security, and emotionally purges the belief that your value is your productivity. Health crisis may force career change.',
+    moneyFinances: 'Financial patterns around compensation for service, budgeting anxiety, or earning through practical skills reach karmic completion. You emotionally release underpaid service work, let go of financial anxiety rooted in feeling you haven\'t done enough, or complete cycles of managing others\' money while neglecting your own abundance. This eclipse purges financial patterns of scarcity despite hard work, releases the belief that suffering equals success, and completes karmic lessons around being compensated for your true worth rather than your endless effort.',
+    predictions: [
+      'Health crisis forces you to stop, rest, and release patterns of overwork',
+      'Job ends or you quit due to burnout - cycle of sacrificial service completes',
+      'Relationship where you\'ve been caretaker or critic reaches final breaking point',
+      'Perfectionist patterns collapse when you realize good enough was always enough',
+      'Family member you\'ve been caring for must find other support - you release responsibility',
+      'Critical voice in your head finally exhausts itself - self-compassion emerges',
+      'Work project you\'ve tried to perfect must be released unfinished - surrender of control',
+      'Health issue you\'ve ignored through service to others demands attention',
+      'You stop trying to be useful and discover you\'re loved for being, not doing',
+      'Complete breakdown of earning love through perfection - wholeness found in flaws'
+    ]
+  },
+
+  'Libra': {
+    name: 'Lunar Eclipse in Libra',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Libra represents partnership, balance, harmony, beauty, fairness, diplomacy, and relating to others. It\'s the urge to connect, to create beauty and peace, to find yourself through relationship with another.',
+    eventMeaning: 'A Lunar Eclipse in Libra brings intense emotional release around relationships, partnerships, and balance. This is a karmic completion point for patterns of losing yourself in relationships, people-pleasing, avoiding conflict to maintain false peace, or defining yourself through partners. Major endings occur in significant relationships - marriages, business partnerships, or closest friendships that have completed their karmic purpose must be released. This eclipse demands you let go of relationships that require you to disappear, release the need to be liked at the cost of being real, and emotionally purge all the ways you\'ve abandoned yourself for harmony. Expect dramatic relationship endings, divorces, or separations that feel devastating but are liberating.',
+    loveRelationships: 'Major romantic relationships and marriage patterns reach karmic completion and ending. You may divorce, separate from long-term partner, or finally leave relationships where you\'ve lost yourself completely. Patterns of staying for appearances, compromising your truth for partnership, or loving people who couldn\'t love you back come to dramatic conclusion. This eclipse brings the most intense emotional release around romantic codependence, completes soul contracts with partners you\'ve been tied to across lifetimes, and purges your need to be in relationship to feel whole. Being alone becomes essential for finding yourself again.',
+    familyHome: 'Family patterns around fairness, favoritism, or family partnerships reach karmic ending. You may release family members who required constant diplomatic management, let go of family business partnerships that have drained you, or complete cycles of being the family peacekeeper at your own expense. This eclipse purges family dynamics where conflict was avoided at all costs, releases relationships with family members where reciprocity never existed, and completes patterns of making yourself smaller so family relationships could seem harmonious.',
+    businessCareer: 'Business partnership patterns and collaborative work reach karmic completion. You may dissolve business partnerships, leave careers requiring constant diplomacy and relationship management, or release professional identities built on being likable rather than authentic. This eclipse brings endings to work in mediation, counseling, or relationship fields if they\'ve cost you your own balance, completes professional relationships where you gave more than received, and purges career patterns of valuing harmony over truth or fairness over personal integrity.',
+    moneyFinances: 'Financial patterns around shared resources, partnership money, or earning through relationship work reach karmic completion. You may divide shared assets in separation or divorce, release financial dependence on partner income, or complete cycles of financial imbalance in partnerships. This eclipse purges financial patterns where peace cost you prosperity, releases money lost in trying to maintain relationships or appearances, and completes karmic lessons around fair exchange versus self-sacrifice in financial partnerships.',
+    predictions: [
+      'Marriage or major partnership ends after years - liberation through devastating loss',
+      'You finally choose yourself over keeping peace - relationship consequences follow',
+      'Business partnership dissolves when fairness proves impossible',
+      'Pattern of people-pleasing collapses - you stop caring who you disappoint',
+      'Divorce or separation completes karmic relationship that has run its course',
+      'You discover who you are when you\'re not reflecting someone else',
+      'Legal matters, contracts, or agreements reach final resolution or dissolution',
+      'Friendship that required you to be diplomatic rather than honest ends',
+      'You stop seeking balance with others and find it within yourself',
+      'Complete release of defining yourself through relationships - wholeness in solitude'
+    ]
+  },
+
+  'Scorpio': {
+    name: 'Lunar Eclipse in Scorpio',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Scorpio represents transformation, depth, intensity, power, intimacy, shared resources, death and rebirth, and psychological truth. It\'s the urge to merge completely, to transform, to access hidden power.',
+    eventMeaning: 'A Lunar Eclipse in Scorpio brings the most intense emotional purging, death, and karmic completion of all eclipses. This is the ultimate transformation point - major death and rebirth cycles complete, power dynamics reach final resolution, and deep psychological patterns that have haunted you for lifetimes get emotionally exorcised. Major endings occur in anything involving power, intimacy, shared resources, or psychological depth - toxic relationships, financial entanglements, addictions, or shadow patterns must die. This eclipse demands total emotional surrender, complete release of control, and letting go of everything that must die for your soul to be reborn. Expect actual deaths, metaphorical deaths, complete psychological transformation, and the end of who you\'ve been.',
+    loveRelationships: 'The most intense relationship endings and transformations possible. Relationships based on power, control, obsession, or trauma bonding reach final death. You may leave or lose partners in dramatic, painful completions that feel like part of you is dying. Patterns of jealousy, possessiveness, manipulation, or sexual enmeshment get emotionally purged from your system. This eclipse completes karmic relationships that have spanned lifetimes, releases soul ties that have kept you bound, and demands complete death of codependent, obsessive, or psychologically toxic love patterns. Only relationships that can handle total truth and transformation survive.',
+    familyHome: 'Family patterns involving power, abuse, inheritance, or deep psychological wounds reach ultimate karmic completion. You may experience actual death of family member, final break from abusive family dynamics, or complete emotional death of family enmeshment. Family secrets that have poisoned generations surface for final purging. This eclipse completes inheritance battles or shared family resource conflicts, releases transgenerational trauma patterns, and demands emotional exorcism of family darkness. Home may be lost through death, divorce, or necessary separation from toxic family system.',
+    businessCareer: 'Career patterns involving power dynamics, transformation work, or shared business resources reach karmic completion. You may leave careers in psychology, healing, finance, or any depth work that has consumed you, experience professional death and rebirth, or release work identities that have kept you in your shadow. This eclipse brings endings to jobs involving other people\'s resources or power, completes professional transformations that have been years in process, and purges career patterns rooted in control, manipulation, or avoiding your real power.',
+    moneyFinances: 'Major financial death and rebirth through loss of shared resources, inheritance, or investments. You may lose money in divorce, inheritance disputes, business dissolution, or investment collapse. Financial patterns around power, control, debt, or other people\'s money reach karmic completion. This eclipse purges your relationship with money at the deepest level, completes cycles of financial enmeshment or manipulation, and demands you release financial security built on unstable foundations. Total financial transformation possible - death of old money patterns, birth of new financial power.',
+    predictions: [
+      'Actual death of someone close completes karmic cycle and transforms you completely',
+      'Relationship of intense passion, jealousy, or control finally ends - painful liberation',
+      'Financial loss through divorce, inheritance battle, or investment collapse',
+      'Addiction, obsession, or compulsive pattern reaches crisis requiring complete surrender',
+      'Sexual or psychological trauma surfaces for final healing and release',
+      'You access your real power by releasing need to control outcomes',
+      'Secret that has haunted you gets revealed - shame transforms to freedom',
+      'Psychological breakthrough after years of therapy or shadow work',
+      'Complete death of old identity - you emerge transformed beyond recognition',
+      'Total surrender of control births real power - phoenix rising from ashes'
+    ]
+  },
+
+  'Sagittarius': {
+    name: 'Lunar Eclipse in Sagittarius',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Sagittarius represents expansion, philosophy, truth-seeking, adventure, higher education, belief systems, foreign cultures, and the quest for meaning. It\'s the urge to grow beyond limits, seek truth, and find life\'s meaning.',
+    eventMeaning: 'A Lunar Eclipse in Sagittarius brings intense emotional release around beliefs, meaning, and the search for truth. This is a karmic completion point for patterns of spiritual bypassing, endless seeking without finding, escaping through philosophy or travel, or believing in truths that keep you safe but stuck. Major endings occur in educational pursuits, belief systems, travel or relocation plans, or anything related to your search for meaning - what you\'ve believed must be emotionally released so real truth can emerge. This eclipse demands you let go of philosophies that no longer serve you, release the need to have all the answers, and emotionally purge all the ways you\'ve used expansion to avoid depth. Expect crisis of faith, educational endings, or geographical completions.',
+    loveRelationships: 'Relationship patterns around freedom, honesty, and shared philosophy reach karmic completion. You may finally leave relationships that felt like cages, release partners who didn\'t share your vision or truth, or purge patterns of escaping intimacy through adventure or philosophical differences. This eclipse brings emotional release of all the ways you\'ve used freedom to avoid commitment or honesty to avoid vulnerability, completes relationships with people from different cultures or backgrounds that couldn\'t bridge the gap, and purges the belief that perfect love exists somewhere else if you just keep searching.',
+    familyHome: 'Family patterns around religion, education, or cultural identity reach karmic ending. You may release family belief systems that have constrained you, let go of family expectations about education or success, or complete cycles of geographical distance from family. This eclipse purges family religious or philosophical indoctrination, releases the emotional weight of being the family truth-teller who nobody wanted to hear, and completes patterns of escaping family through travel or relocation. You may finally return home or permanently leave.',
+    businessCareer: 'Career patterns in education, teaching, publishing, or international work reach karmic completion. You may leave teaching positions, complete educational programs that no longer serve your path, or release careers requiring constant travel that have exhausted you. This eclipse brings endings to work that promised meaning but delivered only motion, completes professional identities built on being the wise teacher or truth-teller, and purges career patterns of seeking perfect purpose instead of accepting your actual path.',
+    moneyFinances: 'Financial patterns around educational investments, international business, or risk-taking based on optimism reach karmic completion. You emotionally release money lost in degree programs that didn\'t deliver promised opportunities, let go of international business ventures that failed, or complete cycles of financial risk-taking based on faith rather than wisdom. This eclipse purges financial patterns of spending on experiences over stability, releases money lost in seeking meaning through travel or education, and completes the lesson that abundance comes from grounded action not optimistic belief.',
+    predictions: [
+      'Educational program you invested years in must be abandoned - degree incomplete but lesson learned',
+      'Relationship ends due to incompatible life philosophies or one person needing more freedom',
+      'International move or relocation plan falls apart - you must stay and face what you\'ve avoided',
+      'Religious or spiritual belief system you built life on collapses - faith crisis and rebirth',
+      'Teaching position or publishing contract ends - cycle of sharing wisdom completes',
+      'Travel or adventure you planned gets cancelled - forced to find meaning where you are',
+      'Truth you\'ve been speaking finally exhausts you - surrender of needing to be right',
+      'Optimism that has sustained you breaks - dark night of soul before real faith emerges',
+      'You stop seeking answers elsewhere and find truth has been within you all along',
+      'Complete release of needing to understand everything - peace in mystery'
+    ]
+  },
+
+  'Capricorn': {
+    name: 'Lunar Eclipse in Capricorn',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Capricorn represents ambition, achievement, responsibility, structure, authority, mastery, and building lasting legacy. It\'s the urge to climb the mountain, master your craft, and build something that endures.',
+    eventMeaning: 'A Lunar Eclipse in Capricorn brings intense emotional release around career, achievement, and authority. This is a karmic completion point for patterns of overwork, sacrificing personal life for professional success, seeking approval from authority figures, or building achievements on unstable foundations. Major endings occur in career, public reputation, or relationship with authority - what you\'ve built out of fear or external pressure rather than authentic ambition must crumble. This eclipse demands you let go of success that costs you your soul, release need for external validation of your worth, and emotionally purge all the ways you\'ve climbed ladders leaning against the wrong walls. Expect career endings, falls from public status, or authority figures\ final impact.',
+    loveRelationships: 'Relationship patterns around commitment, structure, and emotional availability reach karmic completion. You may finally leave relationships that were committed in form but empty of feeling, release partners who were successful but emotionally unavailable, or purge patterns of choosing partners for status rather than love. This eclipse brings emotional release of all the ways you\'ve treated relationships like business arrangements, completes cycles of being with partners who couldn\'t be vulnerable, and purges the belief that commitment means staying in structures that imprison rather than support you.',
+    familyHome: 'Family patterns around responsibility, achievement pressure, and parental authority reach karmic ending. You may release the role of responsible family member carrying everyone, let go of father or authority figure whose approval you\'ve sought, or complete cycles of family expectations about success and achievement. This eclipse purges family dynamics where love was conditional on accomplishment, releases the emotional weight of family legacy or business you never wanted, and completes patterns of sacrificing your life for family duty or reputation.',
+    businessCareer: 'Major career endings, professional identity death, or public status loss. You may be fired, forced to resign, see business fail, or watch career you built for years collapse. This eclipse completes karmic cycles in careers chosen for security rather than passion, brings endings to professional roles that have consumed your personal life, and purges work identities built on others\' expectations rather than your authentic ambition. What must professionally die for your soul to live will be taken or released. Falling from mountain you never wanted to climb.',
+    moneyFinances: 'Financial patterns around career income, business investments, or long-term security planning reach karmic completion. You may lose money through business failure, career loss, or collapse of financial structures you built, release financial strategies based on fear and control, or complete cycles of earning that cost you more than money could buy. This eclipse purges your relationship with money as status or security, releases financial patterns rooted in scarcity and fear of not having enough, and completes the lesson that real wealth includes time, health, and relationships sacrificed for material success.',
+    predictions: [
+      'Career you\'ve built for years suddenly ends - firing, resignation, or business failure',
+      'Public reputation damaged or status lost - fall from professional mountain',
+      'Relationship ends when you realize you committed to structure without love',
+      'Father or authority figure relationship reaches final completion through loss or break',
+      'Achievement you sacrificed everything for proves empty - success without fulfillment',
+      'Family business or legacy you were supposed to carry must be released',
+      'Health crisis from overwork forces complete career restructuring',
+      'You quit prestigious position that was killing your soul',
+      'Professional identity dies - crisis of "who am I without my title or achievement"',
+      'Complete release of climbing for approval - finding your own mountain to climb'
+    ]
+  },
+
+  'Aquarius': {
+    name: 'Lunar Eclipse in Aquarius',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Aquarius represents innovation, revolution, community, friendship, humanitarian ideals, individuality, technology, and the future. It\'s the urge to be uniquely yourself while contributing to collective progress.',
+    eventMeaning: 'A Lunar Eclipse in Aquarius brings intense emotional release around authenticity, friendships, and belonging to community. This is a karmic completion point for patterns of conforming to groups, losing yourself in causes, intellectualizing emotions, or being so different you\'re isolated. Major endings occur in friendships, community involvement, or group affiliations - connections that have kept you from authentic individuality must be released. This eclipse demands you let go of friend groups that require you to be someone you\'re not, release causes you\'ve served at the cost of personal life, and emotionally purge all the ways you\'ve hidden your uniqueness to belong. Expect friendship endings, community exiles, or technology/innovation projects that complete.',
+    loveRelationships: 'Relationship patterns around friendship, freedom, and emotional detachment reach karmic completion. You may finally leave relationships that were mentally connected but emotionally distant, release partners who loved your uniqueness but couldn\'t handle your humanity, or purge patterns of prioritizing friendship and community over intimate partnership. This eclipse brings emotional release of all the ways you\'ve used independence to avoid vulnerability, completes relationships where you were too different to truly connect, and purges the belief that authentic love requires you to be emotionally detached or unconventional.',
+    familyHome: 'Family patterns around being the black sheep, family rejection of your uniqueness, or chosen family dynamics reach karmic ending. You may release biological family who never accepted your authentic self, let go of chosen family or friend groups that became as constraining as blood family, or complete cycles of being so different from family you never felt you belonged. This eclipse purges the wound of family rejection for being yourself, releases the need to find perfect accepting tribe, and completes patterns of choosing between authenticity and belonging.',
+    businessCareer: 'Career patterns in technology, innovation, community organizing, or humanitarian work reach karmic completion. You may leave careers in tech that have dehumanized you, release work in social causes that have consumed your personal life, or complete professional identities built on being the innovative outsider. This eclipse brings endings to work that promised utopian vision but delivered burnout, completes collaborative or collective work projects, and purges career patterns of sacrificing present life for future vision that never arrives.',
+    moneyFinances: 'Financial patterns around unconventional income, cryptocurrency, technology investments, or community financial support reach karmic completion. You emotionally release money lost in innovative but unstable ventures, let go of financial strategies based on future prediction rather than present reality, or complete cycles of financially supporting causes or friends at your own expense. This eclipse purges financial patterns of rejecting traditional security for innovative risk, releases money lost in technology or cryptocurrency speculation, and completes the lesson that financial freedom requires practical foundation not just revolutionary ideas.',
+    predictions: [
+      'Major friendship ends when you realize you\'ve been performing your uniqueness for acceptance',
+      'Community or group you belonged to exiles or disappoints you - forced to stand alone',
+      'Technology project or innovation you invested in fails or completes its cycle',
+      'You choose authentic messiness over curated uniqueness - watch who stays',
+      'Cause or humanitarian work you dedicated yourself to betrays its ideals',
+      'Online community or social media platform you relied on becomes toxic or obsolete',
+      'Friendship group that defined your identity dissolves - identity crisis and rebirth',
+      'You stop being interesting and become real - loneliness before authentic connection',
+      'Revolutionary change you fought for either completes or proves impossible',
+      'Complete release of needing to be special or different - freedom in ordinary humanity'
+    ]
+  },
+
+  'Pisces': {
+    name: 'Lunar Eclipse in Pisces',
+    frequency: 'Roughly every 18-19 years in this sign',
+    duration: '~6 months of influence',
+    signEnergy: 'Pisces represents spirituality, compassion, imagination, surrender, transcendence, unity, dreams, and dissolution of boundaries. It\'s the urge to merge with something greater, to access infinite compassion and spiritual truth.',
+    eventMeaning: 'A Lunar Eclipse in Pisces brings the most profound spiritual and emotional release - complete dissolution of ego, surrender of control, and karmic completion of victim patterns, addiction, or spiritual bypassing. This is the ultimate ending point for illusions, escapism, martyrdom, or confusing transcendence with avoidance. Major endings occur in anything involving boundaries, spirituality, creativity, or compassion - relationships, substances, beliefs, or identities that have kept you from reality must dissolve. This eclipse demands total surrender, complete release of illusions, and emotionally purging all the ways you\'ve used spirituality, substances, or fantasy to avoid life. Expect spiritual crisis, addiction endings, creative completions, or the death of who you thought you were supposed to be.',
+    loveRelationships: 'The most painful relationship endings involving illusion, fantasy, addiction, or spiritual connection. You may leave or lose soulmate relationships that were beautiful illusions, release partners you tried to save or who tried to save you, or purge patterns of confusing love with suffering or compassion with codependence. This eclipse brings complete emotional dissolution of relationships based on fantasy rather than reality, completes karmic soul contracts with partners who taught you through pain, and purges the belief that unconditional love means accepting unacceptable treatment. Only love rooted in reality and healthy boundaries can survive.',
+    familyHome: 'Family patterns around addiction, mental illness, victimhood, or spiritual/religious enmeshment reach karmic completion. You may lose family members to addiction or illness, finally detach from family members whose chaos has consumed you, or complete cycles of being family scapegoat or savior. This eclipse purges transgenerational addiction and mental health patterns, releases the emotional weight of family secrets involving shame or suffering, and completes patterns of sacrificing yourself to save family members who won\'t save themselves. Compassion transforms from enabling to healthy boundaries.',
+    businessCareer: 'Career patterns in healing, spirituality, creativity, or service reach karmic completion through burnout or disillusionment. You may leave careers in healthcare, counseling, spiritual work, or arts that have drained you completely, release professional identities built on saving others, or complete creative projects that consumed years. This eclipse brings endings to work that promised spiritual meaning but delivered only exhaustion, completes cycles of compassionate service without boundaries, and purges career patterns of martyrdom or believing your suffering serves others.',
+    moneyFinances: 'Financial patterns around creative work, spiritual services, or financial confusion reach karmic completion. You may lose money to deception, see creative or spiritual work fail financially, or complete cycles of giving money away out of guilt or misplaced compassion. This eclipse purges financial illusions and magical thinking, releases money lost to addiction or enabling others, and completes the lesson that spiritual values require practical financial foundation. Financial reality check ends years of avoiding money matters through spiritual bypass.',
+    predictions: [
+      'Addiction or escapist pattern reaches crisis requiring complete surrender and recovery',
+      'Relationship based on fantasy, spiritual connection, or mutual suffering finally ends',
+      'Creative or spiritual work you devoted years to must be released incomplete',
+      'Illusion about someone or situation completely shatters - painful reality emerges',
+      'Family member with addiction or illness you\'ve tried to save must be released to their path',
+      'Spiritual belief system that sustained you collapses - dark night before real awakening',
+      'You stop saving others and discover your compassion was enabling',
+      'Dreams and visions that guided you revealed as escapism - return to reality required',
+      'Complete emotional breakdown and breakthrough - ego dissolution births authentic self',
+      'Total surrender of control, fantasy, and victim stories - freedom through acceptance of what is'
+    ]
+  }
+};
+
 export default {
   SOLAR_ECLIPSES,
   NEW_MOONS,
-  FULL_MOONS
+  FULL_MOONS,
+  LUNAR_ECLIPSES
 };
