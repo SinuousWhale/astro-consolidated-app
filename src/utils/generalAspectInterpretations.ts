@@ -5286,6 +5286,32 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  'Mercury-South Node-Opposition': {
+    name: 'Mercury Opposition South Node',
+    frequency: 'Occurs once every 19 years (same as Mercury-North Node-Conjunction)',
+    duration: '1-2 weeks',
+    planet1Energy: 'Mercury represents communication, thinking, learning, information processing, curiosity, and mental connection. It\'s how you perceive, express, and understand the world.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL MENTAL DESTINY ALIGNMENT! (This is the same as Mercury-North Node-Conjunction) Your thinking opposes old patterns while perfectly aligning with soul purpose. Communication merges with karmic mission - you\'re meant to SPEAK, THINK, LEARN in service of destiny. Past comfortable mental patterns fully release as NEW purposeful thinking emerges. Your mind becomes instrument of soul evolution. Mental clarity about life purpose flows naturally now.',
+    loveRelationships: 'Destined relationship communication aligned with soul purpose! Love conversations move AWAY from familiar patterns TOWARD purposeful authentic connection. Speak romantic truth that serves evolution, communicate from destiny not comfort. Relationship dialogue transforms - old comfortable love language releases, NEW purposeful intimacy communication emerges. Fated love conversations happen now - they serve your karmic mission.',
+    familyHome: 'Family communication aligned with life purpose! Home dialogue moves AWAY from old patterns TOWARD purposeful family evolution. Family conversations serve collective destiny, domestic thinking transforms beyond comfortable limitation. Your communication IN family becomes purposeful - old familiar home dialogue releases, NEW destiny-aligned family expression emerges. Home environment shifts through purposeful communication.',
+    businessCareer: 'MAJOR CAREER COMMUNICATION DESTINY ALIGNMENT! Professional thinking and dialogue perfectly aligned with karmic work mission. Career communication moves AWAY from comfortable expertise TOWARD purposeful destined expression. Your professional voice transforms - speak your truth in destined work, communicate beyond familiar career patterns. Fated career opportunities through purposeful communication and authentic professional thinking.',
+    moneyFinances: 'Financial thinking aligned with purposeful prosperity! Money mindset moves AWAY from comfortable patterns TOWARD destiny-aligned abundance thinking. Financial communication serves soul purpose - speak about money authentically, think about prosperity beyond familiar limitation. Old comfortable money ideas release - NEW purposeful financial thinking emerges naturally. Financial clarity through destiny-aligned money dialogue.',
+    predictions: [
+      'Major mental clarity about life purpose - you SEE your destined path through clear thinking',
+      'Communication becomes instrument of soul mission - speak purposeful truth naturally',
+      'Fated conversations happen now - they reveal or advance your karmic destiny',
+      'Past comfortable mental patterns fully release - NEW purposeful thinking emerges',
+      'Your authentic voice aligned with soul purpose - speak what you\'re meant to express',
+      'Learning and curiosity directed toward destined subjects - mental energy serves purpose',
+      'Professional communication breakthrough - speak your truth in career aligned with destiny',
+      'Relationship dialogue transforms - love communication serves soul evolution purpose',
+      'Mental gifts and communication talents now expressed IN SERVICE of karmic mission',
+      'Clear purposeful thinking replaces comfortable limited mental patterns - evolution complete'
+    ]
+  },
+
+
   'Mercury-South Node-Square': {
     name: 'Mercury Square South Node',
     frequency: 'Occurs twice every 19 years',
