@@ -3832,6 +3832,651 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Your active engagement with love depth creates profound meaningful lasting transformation',
       'Opportunity for transformative powerful love through courageous vulnerable depth initiative'
     ]
+  },
+
+  // ============================================================================
+  // MARS-JUPITER ASPECTS (Action expansion and confident drive)
+  // ============================================================================
+
+  'Mars-Jupiter-Conjunction': {
+    name: 'Mars Conjunction Jupiter',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Action expands with confident optimistic drive! Mars\'s assertion merges with Jupiter\'s growth, creating bold confident action, expansive ambition, and optimistic courage. Perfect time for taking big action, pursuing ambitious goals, confident risk-taking, expanding your sphere of influence. Energy feels abundant and confident. Courage multiplies. Excellent for starting major projects, competitive success, adventurous action, expansion through assertion. Warning: avoid overconfidence or reckless risks - balance enthusiasm with wisdom. Overall: powerful confident forward momentum.',
+    loveRelationships: 'Relationship action becomes confident and adventurous! Romance feels bold, optimistic, and expansively passionate. Perfect time for taking relationship risks confidently, pursuing romantic adventures, expressing passionate desire boldly, growing relationship through shared action. Attraction intensifies with confidence. Good time for romantic travel, bold romantic gestures, optimistic relationship initiatives. Warning: avoid overconfident romantic assumptions - balance passion with consideration.',
+    familyHome: 'Family action and home expansion become confident! Perfect time for bold family initiatives, home expansion projects, confident family leadership, adventurous family activities. Home energy feels optimistic and active. Good time for major home improvements, family growth initiatives, confident family decisions, expanding family horizons. Warning: avoid overconfident family commitments - balance ambition with realistic family planning.',
+    businessCareer: 'Professional action expands with confidence! Excellent time for bold career moves, ambitious professional projects, confident professional assertion, competitive professional success. Work energy feels expansive and victorious. Good time for pursuing promotions confidently, starting major professional initiatives, competitive professional advancement, expanding professional influence. Warning: avoid professional overconfidence - balance ambition with professional wisdom.',
+    moneyFinances: 'Financial action becomes bold and expansive! Good time for confident financial investments, ambitious income pursuits, bold financial strategies, expanding financial opportunities. Financial energy feels optimistic and growth-oriented. Excellent for calculated financial risks, entrepreneurial ventures, expanding income streams, confident financial decisions. Warning: avoid reckless financial overconfidence - balance financial optimism with financial prudence.',
+    predictions: [
+      'Bold action you take with confidence succeeds beyond your expectations',
+      'Your optimistic courageous initiative attracts support and creates significant opportunity',
+      'Ambitious goal you pursue with enthusiastic energy achieves impressive results',
+      'Competitive situation you enter confidently leads to victorious outcome',
+      'Risk you take with courage and wisdom pays off handsomely',
+      'Your expansive bold energy naturally attracts abundant opportunities',
+      'Major initiative you start with confidence gains momentum and succeeds',
+      'Adventurous action you take courageously opens exciting new possibilities',
+      'Your confident assertion of desires attracts what you want powerfully',
+      'Opportunity for victory and expansion through bold confident courageous action'
+    ]
+  },
+
+  'Mars-Jupiter-Opposition': {
+    name: 'Mars Opposition Jupiter',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Tension between action and excess requiring balanced effort! Mars\'s drive faces Jupiter\'s expansion, creating overextension, reckless action, or conflict between ambition and capacity. Challenge is honoring both bold action AND wise limits. Risk of doing too much, overconfident risks, or exhausting yourself through excessive action. Resistance to limits creates burnout; excessive caution wastes opportunity. Integration of courage and wisdom needed. Balance creates sustainable powerful action.',
+    loveRelationships: 'Relationship tension between passion and excess! Romance requires balancing passionate desire with realistic capacity. Tendency toward overconfident romantic assumptions or doing too much in relationship. Partner may seem either too demanding or too reckless. Challenge is expressing passionate desire while maintaining realistic relationship effort. Good time to balance romantic enthusiasm with relationship wisdom, integrate passion with sustainability.',
+    familyHome: 'Family tension between action and overextension! Home life requires balancing family initiatives with realistic family capacity. Tendency toward overcommitting to family or exhausting yourself through excessive family effort. Challenge is taking bold family action while maintaining sustainable family energy. Good time to balance family ambition with family wisdom, integrate family courage with family realism.',
+    businessCareer: 'Professional tension between ambition and overextension! Career requires balancing bold professional action with realistic professional capacity. Tendency toward overconfident career moves or exhausting yourself through excessive professional effort. Challenge is pursuing ambitious career goals while maintaining sustainable professional energy. Good time to balance career boldness with career wisdom, integrate professional courage with professional realism.',
+    moneyFinances: 'Financial tension between bold action and reckless risk! Money requires balancing confident financial action with wise financial prudence. Tendency toward overconfident financial risks or excessive financial ambition. Challenge is taking bold financial action while maintaining wise financial limits. Good time to balance financial courage with financial wisdom, integrate financial boldness with financial prudence.',
+    predictions: [
+      'Overextension you moderate consciously prevents burnout and creates sustainable success',
+      'Your tendency toward excessive action you balance wisely produces better results',
+      'Conflict between ambition and capacity forces realistic assessment of limits',
+      'Reckless risk you temper with wisdom transforms into calculated successful action',
+      'Tension between doing too much and doing enough resolved through conscious balance',
+      'Overconfident assumption you moderate creates more realistic successful approach',
+      'Exhaustion from excess you address teaches importance of sustainable effort',
+      'Challenge between bold action and wise limits produces balanced powerful approach',
+      'You learn that sustainable success requires wisdom not just endless effort',
+      'Opportunity to integrate bold courageous action with wise sustainable balanced effort'
+    ]
+  },
+
+  'Mars-Jupiter-Trine': {
+    name: 'Mars Trine Jupiter',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Action and expansion flow naturally with confident grace! Mars\'s drive harmonizes beautifully with Jupiter\'s growth, creating effortless successful action, natural confident courage, and graceful ambitious achievement. Perfect time for bold action flowing smoothly, pursuing goals confidently, taking wise risks naturally. Courage and wisdom balance perfectly. Success comes naturally. Excellent for competitive victory, ambitious projects succeeding effortlessly, adventurous action, growth through assertion. Confidence and wisdom unite beautifully.',
+    loveRelationships: 'Relationship passion flows with natural confident joy! Romance feels both passionate and optimistic, bold and wise effortlessly. Perfect time for romantic adventures flowing smoothly, expressing desire confidently naturally, pursuing relationship growth effortlessly. Passion and joy balance perfectly. Good time for romantic travel succeeding naturally, bold romantic initiatives working smoothly, relationship expansion through shared confident action.',
+    familyHome: 'Family action flows with natural confident success! Perfect time for family initiatives succeeding smoothly, home expansion projects flowing naturally, confident family leadership working effortlessly. Home energy feels both active and blessed naturally. Good time for family growth naturally successful, major home improvements flowing smoothly, family adventures naturally joyful.',
+    businessCareer: 'Professional action flows with natural confident success! Excellent time for career advancement flowing smoothly, ambitious projects succeeding naturally, competitive situations won effortlessly. Professional energy feels both bold and wise naturally. Good time for promotions naturally achieved, professional expansion flowing smoothly, confident professional assertion naturally recognized and rewarded.',
+    moneyFinances: 'Financial action flows with natural abundant success! Good time for financial investments succeeding naturally, income expansion flowing smoothly, confident financial strategies working effortlessly. Financial energy feels both bold and wise naturally. Excellent for entrepreneurial success flowing naturally, calculated risks paying off smoothly, financial growth naturally abundant.',
+    predictions: [
+      'Bold action you take naturally succeeds and exceeds your expectations effortlessly',
+      'Your confident initiative naturally attracts support and creates abundant opportunity',
+      'Ambitious goal you pursue naturally achieves impressive results smoothly',
+      'Competitive situation you enter naturally leads to victorious outcome',
+      'Risk you take naturally pays off handsomely and wisely',
+      'Your natural confident energy effortlessly attracts abundant opportunities',
+      'Major initiative flows smoothly and succeeds naturally without struggle',
+      'Adventurous action naturally opens exciting beneficial possibilities',
+      'Your confident assertion of desires naturally attracts what you want',
+      'Opportunity for victory and expansion through natural confident effortless action'
+    ]
+  },
+
+  'Mars-Jupiter-Square': {
+    name: 'Mars Square Jupiter',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Growth through excessive action and overconfident risks requiring discipline! Mars\'s drive clashes with Jupiter\'s expansion, creating reckless action, overextension, or arrogant overconfidence. Challenge is channeling bold energy into wise action rather than reckless excess. Tendency toward doing too much, overconfident risks, or exhausting yourself through excessive ambition. Crisis forces development of wise courage. Conscious discipline transforms recklessness into powerful wise bold action.',
+    loveRelationships: 'Relationship friction through excessive passion or arrogance! Romance may involve overconfident romantic assumptions, doing too much in relationship, or arrogant relationship behavior. Tendency toward passionate excess or overestimating romantic capacity. Challenge is expressing passionate desire while maintaining relationship wisdom. Good time to consciously moderate romantic excess, balance passion with consideration, temper arrogance with humility. Crisis teaches wise passion.',
+    familyHome: 'Family friction through overcommitment or excessive action! Home life may involve doing too much for family, overconfident family decisions, or exhausting family initiatives. Tendency toward family overextension or arrogant family leadership. Challenge is taking bold family action while maintaining family wisdom. Good time to consciously moderate family excess, balance family ambition with family capacity. Crisis teaches sustainable family action.',
+    businessCareer: 'Professional friction through overconfidence or overextension! Career may involve reckless professional risks, doing too much at work, or arrogant professional behavior. Tendency toward professional overextension or overconfident career moves. Challenge is pursuing ambitious career goals while maintaining professional wisdom. Good time to consciously moderate professional excess, balance career boldness with career prudence. Crisis teaches wise professional ambition.',
+    moneyFinances: 'Financial friction through reckless risks or excessive spending! Money may involve overconfident financial decisions, financial overextension, or reckless financial risks. Tendency toward financial excess or arrogant financial assumptions. Challenge is taking bold financial action while maintaining financial wisdom. Good time to consciously moderate financial risks, balance financial courage with financial prudence. Crisis teaches wise financial boldness.',
+    predictions: [
+      'Reckless action you moderate consciously before consequences teaches wise courage',
+      'Your overconfidence you temper with wisdom transforms into powerful effective action',
+      'Excessive effort you reduce consciously prevents burnout and produces better results',
+      'Overextension you address early creates sustainable powerful successful approach',
+      'Arrogant assumption you moderate with humility creates respectful effective action',
+      'Reckless risk you consciously moderate becomes calculated successful bold action',
+      'Exhaustion from excess you prevent through discipline maintains your power',
+      'You learn that real power comes through wise bold action not reckless excess',
+      'Crisis of overconfidence teaches importance of coupling courage with wisdom',
+      'Opportunity to transform reckless excess into wise powerful disciplined bold action'
+    ]
+  },
+
+  'Mars-Jupiter-Sextile': {
+    name: 'Mars Sextile Jupiter',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Jupiter represents expansion, growth, optimism, wisdom, abundance, luck, philosophy, and higher learning. It\'s where you grow, take risks, explore, believe, and find meaning.',
+    aspectMeaning: 'Opportunity for expansion through bold initiative! Mars\'s drive harmonizes with Jupiter\'s growth, creating potential for successful action, confident achievement, abundant victory IF you take action. Opportunities for ambitious success, competitive victory, growth through assertion appear - but require your courage. Perfect time to pursue goals boldly, take calculated risks actively, assert desires confidently. Success through courageous initiative. Passive approach wastes potential; active bold engagement creates abundant results.',
+    loveRelationships: 'Relationship opportunity for passionate growth through initiative! Potential for romantic expansion, confident romantic success, passionate connection IF you initiate. Perfect time to pursue romantic desires actively, suggest romantic adventure boldly, express passion confidently. Opportunity for relationship growth through bold romantic action IF you take the risk. Initiative in confident passionate expression creates romantic abundance.',
+    familyHome: 'Family opportunity for growth through bold initiative! Potential for family expansion, successful family initiatives, confident family leadership IF you initiate. Perfect time to suggest ambitious family projects actively, take bold family action, lead family confidently. Family receptive to confident initiatives IF you present them boldly. Initiative in courageous family action creates family growth and success.',
+    businessCareer: 'Professional opportunity for advancement through bold initiative! Potential for career growth, competitive success, ambitious achievement IF you take action. Perfect time to pursue promotion actively, start ambitious projects boldly, compete confidently. Recognition available IF you step forward with courage. Initiative in bold professional action creates career expansion and victory.',
+    moneyFinances: 'Financial opportunity for growth through bold initiative! Potential for income increase, investment success, financial expansion IF you pursue it actively. Perfect time to take calculated financial risks, pursue income opportunities boldly, invest confidently. Financial growth available through courageous action. Initiative in wise bold financial strategies creates prosperity.',
+    predictions: [
+      'Opportunity for success appears - pursue it boldly for victorious results',
+      'Your initiative to act courageously attracts support and creates opportunity',
+      'Chance for competitive victory succeeds IF you compete confidently and actively',
+      'Ambitious goal you pursue with bold action achieves impressive results',
+      'Opportunity for expansion appears - initiative required to actualize',
+      'Your bold confident action naturally attracts abundant positive outcomes',
+      'Risk you take with courage and wisdom pays off handsomely',
+      'Adventurous initiative you pursue actively opens exciting possibilities',
+      'Your confident assertion of desires attracts what you want',
+      'Opportunity for victory and abundance through bold courageous confident initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MARS-SATURN ASPECTS (Disciplined action and structured drive)
+  // ============================================================================
+
+  'Mars-Saturn-Conjunction': {
+    name: 'Mars Conjunction Saturn',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Action becomes disciplined, strategic, and enduring! Mars\'s drive merges with Saturn\'s structure, creating focused persistent action, strategic assertion, and disciplined courage. Perfect time for disciplined effort, strategic action, building through persistent work, mature assertion. Energy becomes focused and controlled. Action produces lasting results. Excellent for serious projects, strategic competition, patient achievement, controlled power. May feel energy restricted - but creates enduring accomplishments. Discipline over impulsiveness.',
+    loveRelationships: 'Relationship action becomes serious and committed! Romance feels mature, realistic, and responsibly passionate. Perfect time for serious relationship commitment, disciplined relationship work, strategic relationship building, mature desire expression. Passion deepens through discipline. Good time for relationship commitment decisions, addressing relationship responsibilities seriously, building lasting relationship foundation through patient effort.',
+    familyHome: 'Family action becomes structured and responsible! Perfect time for serious family commitments, disciplined family work, strategic family building, responsible family leadership. Home energy feels focused and productive. Good time for major home construction, serious family planning, disciplined family effort, building lasting family structure through patient work.',
+    businessCareer: 'Professional action becomes strategic and masterful! Excellent time for disciplined professional work, strategic career building, serious professional commitments, mastery through focused effort. Work energy feels controlled and effective. Good time for demonstrating professional discipline, strategic career advancement, serious professional projects, building lasting professional success through patient effort.',
+    moneyFinances: 'Financial action becomes disciplined and strategic! Good time for serious financial planning, disciplined financial effort, strategic financial building, responsible financial action. Financial energy becomes focused and controlled. Excellent for building lasting financial security, serious financial commitments, disciplined financial strategy, patient wealth building through controlled effort.',
+    predictions: [
+      'Disciplined focused effort you apply produces lasting significant achievement',
+      'Your strategic patient action builds solid foundation for enduring success',
+      'Serious commitment you make through controlled effort proves wise and lasting',
+      'Mature disciplined approach to goals achieves results that endure over time',
+      'Strategic action you take with focus overcomes obstacles and succeeds',
+      'Your controlled persistent effort naturally earns respect and recognition',
+      'Disciplined work you undertake patiently produces valuable lasting results',
+      'Serious goal you pursue with focused discipline achieves mastery',
+      'Your mature strategic assertion naturally overcomes resistance effectively',
+      'Opportunity for lasting achievement through disciplined strategic focused persistent action'
+    ]
+  },
+
+  'Mars-Saturn-Opposition': {
+    name: 'Mars Opposition Saturn',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Tension between drive and limitation requiring integration! Mars\'s action faces Saturn\'s restriction, creating frustration, blocked energy, or conflict between desire and reality. Challenge is honoring both your drive AND necessary limits. Risk of anger at obstacles, giving up when blocked, or pushing against immovable resistance. Resistance to limits creates burnout; excessive acceptance creates stagnation. Integration of action and patience needed. Balance creates strategic power.',
+    loveRelationships: 'Relationship tension between desire and restriction! Romance requires balancing passionate desire with relationship limitations or responsibilities. Frustration with relationship obstacles or feeling sexually/emotionally blocked. Challenge is expressing desire while honoring relationship reality. Good time to work through relationship frustrations patiently, balance passion with responsibility, find strategic ways to fulfill desires within realistic limits.',
+    familyHome: 'Family tension between action and limitation! Home life requires balancing family initiatives with family obstacles or responsibilities. Frustration with family restrictions or blocked family action. Challenge is pursuing family goals while honoring family reality. Good time to work through family frustrations strategically, balance family ambition with family responsibilities, find patient ways to achieve family goals despite obstacles.',
+    businessCareer: 'Professional tension between ambition and obstacles! Career requires balancing professional drive with professional limitations or authority. Frustration with career blocks or restricted professional action. Challenge is pursuing career goals while honoring professional reality. Good time to work through professional frustrations strategically, balance career ambition with professional responsibilities, find disciplined ways to advance despite obstacles.',
+    moneyFinances: 'Financial tension between action and limitation! Money requires balancing financial drive with financial restrictions or responsibilities. Frustration with financial obstacles or blocked financial action. Challenge is pursuing financial goals while honoring financial reality. Good time to work through financial frustrations strategically, balance financial ambition with financial responsibilities, find disciplined ways to build wealth despite limitations.',
+    predictions: [
+      'Frustration with obstacles you work through patiently produces strategic breakthrough',
+      'Your blocked energy you channel strategically overcomes resistance effectively',
+      'Conflict between desire and limitation forces mature strategic approach',
+      'Anger at restrictions you transform into disciplined focused effort succeeds',
+      'Obstacle that frustrates you teaches importance of patient strategic action',
+      'Blocked action you approach strategically finds effective way through limitation',
+      'Frustration you feel reveals need to balance drive with realistic assessment',
+      'Challenge between ambition and reality produces mature powerful strategic approach',
+      'You learn that real power comes through strategic patience not frustrated force',
+      'Opportunity to integrate passionate drive with disciplined strategic patient limitation'
+    ]
+  },
+
+  'Mars-Saturn-Trine': {
+    name: 'Mars Trine Saturn',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Action and discipline flow naturally with strategic grace! Mars\'s drive harmonizes beautifully with Saturn\'s structure, creating effortless focused action, natural disciplined effort, and graceful strategic achievement. Perfect time for disciplined work flowing smoothly, strategic action succeeding naturally, patient effort producing results effortlessly. Drive and control balance perfectly. Power feels mature and effective. Excellent for serious projects, strategic competition, controlled powerful action, enduring achievement. Discipline enhances rather than restricts energy.',
+    loveRelationships: 'Relationship passion flows with natural mature commitment! Romance feels both passionate and responsible, desiring and disciplined effortlessly. Perfect time for relationship commitments made naturally, expressing desire maturely, building relationship foundation smoothly. Passion and responsibility combine perfectly. Good time for serious relationship discussions flowing naturally, committed passionate action, mature desire expression naturally deepening connection.',
+    familyHome: 'Family action flows with natural disciplined success! Perfect time for family projects succeeding smoothly, disciplined family effort flowing naturally, strategic family building working effortlessly. Home energy feels both active and structured naturally. Good time for family construction projects flowing smoothly, serious family planning succeeding naturally, disciplined family action producing lasting results effortlessly.',
+    businessCareer: 'Professional action flows with natural strategic mastery! Excellent time for disciplined work succeeding smoothly, strategic career moves working naturally, focused professional effort producing results effortlessly. Professional energy feels both powerful and controlled naturally. Good time for professional mastery demonstrated naturally, strategic advancement flowing smoothly, disciplined professional action naturally recognized and rewarded.',
+    moneyFinances: 'Financial action flows with natural disciplined success! Good time for strategic financial building succeeding naturally, disciplined financial effort producing results smoothly, controlled financial action working effortlessly. Financial energy feels both active and structured naturally. Excellent for wealth building flowing naturally, serious financial planning succeeding smoothly, disciplined financial strategy producing lasting prosperity effortlessly.',
+    predictions: [
+      'Disciplined effort you apply naturally produces impressive lasting achievement',
+      'Your strategic action naturally succeeds and builds solid foundation effortlessly',
+      'Focused work flows smoothly and produces valuable enduring results naturally',
+      'Mature approach to goals naturally achieves success that lasts over time',
+      'Strategic action you take naturally overcomes obstacles effectively',
+      'Your controlled persistent effort naturally earns respect and recognition',
+      'Disciplined initiative flows smoothly and produces lasting valuable results',
+      'Serious goal you pursue naturally achieves mastery without struggle',
+      'Your mature strategic assertion naturally overcomes resistance',
+      'Opportunity for lasting achievement through natural disciplined strategic graceful action'
+    ]
+  },
+
+  'Mars-Saturn-Square': {
+    name: 'Mars Square Saturn',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Growth through blocked action and frustrated drive requiring persistence! Mars\'s action clashes with Saturn\'s limitation, creating intense frustration, blocked energy, or crisis of will versus reality. Challenge is pushing through obstacles rather than giving up when blocked. Tendency toward anger at limitations, depression from blocked action, or destructive anger at restrictions. Crisis forces development of strategic persistence. Conscious discipline transforms frustration into powerful focused breakthrough.',
+    loveRelationships: 'Relationship friction through frustrated desire or blocked passion! Romance may feel sexually/emotionally blocked, frustrated by relationship limitations, or angry at relationship restrictions. Desire meets immovable obstacles. Challenge is expressing desire despite frustration or finding strategic ways to fulfill needs within limits. Good time to consciously work through relationship frustrations, channel anger constructively, persist patiently through relationship obstacles. Crisis teaches strategic patience in love.',
+    familyHome: 'Family friction through blocked action or frustrated initiatives! Home life may feel restricted, family action blocked, or frustrated by family limitations. Family ambitions meet immovable obstacles. Challenge is pursuing family goals despite frustration or finding strategic ways to achieve within limits. Good time to consciously work through family frustrations, channel family anger constructively, persist patiently through family obstacles. Crisis forces strategic family persistence.',
+    businessCareer: 'Professional friction through career blocks or frustrated ambition! Career may feel restricted, professional action blocked, or frustrated by career limitations. Ambition meets immovable professional obstacles. Challenge is pursuing career goals despite frustration or finding strategic ways to advance within constraints. Good time to consciously work through professional frustrations, channel career anger constructively, persist strategically through career obstacles. Crisis teaches professional strategic persistence.',
+    moneyFinances: 'Financial friction through blocked action or frustrated goals! Money may feel restricted, financial action blocked, or frustrated by financial limitations. Financial drive meets immovable obstacles. Challenge is pursuing financial goals despite frustration or finding strategic ways to build within limits. Good time to consciously work through financial frustrations, channel financial anger constructively, persist patiently through financial obstacles. Crisis develops strategic financial persistence.',
+    predictions: [
+      'Blocked action you persist through consciously produces breakthrough and mastery',
+      'Your frustration you channel into disciplined effort overcomes obstacle powerfully',
+      'Anger at limitation you transform into strategic focused action succeeds',
+      'Crisis of blocked will forces development of patient strategic persistence',
+      'Obstacle that frustrates you teaches importance of disciplined patient effort',
+      'Frustration you work through consciously builds strength and strategic wisdom',
+      'Blocked energy you channel strategically finds powerful effective breakthrough',
+      'You learn that real power requires persistence through frustration not just force',
+      'Crisis of limitation teaches importance of strategic disciplined patient action',
+      'Opportunity to transform frustration into powerful strategic disciplined persistent breakthrough'
+    ]
+  },
+
+  'Mars-Saturn-Sextile': {
+    name: 'Mars Sextile Saturn',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Saturn represents structure, discipline, responsibility, mastery, limitation, time, commitment, and achievement through effort. It\'s where you build lasting success through patient work and maturity.',
+    aspectMeaning: 'Opportunity for lasting achievement through disciplined initiative! Mars\'s drive harmonizes with Saturn\'s structure, creating potential for strategic success, disciplined achievement, enduring accomplishment IF you take action. Opportunities for serious work, strategic advancement, building lasting results appear - but require your focused effort. Perfect time to pursue goals with discipline actively, work strategically, build patiently. Success through disciplined initiative. Passive approach wastes potential; active focused engagement creates lasting results.',
+    loveRelationships: 'Relationship opportunity for lasting commitment through disciplined initiative! Potential for serious relationship deepening, mature commitment, responsible passion IF you initiate. Perfect time to suggest relationship commitment actively, work on relationship seriously, build relationship foundation with effort. Opportunity for lasting love through disciplined relationship action IF you make the effort. Initiative in mature responsible passion creates enduring bond.',
+    familyHome: 'Family opportunity for lasting structure through disciplined initiative! Potential for serious family building, structural family improvements, responsible family leadership IF you initiate. Perfect time to suggest major family projects actively, work on family seriously, build family structure with effort. Family receptive to serious disciplined initiatives IF you present them with focus. Initiative in responsible family action creates lasting family foundation.',
+    businessCareer: 'Professional opportunity for lasting advancement through disciplined initiative! Potential for career growth through focused work, strategic advancement, mastery achievement IF you take action. Perfect time to demonstrate professional discipline actively, work strategically on career, build professional success with effort. Recognition available IF you step forward with disciplined competence. Initiative in focused professional work creates lasting career success.',
+    moneyFinances: 'Financial opportunity for lasting security through disciplined initiative! Potential for wealth building through strategic planning, disciplined financial work, responsible financial action IF you pursue it actively. Perfect time to work on financial security actively, build wealth strategically, invest with disciplined effort. Financial success available through focused action. Initiative in disciplined financial strategies creates lasting prosperity.',
+    predictions: [
+      'Opportunity for serious achievement appears - pursue it with discipline for lasting results',
+      'Your initiative to work strategically and patiently produces valuable success',
+      'Chance to build something lasting succeeds IF you apply disciplined effort actively',
+      'Serious goal you pursue with focused discipline achieves enduring results',
+      'Opportunity for strategic advancement appears - initiative required to actualize',
+      'Your disciplined focused action naturally overcomes obstacles and succeeds',
+      'Patient strategic work you undertake actively produces lasting valuable achievement',
+      'Initiative in controlled persistent effort creates enduring success',
+      'Your mature strategic approach actively pursued naturally earns recognition',
+      'Opportunity for lasting achievement through disciplined strategic focused persistent initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MARS-URANUS ASPECTS (Revolutionary action and breakthrough drive)
+  // ============================================================================
+
+  'Mars-Uranus-Conjunction': {
+    name: 'Mars Conjunction Uranus',
+    frequency: 'Occurs every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Action becomes revolutionary, electric, and liberating! Mars\'s drive merges with Uranus\'s innovation, creating sudden breakthrough action, authentic bold assertion, and liberating courage. Perfect time for revolutionary initiatives, breaking free through action, authentic bold moves, innovative competition. Energy feels electric and unpredictable. Action liberates. Excellent for breakthrough projects, authentic assertion, revolutionary change, freedom through courage. Warning: channel energy constructively - avoid reckless rebellion or chaotic impulsiveness. Innovation over destruction.',
+    loveRelationships: 'Relationship action becomes electric and liberating! Romance feels exciting, unpredictable, and authentically passionate. Perfect time for sudden romantic breakthroughs, authentic passionate expression, liberating relationship action, exciting romantic initiatives. Attraction feels electric and sudden. Good time for honest bold romantic moves, relationship liberation, exciting authentic passion. Warning: avoid impulsive relationship disruption - channel excitement into conscious authentic expression.',
+    familyHome: 'Family action becomes revolutionary and liberating! Perfect time for sudden family breakthroughs, liberating family action, authentic family assertion, innovative family initiatives. Home energy feels electric and changing. Good time for sudden home changes, family liberation, authentic family leadership, revolutionary family approaches. Warning: avoid chaotic family disruption - channel innovation into constructive family freedom.',
+    businessCareer: 'Professional action becomes innovative and breakthrough-oriented! Excellent time for revolutionary career moves, authentic professional assertion, innovative professional action, breakthrough career initiatives. Work energy feels electric and liberating. Good time for innovative professional projects, career liberation, authentic professional moves, revolutionary career approaches. Warning: avoid reckless professional rebellion - channel innovation constructively.',
+    moneyFinances: 'Financial action becomes innovative and liberating! Good time for unconventional financial moves, liberating financial action, innovative income initiatives, breakthrough financial strategies. Financial energy feels electric and changing. Excellent for innovative financial ventures, financial liberation, unconventional income through bold action. Warning: avoid financially reckless innovation - balance liberation with wisdom.',
+    predictions: [
+      'Sudden breakthrough action you take with courage produces revolutionary results',
+      'Your authentic bold initiative liberates you from limiting pattern powerfully',
+      'Revolutionary move you make courageously creates exciting new possibilities',
+      'Unexpected opportunity for breakthrough action appears - seize it boldly',
+      'Your electric energy and innovative action attracts exciting opportunities',
+      'Liberating choice you make through bold action proves right and freeing',
+      'Breakthrough you achieve through authentic courageous action transforms situation',
+      'Innovative initiative you take boldly succeeds and opens new paths',
+      'Your authentic assertion of freedom through action creates powerful liberation',
+      'Opportunity for revolutionary breakthrough through authentic bold liberating courageous action'
+    ]
+  },
+
+  'Mars-Uranus-Opposition': {
+    name: 'Mars Opposition Uranus',
+    frequency: 'Occurs every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Tension between controlled action and disruptive freedom requiring integration! Mars\'s drive faces Uranus\'s disruption, creating impulsive action, sudden conflicts, or tension between control and chaos. Challenge is honoring both directed action AND authentic freedom. Risk of reckless impulsiveness, sudden anger, or disrupting stability through chaotic action. Resistance to change creates explosive pressure; excessive chaos destroys effectiveness. Integration of control and freedom needed. Balance creates powerful authentic directed action.',
+    loveRelationships: 'Relationship tension between passion and disruption! Romance requires balancing passionate action with relationship stability. Sudden romantic conflicts or impulsive relationship action possible. Tension between maintaining connection and seeking freedom. Challenge is expressing passionate desire while honoring relationship stability. Good time to balance authentic passion with relationship consideration, integrate desire with connection.',
+    familyHome: 'Family tension between action and disruption! Home life requires balancing family initiatives with family stability. Sudden family conflicts or disruptive family action possible. Tension between family control and family freedom. Challenge is taking bold family action while maintaining family stability. Good time to balance family liberation with family connection, integrate family courage with family harmony.',
+    businessCareer: 'Professional tension between ambition and disruption! Career requires balancing professional action with professional stability. Sudden professional conflicts or disruptive career moves possible. Tension between career control and career innovation. Challenge is pursuing career goals while maintaining professional stability. Good time to balance career innovation with career security, integrate professional courage with professional wisdom.',
+    moneyFinances: 'Financial tension between action and disruption! Money requires balancing financial initiatives with financial stability. Sudden financial disruptions or impulsive financial action possible. Tension between financial control and financial freedom. Challenge is taking bold financial action while maintaining financial security. Good time to balance financial innovation with financial stability, integrate financial courage with financial wisdom.',
+    predictions: [
+      'Sudden conflict forces you to balance authentic freedom with directed effectiveness',
+      'Your impulsive action you moderate consciously prevents destructive disruption',
+      'Tension between control and chaos resolved through conscious integration',
+      'Unexpected disruption teaches importance of balancing freedom with stability',
+      'Sudden anger you channel constructively produces authentic breakthrough',
+      'Challenge between directed action and disruptive freedom creates balanced power',
+      'Impulsive move you temper with wisdom transforms into effective authentic action',
+      'You learn that real freedom requires conscious direction not chaotic rebellion',
+      'Tension forces integration of controlled power with authentic liberating expression',
+      'Opportunity to integrate directed action with authentic liberating freedom through conscious balance'
+    ]
+  },
+
+  'Mars-Uranus-Trine': {
+    name: 'Mars Trine Uranus',
+    frequency: 'Occurs every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Action and innovation flow naturally with breakthrough grace! Mars\'s drive harmonizes beautifully with Uranus\'s liberation, creating effortless breakthrough action, natural authentic courage, and graceful revolutionary achievement. Perfect time for innovative action flowing smoothly, breakthrough initiatives succeeding naturally, authentic assertion flowing effortlessly. Power and innovation balance perfectly. Liberation feels directed and effective. Excellent for revolutionary projects succeeding naturally, authentic competition, innovative action, liberating achievement. Innovation enhances rather than disrupts effectiveness.',
+    loveRelationships: 'Relationship passion flows with natural exciting authenticity! Romance feels both passionate and exciting, bold and authentic effortlessly. Perfect time for exciting romantic action flowing naturally, authentic passionate expression succeeding smoothly, liberating romantic initiatives working effortlessly. Passion and freedom balance perfectly. Good time for spontaneous romance flowing naturally, authentic bold romantic moves succeeding smoothly, exciting passionate connection naturally deepening.',
+    familyHome: 'Family action flows with natural innovative success! Perfect time for innovative family initiatives succeeding naturally, liberating family action flowing smoothly, authentic family leadership working effortlessly. Home energy feels both active and exciting naturally. Good time for innovative home projects flowing naturally, family liberation naturally successful, authentic family action producing exciting results effortlessly.',
+    businessCareer: 'Professional action flows with natural innovative breakthrough! Excellent time for innovative career moves succeeding naturally, authentic professional assertion working smoothly, breakthrough professional action flowing effortlessly. Professional energy feels both powerful and innovative naturally. Good time for revolutionary professional projects naturally successful, innovative career advancement flowing smoothly, authentic professional action naturally recognized and celebrated.',
+    moneyFinances: 'Financial action flows with natural innovative success! Good time for innovative financial strategies succeeding naturally, liberating financial action flowing smoothly, unconventional income working effortlessly. Financial energy feels both active and innovative naturally. Excellent for breakthrough financial ventures naturally successful, innovative income flowing naturally, liberating financial action producing prosperity effortlessly.',
+    predictions: [
+      'Breakthrough action you take naturally succeeds and produces revolutionary results effortlessly',
+      'Your innovative initiative naturally creates exciting beneficial opportunities smoothly',
+      'Authentic bold move you make naturally succeeds and liberates you effortlessly',
+      'Revolutionary action flows naturally and produces impressive exciting results',
+      'Unexpected opportunity you seize naturally leads to liberating success',
+      'Your natural innovative energy effortlessly attracts breakthrough opportunities',
+      'Authentic assertion naturally succeeds and creates exciting positive change',
+      'Liberating action naturally flows and produces powerful beneficial results',
+      'Your bold innovative courage naturally attracts recognition and success',
+      'Opportunity for revolutionary breakthrough through natural innovative authentic effortless action'
+    ]
+  },
+
+  'Mars-Uranus-Square': {
+    name: 'Mars Square Uranus',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Growth through impulsive action and disruptive rebellion requiring conscious direction! Mars\'s drive clashes with Uranus\'s chaos, creating reckless action, explosive anger, or destructive impulsiveness. Challenge is channeling liberating energy into constructive breakthrough rather than chaotic destruction. Tendency toward impulsive risks, sudden anger, or disrupting what works for novelty. Crisis forces development of conscious authentic direction. Awareness transforms recklessness into powerful conscious revolutionary action.',
+    loveRelationships: 'Relationship friction through impulsive action or explosive conflict! Romance may involve sudden fights, impulsive relationship decisions, or disruptive romantic action. Tendency toward explosive anger or impulsively ending relationship for freedom. Challenge is expressing authentic desire without destructive impulsiveness. Good time to consciously channel relationship frustration into constructive change, express anger authentically not explosively. Crisis teaches conscious authentic passion not reactive rebellion.',
+    familyHome: 'Family friction through impulsive action or explosive conflicts! Home life may involve sudden family fights, impulsive family decisions, or disruptive family action. Tendency toward explosive family anger or impulsively disrupting family for freedom. Challenge is taking authentic family action without destructive family impulsiveness. Good time to consciously channel family frustration into constructive family change. Crisis forces conscious family liberation not reactive family destruction.',
+    businessCareer: 'Professional friction through impulsive moves or explosive conflicts! Career may involve sudden professional fights, impulsive career decisions, or disruptive professional action. Tendency toward explosive professional anger or impulsively quitting for freedom. Challenge is pursuing career liberation without destructive professional impulsiveness. Good time to consciously channel professional frustration into constructive career innovation. Crisis teaches conscious career revolution not reactive professional rebellion.',
+    moneyFinances: 'Financial friction through impulsive risks or explosive disruption! Money may involve sudden financial risks, impulsive financial decisions, or disruptive financial action. Tendency toward explosive financial frustration or impulsively disrupting financial stability for freedom. Challenge is pursuing financial innovation without reckless financial impulsiveness. Good time to consciously channel financial frustration into constructive financial liberation. Crisis develops conscious financial innovation not reactive financial rebellion.',
+    predictions: [
+      'Impulsive action you moderate consciously before acting prevents destructive consequences',
+      'Your explosive anger you channel authentically produces constructive breakthrough not destruction',
+      'Reckless move you temper with awareness transforms into effective revolutionary action',
+      'Sudden frustration you address consciously creates authentic liberation not chaotic disruption',
+      'Crisis of impulsiveness teaches importance of conscious authentic directed freedom',
+      'Disruptive tendency you channel constructively produces powerful beneficial breakthrough',
+      'You learn that real liberation requires conscious direction not impulsive rebellion',
+      'Explosive energy you direct consciously creates breakthrough not destruction',
+      'Crisis forces you to distinguish authentic revolution from reactive chaotic rebellion',
+      'Opportunity to transform impulsive disruption into conscious powerful authentic revolutionary action'
+    ]
+  },
+
+  'Mars-Uranus-Sextile': {
+    name: 'Mars Sextile Uranus',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free, awaken, rebel, and express your unique genius.',
+    aspectMeaning: 'Opportunity for breakthrough through innovative initiative! Mars\'s drive harmonizes with Uranus\'s innovation, creating potential for revolutionary action, liberating achievement, authentic breakthrough IF you take action. Opportunities for innovative moves, authentic assertion, liberating action appear - but require your courage. Perfect time to take revolutionary action boldly, innovate courageously, assert authentically. Success through innovative courageous initiative. Passive approach wastes potential; active revolutionary engagement creates breakthrough.',
+    loveRelationships: 'Relationship opportunity for exciting breakthrough through bold initiative! Potential for liberating romantic action, authentic passionate expression, exciting connection IF you initiate. Perfect time to take bold romantic risk actively, express authentic desire courageously, try innovative romantic approach. Opportunity for relationship liberation through courageous authentic action IF you take the chance. Initiative in bold authentic passion creates exciting breakthrough.',
+    familyHome: 'Family opportunity for liberation through innovative initiative! Potential for family breakthrough, liberating family action, innovative family success IF you initiate. Perfect time to suggest revolutionary family approach actively, take bold family action courageously, lead family authentically. Family receptive to innovative initiatives IF you present them boldly. Initiative in authentic bold family action creates family liberation and breakthrough.',
+    businessCareer: 'Professional opportunity for breakthrough through innovative initiative! Potential for revolutionary career success, liberating professional action, innovative advancement IF you take action. Perfect time to take innovative career risk actively, assert professional authenticity boldly, pursue breakthrough opportunity courageously. Recognition available IF you step forward innovatively and authentically. Initiative in revolutionary professional action creates career breakthrough.',
+    moneyFinances: 'Financial opportunity for breakthrough through innovative initiative! Potential for unconventional income success, liberating financial action, innovative financial gain IF you pursue it actively. Perfect time to take innovative financial risk courageously, pursue unconventional income actively, try breakthrough financial strategy. Financial liberation available through innovative courageous action. Initiative in revolutionary financial approaches creates unexpected prosperity.',
+    predictions: [
+      'Opportunity for breakthrough appears - seize it with bold innovative action for revolutionary results',
+      'Your initiative to act authentically and innovatively creates exciting opportunity',
+      'Chance for liberating action succeeds powerfully IF you pursue it courageously',
+      'Revolutionary move you make actively produces exciting beneficial breakthrough',
+      'Opportunity for authentic freedom appears - initiative required to actualize',
+      'Your bold innovative action naturally attracts recognition and exciting outcomes',
+      'Breakthrough you initiate courageously liberates and transforms situation powerfully',
+      'Innovative risk you take actively with courage produces liberating results',
+      'Your authentic bold assertion actively pursued creates exciting positive change',
+      'Opportunity for revolutionary breakthrough through innovative authentic bold courageous initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MARS-NEPTUNE ASPECTS (Inspired action and spiritual drive)
+  // ============================================================================
+
+  'Mars-Neptune-Conjunction': {
+    name: 'Mars Conjunction Neptune',
+    frequency: 'Occurs every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Action becomes inspired, compassionate, and spiritually guided! Mars\'s drive merges with Neptune\'s transcendence, creating inspired action, compassionate assertion, and spiritually guided courage. Perfect time for pursuing spiritual goals, compassionate action, creative assertion, inspired initiatives. Energy feels divine and flowing. Action serves higher purpose. Excellent for artistic projects, spiritual pursuits, compassionate fighting, inspired courage. Warning: maintain clarity - distinguish divine inspiration from confusion or escapism. Verify while trusting. Inspiration over delusion.',
+    loveRelationships: 'Relationship action becomes romantic and soul-connected! Romance feels inspired, compassionate, and spiritually passionate. Perfect time for romantic inspired action, compassionate passionate expression, spiritual intimate connection, soulful romantic initiatives. Passion feels divine and transcendent. Good time for romantic idealism in action, compassionate loving assertion, spiritual passionate connection. Warning: maintain relationship clarity while honoring romantic inspiration - verify desires alongside spiritual connection.',
+    familyHome: 'Family action becomes compassionate and inspired! Perfect time for compassionate family initiatives, inspired family action, spiritual family leadership, creative family projects. Home energy feels gentle and flowing. Good time for artistic home projects, compassionate family action, spiritual family initiatives, inspired family creativity. Warning: maintain family boundaries while expressing family compassion - balance inspiration with family reality.',
+    businessCareer: 'Professional action becomes creative and inspired! Excellent time for creative professional work, compassionate professional assertion, inspired career initiatives, artistic professional projects. Work energy feels flowing and meaningful. Good time for creative career action, compassionate professional leadership, inspired professional moves, artistic professional expression. Warning: verify professional details while following professional inspiration - balance vision with professional clarity.',
+    moneyFinances: 'Financial action becomes idealistic and inspired! Good time for trusting financial intuition while taking action, pursuing creative income, compassionate financial initiatives, inspired financial moves. Financial energy feels flowing and trusting. Excellent for creative financial action, inspired income pursuits, compassionate financial assertion. Warning: verify financial details carefully while trusting financial intuition - balance financial faith with financial clarity.',
+    predictions: [
+      'Inspired action you take guided by intuition produces beautiful meaningful results',
+      'Your compassionate assertion creates profound positive impact and healing',
+      'Creative initiative you pursue with spiritual trust succeeds and resonates deeply',
+      'Spiritually guided action you take with courage proves divinely supported',
+      'Your inspired courageous pursuit of dreams manifests beyond expectations',
+      'Compassionate fight you engage in with inspired courage creates important change',
+      'Creative action flowing from divine inspiration produces transcendent results',
+      'Your spiritual courage to act on inspired vision succeeds beautifully',
+      'Inspired initiative you trust (with verification) proves genuine and beneficial',
+      'Opportunity for divine inspired compassionate action creating meaningful transcendent results'
+    ]
+  },
+
+  'Mars-Neptune-Opposition': {
+    name: 'Mars Opposition Neptune',
+    frequency: 'Occurs every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Tension between clear action and confused direction requiring discernment! Mars\'s drive faces Neptune\'s fog, creating confused action, lack of direction, or conflict between will and surrender. Challenge is honoring both decisive action AND spiritual flow. Risk of passive escapism, confused motivation, or deceptive action. Resistance to flow creates frustrated force; excessive passivity wastes energy. Integration of action and surrender needed. Balance creates inspired clear directed action. Verify everything.',
+    loveRelationships: 'Relationship tension between passion and confusion! Romance requires balancing passionate action with spiritual connection or romantic clarity. Confusion about relationship desires or deceptive romantic action possible. Challenge is expressing passionate desire while maintaining relationship clarity. Good time to verify romantic motivations, balance passion with spiritual honesty, clarify confused relationship desires through compassionate communication.',
+    familyHome: 'Family tension between action and confusion! Home life requires balancing family initiatives with family clarity or spiritual family connection. Confusion about family desires or unclear family action possible. Challenge is taking bold family action while maintaining family clarity. Good time to clarify family confusion, balance family action with family spiritual connection, verify family motivations through honest communication.',
+    businessCareer: 'Professional tension between ambition and confusion! Career requires balancing professional action with professional clarity or spiritual professional vision. Confusion about career desires or deceptive professional action possible. Challenge is pursuing career goals while maintaining professional clarity. Good time to verify professional motivations, balance career action with career vision, clarify professional confusion through honest assessment.',
+    moneyFinances: 'Financial tension between action and confusion! Money requires balancing financial initiatives with financial clarity or spiritual financial approach. Confusion about financial desires or deceptive financial action possible. Challenge is taking bold financial action while maintaining financial clarity. Good time to verify financial motivations, balance financial action with financial spiritual trust, clarify financial confusion through honest assessment.',
+    predictions: [
+      'Confusion about direction forces you to verify motivations and clarify goals',
+      'Your tendency toward passive escapism you address actively creates effective action',
+      'Conflict between force and flow resolved through conscious integration',
+      'Deceptive situation revealed teaches importance of verifying before acting',
+      'Confusion clears when you balance inspired vision with practical clear action',
+      'Challenge between will and surrender produces wise spiritually grounded action',
+      'You learn that effective action requires both inspiration AND clear direction',
+      'Tension forces you to distinguish divine guidance from confused wishful thinking',
+      'Your honest examination of motivations creates clear effective inspired action',
+      'Opportunity to integrate decisive action with spiritual flow through clear discernment'
+    ]
+  },
+
+  'Mars-Neptune-Trine': {
+    name: 'Mars Trine Neptune',
+    frequency: 'Occurs every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Action and inspiration flow naturally with spiritual grace! Mars\'s drive harmonizes beautifully with Neptune\'s transcendence, creating effortless inspired action, natural compassionate courage, and graceful spiritual achievement. Perfect time for creative action flowing smoothly, spiritual pursuits succeeding naturally, compassionate assertion flowing effortlessly. Power and spirituality balance perfectly. Action feels divinely guided and clear. Excellent for artistic projects succeeding naturally, spiritual goals achieved gracefully, compassionate action, inspired courage. Inspiration and effectiveness unite beautifully.',
+    loveRelationships: 'Relationship passion flows with natural spiritual grace! Romance feels both passionate and soulful, active and flowing effortlessly. Perfect time for inspired romantic action flowing naturally, spiritual passionate connection succeeding smoothly, compassionate desire expression flowing effortlessly. Passion and soul connection balance perfectly. Good time for romantic idealism in action naturally successful, spiritual intimate connection flowing smoothly, compassionate loving assertion naturally deepening connection.',
+    familyHome: 'Family action flows with natural compassionate grace! Perfect time for compassionate family initiatives succeeding naturally, inspired family action flowing smoothly, spiritual family leadership working effortlessly. Home energy feels both active and peaceful naturally. Good time for artistic family projects flowing naturally, compassionate family action naturally successful, spiritual family initiatives producing beautiful results effortlessly.',
+    businessCareer: 'Professional action flows with natural creative inspiration! Excellent time for creative professional work succeeding naturally, compassionate professional assertion working smoothly, inspired career initiatives flowing effortlessly. Professional energy feels both powerful and meaningful naturally. Good time for artistic career action naturally successful, compassionate professional leadership naturally recognized, inspired professional moves naturally creating positive impact.',
+    moneyFinances: 'Financial action flows with natural inspired wisdom! Good time for inspired financial strategies succeeding naturally, creative income flowing smoothly, compassionate financial action working effortlessly. Financial energy feels both active and spiritually aligned naturally. Excellent for creative financial pursuits naturally successful, inspired income naturally flowing, compassionate financial action producing abundance effortlessly.',
+    predictions: [
+      'Inspired action you take naturally succeeds and produces beautiful meaningful results effortlessly',
+      'Your compassionate assertion naturally creates profound positive healing impact smoothly',
+      'Creative initiative flows naturally and resonates deeply with others effortlessly',
+      'Spiritually guided action naturally succeeds and feels divinely supported',
+      'Your inspired pursuit of dreams naturally manifests smoothly and beautifully',
+      'Compassionate fight you engage naturally creates important positive change effortlessly',
+      'Creative action naturally flows and produces transcendent inspiring results',
+      'Your spiritual courage naturally succeeds and creates meaningful impact',
+      'Inspired initiative naturally flows and proves genuine and beneficial',
+      'Opportunity for inspired compassionate action creating transcendent results through natural grace'
+    ]
+  },
+
+  'Mars-Neptune-Square': {
+    name: 'Mars Square Neptune',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Growth through confused action and misguided effort requiring clarity! Mars\'s drive clashes with Neptune\'s fog, creating wasted energy, deceptive action, or passive escapism from necessary assertion. Challenge is developing clear discernment about when to act versus surrender. Tendency toward fighting for illusions, passive avoidance, or acting on confused motivations. Crisis forces development of clear inspired action. Conscious verification transforms confusion into effective spiritually aligned action. Verify before acting.',
+    loveRelationships: 'Relationship friction through confused passion or deceptive action! Romance may involve fighting for romantic illusions, passive romantic avoidance, or deceptive passionate action. Confusion about true relationship desires versus fantasies. Challenge is expressing authentic desire while seeing relationship clearly. Good time to consciously verify romantic motivations, address relationship illusions honestly, act on clear authentic desires not confused fantasies. Crisis teaches clear honest passion.',
+    familyHome: 'Family friction through confused action or passive avoidance! Home life may involve fighting for family illusions, passive family avoidance, or unclear family action. Confusion about true family needs versus family fantasies. Challenge is taking clear family action while seeing family reality honestly. Good time to consciously verify family motivations, address family illusions, act on clear family needs not confused family fantasies. Crisis forces clear family action.',
+    businessCareer: 'Professional friction through confused career action or deceptive moves! Career may involve fighting for professional illusions, passive career avoidance, or unclear professional action. Confusion about true career goals versus career fantasies. Challenge is pursuing authentic career goals while seeing professional reality clearly. Good time to consciously verify professional motivations, address career illusions, act on clear professional goals not confused professional fantasies. Crisis teaches clear effective career action.',
+    moneyFinances: 'Financial friction through confused money action or deceptive risks! Money may involve fighting for financial illusions, passive financial avoidance, or unclear financial action. Confusion about true financial needs versus financial fantasies. Challenge is taking clear financial action while seeing financial reality honestly. Good time to consciously verify financial motivations, address financial illusions, act on clear financial needs not confused financial fantasies. Crisis develops clear wise financial action.',
+    predictions: [
+      'Confused action you clarify before continuing prevents wasted energy and disappointment',
+      'Your tendency to fight for illusions you recognize consciously redirects to authentic goals',
+      'Passive avoidance you address actively creates effective necessary action',
+      'Deceptive situation you verify before acting prevents manipulation and waste',
+      'Confusion about motivations you examine honestly clarifies true authentic desires',
+      'You learn that effective action requires clear vision not confused wishful thinking',
+      'Crisis of wasted energy teaches importance of verifying before acting',
+      'Tendency toward escapism you address consciously transforms into effective action',
+      'Your honest examination of motivations creates clear powerful effective action',
+      'Opportunity to transform confused passive action into clear inspired effective assertion'
+    ]
+  },
+
+  'Mars-Neptune-Sextile': {
+    name: 'Mars Sextile Neptune',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Neptune represents spirituality, transcendence, divine connection, compassion, imagination, dreams, illusion, and dissolution of boundaries. It\'s where you connect to the infinite, create beauty, and transcend the ego.',
+    aspectMeaning: 'Opportunity for inspired action through spiritual initiative! Mars\'s drive harmonizes with Neptune\'s transcendence, creating potential for creative achievement, compassionate success, spiritual accomplishment IF you take action. Opportunities for inspired action, creative pursuits, compassionate assertion appear - but require your courage. Perfect time to pursue spiritual goals actively, act on creative inspiration, assert compassionately. Success through inspired courageous initiative. Passive approach wastes potential; active inspired engagement creates beautiful results.',
+    loveRelationships: 'Relationship opportunity for soulful passion through inspired initiative! Potential for romantic spiritual connection, inspired passionate action, compassionate intimacy IF you initiate. Perfect time to take romantic inspired action actively, express passion compassionately, pursue spiritual intimate connection. Opportunity for soul-level romantic connection through inspired courageous action IF you take the chance. Initiative in compassionate inspired passion creates beautiful romantic depth.',
+    familyHome: 'Family opportunity for healing action through compassionate initiative! Potential for family spiritual connection, inspired family action, compassionate family success IF you initiate. Perfect time to take compassionate family action actively, pursue spiritual family connection, initiate artistic family projects. Family receptive to inspired compassionate initiatives IF you present them with heart. Initiative in spiritual compassionate family action creates family healing and beauty.',
+    businessCareer: 'Professional opportunity for creative success through inspired initiative! Potential for artistic career achievement, compassionate professional impact, inspired career success IF you take action. Perfect time to pursue creative career projects actively, act on professional inspiration, assert professionally with compassion. Recognition available IF you step forward with inspired compassionate courage. Initiative in creative compassionate professional action creates meaningful career success.',
+    moneyFinances: 'Financial opportunity for creative prosperity through inspired initiative! Potential for artistic income success, inspired financial gain, compassionate financial action IF you pursue it actively. Perfect time to pursue creative income actively, act on financial inspiration, take compassionate financial initiative. Financial success available through inspired courageous action. Initiative in creative inspired financial approaches creates unexpected prosperity.',
+    predictions: [
+      'Opportunity for creative success appears - pursue it with inspired action for beautiful results',
+      'Your initiative to act compassionately and spiritually creates meaningful impact',
+      'Chance for artistic achievement succeeds beautifully IF you pursue it actively with courage',
+      'Inspired vision you act upon courageously produces transcendent valuable results',
+      'Opportunity for spiritual accomplishment appears - initiative required to actualize',
+      'Your compassionate courageous action naturally attracts support and recognition',
+      'Creative project you initiate with inspired courage succeeds and resonates deeply',
+      'Spiritual goal you pursue actively with faith produces blessed meaningful results',
+      'Your inspired assertion actively pursued creates beautiful positive change',
+      'Opportunity for creative spiritual accomplishment through inspired compassionate courageous initiative'
+    ]
+  },
+
+  // ============================================================================
+  // MARS-PLUTO ASPECTS (Powerful action and transformative drive)
+  // ============================================================================
+
+  'Mars-Pluto-Conjunction': {
+    name: 'Mars Conjunction Pluto',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Action becomes powerfully transformative and intensely focused! Mars\'s drive merges with Pluto\'s depth, creating unstoppable powerful action, transformative assertion, and profound courageous depth. Perfect time for powerful initiatives, transformative action, eliminating obstacles through intense effort, reclaiming power through action. Energy feels massive and unstoppable. Action transforms everything. Excellent for major transformations, powerful competition, shadow work through action, profound achievement. Warning: intensity can become destructive - channel into transformation not domination. Power through depth.',
+    loveRelationships: 'Relationship action becomes intensely passionate and transformative! Romance feels powerful, all-consuming, and deeply transforming. Perfect time for profound passionate action, transformative intimate expression, powerful desire assertion, deep relationship transformation through action. Passion feels magnetic and intense. Good time for addressing relationship shadows through action, powerful sexual connection, transformative relationship work. Warning: intensity can become controlling - channel into healing depth not manipulation.',
+    familyHome: 'Family action becomes powerfully transformative! Perfect time for major family transformation through action, powerful family initiatives, addressing family shadows through decisive action, eliminating family obstacles. Home energy feels intense and changing. Good time for major home transformation, powerful family work, addressing family depth, eliminating what no longer serves family. Warning: intensity can overwhelm - channel into transformation not control.',
+    businessCareer: 'Professional action becomes powerfully effective and transformative! Excellent time for major career transformation through decisive action, powerful professional initiatives, eliminating career obstacles, reclaiming professional power. Work energy feels unstoppable and intense. Good time for powerful professional moves, career transformation, addressing professional shadows, eliminating professional limitations through focused effort. Your powerful action transforms career.',
+    moneyFinances: 'Financial action becomes powerfully transformative! Good time for major financial transformation through decisive action, powerful financial initiatives, eliminating financial obstacles, building massive financial power. Financial energy feels intense and transforming. Excellent for powerful financial strategies, financial transformation, addressing money shadows through action, eliminating financial limitations through focused effort.',
+    predictions: [
+      'Powerful action you take with intense focus produces massive transformative results',
+      'Your unstoppable decisive initiative eliminates obstacles and achieves breakthrough',
+      'Transformative move you make with profound courage changes everything powerfully',
+      'Obstacle you eliminate through powerful focused action liberates tremendous energy',
+      'Your intense passionate action creates profound transformation in all life areas',
+      'Power you reclaim through decisive action transforms weakness into strength',
+      'Major initiative you pursue with unstoppable will achieves profound success',
+      'Shadow you address through powerful action transforms into source of power',
+      'Your profound courageous effort produces breakthrough that seemed impossible',
+      'Opportunity for massive transformation through powerfully focused unstoppable decisive action'
+    ]
+  },
+
+  'Mars-Pluto-Opposition': {
+    name: 'Mars Opposition Pluto',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Tension between force and depth requiring integration! Mars\'s action faces Pluto\'s intensity, creating power struggles, control battles, or conflict between surface will and deep transformation. Challenge is honoring both decisive action AND profound transformation. Risk of destructive power struggles, control battles, or forcing rather than transforming. Resistance to depth creates crisis; excessive intensity overwhelms. Integration of power and transformation needed. Balance creates profound effective empowered action.',
+    loveRelationships: 'Relationship power struggles requiring transformative resolution! Romance involves intense power dynamics, sexual power struggles, or passionate control battles. Tendency toward fighting for control or experiencing profound relationship power conflicts. Challenge is expressing passionate desire while honoring mutual power. Good time to address relationship power dynamics, transform control issues, integrate passion with empowerment. Crisis forces relationship power transformation.',
+    familyHome: 'Family power struggles requiring deep transformation! Home life involves intense family conflicts, control battles, or power struggles. Tendency toward family domination attempts or experiencing profound family power conflicts. Challenge is taking bold family action while honoring family empowerment. Good time to address family power dynamics, transform family control issues, integrate family action with family empowerment. Crisis forces family power transformation.',
+    businessCareer: 'Professional power struggles requiring career transformation! Career involves intense professional conflicts, control battles with authority, or professional power struggles. Tendency toward professional domination attempts or experiencing profound career power conflicts. Challenge is pursuing career goals while honoring professional empowerment. Good time to address professional power dynamics, transform career control issues. Crisis forces professional power transformation.',
+    moneyFinances: 'Financial power struggles requiring money transformation! Money involves intense financial conflicts, control battles over resources, or financial power struggles. Tendency toward financial domination attempts or experiencing profound financial power conflicts. Challenge is pursuing financial goals while honoring financial empowerment. Good time to address financial power dynamics, transform money control issues. Crisis forces financial power transformation.',
+    predictions: [
+      'Power struggle forces you to examine and transform unhealthy control patterns',
+      'Your resistance to transformation creates crisis - embrace of depth resolves it powerfully',
+      'Control battle reveals shadow requiring profound psychological transformation',
+      'Intense conflict forces you to choose between destructive force and empowered transformation',
+      'Power dynamic surfaces requiring conscious transformation not destructive fighting',
+      'Challenge between force and depth resolved through conscious integration',
+      'Control issue you address honestly transforms into mutual empowerment',
+      'You learn that real power comes through transformation not domination',
+      'Crisis forces integration of decisive action with profound transformative depth',
+      'Opportunity to integrate forceful action with transformative power through conscious depth work'
+    ]
+  },
+
+  'Mars-Pluto-Trine': {
+    name: 'Mars Trine Pluto',
+    frequency: 'Occurs every 2-3 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Action and transformation flow naturally with profound grace! Mars\'s drive harmonizes beautifully with Pluto\'s depth, creating effortless powerful action, natural transformative courage, and graceful profound achievement. Perfect time for transformative action flowing smoothly, powerful initiatives succeeding naturally, eliminating obstacles effortlessly. Power and transformation balance perfectly. Action feels unstoppable yet natural. Excellent for major achievements flowing naturally, powerful competition, transformative work, profound accomplishment. Intensity enhances rather than overwhelms effectiveness.',
+    loveRelationships: 'Relationship passion flows with natural transformative depth! Romance feels both intensely passionate and naturally transforming, powerful and graceful effortlessly. Perfect time for profound passionate action flowing naturally, transformative intimate expression succeeding smoothly, powerful desire assertion flowing effortlessly. Passion and transformation balance perfectly. Good time for deep sexual connection flowing naturally, transformative relationship work succeeding smoothly, powerful loving action naturally deepening profound bond.',
+    familyHome: 'Family action flows with natural transformative power! Perfect time for major family transformation flowing naturally, powerful family initiatives succeeding smoothly, eliminating family obstacles effortlessly. Home energy feels both intense and naturally productive. Good time for major home transformation flowing naturally, powerful family work succeeding smoothly, family shadows addressed naturally and healed effortlessly.',
+    businessCareer: 'Professional action flows with natural transformative power! Excellent time for major career transformation flowing naturally, powerful professional initiatives succeeding smoothly, eliminating career obstacles effortlessly. Professional energy feels both intense and naturally effective. Good time for powerful professional moves naturally successful, career transformation flowing smoothly, professional power naturally recognized and celebrated.',
+    moneyFinances: 'Financial action flows with natural transformative power! Good time for major financial transformation flowing naturally, powerful financial initiatives succeeding smoothly, eliminating financial obstacles effortlessly. Financial energy feels both intense and naturally productive. Excellent for powerful financial strategies naturally successful, financial transformation flowing smoothly, massive wealth building naturally effective.',
+    predictions: [
+      'Powerful action you take naturally produces massive transformative results effortlessly',
+      'Your naturally intense initiative eliminates obstacles smoothly and achieves breakthrough',
+      'Transformative move you make naturally succeeds and changes everything powerfully',
+      'Obstacle you eliminate naturally liberates tremendous energy and success flows',
+      'Your natural passionate intensity creates profound transformation smoothly',
+      'Power you reclaim naturally transforms situation completely and effectively',
+      'Major initiative naturally flows and achieves profound impressive success',
+      'Shadow work naturally flows and transforms weakness into powerful strength',
+      'Your profound natural courage produces breakthrough that flows effortlessly',
+      'Opportunity for massive transformation through natural powerful effortless profound action'
+    ]
+  },
+
+  'Mars-Pluto-Square': {
+    name: 'Mars Square Pluto',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Growth through power struggles and forced transformation requiring conscious depth! Mars\'s action clashes with Pluto\'s intensity, creating destructive power battles, obsessive drive, or crisis forcing profound change. Challenge is channeling intense energy into transformation not destruction. Tendency toward control battles, obsessive action, or destructive assertion. Crisis forces development of conscious empowered depth. Awareness transforms destructive force into profound transformative empowered action. Profound growth through crisis.',
+    loveRelationships: 'Relationship friction through power battles or obsessive passion! Romance may involve intense control struggles, obsessive passionate behavior, or destructive relationship power dynamics. Tendency toward sexual power struggles or obsessively pursuing/controlling partner. Challenge is expressing passionate desire without destructive control. Good time to consciously address relationship power issues, channel intensity into transformation, work through obsessive patterns. Crisis teaches empowered vulnerable passion not destructive control.',
+    familyHome: 'Family friction through power battles or obsessive action! Home life may involve intense family power struggles, obsessive family behavior, or destructive family dynamics. Tendency toward family control battles or obsessively trying to control family. Challenge is taking bold family action without destructive family control. Good time to consciously address family power issues, channel family intensity into transformation. Crisis forces family power transformation not family destruction.',
+    businessCareer: 'Professional friction through power battles or obsessive ambition! Career may involve intense professional power struggles, obsessive career behavior, or destructive professional dynamics. Tendency toward professional control battles or obsessively pursuing career at any cost. Challenge is pursuing career goals without destructive professional control. Good time to consciously address professional power issues, channel career intensity into transformation. Crisis teaches empowered career action not destructive professional control.',
+    moneyFinances: 'Financial friction through power battles or obsessive drive! Money may involve intense financial power struggles, obsessive financial behavior, or destructive financial dynamics. Tendency toward financial control battles or obsessively pursuing money at any cost. Challenge is pursuing financial goals without destructive financial control. Good time to consciously address financial power issues, channel money intensity into transformation. Crisis develops empowered financial action not destructive financial control.',
+    predictions: [
+      'Power struggle you navigate consciously produces profound transformation not destruction',
+      'Your obsessive tendency you address honestly transforms into focused empowered drive',
+      'Control battle forces you to choose conscious transformation over destructive domination',
+      'Crisis of intense conflict produces profound growth through conscious depth work',
+      'Destructive pattern you recognize and release creates space for empowered action',
+      'You learn that real power requires transformation not force or control',
+      'Intense energy you channel consciously produces breakthrough not destruction',
+      'Crisis forces you to address shadows and transform destructive patterns into power',
+      'Your conscious work with intensity produces profound empowering transformation',
+      'Opportunity to transform destructive power struggles into conscious profound empowered action'
+    ]
+  },
+
+  'Mars-Pluto-Sextile': {
+    name: 'Mars Sextile Pluto',
+    frequency: 'Occurs 2-3 times every 2 years',
+    duration: '2-3 weeks',
+    planet1Energy: 'Mars represents action, drive, courage, assertion, passion, anger, competition, and initiation. It\'s how you go after what you want, fight for yourself, and express your will.',
+    planet2Energy: 'Pluto represents transformation, death and rebirth, power, depth, shadow work, elimination, regeneration, and psychological intensity. It\'s where you confront the underworld, reclaim power, and undergo total metamorphosis.',
+    aspectMeaning: 'Opportunity for transformation through powerful initiative! Mars\'s drive harmonizes with Pluto\'s depth, creating potential for profound achievement, transformative success, powerful accomplishment IF you take action. Opportunities for eliminating obstacles, transformative action, reclaiming power appear - but require your courage. Perfect time to take transformative action boldly, pursue profound goals courageously, eliminate limitations decisively. Success through powerful courageous initiative. Passive approach wastes potential; active transformative engagement creates profound results.',
+    loveRelationships: 'Relationship opportunity for profound intimacy through powerful initiative! Potential for transformative passionate connection, deep intimate action, powerful relationship depth IF you initiate. Perfect time to take bold intimate action actively, pursue transformative relationship work courageously, address relationship shadows decisively. Opportunity for profound relationship transformation through courageous powerful action IF you take the risk. Initiative in powerful vulnerable passion creates deep transformative bond.',
+    familyHome: 'Family opportunity for transformation through powerful initiative! Potential for major family breakthrough, transformative family action, powerful family healing IF you initiate. Perfect time to address family shadows actively, eliminate family obstacles courageously, pursue family transformation decisively. Family receptive to transformative initiatives IF you present them with courage and depth. Initiative in powerful family action creates profound family transformation.',
+    businessCareer: 'Professional opportunity for breakthrough through powerful initiative! Potential for major career transformation, powerful professional success, profound career advancement IF you take action. Perfect time to take powerful career action actively, eliminate career obstacles courageously, pursue transformative professional goals decisively. Recognition available IF you step forward with powerful focused courage. Initiative in transformative professional action creates major career breakthrough.',
+    moneyFinances: 'Financial opportunity for transformation through powerful initiative! Potential for major financial breakthrough, transformative money success, powerful wealth building IF you pursue it actively. Perfect time to take powerful financial action actively, eliminate financial obstacles courageously, pursue financial transformation decisively. Financial breakthrough available through powerful courageous action. Initiative in transformative financial strategies creates massive prosperity.',
+    predictions: [
+      'Opportunity for major transformation appears - pursue it with power for profound results',
+      'Your initiative to act powerfully and decisively creates transformative breakthrough',
+      'Chance to eliminate obstacle succeeds powerfully IF you take decisive action actively',
+      'Transformative goal you pursue courageously with focus achieves profound results',
+      'Opportunity for profound accomplishment appears - initiative required to actualize',
+      'Your powerful decisive action naturally overcomes resistance and transforms situation',
+      'Shadow work you pursue actively with courage produces profound empowering clarity',
+      'Major transformation you initiate decisively succeeds and produces lasting power',
+      'Your courageous powerful assertion actively pursued creates profound positive change',
+      'Opportunity for profound transformation through powerful courageous decisive transformative initiative'
+    ]
   }
 
 };
