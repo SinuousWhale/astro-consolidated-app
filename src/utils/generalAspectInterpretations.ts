@@ -5953,6 +5953,156 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  'Jupiter-North Node-Opposition': {
+    name: 'Jupiter Opposition North Node',
+    frequency: 'Occurs approximately every 12-13 years (same as Jupiter-South Node-Conjunction)',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL EXPANSION DESTINY ALIGNMENT! (This is the SAME as Jupiter-South Node-Conjunction) Your growth opposes old patterns while accessing abundant past wisdom. This feels like destined expansion - growth flows easily through familiar patterns while serving evolution. Opportunity: Use past life wisdom and comfortable expansion to FUEL North Node growth toward destiny. Your old beliefs become foundation for NEW purposeful meaningful expansion. Perfect 12-year cycle for conscious evolution.',
+    loveRelationships: 'Destined love expansion through past wisdom! Romantic growth feels abundant and natural while serving soul purpose. Past relationship beliefs become foundation for NEW authentic purposeful love. Comfortable generous love wisdom SUPPORTS evolutionary partnership growth. Love expands meaningfully from familiar foundation toward destined authentic vulnerable depth. Relationship faith serves evolution.',
+    familyHome: 'Family expansion through past domestic wisdom! Home growth feels abundant while serving collective mission. Past family beliefs become foundation for NEW purposeful family evolution. Comfortable generous family wisdom SUPPORTS evolutionary domestic growth. Family expands meaningfully from familiar foundation toward destined authentic connection. Domestic faith serves collective purpose.',
+    businessCareer: 'MAJOR CAREER EXPANSION through professional wisdom! Career growth feels abundant while serving destined work. Past professional beliefs become foundation for NEW purposeful career evolution. Comfortable generous career wisdom SUPPORTS evolutionary professional growth. Career expands meaningfully from familiar foundation toward destined authentic work. Professional faith serves soul mission.',
+    moneyFinances: 'Financial expansion through past prosperity wisdom! Money growth feels abundant while serving purposeful prosperity. Past financial beliefs become foundation for NEW evolutionary abundance. Comfortable generous money wisdom SUPPORTS purposeful financial growth. Prosperity expands meaningfully from familiar foundation toward destined authentic abundance. Financial faith serves soul evolution.',
+    predictions: [
+      'Major expansion opportunity that draws on past wisdom while serving your destiny',
+      'Abundant growth feels natural because it builds on familiar beliefs toward purpose',
+      'Past life knowledge about meaning becomes foundation for destined expansion',
+      'Your comfortable faith and optimism naturally SUPPORT purposeful evolutionary growth',
+      'Generous opportunity from past serves your karmic mission perfectly',
+      'What you naturally believe from experience fuels NEW purposeful meaningful expansion',
+      'Professional or personal growth builds on familiar wisdom toward destined purpose',
+      'Past abundance patterns become foundation for evolutionary purposeful prosperity',
+      'Your faith in growth naturally aligns with soul mission and destiny path',
+      'Rare 12-year cycle: past wisdom perfectly supports destined future expansion'
+    ]
+  },
+
+  'Jupiter-North Node-Trine': {
+    name: 'Jupiter Trine North Node',
+    frequency: 'Occurs twice approximately every 12-13 years',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Natural meaningful expansion aligned with soul purpose! Growth and opportunity flow effortlessly toward your destiny. This beautiful trine brings abundant purposeful opportunities naturally, meaningful expansion supporting mission easily, faith in your path flowing naturally. What expands naturally serves evolution. Perfect time for effortless purposeful growth, natural learning supporting destiny, embracing abundant opportunities that appear naturally. Expansion feels natural and meaningful. Optimism serves purpose naturally. Abundant natural growth cycle.',
+    loveRelationships: 'Natural abundant love expansion serving purpose! Romantic opportunities and relationship growth flow naturally toward authentic depth. Perfect time for effortless meaningful relationship expansion, natural love growth supporting evolution, abundant romance appearing naturally. Love expands naturally in purposeful directions. Romantic optimism flows naturally. Relationships grow toward authentic connection naturally and abundantly.',
+    familyHome: 'Natural family and home expansion aligned with purpose! Domestic growth and abundant family opportunities appear naturally and serve mission. Perfect time for effortless meaningful home expansion, natural family growth supporting evolution, abundant domestic opportunities flowing naturally. Home life expands naturally and purposefully. Family optimism flows naturally. Generous natural domestic growth.',
+    businessCareer: 'Natural career expansion aligned with destiny! Professional growth and abundant career opportunities flow naturally toward mission. Excellent time for effortless meaningful career expansion, natural learning supporting destined work, abundant professional opportunities appearing naturally. Career grows naturally and purposefully. Business optimism flows naturally. Natural purposeful professional expansion.',
+    moneyFinances: 'Natural abundant financial expansion serving purpose! Money growth and prosperity opportunities flow naturally toward mission. Perfect time for effortless meaningful financial expansion, natural prosperity supporting evolution, abundant money flow appearing naturally. Financial optimism flows naturally. Prosperity expands naturally in purposeful directions. Natural abundant destined financial growth.',
+    predictions: [
+      'Meaningful expansion opportunity flows to you naturally and serves your soul purpose',
+      'What naturally expands in your life turns out to perfectly support your evolution',
+      'Abundant opportunity appears effortlessly and aligns with your karmic mission',
+      'Your natural optimism and faith attract purposeful growth and destined expansion',
+      'Learning or wisdom that naturally interests you serves your destiny profoundly',
+      'What you naturally believe and expand toward supports your soul growth perfectly',
+      'Generous opportunity or abundant growth comes naturally and serves your mission',
+      'Natural expansion in career or personal life flows toward your destined path',
+      'Your faith in growth naturally creates momentum toward purposeful evolution',
+      'Perfect natural flow of meaningful expansion, abundant opportunities, destined growth'
+    ]
+  },
+
+  'Jupiter-North Node-Sextile': {
+    name: 'Jupiter Sextile North Node',
+    frequency: 'Occurs twice approximately every 12-13 years',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Growth opportunity aligned with soul purpose through initiative! Potential for meaningful expansion, abundant opportunities supporting mission, purposeful growth serving destiny IF you take action. This supportive sextile rewards initiative with meaningful expansion. Perfect time for actively pursuing purposeful growth, embracing abundant opportunities through effort, expanding meaningfully toward destiny through conscious choice. Opportunity requires initiative. Growth potential aligned with purpose. Meaningful expansion available.',
+    loveRelationships: 'Love expansion opportunity through initiative! Potential for abundant romantic growth, meaningful relationship expansion supporting evolution, purposeful love opportunities IF you step forward. Perfect time to actively expand love meaningfully, pursue romantic opportunities serving growth, embrace relationship expansion through conscious effort. Love growth available through initiative. Romantic opportunity serves purpose IF pursued.',
+    familyHome: 'Family expansion opportunity through initiative! Potential for meaningful home growth, abundant family opportunities supporting mission, purposeful domestic expansion IF you take action. Perfect time to actively expand home meaningfully, pursue family opportunities serving evolution, embrace domestic growth through conscious effort. Family growth available through initiative. Home opportunity serves purpose IF pursued.',
+    businessCareer: 'Career expansion opportunity through initiative! Potential for abundant professional growth, meaningful career opportunities supporting destiny, purposeful work expansion IF you step forward. Perfect time to actively expand career meaningfully, pursue professional opportunities serving mission, embrace career growth through conscious effort. Professional growth available through initiative. Career opportunity serves destiny IF pursued.',
+    moneyFinances: 'Financial expansion opportunity through initiative! Potential for abundant money growth, meaningful prosperity opportunities supporting purpose, purposeful financial expansion IF you take action. Perfect time to actively expand finances meaningfully, pursue prosperity opportunities serving evolution, embrace financial growth through conscious effort. Money growth available through initiative. Prosperity opportunity serves purpose IF pursued.',
+    predictions: [
+      'Expansion opportunity aligned with your soul purpose appears - initiative required',
+      'Your purposeful action toward growth attracts abundant support and opportunities',
+      'Chance for meaningful expansion perfectly aligned with your mission IF pursued actively',
+      'Growth you initiate consciously becomes catalyst for destined purposeful expansion',
+      'Opportunity to expand toward karmic mission available through your initiative',
+      'Your active faith and optimistic effort serve your soul evolution and destiny',
+      'Learning opportunity aligned with your purpose available through conscious pursuit',
+      'Initiative to grow meaningfully creates abundant expansion serving your mission',
+      'Your active pursuit of purposeful expansion leads to destined opportunities',
+      'Opportunity: soul growth through meaningful expansion and conscious purposeful initiative'
+    ]
+  },
+
+  'Jupiter-South Node-Opposition': {
+    name: 'Jupiter Opposition South Node',
+    frequency: 'Occurs approximately every 12-13 years (same as Jupiter-North Node-Conjunction)',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL EXPANSION DESTINY ALIGNMENT! (This is the SAME as Jupiter-North Node-Conjunction) Your growth opposes old comfortable patterns while perfectly aligning with soul purpose. Expansion and opportunity merge with karmic mission - your growth, faith, and wisdom meant to serve destiny. Past comfortable expansion fully releases as NEW purposeful meaningful growth emerges. Your expansion becomes instrument of soul evolution. Faith in destined path flows naturally now.',
+    loveRelationships: 'Destined love expansion aligned with soul purpose! Romantic growth moves AWAY from familiar patterns TOWARD purposeful authentic connection. Expand love from destiny not comfort, grow relationships serving evolution. Love transforms - old comfortable romantic expansion releases, NEW purposeful meaningful love growth emerges. Fated romantic opportunities happen now - they serve your karmic mission.',
+    familyHome: 'Family expansion aligned with life purpose! Home growth moves AWAY from old patterns TOWARD purposeful family evolution. Family expansion serves collective destiny, domestic growth transforms beyond comfortable limitation. Your family growth becomes purposeful - old familiar home expansion releases, NEW destiny-aligned family growth emerges. Home environment expands through purposeful meaningful evolution.',
+    businessCareer: 'MAJOR CAREER EXPANSION DESTINY ALIGNMENT! Professional growth and career opportunities perfectly aligned with karmic mission. Career expansion moves AWAY from comfortable growth patterns TOWARD purposeful destined professional evolution. Your career growth transforms - expand in destined work, grow beyond familiar career patterns. Fated career opportunities through purposeful meaningful professional expansion.',
+    moneyFinances: 'Financial expansion aligned with purposeful prosperity! Money growth moves AWAY from comfortable patterns TOWARD destiny-aligned abundance thinking. Financial expansion serves soul purpose - prosper authentically, grow beyond familiar limitation. Old comfortable money growth releases - NEW purposeful financial expansion emerges naturally. Prosperity through destiny-aligned meaningful growth.',
+    predictions: [
+      'Major expansion opportunity that IS exactly what your soul purpose requires',
+      'Growth and faith you embrace serve your destiny profoundly and build meaning',
+      'Your purposeful expansion creates powerful momentum toward karmic mission',
+      'What expands meaningfully now turns out to serve your evolution perfectly',
+      'Abundant opportunity or generous growth IS part of your soul\'s destined path',
+      'Higher learning or wisdom you pursue serves your karmic mission profoundly',
+      'Your optimistic purposeful expansion aligned with soul growth and destiny',
+      'Meaningful expansion you embrace now supports your evolutionary purpose',
+      'What you believe and grow toward serves your destined path perfectly',
+      'Rare 12-year expansion cycle perfectly aligned with your soul mission'
+    ]
+  },
+
+  'Jupiter-South Node-Trine': {
+    name: 'Jupiter Trine South Node',
+    frequency: 'Occurs twice approximately every 12-13 years',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Natural comfortable expansion and abundant familiar wisdom! Growth flows easily through past patterns, old beliefs, comfortable opportunities appearing naturally. This feels generous and optimistic naturally - be mindful of comfortable limitation. Opportunity: Enjoy natural abundance while ensuring expansion serves growth, not just comfort. Past expansion wisdom is gift IF it fuels North Node purposeful growth. Natural comfortable growth flows easily - direct it toward evolution, not stagnation.',
+    loveRelationships: 'Natural comfortable romantic expansion and generous familiar love! Past relationship growth patterns and comfortable love expansion flow naturally and abundantly. Opportunity: Appreciate romantic ease while ensuring love expands toward growth, not just comfort. Natural relationship expansion is fine IF it deepens authentic connection toward evolution. Use comfortable love growth to BUILD purposeful intimacy, not maintain pleasant surface.',
+    familyHome: 'Natural comfortable family expansion and abundant familiar domestic growth! Past family patterns and comfortable home expansion flow naturally and generously. Opportunity: Enjoy family ease while directing expansion toward collective evolution. Comfortable home growth serves IF it supports purposeful development. Natural family expansion is fine IF leading family forward toward authentic connection, not keeping everyone stuck.',
+    businessCareer: 'Natural comfortable career expansion and generous familiar professional growth! Past professional patterns and comfortable career expansion flow naturally and abundantly. Opportunity: Your professional mastery flows naturally - use it to DEVELOP destined career direction, not just repeat comfortable work. Natural career expansion serves IF building toward purpose-aligned professional evolution beyond familiar patterns.',
+    moneyFinances: 'Natural comfortable financial expansion and abundant familiar prosperity! Past money patterns and comfortable financial growth flow naturally and generously. Opportunity: Financial wisdom flows naturally - apply it to BUILD purposeful prosperity, not maintain comfortable limitation. Natural money expansion serves IF directed toward evolutionary abundance aligned with soul growth, not just familiar earning.',
+    predictions: [
+      'Past expansion wisdom flows naturally to you - use it to BUILD future purposeful growth',
+      'Your comfortable abundance easily accessible - direct it toward evolutionary expansion',
+      'Familiar growth pattern flows naturally - ensure it serves evolution, not stagnation',
+      'Natural easy expansion is gift IF you consciously direct it toward North Node growth',
+      'Past wisdom about meaning surfaces easily - integrate it while moving toward destiny',
+      'Your natural optimism and faith accessible - apply them to support purposeful evolution',
+      'Comfortable expansion flows easily - direct it consciously toward soul mission',
+      'Natural abundant opportunities available - use them to serve destined growth',
+      'Easy comfortable growth is fine IF directed toward purposeful meaningful evolution',
+      'Your past life expansion gifts naturally accessible - use them to serve destined future'
+    ]
+  },
+
+  'Jupiter-South Node-Sextile': {
+    name: 'Jupiter Sextile South Node',
+    frequency: 'Occurs twice approximately every 12-13 years',
+    duration: '2-3 months',
+    planet1Energy: 'Jupiter represents growth, expansion, optimism, abundance, wisdom, faith, higher learning, and opportunities. It\'s where you grow and find meaning.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Growth opportunity to use past expansion wisdom for evolution! Potential to apply comfortable expansion patterns in NEW purposeful ways, use past wisdom about growth to SERVE North Node development IF you initiate. This supportive aspect rewards conscious application of past abundance. Perfect time to take expansion wisdom and actively apply it toward destined growth. Past growth knowledge serves future evolution IF used consciously and directed forward.',
+    loveRelationships: 'Love opportunity to use past romantic expansion wisdom! Potential to apply comfortable relationship growth in NEW purposeful ways, use past love wisdom to SERVE evolutionary partnership IF you initiate. Perfect time to take relationship expansion knowledge and actively apply it to deeper authentic connection. Past romantic growth wisdom serves present love evolution IF used consciously toward North Node.',
+    familyHome: 'Family opportunity to apply past domestic expansion wisdom! Potential to use comfortable family growth in NEW purposeful ways, direct past home wisdom toward evolutionary family development IF you take action. Perfect time to take family expansion knowledge and actively apply it to purposeful home environment. Past domestic growth serves present family evolution IF directed consciously toward collective mission.',
+    businessCareer: 'Career opportunity to apply past professional expansion wisdom! Potential to use comfortable career growth in NEW purpose-aligned ways, direct professional wisdom toward evolutionary work IF you step forward. Perfect time to take career expansion mastery and actively apply it to destined professional path. Past professional growth serves future career purpose IF used consciously toward mission.',
+    moneyFinances: 'Financial opportunity to use past prosperity expansion wisdom! Potential to apply comfortable money growth in NEW purpose-aligned ways, direct past financial wisdom toward evolutionary abundance IF pursued actively. Perfect time to take prosperity knowledge and actively apply it to purpose-serving financial expansion. Past money growth serves future prosperity IF directed consciously toward soul evolution.',
+    predictions: [
+      'Past expansion knowledge becomes resource for destined growth IF applied forward actively',
+      'Your comfortable abundance actively directed toward new purpose creates meaningful success',
+      'Opportunity to use what you know about growth in NEW evolutionary ways appears',
+      'Familiar expansion wisdom applied to purposeful development creates positive impact',
+      'Past growth experience you actively share in service of evolution helps collective awakening',
+      'Your initiative to apply old abundance to new challenge creates breakthrough',
+      'Comfortable expansion skill becomes foundation for NEW purposeful meaningful growth',
+      'Past wisdom actively used to BUILD future expansion creates destined progress',
+      'Your familiar optimism consciously directed toward evolution serves soul mission perfectly',
+      'Opportunity: Apply past growth wisdom and comfortable abundance to serve North Node destiny'
+    ]
+  },
+
   // SATURN-NORTH NODE ASPECTS (Conjunction only - approximately 18-19 year cycle)
 
   'Saturn-North Node-Conjunction': {
@@ -6002,6 +6152,156 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'Old responsibility or familiar structure can inform BUT not limit your destined future',
       'What you built in past SUPPORTS but shouldn\'t constrain what you need to build forward',
       'Release limiting comfortable structures to build NEW disciplined frameworks serving evolution'
+    ]
+  },
+
+  'Saturn-North Node-Opposition': {
+    name: 'Saturn Opposition North Node',
+    frequency: 'Occurs approximately every 18-19 years (same as Saturn-South Node-Conjunction)',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL MASTERY DESTINY ALIGNMENT! (This is the SAME as Saturn-South Node-Conjunction) Your discipline opposes old patterns while accessing structured past mastery. This feels like destined responsibility - mastery flows through familiar structures while serving evolution. Opportunity: Use past life discipline and comfortable structures to BUILD North Node growth toward destiny. Your old mastery becomes foundation for NEW purposeful responsibility. Major 18-year cycle for conscious karmic evolution.',
+    loveRelationships: 'Destined love commitment through past wisdom! Relationship responsibility feels mature and natural while serving soul purpose. Past relationship discipline becomes foundation for NEW authentic purposeful partnership. Comfortable mature love wisdom SUPPORTS evolutionary commitment growth. Love commitment builds from familiar foundation toward destined authentic vulnerable mature partnership. Relationship discipline serves evolution.',
+    familyHome: 'Family responsibility through past domestic mastery! Home discipline feels structured while serving collective mission. Past family structures become foundation for NEW purposeful family evolution. Comfortable mature family wisdom SUPPORTS evolutionary domestic growth. Family responsibility builds from familiar foundation toward destined authentic connection. Domestic discipline serves collective purpose.',
+    businessCareer: 'MAJOR CAREER MASTERY through professional discipline! Career responsibility feels structured while serving destined work. Past professional discipline becomes foundation for NEW purposeful career evolution. Comfortable mature career wisdom SUPPORTS evolutionary professional growth. Career mastery builds from familiar foundation toward destined authentic work. Professional discipline serves soul mission.',
+    moneyFinances: 'Financial responsibility through past prosperity mastery! Money discipline feels structured while serving purposeful prosperity. Past financial structures become foundation for NEW evolutionary abundance. Comfortable mature money wisdom SUPPORTS purposeful financial growth. Prosperity responsibility builds from familiar foundation toward destined authentic abundance. Financial discipline serves soul evolution.',
+    predictions: [
+      'Major responsibility opportunity that draws on past mastery while serving your destiny',
+      'Structured discipline feels natural because it builds on familiar foundations toward purpose',
+      'Past life knowledge about mastery becomes foundation for destined responsibility',
+      'Your comfortable discipline and maturity naturally SUPPORT purposeful evolutionary growth',
+      'Karmic lesson from past serves your mission perfectly through conscious application',
+      'What you mastered through experience fuels NEW purposeful meaningful responsibility',
+      'Professional or personal discipline builds on familiar wisdom toward destined purpose',
+      'Past mastery patterns become foundation for evolutionary purposeful achievement',
+      'Your mature responsibility naturally aligns with soul mission and destiny path',
+      'Rare 18-year cycle: past discipline perfectly supports destined future mastery'
+    ]
+  },
+
+  'Saturn-North Node-Trine': {
+    name: 'Saturn Trine North Node',
+    frequency: 'Occurs twice approximately every 18-19 years',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Natural purposeful mastery aligned with soul purpose! Discipline and responsibility flow effortlessly toward your destiny. This beautiful trine brings structured purposeful effort naturally, mature commitment supporting mission easily, karmic lessons flowing naturally. What requires discipline naturally serves evolution. Perfect time for effortless purposeful mastery, natural building supporting destiny, accepting responsibility that appears naturally. Structure feels natural and purposeful. Maturity serves purpose naturally. Natural karmic growth cycle.',
+    loveRelationships: 'Natural mature love commitment serving purpose! Relationship responsibility and committed partnership flow naturally toward authentic depth. Perfect time for effortless meaningful relationship commitment, natural mature love supporting evolution, responsible partnership appearing naturally. Love commitment flows naturally in purposeful directions. Relationship maturity flows naturally. Partnerships mature toward authentic connection naturally and responsibly.',
+    familyHome: 'Natural family responsibility and home mastery aligned with purpose! Domestic discipline and structured family commitment appear naturally and serve mission. Perfect time for effortless meaningful home building, natural family responsibility supporting evolution, structured domestic effort flowing naturally. Home life builds naturally and purposefully. Family maturity flows naturally. Natural purposeful domestic structure.',
+    businessCareer: 'Natural career mastery aligned with destiny! Professional discipline and career responsibility flow naturally toward mission. Excellent time for effortless meaningful career building, natural mastery supporting destined work, structured professional commitment appearing naturally. Career builds naturally and purposefully. Business discipline flows naturally. Natural purposeful professional mastery.',
+    moneyFinances: 'Natural structured financial mastery serving purpose! Money responsibility and prosperity discipline flow naturally toward mission. Perfect time for effortless meaningful financial building, natural structured prosperity supporting evolution, responsible money management appearing naturally. Financial discipline flows naturally. Prosperity builds naturally in purposeful directions. Natural structured destined financial growth.',
+    predictions: [
+      'Meaningful responsibility flows to you naturally and serves your soul purpose',
+      'What naturally requires discipline in your life turns out to perfectly support evolution',
+      'Structured opportunity appears effortlessly and aligns with your karmic mission',
+      'Your natural maturity and responsibility attract purposeful achievement and destined mastery',
+      'Karmic lesson that naturally appears serves your destiny profoundly',
+      'What you naturally commit to and build supports your soul growth perfectly',
+      'Disciplined effort or structured commitment comes naturally and serves your mission',
+      'Natural responsibility in career or personal life flows toward your destined path',
+      'Your maturity naturally creates solid foundation toward purposeful evolution',
+      'Perfect natural flow of meaningful discipline, structured responsibility, destined mastery'
+    ]
+  },
+
+  'Saturn-North Node-Sextile': {
+    name: 'Saturn Sextile North Node',
+    frequency: 'Occurs twice approximately every 18-19 years',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Mastery opportunity aligned with soul purpose through initiative! Potential for meaningful discipline, structured responsibility supporting mission, purposeful commitment serving destiny IF you take action. This supportive sextile rewards initiative with lasting achievement. Perfect time for actively building purposeful structures, accepting responsibility through effort, committing meaningfully toward destiny through conscious choice. Opportunity requires discipline. Mastery potential aligned with purpose. Meaningful structure available.',
+    loveRelationships: 'Love commitment opportunity through initiative! Potential for mature relationship responsibility, meaningful partnership commitment supporting evolution, purposeful love discipline IF you step forward. Perfect time to actively commit to love meaningfully, accept relationship responsibility serving growth, build partnership through conscious effort. Love mastery available through initiative. Relationship responsibility serves purpose IF pursued.',
+    familyHome: 'Family responsibility opportunity through initiative! Potential for meaningful home building, structured family commitment supporting mission, purposeful domestic discipline IF you take action. Perfect time to actively build home meaningfully, accept family responsibility serving evolution, create domestic structure through conscious effort. Family mastery available through initiative. Home responsibility serves purpose IF pursued.',
+    businessCareer: 'Career mastery opportunity through initiative! Potential for structured professional responsibility, meaningful career commitment supporting destiny, purposeful work discipline IF you step forward. Perfect time to actively build career meaningfully, accept professional responsibility serving mission, create career structure through conscious effort. Professional mastery available through initiative. Career responsibility serves destiny IF pursued.',
+    moneyFinances: 'Financial responsibility opportunity through initiative! Potential for structured money management, meaningful prosperity discipline supporting purpose, purposeful financial commitment IF you take action. Perfect time to actively build finances meaningfully, accept money responsibility serving evolution, create financial structure through conscious effort. Money mastery available through initiative. Prosperity responsibility serves purpose IF pursued.',
+    predictions: [
+      'Responsibility opportunity aligned with your soul purpose appears - initiative required',
+      'Your purposeful commitment and discipline attract lasting support and achievement',
+      'Chance for meaningful mastery perfectly aligned with your mission IF pursued actively',
+      'Structure you build consciously becomes foundation for destined purposeful achievement',
+      'Opportunity to commit to karmic mission available through your mature initiative',
+      'Your active discipline and responsible effort serve your soul evolution and destiny',
+      'Karmic lesson aligned with your purpose available through conscious acceptance',
+      'Initiative to build meaningfully creates lasting structure serving your mission',
+      'Your active acceptance of purposeful responsibility leads to destined mastery',
+      'Opportunity: soul growth through meaningful discipline and conscious purposeful commitment'
+    ]
+  },
+
+  'Saturn-South Node-Opposition': {
+    name: 'Saturn Opposition South Node',
+    frequency: 'Occurs approximately every 18-19 years (same as Saturn-North Node-Conjunction)',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL MASTERY DESTINY ALIGNMENT! (This is the SAME as Saturn-North Node-Conjunction) Your discipline opposes old comfortable structures while perfectly aligning with soul purpose. Responsibility and mastery merge with karmic mission - your discipline, structure, and maturity meant to serve destiny. Past comfortable responsibility fully releases as NEW purposeful meaningful mastery emerges. Your discipline becomes instrument of soul evolution. Commitment to destined path flows naturally now.',
+    loveRelationships: 'Destined love responsibility aligned with soul purpose! Relationship commitment moves AWAY from familiar patterns TOWARD purposeful authentic mature partnership. Commit to love from destiny not comfort, build relationships serving evolution. Love transforms - old comfortable relationship structures release, NEW purposeful meaningful commitment emerges. Fated partnership responsibility happens now - serves your karmic mission.',
+    familyHome: 'Family responsibility aligned with life purpose! Home discipline moves AWAY from old patterns TOWARD purposeful family evolution. Family structure serves collective destiny, domestic responsibility transforms beyond comfortable limitation. Your family commitment becomes purposeful - old familiar home structures release, NEW destiny-aligned family responsibility emerges. Home environment builds through purposeful meaningful evolution.',
+    businessCareer: 'MAJOR CAREER MASTERY DESTINY ALIGNMENT! Professional discipline and career responsibility perfectly aligned with karmic mission. Career structure moves AWAY from comfortable patterns TOWARD purposeful destined professional evolution. Your career mastery transforms - build in destined work, commit beyond familiar career patterns. Fated career responsibility through purposeful meaningful professional discipline.',
+    moneyFinances: 'Financial responsibility aligned with purposeful prosperity! Money discipline moves AWAY from comfortable patterns TOWARD destiny-aligned abundance structure. Financial responsibility serves soul purpose - build prosperity authentically, commit beyond familiar limitation. Old comfortable money structures release - NEW purposeful financial responsibility emerges naturally. Prosperity through destiny-aligned meaningful discipline.',
+    predictions: [
+      'Major responsibility that IS exactly what your soul purpose requires',
+      'Discipline and maturity you embrace serve your destiny profoundly and build mastery',
+      'Your purposeful commitment creates lasting foundation toward karmic mission',
+      'What requires serious discipline now turns out to serve your evolution perfectly',
+      'Karmic responsibility or structured commitment IS part of your soul\'s destined path',
+      'Limitation you face teaches lesson essential for your purposeful achievement',
+      'Your disciplined purposeful effort aligned with soul growth and destiny',
+      'Mature responsibility you accept now supports your evolutionary purpose',
+      'What you build through discipline serves your destined path perfectly',
+      'Rare 18-year mastery cycle perfectly aligned with your soul mission'
+    ]
+  },
+
+  'Saturn-South Node-Trine': {
+    name: 'Saturn Trine South Node',
+    frequency: 'Occurs twice approximately every 18-19 years',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Natural comfortable mastery and structured familiar discipline! Responsibility flows easily through past patterns, old structures, comfortable commitment appearing naturally. This feels mature and secure naturally - be mindful of limiting structures. Opportunity: Enjoy natural discipline while ensuring structures serve growth, not just comfort. Past mastery wisdom is gift IF it builds North Node purposeful growth. Natural comfortable responsibility flows easily - direct it toward evolution, not stagnation.',
+    loveRelationships: 'Natural comfortable relationship commitment and mature familiar love! Past love responsibility and comfortable partnership discipline flow naturally and securely. Opportunity: Appreciate relationship stability while ensuring commitment serves growth, not just comfort. Natural relationship responsibility is fine IF it deepens authentic connection toward evolution. Use comfortable mature love to BUILD purposeful intimacy, not maintain safe surface.',
+    familyHome: 'Natural comfortable family responsibility and structured familiar domestic life! Past family discipline and comfortable home structures flow naturally and securely. Opportunity: Enjoy family stability while directing responsibility toward collective evolution. Comfortable home discipline serves IF it supports purposeful development. Natural family responsibility is fine IF leading family forward toward authentic connection, not keeping everyone stuck.',
+    businessCareer: 'Natural comfortable career mastery and structured familiar professional discipline! Past professional responsibility and comfortable career structures flow naturally and securely. Opportunity: Your professional mastery flows naturally - use it to DEVELOP destined career direction, not just repeat comfortable work. Natural career responsibility serves IF building toward purpose-aligned professional evolution beyond familiar patterns.',
+    moneyFinances: 'Natural comfortable financial responsibility and structured familiar prosperity! Past money discipline and comfortable financial structures flow naturally and securely. Opportunity: Financial discipline flows naturally - apply it to BUILD purposeful prosperity, not maintain comfortable limitation. Natural money responsibility serves IF directed toward evolutionary abundance aligned with soul growth, not just familiar security.',
+    predictions: [
+      'Past mastery wisdom flows naturally to you - use it to BUILD future purposeful structure',
+      'Your comfortable discipline easily accessible - direct it toward evolutionary responsibility',
+      'Familiar responsibility pattern flows naturally - ensure it serves evolution, not stagnation',
+      'Natural easy mastery is gift IF you consciously direct it toward North Node growth',
+      'Past discipline surfaces easily - integrate it while moving forward toward destiny',
+      'Your natural maturity and structure accessible - apply them to support purposeful evolution',
+      'Comfortable responsibility flows easily - direct it consciously toward soul mission',
+      'Natural structured commitment available - use it to serve destined growth',
+      'Easy comfortable discipline is fine IF directed toward purposeful meaningful evolution',
+      'Your past life mastery gifts naturally accessible - use them to serve destined future'
+    ]
+  },
+
+  'Saturn-South Node-Sextile': {
+    name: 'Saturn Sextile South Node',
+    frequency: 'Occurs twice approximately every 18-19 years',
+    duration: '3-4 months',
+    planet1Energy: 'Saturn represents discipline, structure, responsibility, mastery, time, limitations, maturity, and karmic lessons. It\'s where you build lasting achievements through effort.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Mastery opportunity to use past discipline wisdom for evolution! Potential to apply comfortable responsibility in NEW purposeful ways, use past mastery to SERVE North Node development IF you initiate. This supportive aspect rewards conscious application of past discipline. Perfect time to take mastery wisdom and actively apply it toward destined growth. Past responsibility knowledge serves future evolution IF used consciously and directed forward.',
+    loveRelationships: 'Love opportunity to use past relationship responsibility wisdom! Potential to apply comfortable commitment in NEW purposeful ways, use past mature love to SERVE evolutionary partnership IF you initiate. Perfect time to take relationship discipline knowledge and actively apply it to deeper authentic connection. Past love responsibility wisdom serves present partnership evolution IF used consciously toward North Node.',
+    familyHome: 'Family opportunity to apply past domestic responsibility wisdom! Potential to use comfortable family discipline in NEW purposeful ways, direct past home mastery toward evolutionary family development IF you take action. Perfect time to take family responsibility knowledge and actively apply it to purposeful home environment. Past domestic discipline serves present family evolution IF directed consciously toward collective mission.',
+    businessCareer: 'Career opportunity to apply past professional mastery wisdom! Potential to use comfortable career discipline in NEW purpose-aligned ways, direct professional responsibility toward evolutionary work IF you step forward. Perfect time to take career mastery and actively apply it to destined professional path. Past professional discipline serves future career purpose IF used consciously toward mission.',
+    moneyFinances: 'Financial opportunity to use past prosperity responsibility wisdom! Potential to apply comfortable money discipline in NEW purpose-aligned ways, direct past financial mastery toward evolutionary abundance IF pursued actively. Perfect time to take prosperity responsibility and actively apply it to purpose-serving financial building. Past money discipline serves future prosperity IF directed consciously toward soul evolution.',
+    predictions: [
+      'Past mastery knowledge becomes resource for destined growth IF applied forward actively',
+      'Your comfortable discipline actively directed toward new purpose creates lasting success',
+      'Opportunity to use what you mastered in NEW evolutionary ways appears',
+      'Familiar responsibility wisdom applied to purposeful building creates positive impact',
+      'Past discipline experience you actively share in service of evolution helps collective awakening',
+      'Your initiative to apply old mastery to new challenge creates breakthrough',
+      'Comfortable responsibility skill becomes foundation for NEW purposeful meaningful commitment',
+      'Past discipline actively used to BUILD future structure creates destined progress',
+      'Your familiar maturity consciously directed toward evolution serves soul mission perfectly',
+      'Opportunity: Apply past mastery wisdom and comfortable discipline to serve North Node destiny'
     ]
   },
 
@@ -6057,6 +6357,156 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  'Uranus-North Node-Opposition': {
+    name: 'Uranus Opposition North Node',
+    frequency: 'Occurs approximately once in a lifetime (every 84 years, same as Uranus-South Node-Conjunction)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL REVOLUTIONARY DESTINY ALIGNMENT! (This is the SAME as Uranus-South Node-Conjunction) Your awakening opposes old patterns while accessing breakthrough past insights. This feels like destined liberation - freedom flows through releasing familiar patterns while serving evolution. Opportunity: Use sudden insights about past to LIBERATE toward North Node growth. Your old breakthroughs become catalyst for NEW purposeful authentic freedom. Rare once-in-lifetime cycle for revolutionary conscious evolution.',
+    loveRelationships: 'Destined love liberation through past awakening! Romantic breakthrough feels sudden and natural while serving soul purpose. Past relationship insights become catalyst for NEW authentic purposeful love. Sudden liberation from old patterns SUPPORTS evolutionary partnership growth. Love revolutionizes from familiar foundation toward destined authentic vulnerable unconventional depth. Relationship freedom serves evolution.',
+    familyHome: 'Family awakening through past domestic breakthrough! Home liberation feels revolutionary while serving collective mission. Past family insights become catalyst for NEW purposeful family evolution. Sudden release from old patterns SUPPORTS evolutionary domestic growth. Family revolutionizes from familiar foundation toward destined authentic unconventional connection. Domestic freedom serves collective purpose.',
+    businessCareer: 'MAJOR CAREER REVOLUTION through professional awakening! Career breakthrough feels sudden while serving destined work. Past professional insights become catalyst for NEW purposeful career evolution. Sudden liberation from old patterns SUPPORTS evolutionary professional growth. Career revolutionizes from familiar foundation toward destined authentic unconventional work. Professional freedom serves soul mission.',
+    moneyFinances: 'Financial liberation through past prosperity breakthrough! Money revolution feels sudden while serving purposeful prosperity. Past financial insights become catalyst for NEW evolutionary abundance. Sudden release from old patterns SUPPORTS purposeful financial growth. Prosperity revolutionizes from familiar foundation toward destined authentic unconventional abundance. Financial freedom serves soul evolution.',
+    predictions: [
+      'Major liberation opportunity that draws on past awakening while serving your destiny',
+      'Revolutionary breakthrough feels sudden because it releases familiar patterns toward purpose',
+      'Past life knowledge about freedom becomes catalyst for destined liberation',
+      'Your sudden insights and awakening naturally SUPPORT purposeful evolutionary growth',
+      'Breakthrough from past serves your karmic mission perfectly through conscious release',
+      'What you suddenly liberate from fuels NEW purposeful meaningful authentic freedom',
+      'Professional or personal revolution builds on past insights toward destined purpose',
+      'Past awakening patterns become catalyst for evolutionary purposeful breakthrough',
+      'Your revolutionary freedom naturally aligns with soul mission and destiny path',
+      'Rare once-in-lifetime cycle: past liberation perfectly supports destined future awakening'
+    ]
+  },
+
+  'Uranus-North Node-Trine': {
+    name: 'Uranus Trine North Node',
+    frequency: 'Occurs twice approximately every 84 years (rare)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Natural revolutionary awakening aligned with soul purpose! Liberation and breakthrough flow effortlessly toward your destiny. This beautiful rare trine brings authentic purposeful freedom naturally, revolutionary changes supporting mission easily, sudden insights flowing naturally. What liberates naturally serves evolution. Perfect time for effortless purposeful awakening, natural breakthrough supporting destiny, authentic freedom that appears naturally. Revolution feels natural and purposeful. Authenticity serves purpose naturally. Natural destined liberation cycle.',
+    loveRelationships: 'Natural revolutionary love liberation serving purpose! Romantic breakthrough and authentic unconventional partnership flow naturally toward soul depth. Perfect time for effortless meaningful relationship revolution, natural authentic love supporting evolution, sudden romantic freedom appearing naturally. Love liberates naturally in purposeful directions. Romantic authenticity flows naturally. Relationships revolutionize toward unconventional connection naturally and authentically.',
+    familyHome: 'Natural family liberation and home revolution aligned with purpose! Domestic breakthrough and authentic unconventional family freedom appear naturally and serve mission. Perfect time for effortless meaningful home awakening, natural family revolution supporting evolution, sudden domestic liberation flowing naturally. Home life revolutionizes naturally and purposefully. Family authenticity flows naturally. Natural purposeful domestic breakthrough.',
+    businessCareer: 'Natural career revolution aligned with destiny! Professional breakthrough and authentic unconventional work flow naturally toward mission. Excellent time for effortless meaningful career liberation, natural awakening supporting destined work, sudden professional freedom appearing naturally. Career revolutionizes naturally and purposefully. Business authenticity flows naturally. Natural purposeful professional breakthrough.',
+    moneyFinances: 'Natural revolutionary financial liberation serving purpose! Money breakthrough and unconventional prosperity flow naturally toward mission. Perfect time for effortless meaningful financial revolution, natural authentic abundance supporting evolution, sudden money freedom appearing naturally. Financial authenticity flows naturally. Prosperity revolutionizes naturally in purposeful directions. Natural authentic destined financial breakthrough.',
+    predictions: [
+      'Meaningful breakthrough flows to you naturally and serves your soul purpose',
+      'What naturally liberates in your life turns out to perfectly support evolution',
+      'Revolutionary opportunity appears effortlessly and aligns with your karmic mission',
+      'Your natural authenticity and freedom attract purposeful awakening and destined breakthrough',
+      'Sudden insight that naturally appears serves your destiny profoundly',
+      'What you naturally revolutionize and liberate supports your soul growth perfectly',
+      'Authentic change or sudden freedom comes naturally and serves your mission',
+      'Natural breakthrough in career or personal life flows toward your destined path',
+      'Your authenticity naturally creates revolutionary momentum toward purposeful evolution',
+      'Perfect natural flow of meaningful liberation, authentic freedom, destined awakening'
+    ]
+  },
+
+  'Uranus-North Node-Sextile': {
+    name: 'Uranus Sextile North Node',
+    frequency: 'Occurs twice approximately every 84 years (rare)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Revolutionary opportunity aligned with soul purpose through initiative! Potential for meaningful breakthrough, authentic liberation supporting mission, purposeful awakening serving destiny IF you take action. This rare supportive sextile rewards initiative with revolutionary freedom. Perfect time for actively pursuing purposeful liberation, embracing authentic change through effort, revolutionizing meaningfully toward destiny through conscious choice. Opportunity requires courage. Breakthrough potential aligned with purpose. Meaningful authentic freedom available.',
+    loveRelationships: 'Love liberation opportunity through initiative! Potential for revolutionary romantic breakthrough, meaningful authentic unconventional partnership supporting evolution, purposeful love freedom IF you step forward. Perfect time to actively revolutionize love meaningfully, pursue authentic romantic opportunities serving growth, embrace relationship liberation through conscious effort. Love breakthrough available through initiative. Romantic authenticity serves purpose IF pursued.',
+    familyHome: 'Family revolution opportunity through initiative! Potential for meaningful home breakthrough, authentic family liberation supporting mission, purposeful domestic awakening IF you take action. Perfect time to actively liberate home meaningfully, pursue family freedom serving evolution, embrace domestic revolution through conscious effort. Family breakthrough available through initiative. Home authenticity serves purpose IF pursued.',
+    businessCareer: 'Career revolution opportunity through initiative! Potential for revolutionary professional breakthrough, meaningful authentic unconventional work supporting destiny, purposeful career liberation IF you step forward. Perfect time to actively revolutionize career meaningfully, pursue professional freedom serving mission, embrace career breakthrough through conscious effort. Professional awakening available through initiative. Career authenticity serves destiny IF pursued.',
+    moneyFinances: 'Financial liberation opportunity through initiative! Potential for revolutionary money breakthrough, meaningful authentic unconventional prosperity supporting purpose, purposeful financial freedom IF you take action. Perfect time to actively revolutionize finances meaningfully, pursue prosperity freedom serving evolution, embrace financial breakthrough through conscious effort. Money awakening available through initiative. Prosperity authenticity serves purpose IF pursued.',
+    predictions: [
+      'Revolutionary opportunity aligned with your soul purpose appears - initiative required',
+      'Your purposeful action toward liberation attracts authentic support and breakthrough',
+      'Chance for meaningful awakening perfectly aligned with your mission IF pursued actively',
+      'Freedom you initiate consciously becomes catalyst for destined purposeful revolution',
+      'Opportunity to break free toward karmic mission available through your courage',
+      'Your active authenticity and liberating effort serve your soul evolution and destiny',
+      'Breakthrough opportunity aligned with your purpose available through conscious risk',
+      'Initiative to revolutionize meaningfully creates authentic freedom serving your mission',
+      'Your active pursuit of purposeful liberation leads to destined awakening',
+      'Opportunity: soul growth through meaningful revolution and conscious purposeful breakthrough'
+    ]
+  },
+
+  'Uranus-South Node-Opposition': {
+    name: 'Uranus Opposition South Node',
+    frequency: 'Occurs approximately once in a lifetime (every 84 years, same as Uranus-North Node-Conjunction)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL REVOLUTIONARY DESTINY ALIGNMENT! (This is the SAME as Uranus-North Node-Conjunction) Your awakening opposes old comfortable freedom while perfectly aligning with soul purpose. Liberation and breakthrough merge with karmic mission - your revolution, authenticity, and freedom meant to serve destiny. Past comfortable rebellion fully releases as NEW purposeful meaningful awakening emerges. Your liberation becomes instrument of soul evolution. Revolutionary alignment with destined path flows naturally now.',
+    loveRelationships: 'Destined love revolution aligned with soul purpose! Romantic liberation moves AWAY from familiar patterns TOWARD purposeful authentic unconventional connection. Revolutionize love from destiny not comfort, liberate relationships serving evolution. Love transforms - old comfortable romantic freedom releases, NEW purposeful meaningful liberation emerges. Fated romantic breakthrough happens now - serves your karmic mission.',
+    familyHome: 'Family awakening aligned with life purpose! Home liberation moves AWAY from old patterns TOWARD purposeful family revolution. Family freedom serves collective destiny, domestic breakthrough transforms beyond comfortable limitation. Your family awakening becomes purposeful - old familiar home rebellion releases, NEW destiny-aligned family liberation emerges. Home environment revolutionizes through purposeful meaningful evolution.',
+    businessCareer: 'MAJOR CAREER REVOLUTION DESTINY ALIGNMENT! Professional awakening and career liberation perfectly aligned with karmic mission. Career breakthrough moves AWAY from comfortable freedom TOWARD purposeful destined professional evolution. Your career revolution transforms - liberate in destined work, break free beyond familiar career patterns. Fated career awakening through purposeful meaningful professional breakthrough.',
+    moneyFinances: 'Financial liberation aligned with purposeful prosperity! Money revolution moves AWAY from comfortable patterns TOWARD destiny-aligned abundance breakthrough. Financial freedom serves soul purpose - prosper authentically, liberate beyond familiar limitation. Old comfortable money rebellion releases - NEW purposeful financial awakening emerges naturally. Prosperity through destiny-aligned meaningful revolution.',
+    predictions: [
+      'Major revolutionary breakthrough that IS exactly what your soul purpose requires',
+      'Liberation and authenticity you embrace serve your destiny profoundly and create awakening',
+      'Your purposeful revolution creates sudden momentum toward karmic mission',
+      'What liberates meaningfully now turns out to serve your evolution perfectly',
+      'Sudden breakthrough or revolutionary freedom IS part of your soul\'s destined path',
+      'Awakening or authentic change you embrace serves your karmic mission profoundly',
+      'Your revolutionary purposeful liberation aligned with soul growth and destiny',
+      'Meaningful breakthrough you embrace now supports your evolutionary purpose',
+      'What you liberate toward serves your destined path perfectly',
+      'Rare once-in-lifetime revolutionary cycle perfectly aligned with your soul mission'
+    ]
+  },
+
+  'Uranus-South Node-Trine': {
+    name: 'Uranus Trine South Node',
+    frequency: 'Occurs twice approximately every 84 years (rare)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Natural comfortable awakening and revolutionary familiar freedom! Liberation flows easily through past patterns, old rebellions, comfortable breakthroughs appearing naturally. This feels authentic and free naturally - be mindful of comfortable limitation. Opportunity: Enjoy natural freedom while ensuring revolution serves growth, not just comfort. Past awakening wisdom is gift IF it fuels North Node purposeful breakthrough. Natural comfortable liberation flows easily - direct it toward evolution, not stagnation.',
+    loveRelationships: 'Natural comfortable romantic revolution and authentic familiar love freedom! Past love liberation and comfortable unconventional relationship flow naturally and authentically. Opportunity: Appreciate romantic freedom while ensuring liberation serves growth, not just comfort. Natural relationship revolution is fine IF it deepens authentic connection toward evolution. Use comfortable authentic love to BUILD purposeful unconventional intimacy, not maintain rebellious surface.',
+    familyHome: 'Natural comfortable family awakening and revolutionary familiar domestic freedom! Past family liberation and comfortable unconventional home flow naturally and authentically. Opportunity: Enjoy family freedom while directing revolution toward collective evolution. Comfortable home breakthrough serves IF it supports purposeful development. Natural family liberation is fine IF leading family forward toward authentic connection, not keeping everyone stuck in rebellion.',
+    businessCareer: 'Natural comfortable career revolution and authentic familiar professional freedom! Past professional liberation and comfortable unconventional career flow naturally and authentically. Opportunity: Your professional awakening flows naturally - use it to DEVELOP destined career direction, not just repeat comfortable rebellion. Natural career revolution serves IF building toward purpose-aligned professional evolution beyond familiar patterns.',
+    moneyFinances: 'Natural comfortable financial revolution and authentic familiar prosperity freedom! Past money liberation and comfortable unconventional financial flow naturally and authentically. Opportunity: Financial freedom flows naturally - apply it to BUILD purposeful prosperity, not maintain comfortable limitation. Natural money revolution serves IF directed toward evolutionary abundance aligned with soul growth, not just familiar rebellion.',
+    predictions: [
+      'Past awakening wisdom flows naturally to you - use it to BUILD future purposeful revolution',
+      'Your comfortable freedom easily accessible - direct it toward evolutionary liberation',
+      'Familiar breakthrough pattern flows naturally - ensure it serves evolution, not stagnation',
+      'Natural easy liberation is gift IF you consciously direct it toward North Node growth',
+      'Past revolution surfaces easily - integrate it while moving forward toward destiny',
+      'Your natural authenticity and freedom accessible - apply them to support purposeful evolution',
+      'Comfortable liberation flows easily - direct it consciously toward soul mission',
+      'Natural revolutionary change available - use it to serve destined growth',
+      'Easy comfortable freedom is fine IF directed toward purposeful meaningful evolution',
+      'Your past life awakening gifts naturally accessible - use them to serve destined future'
+    ]
+  },
+
+  'Uranus-South Node-Sextile': {
+    name: 'Uranus Sextile South Node',
+    frequency: 'Occurs twice approximately every 84 years (rare)',
+    duration: '6-12 months',
+    planet1Energy: 'Uranus represents revolution, awakening, liberation, breakthrough, innovation, authenticity, sudden change, and freedom. It\'s where you break free and express unique genius.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Revolutionary opportunity to use past awakening wisdom for evolution! Potential to apply comfortable freedom in NEW purposeful ways, use past breakthrough to SERVE North Node development IF you initiate. This rare supportive aspect rewards conscious application of past liberation. Perfect time to take awakening wisdom and actively apply it toward destined growth. Past revolution knowledge serves future evolution IF used consciously and directed forward.',
+    loveRelationships: 'Love opportunity to use past romantic liberation wisdom! Potential to apply comfortable relationship freedom in NEW purposeful ways, use past authentic love to SERVE evolutionary partnership IF you initiate. Perfect time to take relationship revolution knowledge and actively apply it to deeper authentic connection. Past love liberation wisdom serves present partnership evolution IF used consciously toward North Node.',
+    familyHome: 'Family opportunity to apply past domestic awakening wisdom! Potential to use comfortable family freedom in NEW purposeful ways, direct past home revolution toward evolutionary family development IF you take action. Perfect time to take family liberation knowledge and actively apply it to purposeful home environment. Past domestic breakthrough serves present family evolution IF directed consciously toward collective mission.',
+    businessCareer: 'Career opportunity to apply past professional revolution wisdom! Potential to use comfortable career freedom in NEW purpose-aligned ways, direct professional awakening toward evolutionary work IF you step forward. Perfect time to take career liberation and actively apply it to destined professional path. Past professional breakthrough serves future career purpose IF used consciously toward mission.',
+    moneyFinances: 'Financial opportunity to use past prosperity revolution wisdom! Potential to apply comfortable money freedom in NEW purpose-aligned ways, direct past financial liberation toward evolutionary abundance IF pursued actively. Perfect time to take prosperity breakthrough and actively apply it to purpose-serving financial revolution. Past money freedom serves future prosperity IF directed consciously toward soul evolution.',
+    predictions: [
+      'Past awakening knowledge becomes resource for destined growth IF applied forward actively',
+      'Your comfortable freedom actively directed toward new purpose creates revolutionary success',
+      'Opportunity to use what you liberated in NEW evolutionary ways appears',
+      'Familiar breakthrough wisdom applied to purposeful revolution creates positive impact',
+      'Past liberation experience you actively share in service of evolution helps collective awakening',
+      'Your initiative to apply old freedom to new challenge creates breakthrough',
+      'Comfortable revolutionary skill becomes foundation for NEW purposeful meaningful liberation',
+      'Past awakening actively used to BUILD future breakthrough creates destined progress',
+      'Your familiar authenticity consciously directed toward evolution serves soul mission perfectly',
+      'Opportunity: Apply past revolution wisdom and comfortable freedom to serve North Node destiny'
+    ]
+  },
+
   // NEPTUNE-NORTH NODE ASPECTS (Conjunction only - approximately every 164 years)
 
   'Neptune-North Node-Conjunction': {
@@ -6109,6 +6559,156 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
     ]
   },
 
+  'Neptune-North Node-Opposition': {
+    name: 'Neptune Opposition North Node',
+    frequency: 'Occurs approximately once every 164 years (multi-generational, same as Neptune-South Node-Conjunction)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL SPIRITUAL DESTINY ALIGNMENT! (This is the SAME as Neptune-South Node-Conjunction) Your spirituality opposes old patterns while accessing mystical past wisdom. This feels like destined transcendence - divine connection flows through discerning familiar spiritual patterns while serving evolution. Opportunity: Use past life spiritual wisdom with DISCERNMENT to fuel North Node growth toward authentic destiny. Your old mystical wisdom becomes foundation for NEW purposeful divine connection requiring discernment. Rare multi-generational cycle for conscious spiritual evolution.',
+    loveRelationships: 'Destined soul-level love through past spiritual wisdom! Romantic transcendence feels mystical and natural while serving soul purpose with discernment. Past spiritual relationship wisdom becomes foundation for NEW authentic purposeful soul love. Comfortable mystical love wisdom SUPPORTS evolutionary partnership growth IF authentic, not illusory. Love transcends from familiar spiritual foundation toward destined authentic vulnerable divine depth. Relationship spirituality serves evolution through discernment.',
+    familyHome: 'Family spirituality through past mystical domestic wisdom! Home transcendence feels divine while serving collective mission with discernment. Past family spiritual patterns become foundation for NEW purposeful family evolution. Comfortable mystical family wisdom SUPPORTS evolutionary domestic growth IF authentic, not escapist. Family transcends from familiar spiritual foundation toward destined authentic divine connection. Domestic spirituality serves collective purpose through discernment.',
+    businessCareer: 'MAJOR SPIRITUAL CAREER through divine professional wisdom! Career transcendence feels mystical while serving destined work with discernment. Past professional spiritual patterns become foundation for NEW purposeful career evolution. Comfortable divine career wisdom SUPPORTS evolutionary professional growth IF authentic service, not spiritual bypass. Career transcends from familiar spiritual foundation toward destined authentic compassionate work. Professional spirituality serves soul mission through discernment.',
+    moneyFinances: 'Financial spirituality through past prosperity divine wisdom! Money transcendence feels mystical while serving purposeful prosperity with discernment. Past financial spiritual patterns become foundation for NEW evolutionary abundance. Comfortable divine money wisdom SUPPORTS purposeful financial growth IF authentic flow, not illusion. Prosperity transcends from familiar spiritual foundation toward destined authentic divine abundance. Financial spirituality serves soul evolution through discernment.',
+    predictions: [
+      'Major spiritual opportunity that draws on past mystical wisdom while serving your destiny',
+      'Divine transcendence feels natural because it builds on familiar spiritual foundations WITH discernment',
+      'Past life knowledge about mysticism becomes foundation for destined spirituality',
+      'Your comfortable spirituality and compassion naturally SUPPORT purposeful evolutionary growth IF authentic',
+      'Mystical wisdom from past serves your karmic mission perfectly through conscious discernment',
+      'What you spiritually understand from experience fuels NEW purposeful meaningful divine connection',
+      'Professional or personal transcendence builds on familiar spiritual wisdom toward destined purpose',
+      'Past mystical patterns become foundation for evolutionary purposeful divine truth',
+      'Your spiritual connection naturally aligns with soul mission through authentic discernment',
+      'Rare multi-generational cycle: past spirituality perfectly supports destined future IF discerned authentically'
+    ]
+  },
+
+  'Neptune-North Node-Trine': {
+    name: 'Neptune Trine North Node',
+    frequency: 'Occurs twice approximately every 164 years (extremely rare)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'s meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Natural mystical transcendence aligned with soul purpose! Spirituality and divine connection flow effortlessly toward your destiny. This beautiful rare trine brings authentic purposeful spirituality naturally, compassionate transcendence supporting mission easily, divine insights flowing naturally. What transcends naturally serves evolution with authenticity. Perfect time for effortless purposeful spiritual connection, natural compassion supporting destiny, divine love that appears naturally. Spirituality feels natural and purposeful. Compassion serves purpose naturally. Natural destined divine connection cycle.',
+    loveRelationships: 'Natural mystical soul love serving purpose! Romantic spiritual connection and compassionate divine partnership flow naturally toward soul depth. Perfect time for effortless meaningful spiritual love, natural soul-mate connection supporting evolution, compassionate romantic transcendence appearing naturally. Love transcends naturally in purposeful spiritual directions. Romantic divinity flows naturally. Relationships deepen toward soul-level connection naturally and compassionately.',
+    familyHome: 'Natural family spirituality and home divine connection aligned with purpose! Domestic transcendence and compassionate mystical family appear naturally and serve mission. Perfect time for effortless meaningful home spirituality, natural family divine connection supporting evolution, compassionate domestic transcendence flowing naturally. Home life transcends naturally and purposefully. Family spirituality flows naturally. Natural purposeful domestic divine connection.',
+    businessCareer: 'Natural spiritual career aligned with destiny! Professional divine calling and compassionate service work flow naturally toward mission. Excellent time for effortless meaningful spiritual career, natural compassion supporting destined work, divine professional purpose appearing naturally. Career transcends naturally and purposefully. Business compassion flows naturally. Natural purposeful spiritual professional calling.',
+    moneyFinances: 'Natural spiritual financial flow serving purpose! Money divine connection and compassionate prosperity flow naturally toward mission. Perfect time for effortless meaningful spiritual abundance, natural divine financial flow supporting evolution, compassionate money transcendence appearing naturally. Financial spirituality flows naturally. Prosperity transcends naturally in purposeful divine directions. Natural authentic destined spiritual abundance.',
+    predictions: [
+      'Meaningful spiritual connection flows to you naturally and serves your soul purpose',
+      'What naturally transcends in your life turns out to perfectly support evolution',
+      'Divine opportunity appears effortlessly and aligns with your karmic mission',
+      'Your natural compassion and spirituality attract purposeful transcendence and destined divine connection',
+      'Mystical insight that naturally appears serves your destiny profoundly',
+      'What you naturally connect to divinely supports your soul growth perfectly',
+      'Compassionate change or spiritual flow comes naturally and serves your mission',
+      'Natural divine connection in career or personal life flows toward your destined path',
+      'Your spirituality naturally creates compassionate momentum toward purposeful evolution',
+      'Perfect natural flow of meaningful spirituality, authentic divine connection, destined transcendence'
+    ]
+  },
+
+  'Neptune-North Node-Sextile': {
+    name: 'Neptune Sextile North Node',
+    frequency: 'Occurs twice approximately every 164 years (extremely rare)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Spiritual opportunity aligned with soul purpose through initiative! Potential for meaningful divine connection, authentic spirituality supporting mission, purposeful transcendence serving destiny IF you take action. This rare supportive sextile rewards initiative with divine flow. Perfect time for actively pursuing purposeful spirituality, embracing compassionate transcendence through effort, connecting divinely toward destiny through conscious choice with discernment. Opportunity requires openness. Divine potential aligned with purpose. Meaningful authentic spirituality available.',
+    loveRelationships: 'Love spiritual opportunity through initiative! Potential for divine romantic connection, meaningful soul-level partnership supporting evolution, purposeful spiritual love IF you step forward. Perfect time to actively transcend love meaningfully, pursue soul-mate opportunities serving growth, embrace spiritual partnership through conscious effort. Love transcendence available through initiative. Romantic spirituality serves purpose IF pursued with discernment.',
+    familyHome: 'Family spiritual opportunity through initiative! Potential for meaningful home divine connection, authentic family spirituality supporting mission, purposeful domestic transcendence IF you take action. Perfect time to actively connect family spiritually, pursue compassionate home serving evolution, embrace domestic divine connection through conscious effort. Family transcendence available through initiative. Home spirituality serves purpose IF pursued with discernment.',
+    businessCareer: 'Career spiritual opportunity through initiative! Potential for divine professional calling, meaningful compassionate service work supporting destiny, purposeful spiritual career IF you step forward. Perfect time to actively pursue spiritual career meaningfully, embrace compassionate work serving mission, connect professionally to divine purpose through conscious effort. Professional transcendence available through initiative. Career spirituality serves destiny IF pursued with discernment.',
+    moneyFinances: 'Financial spiritual opportunity through initiative! Potential for divine money flow, meaningful spiritual prosperity supporting purpose, purposeful financial transcendence IF you take action. Perfect time to actively connect finances spiritually, pursue compassionate abundance serving evolution, embrace divine financial flow through conscious effort. Money transcendence available through initiative. Prosperity spirituality serves purpose IF pursued with discernment.',
+    predictions: [
+      'Spiritual opportunity aligned with your soul purpose appears - initiative required',
+      'Your purposeful action toward divine connection attracts compassionate support and transcendence',
+      'Chance for meaningful spirituality perfectly aligned with your mission IF pursued actively',
+      'Transcendence you initiate consciously becomes catalyst for destined purposeful divine connection',
+      'Opportunity to connect spiritually to karmic mission available through your openness',
+      'Your active compassion and spiritual effort serve your soul evolution and destiny',
+      'Divine opportunity aligned with your purpose available through conscious surrender with discernment',
+      'Initiative to transcend meaningfully creates authentic spirituality serving your mission',
+      'Your active pursuit of purposeful spirituality leads to destined divine connection',
+      'Opportunity: soul growth through meaningful spirituality and conscious purposeful transcendence'
+    ]
+  },
+
+  'Neptune-South Node-Opposition': {
+    name: 'Neptune Opposition South Node',
+    frequency: 'Occurs approximately once every 164 years (multi-generational, same as Neptune-North Node-Conjunction)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL SPIRITUAL DESTINY ALIGNMENT! (This is the SAME as Neptune-North Node-Conjunction) Your spirituality opposes old comfortable mysticism while perfectly aligning with soul purpose. Divine connection and transcendence merge with karmic mission - your spirituality, compassion, and divine love meant to serve destiny WITH discernment. Past comfortable spiritual illusion fully releases as NEW purposeful meaningful authentic divine connection emerges. Your spirituality becomes instrument of soul evolution through discernment. Authentic divine alignment with destined path flows naturally now.',
+    loveRelationships: 'Destined soul-level love aligned with soul purpose! Romantic spirituality moves AWAY from familiar illusion TOWARD purposeful authentic divine connection. Transcend love from destiny not comfortable escapism, connect soul-level serving evolution. Love transforms - old comfortable spiritual romance releases illusion, NEW purposeful meaningful divine love emerges authentically. Fated soul-mate connection happens now - serves your karmic mission through authentic spirituality.',
+    familyHome: 'Family spirituality aligned with life purpose! Home divine connection moves AWAY from old illusion TOWARD purposeful family spiritual evolution. Family transcendence serves collective destiny, domestic spirituality transforms beyond comfortable spiritual bypass. Your family spirituality becomes purposeful - old familiar home mystical illusion releases, NEW destiny-aligned family divine connection emerges authentically. Home environment transcends through purposeful meaningful authentic spirituality.',
+    businessCareer: 'MAJOR SPIRITUAL CAREER DESTINY ALIGNMENT! Professional divine calling and compassionate work perfectly aligned with karmic mission. Career spirituality moves AWAY from comfortable spiritual bypass TOWARD purposeful destined authentic service work. Your career transcendence transforms - serve divinely in destined work, connect compassionately beyond familiar spiritual patterns. Fated spiritual career through purposeful meaningful authentic divine service.',
+    moneyFinances: 'Financial spirituality aligned with purposeful prosperity! Money divine connection moves AWAY from comfortable illusion TOWARD destiny-aligned abundance flow. Financial transcendence serves soul purpose - prosper through authentic divine flow, connect spiritually beyond familiar illusion. Old comfortable money spiritual bypass releases - NEW purposeful financial divine connection emerges naturally and authentically. Prosperity through destiny-aligned meaningful authentic spirituality.',
+    predictions: [
+      'Major spiritual connection that IS exactly what your soul purpose requires through authentic discernment',
+      'Divine transcendence and compassion you embrace serve your destiny profoundly',
+      'Your purposeful spirituality creates flowing momentum toward karmic mission',
+      'What transcends meaningfully now turns out to serve your evolution perfectly WITH discernment',
+      'Divine connection or mystical experience IS part of your soul\'s destined path',
+      'Spiritual awakening or compassionate service you embrace serves your karmic mission profoundly',
+      'Your spiritual purposeful transcendence aligned with soul growth and destiny through authenticity',
+      'Meaningful divine connection you embrace now supports your evolutionary purpose',
+      'What you spiritually connect to serves your destined path perfectly',
+      'Rare multi-generational spiritual cycle perfectly aligned with your soul mission through discernment'
+    ]
+  },
+
+  'Neptune-South Node-Trine': {
+    name: 'Neptune Trine South Node',
+    frequency: 'Occurs twice approximately every 164 years (extremely rare)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Natural comfortable spirituality and mystical familiar transcendence! Divine connection flows easily through past patterns, old spiritual beliefs, comfortable mysticism appearing naturally. This feels transcendent and compassionate naturally - be mindful of spiritual bypass and illusion. Opportunity: Enjoy natural spirituality while ensuring divine connection serves growth, not comfortable escapism. Past mystical wisdom is gift IF it fuels North Node purposeful authentic spirituality WITH discernment. Natural comfortable transcendence flows easily - direct it toward evolution, not spiritual bypass.',
+    loveRelationships: 'Natural comfortable spiritual love and mystical familiar romance! Past soul connections and comfortable spiritual love flow naturally and transcendently. Opportunity: Appreciate romantic spirituality while ensuring divine love serves growth, not comfortable illusion. Natural spiritual relationship is fine IF it deepens authentic connection toward evolution WITH discernment. Use comfortable mystical love to BUILD purposeful soul-level intimacy, not maintain illusory spiritual surface or escapism.',
+    familyHome: 'Natural comfortable family spirituality and mystical familiar domestic transcendence! Past family mysticism and comfortable spiritual home flow naturally and divinely. Opportunity: Enjoy family spirituality while directing divine connection toward collective evolution WITH discernment. Comfortable home transcendence serves IF it supports purposeful development, not spiritual bypass. Natural family spirituality is fine IF leading family forward toward authentic divine connection, not keeping everyone in comfortable illusion.',
+    businessCareer: 'Natural comfortable spiritual career and mystical familiar professional transcendence! Past professional spirituality and comfortable divine work flow naturally and compassionately. Opportunity: Your professional spirituality flows naturally - use it to DEVELOP destined career direction, not just repeat comfortable spiritual work or bypass. Natural career transcendence serves IF building toward purpose-aligned professional evolution beyond familiar spiritual patterns WITH discernment.',
+    moneyFinances: 'Natural comfortable financial spirituality and mystical familiar prosperity transcendence! Past money spirituality and comfortable divine abundance flow naturally and transcendently. Opportunity: Financial spirituality flows naturally - apply it to BUILD purposeful prosperity WITH discernment, not maintain comfortable illusion or spiritual bypass. Natural money transcendence serves IF directed toward evolutionary abundance aligned with soul growth through authentic divine flow, not just familiar spiritual escapism.',
+    predictions: [
+      'Past spiritual wisdom flows naturally to you - use it WITH discernment to BUILD future purposeful divine connection',
+      'Your comfortable spirituality easily accessible - direct it toward evolutionary transcendence, not spiritual bypass',
+      'Familiar mystical pattern flows naturally - ensure it serves authentic evolution, not comfortable illusion',
+      'Natural easy spirituality is gift IF you consciously direct it toward North Node growth WITH discernment',
+      'Past divine connection surfaces easily - integrate authentic wisdom while moving forward toward destiny',
+      'Your natural compassion and spirituality accessible - apply them to support purposeful evolution authentically',
+      'Comfortable transcendence flows easily - direct it consciously toward soul mission, not spiritual escapism',
+      'Natural mystical experience available - use it to serve destined growth WITH discernment',
+      'Easy comfortable spirituality is fine IF directed toward purposeful meaningful authentic evolution',
+      'Your past life spiritual gifts naturally accessible - use them to serve destined future WITH discernment'
+    ]
+  },
+
+  'Neptune-South Node-Sextile': {
+    name: 'Neptune Sextile South Node',
+    frequency: 'Occurs twice approximately every 164 years (extremely rare)',
+    duration: '1-2 years',
+    planet1Energy: 'Neptune represents spirituality, transcendence, compassion, imagination, dreams, divine connection, dissolution of boundaries, and universal love. It\'s where you merge with the infinite.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Spiritual opportunity to use past mystical wisdom for evolution WITH discernment! Potential to apply comfortable spirituality in NEW purposeful authentic ways, use past divine connection to SERVE North Node development IF you initiate with discernment. This rare supportive aspect rewards conscious application of past authentic spirituality, not spiritual bypass. Perfect time to take mystical wisdom and actively apply it toward destined growth WITH discernment. Past spiritual knowledge serves future evolution IF used consciously, authentically, and directed forward beyond illusion.',
+    loveRelationships: 'Love opportunity to use past spiritual romantic wisdom WITH discernment! Potential to apply comfortable soul connection in NEW purposeful authentic ways, use past mystical love to SERVE evolutionary partnership IF you initiate with discernment. Perfect time to take spiritual relationship knowledge and actively apply it to deeper authentic divine connection. Past soul love wisdom serves present partnership evolution IF used consciously toward North Node, authentically not illusorily.',
+    familyHome: 'Family opportunity to apply past domestic spiritual wisdom WITH discernment! Potential to use comfortable family mysticism in NEW purposeful authentic ways, direct past home spirituality toward evolutionary family development IF you take action with discernment. Perfect time to take family spiritual knowledge and actively apply it to purposeful home environment. Past domestic divine connection serves present family evolution IF directed consciously toward collective mission authentically.',
+    businessCareer: 'Career opportunity to apply past professional spiritual wisdom WITH discernment! Potential to use comfortable career spirituality in NEW purpose-aligned authentic ways, direct professional divine calling toward evolutionary work IF you step forward with discernment. Perfect time to take spiritual career knowledge and actively apply it to destined professional path. Past professional transcendence serves future career purpose IF used consciously toward mission authentically.',
+    moneyFinances: 'Financial opportunity to use past prosperity spiritual wisdom WITH discernment! Potential to apply comfortable money spirituality in NEW purpose-aligned authentic ways, direct past financial divine connection toward evolutionary abundance IF pursued actively with discernment. Perfect time to take prosperity spiritual knowledge and actively apply it to purpose-serving financial flow. Past money transcendence serves future prosperity IF directed consciously toward soul evolution authentically.',
+    predictions: [
+      'Past spiritual knowledge becomes resource for destined growth IF applied forward actively WITH discernment',
+      'Your comfortable spirituality actively directed toward new purpose creates authentic divine success',
+      'Opportunity to use what you spiritually know in NEW evolutionary ways appears WITH discernment',
+      'Familiar mystical wisdom applied to purposeful transcendence creates positive authentic impact',
+      'Past spiritual experience you actively share in service of evolution helps collective awakening authentically',
+      'Your initiative to apply old spiritual wisdom to new challenge creates breakthrough WITH discernment',
+      'Comfortable spiritual skill becomes foundation for NEW purposeful meaningful divine connection',
+      'Past mystical wisdom actively used to BUILD future authentic transcendence creates destined progress',
+      'Your familiar spirituality consciously directed toward evolution serves soul mission perfectly WITH discernment',
+      'Opportunity: Apply past spiritual wisdom and comfortable divine connection to serve North Node destiny authentically'
+    ]
+  },
+
   // PLUTO-NORTH NODE ASPECTS (Conjunction only - approximately every 247 years)
 
   'Pluto-North Node-Conjunction': {
@@ -6158,6 +6758,156 @@ const GENERAL_ASPECTS: Record<string, GeneralAspectInterpretation> = {
       'What must be totally eliminated from past serves your profound rebirth and evolution',
       'Deep transformational work on comfortable pattern - complete release for growth',
       'Rare generational cycle of profound elimination from past serving destined future'
+    ]
+  },
+
+  'Pluto-North Node-Opposition': {
+    name: 'Pluto Opposition North Node',
+    frequency: 'Occurs approximately once every 247 years (rare multi-generational, same as Pluto-South Node-Conjunction)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'POWERFUL TRANSFORMATIONAL DESTINY ALIGNMENT! (This is the SAME as Pluto-South Node-Conjunction) Your power opposes old patterns while accessing profound past transformation wisdom. This feels like destined metamorphosis - death-rebirth flows through eliminating familiar patterns while serving evolution. Opportunity: Use past life shadow work and profound transformation to ELIMINATE limitations and BUILD North Node growth toward destiny. Your old death-rebirth becomes catalyst for NEW purposeful profound metamorphosis. Rare multi-generational cycle for deep conscious evolutionary transformation.',
+    loveRelationships: 'Destined profound love transformation through past shadow work! Romantic death-rebirth feels powerful and deep while serving soul purpose. Past relationship transformation wisdom becomes catalyst for NEW authentic purposeful soul love. Profound elimination of old patterns SUPPORTS evolutionary partnership growth. Love transforms profoundly from eliminating familiar limitations toward destined authentic vulnerable powerful depth. Relationship metamorphosis serves evolution.',
+    familyHome: 'Family transformation through past profound domestic shadow work! Home death-rebirth feels deep while serving collective mission. Past family transformation patterns become catalyst for NEW purposeful family evolution. Profound elimination of old patterns SUPPORTS evolutionary domestic growth. Family transforms profoundly from eliminating familiar limitations toward destined authentic powerful connection. Domestic metamorphosis serves collective purpose.',
+    businessCareer: 'MAJOR CAREER TRANSFORMATION through professional profound shadow work! Career death-rebirth feels powerful while serving destined work. Past professional transformation patterns become catalyst for NEW purposeful career evolution. Profound elimination of old patterns SUPPORTS evolutionary professional growth. Career transforms profoundly from eliminating familiar limitations toward destined authentic powerful work. Professional metamorphosis serves soul mission.',
+    moneyFinances: 'Financial transformation through past prosperity profound shadow work! Money death-rebirth feels powerful while serving purposeful prosperity. Past financial transformation patterns become catalyst for NEW evolutionary abundance. Profound elimination of old patterns SUPPORTS purposeful financial growth. Prosperity transforms profoundly from eliminating familiar limitations toward destined authentic powerful abundance. Financial metamorphosis serves soul evolution.',
+    predictions: [
+      'Major transformational opportunity that draws on past shadow work while serving your destiny',
+      'Profound death-rebirth feels powerful because it eliminates familiar patterns toward purpose',
+      'Past life knowledge about transformation becomes catalyst for destined metamorphosis',
+      'Your deep shadow work and power naturally SUPPORT purposeful evolutionary growth',
+      'Profound elimination from past serves your karmic mission perfectly through conscious transformation',
+      'What you profoundly eliminate and transform fuels NEW purposeful meaningful authentic power',
+      'Professional or personal metamorphosis builds on past shadow work toward destined purpose',
+      'Past transformation patterns become catalyst for evolutionary purposeful profound rebirth',
+      'Your transformational power naturally aligns with soul mission and destiny path',
+      'Rare multi-generational cycle: past death-rebirth perfectly supports destined future profound transformation'
+    ]
+  },
+
+  'Pluto-North Node-Trine': {
+    name: 'Pluto Trine North Node',
+    frequency: 'Occurs twice approximately every 247 years (extremely rare)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Natural profound transformation aligned with soul purpose! Power and death-rebirth flow effortlessly toward your destiny. This beautiful extremely rare trine brings authentic purposeful metamorphosis naturally, profound shadow work supporting mission easily, transformational insights flowing naturally. What transforms profoundly naturally serves evolution. Perfect time for effortless purposeful profound change, natural deep psychology supporting destiny, powerful transformation that appears naturally. Metamorphosis feels natural and purposeful. Power serves purpose naturally. Natural destined profound transformation cycle.',
+    loveRelationships: 'Natural profound soul love transformation serving purpose! Romantic death-rebirth and deep powerful partnership flow naturally toward soul depth. Perfect time for effortless meaningful relationship metamorphosis, natural profound love supporting evolution, powerful romantic transformation appearing naturally. Love transforms naturally in purposeful profound directions. Romantic power flows naturally. Relationships deepen toward soul-level metamorphosis naturally and powerfully.',
+    familyHome: 'Natural family transformation and home profound death-rebirth aligned with purpose! Domestic metamorphosis and powerful deep family change appear naturally and serve mission. Perfect time for effortless meaningful home transformation, natural family profound evolution supporting collective growth, powerful domestic death-rebirth flowing naturally. Home life transforms naturally and purposefully. Family power flows naturally. Natural purposeful domestic profound metamorphosis.',
+    businessCareer: 'Natural profound career transformation aligned with destiny! Professional death-rebirth and powerful deep work change flow naturally toward mission. Excellent time for effortless meaningful career metamorphosis, natural profound professional evolution supporting destined work, powerful career transformation appearing naturally. Career transforms naturally and purposefully. Business power flows naturally. Natural purposeful profound professional metamorphosis.',
+    moneyFinances: 'Natural profound financial transformation serving purpose! Money death-rebirth and powerful deep prosperity change flow naturally toward mission. Perfect time for effortless meaningful financial metamorphosis, natural profound abundance supporting evolution, powerful money transformation appearing naturally. Financial power flows naturally. Prosperity transforms naturally in purposeful profound directions. Natural authentic destined profound financial metamorphosis.',
+    predictions: [
+      'Meaningful profound transformation flows to you naturally and serves your soul purpose',
+      'What naturally transforms deeply in your life turns out to perfectly support evolution',
+      'Powerful opportunity appears effortlessly and aligns with your karmic mission',
+      'Your natural power and depth attract purposeful metamorphosis and destined profound transformation',
+      'Shadow work insight that naturally appears serves your destiny profoundly',
+      'What you naturally transform profoundly supports your soul growth perfectly',
+      'Powerful change or profound death-rebirth comes naturally and serves your mission',
+      'Natural profound transformation in career or personal life flows toward your destined path',
+      'Your power naturally creates transformational momentum toward purposeful evolution',
+      'Perfect natural flow of meaningful metamorphosis, authentic profound transformation, destined death-rebirth'
+    ]
+  },
+
+  'Pluto-North Node-Sextile': {
+    name: 'Pluto Sextile North Node',
+    frequency: 'Occurs twice approximately every 247 years (extremely rare)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'North Node represents your soul\'s growth direction, destiny, life purpose, karmic mission, and what you\'re meant to develop in this lifetime. It\'s unfamiliar but where your greatest growth lies.',
+    aspectMeaning: 'Transformational opportunity aligned with soul purpose through initiative! Potential for meaningful profound metamorphosis, authentic deep power supporting mission, purposeful death-rebirth serving destiny IF you take action. This extremely rare supportive sextile rewards initiative with profound transformation. Perfect time for actively pursuing purposeful shadow work, embracing powerful change through effort, transforming profoundly toward destiny through conscious choice. Opportunity requires courage. Profound transformation potential aligned with purpose. Meaningful authentic power available.',
+    loveRelationships: 'Love transformation opportunity through initiative! Potential for profound romantic metamorphosis, meaningful deep powerful partnership supporting evolution, purposeful love death-rebirth IF you step forward. Perfect time to actively transform love profoundly, pursue powerful romantic opportunities serving growth, embrace relationship metamorphosis through conscious shadow work. Love transformation available through initiative. Romantic power serves purpose IF pursued courageously.',
+    familyHome: 'Family transformation opportunity through initiative! Potential for meaningful home profound metamorphosis, authentic deep family power supporting mission, purposeful domestic death-rebirth IF you take action. Perfect time to actively transform family profoundly, pursue powerful home change serving evolution, embrace domestic metamorphosis through conscious shadow work. Family transformation available through initiative. Home power serves purpose IF pursued courageously.',
+    businessCareer: 'Career transformation opportunity through initiative! Potential for profound professional metamorphosis, meaningful deep powerful work supporting destiny, purposeful career death-rebirth IF you step forward. Perfect time to actively transform career profoundly, pursue powerful professional opportunities serving mission, embrace career metamorphosis through conscious shadow work. Professional transformation available through initiative. Career power serves destiny IF pursued courageously.',
+    moneyFinances: 'Financial transformation opportunity through initiative! Potential for profound money metamorphosis, meaningful deep powerful prosperity supporting purpose, purposeful financial death-rebirth IF you take action. Perfect time to actively transform finances profoundly, pursue powerful abundance serving evolution, embrace financial metamorphosis through conscious shadow work. Money transformation available through initiative. Prosperity power serves purpose IF pursued courageously.',
+    predictions: [
+      'Transformational opportunity aligned with your soul purpose appears - initiative required',
+      'Your purposeful action toward profound change attracts powerful support and metamorphosis',
+      'Chance for meaningful deep transformation perfectly aligned with your mission IF pursued actively',
+      'Power you embrace consciously becomes catalyst for destined purposeful profound metamorphosis',
+      'Opportunity to transform profoundly toward karmic mission available through your courage',
+      'Your active shadow work and transformational effort serve your soul evolution and destiny',
+      'Profound opportunity aligned with your purpose available through conscious deep psychological work',
+      'Initiative to transform profoundly creates authentic power serving your mission',
+      'Your active pursuit of purposeful metamorphosis leads to destined profound transformation',
+      'Opportunity: soul growth through meaningful profound transformation and conscious purposeful shadow work'
+    ]
+  },
+
+  'Pluto-South Node-Opposition': {
+    name: 'Pluto Opposition South Node',
+    frequency: 'Occurs approximately once every 247 years (rare multi-generational, same as Pluto-North Node-Conjunction)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'POWERFUL TRANSFORMATIONAL DESTINY ALIGNMENT! (This is the SAME as Pluto-North Node-Conjunction) Your power opposes old comfortable transformation while perfectly aligning with soul purpose. Death-rebirth and profound metamorphosis merge with karmic mission - your transformation, shadow work, and power meant to serve destiny. Past comfortable elimination fully releases as NEW purposeful meaningful profound authentic metamorphosis emerges. Your transformation becomes instrument of soul evolution. Profound alignment with destined path flows powerfully now.',
+    loveRelationships: 'Destined profound love transformation aligned with soul purpose! Romantic metamorphosis moves AWAY from familiar patterns TOWARD purposeful authentic deep powerful connection. Transform love from destiny not comfortable death-rebirth, profoundly change relationships serving evolution. Love transforms - old comfortable romantic metamorphosis releases, NEW purposeful meaningful profound authentic love emerges. Fated soul-level transformation happens now - serves your karmic mission through deep shadow work.',
+    familyHome: 'Family transformation aligned with life purpose! Home profound metamorphosis moves AWAY from old patterns TOWARD purposeful family death-rebirth evolution. Family transformation serves collective destiny, domestic profound change transforms beyond comfortable limitation. Your family metamorphosis becomes purposeful - old familiar home transformation releases, NEW destiny-aligned family profound death-rebirth emerges. Home environment transforms through purposeful meaningful profound authentic shadow work.',
+    businessCareer: 'MAJOR CAREER TRANSFORMATION DESTINY ALIGNMENT! Professional profound metamorphosis and career power perfectly aligned with karmic mission. Career transformation moves AWAY from comfortable death-rebirth TOWARD purposeful destined authentic powerful professional evolution. Your career metamorphosis transforms - profoundly change in destined work, transform beyond familiar career patterns. Fated career profound transformation through purposeful meaningful authentic deep shadow work.',
+    moneyFinances: 'Financial transformation aligned with purposeful prosperity! Money profound metamorphosis moves AWAY from comfortable patterns TOWARD destiny-aligned abundance death-rebirth. Financial transformation serves soul purpose - prosper through authentic profound power, transform beyond familiar limitation. Old comfortable money metamorphosis releases - NEW purposeful financial profound death-rebirth emerges naturally and authentically. Prosperity through destiny-aligned meaningful profound authentic transformation.',
+    predictions: [
+      'Major profound transformation that IS exactly what your soul purpose requires',
+      'Death-rebirth and power you embrace serve your destiny profoundly and create total metamorphosis',
+      'Your purposeful transformation creates powerful momentum toward karmic mission',
+      'What transforms profoundly now turns out to serve your evolution perfectly',
+      'Profound metamorphosis or powerful death-rebirth IS part of your soul\'s destined path',
+      'Shadow work or deep transformation you embrace serves your karmic mission profoundly',
+      'Your transformational purposeful power aligned with soul growth and destiny',
+      'Meaningful profound metamorphosis you embrace now supports your evolutionary purpose',
+      'What you profoundly transform serves your destined path perfectly',
+      'Rare multi-generational transformational cycle perfectly aligned with your soul mission'
+    ]
+  },
+
+  'Pluto-South Node-Trine': {
+    name: 'Pluto Trine South Node',
+    frequency: 'Occurs twice approximately every 247 years (extremely rare)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Natural comfortable profound transformation and powerful familiar death-rebirth! Metamorphosis flows easily through past patterns, old shadow work, comfortable profound change appearing naturally. This feels powerful and transformational naturally - be mindful of comfortable limitation. Opportunity: Enjoy natural transformation while ensuring metamorphosis serves growth, not just comfortable death-rebirth patterns. Past profound wisdom is gift IF it fuels North Node purposeful authentic transformation. Natural comfortable power flows easily - direct it toward evolution, not stagnation in familiar metamorphosis.',
+    loveRelationships: 'Natural comfortable profound romantic transformation and powerful familiar love death-rebirth! Past soul transformations and comfortable deep love metamorphosis flow naturally and powerfully. Opportunity: Appreciate romantic transformation while ensuring profound love serves growth, not just comfortable shadow patterns. Natural deep relationship metamorphosis is fine IF it deepens authentic connection toward evolution. Use comfortable powerful love to BUILD purposeful soul-level intimacy, not maintain familiar transformation surface.',
+    familyHome: 'Natural comfortable family profound transformation and powerful familiar domestic death-rebirth! Past family metamorphosis and comfortable deep home change flow naturally and powerfully. Opportunity: Enjoy family transformation while directing profound change toward collective evolution. Comfortable home metamorphosis serves IF it supports purposeful development. Natural family transformation is fine IF leading family forward toward authentic profound connection, not keeping everyone stuck in familiar death-rebirth patterns.',
+    businessCareer: 'Natural comfortable career profound transformation and powerful familiar professional death-rebirth! Past professional metamorphosis and comfortable deep career change flow naturally and powerfully. Opportunity: Your professional transformation flows naturally - use it to DEVELOP destined career direction, not just repeat comfortable profound work changes. Natural career metamorphosis serves IF building toward purpose-aligned professional evolution beyond familiar transformation patterns.',
+    moneyFinances: 'Natural comfortable financial profound transformation and powerful familiar prosperity death-rebirth! Past money metamorphosis and comfortable deep abundance change flow naturally and powerfully. Opportunity: Financial transformation flows naturally - apply it to BUILD purposeful prosperity, not maintain comfortable limitation. Natural money metamorphosis serves IF directed toward evolutionary abundance aligned with soul growth through authentic profound transformation, not just familiar death-rebirth patterns.',
+    predictions: [
+      'Past profound transformation wisdom flows naturally to you - use it to BUILD future purposeful metamorphosis',
+      'Your comfortable power easily accessible - direct it toward evolutionary transformation',
+      'Familiar death-rebirth pattern flows naturally - ensure it serves evolution, not stagnation',
+      'Natural easy profound transformation is gift IF you consciously direct it toward North Node growth',
+      'Past metamorphosis surfaces easily - integrate wisdom while moving forward toward destiny',
+      'Your natural power and depth accessible - apply them to support purposeful evolution',
+      'Comfortable transformation flows easily - direct it consciously toward soul mission',
+      'Natural profound change available - use it to serve destined growth',
+      'Easy comfortable metamorphosis is fine IF directed toward purposeful meaningful evolution',
+      'Your past life transformation gifts naturally accessible - use them to serve destined future'
+    ]
+  },
+
+  'Pluto-South Node-Sextile': {
+    name: 'Pluto Sextile South Node',
+    frequency: 'Occurs twice approximately every 247 years (extremely rare)',
+    duration: '1-3 years',
+    planet1Energy: 'Pluto represents transformation, power, death-rebirth, shadow work, deep psychology, elimination, regeneration, and total metamorphosis. It\'s where you transform completely.',
+    planet2Energy: 'South Node represents past patterns, comfort zone, what comes easily but may hold you back, karmic release, and what you\'re meant to move away from. It\'s familiar but potentially limiting.',
+    aspectMeaning: 'Transformational opportunity to use past profound shadow work wisdom for evolution! Potential to apply comfortable metamorphosis in NEW purposeful authentic ways, use past death-rebirth to SERVE North Node development IF you initiate. This extremely rare supportive aspect rewards conscious application of past profound transformation. Perfect time to take shadow work wisdom and actively apply it toward destined growth. Past transformation knowledge serves future evolution IF used consciously and directed forward beyond comfortable patterns.',
+    loveRelationships: 'Love opportunity to use past profound romantic transformation wisdom! Potential to apply comfortable relationship metamorphosis in NEW purposeful authentic ways, use past deep love to SERVE evolutionary partnership IF you initiate. Perfect time to take relationship shadow work knowledge and actively apply it to deeper authentic connection. Past profound love transformation wisdom serves present partnership evolution IF used consciously toward North Node.',
+    familyHome: 'Family opportunity to apply past domestic profound transformation wisdom! Potential to use comfortable family metamorphosis in NEW purposeful authentic ways, direct past home shadow work toward evolutionary family development IF you take action. Perfect time to take family transformation knowledge and actively apply it to purposeful home environment. Past domestic profound change serves present family evolution IF directed consciously toward collective mission.',
+    businessCareer: 'Career opportunity to apply past professional profound transformation wisdom! Potential to use comfortable career metamorphosis in NEW purpose-aligned authentic ways, direct professional shadow work toward evolutionary work IF you step forward. Perfect time to take career transformation and actively apply it to destined professional path. Past professional profound change serves future career purpose IF used consciously toward mission.',
+    moneyFinances: 'Financial opportunity to use past prosperity profound transformation wisdom! Potential to apply comfortable money metamorphosis in NEW purpose-aligned authentic ways, direct past financial shadow work toward evolutionary abundance IF pursued actively. Perfect time to take prosperity transformation and actively apply it to purpose-serving financial change. Past money profound metamorphosis serves future prosperity IF directed consciously toward soul evolution.',
+    predictions: [
+      'Past profound transformation knowledge becomes resource for destined growth IF applied forward actively',
+      'Your comfortable power actively directed toward new purpose creates transformational success',
+      'Opportunity to use what you transformed profoundly in NEW evolutionary ways appears',
+      'Familiar shadow work wisdom applied to purposeful metamorphosis creates positive impact',
+      'Past transformation experience you actively share in service of evolution helps collective awakening',
+      'Your initiative to apply old profound change to new challenge creates breakthrough',
+      'Comfortable transformational skill becomes foundation for NEW purposeful meaningful metamorphosis',
+      'Past shadow work actively used to BUILD future profound transformation creates destined progress',
+      'Your familiar power consciously directed toward evolution serves soul mission perfectly',
+      'Opportunity: Apply past transformation wisdom and comfortable profound change to serve North Node destiny'
     ]
   },
 
