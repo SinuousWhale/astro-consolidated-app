@@ -4,6 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 // import { TestWheel } from './components/TestWheel';
 // import { SimpleWheelEnhanced } from './components/SimpleWheelEnhanced';
 import { SimpleWheelFixed } from './components/SimpleWheelFixed';
+import { PersonalTransitCalendar } from './components/PersonalTransitCalendar';
 import { lookupCity, getCityList, getUTCOffset } from './utils/location';
 import { generateAspectInterpretation, generateTransitToTransitInterpretation, getNatalActivationManifestations } from './utils/aspectInterpretations';
 import { calculatePlanetaryPositions } from './utils/ephemeris';
@@ -79,7 +80,7 @@ function SimpleApp() {
   const [expandedAspectIndex, setExpandedAspectIndex] = useState<number | null>(null);
   const [expandedTransitAspectIndex, setExpandedTransitAspectIndex] = useState<number | null>(null);
   const [expandedNatalToTransitIndex, setExpandedNatalToTransitIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<'wheel' | 'natal-transit' | 'transit-transit' | 'calendar'>('wheel');
+  const [activeTab, setActiveTab] = useState<'wheel' | 'natal-transit' | 'transit-transit' | 'calendar' | 'personal-calendar'>('wheel');
   const [calendarPeriod, setCalendarPeriod] = useState<7 | 14 | 21 | 30>(7); // Days to show in calendar
   const [calendarStartDate, setCalendarStartDate] = useState<Date>(new Date()); // Start date for calendar
 
@@ -542,6 +543,12 @@ function SimpleApp() {
         >
           Transit Calendar
         </button>
+        <button
+          className={`tab ${activeTab === 'personal-calendar' ? 'active' : ''}`}
+          onClick={() => setActiveTab('personal-calendar')}
+        >
+          Personal Transit Calendar
+        </button>
       </div>
 
       {/* Tab Content - Wheel Tab */}
@@ -793,9 +800,8 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
                         : getOrbColorIntensity(aspect.aspect.actualOrb, aspect.natal.name, aspect.transit.name, aspect.aspect.color);
 
                       return (
-                        <>
+                        <React.Fragment key={idx}>
                           <tr
-                            key={idx}
                             title={`Orb: ${aspect.aspect.actualOrb.toFixed(2)}°`}
                             style={{
                               borderBottom: '1px solid #ddd',
@@ -820,7 +826,7 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
                               </td>
                             </tr>
                           )}
-                        </>
+                        </React.Fragment>
                       );
                     })}
                   </tbody>
@@ -1995,6 +2001,19 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
           </div>
         );
       })()}
+
+      {/* Tab Content - Personal Transit Calendar Tab */}
+      {activeTab === 'personal-calendar' && (
+        <PersonalTransitCalendar
+          natalDate={natalDate}
+          natalLatitude={latitude}
+          natalLongitude={longitude}
+          natalTimezone={timezone}
+          firstHouseReference={firstHouseReference}
+          manualFirstHouseSign={manualFirstHouseSign}
+          cityName={cityName}
+        />
+      )}
 
     </div>
   );

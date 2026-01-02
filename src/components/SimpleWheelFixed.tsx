@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { calculatePlanetaryPositions, calculateAscendant, calculateHouses } from '../utils/ephemeris';
 
 interface SimpleWheelFixedProps {
@@ -158,8 +158,8 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
   // The astronomy-engine uses the Date's internal UTC representation, so we pass it directly.
   // The transit positions should be calculated for the UTC moment that corresponds to
   // the local time shown in the picker.
-  const allNatalPlanetsData = calculatePlanetaryPositions(natalDateUTC);
-  const allTransitPlanetsData = calculatePlanetaryPositions(transitDate);
+  const allNatalPlanetsData = useMemo(() => calculatePlanetaryPositions(natalDateUTC), [natalDateUTC]);
+  const allTransitPlanetsData = useMemo(() => calculatePlanetaryPositions(transitDate), [transitDate]);
 
   // Calculate actual ascendant from birth location and time (using UTC)
   const ascendantLongitude = calculateAscendant(natalDateUTC, latitude, longitude);
@@ -225,7 +225,7 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
   };
 
   // Convert ephemeris data to visual positions
-  const convertToVisualPosition = (planetData: any, radius: number) => {
+  const convertToVisualPosition = useCallback((planetData: any, radius: number) => {
     // Planet's actual longitude in zodiac (0-360°)
     const actualLongitude = planetData.longitude;
 
@@ -256,7 +256,7 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
       color: planetData.color,
       isRetrograde: planetData.isRetrograde
     };
-  };
+  }, [firstHouseLongitude]);
 
   // Calculate house cusps based on house system
   const getHouseCusps = () => {
@@ -271,7 +271,7 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
   };
 
   // Calculate which house a planet is in based on its longitude
-  const getHouseNumber = (planetLongitude: number): number => {
+  const getHouseNumber = useCallback((planetLongitude: number): number => {
     // For whole-sign houses, each sign = one house
     // Calculate which sign the planet is in
     const planetSignIndex = Math.floor(planetLongitude / 30);
@@ -282,10 +282,10 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
     const houseNumber = ((planetSignIndex - signIndex + 12) % 12) + 1;
 
     return houseNumber;
-  };
+  }, [signIndex]);
 
   // Filter planets based on selection
-  const filterPlanets = (planets: any[], filter: string) => {
+  const filterPlanets = useCallback((planets: any[], filter: string) => {
     if (filter === 'all') return planets;
 
     // Inner planets: Sun, Moon, Mercury, Venus, Mars
@@ -318,13 +318,13 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
       const planetName = filter.charAt(0).toUpperCase() + filter.slice(1);
       return planets.filter(p => p.name === planetName);
     }
-  };
+  }, []);
 
   // Check if two planets form an aspect
   // For transit-to-transit: pass both planet names
   // For natal-to-transit: pass transit planet name only (planet2Name should be transit)
   // For natal-to-midpoint: pass isMidpoint = true
-  const checkAspect = (angle1: number, angle2: number, planet1Name?: string, planet2Name?: string, isNatalTransit?: boolean, isMidpoint?: boolean) => {
+  const checkAspect = useCallback((angle1: number, angle2: number, planet1Name?: string, planet2Name?: string, isNatalTransit?: boolean, isMidpoint?: boolean) => {
     let diff = Math.abs(angle1 - angle2);
     if (diff > 180) diff = 360 - diff;
 
@@ -351,112 +351,121 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
       }
     }
     return null;
-  };
+  }, []);
 
   // Convert all planet data to visual positions
-  const allNatalPositions = allNatalPlanetsData.map(planetData => ({
+  const allNatalPositions = useMemo(() => allNatalPlanetsData.map(planetData => ({
     ...convertToVisualPosition(planetData, natalRadius),
     type: 'natal',
     longitude: planetData.longitude, // Keep actual astronomical longitude for house calculation
     house: getHouseNumber(planetData.longitude)
-  }));
+  })), [allNatalPlanetsData, natalRadius, getHouseNumber, convertToVisualPosition]);
 
-  const allTransitPositions = allTransitPlanetsData.map(planetData => ({
+  const allTransitPositions = useMemo(() => allTransitPlanetsData.map(planetData => ({
     ...convertToVisualPosition(planetData, transitRadius - 15),
     type: 'transit',
     longitude: planetData.longitude, // Keep actual astronomical longitude for house calculation
     house: getHouseNumber(planetData.longitude)
-  }));
+  })), [allTransitPlanetsData, transitRadius, getHouseNumber, convertToVisualPosition]);
 
   // Apply filters
-  const natalPositions = filterPlanets(allNatalPositions, natalPlanetFilter);
-  const transitPositions = filterPlanets(allTransitPositions, transitPlanetFilter);
+  const natalPositions = useMemo(() => filterPlanets(allNatalPositions, natalPlanetFilter), [allNatalPositions, natalPlanetFilter, filterPlanets]);
+  const transitPositions = useMemo(() => filterPlanets(allTransitPositions, transitPlanetFilter), [allTransitPositions, transitPlanetFilter, filterPlanets]);
 
   // Calculate aspects between natal and transit planets
-  // Track seen pairs to avoid duplicates (e.g., both "Sun-Mars" and "Mars-Sun")
-  const aspects = [];
-  const seenPairs = new Set<string>();
+  const aspects = useMemo(() => {
+    // Track seen pairs to avoid duplicates (e.g., both "Sun-Mars" and "Mars-Sun")
+    const aspectsList = [];
+    const seenPairs = new Set<string>();
 
-  for (const natal of natalPositions) {
-    for (const transit of transitPositions) {
-      // Skip if it's the same planet (e.g., natal Jupiter to transit Jupiter)
-      if (natal.name === transit.name) {
-        continue;
-      }
+    for (const natal of natalPositions) {
+      for (const transit of transitPositions) {
+        // Skip if it's the same planet (e.g., natal Jupiter to transit Jupiter)
+        if (natal.name === transit.name) {
+          continue;
+        }
 
-      // Create a normalized pair key (alphabetically sorted to catch duplicates)
-      const pairKey = [natal.name, transit.name].sort().join('-');
+        // Create a normalized pair key (alphabetically sorted to catch duplicates)
+        const pairKey = [natal.name, transit.name].sort().join('-');
 
-      // Skip if we've already processed this pair
-      if (seenPairs.has(pairKey)) {
-        continue;
-      }
+        // Skip if we've already processed this pair
+        if (seenPairs.has(pairKey)) {
+          continue;
+        }
 
-      // Pass transit planet name and isNatalTransit flag for natal-to-transit orbs
-      const aspect = checkAspect(natal.angle, transit.angle, natal.name, transit.name, true);
-      if (aspect) {
-        seenPairs.add(pairKey);
-        aspects.push({
-          natal,
-          transit,
-          aspect,
-          key: `${natal.name}-${transit.name}`
-        });
+        // Pass transit planet name and isNatalTransit flag for natal-to-transit orbs
+        const aspect = checkAspect(natal.angle, transit.angle, natal.name, transit.name, true);
+        if (aspect) {
+          seenPairs.add(pairKey);
+          aspectsList.push({
+            natal,
+            transit,
+            aspect,
+            key: `${natal.name}-${transit.name}`
+          });
+        }
       }
     }
-  }
+    return aspectsList;
+  }, [natalPositions, transitPositions, checkAspect]);
 
   // Calculate aspects between transit planets themselves
-  const transitAspects = [];
-  for (let i = 0; i < transitPositions.length; i++) {
-    for (let j = i + 1; j < transitPositions.length; j++) {
-      const transit1 = transitPositions[i];
-      const transit2 = transitPositions[j];
-      // Pass planet names for transit-to-transit aspects to use planet-specific orbs
-      const aspect = checkAspect(transit1.angle, transit2.angle, transit1.name, transit2.name);
-      if (aspect) {
-        transitAspects.push({
-          transit1,
-          transit2,
-          aspect,
-          key: `${transit1.name}-${transit2.name}`
-        });
+  const transitAspects = useMemo(() => {
+    const transitAspectsList = [];
+    for (let i = 0; i < transitPositions.length; i++) {
+      for (let j = i + 1; j < transitPositions.length; j++) {
+        const transit1 = transitPositions[i];
+        const transit2 = transitPositions[j];
+        // Pass planet names for transit-to-transit aspects to use planet-specific orbs
+        const aspect = checkAspect(transit1.angle, transit2.angle, transit1.name, transit2.name);
+        if (aspect) {
+          transitAspectsList.push({
+            transit1,
+            transit2,
+            aspect,
+            key: `${transit1.name}-${transit2.name}`
+          });
+        }
       }
     }
-  }
+    return transitAspectsList;
+  }, [transitPositions, checkAspect]);
 
   // Calculate aspects from natal planets to transit-transit aspect midpoints
-  const natalToTransitAspects = [];
-  for (const transitAspect of transitAspects) {
-    // Calculate midpoint between the two transit planets
-    let angle1 = transitAspect.transit1.angle;
-    let angle2 = transitAspect.transit2.angle;
+  const natalToTransitAspects = useMemo(() => {
+    const natalToTransitAspectsList = [];
+    for (const transitAspect of transitAspects) {
+      // Calculate midpoint between the two transit planets
+      let angle1 = transitAspect.transit1.angle;
+      let angle2 = transitAspect.transit2.angle;
 
-    // Calculate midpoint accounting for circular nature of angles
-    let diff = Math.abs(angle1 - angle2);
-    let midpoint;
-    if (diff <= 180) {
-      midpoint = (angle1 + angle2) / 2;
-    } else {
-      // Midpoint is on the other side
-      midpoint = ((angle1 + angle2) / 2 + 180) % 360;
-    }
+      // Calculate midpoint accounting for circular nature of angles
+      let diff = Math.abs(angle1 - angle2);
+      let midpoint;
+      if (diff <= 180) {
+        midpoint = (angle1 + angle2) / 2;
+      } else {
+        // Midpoint is on the other side
+        midpoint = ((angle1 + angle2) / 2 + 180) % 360;
+      }
 
-    // Check if any natal planet forms an aspect to this midpoint
-    for (const natal of natalPositions) {
-      // Pass isMidpoint flag to use tight 2° orb (traditional midpoint astrology)
-      const aspectToMidpoint = checkAspect(natal.angle, midpoint, undefined, undefined, false, true);
-      if (aspectToMidpoint) {
-        natalToTransitAspects.push({
-          natal,
-          transitAspect,
-          midpoint,
-          aspect: aspectToMidpoint,
-          key: `${natal.name}-${transitAspect.transit1.name}-${transitAspect.transit2.name}`
-        });
+      // Check if any natal planet forms an aspect to this midpoint
+      for (const natal of natalPositions) {
+        // Pass isMidpoint flag to use tight 2° orb (traditional midpoint astrology)
+        const aspectToMidpoint = checkAspect(natal.angle, midpoint, undefined, undefined, false, true);
+        if (aspectToMidpoint) {
+          natalToTransitAspectsList.push({
+            natal,
+            transitAspect,
+            midpoint,
+            aspect: aspectToMidpoint,
+            key: `${natal.name}-${transitAspect.transit1.name}-${transitAspect.transit2.name}`
+          });
+        }
       }
     }
-  }
+    return natalToTransitAspectsList;
+  }, [transitAspects, natalPositions, checkAspect]);
 
   const houseCusps = getHouseCusps();
 
@@ -478,18 +487,34 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
     firstHouseSymbol = ZODIAC_SIGNS.find(z => z.name === manualFirstHouseSign)?.symbol || '♈';
   }
 
-  const ascendantData = {
+  const ascendantData = useMemo(() => ({
     name: firstHouseLabel,
     symbol: firstHouseSymbol,
     longitude: firstHouseLongitude,
     zodiacSign: ZODIAC_SIGNS[firstHouseSignIndex].name,
     degree: Math.floor(firstHouseDegreeInSign),
     minute: Math.floor((firstHouseDegreeInSign % 1) * 60)
-  };
+  }), [firstHouseLabel, firstHouseSymbol, firstHouseLongitude, firstHouseSignIndex, firstHouseDegreeInSign]);
 
-  // Update parent component with planetary data
+  // Create a stable key based on actual data values to prevent infinite loops
+  const dataKey = useMemo(() => {
+    return JSON.stringify({
+      natalCount: natalPositions.length,
+      transitCount: transitPositions.length,
+      aspectCount: aspects.length,
+      transitAspectCount: transitAspects.length,
+      natalToTransitCount: natalToTransitAspects.length,
+      ascendantLng: ascendantData.longitude,
+      natalNames: natalPositions.map(p => p.name).join(','),
+      transitNames: transitPositions.map(p => p.name).join(',')
+    });
+  }, [natalPositions, transitPositions, aspects, transitAspects, natalToTransitAspects, ascendantData]);
+
+  // Update parent component with planetary data only when data actually changes
+  const prevDataKeyRef = useRef<string>('');
   useEffect(() => {
-    if (onDataUpdate) {
+    if (onDataUpdate && prevDataKeyRef.current !== dataKey) {
+      prevDataKeyRef.current = dataKey;
       onDataUpdate({
         natalPositions,
         transitPositions,
@@ -499,8 +524,7 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
         ascendant: ascendantData
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [natalPositions, transitPositions, aspects, transitAspects, natalToTransitAspects, ascendantLongitude]);
+  }, [dataKey, natalPositions, transitPositions, aspects, transitAspects, natalToTransitAspects, ascendantData, onDataUpdate]);
 
   return (
     <svg width="600" height="600" style={{ background: 'white', border: '1px solid #ddd' }}>
