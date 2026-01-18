@@ -233,16 +233,36 @@ const detectHouseCuspCrossings = (transitPlanets: any[], natalHouseCusps: number
 
   if (!natalHouseCusps || natalHouseCusps.length !== 12) return events;
 
+  // Define orbs based on planet speed (wider for slower planets)
+  const getHouseCuspOrb = (planetName: string): number => {
+    const orbs: Record<string, number> = {
+      'Sun': 1,
+      'Mercury': 1,
+      'Venus': 1,
+      'Mars': 1.5,
+      'Jupiter': 2,
+      'Saturn': 2.5,
+      'Uranus': 3,
+      'Neptune': 3,
+      'Pluto': 3,
+      'North Node': 2,
+      'South Node': 2
+    };
+    return orbs[planetName] || 1;
+  };
+
   transitPlanets.forEach((transitPlanet) => {
     // Skip Moon
     if (transitPlanet.name === 'Moon') return;
+
+    const orbAllowance = getHouseCuspOrb(transitPlanet.name);
 
     natalHouseCusps.forEach((cusp, houseIndex) => {
       let diff = Math.abs(transitPlanet.longitude - cusp);
       diff = diff > 180 ? 360 - diff : diff;
 
-      // Within 1° of house cusp
-      if (diff <= 1) {
+      // Within orb of house cusp
+      if (diff <= orbAllowance) {
         events.push({
           type: 'house-cusp-crossing',
           transitPlanet: transitPlanet.name,
