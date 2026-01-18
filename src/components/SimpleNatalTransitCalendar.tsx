@@ -1500,9 +1500,205 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
 
                     return interpretation;
                   } else if (selectedAspect.type === 'house-cusp-crossing') {
-                    return `Transit ${selectedAspect.transitPlanet} crossing your House ${selectedAspect.house} cusp:\n\nWhen a planet crosses a house cusp, it shifts the energy and focus to a new area of life. ${selectedAspect.transitPlanet} is now entering your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house, bringing its energy and themes into this life area.\n\nThis transit marks a beginning of ${selectedAspect.transitPlanet}'s journey through your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house sector. Over the coming period, expect developments and increased activity related to this house's themes. This is a time to consciously work with ${selectedAspect.transitPlanet}'s energy in this area of your life.`;
+                    // House themes and manifestations
+                    const houseThemes: Record<number, {theme: string, dailyLife: string}> = {
+                      1: {
+                        theme: 'Self-identity, physical body, personal appearance, how others perceive you, new beginnings',
+                        dailyLife: 'You may feel drawn to change your appearance (haircut, wardrobe, style). Others notice something different about you. New confidence emerges. You start introducing yourself differently or taking on a fresh persona. Physical energy shifts - either more vitality or need for body care.'
+                      },
+                      2: {
+                        theme: 'Money, income, possessions, values, self-worth, material security, what you own',
+                        dailyLife: 'Financial matters come into focus - salary negotiations, new income streams, or expenses requiring attention. You reconsider what you truly value. Shopping habits change. Questions arise about self-worth and how you earn. Possessions may need organizing or decluttering.'
+                      },
+                      3: {
+                        theme: 'Communication, siblings, neighbors, short trips, daily errands, learning, mental activity',
+                        dailyLife: 'Conversations increase. Emails, calls, and messages pile up. Siblings or neighbors become more present. Short trips or local errands multiply. You may start learning something new, writing, or teaching. Your daily commute or neighborhood dynamics shift.'
+                      },
+                      4: {
+                        theme: 'Home, family, roots, emotional foundation, private life, parents, real estate',
+                        dailyLife: 'Home becomes the center of attention - redecorating, repairs, or considering a move. Family matters need addressing. Emotions from the past surface. You may host more at home or need more privacy. Relationship with parents evolves. Domestic routines change.'
+                      },
+                      5: {
+                        theme: 'Romance, creativity, children, fun, self-expression, hobbies, speculation, joy',
+                        dailyLife: 'Romance enters or intensifies. Creative projects call for attention. If you have children, their needs become more prominent. Hobbies and leisure activities take priority. You feel more playful. Entertainment, dating, or artistic pursuits increase. Taking more risks for enjoyment.'
+                      },
+                      6: {
+                        theme: 'Work, health, daily routines, service, coworkers, pets, wellness practices',
+                        dailyLife: 'Work demands increase or job duties shift. Health requires more attention - doctor visits, new wellness routines, or diet changes. Daily schedules need adjusting. Coworkers become more significant. Pets need care. Service or helping others becomes a theme.'
+                      },
+                      7: {
+                        theme: 'Partnerships, marriage, committed relationships, contracts, open enemies, one-on-one dynamics',
+                        dailyLife: 'Relationships demand attention. Partner needs become more visible. Contracts or agreements arise. You may meet significant people. Marriage or partnership questions surface. Cooperation and compromise become necessary. Legal matters or consultations occur.'
+                      },
+                      8: {
+                        theme: 'Shared resources, intimacy, transformation, other people\'s money, taxes, death and rebirth, psychology',
+                        dailyLife: 'Joint finances need attention - loans, inheritance, taxes, or partner\'s money. Intimacy deepens or requires work. Something ends to make room for transformation. Psychological insights emerge. Power dynamics in relationships shift. Deeper conversations happen.'
+                      },
+                      9: {
+                        theme: 'Travel, higher education, beliefs, philosophy, publishing, foreign cultures, expansion',
+                        dailyLife: 'Travel opportunities arise. You may enroll in courses or workshops. Philosophical or spiritual interests deepen. Cultural experiences broaden perspective. Teaching or publishing possibilities emerge. Legal matters involving distance. Planning adventures abroad.'
+                      },
+                      10: {
+                        theme: 'Career, public image, reputation, ambitions, authority figures, life direction, professional status',
+                        dailyLife: 'Career takes center stage. Boss or authority figures notice you. Promotion opportunities or job changes arise. Public reputation matters more. Professional goals require action. You reconsider your life direction. Achievements or setbacks become visible to others.'
+                      },
+                      11: {
+                        theme: 'Friendships, groups, social networks, hopes and dreams, community, humanitarian causes',
+                        dailyLife: 'Friends become more present. Group activities or social events increase. Networking opportunities arise. You join new communities or organizations. Long-term goals clarify. Technology and social media play bigger roles. Collective efforts or causes engage you.'
+                      },
+                      12: {
+                        theme: 'Spirituality, solitude, hidden matters, unconscious patterns, retreat, ending cycles, self-undoing',
+                        dailyLife: 'Need for alone time increases. Spiritual practices deepen. Dreams become vivid. Old patterns surface for healing. You tie up loose ends. Secret matters require attention. Meditation, therapy, or retreat calls. Behind-the-scenes work. Compassion for suffering grows.'
+                      }
+                    };
+
+                    // Planet energies in action
+                    const planetActions: Record<string, string> = {
+                      'Sun': 'Your focus, vitality, and life force',
+                      'Mercury': 'Your thinking, communication, and mental energy',
+                      'Venus': 'Your love, money, and desire for beauty',
+                      'Mars': 'Your drive, action, and assertiveness',
+                      'Jupiter': 'Your growth, optimism, and opportunities',
+                      'Saturn': 'Your responsibility, discipline, and structure',
+                      'Uranus': 'Your need for change, freedom, and innovation',
+                      'Neptune': 'Your dreams, spirituality, and imagination',
+                      'Pluto': 'Your power, transformation, and intensity',
+                      'North Node': 'Your destiny and soul growth',
+                      'South Node': 'Your past patterns and comfort zone'
+                    };
+
+                    const houseInfo = houseThemes[selectedAspect.house];
+                    const planetAction = planetActions[selectedAspect.transitPlanet] || 'This planetary energy';
+
+                    let interpretation = `Transit ${selectedAspect.transitPlanet} crossing your House ${selectedAspect.house} cusp:\n\n`;
+                    interpretation += `HOUSE ${selectedAspect.house} THEMES:\n${houseInfo.theme}\n\n`;
+                    interpretation += `${planetAction} now enters this life area, initiating a new chapter. This crossing marks a threshold moment - what begins now will develop over the coming weeks and months.\n\n`;
+                    interpretation += `WHAT TO EXPECT IN DAILY LIFE:\n${houseInfo.dailyLife}\n\n`;
+                    interpretation += `TIMING:\n`;
+                    interpretation += `• This week: Initial activation, first signs appear\n`;
+                    interpretation += `• Coming period: Full development as planet moves through house\n`;
+                    interpretation += `• Key action: Pay attention to what emerges now - it sets the tone for this house's activation\n\n`;
+                    interpretation += `Take initiative in these matters. The universe is opening a door in this life area - walk through it consciously.`;
+
+                    return interpretation;
                   } else if (selectedAspect.type === 'transit-to-cusp') {
-                    return `Transit ${selectedAspect.transitPlanet} ${selectedAspect.aspect} House ${selectedAspect.house} cusp:\n\nWhen a planet aspects a house cusp, it activates that house's themes through the nature of the aspect. This ${selectedAspect.aspect.toLowerCase()} from ${selectedAspect.transitPlanet} to your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house cusp brings ${selectedAspect.transitPlanet}'s energy to bear on the matters of this house.\n\nDepending on the aspect type, this can bring opportunities (trine/sextile), challenges that promote growth (square), or the need to balance energies (opposition). Pay attention to how ${selectedAspect.transitPlanet}'s themes interact with this house's life areas during this time.`;
+                    // House themes
+                    const houseThemes: Record<number, {theme: string, dailyLife: string}> = {
+                      1: {
+                        theme: 'Self-identity, physical body, personal appearance, how others perceive you',
+                        dailyLife: 'identity, personal presentation, confidence, physical energy, how you come across to others'
+                      },
+                      2: {
+                        theme: 'Money, income, possessions, values, self-worth, material security',
+                        dailyLife: 'finances, earning capacity, spending, possessions, self-worth, material stability'
+                      },
+                      3: {
+                        theme: 'Communication, siblings, neighbors, short trips, learning, daily errands',
+                        dailyLife: 'conversations, messages, local travel, learning, siblings, neighbors, daily commutes'
+                      },
+                      4: {
+                        theme: 'Home, family, roots, emotional foundation, private life, parents',
+                        dailyLife: 'home environment, family dynamics, emotional security, living situation, private matters'
+                      },
+                      5: {
+                        theme: 'Romance, creativity, children, fun, self-expression, hobbies, joy',
+                        dailyLife: 'romance, creative projects, leisure activities, children, entertainment, playfulness'
+                      },
+                      6: {
+                        theme: 'Work, health, daily routines, service, coworkers, wellness',
+                        dailyLife: 'job duties, health practices, daily schedules, coworker relationships, service to others'
+                      },
+                      7: {
+                        theme: 'Partnerships, marriage, committed relationships, contracts, one-on-one dynamics',
+                        dailyLife: 'significant relationships, partnerships, contracts, consultations, cooperation'
+                      },
+                      8: {
+                        theme: 'Shared resources, intimacy, transformation, other people\'s money, psychology',
+                        dailyLife: 'joint finances, intimacy, shared resources, taxes, deep psychological matters'
+                      },
+                      9: {
+                        theme: 'Travel, higher education, beliefs, philosophy, foreign cultures, expansion',
+                        dailyLife: 'travel plans, education, beliefs, cultural experiences, teaching, publishing'
+                      },
+                      10: {
+                        theme: 'Career, public image, reputation, ambitions, authority, life direction',
+                        dailyLife: 'career goals, professional reputation, public visibility, dealings with authority'
+                      },
+                      11: {
+                        theme: 'Friendships, groups, social networks, hopes and dreams, community',
+                        dailyLife: 'friendships, group activities, social networks, long-term goals, community involvement'
+                      },
+                      12: {
+                        theme: 'Spirituality, solitude, hidden matters, unconscious patterns, endings',
+                        dailyLife: 'spiritual practices, alone time, dreams, hidden matters, closure, healing'
+                      }
+                    };
+
+                    // Aspect quality descriptions
+                    const isHarmonious = selectedAspect.aspect === 'Trine' || selectedAspect.aspect === 'Sextile';
+                    const isChallenging = selectedAspect.aspect === 'Square' || selectedAspect.aspect === 'Opposition';
+
+                    const aspectQualities: Record<string, {nature: string, manifestation: string}> = {
+                      'Trine': {
+                        nature: 'HARMONIOUS FLOW - Easy, natural, supportive',
+                        manifestation: 'Things in this life area flow smoothly. Opportunities arise with little resistance. Talents and resources become available. Progress feels natural. The path of least resistance leads forward. Trust what comes easily.'
+                      },
+                      'Sextile': {
+                        nature: 'OPPORTUNITY - Supportive, cooperative, requires small action',
+                        manifestation: 'Opportunities knock, but you must answer. Small efforts yield good results. Connections and resources appear when needed. Taking initiative brings rewards. The door is open - walk through it with confidence.'
+                      },
+                      'Square': {
+                        nature: 'DYNAMIC TENSION - Challenging, motivating, growth through friction',
+                        manifestation: 'Friction creates motivation for change. Obstacles push you to grow. What feels difficult now builds strength. Adjustments required. Tension between different life areas demands resolution. Push through resistance - breakthrough awaits.'
+                      },
+                      'Opposition': {
+                        nature: 'BALANCING ACT - Awareness, compromise, integration of opposites',
+                        manifestation: 'Two areas of life pull in opposite directions. Balance required. Others mirror what you need to see. External circumstances demand response. Find middle ground. Integration of opposites brings wholeness. Compromise leads to progress.'
+                      }
+                    };
+
+                    // Planet energies
+                    const planetActions: Record<string, string> = {
+                      'Sun': 'Your vitality, ego, and life force activate',
+                      'Mercury': 'Your mind, communication, and ideas engage',
+                      'Venus': 'Your love, values, and desire for harmony touch',
+                      'Mars': 'Your drive, action, and assertiveness trigger',
+                      'Jupiter': 'Your growth, optimism, and expansion influence',
+                      'Saturn': 'Your responsibility, limits, and discipline test',
+                      'Uranus': 'Your need for change, freedom, and awakening stimulate',
+                      'Neptune': 'Your dreams, spirituality, and imagination inspire',
+                      'Pluto': 'Your power, transformation, and intensity penetrate',
+                      'North Node': 'Your destiny and growth direction align with',
+                      'South Node': 'Your past patterns and release process affect'
+                    };
+
+                    const houseInfo = houseThemes[selectedAspect.house];
+                    const aspectQuality = aspectQualities[selectedAspect.aspect];
+                    const planetAction = planetActions[selectedAspect.transitPlanet] || 'This planetary energy affects';
+
+                    let interpretation = `Transit ${selectedAspect.transitPlanet} ${selectedAspect.aspect} House ${selectedAspect.house} cusp:\n\n`;
+                    interpretation += `ASPECT NATURE:\n${aspectQuality.nature}\n\n`;
+                    interpretation += `HOUSE ${selectedAspect.house} GOVERNS:\n${houseInfo.theme}\n\n`;
+                    interpretation += `HOW THIS MANIFESTS:\n${planetAction} matters of ${houseInfo.dailyLife}.\n\n`;
+                    interpretation += `${aspectQuality.manifestation}\n\n`;
+
+                    if (isHarmonious) {
+                      interpretation += `PRACTICAL GUIDANCE:\n`;
+                      interpretation += `• Say yes to opportunities in this area\n`;
+                      interpretation += `• Leverage natural talents and existing resources\n`;
+                      interpretation += `• Follow what feels easy and aligned\n`;
+                      interpretation += `• Small efforts create positive ripples\n`;
+                      interpretation += `• Trust timing and flow`;
+                    } else if (isChallenging) {
+                      interpretation += `PRACTICAL GUIDANCE:\n`;
+                      interpretation += `• Face challenges directly - avoidance increases difficulty\n`;
+                      interpretation += `• Make necessary adjustments and compromises\n`;
+                      interpretation += `• Use tension as fuel for positive change\n`;
+                      interpretation += `• Patience and persistence bring breakthrough\n`;
+                      interpretation += `• What you build now under pressure lasts`;
+                    }
+
+                    return interpretation;
                   } else {
                     // Regular natal-transit aspect
                     const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
