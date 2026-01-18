@@ -117,6 +117,7 @@ const calculateNatalToTransitAspects = (natalPlanets: any[], transitPlanets: any
         if (Math.abs(distance - aspectType.angle) <= orb) {
           const actualOrb = Math.abs(distance - aspectType.angle);
           aspects.push({
+            type: 'natal-transit',
             natalPlanet: natalPlanet.name,
             transitPlanet: transitPlanet.name,
             aspect: aspectType.name,
@@ -133,6 +134,172 @@ const calculateNatalToTransitAspects = (natalPlanets: any[], transitPlanets: any
 
   // Sort by orb (tightest first)
   return aspects.sort((a, b) => a.orb - b.orb);
+};
+
+// Detect eclipses (Solar = Sun-Moon conjunction, Lunar = Sun-Moon opposition)
+const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
+  const events: any[] = [];
+  const sun = transitPlanets.find(p => p.name === 'Sun');
+  const moon = transitPlanets.find(p => p.name === 'Moon');
+  const northNode = transitPlanets.find(p => p.name === 'North Node');
+
+  if (!sun || !moon || !northNode) return events;
+
+  // Check Sun-Moon conjunction (New Moon/Solar Eclipse)
+  const conjDiff = Math.abs(sun.longitude - moon.longitude);
+  const conjDistance = conjDiff > 180 ? 360 - conjDiff : conjDiff;
+
+  if (conjDistance <= 10) { // New Moon within 10°
+    // Check if near nodes for eclipse (within 15° of either node)
+    const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
+    const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
+    const southNodeLong = (northNode.longitude + 180) % 360;
+    const southNodeDist = Math.abs(sun.longitude - southNodeLong);
+    const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+
+    const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+
+    // Check if this eclipse aspects any natal planets
+    natalPlanets.forEach((natalPlanet) => {
+      ASPECT_TYPES.forEach((aspectType) => {
+        const diff = Math.abs(natalPlanet.longitude - sun.longitude);
+        const distance = diff > 180 ? 360 - diff : diff;
+        const orb = 3; // Tight orb for eclipses
+
+        if (Math.abs(distance - aspectType.angle) <= orb) {
+          const actualOrb = Math.abs(distance - aspectType.angle);
+          events.push({
+            type: 'eclipse',
+            eclipseType: isNearNode ? 'Solar Eclipse' : 'New Moon',
+            natalPlanet: natalPlanet.name,
+            aspect: aspectType.name,
+            orb: actualOrb,
+            color: isNearNode ? '#8B0000' : '#4B0082',
+            symbol: isNearNode ? '🌑' : '🌙',
+            natalLongitude: natalPlanet.longitude,
+            transitLongitude: sun.longitude,
+            transitPlanet: isNearNode ? 'Solar Eclipse' : 'New Moon'
+          });
+        }
+      });
+    });
+  }
+
+  // Check Sun-Moon opposition (Full Moon/Lunar Eclipse)
+  const oppDiff = Math.abs(sun.longitude - moon.longitude);
+  const oppDistance = oppDiff > 180 ? 360 - oppDiff : oppDiff;
+
+  if (Math.abs(oppDistance - 180) <= 10) { // Full Moon within 10° of opposition
+    const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
+    const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
+    const southNodeLong = (northNode.longitude + 180) % 360;
+    const southNodeDist = Math.abs(sun.longitude - southNodeLong);
+    const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+
+    const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+
+    // Check if this eclipse aspects any natal planets
+    natalPlanets.forEach((natalPlanet) => {
+      ASPECT_TYPES.forEach((aspectType) => {
+        const diff = Math.abs(natalPlanet.longitude - moon.longitude);
+        const distance = diff > 180 ? 360 - diff : diff;
+        const orb = 3;
+
+        if (Math.abs(distance - aspectType.angle) <= orb) {
+          const actualOrb = Math.abs(distance - aspectType.angle);
+          events.push({
+            type: 'eclipse',
+            eclipseType: isNearNode ? 'Lunar Eclipse' : 'Full Moon',
+            natalPlanet: natalPlanet.name,
+            aspect: aspectType.name,
+            orb: actualOrb,
+            color: isNearNode ? '#8B4513' : '#191970',
+            symbol: isNearNode ? '🌕' : '🌕',
+            natalLongitude: natalPlanet.longitude,
+            transitLongitude: moon.longitude,
+            transitPlanet: isNearNode ? 'Lunar Eclipse' : 'Full Moon'
+          });
+        }
+      });
+    });
+  }
+
+  return events;
+};
+
+// Detect house cusp crossings
+const detectHouseCuspCrossings = (transitPlanets: any[], natalHouseCusps: number[], houseSystem: string) => {
+  const events: any[] = [];
+
+  if (!natalHouseCusps || natalHouseCusps.length !== 12) return events;
+
+  transitPlanets.forEach((transitPlanet) => {
+    // Skip Moon
+    if (transitPlanet.name === 'Moon') return;
+
+    natalHouseCusps.forEach((cusp, houseIndex) => {
+      let diff = Math.abs(transitPlanet.longitude - cusp);
+      diff = diff > 180 ? 360 - diff : diff;
+
+      // Within 1° of house cusp
+      if (diff <= 1) {
+        events.push({
+          type: 'house-cusp-crossing',
+          transitPlanet: transitPlanet.name,
+          house: houseIndex + 1,
+          orb: diff,
+          color: '#FF8C00',
+          symbol: '🏠',
+          transitLongitude: transitPlanet.longitude,
+          cuspLongitude: cusp,
+          natalPlanet: `House ${houseIndex + 1} Cusp`
+        });
+      }
+    });
+  });
+
+  return events;
+};
+
+// Detect transit planet aspects to natal house cusps
+const detectTransitToHouseCuspAspects = (transitPlanets: any[], natalHouseCusps: number[]) => {
+  const events: any[] = [];
+
+  if (!natalHouseCusps || natalHouseCusps.length !== 12) return events;
+
+  transitPlanets.forEach((transitPlanet) => {
+    // Skip Moon
+    if (transitPlanet.name === 'Moon') return;
+
+    natalHouseCusps.forEach((cusp, houseIndex) => {
+      ASPECT_TYPES.forEach((aspectType) => {
+        // Skip conjunction (handled by house cusp crossing)
+        if (aspectType.name === 'Conjunction') return;
+
+        const diff = Math.abs(transitPlanet.longitude - cusp);
+        const distance = diff > 180 ? 360 - diff : diff;
+        const orb = 2; // Tight orb for house cusp aspects
+
+        if (Math.abs(distance - aspectType.angle) <= orb) {
+          const actualOrb = Math.abs(distance - aspectType.angle);
+          events.push({
+            type: 'transit-to-cusp',
+            transitPlanet: transitPlanet.name,
+            house: houseIndex + 1,
+            aspect: aspectType.name,
+            orb: actualOrb,
+            color: aspectType.color,
+            symbol: aspectType.symbol,
+            transitLongitude: transitPlanet.longitude,
+            cuspLongitude: cusp,
+            natalPlanet: `House ${houseIndex + 1} Cusp`
+          });
+        }
+      });
+    });
+  });
+
+  return events;
 };
 
 // Helper to format degrees
@@ -354,21 +521,43 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
       const transitPlanets = calculatePlanetaryPositions(date);
       const natalToTransitAspects = calculateNatalToTransitAspects(natalPlanets, transitPlanets);
 
-      // Sort aspects by transit planet speed (slower planets first - outer to inner)
-      natalToTransitAspects.sort((a, b) => {
-        const speedA = getPlanetSpeedOrder(a.transitPlanet);
-        const speedB = getPlanetSpeedOrder(b.transitPlanet);
+      // Detect eclipses and lunations
+      const eclipseEvents = detectEclipses(transitPlanets, natalPlanets);
+
+      // Detect house cusp events
+      const houseCuspCrossings = natalAscendant?.houseCusps
+        ? detectHouseCuspCrossings(transitPlanets, natalAscendant.houseCusps, houseSystem)
+        : [];
+
+      const transitToCuspAspects = natalAscendant?.houseCusps
+        ? detectTransitToHouseCuspAspects(transitPlanets, natalAscendant.houseCusps)
+        : [];
+
+      // Combine all events
+      const allEvents = [
+        ...natalToTransitAspects,
+        ...eclipseEvents,
+        ...houseCuspCrossings,
+        ...transitToCuspAspects
+      ];
+
+      // Sort all events by transit planet speed (slower planets first - outer to inner)
+      allEvents.sort((a, b) => {
+        const planetA = a.transitPlanet || '';
+        const planetB = b.transitPlanet || '';
+        const speedA = getPlanetSpeedOrder(planetA);
+        const speedB = getPlanetSpeedOrder(planetB);
         return speedB - speedA; // Reversed: slower (higher number) first
       });
 
       days.push({
         date,
-        aspects: natalToTransitAspects
+        aspects: allEvents
       });
     }
 
     return days;
-  }, [currentWeekStart, natalPlanets]);
+  }, [currentWeekStart, natalPlanets, natalAscendant, houseSystem]);
 
   // Create a consistent row mapping for aspects across the week
   const aspectRowMapping = useMemo(() => {
@@ -378,16 +567,28 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
     // Collect all unique aspect keys across the week
     weekData.forEach(day => {
       day.aspects.forEach((aspect: any) => {
-        const key = `${aspect.natalPlanet}-${aspect.aspect}-${aspect.transitPlanet}`;
+        let key = '';
+        if (aspect.type === 'eclipse') {
+          key = `${aspect.eclipseType}-${aspect.aspect}-${aspect.natalPlanet}`;
+        } else if (aspect.type === 'house-cusp-crossing') {
+          key = `${aspect.transitPlanet}-crossing-House${aspect.house}`;
+        } else if (aspect.type === 'transit-to-cusp') {
+          key = `${aspect.transitPlanet}-${aspect.aspect}-House${aspect.house}`;
+        } else {
+          // Regular natal-transit aspect
+          key = `${aspect.natalPlanet}-${aspect.aspect}-${aspect.transitPlanet}`;
+        }
         allAspectKeys.add(key);
       });
     });
 
     // Sort aspect keys by first appearance and planet speed
     const sortedKeys = Array.from(allAspectKeys).sort((keyA, keyB) => {
-      // Extract transit planet from key
-      const planetA = keyA.split('-')[2];
-      const planetB = keyB.split('-')[2];
+      // Extract transit planet from key (last part or second part for house cusps)
+      const partsA = keyA.split('-');
+      const partsB = keyB.split('-');
+      const planetA = partsA[partsA.length - 1].startsWith('House') ? partsA[0] : partsA[partsA.length - 1];
+      const planetB = partsB.length === 1 ? partsB[0] : partsB[partsB.length - 1].startsWith('House') ? partsB[0] : partsB[partsB.length - 1];
 
       // Sort by planet speed (slower first)
       const speedA = getPlanetSpeedOrder(planetA);
@@ -675,7 +876,16 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                 // Create a map of aspect keys to aspects for this day
                 const aspectMap = new Map<string, any>();
                 day.aspects.forEach((aspect: any) => {
-                  const key = `${aspect.natalPlanet}-${aspect.aspect}-${aspect.transitPlanet}`;
+                  let key = '';
+                  if (aspect.type === 'eclipse') {
+                    key = `${aspect.eclipseType}-${aspect.aspect}-${aspect.natalPlanet}`;
+                  } else if (aspect.type === 'house-cusp-crossing') {
+                    key = `${aspect.transitPlanet}-crossing-House${aspect.house}`;
+                  } else if (aspect.type === 'transit-to-cusp') {
+                    key = `${aspect.transitPlanet}-${aspect.aspect}-House${aspect.house}`;
+                  } else {
+                    key = `${aspect.natalPlanet}-${aspect.aspect}-${aspect.transitPlanet}`;
+                  }
                   aspectMap.set(key, aspect);
                 });
 
@@ -696,11 +906,102 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                   }
 
                   if (aspectForRow) {
+                    // Generate title and content based on event type
+                    let title = '';
+                    let bgColor = '';
+                    let content: any = null;
+
+                    if (aspectForRow.type === 'eclipse') {
+                      title = `${aspectForRow.eclipseType} ${aspectForRow.aspect} Natal ${aspectForRow.natalPlanet}`;
+                      bgColor = aspectForRow.color + '22';
+                      content = (
+                        <>
+                          <span style={{ fontSize: '12px' }}>{aspectForRow.symbol}</span>
+                          {' '}
+                          <span style={{ color: aspectForRow.color }}>
+                            {aspectForRow.aspect === 'Conjunction' ? '☌' : aspectForRow.aspect === 'Opposition' ? '☍' :
+                             aspectForRow.aspect === 'Trine' ? '△' : aspectForRow.aspect === 'Square' ? '□' : '⚹'}
+                          </span>
+                          {' '}
+                          <span style={{ color: PLANET_COLORS[aspectForRow.natalPlanet] || '#333', fontWeight: 'bold' }}>
+                            {PLANET_SYMBOLS[aspectForRow.natalPlanet]}
+                          </span>
+                          <br />
+                          <span style={{ fontSize: '10px', color: '#888' }}>
+                            {aspectForRow.orb.toFixed(1)}° orb
+                          </span>
+                        </>
+                      );
+                    } else if (aspectForRow.type === 'house-cusp-crossing') {
+                      title = `Transit ${aspectForRow.transitPlanet} crossing House ${aspectForRow.house} Cusp`;
+                      bgColor = (PLANET_COLORS[aspectForRow.transitPlanet] || '#FF8C00') + '22';
+                      content = (
+                        <>
+                          <span style={{ fontWeight: 'bold', color: PLANET_COLORS[aspectForRow.transitPlanet] || '#333' }}>
+                            {PLANET_SYMBOLS[aspectForRow.transitPlanet]}
+                          </span>
+                          {' '}
+                          <span style={{ color: aspectForRow.color }}>
+                            {aspectForRow.symbol}
+                          </span>
+                          {' H'}
+                          <span style={{ fontSize: '10px' }}>{aspectForRow.house}</span>
+                          <br />
+                          <span style={{ fontSize: '10px', color: '#888' }}>
+                            {aspectForRow.orb.toFixed(1)}° orb
+                          </span>
+                        </>
+                      );
+                    } else if (aspectForRow.type === 'transit-to-cusp') {
+                      title = `Transit ${aspectForRow.transitPlanet} ${aspectForRow.aspect} House ${aspectForRow.house} Cusp`;
+                      bgColor = (PLANET_COLORS[aspectForRow.transitPlanet] || '#667eea') + '22';
+                      content = (
+                        <>
+                          <span style={{ fontWeight: 'bold', color: PLANET_COLORS[aspectForRow.transitPlanet] || '#333' }}>
+                            {PLANET_SYMBOLS[aspectForRow.transitPlanet]}
+                          </span>
+                          {' '}
+                          <span style={{ color: aspectForRow.color }}>
+                            {aspectForRow.symbol}
+                          </span>
+                          {' H'}
+                          <span style={{ fontSize: '10px' }}>{aspectForRow.house}</span>
+                          <br />
+                          <span style={{ fontSize: '10px', color: '#888' }}>
+                            {aspectForRow.orb.toFixed(1)}° orb
+                          </span>
+                        </>
+                      );
+                    } else {
+                      // Regular natal-transit aspect
+                      title = `Natal ${aspectForRow.natalPlanet} ${aspectForRow.aspect} Transit ${aspectForRow.transitPlanet}`;
+                      bgColor = (PLANET_COLORS[aspectForRow.transitPlanet] || '#667eea') + '22';
+                      content = (
+                        <>
+                          <span style={{ color: PLANET_COLORS[aspectForRow.natalPlanet] || '#333', fontWeight: 'bold' }}>
+                            {PLANET_SYMBOLS[aspectForRow.natalPlanet]}
+                          </span>
+                          {' '}
+                          <span style={{ color: aspectForRow.color }}>
+                            {aspectForRow.symbol}
+                          </span>
+                          {' '}
+                          <span style={{ fontWeight: 'bold', color: PLANET_COLORS[aspectForRow.transitPlanet] || '#333' }}>
+                            {PLANET_SYMBOLS[aspectForRow.transitPlanet]}
+                          </span>
+                          <br />
+                          <span style={{ fontSize: '10px', color: '#888' }}>
+                            {aspectForRow.orb.toFixed(1)}° orb
+                          </span>
+                        </>
+                      );
+                    }
+
                     // Render the aspect
                     rows.push(
                       <div
                         key={row}
-                        title={`Natal ${aspectForRow.natalPlanet} ${aspectForRow.aspect} Transit ${aspectForRow.transitPlanet}`}
+                        title={title}
                         onClick={(e) => {
                           e.stopPropagation();
                           setSelectedAspect(aspectForRow);
@@ -708,7 +1009,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                         style={{
                           marginTop: '5px',
                           padding: '5px',
-                          backgroundColor: (PLANET_COLORS[aspectForRow.transitPlanet] || '#667eea') + '22',
+                          backgroundColor: bgColor,
                           borderRadius: '4px',
                           fontSize: '11px',
                           borderLeft: `3px solid ${aspectForRow.color}`,
@@ -724,21 +1025,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                           e.currentTarget.style.boxShadow = 'none';
                         }}
                       >
-                        <span style={{ color: PLANET_COLORS[aspectForRow.natalPlanet] || '#333', fontWeight: 'bold' }}>
-                          {PLANET_SYMBOLS[aspectForRow.natalPlanet]}
-                        </span>
-                        {' '}
-                        <span style={{ color: aspectForRow.color }}>
-                          {aspectForRow.symbol}
-                        </span>
-                        {' '}
-                        <span style={{ fontWeight: 'bold', color: PLANET_COLORS[aspectForRow.transitPlanet] || '#333' }}>
-                          {PLANET_SYMBOLS[aspectForRow.transitPlanet]}
-                        </span>
-                        <br />
-                        <span style={{ fontSize: '10px', color: '#888' }}>
-                          {aspectForRow.orb.toFixed(1)}° orb
-                        </span>
+                        {content}
                       </div>
                     );
                   } else {
@@ -992,47 +1279,110 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
               ×
             </button>
 
-            {/* Title */}
+            {/* Title - Dynamic based on event type */}
             <h3 style={{
               marginBottom: '20px',
               color: '#333',
               fontSize: '22px',
               paddingRight: '30px'
             }}>
-              <span style={{ color: PLANET_COLORS[selectedAspect.natalPlanet] }}>
-                Natal {selectedAspect.natalPlanet} {PLANET_SYMBOLS[selectedAspect.natalPlanet]}
-              </span>
-              {' '}
-              <span style={{ color: selectedAspect.color }}>
-                {selectedAspect.aspect} {selectedAspect.symbol}
-              </span>
-              {' '}
-              <span style={{ color: PLANET_COLORS[selectedAspect.transitPlanet] || '#333' }}>
-                Transit {selectedAspect.transitPlanet} {PLANET_SYMBOLS[selectedAspect.transitPlanet]}
-              </span>
+              {selectedAspect.type === 'eclipse' ? (
+                <>
+                  <span style={{ fontSize: '20px' }}>{selectedAspect.symbol}</span>
+                  {' '}
+                  <span style={{ color: selectedAspect.color, fontWeight: 'bold' }}>
+                    {selectedAspect.eclipseType}
+                  </span>
+                  {' '}
+                  <span style={{ color: selectedAspect.color }}>
+                    {selectedAspect.aspect}
+                  </span>
+                  {' '}
+                  <span style={{ color: PLANET_COLORS[selectedAspect.natalPlanet] }}>
+                    Natal {selectedAspect.natalPlanet} {PLANET_SYMBOLS[selectedAspect.natalPlanet]}
+                  </span>
+                </>
+              ) : selectedAspect.type === 'house-cusp-crossing' ? (
+                <>
+                  <span style={{ color: PLANET_COLORS[selectedAspect.transitPlanet] }}>
+                    Transit {selectedAspect.transitPlanet} {PLANET_SYMBOLS[selectedAspect.transitPlanet]}
+                  </span>
+                  {' '}
+                  <span style={{ color: selectedAspect.color }}>
+                    {selectedAspect.symbol} Crossing
+                  </span>
+                  {' '}
+                  <span>House {selectedAspect.house} Cusp</span>
+                </>
+              ) : selectedAspect.type === 'transit-to-cusp' ? (
+                <>
+                  <span style={{ color: PLANET_COLORS[selectedAspect.transitPlanet] }}>
+                    Transit {selectedAspect.transitPlanet} {PLANET_SYMBOLS[selectedAspect.transitPlanet]}
+                  </span>
+                  {' '}
+                  <span style={{ color: selectedAspect.color }}>
+                    {selectedAspect.aspect} {selectedAspect.symbol}
+                  </span>
+                  {' '}
+                  <span>House {selectedAspect.house} Cusp</span>
+                </>
+              ) : (
+                <>
+                  <span style={{ color: PLANET_COLORS[selectedAspect.natalPlanet] }}>
+                    Natal {selectedAspect.natalPlanet} {PLANET_SYMBOLS[selectedAspect.natalPlanet]}
+                  </span>
+                  {' '}
+                  <span style={{ color: selectedAspect.color }}>
+                    {selectedAspect.aspect} {selectedAspect.symbol}
+                  </span>
+                  {' '}
+                  <span style={{ color: PLANET_COLORS[selectedAspect.transitPlanet] || '#333' }}>
+                    Transit {selectedAspect.transitPlanet} {PLANET_SYMBOLS[selectedAspect.transitPlanet]}
+                  </span>
+                </>
+              )}
             </h3>
 
-            {/* Planet Positions */}
+            {/* Planet/Cusp Positions */}
             <div style={{
               backgroundColor: '#f5f5f5',
               padding: '15px',
               borderRadius: '8px',
               marginBottom: '20px'
             }}>
-              <div style={{ marginBottom: '10px', fontSize: '14px' }}>
-                <strong style={{ color: PLANET_COLORS[selectedAspect.natalPlanet] }}>
-                  Natal {selectedAspect.natalPlanet}:
-                </strong>
-                {' '}
-                {formatDegrees(selectedAspect.natalLongitude)} {getZodiacSign(selectedAspect.natalLongitude)}
-              </div>
-              <div style={{ marginBottom: '10px', fontSize: '14px' }}>
-                <strong style={{ color: PLANET_COLORS[selectedAspect.transitPlanet] || '#333' }}>
-                  Transit {selectedAspect.transitPlanet}:
-                </strong>
-                {' '}
-                {formatDegrees(selectedAspect.transitLongitude)} {getZodiacSign(selectedAspect.transitLongitude)}
-              </div>
+              {selectedAspect.type === 'eclipse' || selectedAspect.type === 'natal-transit' ? (
+                <>
+                  <div style={{ marginBottom: '10px', fontSize: '14px' }}>
+                    <strong style={{ color: PLANET_COLORS[selectedAspect.natalPlanet] }}>
+                      Natal {selectedAspect.natalPlanet}:
+                    </strong>
+                    {' '}
+                    {formatDegrees(selectedAspect.natalLongitude)} {getZodiacSign(selectedAspect.natalLongitude)}
+                  </div>
+                  <div style={{ marginBottom: '10px', fontSize: '14px' }}>
+                    <strong style={{ color: selectedAspect.type === 'eclipse' ? selectedAspect.color : PLANET_COLORS[selectedAspect.transitPlanet] || '#333' }}>
+                      {selectedAspect.type === 'eclipse' ? selectedAspect.eclipseType : `Transit ${selectedAspect.transitPlanet}`}:
+                    </strong>
+                    {' '}
+                    {formatDegrees(selectedAspect.transitLongitude)} {getZodiacSign(selectedAspect.transitLongitude)}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div style={{ marginBottom: '10px', fontSize: '14px' }}>
+                    <strong style={{ color: PLANET_COLORS[selectedAspect.transitPlanet] || '#333' }}>
+                      Transit {selectedAspect.transitPlanet}:
+                    </strong>
+                    {' '}
+                    {formatDegrees(selectedAspect.transitLongitude)} {getZodiacSign(selectedAspect.transitLongitude)}
+                  </div>
+                  <div style={{ marginBottom: '10px', fontSize: '14px' }}>
+                    <strong>House {selectedAspect.house} Cusp:</strong>
+                    {' '}
+                    {formatDegrees(selectedAspect.cuspLongitude)} {getZodiacSign(selectedAspect.cuspLongitude)}
+                  </div>
+                </>
+              )}
               <div style={{ fontSize: '14px', color: '#888' }}>
                 <strong>Orb:</strong> {selectedAspect.orb.toFixed(2)}°
               </div>
@@ -1053,26 +1403,34 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
               </h4>
               <div style={{ whiteSpace: 'pre-wrap' }}>
                 {(() => {
-                  // Find the natal planet's house
-                  const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
-                  const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
-                    ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps)
-                    : 1;
+                  // Generate interpretation based on event type
+                  if (selectedAspect.type === 'eclipse') {
+                    return `${selectedAspect.eclipseType} ${selectedAspect.aspect} your natal ${selectedAspect.natalPlanet}:\n\n${selectedAspect.eclipseType}s are powerful cosmic events that mark significant turning points and new beginnings. This ${selectedAspect.eclipseType.toLowerCase()} forms a ${selectedAspect.aspect.toLowerCase()} with your natal ${selectedAspect.natalPlanet}, activating themes related to ${selectedAspect.natalPlanet}'s placement in your chart. Eclipses bring fated events, sudden revelations, and opportunities for transformation that unfold over the following 6 months.\n\nThis eclipse energy will illuminate matters connected to your natal ${selectedAspect.natalPlanet}, bringing either new opportunities or necessary closures. Pay attention to significant events occurring within 3 days of this eclipse, as they often set the tone for the eclipse season ahead.`;
+                  } else if (selectedAspect.type === 'house-cusp-crossing') {
+                    return `Transit ${selectedAspect.transitPlanet} crossing your House ${selectedAspect.house} cusp:\n\nWhen a planet crosses a house cusp, it shifts the energy and focus to a new area of life. ${selectedAspect.transitPlanet} is now entering your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house, bringing its energy and themes into this life area.\n\nThis transit marks a beginning of ${selectedAspect.transitPlanet}'s journey through your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house sector. Over the coming period, expect developments and increased activity related to this house's themes. This is a time to consciously work with ${selectedAspect.transitPlanet}'s energy in this area of your life.`;
+                  } else if (selectedAspect.type === 'transit-to-cusp') {
+                    return `Transit ${selectedAspect.transitPlanet} ${selectedAspect.aspect} House ${selectedAspect.house} cusp:\n\nWhen a planet aspects a house cusp, it activates that house's themes through the nature of the aspect. This ${selectedAspect.aspect.toLowerCase()} from ${selectedAspect.transitPlanet} to your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house cusp brings ${selectedAspect.transitPlanet}'s energy to bear on the matters of this house.\n\nDepending on the aspect type, this can bring opportunities (trine/sextile), challenges that promote growth (square), or the need to balance energies (opposition). Pay attention to how ${selectedAspect.transitPlanet}'s themes interact with this house's life areas during this time.`;
+                  } else {
+                    // Regular natal-transit aspect
+                    const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
+                    const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
+                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps)
+                      : 1;
 
-                  // Find which natal house the transiting planet is currently in
-                  const transitHouse = natalAscendant?.houseCusps
-                    ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps)
-                    : 1;
+                    const transitHouse = natalAscendant?.houseCusps
+                      ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps)
+                      : 1;
 
-                  const result = generateAspectInterpretation(
-                    selectedAspect.natalPlanet,
-                    natalHouse,
-                    selectedAspect.transitPlanet,
-                    transitHouse,
-                    selectedAspect.aspect,
-                    selectedAspect.orb
-                  );
-                  return result.fullInterpretation || 'Interpretation not available';
+                    const result = generateAspectInterpretation(
+                      selectedAspect.natalPlanet,
+                      natalHouse,
+                      selectedAspect.transitPlanet,
+                      transitHouse,
+                      selectedAspect.aspect,
+                      selectedAspect.orb
+                    );
+                    return result.fullInterpretation || 'Interpretation not available';
+                  }
                 })()}
               </div>
             </div>
