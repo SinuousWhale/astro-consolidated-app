@@ -1124,7 +1124,8 @@ function getSpecificManifestations(
 
     // Sun-Saturn: Testing of identity, responsibility, building character
     if (pairKey === 'Sun-Saturn' || reversePairKey === 'Sun-Saturn') {
-      if (transitHouse === 10) {
+      // House 10: Career, public image, authority, reputation
+      if (transitHouse === 10 || natalHouse === 10) {
         if (isHard) {
           manifestations.push(
             'Boss criticizes your work or questions your competence',
@@ -1159,7 +1160,8 @@ function getSpecificManifestations(
           );
         }
       }
-      if (transitHouse === 6) {
+      // House 6: Work, daily routine, health, service
+      if (transitHouse === 6 || natalHouse === 6) {
         if (isHard) {
           manifestations.push(
             'Chronic fatigue or low energy that won\'t go away',
@@ -1194,8 +1196,107 @@ function getSpecificManifestations(
           );
         }
       }
-      if (natalHouse === 5 && transitHouse === 6) {
-        manifestations.push('Your creative projects (5th) are tested by work demands (6th) - struggling to find time for hobbies. Romantic life takes backseat to job responsibilities.');
+      // House 1: Identity, self, physical body, personal presence
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Confidence plummets - doubting your worth and capabilities',
+            'Feeling older, tired, or less attractive than usual',
+            'Identity crisis - "Who am I and what\'s my purpose?"',
+            'Self-criticism harsh and unrelenting',
+            'Physical appearance concerns - aging, weight, energy',
+            'Comparing yourself to others and feeling inadequate',
+            'Fear of being seen or putting yourself out there',
+            'Imposter syndrome intensifies dramatically',
+            'Depression affecting sense of self',
+            'Feeling invisible or overlooked in life',
+            'Body image issues or health scare',
+            'Responsibilities weighing heavily on identity'
+          );
+        } else {
+          manifestations.push(
+            'Increased self-discipline and maturity',
+            'Confidence from competence - proven track record',
+            'Taking yourself seriously - earned self-respect',
+            'Physical transformation through disciplined effort',
+            'Identity strengthens through meeting challenges',
+            'Respected by others for reliability and character',
+            'Comfortable with who you are - authentic presence',
+            'Leadership qualities emerging naturally',
+            'Health improvements from consistent self-care',
+            'Personal goals achieved through persistence',
+            'Strong sense of purpose and direction',
+            'Mature self-image built on real accomplishments'
+          );
+        }
+      }
+      // House 4: Home, family, roots, emotional foundation
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Father or authority parent criticizes or disappoints',
+            'Heavy family responsibilities weighing you down',
+            'Home feels cold, empty, or depressing',
+            'Expensive home repairs or real estate stress',
+            'Childhood wounds resurfacing - feeling unloved',
+            'Parent\'s health decline requiring your care',
+            'Feeling trapped by family obligations',
+            'Home life lacks warmth or emotional support',
+            'Real estate loss or property value decline',
+            'Family expects too much - can\'t meet their standards',
+            'Isolation at home or from family',
+            'Past failures haunting your emotional security'
+          );
+        } else {
+          manifestations.push(
+            'Building solid foundation through home improvements',
+            'Father or authority parent shows respect and support',
+            'Family responsibilities handled maturely',
+            'Real estate investment paying off',
+            'Creating stable, secure home environment',
+            'Family traditions and roots provide strength',
+            'Successfully caring for aging parent',
+            'Home becomes sanctuary through disciplined upkeep',
+            'Emotional maturity strengthens family bonds',
+            'Property ownership or home purchase achieved',
+            'Family heritage providing resources or wisdom',
+            'Childhood lessons finally making sense'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Feeling tested, blocked, or criticized',
+            'Self-doubt and questioning your worth',
+            'Responsibilities feel overwhelming and heavy',
+            'Progress slower than desired - patience tested',
+            'Authority figures or rules limiting you',
+            'Fear of failure preventing risk-taking',
+            'Working hard but results not matching effort',
+            'Feeling older, tired, or less confident',
+            'Obligations weighing heavily on identity',
+            'Isolation or lack of recognition',
+            'Depression or low mood affecting outlook',
+            'Life feels like uphill struggle'
+          );
+        } else {
+          manifestations.push(
+            'Building solid foundations through persistent effort',
+            'Increased maturity and self-discipline',
+            'Recognition for reliability and competence',
+            'Long-term goals achieved through patience',
+            'Respect earned from authority figures',
+            'Taking on responsibility with capability',
+            'Confidence from proven track record',
+            'Creating sustainable structure in life',
+            'Wisdom gained through meeting challenges',
+            'Character strengthened through testing',
+            'Authority or leadership role assumed successfully',
+            'Milestone reached through steady, consistent work'
+          );
+        }
       }
     }
 
@@ -1363,6 +1464,74 @@ function getSpecificManifestations(
 
     // Sun-Venus: Love, creativity, pleasure, self-worth, attraction
     if (pairKey === 'Sun-Venus' || reversePairKey === 'Sun-Venus') {
+      // House 1: Identity, self, appearance, how you present yourself
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Suddenly feeling unattractive despite everyone saying you look fine',
+            'Wardrobe crisis - nothing feels right, considering drastic style change',
+            'Overspending on appearance - new clothes, haircut, treatments to boost confidence',
+            'Someone\'s comment about your looks stings more than it should',
+            'Selfie anxiety - deleting photos because you hate how you look',
+            'Comparing your appearance to others and always coming up short',
+            'Wanting to be noticed and appreciated but feeling invisible',
+            'Dieting or exercise feels like punishment not self-care',
+            'Identity crisis tied to aging, weight gain, or changing appearance',
+            'Feeling pressure to look perfect for an event or photo',
+            'Self-worth plummets based on one person\'s opinion',
+            'Imposter syndrome - "I don\'t look the part" for your own life'
+          );
+        } else {
+          manifestations.push(
+            'Waking up feeling attractive and confident for no specific reason',
+            'Someone compliments you exactly when you needed to hear it',
+            'New hairstyle, outfit, or style change makes you feel like yourself again',
+            'Photo of yourself where you actually like how you look',
+            'Easy self-care day - workout, healthy meal, pampering feels natural not forced',
+            'Comfortable in your own skin at social event or gathering',
+            'Making peace with your appearance - accepting what you see in mirror',
+            'Creative self-expression through style, appearance, or personal brand',
+            'Others notice your confidence boost and comment on your "glow"',
+            'Self-worth increases independent of how you look',
+            'Finding your authentic style without trying to copy others',
+            'Body and appearance aligned with inner self - feeling integrated'
+          );
+        }
+      }
+      // House 4: Home, family, roots, emotional foundation
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Family criticism about your lifestyle, career, or relationship choices',
+            'Home feels uncomfortable - nothing looks right, considering expensive remodel',
+            'Overspending on home decor or furniture to fill emotional void',
+            'Conflict with family over money, values, or inheritance',
+            'Feeling unappreciated by family members for all you do',
+            'Mother or mother-figure not giving you the validation you crave',
+            'Home hosting event causes stress - trying to look perfect for others',
+            'Emotional eating or comfort spending when family stress hits',
+            'Guilt about not being "enough" for family obligations',
+            'Real estate decision causes financial stress or buyer\'s remorse',
+            'Childhood insecurities about worth or belonging resurface',
+            'Torn between family expectations and personal happiness'
+          );
+        } else {
+          manifestations.push(
+            'Family gathering where you feel genuinely loved and appreciated',
+            'Mother or mother-figure gives you the exact encouragement you need',
+            'Home improvement project turns out beautifully and within budget',
+            'Finding perfect decor piece that makes home feel complete',
+            'Cooking or hosting at home brings joy and connection',
+            'Childhood memories surface that remind you of your worth',
+            'Real estate win - great deal on purchase, sale, or rental',
+            'Emotional foundation strengthens - feeling secure and valued',
+            'Family support for your creative work or career path',
+            'Creating beautiful, comfortable space at home that reflects your values',
+            'Receiving inheritance, gift, or financial help from family',
+            'Inner child healing - making peace with past and feeling whole'
+          );
+        }
+      }
       if (transitHouse === 7) {
         if (isHard) {
           manifestations.push(
@@ -1429,6 +1598,40 @@ function getSpecificManifestations(
             'Professional relationship (mentor, client) is mutually appreciative',
             'Your personal style or charisma advances your career',
             'Work brings both money and satisfaction'
+          );
+        }
+      }
+      // House 11: Friends, groups, social networks, future hopes
+      if (transitHouse === 11 || natalHouse === 11) {
+        if (isHard) {
+          manifestations.push(
+            'Friend group makes you feel left out or less attractive than others',
+            'Social media comparison - everyone else\'s life looks better than yours',
+            'Group project or collaboration has financial tension or value conflicts',
+            'Feeling unappreciated by friends despite all you do for them',
+            'Online presence or personal brand criticized or trolled',
+            'Social event where you feel awkward or like you don\'t fit in',
+            'Friend asks for money or financial favor you can\'t afford',
+            'Jealousy over friend\'s success, appearance, or relationship',
+            'Group demands too much - giving to community at expense of self-worth',
+            'Future hopes feel shallow or materialistic - doubting your dreams',
+            'Overspending to keep up with friend group\'s lifestyle',
+            'Influencer or networking attempt falls flat - low engagement'
+          );
+        } else {
+          manifestations.push(
+            'Friend gives you genuine compliment that boosts your confidence',
+            'Social gathering where you feel attractive, valued, and included',
+            'Online post or personal brand gets positive attention and engagement',
+            'Making money through social network, referral, or group collaboration',
+            'Friend introduces you to opportunity that aligns with your values',
+            'Community or group appreciates your creative contribution',
+            'Finding your people - tribe that values and celebrates you',
+            'Collaborative project with friends brings joy and financial benefit',
+            'Future hopes and dreams feel aligned with your authentic self',
+            'Social media win - validation from audience or community',
+            'Friend group supports your creative work or personal goals',
+            'Networking event leads to valuable connection and mutual appreciation'
           );
         }
       }
@@ -1551,71 +1754,349 @@ function getSpecificManifestations(
 
     // Sun-Moon: Emotional alignment with identity, home vs career
     if (pairKey === 'Sun-Moon' || reversePairKey === 'Sun-Moon') {
-      if (isHard) {
-        manifestations.push(
-          'Conflict between career demands and family needs',
-          'Feeling emotionally unsupported in your goals',
-          'Home life interfering with work or public image',
-          'Parent or family member criticizes your career choices',
-          'Feeling torn between what you want and what you need',
-          'Emotional needs clash with ego or ambitions',
-          'Work-life balance completely off - one suffers for other',
-          'Family obligations prevent you from pursuing goals',
-          'Feeling like you can\'t be yourself at home or at work',
-          'Mother figure or family conflicts with authority figure or boss',
-          'Private feelings don\'t match public persona',
-          'Emotional crisis affects work performance or vice versa'
-        );
-      } else {
-        manifestations.push(
-          'Emotional support helps you achieve career goals',
-          'Family celebrates your professional success',
-          'Feeling at home in your career or public role',
-          'Work-life balance feels harmonious',
-          'Confidence and emotional security working together',
-          'Family and career both thriving simultaneously',
-          'Boss or authority figure shows parental support',
-          'Home life supports your ambitions',
-          'Feeling emotionally aligned with life direction',
-          'Past experiences inform current success',
-          'Mother or family member helps your career',
-          'Private and public life in healthy balance'
-        );
+      // House 4: Home, family, roots, emotional foundation, private life
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Mother or family criticizes your life choices - feeling emotionally attacked',
+            'Career demands force you to miss important family event or obligation',
+            'Childhood wounds resurface affecting your confidence and identity',
+            'Home feels emotionally unsafe - family drama drains your energy',
+            'Parent disapproves of your partner, job, or lifestyle choices',
+            'Family needs vs personal goals - guilt about choosing yourself',
+            'Real estate decision causes emotional stress and identity crisis',
+            'Mother figure undermines your authority or independence',
+            'Feeling like child again at family gathering - regression',
+            'Home renovation or move coincides with emotional upheaval',
+            'Family expectations don\'t match who you\'ve become',
+            'Torn between staying near family or pursuing career elsewhere'
+          );
+        } else {
+          manifestations.push(
+            'Mother or family gives you exactly the emotional support you need',
+            'Home feels like sanctuary - emotionally recharging and centered',
+            'Family celebrates your identity and authentic self',
+            'Childhood memories bring healing and confidence',
+            'Able to work from home productively - perfect balance',
+            'Real estate win that feels emotionally and practically right',
+            'Mother figure supports your independence and life direction',
+            'Family gathering where you feel seen, loved, and appreciated',
+            'Home improvement brings emotional satisfaction and pride',
+            'Past and present integrated - emotional foundation solid',
+            'Career success doesn\'t require sacrificing family time',
+            'Creating family traditions that honor your authentic self'
+          );
+        }
+      }
+      // House 10: Career, public image, reputation, authority, life direction
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Boss or authority figure emotionally manipulates or criticizes you',
+            'Public image doesn\'t match private emotional reality - feels fake',
+            'Career success requires sacrificing family or emotional needs',
+            'Professional criticism hits emotional wound - overreacting',
+            'Mother or family undermines your career or public reputation',
+            'Promotion or opportunity causes guilt about leaving family behind',
+            'Authority figure treats you like child - feeling infantilized',
+            'Career demands make you emotionally unavailable at home',
+            'Public failure or criticism affects your emotional security',
+            'Torn between career ambition and being present for family',
+            'Boss or mentor relationship turns cold or unsupportive',
+            'Career identity crisis - "Is this really who I am?"'
+          );
+        } else {
+          manifestations.push(
+            'Boss or authority figure shows parental support and encouragement',
+            'Career aligned with emotional needs - feels authentic not forced',
+            'Public recognition that makes family proud',
+            'Professional success while maintaining strong family connections',
+            'Mother or family supports your career advancement',
+            'Promotion or opportunity enhances both career and home life',
+            'Authority figure mentors you with genuine care and wisdom',
+            'Career allows emotional expression and authenticity',
+            'Public image reflects true self - feeling integrated',
+            'Family celebrates your professional achievements',
+            'Boss creates family-like supportive work environment',
+            'Career direction finally feels emotionally right'
+          );
+        }
+      }
+      // House 1: Identity, self, how you present yourself, physical body
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Emotional needs and ego at war - "What do I want vs what do I need?"',
+            'Feeling exhausted from trying to be strong when you need support',
+            'Identity crisis triggered by family or emotional upheaval',
+            'Physical symptoms from emotional stress - body expressing what mind can\'t',
+            'Putting on brave face when falling apart inside',
+            'Emotional sensitivity makes you feel weak or vulnerable',
+            'Wanting to assert independence but feeling emotionally dependent',
+            'Mood swings affecting how you show up - unpredictable energy',
+            'Family expectations clash with authentic self-expression',
+            'Feeling like you have to choose between being strong and being real',
+            'Physical appearance reflects inner turmoil - "I don\'t look like myself"',
+            'Asserting boundaries with family causes guilt or emotional backlash'
+          );
+        } else {
+          manifestations.push(
+            'Confidence and emotional security aligned - feeling whole',
+            'Physical vitality from emotional wellbeing - glowing from within',
+            'Identity finally matches inner emotional truth',
+            'Family supports your authentic self-expression',
+            'Strong sense of self that\'s also emotionally available',
+            'Comfortable in your own skin emotionally and physically',
+            'Ego and feelings working together not against each other',
+            'Emotional strength manifests as visible confidence',
+            'Family connection enhances rather than diminishes identity',
+            'Vulnerability makes you stronger not weaker',
+            'Physical presence reflects emotional authenticity',
+            'Independence and connection balanced - secure and free'
+          );
+        }
+      }
+      // House 7: Relationships, partnerships, marriage, one-on-one connections
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Partner and family at odds - "Choose between us" dynamic',
+            'Emotional needs in relationship clash with personal goals',
+            'Partner criticizes your family or family criticizes partner',
+            'Feeling emotionally unsafe in relationship - walking on eggshells',
+            'Business partnership has emotional power struggle',
+            'Partner\'s career demands vs your emotional needs - conflict',
+            'Mother or family interferes in relationship causing tension',
+            'Wanting independence but partner needs emotional reassurance',
+            'Past family patterns repeating in current relationship',
+            'Partner makes you feel like child not equal adult',
+            'Marriage vs career - feeling forced to choose',
+            'Emotional manipulation in partnership - guilt or obligation tactics'
+          );
+        } else {
+          manifestations.push(
+            'Partner provides emotional support that boosts your confidence',
+            'Relationship and family in harmony - everyone gets along',
+            'Emotional intimacy and individual identity balanced perfectly',
+            'Business partnership has mutual respect and emotional safety',
+            'Partner supports your career while meeting emotional needs',
+            'Mother or family approves of and supports relationship',
+            'Marriage or partnership feels like emotional home',
+            'Partner helps heal childhood wounds or family patterns',
+            'Relationship enhances rather than diminishes sense of self',
+            'Emotional and practical needs both met in partnership',
+            'Family of origin and chosen partner create supportive circle',
+            'Professional partnership also emotionally fulfilling'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Conflict between career demands and family needs',
+            'Feeling emotionally unsupported in your goals',
+            'Home life interfering with work or public image',
+            'Parent or family member criticizes your career choices',
+            'Feeling torn between what you want and what you need',
+            'Emotional needs clash with ego or ambitions',
+            'Work-life balance completely off - one suffers for other',
+            'Family obligations prevent you from pursuing goals',
+            'Feeling like you can\'t be yourself at home or at work',
+            'Mother figure or family conflicts with authority figure or boss',
+            'Private feelings don\'t match public persona',
+            'Emotional crisis affects work performance or vice versa'
+          );
+        } else {
+          manifestations.push(
+            'Emotional support helps you achieve career goals',
+            'Family celebrates your professional success',
+            'Feeling at home in your career or public role',
+            'Work-life balance feels harmonious',
+            'Confidence and emotional security working together',
+            'Family and career both thriving simultaneously',
+            'Boss or authority figure shows parental support',
+            'Home life supports your ambitions',
+            'Feeling emotionally aligned with life direction',
+            'Past experiences inform current success',
+            'Mother or family member helps your career',
+            'Private and public life in healthy balance'
+          );
+        }
       }
     }
 
     // Sun-Mars: Energy, action, drive, assertiveness, conflict
     if (pairKey === 'Sun-Mars' || reversePairKey === 'Sun-Mars') {
-      if (isHard) {
-        manifestations.push(
-          'Conflict with boss or authority figure - ego clash',
-          'Feeling attacked or criticized for who you are',
-          'Anger or frustration affecting your confidence',
-          'Impulsive action that damages reputation or career',
-          'Physical exhaustion from overwork or stress',
-          'Competition at work feels personal',
-          'Someone challenges your authority or leadership',
-          'Accident or injury from moving too fast or being careless',
-          'Aggressive behavior hurting relationships or career',
-          'Feeling like you have to fight for recognition',
-          'Masculine energy conflict - alpha battle',
-          'Pushing too hard and burning out'
-        );
-      } else {
-        manifestations.push(
-          'High energy and motivation to pursue goals',
-          'Taking decisive action advances your career',
-          'Athletic or physical success boosts confidence',
-          'Courageously going after what you want',
-          'Leadership opportunity - taking charge successfully',
-          'Physical vitality and confidence at peak',
-          'Assertiveness gets positive results',
-          'Starting new project or initiative with enthusiasm',
-          'Winning competition or achieving athletic goal',
-          'Bold career move pays off',
-          'Energy and identity aligned - feeling unstoppable',
-          'Taking initiative earns respect and recognition'
-        );
+      // House 1: Identity, self, physical body, how you assert yourself
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Road rage or traffic incident - overreacting to minor provocation',
+            'Workout injury from pushing too hard or skipping warmup',
+            'Headache or fever - body overheating from stress or anger',
+            'Impulsive haircut, piercing, tattoo - physical change you regret',
+            'Picking fight with stranger over parking spot or perceived insult',
+            'Accident prone - cutting yourself, burning hand, stubbing toe repeatedly',
+            'Aggressive energy scares people away - "Why is everyone avoiding me?"',
+            'Insomnia from anger or restless aggressive energy',
+            'Breaking something in frustration - phone, plate, door',
+            'Physical confrontation or near-fight situation',
+            'Rash or skin breakout from stress and inflammation',
+            'Saying something harsh in anger you can\'t take back'
+          );
+        } else {
+          manifestations.push(
+            'Best workout in months - physical strength and confidence peak',
+            'Asserting boundary successfully - saying no without guilt',
+            'Starting ambitious project with high energy and enthusiasm',
+            'Physical courage - doing something that scared you before',
+            'Athletic achievement or personal record in fitness',
+            'Decisive action on personal goal - no more hesitation',
+            'Confident presentation of self - walking taller, speaking louder',
+            'Healthy competition brings out your best performance',
+            'Taking initiative in life direction - bold first step',
+            'Physical vitality radiating - others comment on your energy',
+            'Courageously confronting situation you\'ve been avoiding',
+            'Leading by example - inspiring others through action'
+          );
+        }
+      }
+      // House 6: Work, daily routine, health, service, coworkers
+      if (transitHouse === 6 || natalHouse === 6) {
+        if (isHard) {
+          manifestations.push(
+            'Argument with coworker over workload or who does what',
+            'Work injury - repetitive strain, back pain, or accident on job',
+            'Angry email to colleague you send before thinking',
+            'Overworking to prove yourself - exhaustion and burnout',
+            'Coworker takes credit for your work - confrontation',
+            'Health issue from stress - inflammation, infection, fever',
+            'Rushing through work causing mistakes or accidents',
+            'Conflict about work-life balance - pushed to work overtime',
+            'Competition with coworker turns hostile or personal',
+            'Aggressive management style backfires - team resentment',
+            'Cutting corners at work due to time pressure - consequences',
+            'Physical exhaustion affects work performance'
+          );
+        } else {
+          manifestations.push(
+            'Productive work sprint - accomplishing huge task list',
+            'Successfully completing physical project or demanding work',
+            'Asserting boundaries at work - clear communication about workload',
+            'Health improvement from increased exercise or activity',
+            'Leading work project with energy and effectiveness',
+            'Coworker collaboration where you take charge successfully',
+            'Efficient daily routine - morning workout energizes whole day',
+            'Taking initiative on work process improvement',
+            'Competitive work environment motivates peak performance',
+            'Physical stamina for demanding workday - sustained energy',
+            'Courageously addressing workplace issue or conflict',
+            'Action-oriented approach solves work problem quickly'
+          );
+        }
+      }
+      // House 10: Career, public image, authority figures, reputation
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Public argument with boss - ego clash in front of others',
+            'Impulsive career decision you immediately regret',
+            'Authority figure attacks your competence or character',
+            'Aggressive approach damages professional reputation',
+            'Competition for promotion turns hostile',
+            'Pushing too hard at work leads to public failure or mistake',
+            'Conflict with client or customer escalates quickly',
+            'Career setback from hasty or angry decision',
+            'Someone challenges your authority in humiliating way',
+            'Burning bridges with former employer or colleague',
+            'Professional rivalry becomes personal vendetta',
+            'Impatience costs you career opportunity'
+          );
+        } else {
+          manifestations.push(
+            'Bold career move pays off - promotion or new opportunity',
+            'Assertive negotiation for raise or better position succeeds',
+            'Leading major project with confidence and effectiveness',
+            'Taking decisive action advances career significantly',
+            'Courageous stand on professional issue earns respect',
+            'Competitive achievement in career - outperforming others',
+            'Authority role suits you - successfully managing team',
+            'Quick decisive response to work crisis saves the day',
+            'Professional courage leads to recognition and advancement',
+            'Launching new business or major career initiative',
+            'Assertiveness in meeting or presentation impresses superiors',
+            'Taking charge of career direction with bold action'
+          );
+        }
+      }
+      // House 7: Partnerships, relationships, one-on-one conflict
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Fight with partner escalates quickly - things said in anger',
+            'Business partnership dissolves in conflict over control',
+            'Partner\'s aggressive behavior or anger directed at you',
+            'Impulsive decision in relationship you later regret',
+            'Competitiveness in relationship becomes toxic',
+            'Partner challenges your authority or independence',
+            'Sexual frustration or conflict about intimacy',
+            'Legal conflict or contract dispute gets heated',
+            'Wanting to do things your way causes relationship tension',
+            'Partner\'s actions trigger your anger or frustration',
+            'Passive-aggressive dynamic escalates to open conflict',
+            'Rushing into or out of relationship impulsively'
+          );
+        } else {
+          manifestations.push(
+            'Productive conflict resolution - addressing issues directly',
+            'Partner supports your goals with action not just words',
+            'Physical passion and attraction reignited in relationship',
+            'Successfully asserting needs in partnership',
+            'Collaborative project where you take leadership role',
+            'Business partnership takes decisive action together',
+            'Healthy competition with partner motivates both',
+            'Partner\'s energy and drive inspires your confidence',
+            'Taking courageous action in relationship - honesty pays off',
+            'Physical activity or adventure with partner bonds you',
+            'Mutual respect in partnership - both leading effectively',
+            'Decisive agreement on relationship direction'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Conflict with boss or authority figure - ego clash',
+            'Feeling attacked or criticized for who you are',
+            'Anger or frustration affecting your confidence',
+            'Impulsive action that damages reputation or career',
+            'Physical exhaustion from overwork or stress',
+            'Competition at work feels personal',
+            'Someone challenges your authority or leadership',
+            'Accident or injury from moving too fast or being careless',
+            'Aggressive behavior hurting relationships or career',
+            'Feeling like you have to fight for recognition',
+            'Masculine energy conflict - alpha battle',
+            'Pushing too hard and burning out'
+          );
+        } else {
+          manifestations.push(
+            'High energy and motivation to pursue goals',
+            'Taking decisive action advances your career',
+            'Athletic or physical success boosts confidence',
+            'Courageously going after what you want',
+            'Leadership opportunity - taking charge successfully',
+            'Physical vitality and confidence at peak',
+            'Assertiveness gets positive results',
+            'Starting new project or initiative with enthusiasm',
+            'Winning competition or achieving athletic goal',
+            'Bold career move pays off',
+            'Energy and identity aligned - feeling unstoppable',
+            'Taking initiative earns respect and recognition'
+          );
+        }
       }
     }
 
@@ -1656,36 +2137,175 @@ function getSpecificManifestations(
 
     // Sun-Pluto: Power, transformation, intensity, control
     if (pairKey === 'Sun-Pluto' || reversePairKey === 'Sun-Pluto') {
-      if (isHard) {
-        manifestations.push(
-          'Power struggle with boss or authority figure',
-          'Feeling controlled or manipulated professionally',
-          'Career crisis forces complete life transformation',
-          'Someone undermines your authority or reputation',
-          'Obsessive focus on career at expense of everything else',
-          'Dark side of ambition surfaces - ruthless behavior',
-          'Being forced out of position or losing control',
-          'Intense confrontation reveals hidden truths',
-          'Fear of failure or losing power becomes consuming',
-          'Career or reputation crisis - rock bottom moment',
-          'Power dynamics in relationship become toxic',
-          'Having to face shadow side of your personality'
-        );
-      } else {
-        manifestations.push(
-          'Profound transformation of identity and life purpose',
-          'Reclaiming personal power after period of powerlessness',
-          'Career breakthrough through psychological insight',
-          'Letting go of old identity - rebirth into authentic self',
-          'Therapeutic work transforms confidence and direction',
-          'Taking back control of life from external forces',
-          'Powerful leadership role - commanding respect naturally',
-          'Profound self-awareness leads to career success',
-          'Eliminating what no longer serves - powerful clean slate',
-          'Intense focus brings major accomplishment',
-          'Rising from ashes - comeback story',
-          'Depth work pays off - transformation complete'
-        );
+      // House 8: Death/rebirth, shared resources, power, sexuality, deep transformation
+      if (transitHouse === 8 || natalHouse === 8) {
+        if (isHard) {
+          manifestations.push(
+            'Inheritance dispute or fight over deceased person\'s assets',
+            'Partner controls finances - you have no access to joint accounts',
+            'Sexual power dynamics become manipulative or coercive',
+            'Tax audit or IRS investigation - financial scrutiny and fear',
+            'Death of someone close triggers existential crisis',
+            'Hidden debt or financial betrayal discovered',
+            'Obsessive jealousy or suspicion in intimate relationship',
+            'Forced to face mortality - health scare or diagnosis',
+            'Business partner or spouse hiding money or assets',
+            'Psychological crisis - confronting deepest fears and shadows',
+            'Loan or mortgage application rejected - power in others\' hands',
+            'Intimate betrayal - discovering partner\'s secrets or double life'
+          );
+        } else {
+          manifestations.push(
+            'Inheritance or insurance payout provides financial transformation',
+            'Deep psychological work transforms identity completely',
+            'Reclaiming power in intimate relationship - setting boundaries',
+            'Successfully managing shared finances or joint investments',
+            'Sexual empowerment - owning desires and boundaries',
+            'Therapy or depth work brings profound self-awareness',
+            'Debt elimination - financial freedom after long struggle',
+            'Life-death experience brings clarity on purpose',
+            'Business partnership or joint venture highly profitable',
+            'Facing and integrating shadow side strengthens identity',
+            'Mortgage approved or major loan secured - financial power',
+            'Intimate relationship deepens through vulnerability and trust'
+          );
+        }
+      }
+      // House 10: Career, public image, authority, reputation, life direction
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Boss or authority figure tries to control or manipulate you',
+            'Public scandal or reputation attack - character assassination',
+            'Forced out of job or position - losing career control',
+            'Power struggle with management - being undermined systematically',
+            'Career obsession destroying health or relationships',
+            'Authority position corrupts - behaving ruthlessly',
+            'Professional investigation or ethics inquiry',
+            'Career identity crisis - "Who am I without this role?"',
+            'Being used or exploited by those in power above you',
+            'Public failure exposes vulnerabilities and flaws',
+            'Corporate politics or backstabbing at highest levels',
+            'Losing battle for promotion or position to more ruthless rival'
+          );
+        } else {
+          manifestations.push(
+            'Profound career transformation - complete professional rebirth',
+            'Rising to position of real power and authority',
+            'Professional breakthrough through psychological insight',
+            'Reclaiming career after period of powerlessness or unemployment',
+            'Natural commanding presence earns respect and leadership role',
+            'Intense focus on career goal achieves major accomplishment',
+            'Public comeback after previous failure or setback',
+            'Authority role allows you to transform systems or culture',
+            'Career aligned with deeper purpose - powerful authenticity',
+            'Successfully navigating political landscape to reach top',
+            'Professional reputation strengthened through depth and substance',
+            'Transforming industry or field through powerful vision'
+          );
+        }
+      }
+      // House 1: Identity, self, physical body, personal transformation
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Identity crisis so deep you don\'t recognize yourself',
+            'Someone tries to control or dominate your personality',
+            'Obsessive behavior you can\'t stop - compulsions take over',
+            'Physical health crisis forces life transformation',
+            'Self-destructive patterns surfacing - sabotaging yourself',
+            'Feeling powerless over own life direction',
+            'Dark thoughts or psychological crisis needs intervention',
+            'Manipulation by others affects sense of self',
+            'Forced transformation - circumstances demand you change',
+            'Confronting deepest fears about who you really are',
+            'Physical appearance change from stress or health issue',
+            'Control issues affecting all areas of life'
+          );
+        } else {
+          manifestations.push(
+            'Complete identity transformation - becoming new person',
+            'Reclaiming personal power after being controlled by others',
+            'Deep self-awareness transforms how you show up in world',
+            'Physical transformation through intense focus and discipline',
+            'Owning your power - no longer dimming yourself for others',
+            'Psychological breakthrough eliminates old limiting patterns',
+            'Intense personal growth period - shedding old skin',
+            'Authentic self emerging after long period of hiding',
+            'Charismatic presence commands attention naturally',
+            'Taking control of life direction with powerful intention',
+            'Physical vitality from psychological healing and integration',
+            'Shadow work transforms confidence and self-expression'
+          );
+        }
+      }
+      // House 7: Partnerships, relationships, power dynamics with others
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Partner tries to control or manipulate you',
+            'Divorce or separation - power struggle over assets',
+            'Jealousy and possessiveness destroying relationship',
+            'Business partnership turns toxic - betrayal or control issues',
+            'Legal battle with ex or partner - drawn out and nasty',
+            'Discovering partner\'s hidden agenda or manipulation',
+            'Feeling powerless in relationship - losing sense of self',
+            'Partner\'s psychological issues affecting your identity',
+            'Contract dispute reveals power imbalance',
+            'Obsessive relationship dynamic - can\'t let go',
+            'Being used or exploited by business or romantic partner',
+            'Relationship requires complete transformation or must end'
+          );
+        } else {
+          manifestations.push(
+            'Relationship transforms both partners profoundly',
+            'Reclaiming power in partnership - setting healthy boundaries',
+            'Business partnership succeeds through deep trust and shared power',
+            'Intimate relationship deepens through psychological work together',
+            'Equal power dynamic in partnership - mutual respect',
+            'Partner supports your personal transformation',
+            'Legal agreement or contract works powerfully in your favor',
+            'Therapeutic couple\'s work transforms relationship',
+            'Business partner\'s intensity and focus benefits both',
+            'Relationship based on authenticity not power games',
+            'Partner helps you face and integrate shadow side',
+            'Marriage or partnership empowers rather than diminishes you'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Power struggle with boss or authority figure',
+            'Feeling controlled or manipulated professionally',
+            'Career crisis forces complete life transformation',
+            'Someone undermines your authority or reputation',
+            'Obsessive focus on career at expense of everything else',
+            'Dark side of ambition surfaces - ruthless behavior',
+            'Being forced out of position or losing control',
+            'Intense confrontation reveals hidden truths',
+            'Fear of failure or losing power becomes consuming',
+            'Career or reputation crisis - rock bottom moment',
+            'Power dynamics in relationship become toxic',
+            'Having to face shadow side of your personality'
+          );
+        } else {
+          manifestations.push(
+            'Profound transformation of identity and life purpose',
+            'Reclaiming personal power after period of powerlessness',
+            'Career breakthrough through psychological insight',
+            'Letting go of old identity - rebirth into authentic self',
+            'Therapeutic work transforms confidence and direction',
+            'Taking back control of life from external forces',
+            'Powerful leadership role - commanding respect naturally',
+            'Profound self-awareness leads to career success',
+            'Eliminating what no longer serves - powerful clean slate',
+            'Intense focus brings major accomplishment',
+            'Rising from ashes - comeback story',
+            'Depth work pays off - transformation complete'
+          );
+        }
       }
     }
   }
@@ -1934,136 +2554,553 @@ function getSpecificManifestations(
 
     // Moon-Jupiter: Emotional expansion, optimism, family growth
     if (pairKey === 'Moon-Jupiter' || reversePairKey === 'Moon-Jupiter') {
-      if (isConjunction) {
-        manifestations.push(
-          'Major family celebration or milestone event',
-          'Profound emotional healing and expansion',
-          'Moving to significantly better home - major upgrade',
-          'Pregnancy announcement or family expansion',
-          'Feeling deeply abundant and blessed',
-          'Mother or family brings major good fortune',
-          'Home becomes center of growth and celebration',
-          'Emotional breakthrough with faith or meaning',
-          'Generous gesture from or to family that changes things',
-          'Family trip or relocation that opens new horizons',
-          'Home improvement that transforms living situation',
-          'Feeling emotionally liberated and hopeful about future'
-        );
-      } else if (isHard) {
-        manifestations.push(
-          'Overexpansion - taking on too much emotionally',
-          'Family member being excessive or irresponsible',
-          'Overindulgence leading to emotional or physical issues',
-          'Promising too much to family - can\'t deliver',
-          'Moving plans falling through or being too ambitious',
-          'Mother or family member being overly optimistic or unrealistic',
-          'Emotional exaggeration causing problems at home',
-          'Home expenses getting out of control',
-          'Family drama involving money or values differences',
-          'Travel plans disrupting family harmony',
-          'False optimism about family situation',
-          'Overconfidence in emotional or domestic decisions'
-        );
-      } else {
-        manifestations.push(
-          'Feeling emotionally expansive and optimistic',
-          'Family celebration or good news from relative',
-          'Generous emotional support from loved ones',
-          'Moving to bigger or better home flows easily',
-          'Family grows harmoniously - good news',
-          'Feeling abundant and grateful for what you have',
-          'Emotional healing through travel or new experiences',
-          'Mother or family member brings good fortune',
-          'Feeling at home anywhere - emotional freedom',
-          'Enjoying home comforts and family time',
-          'Home improvement or expansion goes smoothly',
-          'Faith and emotional security supporting each other'
-        );
+      // House 4: Home, family, roots, emotional foundation
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Overcommitting to family obligations - saying yes to everyone',
+            'Home renovation goes over budget - much more expensive than planned',
+            'Moving to bigger house you can\'t actually afford',
+            'Mother or family member being overly generous to their detriment',
+            'Family gathering turns chaotic - too many people, too much drama',
+            'Buying too much furniture or decor - house cluttered not improved',
+            'Emotional overreaction to minor family issues',
+            'Promising elderly parent care you can\'t realistically provide',
+            'Holiday hosting stress - cooking too much, inviting too many',
+            'Child or family member\'s expectations inflated unrealistically',
+            'Real estate FOMO - buying property in enthusiasm without research',
+            'Family member\'s financial irresponsibility affects your home security'
+          );
+        } else {
+          manifestations.push(
+            'Moving to significantly better home - space and comfort upgrade',
+            'Family celebration brings everyone together joyfully',
+            'Mother provides generous support exactly when needed',
+            'Home improvement that increases value and comfort',
+            'Pregnancy or adoption - family expansion with good timing',
+            'Multigenerational living arrangement works beautifully',
+            'Real estate investment or purchase brings financial growth',
+            'Family heritage or inheritance benefits you',
+            'Home becomes gathering place for community and friends',
+            'Emotional healing within family - forgiveness and expansion',
+            'Child or family member achieves something worth celebrating',
+            'Feeling abundant and secure in home and family life'
+          );
+        }
+      }
+      // House 9: Travel, education, philosophy, expansion, foreign connections
+      if (transitHouse === 9 || natalHouse === 9) {
+        if (isHard) {
+          manifestations.push(
+            'Travel plans too ambitious - exhausting family vacation',
+            'Expensive international trip strains family finances',
+            'Cultural differences with in-laws or foreign family cause tension',
+            'Overpromising on education costs - can\'t afford tuition',
+            'Religious or philosophical disagreements divide family',
+            'Study abroad or relocation separates you from emotional support',
+            'Travel delays or cancellations disappoint family',
+            'Too many commitments to workshops, classes, retreats - burnout',
+            'Immigration or visa issues affect family plans',
+            'Overconfidence in long-distance move - didn\'t research enough',
+            'Publishing or teaching opportunity takes too much time from family',
+            'Idealism about foreign culture meets harsh reality'
+          );
+        } else {
+          manifestations.push(
+            'Amazing family vacation or trip - memories made, bonds strengthened',
+            'Educational opportunity improves family\'s circumstances',
+            'Spiritual or philosophical growth brings emotional peace',
+            'International connection benefits family financially or emotionally',
+            'Study abroad or educational travel enriches perspective',
+            'Publishing or teaching success brings family pride',
+            'Immigration or relocation to better country works out perfectly',
+            'Mother or family supports your educational or travel dreams',
+            'Cultural exchange or foreign friend enriches family life',
+            'Legal matter or lawsuit resolved favorably',
+            'Faith community provides generous emotional support',
+            'Expansion of worldview through travel heals emotional wounds'
+          );
+        }
+      }
+      // House 2: Money, values, possessions, self-worth
+      if (transitHouse === 2 || natalHouse === 2) {
+        if (isHard) {
+          manifestations.push(
+            'Emotional spending spree - buying to feel better',
+            'Overspending on comfort food, treats, luxury items',
+            'Loaning money to family member you can\'t afford to lose',
+            'Income increase immediately eaten up by lifestyle inflation',
+            'Overconfidence leads to risky financial decision',
+            'Generosity beyond your means - giving too much',
+            'Expensive comfort purchases you regret later',
+            'Values conflict with family over money or material goods',
+            'Weight gain from emotional eating or indulgence',
+            'Financial optimism not matched by reality - budget blown',
+            'Investment seems great but turns out too good to be true',
+            'Possessions accumulating - emotional hoarding'
+          );
+        } else {
+          manifestations.push(
+            'Income increase or windfall improves financial security',
+            'Wise investment or purchase brings lasting value',
+            'Generous gift from family or receiving inheritance',
+            'Emotional confidence translates to financial confidence',
+            'Finding work that aligns with values and pays well',
+            'Abundance mindset attracts opportunities',
+            'Possessions bring genuine comfort and joy',
+            'Successfully manifesting financial goals',
+            'Family member helps with financial opportunity',
+            'Raise or bonus allows you to enjoy life more',
+            'Self-worth increases independent of financial status',
+            'Wise spending on experiences and quality items'
+          );
+        }
+      }
+      // House 11: Friends, groups, community, social networks, hopes
+      if (transitHouse === 11 || natalHouse === 11) {
+        if (isHard) {
+          manifestations.push(
+            'Overpromising to friend group - can\'t show up for everyone',
+            'Social circle demands too much emotional energy',
+            'Friend asks for money or favor that\'s excessive',
+            'Community involvement becomes overwhelming obligation',
+            'Online presence or social media takes over life',
+            'Friendship expectations inflated - disappointment follows',
+            'Group travel or event costs more than budgeted',
+            'False optimism about friend\'s situation enables bad behavior',
+            'Social activities interfere with family or work responsibilities',
+            'Joining too many groups or organizations - spread too thin',
+            'Future hopes and dreams feel unrealistic or inflated',
+            'Friendship generosity not reciprocated - feeling taken advantage'
+          );
+        } else {
+          manifestations.push(
+            'Friend provides generous emotional or practical support',
+            'Social network opens door to amazing opportunity',
+            'Community or group celebrates your success',
+            'Making money through friends, referrals, or network',
+            'Friend group feels like chosen family - emotional abundance',
+            'Collaborative project with friends succeeds beyond expectations',
+            'Future hopes and dreams feel achievable and inspiring',
+            'Social gathering brings joy and meaningful connections',
+            'Online community or platform brings positive growth',
+            'Friendship deepens through shared adventure or experience',
+            'Group supports your emotional healing and expansion',
+            'Networking event leads to fortunate connection'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isConjunction) {
+          manifestations.push(
+            'Major family celebration or milestone event',
+            'Profound emotional healing and expansion',
+            'Moving to significantly better home - major upgrade',
+            'Pregnancy announcement or family expansion',
+            'Feeling deeply abundant and blessed',
+            'Mother or family brings major good fortune',
+            'Home becomes center of growth and celebration',
+            'Emotional breakthrough with faith or meaning',
+            'Generous gesture from or to family that changes things',
+            'Family trip or relocation that opens new horizons',
+            'Home improvement that transforms living situation',
+            'Feeling emotionally liberated and hopeful about future'
+          );
+        } else if (isHard) {
+          manifestations.push(
+            'Overexpansion - taking on too much emotionally',
+            'Family member being excessive or irresponsible',
+            'Overindulgence leading to emotional or physical issues',
+            'Promising too much to family - can\'t deliver',
+            'Moving plans falling through or being too ambitious',
+            'Mother or family member being overly optimistic or unrealistic',
+            'Emotional exaggeration causing problems at home',
+            'Home expenses getting out of control',
+            'Family drama involving money or values differences',
+            'Travel plans disrupting family harmony',
+            'False optimism about family situation',
+            'Overconfidence in emotional or domestic decisions'
+          );
+        } else {
+          manifestations.push(
+            'Feeling emotionally expansive and optimistic',
+            'Family celebration or good news from relative',
+            'Generous emotional support from loved ones',
+            'Moving to bigger or better home flows easily',
+            'Family grows harmoniously - good news',
+            'Feeling abundant and grateful for what you have',
+            'Emotional healing through travel or new experiences',
+            'Mother or family member brings good fortune',
+            'Feeling at home anywhere - emotional freedom',
+            'Enjoying home comforts and family time',
+            'Home improvement or expansion goes smoothly',
+            'Faith and emotional security supporting each other'
+          );
+        }
       }
     }
 
     // Moon-Mars: Emotional intensity, family conflict, protective instincts
     if (pairKey === 'Moon-Mars' || reversePairKey === 'Moon-Mars') {
-      if (isHard) {
-        manifestations.push(
-          'Argument with family member - emotional explosion',
-          'Feeling angry at home or with loved ones',
-          'Mother or female family member triggers your anger',
-          'Emotional reactivity - snapping at people',
-          'Conflict between home and action/career',
-          'Kitchen accident or household injury',
-          'Impatient with family\'s emotional needs',
-          'Feeling defensive or attacked emotionally',
-          'Aggressive behavior at home',
-          'Physical energy disrupted by emotional turmoil',
-          'Fighting to protect family or home',
-          'Emotional courage but also volatility'
-        );
-      } else {
-        manifestations.push(
-          'Taking action to improve home or family situation',
-          'Emotional courage to address family issues',
-          'Protective instincts strong - defending loved ones',
-          'Physical activity releases emotional tension',
-          'Motivated to care for family actively',
-          'Passionate feelings toward home or family',
-          'Taking initiative in domestic matters',
-          'Emotional honesty strengthens relationships',
-          'Working on home with enthusiasm and energy',
-          'Mother or family member encourages your goals',
-          'Feeling brave enough to express true feelings',
-          'Balancing emotions with action successfully'
-        );
+      // House 4: Home, family, roots, emotional foundation
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Screaming match with family member - anger boiling over',
+            'Mother criticizes your decisions - defensive reaction',
+            'Slamming doors, breaking dishes - emotional explosion at home',
+            'Sibling or parent starts fight over old resentment',
+            'Kitchen accident - cutting hand, burning self while cooking angry',
+            'Home renovation frustration - contractor issues, delays trigger rage',
+            'Childhood wound resurfaces - angry at parent for past neglect',
+            'Protecting family member from threat - fierce defensive instinct',
+            'Impatient with aging parent\'s needs - guilt about anger',
+            'Wanting to leave home immediately - can\'t stand family tension',
+            'Physical fight or near-fight with family member',
+            'Emotional volatility affects everyone at home - walking on eggshells'
+          );
+        } else {
+          manifestations.push(
+            'Courageously addressing long-standing family issue',
+            'Home improvement project with enthusiastic energy',
+            'Protecting home or family member successfully',
+            'Honest emotional conversation clears the air with family',
+            'Physical activity or project at home releases tension',
+            'Mother or family member supports your goals actively',
+            'Taking decisive action on real estate or home matter',
+            'Cooking or creating at home with passion and energy',
+            'Family member inspires your courage and motivation',
+            'Setting boundaries with family - assertive not aggressive',
+            'Motivated to improve home security or safety',
+            'Emotional honesty strengthens family bonds'
+          );
+        }
+      }
+      // House 1: Identity, self, physical body, emotional reactions
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Emotional overreaction to minor irritation - snapping at everyone',
+            'Anger making you physically sick - headache, stomach upset, fever',
+            'Crying and yelling at same time - emotional volatility',
+            'Impulsive physical action you regret - breaking something',
+            'Accident from emotional distraction - stub toe, bump head',
+            'Feeling attacked by others\' emotions - defensive stance',
+            'Physical restlessness from emotional turmoil - can\'t sit still',
+            'Emotional eating or physical self-soothing behaviors',
+            'Lashing out when feeling vulnerable or hurt',
+            'Face flushed, heart racing from emotional anger',
+            'Insomnia from emotional agitation and anger',
+            'Physical appearance affected by emotional stress'
+          );
+        } else {
+          manifestations.push(
+            'Emotional courage to be authentic and direct',
+            'Physical energy boosted by emotional clarity',
+            'Taking action on personal goals with passionate motivation',
+            'Asserting needs directly without aggression',
+            'Workout or physical activity releases emotional tension perfectly',
+            'Brave enough to show vulnerable emotions',
+            'Emotional honesty makes you more attractive to others',
+            'Physical and emotional energy aligned - feeling powerful',
+            'Taking initiative on self-care and personal needs',
+            'Emotional expression through physical action or movement',
+            'Standing up for yourself with healthy assertiveness',
+            'Passionate about personal goals - motivated to act'
+          );
+        }
+      }
+      // House 6: Work, daily routine, health, coworkers, service
+      if (transitHouse === 6 || natalHouse === 6) {
+        if (isHard) {
+          manifestations.push(
+            'Argument with coworker - emotional trigger at work',
+            'Stress-induced illness - stomach issues, headache, inflammation',
+            'Impatient with work tasks - rushing causes mistakes',
+            'Emotional burnout from overwork and lack of support',
+            'Snapping at colleague when feeling overwhelmed',
+            'Work-life conflict - job demands clash with emotional needs',
+            'Health issue from suppressed anger or emotional stress',
+            'Feeling unappreciated at work triggers defensive anger',
+            'Daily routine disrupted by emotional volatility',
+            'Workplace conflict over workload or boundaries',
+            'Physical exhaustion from emotional labor at work',
+            'Coworker\'s needs or demands trigger frustration'
+          );
+        } else {
+          manifestations.push(
+            'Motivated to tackle work tasks with energy',
+            'Asserting boundaries at work improves emotional health',
+            'Physical activity in daily routine improves mood',
+            'Taking action on health issue with courage',
+            'Coworker collaboration energizes you emotionally',
+            'Daily routine includes emotional self-care',
+            'Productive work period - action and emotion aligned',
+            'Addressing workplace issue with honesty and courage',
+            'Health improvement from increased physical activity',
+            'Emotional honesty with coworkers improves relationships',
+            'Taking initiative on work project with passion',
+            'Service to others feels emotionally rewarding'
+          );
+        }
+      }
+      // House 7: Partnerships, relationships, one-on-one dynamics
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Fight with partner - emotional explosion over small thing',
+            'Partner\'s anger triggers your emotional defensiveness',
+            'Feeling attacked in relationship - ready to fight back',
+            'Sexual frustration leads to emotional conflict',
+            'Passive-aggressive dynamic explodes into open conflict',
+            'Partner criticizes your emotional needs - hurt and angry',
+            'Impatient with partner\'s pace or emotional style',
+            'Business partnership has heated confrontation',
+            'Wanting independence but partner needs emotional closeness',
+            'Conflict about who\'s right - both defensive',
+            'Physical or emotional pushing match with partner',
+            'Emotional needs and partner\'s actions clash'
+          );
+        } else {
+          manifestations.push(
+            'Honest emotional conversation clears air with partner',
+            'Partner supports your goals with action not just words',
+            'Sexual and emotional intimacy aligned perfectly',
+            'Taking courageous action in relationship',
+            'Partner inspires your emotional courage and motivation',
+            'Asserting needs in partnership improves connection',
+            'Business partnership takes decisive action together',
+            'Physical activity or adventure with partner bonds you',
+            'Protective instinct for partner strengthens bond',
+            'Emotional honesty deepens trust and passion',
+            'Partner meets your emotional needs actively',
+            'Mutual respect for each other\'s boundaries and needs'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Argument with family member - emotional explosion',
+            'Feeling angry at home or with loved ones',
+            'Mother or female family member triggers your anger',
+            'Emotional reactivity - snapping at people',
+            'Conflict between home and action/career',
+            'Kitchen accident or household injury',
+            'Impatient with family\'s emotional needs',
+            'Feeling defensive or attacked emotionally',
+            'Aggressive behavior at home',
+            'Physical energy disrupted by emotional turmoil',
+            'Fighting to protect family or home',
+            'Emotional courage but also volatility'
+          );
+        } else {
+          manifestations.push(
+            'Taking action to improve home or family situation',
+            'Emotional courage to address family issues',
+            'Protective instincts strong - defending loved ones',
+            'Physical activity releases emotional tension',
+            'Motivated to care for family actively',
+            'Passionate feelings toward home or family',
+            'Taking initiative in domestic matters',
+            'Emotional honesty strengthens relationships',
+            'Working on home with enthusiasm and energy',
+            'Mother or family member encourages your goals',
+            'Feeling brave enough to express true feelings',
+            'Balancing emotions with action successfully'
+          );
+        }
       }
     }
 
     // Moon-Venus: Emotional comfort, beauty at home, feminine harmony
     if (pairKey === 'Moon-Venus' || reversePairKey === 'Moon-Venus') {
-      if (isConjunction) {
-        manifestations.push(
-          'Profound emotional and aesthetic harmony at home',
-          'Major home beautification or renovation project',
-          'Deeply meaningful moment with mother or female family',
-          'Feeling completely loved, nurtured and valued',
-          'Perfect family gathering - everyone feels appreciated',
-          'Significant purchase for home that brings joy',
-          'Romantic relationship with deep emotional connection',
-          'Self-care ritual that transforms your emotional state',
-          'Cooking or creating something beautiful that touches hearts',
-          'Financial decision that supports emotional security',
-          'Home becomes sanctuary of beauty and comfort',
-          'Feminine energy fully integrated and expressed'
-        );
-      } else if (isHard) {
-        manifestations.push(
-          'Emotional spending on home or comfort items - overspending',
-          'Conflict with mother or female family about values or money',
-          'Feeling unappreciated or unloved at home',
-          'Home doesn\'t feel comfortable or beautiful - dissatisfaction',
-          'Self-indulgence leading to guilt or financial stress',
-          'Family member criticizes your appearance or taste',
-          'Relationship tension affecting emotional security',
-          'Wanting comfort but it feels out of reach',
-          'Decorating or cooking goes wrong - frustration',
-          'Money stress affecting home life or relationships',
-          'Feeling emotionally starved despite material comfort',
-          'Clash between emotional needs and financial reality'
-        );
-      } else {
-        manifestations.push(
-          'Feeling emotionally content and comfortable',
-          'Home feels beautiful and peaceful',
-          'Treating yourself to comfort and pleasure easily',
-          'Good relationship with mother or female family flows',
-          'Cooking, decorating, or beautifying home goes well',
-          'Emotional and financial security aligned',
-          'Feeling loved and nurtured',
-          'Family gathering is pleasant and harmonious',
-          'Buying something nice for home that fits budget',
-          'Self-care and emotional wellbeing prioritized naturally',
-          'Romantic feelings about home or family',
-          'Feeling valued by family and loved ones'
-        );
+      // House 4: Home, family, roots, emotional foundation, domestic life
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Overspending on home decor or furniture to fill emotional void',
+            'Mother or female family criticizes your taste or style',
+            'Home feels uncomfortable despite spending money on it',
+            'Family gathering where you feel unappreciated or unloved',
+            'Expensive home renovation doesn\'t bring expected satisfaction',
+            'Emotional eating at home - comfort food becomes problem',
+            'Conflict with mother over values, money, or lifestyle',
+            'Home security threatened by financial stress or overspending',
+            'Feeling like home should be perfect but never is',
+            'Family member\'s needs drain your resources',
+            'Wanting emotional comfort from family but not receiving it',
+            'Guilt about self-care or spending on own comfort'
+          );
+        } else {
+          manifestations.push(
+            'Home becomes beautiful sanctuary of comfort and peace',
+            'Successful home improvement brings joy and value',
+            'Mother or female family provides loving support',
+            'Perfect family gathering - everyone feels valued and appreciated',
+            'Cooking or hosting at home brings emotional satisfaction',
+            'Finding ideal home decor piece at great price',
+            'Emotional security and beautiful home environment aligned',
+            'Multigenerational harmony - women in family bond deeply',
+            'Creating comfortable, aesthetically pleasing living space',
+            'Family celebration of love and appreciation',
+            'Real estate or home investment brings both beauty and value',
+            'Feeling emotionally nurtured and content at home'
+          );
+        }
+      }
+      // House 2: Money, values, possessions, self-worth, comfort
+      if (transitHouse === 2 || natalHouse === 2) {
+        if (isHard) {
+          manifestations.push(
+            'Emotional spending spree on clothes, beauty, comfort items',
+            'Financial stress from trying to make yourself feel better through purchases',
+            'Self-worth tied to appearance or possessions - never enough',
+            'Money conflict with mother or female family member',
+            'Expensive treat or purchase brings guilt not joy',
+            'Overindulging in food, shopping, or comfort spending',
+            'Values conflict - what you want vs what you can afford',
+            'Income insufficient for desired comfort level',
+            'Financial insecurity affecting emotional wellbeing',
+            'Loaning money to family out of guilt or pressure',
+            'Possessions accumulate but don\'t bring satisfaction',
+            'Comfort spending becoming financial problem'
+          );
+        } else {
+          manifestations.push(
+            'Income increase allows for more comfort and pleasure',
+            'Wise purchase brings lasting joy and value',
+            'Financial security supports emotional wellbeing',
+            'Mother or family helps financially at perfect time',
+            'Making money doing something emotionally fulfilling',
+            'Self-worth independent of financial status - feeling abundant',
+            'Beautiful possession or purchase within comfortable budget',
+            'Values aligned with spending - guilt-free comfort',
+            'Gift or bonus allows you to treat yourself',
+            'Financial confidence from emotional security',
+            'Investment in appearance or comfort pays off',
+            'Emotional and material abundance working together'
+          );
+        }
+      }
+      // House 5: Pleasure, creativity, romance, children, self-expression
+      if (transitHouse === 5 || natalHouse === 5) {
+        if (isHard) {
+          manifestations.push(
+            'Romantic disappointment - date or relationship doesn\'t meet expectations',
+            'Overspending on entertainment, dates, or children',
+            'Creative project feels forced or doesn\'t bring joy',
+            'Child or children causing financial or emotional stress',
+            'Dating costs draining finances',
+            'Wanting pleasure and romance but it feels out of reach',
+            'Creative expression criticized or unappreciated',
+            'Guilt about prioritizing pleasure or self-expression',
+            'Romantic interest doesn\'t value or appreciate you',
+            'Hobby or creative pursuit costs too much',
+            'Children\'s needs vs your need for pleasure - conflict',
+            'Self-expression blocked by insecurity or judgment'
+          );
+        } else {
+          manifestations.push(
+            'Perfect date or romantic experience - feeling cherished',
+            'Creative project brings both joy and appreciation',
+            'Child or children bring emotional fulfillment',
+            'Hobby or pleasure activity flows effortlessly',
+            'Romance and emotional security beautifully aligned',
+            'Creative self-expression feels natural and rewarding',
+            'Date night or entertainment within budget and deeply satisfying',
+            'Feeling attractive and appreciated in romantic context',
+            'Children bring joy and pride',
+            'Artistic or creative work receives positive feedback',
+            'Pleasure and comfort guilt-free and abundant',
+            'Self-expression through beauty, art, or creativity flows'
+          );
+        }
+      }
+      // House 7: Partnerships, relationships, marriage, one-on-one connections
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Partner doesn\'t make you feel appreciated or valued',
+            'Financial disagreement with partner about spending or values',
+            'Feeling unloved or emotionally unsupported in relationship',
+            'Partner criticizes your appearance, taste, or emotional needs',
+            'Business partnership has values or money conflict',
+            'Wanting affection from partner but not receiving it',
+            'Relationship costs (dates, gifts) causing financial stress',
+            'Partner\'s emotional unavailability hurts deeply',
+            'Marriage or partnership feels comfortable but not passionate',
+            'Contract or agreement with partner causes financial tension',
+            'One-sided relationship - giving more than receiving',
+            'Emotional needs and partner\'s actions misaligned'
+          );
+        } else {
+          manifestations.push(
+            'Partner makes you feel deeply loved and appreciated',
+            'Beautiful moment in relationship - emotional and aesthetic harmony',
+            'Financial agreement with partner works perfectly for both',
+            'Business partnership brings both profit and pleasure',
+            'Romantic date or quality time strengthens bond',
+            'Partner supports your emotional needs and values',
+            'Marriage or partnership feels comfortable and loving',
+            'Receiving gift or gesture from partner that touches your heart',
+            'Emotional and financial security in partnership aligned',
+            'One-on-one time with partner brings deep contentment',
+            'Contract or agreement benefits both partners fairly',
+            'Partnership enhances rather than depletes emotional wellbeing'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isConjunction) {
+          manifestations.push(
+            'Profound emotional and aesthetic harmony at home',
+            'Major home beautification or renovation project',
+            'Deeply meaningful moment with mother or female family',
+            'Feeling completely loved, nurtured and valued',
+            'Perfect family gathering - everyone feels appreciated',
+            'Significant purchase for home that brings joy',
+            'Romantic relationship with deep emotional connection',
+            'Self-care ritual that transforms your emotional state',
+            'Cooking or creating something beautiful that touches hearts',
+            'Financial decision that supports emotional security',
+            'Home becomes sanctuary of beauty and comfort',
+            'Feminine energy fully integrated and expressed'
+          );
+        } else if (isHard) {
+          manifestations.push(
+            'Emotional spending on home or comfort items - overspending',
+            'Conflict with mother or female family about values or money',
+            'Feeling unappreciated or unloved at home',
+            'Home doesn\'t feel comfortable or beautiful - dissatisfaction',
+            'Self-indulgence leading to guilt or financial stress',
+            'Family member criticizes your appearance or taste',
+            'Relationship tension affecting emotional security',
+            'Wanting comfort but it feels out of reach',
+            'Decorating or cooking goes wrong - frustration',
+            'Money stress affecting home life or relationships',
+            'Feeling emotionally starved despite material comfort',
+            'Clash between emotional needs and financial reality'
+          );
+        } else {
+          manifestations.push(
+            'Feeling emotionally content and comfortable',
+            'Home feels beautiful and peaceful',
+            'Treating yourself to comfort and pleasure easily',
+            'Good relationship with mother or female family flows',
+            'Cooking, decorating, or beautifying home goes well',
+            'Emotional and financial security aligned',
+            'Feeling loved and nurtured',
+            'Family gathering is pleasant and harmonious',
+            'Buying something nice for home that fits budget',
+            'Self-care and emotional wellbeing prioritized naturally',
+            'Romantic feelings about home or family',
+            'Feeling valued by family and loved ones'
+          );
+        }
       }
     }
 
@@ -2353,51 +3390,190 @@ function getSpecificManifestations(
 
     // Mercury-Venus: Pleasant communication, artistic ideas, relationship talks
     if (pairKey === 'Mercury-Venus' || reversePairKey === 'Mercury-Venus') {
-      if (isConjunction) {
-        manifestations.push(
-          'Perfect expression of love or appreciation - words touch hearts',
-          'Writing or speaking engagement about beauty or relationships',
-          'Major contract or agreement signed harmoniously',
-          'Artistic breakthrough - creative ideas flow beautifully',
-          'Relationship conversation that deepens connection significantly',
-          'Compliment or message that validates your worth',
-          'Negotiation that results in win-win outcome',
-          'Learning about art or beauty transforms your perspective',
-          'Shopping or purchase that perfectly expresses your values',
-          'Social event where you connect meaningfully with others',
-          'Sibling or neighbor becomes ally or friend',
-          'Poetry, music, or art creation that expresses your heart'
-        );
-      } else if (isHard) {
-        manifestations.push(
-          'Miscommunication in relationship causing hurt feelings',
-          'Difficulty expressing love or appreciation',
-          'Contract or agreement involves unfair terms',
-          'Creative block - can\'t express beauty or ideas',
-          'Compliment feels insincere or backhanded',
-          'Negotiation breaks down - can\'t find compromise',
-          'Awkward conversation about money or values',
-          'Sibling or neighbor says something tactless',
-          'Shopping regret - purchase doesn\'t reflect your values',
-          'Social plans fall through due to miscommunication',
-          'Learning about relationships reveals painful truths',
-          'Criticism about your writing, speaking, or creative work'
-        );
-      } else {
-        manifestations.push(
-          'Pleasant conversations - everyone gets along',
-          'Love letter, romantic text, or sweet message',
-          'Contract or agreement goes smoothly',
-          'Artistic or creative writing flows easily',
-          'Compliment or kind words boost your mood',
-          'Negotiation succeeds - both sides happy',
-          'Beautiful ideas or aesthetically pleasing thoughts',
-          'Sibling or neighbor interaction is pleasant',
-          'Shopping or purchasing decision feels right',
-          'Communication in relationship improves',
-          'Learning about art, beauty, or relationships',
-          'Social plans made easily through good communication'
-        );
+      // House 3: Communication, writing, siblings, neighbors, local travel, learning
+      if (transitHouse === 3 || natalHouse === 3) {
+        if (isHard) {
+          manifestations.push(
+            'Text or email to sibling/neighbor comes across wrong',
+            'Writing project blocked - can\'t find beautiful words',
+            'Sibling criticizes your taste, style, or values',
+            'Local shopping trip - buyer\'s remorse on purchase',
+            'Difficulty expressing creative ideas clearly',
+            'Awkward small talk or social conversation',
+            'Contract or paperwork has unfavorable terms about money',
+            'Learning materials boring or aesthetically unpleasing',
+            'Miscommunication about social plans with neighbor',
+            'Creative writing feels forced or inauthentic',
+            'Compliment from sibling feels backhanded',
+            'Car or transportation purchase regret'
+          );
+        } else {
+          manifestations.push(
+            'Perfect text or message that expresses appreciation',
+            'Writing flows beautifully - creative ideas articulated clearly',
+            'Pleasant conversation with sibling or neighbor',
+            'Local shopping finds - beautiful purchases at good prices',
+            'Learning something about art, beauty, or relationships',
+            'Social plans made easily - everyone agrees happily',
+            'Contract or paperwork signed smoothly and fairly',
+            'Creative writing or journaling brings joy and insight',
+            'Compliment from sibling or neighbor brightens your day',
+            'Car or transportation experience is pleasant and smooth',
+            'Neighborhood feels beautiful and friendly',
+            'Teaching or sharing creative ideas well-received'
+          );
+        }
+      }
+      // House 7: Partnerships, relationships, marriage, one-on-one communication
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Trying to say "I love you" but words come out wrong',
+            'Partner misinterprets your compliment or affection',
+            'Awkward conversation about money or spending with partner',
+            'Business contract negotiation breaks down over terms',
+            'Partner criticizes your communication style or word choices',
+            'Difficulty articulating needs or desires in relationship',
+            'Text or call with partner causes confusion or hurt',
+            'Wedding or relationship planning communication issues',
+            'Partner\'s words don\'t match their actions - mixed messages',
+            'Agreement with partner feels unfair or one-sided',
+            'Can\'t find right words to express appreciation',
+            'Communication in relationship feels superficial not deep'
+          );
+        } else {
+          manifestations.push(
+            'Perfect "I love you" or romantic message to partner',
+            'Relationship conversation flows easily and deepens connection',
+            'Business contract signed harmoniously - win-win terms',
+            'Partner\'s words make you feel appreciated and valued',
+            'Easy communication about finances or spending with partner',
+            'Articulating needs and desires clearly in relationship',
+            'Sweet text or call with partner brightens your day',
+            'Wedding or relationship planning goes smoothly through good communication',
+            'Partner\'s words and actions aligned - consistent and loving',
+            'Agreement with partner benefits both fairly',
+            'Expressing appreciation comes naturally and lands well',
+            'Communication in relationship both pleasant and meaningful'
+          );
+        }
+      }
+      // House 2: Money, values, possessions, self-worth
+      if (transitHouse === 2 || natalHouse === 2) {
+        if (isHard) {
+          manifestations.push(
+            'Awkward conversation about money - asking for raise or discussing salary',
+            'Sales pitch or negotiation goes poorly',
+            'Purchase decision regret - bought something that doesn\'t reflect values',
+            'Financial paperwork confusing or contains unfavorable terms',
+            'Talking about money with others feels uncomfortable',
+            'Value mismatch in communication - not speaking same language',
+            'Overpromising what you can afford',
+            'Shopping list vs actual purchases don\'t match - impulse buying',
+            'Contract about finances has unclear or unfair terms',
+            'Difficulty articulating your worth in financial context',
+            'Money conversation reveals differing values',
+            'Learning about finances feels overwhelming or discouraging'
+          );
+        } else {
+          manifestations.push(
+            'Successfully negotiating raise or better financial terms',
+            'Sales pitch or presentation about values succeeds beautifully',
+            'Smart purchase decision - buying something that reflects values perfectly',
+            'Financial paperwork clear and favorable',
+            'Easy comfortable conversation about money',
+            'Value alignment in communication - understanding flows',
+            'Realistic assessment of what you can afford',
+            'Shopping with clear intention - purchases match values',
+            'Contract about finances clear and fair to all parties',
+            'Articulating your worth confidently in financial context',
+            'Money conversation strengthens relationships',
+            'Learning about finances in engaging, aesthetically pleasing way'
+          );
+        }
+      }
+      // House 5: Pleasure, creativity, romance, children, self-expression
+      if (transitHouse === 5 || natalHouse === 5) {
+        if (isHard) {
+          manifestations.push(
+            'Romantic text or call doesn\'t get the response hoped for',
+            'Creative writing or artistic expression blocked or criticized',
+            'Children say something tactless or hurtful',
+            'Date conversation awkward - can\'t find flow',
+            'Artistic ideas seem beautiful in mind but don\'t translate',
+            'Difficulty expressing feelings to romantic interest',
+            'Creative project communication causes conflict',
+            'Children\'s school paperwork or communication stressful',
+            'Pleasure activity planned poorly due to miscommunication',
+            'Romantic gesture or words misinterpreted',
+            'Writing about love or pleasure feels forced',
+            'Creative collaboration has communication breakdown'
+          );
+        } else {
+          manifestations.push(
+            'Perfect romantic text or love letter - words touch their heart',
+            'Creative writing or artistic expression flows beautifully',
+            'Children say something sweet or endearing',
+            'Date conversation flows naturally - connecting easily',
+            'Artistic ideas translate perfectly into reality',
+            'Easily expressing feelings to romantic interest',
+            'Creative project communication clear and inspiring',
+            'Children\'s school communication pleasant and positive',
+            'Pleasure activity planned perfectly through good communication',
+            'Romantic gesture and words perfectly aligned',
+            'Writing about love or pleasure comes naturally',
+            'Creative collaboration has harmonious communication'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isConjunction) {
+          manifestations.push(
+            'Perfect expression of love or appreciation - words touch hearts',
+            'Writing or speaking engagement about beauty or relationships',
+            'Major contract or agreement signed harmoniously',
+            'Artistic breakthrough - creative ideas flow beautifully',
+            'Relationship conversation that deepens connection significantly',
+            'Compliment or message that validates your worth',
+            'Negotiation that results in win-win outcome',
+            'Learning about art or beauty transforms your perspective',
+            'Shopping or purchase that perfectly expresses your values',
+            'Social event where you connect meaningfully with others',
+            'Sibling or neighbor becomes ally or friend',
+            'Poetry, music, or art creation that expresses your heart'
+          );
+        } else if (isHard) {
+          manifestations.push(
+            'Miscommunication in relationship causing hurt feelings',
+            'Difficulty expressing love or appreciation',
+            'Contract or agreement involves unfair terms',
+            'Creative block - can\'t express beauty or ideas',
+            'Compliment feels insincere or backhanded',
+            'Negotiation breaks down - can\'t find compromise',
+            'Awkward conversation about money or values',
+            'Sibling or neighbor says something tactless',
+            'Shopping regret - purchase doesn\'t reflect your values',
+            'Social plans fall through due to miscommunication',
+            'Learning about relationships reveals painful truths',
+            'Criticism about your writing, speaking, or creative work'
+          );
+        } else {
+          manifestations.push(
+            'Pleasant conversations - everyone gets along',
+            'Love letter, romantic text, or sweet message',
+            'Contract or agreement goes smoothly',
+            'Artistic or creative writing flows easily',
+            'Compliment or kind words boost your mood',
+            'Negotiation succeeds - both sides happy',
+            'Beautiful ideas or aesthetically pleasing thoughts',
+            'Sibling or neighbor interaction is pleasant',
+            'Shopping or purchasing decision feels right',
+            'Communication in relationship improves',
+            'Learning about art, beauty, or relationships',
+            'Social plans made easily through good communication'
+          );
+        }
       }
     }
 
@@ -2801,36 +3977,179 @@ function getSpecificManifestations(
 
     // Mercury-Pluto: Deep research, intense conversations, mental transformation
     if (pairKey === 'Mercury-Pluto' || reversePairKey === 'Mercury-Pluto') {
-      if (isHard) {
-        manifestations.push(
-          'Obsessive thoughts won\'t leave your mind',
-          'Someone tries to manipulate you through words',
-          'Discovering dark or disturbing information',
-          'Intense argument that goes too deep',
-          'Paranoid thinking or conspiracy theories',
-          'Secret revealed through communication',
-          'Psychological manipulation in conversation',
-          'Contract or agreement has hidden control issues',
-          'Mental power struggle - battle of wits',
-          'Compulsive need to know or understand everything',
-          'Words used as weapons - verbal abuse',
-          'Technology or communication used for control'
-        );
-      } else {
-        manifestations.push(
-          'Deep research uncovers important truth',
-          'Transformative conversation changes everything',
-          'Psychological insight through study or therapy',
-          'Penetrating understanding of complex topic',
-          'Powerful words - speaking truth to power',
-          'Investigative work reveals hidden information',
-          'Eliminating mental blocks or negative thought patterns',
-          'Contract or agreement transforms situation',
-          'Communication heals deep wound',
-          'Understanding power dynamics clearly',
-          'Profound learning experience',
-          'Mental transformation through study or conversation'
-        );
+      // House 3: Communication, siblings, learning, short trips, neighbors
+      if (transitHouse === 3 || natalHouse === 3) {
+        if (isHard) {
+          manifestations.push(
+            'Sibling reveals dark secret - abuse, addiction, betrayal',
+            'Neighbor feud escalates into intense conflict',
+            'Discovering disturbing information about local area',
+            'Obsessive overthinking about communication or conversation',
+            'Brother or sister tries to manipulate or control you',
+            'Learning about dark topics - trauma, death, psychology',
+            'Short trip goes dangerously wrong - accident, crime',
+            'Car problems reveal sabotage or deliberate damage',
+            'Intense argument with sibling reaches breaking point',
+            'Finding out neighbor has been spying or invading privacy',
+            'Documents or paperwork reveal shocking truth',
+            'Mental power struggle with sibling or classmate'
+          );
+        } else {
+          manifestations.push(
+            'Deep conversation with sibling heals old wounds',
+            'Research or investigation uncovers important truth',
+            'Learning psychology, therapy techniques, investigation',
+            'Powerful communication transforms relationship',
+            'Sibling shares profound insight that helps you',
+            'Short trip leads to transformative experience',
+            'Car purchase or upgrade feels empowering',
+            'Study of deep subjects - occult, psychology, mysteries',
+            'Writing or speaking with depth and power',
+            'Neighbor connection leads to psychological insight',
+            'Documents or contracts work in your favor',
+            'Mental transformation through learning or study'
+          );
+        }
+      }
+
+      // House 7: Partnerships, relationships, marriage
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Partner uses words to manipulate and control you',
+            'Discovering partner\'s lies, secrets, hidden affairs',
+            'Verbal abuse in relationship - words as weapons',
+            'Partner obsessively interrogates or questions you',
+            'Contract or prenup reveals power and control issues',
+            'Intense arguments that dredge up everything dark',
+            'Partner\'s jealousy manifests through invasive questioning',
+            'Discovering partner has been monitoring your communications',
+            'Business partner\'s hidden agenda revealed through documents',
+            'Legal battle with ex-partner gets ugly and vindictive',
+            'Partner\'s psychological games through conversation',
+            'Feeling mentally dominated or controlled by partner'
+          );
+        } else {
+          manifestations.push(
+            'Deep conversations with partner create intimacy',
+            'Relationship transforms through honest communication',
+            'Partner shares vulnerability that deepens connection',
+            'Contract or agreement empowers both partners',
+            'Couple\'s therapy leads to breakthrough understanding',
+            'Partner helps you understand deep psychological patterns',
+            'Business partnership based on truth and transparency',
+            'Meeting partner who sees and accepts your shadow',
+            'Profound understanding of relationship dynamics',
+            'Communication heals deep wounds in partnership',
+            'Contracts or legal matters resolved fairly',
+            'Partner\'s insight transforms your perspective'
+          );
+        }
+      }
+
+      // House 8: Transformation, shared resources, intimacy, psychology, death
+      if (transitHouse === 8 || natalHouse === 8) {
+        if (isHard) {
+          manifestations.push(
+            'Discovering partner hid financial information - debt, accounts',
+            'Learning about inheritance through disturbing conversation',
+            'Therapy session surfaces repressed traumatic memories',
+            'Tax audit or IRS investigation reveals problems',
+            'Obsessive thoughts about death, sex, or trauma',
+            'Someone reveals sexual trauma or abuse - yours or theirs',
+            'Financial documents show betrayal or manipulation',
+            'Discovering dark family secrets through inheritance',
+            'Psychological manipulation through intimate conversations',
+            'Reading about trauma triggers intense mental reaction',
+            'Learning you\'re named in will creates family conflict',
+            'Contract about shared resources has hidden control'
+          );
+        } else {
+          manifestations.push(
+            'Therapy provides profound psychological breakthrough',
+            'Deep research into psychology, trauma, or mysteries',
+            'Learning about inheritance or shared resources clearly',
+            'Tax or financial documents work in your favor',
+            'Studying death, rebirth, transformation deeply',
+            'Communication about intimacy deepens relationship',
+            'Psychological insight transforms understanding of self',
+            'Investigating family history reveals important truth',
+            'Writing about deep, transformative topics',
+            'Financial contracts about shared resources fair and clear',
+            'Learning about investments or joint finances empowers you',
+            'Speaking truth about trauma begins healing process'
+          );
+        }
+      }
+
+      // House 10: Career, public image, reputation, authority
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Boss uses manipulative communication to control',
+            'Public statement or email damages your reputation',
+            'Discovering corruption or unethical practices at work',
+            'Obsessive thoughts about career prevent sleep',
+            'Coworker spreads rumors or lies about you professionally',
+            'Contract negotiation reveals hidden power dynamics',
+            'Authority figure uses words to intimidate or dominate',
+            'Public speaking or presentation goes disastrously wrong',
+            'Career communication gets twisted and misrepresented',
+            'Professional documents reveal betrayal or sabotage',
+            'Intense mental pressure from work responsibilities',
+            'Public criticism or attack on your professional reputation'
+          );
+        } else {
+          manifestations.push(
+            'Powerful presentation or speech transforms career',
+            'Deep research leads to professional breakthrough',
+            'Becoming authority in psychology, investigation, or deep work',
+            'Professional writing or speaking has profound impact',
+            'Contract negotiation where you hold power wisely',
+            'Career in therapy, investigation, research, psychology',
+            'Public statement addresses important deep truth',
+            'Professional reputation built on depth and insight',
+            'Mastering career through understanding power dynamics',
+            'Authority position where you help others transform',
+            'Professional documents clearly establish your power',
+            'Career advancement through psychological expertise'
+          );
+        }
+      }
+
+      // General fallback for other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Obsessive thoughts won\'t leave your mind',
+            'Someone tries to manipulate you through words',
+            'Discovering dark or disturbing information',
+            'Intense argument that goes too deep',
+            'Paranoid thinking or conspiracy theories',
+            'Secret revealed through communication',
+            'Psychological manipulation in conversation',
+            'Contract or agreement has hidden control issues',
+            'Mental power struggle - battle of wits',
+            'Compulsive need to know or understand everything',
+            'Words used as weapons - verbal abuse',
+            'Technology or communication used for control'
+          );
+        } else {
+          manifestations.push(
+            'Deep research uncovers important truth',
+            'Transformative conversation changes everything',
+            'Psychological insight through study or therapy',
+            'Penetrating understanding of complex topic',
+            'Powerful words - speaking truth to power',
+            'Investigative work reveals hidden information',
+            'Eliminating mental blocks or negative thought patterns',
+            'Contract or agreement transforms situation',
+            'Communication heals deep wound',
+            'Understanding power dynamics clearly',
+            'Profound learning experience',
+            'Mental transformation through study or conversation'
+          );
+        }
       }
     }
   }
@@ -2898,7 +4217,8 @@ function getSpecificManifestations(
 
     // Mars-Saturn: Frustrated action or disciplined effort
     if (pairKey === 'Mars-Saturn' || reversePairKey === 'Mars-Saturn') {
-      if (transitHouse === 10) {
+      // House 10: Career, public image, authority, reputation
+      if (transitHouse === 10 || natalHouse === 10) {
         if (isHard) {
           manifestations.push(
             'Career progress completely blocked - hitting wall repeatedly',
@@ -2931,7 +4251,8 @@ function getSpecificManifestations(
           );
         }
       }
-      if (transitHouse === 6) {
+      // House 6: Work, daily routine, health, service
+      if (transitHouse === 6 || natalHouse === 6) {
         if (isHard) {
           manifestations.push(
             'Physical energy depleted - chronic fatigue',
@@ -2961,6 +4282,108 @@ function getSpecificManifestations(
             'Creating healthy daily routine that sticks',
             'Discipline with diet and exercise showing results',
             'Work-life balance achieved through boundaries'
+          );
+        }
+      }
+      // House 1: Identity, self, physical body, personal energy
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Feeling physically blocked or held back',
+            'Low energy affecting confidence and presence',
+            'Anger turned inward causing depression or frustration',
+            'Physical limitations preventing desired action',
+            'Impatience with slow progress on personal goals',
+            'Feeling older or more tired than usual',
+            'Self-doubt about ability to achieve goals',
+            'Chronic pain or physical issue limiting mobility',
+            'Forcing yourself to push through exhaustion',
+            'Personal initiative constantly hitting obstacles',
+            'Feeling stuck in old patterns unable to move forward',
+            'Body saying no when mind wants to push ahead'
+          );
+        } else {
+          manifestations.push(
+            'Building personal discipline and self-mastery',
+            'Increased physical stamina through patient effort',
+            'Mature approach to goals - realistic pacing',
+            'Successfully completing challenging personal project',
+            'Physical training showing lasting results',
+            'Confidence from proven competence and ability',
+            'Respected for reliability and follow-through',
+            'Taking on responsibility with capability',
+            'Personal goals achieved through persistent effort',
+            'Strength built through overcoming obstacles',
+            'Disciplined action toward long-term objectives',
+            'Physical and mental endurance improving steadily'
+          );
+        }
+      }
+      // House 7: Partnerships, relationships, one-on-one dynamics
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Partner constantly criticizing or blocking your actions',
+            'Feeling held back by relationship obligations',
+            'Sexual frustration or physical distance in relationship',
+            'Partner\'s caution or fear prevents joint action',
+            'Business partnership progress painfully slow',
+            'Contract or agreement delays causing frustration',
+            'Partner draining your energy or motivation',
+            'Conflict over who takes action and who holds back',
+            'Age difference or maturity gap causing friction',
+            'Feeling restricted or controlled by partner',
+            'Relationship feels like work not passion',
+            'Partner\'s depression or low energy affecting you'
+          );
+        } else {
+          manifestations.push(
+            'Building solid partnership through reliable action',
+            'Partner provides steady support for your goals',
+            'Business collaboration succeeds through discipline',
+            'Contract or agreement finalized after careful work',
+            'Mature handling of relationship challenges',
+            'Partner respects your boundaries and timing',
+            'Sexual relationship deepens with trust and patience',
+            'Collaborative project completed through persistence',
+            'Partner\'s stability grounds your energy positively',
+            'Equal responsibility in partnership works well',
+            'Taking turns leading and supporting effectively',
+            'Long-term commitment strengthening through action'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Actions blocked or delayed causing frustration',
+            'Hard work producing slow results - testing patience',
+            'Physical energy limited or depleted',
+            'Obstacles requiring mature, disciplined approach',
+            'Anger at restrictions or limitations',
+            'Need to work twice as hard for half the progress',
+            'Timing feels off - forced to wait',
+            'Authority or rules preventing desired action',
+            'Physical or circumstantial limitations frustrating',
+            'Effort feels unrewarded or unappreciated',
+            'Responsibility weighing heavily on energy',
+            'Pushing through resistance requires endurance'
+          );
+        } else {
+          manifestations.push(
+            'Disciplined action producing lasting results',
+            'Building something solid through patient effort',
+            'Physical endurance and stamina increasing',
+            'Mature handling of challenges earns respect',
+            'Slow but steady progress toward goals',
+            'Responsibility handled with competence',
+            'Timing right for structured, planned action',
+            'Authority supports your disciplined approach',
+            'Physical training or work ethic paying off',
+            'Effort recognized and rewarded appropriately',
+            'Taking on challenge with realistic strategy',
+            'Persistence overcoming obstacles successfully'
           );
         }
       }
@@ -3058,36 +4481,179 @@ function getSpecificManifestations(
 
     // Mars-Neptune: Confused action, spiritual motivation, energy drain
     if (pairKey === 'Mars-Neptune' || reversePairKey === 'Mars-Neptune') {
-      if (isHard) {
-        manifestations.push(
-          'Energy drained for mysterious reasons',
-          'Actions sabotaged or undermined',
-          'Deception regarding plans or projects',
-          'Lack of motivation or direction',
-          'Passive-aggressive behavior - yours or others',
-          'Physical illness saps energy',
-          'Goals become unclear or keep changing',
-          'Victim mentality prevents action',
-          'Escapist behavior instead of taking action',
-          'Working toward illusion not reality',
-          'Physical boundaries violated',
-          'Misdirected anger or effort'
-        );
-      } else {
-        manifestations.push(
-          'Spiritual motivation inspires action',
-          'Artistic or creative energy flows',
-          'Compassionate action helps others',
-          'Yoga, dance, or flow state activities',
-          'Intuitive action proves correct',
-          'Working for spiritual or artistic cause',
-          'Gentle assertion effective',
-          'Creative visualization manifests goal',
-          'Healing action - Reiki, energy work',
-          'Surrendering control brings better outcome',
-          'Following intuition in action',
-          'Art, music, or spirituality energizes you'
-        );
+      // House 6: Work, health, daily routines, service
+      if (transitHouse === 6 || natalHouse === 6) {
+        if (isHard) {
+          manifestations.push(
+            'Chronic fatigue - no energy to work, unclear medical cause',
+            'Getting sick frequently - immune system weak',
+            'Coworker undermines you passively-aggressively',
+            'Work project keeps getting delayed for vague reasons',
+            'Food poisoning or mysterious digestive issues',
+            'Workplace deception - someone taking credit for your work',
+            'Exercise routine falls apart - no motivation',
+            'Health symptoms doctors can\'t explain or diagnose',
+            'Feeling like martyr at work - doing everything, unappreciated',
+            'Addiction or escapist behavior affecting work performance',
+            'Daily routines dissolve - can\'t maintain structure',
+            'Allergic reaction or sensitivity to chemicals, foods, environment'
+          );
+        } else {
+          manifestations.push(
+            'Yoga, tai chi, or gentle exercise routine begins',
+            'Health improves through spiritual or holistic practices',
+            'Work becomes more aligned with spiritual values',
+            'Creative or artistic work energizes daily life',
+            'Compassionate approach to coworkers improves atmosphere',
+            'Intuitive eating or health practices work beautifully',
+            'Daily meditation or spiritual practice grounds you',
+            'Healing work or service to others feels fulfilling',
+            'Work flows when you surrender perfectionism',
+            'Diet changes based on intuition improve health',
+            'Creative visualization improves work performance',
+            'Energy work, Reiki, or healing modalities help health'
+          );
+        }
+      }
+
+      // House 7: Partnerships, relationships, marriage
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Partner\'s passive-aggressive behavior driving you crazy',
+            'Unclear where relationship stands - vague, undefined',
+            'Partner playing victim - you can\'t win',
+            'Sexual energy drained or manipulated by partner',
+            'Partner\'s addiction or escapism affecting relationship',
+            'Feeling deceived by partner but can\'t prove anything',
+            'Martyr complex in relationship - sacrificing everything',
+            'Partner\'s actions don\'t match words - confused',
+            'Boundaries violated subtly - can\'t point to specific act',
+            'Partner\'s lack of motivation affects both of you',
+            'Idealizing partner prevents seeing red flags',
+            'Relationship drains your energy mysteriously'
+          );
+        } else {
+          manifestations.push(
+            'Spiritual connection with partner deepens intimacy',
+            'Dancing, music, or art brings you together',
+            'Compassion and forgiveness heal relationship',
+            'Sexual connection becomes more spiritual or tantric',
+            'Partner supports your creative or spiritual pursuits',
+            'Relationship flows when you release control',
+            'Meeting partner through spiritual or artistic community',
+            'Gentle, intuitive approach improves partnership',
+            'Creative collaboration with partner brings joy',
+            'Relationship based on compassion and acceptance',
+            'Partner inspires your artistic or spiritual side',
+            'Union feels divinely guided or fated'
+          );
+        }
+      }
+
+      // House 10: Career, public image, reputation, authority
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Career direction unclear - goals keep shifting',
+            'Boss or authority figure deceives or misleads you',
+            'Public image damaged by scandal or confusion',
+            'Professional energy drained by toxic workplace',
+            'Career plans sabotaged by unclear circumstances',
+            'Reputation suffers from vague rumors or lies',
+            'Feeling like victim of workplace politics',
+            'Professional boundaries violated subtly',
+            'Career goal turns out to be illusion',
+            'Exhaustion prevents career advancement',
+            'Taking action in career that doesn\'t lead anywhere',
+            'Authority figure plays victim, manipulates you'
+          );
+        } else {
+          manifestations.push(
+            'Career in arts, music, film, or spirituality takes off',
+            'Public image enhanced through compassionate action',
+            'Professional success through creative or healing work',
+            'Authority position where you help or heal others',
+            'Career flows when you trust intuition',
+            'Public recognition for artistic or spiritual work',
+            'Professional reputation built on compassion',
+            'Career in photography, film, music, dance, healing',
+            'Authority role based on inspiration not domination',
+            'Professional success through surrendering ego',
+            'Public work serves higher purpose or cause',
+            'Career advancement through creative visualization'
+          );
+        }
+      }
+
+      // House 12: Spirituality, unconscious, hidden matters, solitude
+      if (transitHouse === 12 || natalHouse === 12) {
+        if (isHard) {
+          manifestations.push(
+            'Self-sabotage through unconscious patterns',
+            'Addiction or escapism spiraling out of control',
+            'Hidden enemies undermine you secretly',
+            'Depression or fatigue forces isolation',
+            'Sleep problems - insomnia or oversleeping',
+            'Secrets revealed that drain your energy',
+            'Feeling victimized by circumstances beyond control',
+            'Unconscious anger surfaces through illness',
+            'Spiritual crisis - lost faith, can\'t connect',
+            'Hospitalization or enforced rest due to exhaustion',
+            'Past karma catches up in confusing ways',
+            'Isolation feels more like prison than retreat'
+          );
+        } else {
+          manifestations.push(
+            'Spiritual practice deepens through solitude',
+            'Meditation or yoga practice transforms energy',
+            'Creative work flows in solitude',
+            'Unconscious healing through dreams or therapy',
+            'Retreat or spiritual withdrawal rejuvenates',
+            'Artistic inspiration comes through alone time',
+            'Compassion practice heals old wounds',
+            'Energy work or healing in private space',
+            'Past karma resolved through forgiveness',
+            'Surrender and acceptance bring peace',
+            'Hidden spiritual gifts emerge',
+            'Solitude energizes rather than drains'
+          );
+        }
+      }
+
+      // General fallback for other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Energy drained for mysterious reasons',
+            'Actions sabotaged or undermined',
+            'Deception regarding plans or projects',
+            'Lack of motivation or direction',
+            'Passive-aggressive behavior - yours or others',
+            'Physical illness saps energy',
+            'Goals become unclear or keep changing',
+            'Victim mentality prevents action',
+            'Escapist behavior instead of taking action',
+            'Working toward illusion not reality',
+            'Physical boundaries violated',
+            'Misdirected anger or effort'
+          );
+        } else {
+          manifestations.push(
+            'Spiritual motivation inspires action',
+            'Artistic or creative energy flows',
+            'Compassionate action helps others',
+            'Yoga, dance, or flow state activities',
+            'Intuitive action proves correct',
+            'Working for spiritual or artistic cause',
+            'Gentle assertion effective',
+            'Creative visualization manifests goal',
+            'Healing action - Reiki, energy work',
+            'Surrendering control brings better outcome',
+            'Following intuition in action',
+            'Art, music, or spirituality energizes you'
+          );
+        }
       }
     }
   }
@@ -3737,7 +5303,182 @@ function getSpecificManifestations(
 
     // Saturn-Pluto: Profound structural transformation
     if (pairKey === 'Saturn-Pluto' || reversePairKey === 'Saturn-Pluto') {
-      // General fallback for all houses
+      // House 2: Money, values, possessions, self-worth
+      if (transitHouse === 2 || natalHouse === 2) {
+        if (isHard) {
+          manifestations.push(
+            'Financial crisis forces complete restructuring of life',
+            'Job loss, bankruptcy, or major financial collapse',
+            'Discovering partner hid debt, gambling, or financial betrayal',
+            'Years of savings wiped out - investment crash, scam, theft',
+            'IRS audit, tax debt, legal financial consequences surface',
+            'Forced to sell everything and start over financially',
+            'Power struggle over money with partner, family, or institution',
+            'Deep fear about survival - "How will I make it?"',
+            'Credit destroyed, reputation damaged, financial rock bottom',
+            'Having to accept financial help - ego death around money',
+            'Losing everything shows what really has value',
+            'Facing consequences of years of financial mismanagement'
+          );
+        } else {
+          manifestations.push(
+            'Complete financial transformation through discipline',
+            'Paying off massive debt after years of dedicated work',
+            'Inheritance or settlement provides foundation for rebuilding',
+            'Building wealth through facing financial fears and shadows',
+            'Mastering money management after hitting rock bottom',
+            'Power over finances instead of finances having power over you',
+            'Deep work on money psychology transforms earning capacity',
+            'Rising from financial ashes stronger and wiser',
+            'Taking full responsibility for finances creates empowerment',
+            'Building something lasting from financial ruins',
+            'Discovering inner worth independent of external resources',
+            'Financial mastery through psychological transformation'
+          );
+        }
+      }
+
+      // House 8: Transformation, shared resources, intimacy, death/rebirth, psychology
+      if (transitHouse === 8 || natalHouse === 8) {
+        if (isHard) {
+          manifestations.push(
+            'Death of family member forces confrontation with mortality',
+            'Discovering partner\'s affair, lies, hidden life - betrayal',
+            'Sexual trauma or abuse surfaces - therapy needed',
+            'Divorce with brutal fight over shared assets and money',
+            'Inheritance battle reveals family darkness and greed',
+            'Partner\'s addiction, mental illness, or crisis consumes you',
+            'Forced to face repressed trauma - psychological crisis',
+            'Power dynamics in relationship become unbearable',
+            'Obsessive thoughts, fears, or compulsions take over',
+            'Dark night of the soul - everything feels hopeless',
+            'Financial entanglement with partner becomes nightmare',
+            'Facing your own death - serious illness, close call'
+          );
+        } else {
+          manifestations.push(
+            'Profound psychological transformation through therapy',
+            'Death initiates spiritual rebirth and new understanding',
+            'Intimacy deepens through facing shadow together',
+            'Inheritance or shared resources handled with wisdom',
+            'Sexual healing after trauma - reclaiming power',
+            'Mastering psychology of power and control',
+            'Deep therapeutic work transforms entire life',
+            'Rising from ashes of relationship more whole',
+            'Facing death or loss creates unshakeable strength',
+            'Shared resources managed with mature responsibility',
+            'Psychological insight leads to profound empowerment',
+            'Complete transformation of relationship to power'
+          );
+        }
+      }
+
+      // House 10: Career, public image, reputation, status, authority
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Career implodes - fired, scandal, public failure',
+            'Boss or authority figure abuses power - toxic workplace',
+            'Company bankruptcy or collapse destroys career',
+            'Reputation destroyed by exposure of mistakes or secrets',
+            'Power struggle at work - being pushed out or demoted',
+            'Years of work crumbles due to industry change or failure',
+            'Public humiliation or professional disgrace',
+            'Forced career change after hitting rock bottom',
+            'Authority position reveals dark side of power',
+            'Realizing life\'s work was built on false foundation',
+            'Professional identity shattered - complete crisis',
+            'Consequences of past professional choices catch up'
+          );
+        } else {
+          manifestations.push(
+            'Rising to powerful position through facing challenges',
+            'Career transformation after hitting rock bottom',
+            'Building new professional life from ruins of old',
+            'Mastering career after years of disciplined work',
+            'Public recognition for depth, resilience, transformation',
+            'Authority role where you help others transform',
+            'Professional success through psychological insight',
+            'Reputation rebuilt stronger after surviving crisis',
+            'Becoming authority in deep, transformative work',
+            'Career in psychology, therapy, investigation, transformation',
+            'Power with instead of power over in leadership role',
+            'Professional mastery achieved through facing shadow'
+          );
+        }
+      }
+
+      // House 4: Home, family, roots, emotional foundation, parents
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Parent dies or becomes seriously ill - facing mortality',
+            'Discovering dark family secrets - abuse, betrayal, lies',
+            'Home foreclosure, eviction, or major property loss',
+            'Family power struggle over inheritance or property',
+            'Childhood trauma resurfaces intensely - therapy needed',
+            'Having to care for sick, aging, or dying parent',
+            'Family member\'s addiction or crisis affects everyone',
+            'Toxic family dynamics reach breaking point',
+            'Home damage or disaster forces complete rebuild',
+            'Emotional foundation crumbles - depression, crisis',
+            'Realizing parents\' deep dysfunction affected you',
+            'Family responsibilities feel crushing and endless'
+          );
+        } else {
+          manifestations.push(
+            'Healing deep family wounds through facing truth',
+            'Home renovation or rebuild creates solid foundation',
+            'Taking responsibility for parents with grace',
+            'Transforming relationship with family through honesty',
+            'Creating new emotional foundation after old one crumbled',
+            'Breaking family patterns through deep work',
+            'Property investment provides lasting security',
+            'Becoming family authority through maturity',
+            'Home becomes sanctuary after facing homelessness',
+            'Emotional mastery through facing childhood pain',
+            'Family inheritance used wisely for foundation',
+            'Roots deepen through confronting and healing past'
+          );
+        }
+      }
+
+      // House 7: Partnerships, marriage, relationships, contracts
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Divorce after discovering betrayal, lies, hidden life',
+            'Partner\'s controlling behavior becomes unbearable',
+            'Power struggle in relationship reaches crisis point',
+            'Marriage ends due to addiction, abuse, or dysfunction',
+            'Partner\'s crisis or transformation forces your own',
+            'Realizing relationship was based on control not love',
+            'Bitter divorce battle over assets, children, everything',
+            'Partner\'s dark side fully revealed - shocking',
+            'Feeling trapped in toxic relationship dynamic',
+            'Business partnership implodes in power struggle',
+            'Legal battle with partner or ex consumes life',
+            'Relationship forces confrontation with deepest fears'
+          );
+        } else {
+          manifestations.push(
+            'Relationship transforms through facing shadow together',
+            'Marriage deepens through surviving crisis together',
+            'Power dynamics shift toward healthy balance',
+            'Meeting partner who helps you transform profoundly',
+            'Relationship commitment after thorough transformation',
+            'Business partnership built on deep trust and honesty',
+            'Marriage after both partners did deep personal work',
+            'Relationship survives and strengthens through facing truth',
+            'Power with partner instead of power over',
+            'Deep intimacy through sharing vulnerability',
+            'Partnership based on mutual transformation and growth',
+            'Contract or commitment that transforms both people'
+          );
+        }
+      }
+
+      // General fallback for other houses
       if (manifestations.length === 0) {
         if (isHard) {
           manifestations.push(
@@ -3776,6 +5517,429 @@ function getSpecificManifestations(
 
   // URANUS aspects - Change, breakthrough, revolution, innovation
   if (natalPlanet === 'Uranus' || transitPlanet === 'Uranus') {
+
+    // Uranus-Uranus: Awakening, liberation, midlife revolution (Opposition ~age 40)
+    if (pairKey === 'Uranus-Uranus' || reversePairKey === 'Uranus-Uranus') {
+      // House 1: Identity, self, appearance, how you present yourself
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Sudden identity crisis - "Who am I really?" keeps you up at night',
+            'Impulsive haircut, tattoo, piercing - drastic appearance change you instantly regret',
+            'Walking out of stable job with no backup plan - liberation or panic',
+            'Ending marriage/relationship because "I need to find myself"',
+            'Sudden realization you\'ve been living someone else\'s life',
+            'Midlife crisis purchases - motorcycle, sports car, complete wardrobe overhaul',
+            'Friends don\'t recognize new you - "What happened to you?"',
+            'Radical lifestyle change shocks family - moving abroad, career 180',
+            'Feeling like stranger in own body - constant restlessness',
+            'Sudden rebellion against everything you\'ve been - exhausting',
+            'Erratic behavior worries loved ones - "Are you okay?"',
+            'Identity feels like it\'s shattering and reforming constantly'
+          );
+        } else {
+          manifestations.push(
+            'Authentic self finally emerging - feels liberating and natural',
+            'Gradual but profound shift in how you present yourself',
+            'Discovering unique personal style that expresses real you',
+            'Taking calculated risk that transforms your identity positively',
+            'Meeting people who see and appreciate authentic you',
+            'Confidence to be different, weird, uniquely yourself',
+            'Life changes align with who you\'ve always wanted to be',
+            'Breaking free from limiting identity with grace',
+            'Reinventing yourself in exciting, life-affirming way',
+            'Friends celebrate your evolution and authenticity',
+            'Sudden clarity about your true nature and purpose',
+            'Liberation from false self creates genuine happiness'
+          );
+        }
+      }
+
+      // House 4: Home, family, roots, emotional foundation
+      if (transitHouse === 4 || natalHouse === 4) {
+        if (isHard) {
+          manifestations.push(
+            'Sudden urge to move, sell house, leave town without real plan',
+            'Home feels like prison - can\'t stand being there anymore',
+            'Unexpected family crisis disrupts entire domestic life',
+            'Parent or family member reveals shocking secret from past',
+            'Impulsively buying/selling property - regretting haste later',
+            'Sudden break from family traditions or expectations',
+            'Home damage - electrical fire, storm, flood forces move',
+            'Can\'t settle down - moving multiple times in short period',
+            'Family disapproves of life changes - major conflict',
+            'Childhood wounds resurface explosively - family therapy needed',
+            'Sudden realization you need to break family patterns',
+            'Home life chaos - everything feels unstable and uncertain'
+          );
+        } else {
+          manifestations.push(
+            'Finding perfect home that feels like liberation',
+            'Successfully moving to location that supports authentic life',
+            'Renovating home in exciting, innovative way',
+            'Creating unconventional living situation that works beautifully',
+            'Family finally accepts and supports real you',
+            'Healing family wounds through honest breakthroughs',
+            'Home becomes sanctuary for authentic self-expression',
+            'Unconventional family arrangement brings happiness',
+            'Moving closer to community that shares your values',
+            'Home office or creative space transforms domestic life',
+            'Family traditions evolve in healthy, liberating way',
+            'Emotional foundation strengthens through embracing change'
+          );
+        }
+      }
+
+      // House 7: Partnerships, marriage, relationships
+      if (transitHouse === 7 || natalHouse === 7) {
+        if (isHard) {
+          manifestations.push(
+            'Sudden breakup blindsides you - partner says "I need freedom"',
+            'You wake up one day realizing you can\'t do this anymore',
+            'Affair or attraction to someone completely different - chaos',
+            'Partner\'s unexpected life change disrupts relationship',
+            'Long marriage ends abruptly - separation, divorce papers filed',
+            'Meeting someone new triggers explosion in current relationship',
+            'Constant fights about freedom vs commitment',
+            'Partner\'s erratic behavior creates unbearable instability',
+            'Sudden realization you married wrong person - panic sets in',
+            'Separation happens fast - one person moves out within weeks',
+            'Open relationship discussion creates crisis not solution',
+            'Midlife crisis ruins otherwise stable relationship'
+          );
+        } else {
+          manifestations.push(
+            'Relationship transforms in exciting new direction',
+            'Meeting someone unconventional who gets real you',
+            'Partner supports your evolution and grows with you',
+            'Relationship gains freedom while maintaining commitment',
+            'Unexpected connection turns into profound partnership',
+            'Both partners evolve together through midlife changes',
+            'Relationship becomes more authentic and liberating',
+            'Finding love after thinking you were done with relationships',
+            'Partnership supports individual freedom - healthy balance',
+            'Surprise reunion with ex leads to better relationship',
+            'Long-term relationship rejuvenated by embracing change',
+            'Meeting soulmate at unexpected time in unexpected way'
+          );
+        }
+      }
+
+      // House 10: Career, public image, reputation, life direction
+      if (transitHouse === 10 || natalHouse === 10) {
+        if (isHard) {
+          manifestations.push(
+            'Quitting job without backup plan - freedom or financial crisis',
+            'Sudden career change shocks everyone - "What are you doing?"',
+            'Reputation damaged by impulsive public action or statement',
+            'Fired unexpectedly or laid off - industry disruption',
+            'Starting business that fails because timing was wrong',
+            'Career crisis - everything you built feels meaningless',
+            'Public breakdown or scandal affects professional standing',
+            'Burning bridges in dramatic exit from career',
+            'Midlife crisis career change family can\'t support financially',
+            'Sudden realization you\'ve wasted years in wrong field',
+            'Professional identity crisis - "What am I doing with my life?"',
+            'Reckless professional decision you can\'t take back'
+          );
+        } else {
+          manifestations.push(
+            'Breakthrough career change aligned with authentic self',
+            'Starting innovative business that expresses uniqueness',
+            'Unexpected career opportunity perfectly timed',
+            'Professional liberation - finally doing what you love',
+            'Recognition for unconventional approach or innovation',
+            'Career pivot into tech, innovation, or progressive field',
+            'Successfully reinventing professional identity at midlife',
+            'Job change brings both freedom and fulfillment',
+            'Building career around authentic passion and values',
+            'Professional breakthrough after years of playing it safe',
+            'Reputation enhanced by courageous authentic choice',
+            'Finding work-life balance through career transformation'
+          );
+        }
+      }
+
+      // House 11: Friendships, community, social groups, hopes and dreams
+      if (transitHouse === 11 || natalHouse === 11) {
+        if (isHard) {
+          manifestations.push(
+            'Entire friend group suddenly feels wrong - don\'t fit anymore',
+            'Friend betrays you out of nowhere - shocking revelation',
+            'Social media drama explodes - deleting accounts, burning bridges',
+            'Sudden falling out with friend group over life choices',
+            'Joining group or movement that alienates old friends',
+            'Online community conflict - blocked, cancelled, attacked',
+            'Dreams for future shatter - reality check is brutal',
+            'Friends don\'t understand your changes - growing apart painfully',
+            'Impulsively cutting off entire social circle',
+            'Community you belonged to no longer accepts you',
+            'Hope for future feels destroyed by sudden events',
+            'Friendship breakup hurts as much as romantic one'
+          );
+        } else {
+          manifestations.push(
+            'Finding tribe that truly gets authentic you',
+            'Sudden meaningful friendship with someone unexpected',
+            'Joining community aligned with real values',
+            'Online connections lead to genuine friendships',
+            'Social circle evolves to match who you\'re becoming',
+            'Dreams for future suddenly feel possible and exciting',
+            'Meeting like-minded people through new interests',
+            'Friendship rejuvenated by honest breakthrough',
+            'Community supports your evolution and growth',
+            'Social life becomes more authentic and fulfilling',
+            'Future vision becomes clear and inspiring',
+            'Finding courage to pursue unconventional dreams'
+          );
+        }
+      }
+
+      // House 5: Creativity, romance, children, self-expression, fun
+      if (transitHouse === 5 || natalHouse === 5) {
+        if (isHard) {
+          manifestations.push(
+            'Midlife affair destroys stable life - "What have I done?"',
+            'Impulsive romance burns hot and crashes fast',
+            'Creative project flops because you rushed it',
+            'Sudden crisis with child - rebellion, trouble, shocking news',
+            'Gambling or risky behavior leads to regret',
+            'Starting creative pursuit but can\'t commit or follow through',
+            'Romance with someone completely inappropriate',
+            'Teenage-like infatuation at midlife creates chaos',
+            'Child announces unexpected news - pregnancy, dropping out, moving away',
+            'Pursuing fun and excitement at expense of responsibilities',
+            'Creative explosion without discipline - nothing finished',
+            'Dating someone totally wrong because they feel "exciting"'
+          );
+        } else {
+          manifestations.push(
+            'Discovering creative passion that transforms life',
+            'Exciting new romance with unconventional but right person',
+            'Child\'s independence allows your creative freedom',
+            'Breakthrough in creative work - finally expressing authentic self',
+            'Taking calculated creative risk that pays off',
+            'Romance rejuvenated by embracing playfulness',
+            'Finding joy in unexpected hobbies or creative outlets',
+            'Child supports your evolution and growth',
+            'Creative side hustle becomes viable career path',
+            'Rediscovering fun and spontaneity in healthy way',
+            'Romance with someone who appreciates real you',
+            'Creative breakthrough after years of blocking'
+          );
+        }
+      }
+
+      // General fallback for other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Life feels like it\'s imploding - everything changing at once',
+            'Impulsive decisions you immediately regret but can\'t undo',
+            'Sudden awakening creates chaos in all life areas',
+            'Feeling like you\'re having a nervous breakdown',
+            'Rebellion against your own past creates instability',
+            'Everything you built suddenly feels false - identity crisis',
+            'Reckless behavior worries everyone who cares about you',
+            'Liberation feels more like destruction than freedom',
+            'Can\'t sit still, can\'t settle down - constant restlessness',
+            'Sudden changes leave you feeling unmoored and anxious',
+            'Midlife crisis in full swing - classic and chaotic',
+            'Breaking free but unsure what you\'re breaking free into'
+          );
+        } else {
+          manifestations.push(
+            'Profound awakening to authentic self and life purpose',
+            'Liberation from limiting patterns feels exhilarating',
+            'Life transformation happening naturally and positively',
+            'Sudden clarity about who you really are',
+            'Breaking free into better, more authentic version of life',
+            'Midlife evolution instead of crisis - exciting growth',
+            'Embracing change with confidence and wisdom',
+            'Unexpected opportunities align with authentic self',
+            'Freedom and stability balanced beautifully',
+            'Life suddenly makes sense in completely new way',
+            'Transformation feels like coming home to yourself',
+            'Liberation leads to genuine happiness and fulfillment'
+          );
+        }
+      }
+    }
+
+    // Uranus-Neptune: Spiritual awakening, dissolving boundaries, collective consciousness
+    if (pairKey === 'Uranus-Neptune' || reversePairKey === 'Uranus-Neptune' ||
+        pairKey === 'Neptune-Uranus' || reversePairKey === 'Neptune-Uranus') {
+      // House 12: Spirituality, unconscious, hidden matters, isolation, transcendence
+      if (transitHouse === 12 || natalHouse === 12) {
+        if (isHard) {
+          manifestations.push(
+            'Spiritual crisis - beliefs dissolving with nothing to replace them',
+            'Sudden psychic opening overwhelming and destabilizing',
+            'Escaping reality through substances, fantasy, or withdrawal',
+            'Mental health crisis requires immediate professional help',
+            'Confusion about what\'s real vs imagined - losing grounding',
+            'Sudden end to spiritual practice or community - faith shattered',
+            'Hidden addictions or secrets exposed unexpectedly',
+            'Feeling like you\'re losing your mind - dissociation',
+            'Spiritual awakening feels more like breakdown',
+            'Dreams and nightmares intensify - sleep disrupted',
+            'Isolation from reality - can\'t function in normal world',
+            'Unexpected hospitalization or need for retreat'
+          );
+        } else {
+          manifestations.push(
+            'Profound spiritual awakening opens new dimensions',
+            'Sudden intuitive breakthroughs change worldview',
+            'Finding perfect spiritual practice or teacher',
+            'Mystical experiences that feel natural and integrating',
+            'Dreams reveal profound insights and guidance',
+            'Meditation or contemplation brings unexpected liberation',
+            'Psychic abilities emerging in balanced, helpful way',
+            'Compassion and universal love expanding naturally',
+            'Releasing old ego patterns through spiritual insight',
+            'Finding meaning through service to collective good',
+            'Artistic or creative channel for transcendent experiences',
+            'Spiritual community supports evolution perfectly'
+          );
+        }
+      }
+      // House 9: Philosophy, higher mind, beliefs, travel, meaning
+      if (transitHouse === 9 || natalHouse === 9) {
+        if (isHard) {
+          manifestations.push(
+            'Entire belief system suddenly feels false or meaningless',
+            'Spiritual teacher or guru disappoints or betrays trust',
+            'Confusion about life purpose and philosophical direction',
+            'Travel plans disrupted by sudden changes or deception',
+            'Educational path derailed by unexpected circumstances',
+            'Religious or spiritual crisis - losing faith',
+            'Idealism meets harsh reality - disillusionment',
+            'Can\'t discern truth from deception in teachings',
+            'Scattered pursuit of multiple philosophies - no grounding',
+            'Legal matters confusing or resolved unexpectedly badly',
+            'Publishing or teaching plan falls through',
+            'Immigration or visa issues from unexpected circumstances'
+          );
+        } else {
+          manifestations.push(
+            'Sudden philosophical breakthrough - new understanding',
+            'Discovering spiritual path that resonates deeply',
+            'Travel experience profoundly transformative',
+            'Educational opportunity in mystical or innovative field',
+            'Publishing or teaching spiritual/creative work successfully',
+            'Finding meaning through exploration and openness',
+            'Belief system evolves to encompass broader perspective',
+            'Higher education in healing, arts, or spirituality',
+            'International connection brings spiritual insight',
+            'Legal matters resolved through unexpected grace',
+            'Philosophy of life expands to include mystery and magic',
+            'Teaching or sharing wisdom in unconventional way'
+          );
+        }
+      }
+      // House 11: Friends, community, social networks, hopes and dreams
+      if (transitHouse === 11 || natalHouse === 11) {
+        if (isHard) {
+          manifestations.push(
+            'Friend group dissolves unexpectedly - everyone drifting away',
+            'Spiritual or activist community has scandal or betrayal',
+            'Can\'t tell who\'s authentic friend vs who\'s using you',
+            'Social media addiction or online confusion affecting life',
+            'Community ideals shattered by reality of human behavior',
+            'Friend reveals deception - relationship wasn\'t what you thought',
+            'Group project fails due to lack of boundaries or structure',
+            'Networking attempts feel inauthentic or pointless',
+            'Future hopes and dreams suddenly seem unrealistic',
+            'Online presence causes unexpected problems',
+            'Collective movement you believed in disappoints',
+            'Friendship requires sacrifices you can\'t sustain'
+          );
+        } else {
+          manifestations.push(
+            'Finding soul tribe - community that truly understands you',
+            'Spiritual or creative friendships transform worldview',
+            'Social network supports evolution and awakening',
+            'Online platform for sharing healing or creative work',
+            'Group meditation, healing, or spiritual practice',
+            'Friends support both freedom and transcendence',
+            'Activism or humanitarian work with like-minded souls',
+            'Unexpected friendship brings spiritual insight',
+            'Community that honors both individuality and unity',
+            'Future hopes align with spiritual values',
+            'Technology used for collective healing or awakening',
+            'Finding your people through synchronicity'
+          );
+        }
+      }
+      // House 1: Identity, self, personal expression
+      if (transitHouse === 1 || natalHouse === 1) {
+        if (isHard) {
+          manifestations.push(
+            'Identity dissolving - "Who am I?" without clear answer',
+            'Sudden identity shift creates confusion about direction',
+            'Physical symptoms from spiritual/psychological crisis',
+            'Can\'t maintain boundaries - absorbing everyone\'s energy',
+            'Escaping yourself through fantasy or substances',
+            'Feeling like you\'re disappearing or becoming invisible',
+            'Identity experimentation leads to confusion not clarity',
+            'Physical appearance changes don\'t resolve inner uncertainty',
+            'Sensitivity to environment overwhelming daily function',
+            'Can\'t ground innovative ideas into practical identity',
+            'Feeling like alien in own body and life',
+            'Dissociation from self during awakening process'
+          );
+        } else {
+          manifestations.push(
+            'Identity transcends ego - feeling connected to everything',
+            'Authentic self emerging beyond social conditioning',
+            'Physical transformation reflects spiritual evolution',
+            'Intuitive and innovative self-expression flowing',
+            'Boundaries healthy yet compassionate',
+            'Sensitivity becomes gift not burden',
+            'Unique identity honors both spirit and individuality',
+            'Physical presence radiates both groundedness and transcendence',
+            'Creative self-expression channels higher inspiration',
+            'Identity evolves to include mystical dimensions',
+            'Comfortable being both human and spiritual being',
+            'Personal presence inspires others toward awakening'
+          );
+        }
+      }
+      // General fallback for all other houses
+      if (manifestations.length === 0) {
+        if (isHard) {
+          manifestations.push(
+            'Sudden awakening creates confusion not clarity',
+            'Idealism meets harsh reality - disappointment',
+            'Can\'t ground spiritual insights into practical life',
+            'Escaping responsibilities through fantasy or withdrawal',
+            'Deception or illusion around sudden changes',
+            'Feeling overwhelmed by collective energy or emotions',
+            'Innovation without grounding leads to chaos',
+            'Spiritual crisis during life transition',
+            'Can\'t discern intuition from wishful thinking',
+            'Technology or progress has unexpected downsides',
+            'Collective change feels destabilizing personally',
+            'Liberation requires facing confusion and uncertainty'
+          );
+        } else {
+          manifestations.push(
+            'Spiritual awakening happens naturally and gracefully',
+            'Innovation guided by compassion and wisdom',
+            'Technology serves spiritual or healing purposes',
+            'Sudden insights integrate beautifully into life',
+            'Collective consciousness supports personal evolution',
+            'Intuition and innovation working together',
+            'Boundaries dissolve in healthy, liberating way',
+            'Compassionate revolution - change with wisdom',
+            'Dreams and visions provide practical guidance',
+            'Mystical experiences ground into creative expression',
+            'Freedom and transcendence balanced perfectly',
+            'Awakening serves collective healing and evolution'
+          );
+        }
+      }
+    }
 
     // Uranus-Pluto: Revolutionary transformation
     if (pairKey === 'Uranus-Pluto' || reversePairKey === 'Uranus-Pluto') {

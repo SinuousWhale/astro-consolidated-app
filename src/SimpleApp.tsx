@@ -5,6 +5,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 // import { SimpleWheelEnhanced } from './components/SimpleWheelEnhanced';
 import { SimpleWheelFixed } from './components/SimpleWheelFixed';
 import { PersonalTransitCalendar } from './components/PersonalTransitCalendar';
+import { NatalToTransitCalendar } from './components/NatalToTransitCalendar';
+import { SimpleNatalTransitCalendar } from './components/SimpleNatalTransitCalendar';
 import { lookupCity, getCityList, getUTCOffset } from './utils/location';
 import { generateAspectInterpretation, generateTransitToTransitInterpretation, getNatalActivationManifestations } from './utils/aspectInterpretations';
 import { calculatePlanetaryPositions } from './utils/ephemeris';
@@ -80,7 +82,7 @@ function SimpleApp() {
   const [expandedAspectIndex, setExpandedAspectIndex] = useState<number | null>(null);
   const [expandedTransitAspectIndex, setExpandedTransitAspectIndex] = useState<number | null>(null);
   const [expandedNatalToTransitIndex, setExpandedNatalToTransitIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<'wheel' | 'natal-transit' | 'transit-transit' | 'calendar' | 'personal-calendar'>('wheel');
+  const [activeTab, setActiveTab] = useState<'wheel' | 'natal-transit' | 'transit-transit' | 'calendar' | 'personal-calendar' | 'natal-to-transit-calendar' | 'simple-natal-transit-calendar'>('wheel');
   const [calendarPeriod, setCalendarPeriod] = useState<7 | 14 | 21 | 30>(7); // Days to show in calendar
   const [calendarStartDate, setCalendarStartDate] = useState<Date>(new Date()); // Start date for calendar
 
@@ -548,6 +550,18 @@ function SimpleApp() {
           onClick={() => setActiveTab('personal-calendar')}
         >
           Personal Transit Calendar
+        </button>
+        <button
+          className={`tab ${activeTab === 'natal-to-transit-calendar' ? 'active' : ''}`}
+          onClick={() => setActiveTab('natal-to-transit-calendar')}
+        >
+          Natal to Transit-Transit Calendar
+        </button>
+        <button
+          className={`tab ${activeTab === 'simple-natal-transit-calendar' ? 'active' : ''}`}
+          onClick={() => setActiveTab('simple-natal-transit-calendar')}
+        >
+          Natal to Transit Calendar
         </button>
       </div>
 
@@ -2012,6 +2026,35 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
           firstHouseReference={firstHouseReference}
           manualFirstHouseSign={manualFirstHouseSign}
           cityName={cityName}
+        />
+      )}
+
+      {/* Natal to Transit-Transit Calendar Tab */}
+      {activeTab === 'natal-to-transit-calendar' && (
+        <NatalToTransitCalendar
+          natalDate={natalDate}
+          natalLatitude={latitude}
+          natalLongitude={longitude}
+          natalTimezone={timezone}
+          utcOffset={effectiveUtcOffset}
+          firstHouseReference={firstHouseReference}
+          manualFirstHouseSign={manualFirstHouseSign}
+          cityName={cityName}
+          houseSystem={houseSystem}
+        />
+      )}
+
+      {/* Simple Natal to Transit Calendar Tab */}
+      {activeTab === 'simple-natal-transit-calendar' && (
+        <SimpleNatalTransitCalendar
+          natalDate={natalDate}
+          natalLatitude={latitude}
+          natalLongitude={longitude}
+          natalTimezone={timezone}
+          firstHouseReference={firstHouseReference}
+          manualFirstHouseSign={manualFirstHouseSign}
+          cityName={cityName}
+          houseSystem={houseSystem}
         />
       )}
 
