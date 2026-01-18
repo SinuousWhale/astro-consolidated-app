@@ -1463,39 +1463,146 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                     };
 
                     const eclipseTypeNote = selectedAspect.eclipseType.includes('Solar')
-                      ? 'Solar eclipses initiate new chapters and plant seeds for the future.'
+                      ? 'SOLAR ECLIPSE - A cosmic reset button. Solar eclipses mark powerful new beginnings, often bringing unexpected opportunities or circumstances that redirect your path. They plant seeds that unfold over the next 6 months. What begins now carries a sense of fate or destiny.'
                       : selectedAspect.eclipseType.includes('Lunar')
-                      ? 'Lunar eclipses bring culminations, revelations, and necessary endings.'
+                      ? 'LUNAR ECLIPSE - A moment of revelation and culmination. Lunar eclipses illuminate what has been hidden, bring situations to completion, and often trigger necessary endings or releases. They reveal truths and bring emotional clarity about what must change.'
                       : selectedAspect.eclipseType.includes('New Moon')
-                      ? 'This New Moon marks a powerful time for setting intentions and new beginnings.'
-                      : 'This Full Moon illuminates what has reached fullness and may need release.';
+                      ? 'NEW MOON - A monthly reset for fresh starts. While not an eclipse, this lunation carries potent energy for setting intentions and initiating new cycles. Plant seeds consciously during this window.'
+                      : 'FULL MOON - A time of illumination and culmination. This lunation brings matters to fullness, reveals what was hidden, and often requires release of what no longer serves.';
 
                     let interpretation = `${selectedAspect.eclipseType} ${selectedAspect.aspect} your natal ${selectedAspect.natalPlanet}:\n\n`;
-                    interpretation += `${eclipseTypeNote} ${aspectQuality}\n\n`;
+                    interpretation += `${eclipseTypeNote}\n\n`;
+                    interpretation += `ASPECT QUALITY: ${aspectQuality}\n\n`;
 
+                    // Build the house and planet context
+                    let contextText = '';
                     if (natalHouse) {
-                      interpretation += `Your natal ${selectedAspect.natalPlanet} in House ${natalHouse} governs ${planetThemes[selectedAspect.natalPlanet] || 'core life themes'}. `;
+                      contextText += `Your natal ${selectedAspect.natalPlanet} in House ${natalHouse} governs ${planetThemes[selectedAspect.natalPlanet] || 'core life themes'}. `;
                     } else {
-                      interpretation += `Your natal ${selectedAspect.natalPlanet} governs ${planetThemes[selectedAspect.natalPlanet] || 'core life themes'}. `;
+                      contextText += `Your natal ${selectedAspect.natalPlanet} governs ${planetThemes[selectedAspect.natalPlanet] || 'core life themes'}. `;
                     }
 
                     if (eclipseHouse) {
-                      interpretation += `This eclipse occurs in your ${eclipseHouse}${eclipseHouse === 1 ? 'st' : eclipseHouse === 2 ? 'nd' : eclipseHouse === 3 ? 'rd' : 'th'} house, bringing ${housePredictions[eclipseHouse] || 'significant developments'}.\n\n`;
+                      contextText += `This ${selectedAspect.eclipseType.toLowerCase()} occurs in your ${eclipseHouse}${eclipseHouse === 1 ? 'st' : eclipseHouse === 2 ? 'nd' : eclipseHouse === 3 ? 'rd' : 'th'} house, bringing ${housePredictions[eclipseHouse] || 'significant developments'}.\n\n`;
                     } else {
-                      interpretation += `This eclipse activates your ${selectedAspect.natalPlanet} placement.\n\n`;
+                      contextText += `This ${selectedAspect.eclipseType.toLowerCase()} activates your ${selectedAspect.natalPlanet} placement.\n\n`;
                     }
 
-                    interpretation += `TIMING & MANIFESTATION:\n`;
-                    interpretation += `• Peak influence: 3 days before and after the eclipse date\n`;
-                    interpretation += `• Unfolding period: 6 months following the eclipse\n`;
-                    interpretation += `• Watch for: sudden insights, fated encounters, doors opening/closing unexpectedly\n\n`;
+                    interpretation += contextText;
 
+                    // Add specific manifestation examples based on planet and house combination
+                    interpretation += `WHAT THIS MIGHT LOOK LIKE IN YOUR LIFE:\n\n`;
+
+                    // Generate 5-6 specific manifestation examples
+                    const manifestationExamples: string[] = [];
+
+                    // Create contextual examples based on the planet being aspected and the eclipse house
+                    if (selectedAspect.natalPlanet === 'Sun') {
+                      if (eclipseHouse === 1) {
+                        manifestationExamples.push('• You decide to dramatically change your appearance or personal style, and others notice a newfound confidence radiating from you');
+                        manifestationExamples.push('• A sudden realization about your life direction causes you to rebrand yourself professionally or personally');
+                      } else if (eclipseHouse === 10) {
+                        manifestationExamples.push('• You receive an unexpected job offer or promotion that aligns perfectly with your life purpose');
+                        manifestationExamples.push('• Your professional identity undergoes a major shift - perhaps starting your own business or changing careers entirely');
+                      } else if (eclipseHouse === 7) {
+                        manifestationExamples.push('• A significant relationship either begins or reaches a turning point that affects your sense of identity');
+                        manifestationExamples.push('• You realize how much you\'ve been compromising your authentic self in partnerships and begin asserting your true identity');
+                      }
+                      manifestationExamples.push('• An authority figure recognizes your talents and opens doors you didn\'t know existed');
+                      manifestationExamples.push('• Health issues or vitality shifts force you to prioritize self-care and reclaim your energy');
+                    } else if (selectedAspect.natalPlanet === 'Moon') {
+                      if (eclipseHouse === 4) {
+                        manifestationExamples.push('• You discover you\'re moving to a new home, or family dynamics shift suddenly (pregnancy announcement, family member moving in/out)');
+                        manifestationExamples.push('• Deep emotional patterns from childhood surface for healing, possibly through therapy or family conversations');
+                      } else if (eclipseHouse === 7) {
+                        manifestationExamples.push('• Your emotional needs in relationships become crystal clear, leading to important conversations with your partner');
+                        manifestationExamples.push('• You meet someone who feels immediately familiar, or an existing relationship deepens emotionally in unexpected ways');
+                      }
+                      manifestationExamples.push('• You feel an overwhelming urge to declutter your living space and create a sanctuary that feels emotionally safe');
+                      manifestationExamples.push('• Your relationship with your mother or maternal figures undergoes significant change');
+                      manifestationExamples.push('• Intuitive abilities heighten dramatically - you have vivid dreams or strong gut feelings that prove accurate');
+                    } else if (selectedAspect.natalPlanet === 'Venus') {
+                      if (eclipseHouse === 2) {
+                        manifestationExamples.push('• An unexpected windfall arrives, or you discover a new income stream aligned with what you love');
+                        manifestationExamples.push('• You realize what you truly value has changed, leading to different spending patterns or lifestyle choices');
+                      } else if (eclipseHouse === 5) {
+                        manifestationExamples.push('• A whirlwind romance begins that feels fated, or an existing relationship enters a more romantic phase');
+                        manifestationExamples.push('• You start a creative project that brings both joy and potential income');
+                      } else if (eclipseHouse === 7) {
+                        manifestationExamples.push('• You get engaged, married, or experience a significant relationship milestone');
+                        manifestationExamples.push('• A business partnership forms that combines pleasure with profit');
+                      }
+                      manifestationExamples.push('• Your appearance or style transforms as you invest in yourself and your aesthetic');
+                      manifestationExamples.push('• You attract people or opportunities that reflect your newly clarified values');
+                    } else if (selectedAspect.natalPlanet === 'Mercury') {
+                      if (eclipseHouse === 3) {
+                        manifestationExamples.push('• You sign up for a course, workshop, or certification that opens new professional doors');
+                        manifestationExamples.push('• Important news arrives from or about siblings, neighbors, or your local community');
+                      } else if (eclipseHouse === 9) {
+                        manifestationExamples.push('• You receive an opportunity to teach, publish, or share your knowledge with a broader audience');
+                        manifestationExamples.push('• Travel plans materialize suddenly, especially to foreign countries or educational destinations');
+                      }
+                      manifestationExamples.push('• A crucial conversation or piece of information completely changes your perspective');
+                      manifestationExamples.push('• You start a blog, podcast, or writing project that gains unexpected traction');
+                      manifestationExamples.push('• Your daily commute or transportation situation changes (new car, route change, remote work begins)');
+                    } else if (selectedAspect.natalPlanet === 'Mars') {
+                      if (eclipseHouse === 6) {
+                        manifestationExamples.push('• Your work intensity increases dramatically - new projects demand your action and initiative');
+                        manifestationExamples.push('• You commit to a fitness program and see rapid results, or address a health issue requiring decisive action');
+                      } else if (eclipseHouse === 1) {
+                        manifestationExamples.push('• You feel a surge of courage to go after what you want, taking bold action in your personal life');
+                        manifestationExamples.push('• Your physical energy and assertiveness increase noticeably, causing others to respond differently');
+                      }
+                      manifestationExamples.push('• A conflict or competition arises that pushes you to fight for what matters');
+                      manifestationExamples.push('• You start a new physical activity, sport, or take action on a goal you\'ve been postponing');
+                      manifestationExamples.push('• Sexual dynamics or desires shift, potentially bringing passion into new areas');
+                    } else if (selectedAspect.natalPlanet === 'Jupiter') {
+                      if (eclipseHouse === 9) {
+                        manifestationExamples.push('• You get accepted into a graduate program, receive a scholarship, or commit to higher education');
+                        manifestationExamples.push('• International opportunities emerge - relocating abroad, working with foreign clients, or extended travel');
+                      } else if (eclipseHouse === 2) {
+                        manifestationExamples.push('• A financial opportunity appears that could significantly increase your income or assets');
+                        manifestationExamples.push('• You realize abundance comes from generosity and begin tithing or giving more freely');
+                      }
+                      manifestationExamples.push('• Your optimism and faith expand, possibly through spiritual studies or philosophical exploration');
+                      manifestationExamples.push('• A mentor or teacher enters your life offering wisdom and expansion');
+                      manifestationExamples.push('• You feel called to give back, starting charitable work or community teaching');
+                    } else if (selectedAspect.natalPlanet === 'Saturn') {
+                      if (eclipseHouse === 10) {
+                        manifestationExamples.push('• You receive a promotion with increased responsibility, or professional recognition for your disciplined work');
+                        manifestationExamples.push('• Authority figures test you, but meeting these challenges establishes your credibility long-term');
+                      } else if (eclipseHouse === 4) {
+                        manifestationExamples.push('• You take on responsibility for aging parents or family property matters');
+                        manifestationExamples.push('• Home repairs or foundation work become necessary, teaching you about building stability');
+                      }
+                      manifestationExamples.push('• A lesson about boundaries, limits, or responsibility arrives through circumstances');
+                      manifestationExamples.push('• Long-term commitments are made - contracts signed, structures established');
+                      manifestationExamples.push('• You face a reality check that, while sobering, helps you build something lasting');
+                    } else {
+                      // Generic examples for other planets
+                      manifestationExamples.push('• An unexpected event catalyzes major changes in the area of life governed by your natal ' + selectedAspect.natalPlanet);
+                      manifestationExamples.push('• People or opportunities arrive that feel fated, redirecting your path');
+                      manifestationExamples.push('• Something that was hidden or unclear suddenly becomes obvious, demanding response');
+                      manifestationExamples.push('• You make a decision or commitment that sets a new trajectory for the next 6 months');
+                      manifestationExamples.push('• Synchronicities multiply around themes of ' + (planetThemes[selectedAspect.natalPlanet] || 'this planet'));
+                    }
+
+                    // Add the manifestation examples to interpretation
+                    interpretation += manifestationExamples.slice(0, 6).join('\n') + '\n\n';
+
+                    interpretation += `TIMING & MANIFESTATION:\n`;
+                    interpretation += `• Peak influence: 3 days before and after the ${selectedAspect.eclipseType.toLowerCase()} date\n`;
+                    interpretation += `• Unfolding period: 6 months following (watch for events around the degree of this eclipse)\n`;
+                    interpretation += `• Watch for: sudden insights, fated encounters, doors opening/closing unexpectedly\n`;
+                    interpretation += `• Key markers: Events now often connect to eclipses 9 or 18 years ago at similar degrees\n\n`;
+
+                    interpretation += `HOW TO WORK WITH THIS ENERGY:\n`;
                     if (isConjunction) {
-                      interpretation += `With this conjunction, expect a complete reset or new beginning in matters related to your ${selectedAspect.natalPlanet}. What emerges now has destiny written into it.`;
+                      interpretation += `This conjunction creates a powerful reset or complete merger of energies. Expect a total new beginning in matters related to your natal ${selectedAspect.natalPlanet}. What emerges now has destiny written into it - this is not random. Pay close attention to what shows up this week, as it sets themes for the next 6 months. Don't force outcomes; instead, respond to what the universe is presenting.`;
                     } else if (isHarmonious) {
-                      interpretation += `This supportive aspect offers opportunities flowing naturally. Doors open with less effort. Trust synchronicities and follow the path of least resistance while staying aligned with your truth.`;
+                      interpretation += `This supportive aspect brings opportunities flowing naturally with less resistance than usual. Doors open, people appear, resources become available. Trust synchronicities and follow the path of least resistance while staying aligned with your truth. Say yes to what feels right. The universe is cooperating with your growth.`;
                     } else if (isChallenging) {
-                      interpretation += `This dynamic aspect may bring tension or obstacles that force necessary evolution. What feels challenging now is redirecting you toward greater authenticity. Resistance creates friction; acceptance and adaptation bring breakthrough.`;
+                      interpretation += `This dynamic aspect creates friction and tension that force necessary evolution. What feels challenging or frustrating now is actually redirecting you toward greater authenticity and alignment. Obstacles aren't punishments - they're course corrections. Resistance creates more friction; acceptance and willingness to adapt bring breakthrough. Ask: "What is this trying to teach me?" Growth happens through the challenge.`;
                     }
 
                     return interpretation;
