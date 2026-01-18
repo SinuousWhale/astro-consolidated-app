@@ -290,11 +290,11 @@ export function calculateHouses(
   const houses: number[] = [];
 
   if (houseSystem === 'whole-sign') {
-    // Whole sign: each house starts at 0° of a sign
-    const ascendantSign = Math.floor(ascendant / 30);
+    // Whole sign: each house starts at 0° of a sign, but we return the actual degree
+    // for tracking when planets cross these sensitive points
+    // The house boundaries are still at 0° of each sign, but cusps show Ascendant degree
     for (let i = 0; i < 12; i++) {
-      const signIndex = (ascendantSign + i) % 12;
-      houses.push(signIndex * 30);
+      houses.push((ascendant + (i * 30)) % 360);
     }
   } else if (houseSystem === 'equal') {
     // Equal house: 30° increments from Ascendant

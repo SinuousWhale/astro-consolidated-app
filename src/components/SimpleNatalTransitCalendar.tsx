@@ -338,11 +338,26 @@ const getZodiacSign = (longitude: number): string => {
 };
 
 // Helper to calculate which house a planet is in
-const calculateHousePosition = (planetLongitude: number, houseCusps: number[]): number => {
+const calculateHousePosition = (
+  planetLongitude: number,
+  houseCusps: number[],
+  houseSystem: string = 'placidus'
+): number => {
   // Normalize planet longitude to 0-360
   let normPlanet = planetLongitude % 360;
   if (normPlanet < 0) normPlanet += 360;
 
+  // For Whole Sign houses, determine by zodiac sign
+  if (houseSystem === 'whole-sign') {
+    const planetSign = Math.floor(normPlanet / 30); // 0-11
+    const firstHouseSign = Math.floor(houseCusps[0] / 30); // Sign of Ascendant
+
+    // Calculate house number based on sign distance from Ascendant sign
+    let houseNum = (planetSign - firstHouseSign + 12) % 12;
+    return houseNum === 0 ? 12 : houseNum;
+  }
+
+  // For other systems (Placidus, Equal), use cusp-based calculation
   // Check each house
   for (let i = 0; i < 12; i++) {
     const currentCusp = houseCusps[i];
@@ -714,7 +729,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
               marginTop: '15px'
             }}>
               {natalPlanets.map((planet, index) => {
-                const house = calculateHousePosition(planet.longitude, natalAscendant.houseCusps);
+                const house = calculateHousePosition(planet.longitude, natalAscendant.houseCusps, houseSystem);
                 return (
                   <div
                     key={index}
@@ -1191,14 +1206,14 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                         // Find the natal planet's house
                         const natalPlanetObj = natalPlanets.find(p => p.name === aspect.natalPlanet);
                         const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
-                          ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps)
+                          ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
                           : 1;
 
                         // Find which natal house the transiting planet is currently in
                         // For natal-to-transit aspects, we use the NATAL house cusps to determine
                         // which natal house the transiting planet is occupying
                         const transitHouse = natalAscendant?.houseCusps
-                          ? calculateHousePosition(aspect.transitLongitude, natalAscendant.houseCusps)
+                          ? calculateHousePosition(aspect.transitLongitude, natalAscendant.houseCusps, houseSystem)
                           : 1;
 
                         const result = generateAspectInterpretation(
@@ -1428,12 +1443,12 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                     // Find the natal planet's house
                     const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
                     const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
-                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps)
+                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
                       : null;
 
                     // Determine eclipse house (where the eclipse point is located in natal chart)
                     const eclipseHouse = natalAscendant?.houseCusps
-                      ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps)
+                      ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps, houseSystem)
                       : null;
 
                     // Determine aspect quality
@@ -1830,11 +1845,11 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                     // Regular natal-transit aspect
                     const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
                     const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
-                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps)
+                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
                       : 1;
 
                     const transitHouse = natalAscendant?.houseCusps
-                      ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps)
+                      ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps, houseSystem)
                       : 1;
 
                     const result = generateAspectInterpretation(
