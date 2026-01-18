@@ -353,8 +353,9 @@ const calculateHousePosition = (
     const firstHouseSign = Math.floor(houseCusps[0] / 30); // Sign of Ascendant
 
     // Calculate house number based on sign distance from Ascendant sign
-    let houseNum = (planetSign - firstHouseSign + 12) % 12;
-    return houseNum === 0 ? 12 : houseNum;
+    // Same sign as Ascendant = 1st house, next sign = 2nd house, etc.
+    const houseNum = ((planetSign - firstHouseSign + 12) % 12) + 1;
+    return houseNum > 12 ? houseNum - 12 : houseNum;
   }
 
   // For other systems (Placidus, Equal), use cusp-based calculation
@@ -489,12 +490,10 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
       let houseCusps: number[];
 
       if (houseSystem === 'whole-sign') {
-        // Whole sign: each house starts at 0° of a sign
-        const firstHouseSign = Math.floor(firstHouseLongitude / 30);
+        // Whole sign: houses by sign, but cusps show Ascendant degree for tracking transits
         houseCusps = [];
         for (let i = 0; i < 12; i++) {
-          const signIndex = (firstHouseSign + i) % 12;
-          houseCusps.push(signIndex * 30);
+          houseCusps.push((firstHouseLongitude + (i * 30)) % 360);
         }
       } else if (houseSystem === 'equal') {
         // Equal house: 30° increments from first house longitude
