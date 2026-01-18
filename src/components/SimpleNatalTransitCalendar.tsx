@@ -1405,7 +1405,100 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                 {(() => {
                   // Generate interpretation based on event type
                   if (selectedAspect.type === 'eclipse') {
-                    return `${selectedAspect.eclipseType} ${selectedAspect.aspect} your natal ${selectedAspect.natalPlanet}:\n\n${selectedAspect.eclipseType}s are powerful cosmic events that mark significant turning points and new beginnings. This ${selectedAspect.eclipseType.toLowerCase()} forms a ${selectedAspect.aspect.toLowerCase()} with your natal ${selectedAspect.natalPlanet}, activating themes related to ${selectedAspect.natalPlanet}'s placement in your chart. Eclipses bring fated events, sudden revelations, and opportunities for transformation that unfold over the following 6 months.\n\nThis eclipse energy will illuminate matters connected to your natal ${selectedAspect.natalPlanet}, bringing either new opportunities or necessary closures. Pay attention to significant events occurring within 3 days of this eclipse, as they often set the tone for the eclipse season ahead.`;
+                    // Find the natal planet's house
+                    const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
+                    const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
+                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps)
+                      : null;
+
+                    // Determine eclipse house (where the eclipse point is located in natal chart)
+                    const eclipseHouse = natalAscendant?.houseCusps
+                      ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps)
+                      : null;
+
+                    // Determine aspect quality
+                    const isHarmonious = selectedAspect.aspect === 'Trine' || selectedAspect.aspect === 'Sextile';
+                    const isChallenging = selectedAspect.aspect === 'Square' || selectedAspect.aspect === 'Opposition';
+                    const isConjunction = selectedAspect.aspect === 'Conjunction';
+
+                    let aspectQuality = '';
+                    if (isConjunction) {
+                      aspectQuality = 'This conjunction intensifies and merges energies, creating a powerful focal point for transformation.';
+                    } else if (isHarmonious) {
+                      aspectQuality = 'This harmonious aspect brings opportunities and supportive energies that flow naturally.';
+                    } else if (isChallenging) {
+                      aspectQuality = 'This challenging aspect creates dynamic tension that catalyzes growth through necessary changes.';
+                    }
+
+                    // House-specific predictions
+                    const housePredictions: Record<number, string> = {
+                      1: 'major shifts in self-image, physical appearance, or personal direction; a turning point in how you present yourself to the world',
+                      2: 'significant changes in financial situation, values, or material security; opportunities or challenges regarding income and self-worth',
+                      3: 'important communications, decisions about siblings or neighbors; changes in daily routines, learning, or local travel',
+                      4: 'transformative events in home, family, or emotional foundation; possible relocation, family changes, or deep emotional healing',
+                      5: 'major developments in romance, creativity, or relationships with children; breakthrough in self-expression or creative projects',
+                      6: 'significant work changes, health revelations, or shifts in daily routines; opportunities to improve wellness or service to others',
+                      7: 'pivotal moments in partnerships, marriage, or one-on-one relationships; contracts or commitments requiring attention',
+                      8: 'deep transformations involving shared resources, intimacy, or psychological patterns; endings that lead to profound renewal',
+                      9: 'life-changing opportunities for travel, higher education, or spiritual growth; expansion of beliefs and worldview',
+                      10: 'career breakthroughs, public recognition, or changes in professional direction; shifts in reputation or life purpose',
+                      11: 'significant developments in friendships, group associations, or long-term goals; alignment with community or social causes',
+                      12: 'spiritual awakening, closure of old chapters, or healing of unconscious patterns; retreat and inner work bearing fruit'
+                    };
+
+                    // Planet-specific themes
+                    const planetThemes: Record<string, string> = {
+                      'Sun': 'identity, life purpose, vitality, and ego expression',
+                      'Moon': 'emotions, instincts, home life, and inner security',
+                      'Mercury': 'communication, thinking patterns, learning, and information flow',
+                      'Venus': 'relationships, values, beauty, money, and what you love',
+                      'Mars': 'action, drive, courage, sexuality, and how you assert yourself',
+                      'Jupiter': 'growth, opportunity, beliefs, abundance, and expansion',
+                      'Saturn': 'structure, responsibility, discipline, boundaries, and long-term goals',
+                      'Uranus': 'freedom, innovation, sudden changes, and awakening',
+                      'Neptune': 'spirituality, dreams, creativity, and dissolving boundaries',
+                      'Pluto': 'transformation, power, depth, and regeneration',
+                      'North Node': 'soul growth direction and future development',
+                      'South Node': 'past patterns and what needs releasing'
+                    };
+
+                    const eclipseTypeNote = selectedAspect.eclipseType.includes('Solar')
+                      ? 'Solar eclipses initiate new chapters and plant seeds for the future.'
+                      : selectedAspect.eclipseType.includes('Lunar')
+                      ? 'Lunar eclipses bring culminations, revelations, and necessary endings.'
+                      : selectedAspect.eclipseType.includes('New Moon')
+                      ? 'This New Moon marks a powerful time for setting intentions and new beginnings.'
+                      : 'This Full Moon illuminates what has reached fullness and may need release.';
+
+                    let interpretation = `${selectedAspect.eclipseType} ${selectedAspect.aspect} your natal ${selectedAspect.natalPlanet}:\n\n`;
+                    interpretation += `${eclipseTypeNote} ${aspectQuality}\n\n`;
+
+                    if (natalHouse) {
+                      interpretation += `Your natal ${selectedAspect.natalPlanet} in House ${natalHouse} governs ${planetThemes[selectedAspect.natalPlanet] || 'core life themes'}. `;
+                    } else {
+                      interpretation += `Your natal ${selectedAspect.natalPlanet} governs ${planetThemes[selectedAspect.natalPlanet] || 'core life themes'}. `;
+                    }
+
+                    if (eclipseHouse) {
+                      interpretation += `This eclipse occurs in your ${eclipseHouse}${eclipseHouse === 1 ? 'st' : eclipseHouse === 2 ? 'nd' : eclipseHouse === 3 ? 'rd' : 'th'} house, bringing ${housePredictions[eclipseHouse] || 'significant developments'}.\n\n`;
+                    } else {
+                      interpretation += `This eclipse activates your ${selectedAspect.natalPlanet} placement.\n\n`;
+                    }
+
+                    interpretation += `TIMING & MANIFESTATION:\n`;
+                    interpretation += `• Peak influence: 3 days before and after the eclipse date\n`;
+                    interpretation += `• Unfolding period: 6 months following the eclipse\n`;
+                    interpretation += `• Watch for: sudden insights, fated encounters, doors opening/closing unexpectedly\n\n`;
+
+                    if (isConjunction) {
+                      interpretation += `With this conjunction, expect a complete reset or new beginning in matters related to your ${selectedAspect.natalPlanet}. What emerges now has destiny written into it.`;
+                    } else if (isHarmonious) {
+                      interpretation += `This supportive aspect offers opportunities flowing naturally. Doors open with less effort. Trust synchronicities and follow the path of least resistance while staying aligned with your truth.`;
+                    } else if (isChallenging) {
+                      interpretation += `This dynamic aspect may bring tension or obstacles that force necessary evolution. What feels challenging now is redirecting you toward greater authenticity. Resistance creates friction; acceptance and adaptation bring breakthrough.`;
+                    }
+
+                    return interpretation;
                   } else if (selectedAspect.type === 'house-cusp-crossing') {
                     return `Transit ${selectedAspect.transitPlanet} crossing your House ${selectedAspect.house} cusp:\n\nWhen a planet crosses a house cusp, it shifts the energy and focus to a new area of life. ${selectedAspect.transitPlanet} is now entering your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house, bringing its energy and themes into this life area.\n\nThis transit marks a beginning of ${selectedAspect.transitPlanet}'s journey through your ${selectedAspect.house}${selectedAspect.house === 1 ? 'st' : selectedAspect.house === 2 ? 'nd' : selectedAspect.house === 3 ? 'rd' : 'th'} house sector. Over the coming period, expect developments and increased activity related to this house's themes. This is a time to consciously work with ${selectedAspect.transitPlanet}'s energy in this area of your life.`;
                   } else if (selectedAspect.type === 'transit-to-cusp') {
