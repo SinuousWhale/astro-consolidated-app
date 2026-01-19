@@ -51,6 +51,10 @@ const PLANET_ENERGIES: Record<string, { core: string; keywords: string[] }> = {
   'South Node': {
     core: 'past patterns, comfort zone, karmic past, release',
     keywords: ['past', 'comfort zone', 'habits', 'release', 'karmic patterns', 'familiar']
+  },
+  'Ascendant': {
+    core: 'self-presentation, appearance, personal identity, how others see you, life approach',
+    keywords: ['appearance', 'first impressions', 'self-image', 'personality mask', 'physical body', 'life approach', 'new beginnings']
   }
 };
 

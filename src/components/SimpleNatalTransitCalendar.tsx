@@ -29,7 +29,8 @@ const PLANET_SYMBOLS: Record<string, string> = {
   'Neptune': '♆',
   'Pluto': '♇',
   'North Node': '☊',
-  'South Node': '☋'
+  'South Node': '☋',
+  'Ascendant': 'ASC'
 };
 
 // Planet colors for natal planet highlighting
@@ -45,7 +46,8 @@ const PLANET_COLORS: Record<string, string> = {
   'Neptune': '#9370DB',    // Medium Purple
   'Pluto': '#BA55D3',      // Medium Orchid
   'North Node': '#32CD32', // Lime Green
-  'South Node': '#228B22'  // Forest Green
+  'South Node': '#228B22', // Forest Green
+  'Ascendant': '#FF1493'   // Deep Pink
 };
 
 const ASPECT_TYPES = [
@@ -98,8 +100,8 @@ const getNatalToTransitOrb = (natalPlanet: string, transitPlanet: string, aspect
   return 2;
 };
 
-// Calculate aspects between natal and transit planets
-const calculateNatalToTransitAspects = (natalPlanets: any[], transitPlanets: any[]) => {
+// Calculate aspects between natal and transit planets (including Ascendant)
+const calculateNatalToTransitAspects = (natalPlanets: any[], transitPlanets: any[], natalAscendantLongitude?: number) => {
   const aspects: any[] = [];
 
   natalPlanets.forEach((natalPlanet) => {
@@ -131,6 +133,38 @@ const calculateNatalToTransitAspects = (natalPlanets: any[], transitPlanets: any
       });
     });
   });
+
+  // Calculate aspects to Ascendant if available
+  if (natalAscendantLongitude !== undefined) {
+    transitPlanets.forEach((transitPlanet) => {
+      // Exclude transit Moon aspects to Ascendant
+      if (transitPlanet.name === 'Moon') {
+        return;
+      }
+
+      ASPECT_TYPES.forEach((aspectType) => {
+        const diff = Math.abs(natalAscendantLongitude - transitPlanet.longitude);
+        const distance = diff > 180 ? 360 - diff : diff;
+        // Use same orb as for Sun/Moon aspects (important angle point)
+        const orb = getNatalToTransitOrb('Sun', transitPlanet.name, aspectType.name);
+
+        if (Math.abs(distance - aspectType.angle) <= orb) {
+          const actualOrb = Math.abs(distance - aspectType.angle);
+          aspects.push({
+            type: 'natal-transit',
+            natalPlanet: 'Ascendant',
+            transitPlanet: transitPlanet.name,
+            aspect: aspectType.name,
+            orb: actualOrb,
+            color: aspectType.color,
+            symbol: aspectType.symbol,
+            natalLongitude: natalAscendantLongitude,
+            transitLongitude: transitPlanet.longitude
+          });
+        }
+      });
+    });
+  }
 
   // Sort by orb (tightest first)
   return aspects.sort((a, b) => a.orb - b.orb);
@@ -553,7 +587,11 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
       date.setHours(12, 0, 0, 0);
 
       const transitPlanets = calculatePlanetaryPositions(date);
-      const natalToTransitAspects = calculateNatalToTransitAspects(natalPlanets, transitPlanets);
+      const natalToTransitAspects = calculateNatalToTransitAspects(
+        natalPlanets,
+        transitPlanets,
+        natalAscendant?.ascendant
+      );
 
       // Detect eclipses and lunations
       const eclipseEvents = detectEclipses(transitPlanets, natalPlanets);
