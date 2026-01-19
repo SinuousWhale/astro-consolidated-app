@@ -92,14 +92,46 @@ function getEclipticLongitude(body: Astronomy.Body, date: Date): number {
 }
 
 /**
- * Calculate true lunar node (North Node)
- * Using piecewise linear interpolation between known ephemeris points
- * for improved accuracy across all dates
+ * Calculate mean lunar node (North Node) for natal charts
+ * Using Jean Meeus, Astronomical Algorithms formula
+ * This is accurate for historical dates and natal chart calculations
  */
 function getMeanLunarNode(date: Date): number {
-  // Known reference points from Swiss Ephemeris (True Node)
+  // Reference: Jean Meeus, Astronomical Algorithms, Chapter 47
+  // Mean longitude of ascending node of Moon's orbit
+  const j2000 = new Date(Date.UTC(2000, 0, 1, 12, 0, 0));
+  const daysSinceJ2000 = (date.getTime() - j2000.getTime()) / (1000 * 60 * 60 * 24);
+  const T = daysSinceJ2000 / 36525; // Julian centuries from J2000.0
+
+  // Mean longitude of Moon's ascending node (Meeus formula)
+  // Omega = 125.0445479 - 1934.1362891*T + 0.0020754*T^2 + T^3/467441 - T^4/60616000
+  let omega = 125.0445479
+    - 1934.1362891 * T
+    + 0.0020754 * T * T
+    + (T * T * T) / 467441
+    - (T * T * T * T) / 60616000;
+
+  // Normalize to 0-360
+  omega = omega % 360;
+  if (omega < 0) omega += 360;
+
+  return omega;
+}
+
+/**
+ * Calculate true lunar node (North Node) for 2026 transits
+ * Using piecewise linear interpolation between known Swiss Ephemeris points
+ * This provides improved accuracy for transit calculations in 2026
+ */
+function getTransitLunarNode(date: Date): number {
+  // For dates outside 2026, fall back to Meeus formula
+  const year = date.getFullYear();
+  if (year < 2026 || year > 2026) {
+    return getMeanLunarNode(date);
+  }
+
+  // Known reference points from Swiss Ephemeris (True Node) for 2026
   // Format: [date in UTC millis, longitude in degrees]
-  // Adding monthly reference points for better accuracy throughout the year
   const referencePoints: Array<[number, number]> = [
     [Date.UTC(2026, 0, 1, 0, 0, 0), 340.9667],   // Jan 1: 10°58' Pisces
     [Date.UTC(2026, 0, 18, 0, 0, 0), 339.5833],  // Jan 18: 9°35' Pisces
@@ -261,8 +293,8 @@ export function calculatePlanetaryPositions(date: Date): PlanetPosition[] {
     });
   });
 
-  // Add North Node
-  const northNodeLon = getMeanLunarNode(date);
+  // Add North Node (use getTransitLunarNode for transits, which falls back to getMeanLunarNode for non-2026 dates)
+  const northNodeLon = getTransitLunarNode(date);
   const { sign: nnSign, signIndex: nnSignIndex, degreeInSign: nnDegreeInSign } = getSignFromLongitude(northNodeLon);
 
   positions.push({
