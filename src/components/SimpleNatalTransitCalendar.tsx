@@ -1241,10 +1241,16 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                     <div style={{ whiteSpace: 'pre-wrap' }}>
                       {(() => {
                         // Find the natal planet's house
-                        const natalPlanetObj = natalPlanets.find(p => p.name === aspect.natalPlanet);
-                        const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
-                          ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
-                          : 1;
+                        let natalHouse = 1;
+                        if (aspect.natalPlanet === 'Ascendant') {
+                          // Ascendant is always in the 1st house
+                          natalHouse = 1;
+                        } else {
+                          const natalPlanetObj = natalPlanets.find(p => p.name === aspect.natalPlanet);
+                          natalHouse = natalPlanetObj && natalAscendant?.houseCusps
+                            ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
+                            : 1;
+                        }
 
                         // Find which natal house the transiting planet is currently in
                         // For natal-to-transit aspects, we use the NATAL house cusps to determine
@@ -1880,10 +1886,16 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                     return interpretation;
                   } else {
                     // Regular natal-transit aspect
-                    const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
-                    const natalHouse = natalPlanetObj && natalAscendant?.houseCusps
-                      ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
-                      : 1;
+                    let natalHouse = 1;
+                    if (selectedAspect.natalPlanet === 'Ascendant') {
+                      // Ascendant is always in the 1st house
+                      natalHouse = 1;
+                    } else {
+                      const natalPlanetObj = natalPlanets.find(p => p.name === selectedAspect.natalPlanet);
+                      natalHouse = natalPlanetObj && natalAscendant?.houseCusps
+                        ? calculateHousePosition(natalPlanetObj.longitude, natalAscendant.houseCusps, houseSystem)
+                        : 1;
+                    }
 
                     const transitHouse = natalAscendant?.houseCusps
                       ? calculateHousePosition(selectedAspect.transitLongitude, natalAscendant.houseCusps, houseSystem)
