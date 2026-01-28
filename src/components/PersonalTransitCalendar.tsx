@@ -342,7 +342,12 @@ const calculateTransitToTransitAspects = (
 
   // Add Full Moon if found within orb
   if (bestFullMoonData && bestFullMoonOrb <= 5) {
-    const fullMoonLongitude = (bestFullMoonData.sunLongitude + 180) % 360;
+    // For Full Moon, use Sun's degree in the opposite sign for consistency
+    // Example: Sun at 13° Aquarius → Full Moon shown as 13° Leo
+    const sunSignIndex = Math.floor(bestFullMoonData.sunLongitude / 30);
+    const sunDegreeInSign = bestFullMoonData.sunLongitude % 30;
+    const oppositeSignIndex = (sunSignIndex + 6) % 12;
+    const fullMoonLongitude = (oppositeSignIndex * 30) + sunDegreeInSign;
     const positionStr = getPositionString(fullMoonLongitude);
     const house = getHouseNumber(fullMoonLongitude, ascendantSign);
     aspects.push({
@@ -890,7 +895,7 @@ export const PersonalTransitCalendar: React.FC<PersonalTransitCalendarProps> = (
               timeIntervals={15}
               dateFormat="MMMM d, yyyy h:mm aa"
               className="date-picker"
-              minDate={new Date('1960-01-01')}
+              minDate={new Date('1910-01-01')}
               maxDate={new Date('2027-12-31')}
               showYearDropdown
               showMonthDropdown
@@ -1250,7 +1255,7 @@ export const PersonalTransitCalendar: React.FC<PersonalTransitCalendarProps> = (
                       {date.toLocaleDateString('en-US', { weekday: 'short' })}
                     </div>
                     <div style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.8)' }}>
-                      {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      {date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                     </div>
                     {isToday && (
                       <div style={{
