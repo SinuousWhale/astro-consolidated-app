@@ -232,6 +232,13 @@ const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
 
     const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
 
+    // For Full Moon, use Sun's degree in the opposite sign for consistency
+    // Example: Sun at 13° Aquarius → Full Moon shown as 13° Leo
+    const sunSignIndex = Math.floor(sun.longitude / 30);
+    const sunDegreeInSign = sun.longitude % 30;
+    const oppositeSignIndex = (sunSignIndex + 6) % 12;
+    const fullMoonDisplayLongitude = (oppositeSignIndex * 30) + sunDegreeInSign;
+
     // Check if this eclipse aspects any natal planets
     natalPlanets.forEach((natalPlanet) => {
       ASPECT_TYPES.forEach((aspectType) => {
@@ -250,7 +257,7 @@ const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
             color: isNearNode ? '#8B4513' : '#191970',
             symbol: isNearNode ? '🌕' : '🌕',
             natalLongitude: natalPlanet.longitude,
-            transitLongitude: moon.longitude,
+            transitLongitude: fullMoonDisplayLongitude,
             transitPlanet: isNearNode ? 'Lunar Eclipse' : 'Full Moon'
           });
         }
@@ -936,7 +943,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
               }}>
                 {day.date.toLocaleDateString('en-US', { weekday: 'short' })}
                 <br />
-                {day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                {day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
               </div>
 
               <div style={{ fontSize: '12px', color: '#666' }}>
