@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { calculatePlanetaryPositions, calculateAscendant } from '../utils/ephemeris';
-import { getNatalActivationManifestations } from '../utils/aspectInterpretations';
+import { getNatalActivationManifestations, generateDailySummary } from '../utils/aspectInterpretations';
+import type { DailySummary } from '../utils/aspectInterpretations';
 
 interface NatalToTransitCalendarProps {
   natalDate: Date;
@@ -262,6 +263,7 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
 
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
   const [expandedAspectIndex, setExpandedAspectIndex] = useState<{day: number, aspect: number} | null>(null);
+  const [dailyBriefingIndex, setDailyBriefingIndex] = useState<number | null>(null);
 
   // Convert natal date to UTC accounting for birth location timezone
   // Same logic as SimpleWheelFixed
@@ -687,6 +689,31 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
                 {day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
               </div>
 
+              {day.aspects.length > 0 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setDailyBriefingIndex(dailyBriefingIndex === dayIdx ? null : dayIdx);
+                    setExpandedAspectIndex(null);
+                  }}
+                  style={{
+                    width: '100%',
+                    padding: '4px 8px',
+                    marginBottom: '6px',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    backgroundColor: dailyBriefingIndex === dayIdx ? '#1a237e' : '#3f51b5',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    letterSpacing: '0.5px'
+                  }}
+                >
+                  Daily Briefing
+                </button>
+              )}
+
               {day.aspects.length > 0 ? (
                 <div>
                   <div style={{ fontSize: '12px', color: '#666', marginBottom: '5px' }}>
@@ -883,6 +910,202 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
           })()}
         </div>
       )}
+
+      {/* Daily Briefing Panel */}
+      {dailyBriefingIndex !== null && weeklyAspects[dailyBriefingIndex] && (() => {
+        const dayData = weeklyAspects[dailyBriefingIndex];
+        const activationsForSummary = dayData.aspects.map((a: any) => ({
+          natalPlanet: a.natal.name,
+          natalHouse: a.natal.house,
+          transit1Planet: a.transitAspect.transit1.name,
+          transit1House: a.transitAspect.transit1.house,
+          transit2Planet: a.transitAspect.transit2.name,
+          transit2House: a.transitAspect.transit2.house,
+          natalAspectType: a.aspect.name,
+          transitAspectType: a.transitAspect.aspect.name,
+          orb: a.aspect.actualOrb
+        }));
+        const summary = generateDailySummary(activationsForSummary);
+
+        const intensityColors: Record<string, { bg: string; border: string; text: string }> = {
+          'Quiet': { bg: '#e8f5e9', border: '#66bb6a', text: '#2e7d32' },
+          'Active': { bg: '#e3f2fd', border: '#42a5f5', text: '#1565c0' },
+          'Intense': { bg: '#fff3e0', border: '#ffa726', text: '#e65100' },
+          'Pivotal': { bg: '#fce4ec', border: '#ef5350', text: '#b71c1c' }
+        };
+        const iColors = intensityColors[summary.intensity];
+        const intensityBars = Array(4).fill(0).map((_, i) => i < summary.intensityScore);
+
+        return (
+          <div style={{
+            marginTop: '30px',
+            padding: '25px',
+            backgroundColor: '#fafafa',
+            borderRadius: '12px',
+            border: `3px solid ${iColors.border}`,
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          }}>
+            {/* Header */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
+              <div>
+                <h3 style={{ margin: 0, color: '#1a237e', fontSize: '20px' }}>
+                  Daily Cosmic Briefing
+                </h3>
+                <div style={{ fontSize: '14px', color: '#666', marginTop: '4px' }}>
+                  {dayData.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
+                </div>
+              </div>
+              <button
+                onClick={() => setDailyBriefingIndex(null)}
+                style={{
+                  padding: '6px 16px',
+                  backgroundColor: '#666',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '5px',
+                  cursor: 'pointer',
+                  fontSize: '13px'
+                }}
+              >
+                Close
+              </button>
+            </div>
+
+            {/* Intensity Meter */}
+            <div style={{
+              padding: '12px 16px',
+              backgroundColor: iColors.bg,
+              borderRadius: '8px',
+              border: `1px solid ${iColors.border}`,
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px'
+            }}>
+              <div style={{ fontSize: '14px', fontWeight: 'bold', color: iColors.text, minWidth: '80px' }}>
+                {summary.intensity}
+              </div>
+              <div style={{ display: 'flex', gap: '4px' }}>
+                {intensityBars.map((filled, i) => (
+                  <div key={i} style={{
+                    width: '24px',
+                    height: '10px',
+                    borderRadius: '3px',
+                    backgroundColor: filled ? iColors.border : '#e0e0e0',
+                    transition: 'background-color 0.3s'
+                  }} />
+                ))}
+              </div>
+              <div style={{ fontSize: '13px', color: '#555', flex: 1 }}>
+                {summary.overview}
+              </div>
+            </div>
+
+            {/* Focus Areas */}
+            {summary.focusAreas.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                <h4 style={{ margin: '0 0 12px 0', fontSize: '16px', color: '#333' }}>
+                  Life Areas in Focus
+                </h4>
+                {summary.focusAreas.map((area, areaIdx) => (
+                  <div key={areaIdx} style={{
+                    padding: '12px 16px',
+                    backgroundColor: 'white',
+                    borderRadius: '8px',
+                    border: '1px solid #e0e0e0',
+                    marginBottom: '10px'
+                  }}>
+                    <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#1a237e', marginBottom: '8px' }}>
+                      {area.house}{['th','st','nd','rd'][area.house % 100 > 3 && area.house % 100 < 21 ? 0 : area.house % 10 > 3 ? 0 : area.house % 10] || 'th'} House — {area.domain.charAt(0).toUpperCase() + area.domain.slice(1)}
+                      <span style={{ fontSize: '12px', color: '#888', fontWeight: 'normal', marginLeft: '8px' }}>
+                        ({area.activations.length} activation{area.activations.length > 1 ? 's' : ''})
+                      </span>
+                    </div>
+                    {area.activations.map((act, actIdx) => (
+                      <div key={actIdx} style={{
+                        padding: '8px 12px',
+                        marginBottom: actIdx < area.activations.length - 1 ? '6px' : 0,
+                        backgroundColor: act.isHard ? '#fff8e1' : '#e8f5e9',
+                        borderRadius: '6px',
+                        borderLeft: `4px solid ${act.isHard ? '#ff9800' : '#4caf50'}`,
+                        fontSize: '13px'
+                      }}>
+                        <div style={{ fontWeight: '600', marginBottom: '4px', color: act.isHard ? '#e65100' : '#2e7d32' }}>
+                          {act.natalPlanet} — {act.transitTheme}
+                          <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: '6px' }}>
+                            via {act.transitPair}
+                          </span>
+                        </div>
+                        {act.bullets.map((bullet, bIdx) => (
+                          <div key={bIdx} style={{ color: '#555', lineHeight: '1.5', paddingLeft: '8px' }}>
+                            • {bullet}
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Tensions */}
+            {summary.tensions.length > 0 && (
+              <div style={{
+                padding: '14px 16px',
+                backgroundColor: '#fff3e0',
+                borderRadius: '8px',
+                border: '1px solid #ffcc80',
+                marginBottom: '15px'
+              }}>
+                <h4 style={{ margin: '0 0 10px 0', fontSize: '15px', color: '#e65100' }}>
+                  Watch Out For
+                </h4>
+                {summary.tensions.map((t, i) => (
+                  <div key={i} style={{ fontSize: '13px', color: '#bf360c', lineHeight: '1.6', marginBottom: '6px' }}>
+                    • {t}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Opportunities */}
+            {summary.opportunities.length > 0 && (
+              <div style={{
+                padding: '14px 16px',
+                backgroundColor: '#e8f5e9',
+                borderRadius: '8px',
+                border: '1px solid #a5d6a7',
+                marginBottom: '15px'
+              }}>
+                <h4 style={{ margin: '0 0 10px 0', fontSize: '15px', color: '#2e7d32' }}>
+                  Lean Into
+                </h4>
+                {summary.opportunities.map((o, i) => (
+                  <div key={i} style={{ fontSize: '13px', color: '#1b5e20', lineHeight: '1.6', marginBottom: '6px' }}>
+                    • {o}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Top Focus */}
+            <div style={{
+              padding: '14px 16px',
+              backgroundColor: '#e8eaf6',
+              borderRadius: '8px',
+              border: '2px solid #5c6bc0',
+              textAlign: 'center'
+            }}>
+              <h4 style={{ margin: '0 0 8px 0', fontSize: '15px', color: '#283593' }}>
+                Today's #1 Focus
+              </h4>
+              <div style={{ fontSize: '14px', color: '#1a237e', lineHeight: '1.6', fontWeight: '500' }}>
+                {summary.topFocus}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Legend */}
       <div style={{

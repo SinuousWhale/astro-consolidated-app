@@ -9797,3 +9797,205 @@ function getNatalHouseRealLifeManifestations(
 
   return results;
 }
+
+// ============================================================
+// DAILY COSMIC BRIEFING GENERATOR
+// ============================================================
+
+interface DailyActivation {
+  natalPlanet: string;
+  natalHouse: number;
+  transit1Planet: string;
+  transit1House: number;
+  transit2Planet: string;
+  transit2House: number;
+  natalAspectType: string;
+  transitAspectType: string;
+  orb: number;
+}
+
+interface DailySummarySection {
+  house: number;
+  domain: string;
+  activations: {
+    natalPlanet: string;
+    isHard: boolean;
+    transitPair: string;
+    transitTheme: string;
+    bullets: string[];
+  }[];
+}
+
+export interface DailySummary {
+  intensity: 'Quiet' | 'Active' | 'Intense' | 'Pivotal';
+  intensityScore: number;
+  overview: string;
+  focusAreas: DailySummarySection[];
+  tensions: string[];
+  opportunities: string[];
+  topFocus: string;
+}
+
+export function generateDailySummary(activations: DailyActivation[]): DailySummary {
+  if (activations.length === 0) {
+    return {
+      intensity: 'Quiet',
+      intensityScore: 0,
+      overview: 'No natal activations today. A day to rest, recharge, and observe the transits from the sidelines.',
+      focusAreas: [],
+      tensions: [],
+      opportunities: [],
+      topFocus: 'Take it easy — the cosmos is giving you a breather.'
+    };
+  }
+
+  const hardAspects = ['Square', 'Opposition'];
+  const numHard = activations.filter(a => hardAspects.includes(a.natalAspectType)).length;
+  const numSoft = activations.length - numHard;
+
+  // --- Intensity ---
+  let intensity: DailySummary['intensity'];
+  let intensityScore: number;
+  if (activations.length <= 2 && numHard === 0) {
+    intensity = 'Quiet'; intensityScore = 1;
+  } else if (activations.length <= 4 && numHard <= 1) {
+    intensity = 'Active'; intensityScore = 2;
+  } else if (activations.length <= 6 || numHard <= 2) {
+    intensity = 'Intense'; intensityScore = 3;
+  } else {
+    intensity = 'Pivotal'; intensityScore = 4;
+  }
+
+  // --- Group by natal house ---
+  const houseGroups: Record<number, DailySummarySection> = {};
+
+  for (const act of activations) {
+    if (!houseGroups[act.natalHouse]) {
+      const houseInfo = getHouseManifestations(act.natalHouse);
+      houseGroups[act.natalHouse] = {
+        house: act.natalHouse,
+        domain: houseInfo.domain,
+        activations: []
+      };
+    }
+
+    const isHard = hardAspects.includes(act.natalAspectType);
+    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
+    const natalChar = getNatalPlanetCharacter(act.natalPlanet);
+    const transitPairLabel = `${act.transit1Planet}-${act.transit2Planet}`;
+
+    const bullets: string[] = [];
+    if (isHard) {
+      bullets.push(
+        `Your ${natalChar.keyword} (${act.natalPlanet}) is challenged by ${transitPair.hardKeyword}`
+      );
+      if (act.natalAspectType === 'Square') {
+        bullets.push(`Friction demands action — you can't ignore this, but forcing it may backfire`);
+      } else {
+        bullets.push(`Opposing forces pull you in two directions — find the balance point rather than choosing sides`);
+      }
+    } else {
+      bullets.push(
+        `Your ${natalChar.keyword} (${act.natalPlanet}) benefits from ${transitPair.softKeyword}`
+      );
+      if (act.natalAspectType === 'Trine') {
+        bullets.push(`Natural flow — this works easily if you show up and engage with it`);
+      } else if (act.natalAspectType === 'Sextile') {
+        bullets.push(`Opportunity knocking — take initiative to activate this potential`);
+      } else {
+        bullets.push(`Direct alignment — this energy amplifies your natal strengths`);
+      }
+    }
+
+    houseGroups[act.natalHouse].activations.push({
+      natalPlanet: act.natalPlanet,
+      isHard,
+      transitPair: transitPairLabel,
+      transitTheme: transitPair.theme,
+      bullets
+    });
+  }
+
+  // Sort focus areas by number of activations (most active house first)
+  const focusAreas = Object.values(houseGroups).sort((a, b) => b.activations.length - a.activations.length);
+
+  // --- Overview sentence ---
+  const topHouses = focusAreas.slice(0, 3);
+  const houseLabels = topHouses.map(h => {
+    const ord = `${h.house}${getOrdinalSuffix(h.house)}`;
+    return `${ord} house (${h.domain.split(',')[0].trim()})`;
+  });
+
+  let overviewFocus: string;
+  if (houseLabels.length === 1) {
+    overviewFocus = `centered on your ${houseLabels[0]}`;
+  } else if (houseLabels.length === 2) {
+    overviewFocus = `activating your ${houseLabels[0]} and ${houseLabels[1]}`;
+  } else {
+    overviewFocus = `spanning your ${houseLabels[0]}, ${houseLabels[1]}, and ${houseLabels[2]}`;
+  }
+
+  const tensionWord = numHard > 0 ? ` with ${numHard} challenging aspect${numHard > 1 ? 's' : ''} demanding attention` : '';
+  const overview = `${activations.length} cosmic activation${activations.length > 1 ? 's' : ''} today ${overviewFocus}${tensionWord}. ${
+    intensity === 'Quiet' ? 'A gentle day to observe and reflect.' :
+    intensity === 'Active' ? 'Stay engaged — the universe is working with you.' :
+    intensity === 'Intense' ? 'A high-energy day — pace yourself and stay grounded.' :
+    'A landmark day — major themes are converging. Pay close attention.'
+  }`;
+
+  // --- Tensions (hard aspects) ---
+  const tensions: string[] = [];
+  for (const act of activations) {
+    if (!hardAspects.includes(act.natalAspectType)) continue;
+    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
+    const houseInfo = getHouseManifestations(act.natalHouse);
+    const ord = `${act.natalHouse}${getOrdinalSuffix(act.natalHouse)}`;
+
+    tensions.push(
+      `${act.natalPlanet} in ${ord} house ${act.natalAspectType.toLowerCase()} ${act.transit1Planet}-${act.transit2Planet}: ${transitPair.hardKeyword} clashes with your ${houseInfo.domain.split(',')[0].trim()} — ${
+        act.natalAspectType === 'Square'
+          ? `don't force solutions, work with the friction`
+          : `acknowledge both sides instead of suppressing one`
+      }`
+    );
+  }
+
+  // --- Opportunities (soft aspects) ---
+  const opportunities: string[] = [];
+  for (const act of activations) {
+    if (hardAspects.includes(act.natalAspectType)) continue;
+    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
+    const houseInfo = getHouseManifestations(act.natalHouse);
+    const ord = `${act.natalHouse}${getOrdinalSuffix(act.natalHouse)}`;
+
+    opportunities.push(
+      `${act.natalPlanet} in ${ord} house ${act.natalAspectType.toLowerCase()} ${act.transit1Planet}-${act.transit2Planet}: ${transitPair.softKeyword} supports your ${houseInfo.domain.split(',')[0].trim()} — ${
+        act.natalAspectType === 'Trine'
+          ? `this flows naturally, lean into it`
+          : act.natalAspectType === 'Sextile'
+          ? `take the initiative to activate this`
+          : `direct alignment with your strengths`
+      }`
+    );
+  }
+
+  // --- Top focus (tightest orb activation) ---
+  const tightest = [...activations].sort((a, b) => a.orb - b.orb)[0];
+  const tightestPair = getTransitPairTheme(tightest.transit1Planet, tightest.transit2Planet);
+  const tightestChar = getNatalPlanetCharacter(tightest.natalPlanet);
+  const tightestIsHard = hardAspects.includes(tightest.natalAspectType);
+  const tightestOrd = `${tightest.natalHouse}${getOrdinalSuffix(tightest.natalHouse)}`;
+  const topFocus = tightestIsHard
+    ? `Your most exact activation (${tightest.orb.toFixed(1)}° orb) is ${tightest.natalPlanet} ${tightest.natalAspectType.toLowerCase()} ${tightest.transit1Planet}-${tightest.transit2Planet}. Navigate ${tightestPair.domain} carefully — your ${tightestOrd} house ${tightestChar.keyword} is under maximum pressure.`
+    : `Your most exact activation (${tightest.orb.toFixed(1)}° orb) is ${tightest.natalPlanet} ${tightest.natalAspectType.toLowerCase()} ${tightest.transit1Planet}-${tightest.transit2Planet}. Prioritize ${tightestPair.domain} today — your ${tightestOrd} house ${tightestChar.keyword} is perfectly positioned to benefit.`;
+
+  return {
+    intensity,
+    intensityScore,
+    overview,
+    focusAreas,
+    tensions,
+    opportunities,
+    topFocus
+  };
+}
