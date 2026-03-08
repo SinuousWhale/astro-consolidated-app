@@ -9112,6 +9112,213 @@ function getHouseSpecificManifestations(
   return manifestations;
 }
 
+// ============================================================
+// ENHANCED NATAL ACTIVATION INTERPRETATION SYSTEM
+// ============================================================
+// Layered approach:
+//   1. Transit pair character (what energy is in the sky)
+//   2. Natal planet character (how the person connects)
+//   3. House context (where it plays out)
+//   4. Aspect quality (hard = friction/growth, soft = flow/support)
+// ============================================================
+
+// Transit pair profiles - what each combination represents thematically
+function getTransitPairTheme(planet1: string, planet2: string): { theme: string; hardKeyword: string; softKeyword: string; domain: string } {
+  const key = [planet1, planet2].sort().join('-');
+  const themes: Record<string, { theme: string; hardKeyword: string; softKeyword: string; domain: string }> = {
+    // Sun pairs
+    'Mercury-Sun': { theme: 'conscious communication and mental clarity', hardKeyword: 'mental stress or miscommunication', softKeyword: 'clear self-expression', domain: 'how you think and speak about yourself' },
+    'Sun-Venus': { theme: 'love, beauty, and self-worth', hardKeyword: 'vanity struggles or relationship friction', softKeyword: 'romantic harmony and creative pleasure', domain: 'relationships and personal values' },
+    'Mars-Sun': { theme: 'willpower, drive, and assertiveness', hardKeyword: 'ego conflicts or aggressive energy', softKeyword: 'confident action and vitality', domain: 'ambition and personal power' },
+    'Jupiter-Sun': { theme: 'expansion of identity and opportunity', hardKeyword: 'overconfidence or excess', softKeyword: 'growth, luck, and recognition', domain: 'success and personal expansion' },
+    'Saturn-Sun': { theme: 'discipline, responsibility, and authority', hardKeyword: 'restriction, pressure, or authority conflicts', softKeyword: 'earned achievement and maturity', domain: 'career structure and life direction' },
+    'Sun-Uranus': { theme: 'sudden change and liberation', hardKeyword: 'disruption and instability', softKeyword: 'exciting breakthroughs and freedom', domain: 'independence and authenticity' },
+    'Neptune-Sun': { theme: 'spirituality, dreams, and illusion', hardKeyword: 'confusion, deception, or identity dissolution', softKeyword: 'inspiration, compassion, and creative vision', domain: 'spiritual identity and imagination' },
+    'Pluto-Sun': { theme: 'deep transformation and power', hardKeyword: 'power struggles and ego death', softKeyword: 'empowerment and profound renewal', domain: 'personal transformation and control' },
+    // Moon pairs
+    'Mercury-Moon': { theme: 'emotional communication and intuitive thinking', hardKeyword: 'emotional overthinking or anxious words', softKeyword: 'heartfelt conversations and emotional intelligence', domain: 'feelings and daily mental state' },
+    'Moon-Venus': { theme: 'emotional comfort and affection', hardKeyword: 'neediness or emotional spending', softKeyword: 'nurturing love and domestic beauty', domain: 'emotional security in relationships' },
+    'Mars-Moon': { theme: 'emotional reactivity and protective instincts', hardKeyword: 'anger, emotional outbursts, or domestic conflict', softKeyword: 'emotional courage and protective action', domain: 'emotional drives and home life' },
+    'Jupiter-Moon': { theme: 'emotional growth and domestic expansion', hardKeyword: 'emotional excess or over-indulgence', softKeyword: 'emotional abundance and family blessings', domain: 'home, family, and emotional wellbeing' },
+    'Moon-Saturn': { theme: 'emotional maturity and responsibility', hardKeyword: 'emotional coldness, loneliness, or family duty', softKeyword: 'emotional stability and reliable support', domain: 'emotional boundaries and family structure' },
+    'Moon-Uranus': { theme: 'emotional awakening and sudden changes at home', hardKeyword: 'emotional volatility or sudden domestic upheaval', softKeyword: 'emotional freedom and exciting home changes', domain: 'emotional independence and living situation' },
+    'Moon-Neptune': { theme: 'emotional sensitivity and spiritual feelings', hardKeyword: 'emotional confusion, escapism, or deception in the home', softKeyword: 'deep empathy, spiritual connection, and creative flow', domain: 'emotional intuition and inner life' },
+    'Moon-Pluto': { theme: 'emotional intensity and psychological depth', hardKeyword: 'emotional manipulation, obsession, or family power struggles', softKeyword: 'emotional transformation and deep healing', domain: 'emotional power and psychological patterns' },
+    // Mercury pairs
+    'Mercury-Venus': { theme: 'social communication and artistic expression', hardKeyword: 'superficial talk or difficulty expressing affection', softKeyword: 'charming communication and creative writing', domain: 'social life and artistic ideas' },
+    'Mars-Mercury': { theme: 'mental sharpness and assertive communication', hardKeyword: 'arguments, verbal attacks, or hasty decisions', softKeyword: 'decisive thinking and persuasive speech', domain: 'debates, negotiations, and mental energy' },
+    'Jupiter-Mercury': { theme: 'big ideas, learning, and publishing', hardKeyword: 'exaggeration, information overload, or poor judgment', softKeyword: 'intellectual growth, good news, and successful communication', domain: 'education, media, and mental expansion' },
+    'Mercury-Saturn': { theme: 'serious thinking and structured communication', hardKeyword: 'mental blocks, pessimism, or bureaucratic delays', softKeyword: 'focused study, practical planning, and wise decisions', domain: 'contracts, exams, and official matters' },
+    'Mercury-Uranus': { theme: 'innovative thinking and sudden insights', hardKeyword: 'nervous tension, erratic thinking, or tech problems', softKeyword: 'brilliant ideas, tech breakthroughs, and original solutions', domain: 'technology, innovation, and unconventional ideas' },
+    'Mercury-Neptune': { theme: 'imaginative thinking and intuitive communication', hardKeyword: 'lies, confusion, forgetfulness, or scams', softKeyword: 'poetic expression, psychic insights, and creative writing', domain: 'imagination, spirituality, and media' },
+    'Mercury-Pluto': { theme: 'deep investigation and transformative communication', hardKeyword: 'obsessive thinking, manipulation, or uncovering secrets', softKeyword: 'powerful persuasion, research breakthroughs, and truth-telling', domain: 'psychology, research, and hidden information' },
+    // Venus pairs
+    'Mars-Venus': { theme: 'passion, desire, and romantic chemistry', hardKeyword: 'sexual tension, jealousy, or relationship conflict', softKeyword: 'magnetic attraction, passionate romance, and creative fire', domain: 'love life, sexuality, and artistic creation' },
+    'Jupiter-Venus': { theme: 'abundance in love and financial blessings', hardKeyword: 'overspending, laziness, or taking love for granted', softKeyword: 'romantic luck, financial windfalls, and social popularity', domain: 'money, love, and social enjoyment' },
+    'Saturn-Venus': { theme: 'commitment, loyalty, and relationship reality checks', hardKeyword: 'loneliness, rejection, financial restrictions, or love tests', softKeyword: 'lasting commitment, mature love, and financial discipline', domain: 'serious relationships and long-term finances' },
+    'Uranus-Venus': { theme: 'exciting attractions and financial surprises', hardKeyword: 'sudden breakups, financial shocks, or unstable relationships', softKeyword: 'exciting new connections, unexpected money, and creative freedom', domain: 'unconventional relationships and sudden financial changes' },
+    'Neptune-Venus': { theme: 'romantic idealism and artistic inspiration', hardKeyword: 'romantic delusion, financial deception, or unrequited love', softKeyword: 'soulmate connections, artistic beauty, and compassionate love', domain: 'ideal love, art, and spiritual relationships' },
+    'Pluto-Venus': { theme: 'obsessive love and financial transformation', hardKeyword: 'jealousy, possessiveness, financial power struggles, or toxic attraction', softKeyword: 'deeply transformative love, financial rebirth, and magnetic charm', domain: 'intense relationships and shared finances' },
+    // Mars pairs
+    'Jupiter-Mars': { theme: 'bold action and expansive drive', hardKeyword: 'reckless risk-taking, legal battles, or over-aggression', softKeyword: 'courageous action, winning energy, and successful ventures', domain: 'competition, entrepreneurship, and physical vitality' },
+    'Mars-Saturn': { theme: 'disciplined effort and controlled force', hardKeyword: 'frustration, blocked action, physical strain, or authority clashes', softKeyword: 'focused determination, strategic patience, and enduring strength', domain: 'hard work, physical discipline, and career ambition' },
+    'Mars-Uranus': { theme: 'sudden action and revolutionary energy', hardKeyword: 'accidents, impulsive acts, rebellion, or explosive anger', softKeyword: 'bold innovation, quick breakthroughs, and liberation', domain: 'radical change, technology, and independence' },
+    'Mars-Neptune': { theme: 'inspired action and spiritual drive', hardKeyword: 'wasted energy, passive-aggression, or deceptive actions', softKeyword: 'fighting for a cause, spiritual courage, and artistic passion', domain: 'idealistic pursuits, healing, and creative action' },
+    'Mars-Pluto': { theme: 'extreme willpower and transformative force', hardKeyword: 'power struggles, obsessive drive, violence, or manipulation', softKeyword: 'unstoppable determination, phoenix-like renewal, and strategic power', domain: 'deep ambition, surgery, and total transformation' },
+    // Jupiter pairs
+    'Jupiter-Saturn': { theme: 'building real-world success and structured growth', hardKeyword: 'growth vs. restriction tension, financial pressure, or faith tested', softKeyword: 'sustainable success, wise investment, and earned expansion', domain: 'business, career advancement, and life direction' },
+    'Jupiter-Uranus': { theme: 'sudden luck and revolutionary opportunity', hardKeyword: 'restlessness, gambling losses, or disrupted plans', softKeyword: 'unexpected windfalls, freedom breakthroughs, and visionary leaps', domain: 'innovation, sudden opportunity, and liberation' },
+    'Jupiter-Neptune': { theme: 'spiritual expansion and grand visions', hardKeyword: 'false hope, religious extremism, or bubble-bursting disillusionment', softKeyword: 'spiritual awakening, creative abundance, and charitable success', domain: 'faith, imagination, and compassionate expansion' },
+    'Jupiter-Pluto': { theme: 'massive empowerment and wealth transformation', hardKeyword: 'corruption, power abuse, or obsessive ambition', softKeyword: 'profound success, wealth generation, and empowering influence', domain: 'power, wealth, and societal transformation' },
+    // Saturn pairs
+    'Saturn-Uranus': { theme: 'old vs. new, tradition vs. revolution', hardKeyword: 'system breakdowns, rigid resistance to change, or forced upheaval', softKeyword: 'innovative structures, progressive reform, and stable innovation', domain: 'societal structures, technology, and personal freedom' },
+    'Neptune-Saturn': { theme: 'dreams meeting reality', hardKeyword: 'disillusionment, institutional deception, or chronic fatigue', softKeyword: 'manifesting dreams into reality, spiritual discipline, and healing structures', domain: 'long-term vision, institutions, and spiritual practice' },
+    'Pluto-Saturn': { theme: 'power structures transforming and institutional rebirth', hardKeyword: 'authoritarian pressure, systemic collapse, or career destruction', softKeyword: 'rebuilding stronger, gaining authority, and strategic restructuring', domain: 'career power, government, and lasting transformation' },
+    // Uranus pairs
+    'Neptune-Uranus': { theme: 'collective awakening and visionary disruption', hardKeyword: 'chaos, collective confusion, or technological overwhelm', softKeyword: 'spiritual innovation, humanitarian breakthroughs, and collective evolution', domain: 'technology + spirituality, generational shifts' },
+    'Pluto-Uranus': { theme: 'revolutionary transformation and radical rebirth', hardKeyword: 'violent upheaval, total system destruction, or extremism', softKeyword: 'revolutionary empowerment, total liberation, and evolutionary leaps', domain: 'radical societal change and personal revolution' },
+    // Neptune-Pluto
+    'Neptune-Pluto': { theme: 'deep collective transformation and spiritual evolution', hardKeyword: 'mass delusion, hidden manipulation, or civilizational crisis', softKeyword: 'spiritual transformation, collective healing, and evolutionary consciousness', domain: 'civilization-level spiritual and power shifts' },
+    // Node pairs
+    'Mars-North Node': { theme: 'destiny-driven action and karmic courage', hardKeyword: 'aggressive karmic patterns or forced action on your life path', softKeyword: 'bold steps toward destiny and courageous alignment with life purpose', domain: 'life direction, karmic action, and soul mission' },
+    'Jupiter-North Node': { theme: 'destined growth and karmic blessings', hardKeyword: 'overextending on your life path or misguided expansion', softKeyword: 'lucky alignment with destiny, teachers appearing, and spiritual growth', domain: 'life purpose, mentorship, and karmic rewards' },
+    'Saturn-North Node': { theme: 'karmic responsibility and destined duty', hardKeyword: 'heavy karmic lessons, delays on your path, or authority blocking destiny', softKeyword: 'mature alignment with purpose, karmic debts cleared, and destined authority', domain: 'karmic duties, life structure, and soul lessons' },
+    'North Node-Sun': { theme: 'identity aligning with destiny', hardKeyword: 'ego blocking your life path or identity crisis around purpose', softKeyword: 'your true self shining on your destined path', domain: 'life purpose and authentic self-expression' },
+    'Mercury-North Node': { theme: 'destined communication and karmic connections', hardKeyword: 'miscommunication derailing your path or nervous energy about purpose', softKeyword: 'fated conversations, karmic messages, and destined learning', domain: 'karmic communication, siblings, and life direction' },
+    'North Node-Venus': { theme: 'destined love and karmic relationships', hardKeyword: 'past-life relationship patterns blocking growth or values misaligned with purpose', softKeyword: 'fated romantic connections, karmic love blessings, and values aligning with destiny', domain: 'karmic love, destined partnerships, and soul values' },
+    'Moon-North Node': { theme: 'emotional destiny and karmic home', hardKeyword: 'emotional patterns from past lives blocking growth or family karma surfacing', softKeyword: 'emotional alignment with destiny, karmic family healing, and intuitive guidance toward purpose', domain: 'karmic emotions, family destiny, and soul needs' },
+    'North Node-Uranus': { theme: 'revolutionary destiny and karmic awakening', hardKeyword: 'chaotic disruptions to your life path or forced freedom before you are ready', softKeyword: 'sudden destiny activation, liberation aligned with soul purpose', domain: 'karmic freedom, sudden fate shifts, and evolutionary destiny' },
+    'Neptune-North Node': { theme: 'spiritual destiny and karmic surrender', hardKeyword: 'confusion about life purpose or spiritual bypassing of karmic work', softKeyword: 'spiritual alignment with destiny, divine guidance on your path', domain: 'spiritual purpose, karmic healing, and soul transcendence' },
+    'North Node-Pluto': { theme: 'transformative destiny and karmic power', hardKeyword: 'intense karmic purging or power struggles on your life path', softKeyword: 'profound destiny activation, karmic transformation, and soul empowerment', domain: 'karmic transformation, destiny power, and soul evolution' },
+    // South Node pairs (use similar but with release/past-life framing)
+    'Mars-South Node': { theme: 'releasing past-life aggression and old action patterns', hardKeyword: 'karmic anger resurfacing or old conflicts reigniting', softKeyword: 'gracefully releasing old warrior energy and past-life courage informing present', domain: 'karmic release of old drives and past-life action patterns' },
+    'Jupiter-South Node': { theme: 'releasing past-life beliefs and old growth patterns', hardKeyword: 'outdated beliefs blocking progress or past-life arrogance', softKeyword: 'wisdom from past lives supporting present growth', domain: 'releasing old philosophies and past-life expansion patterns' },
+    'Saturn-South Node': { theme: 'releasing past-life restrictions and old authority patterns', hardKeyword: 'karmic duty cycles ending painfully or old fears resurfacing', softKeyword: 'completing karmic responsibilities and graduating from old lessons', domain: 'karmic duty completion and releasing old structures' },
+  };
+
+  // Try both orderings
+  const result = themes[key];
+  if (result) return result;
+
+  // Fallback for any pair not explicitly listed
+  return {
+    theme: `the dynamic between ${planet1} and ${planet2} energy`,
+    hardKeyword: `tension between ${planet1} and ${planet2} themes`,
+    softKeyword: `harmony between ${planet1} and ${planet2} themes`,
+    domain: `the life areas governed by ${planet1} and ${planet2}`
+  };
+}
+
+// Natal planet character profiles - what each planet represents in a person's chart
+function getNatalPlanetCharacter(planet: string): { role: string; keyword: string; hardActivation: string; softActivation: string } {
+  const characters: Record<string, { role: string; keyword: string; hardActivation: string; softActivation: string }> = {
+    'Sun': {
+      role: 'your core identity, ego, and life purpose',
+      keyword: 'identity',
+      hardActivation: 'Your sense of self, ego, and life direction are being challenged — who you ARE is in friction with what\'s happening',
+      softActivation: 'Your authentic self and life purpose are being empowered — who you ARE naturally aligns with what\'s happening'
+    },
+    'Moon': {
+      role: 'your emotions, instincts, needs, and inner security',
+      keyword: 'emotions',
+      hardActivation: 'Your emotional needs, comfort zone, and instincts are being disrupted — you FEEL this transit deeply and uncomfortably',
+      softActivation: 'Your emotional intelligence and instincts guide you beautifully — you FEEL supported and emotionally nourished'
+    },
+    'Mercury': {
+      role: 'your mind, communication style, and how you process information',
+      keyword: 'thinking',
+      hardActivation: 'Your thinking, communication, and decision-making are under pressure — what you say or think creates complications',
+      softActivation: 'Your mind is sharp and your words land perfectly — communication and learning flow easily right now'
+    },
+    'Venus': {
+      role: 'your love nature, values, aesthetics, and relationship style',
+      keyword: 'love/values',
+      hardActivation: 'Your relationships, finances, or sense of beauty are being tested — what you love or value is under pressure',
+      softActivation: 'Your charm, taste, and relationship skills work in your favor — love, money, or beauty enhance the situation'
+    },
+    'Mars': {
+      role: 'your drive, ambition, anger, and how you take action',
+      keyword: 'action/drive',
+      hardActivation: 'Your drive, temper, or competitive nature creates friction — how you fight or push forward causes problems',
+      softActivation: 'Your courage, initiative, and energy are perfectly channeled — bold action gets rewarded'
+    },
+    'Jupiter': {
+      role: 'your faith, luck, growth potential, and where you expand',
+      keyword: 'growth/luck',
+      hardActivation: 'Your optimism, beliefs, or tendency to overdo things creates excess or poor judgment in this situation',
+      softActivation: 'Your natural luck, faith, and expansive nature attract abundance — growth comes easily through this transit'
+    },
+    'Saturn': {
+      role: 'your discipline, fears, responsibilities, and life lessons',
+      keyword: 'discipline/duty',
+      hardActivation: 'Your responsibilities, limitations, or fears create heavy pressure — duty and restriction weigh on this situation',
+      softActivation: 'Your maturity, discipline, and life experience give you the structure to handle this wisely'
+    },
+    'Uranus': {
+      role: 'your uniqueness, need for freedom, and where you rebel',
+      keyword: 'freedom/rebellion',
+      hardActivation: 'Your need for freedom, independence, or unconventional approach disrupts the situation — rebellion creates chaos',
+      softActivation: 'Your originality, innovation, and unique perspective create exciting breakthroughs'
+    },
+    'Neptune': {
+      role: 'your dreams, intuition, spirituality, and where you idealize',
+      keyword: 'dreams/intuition',
+      hardActivation: 'Your idealism, escapist tendencies, or confusion clouds the situation — boundaries dissolve unhelpfully',
+      softActivation: 'Your intuition, compassion, and spiritual awareness provide transcendent insight and healing'
+    },
+    'Pluto': {
+      role: 'your power, transformation potential, and deepest psychological drives',
+      keyword: 'power/transformation',
+      hardActivation: 'Your need for control, intensity, or psychological depth creates power struggles in this situation',
+      softActivation: 'Your transformative power, psychological insight, and resilience turn this transit into profound growth'
+    },
+    'North Node': {
+      role: 'your soul\'s growth direction and destined path forward',
+      keyword: 'destiny',
+      hardActivation: 'Your life path and soul growth are being redirected — uncomfortable but necessary course corrections',
+      softActivation: 'Your destiny is being activated — events align you with your soul\'s intended direction'
+    },
+    'South Node': {
+      role: 'your past-life skills, comfort zone, and what you\'re releasing',
+      keyword: 'past patterns',
+      hardActivation: 'Old habits, past-life patterns, or comfort zone addictions are being forcibly released',
+      softActivation: 'Past-life wisdom and accumulated skills from previous incarnations support you now'
+    }
+  };
+
+  return characters[planet] || {
+    role: `the energy of ${planet} in your chart`,
+    keyword: planet.toLowerCase(),
+    hardActivation: `Your natal ${planet} creates tension with this transit`,
+    softActivation: `Your natal ${planet} supports this transit`
+  };
+}
+
+// House manifestation themes - what each house governs in real life
+function getHouseManifestations(house: number): { domain: string; topics: string[] } {
+  const houses: Record<number, { domain: string; topics: string[] }> = {
+    1: { domain: 'self, appearance, and first impressions', topics: ['personal identity', 'physical body', 'how others see you', 'new beginnings', 'personal brand'] },
+    2: { domain: 'money, possessions, and self-worth', topics: ['income', 'savings', 'material security', 'personal talents', 'what you value'] },
+    3: { domain: 'communication, learning, and local environment', topics: ['conversations', 'social media', 'siblings', 'short trips', 'daily commute', 'writing', 'studying'] },
+    4: { domain: 'home, family, and emotional foundations', topics: ['living situation', 'parents', 'real estate', 'emotional security', 'private life', 'ancestry'] },
+    5: { domain: 'creativity, romance, and children', topics: ['dating', 'creative projects', 'children', 'hobbies', 'performance', 'gambling', 'self-expression'] },
+    6: { domain: 'work, health, and daily routines', topics: ['day job', 'coworkers', 'health habits', 'pets', 'fitness', 'diet', 'service to others'] },
+    7: { domain: 'partnerships, marriage, and open enemies', topics: ['spouse/partner', 'business partners', 'contracts', 'lawsuits', 'counselors', 'one-on-one relationships'] },
+    8: { domain: 'shared resources, transformation, and intimacy', topics: ['joint finances', 'inheritance', 'taxes', 'debt', 'sexual intimacy', 'therapy', 'death/rebirth cycles'] },
+    9: { domain: 'higher education, travel, and beliefs', topics: ['university', 'foreign travel', 'publishing', 'legal matters', 'philosophy', 'religion', 'mentors'] },
+    10: { domain: 'career, public reputation, and authority', topics: ['career advancement', 'boss', 'public image', 'achievements', 'social status', 'professional goals'] },
+    11: { domain: 'friendships, groups, and future hopes', topics: ['friend groups', 'social networks', 'organizations', 'humanitarian causes', 'technology', 'long-term goals'] },
+    12: { domain: 'spirituality, solitude, and the unconscious', topics: ['meditation', 'dreams', 'hidden enemies', 'hospitals', 'isolation', 'addiction', 'self-sabotage', 'spiritual practice'] }
+  };
+
+  return houses[house] || { domain: `your ${house}th house matters`, topics: ['life circumstances'] };
+}
+
+// Helper: returns full ordinal like "7th", "1st", "2nd", "3rd"
+function ordinal(n: number): string {
+  return `${n}${getOrdinalSuffix(n)}`;
+}
+
 // Generate manifestations for natal planet activating a transit-to-transit aspect
 // This shows how natal planet in its house TRIGGERS and COLORS the transit dynamic
 export function getNatalActivationManifestations(
@@ -9128,236 +9335,465 @@ export function getNatalActivationManifestations(
   const isNatalHard = natalAspectType === 'Square' || natalAspectType === 'Opposition';
   const isTransitHard = transitAspectType === 'Square' || transitAspectType === 'Opposition';
 
-  const outerPlanets = ['Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto'];
-  const isOuterTransit = outerPlanets.includes(transit1Planet) || outerPlanets.includes(transit2Planet);
+  const transitPair = getTransitPairTheme(transit1Planet, transit2Planet);
+  const natalChar = getNatalPlanetCharacter(natalPlanet);
+  const natalHouseInfo = getHouseManifestations(natalHouse);
+  const t1HouseInfo = getHouseManifestations(transit1House);
+  const t2HouseInfo = getHouseManifestations(transit2House);
 
-  // Natal 1st house activation - Identity activating the transit
-  if (natalHouse === 1) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Your personal identity and sense of self are being CHALLENGED by the ${transit1Planet}-${transit2Planet} transit playing out in your ${transit1House}th-${transit2House}th houses`,
-        `The transit events force you to question "who am I?" in relation to these circumstances`,
-        `You will resist or fight against what's happening because it threatens your self-image`,
-        `Old ways of being yourself no longer work in this new situation - identity crisis point`
-      );
-    } else {
-      manifestations.push(
-        `Your core identity naturally SUPPORTS navigating the ${transit1Planet}-${transit2Planet} dynamic`,
-        `Who you are at your core helps you handle what's happening in these life areas`,
-        `The transit events actually strengthen your sense of self and confidence`,
-        `You will find yourself stepping into leadership or taking charge in this situation`
-      );
-    }
+  const t1H = ordinal(transit1House);
+  const t2H = ordinal(transit2House);
+  const nH = ordinal(natalHouse);
+
+  // --- Layer 1: Transit context (what's happening in the sky) ---
+  if (isTransitHard) {
+    manifestations.push(
+      `The ${transit1Planet}-${transit2Planet} transit is creating ${transitPair.hardKeyword} across your ${t1H} house (${t1HouseInfo.domain}) and ${t2H} house (${t2HouseInfo.domain})`
+    );
+  } else {
+    manifestations.push(
+      `The ${transit1Planet}-${transit2Planet} transit is bringing ${transitPair.softKeyword} across your ${t1H} house (${t1HouseInfo.domain}) and ${t2H} house (${t2HouseInfo.domain})`
+    );
   }
 
-  // Natal 2nd house activation - Values/resources activating the transit
-  else if (natalHouse === 2) {
-    if (isNatalHard) {
-      manifestations.push(
-        `The ${transit1Planet}-${transit2Planet} transit will cost you money, time, or resources you value`,
-        `Your financial security or self-worth feels threatened by what's unfolding`,
-        `What you own, earn, or value is in direct conflict with the transit demands`,
-        `You will have to spend on or invest in this situation when you'd rather save or spend elsewhere`
-      );
-    } else {
-      manifestations.push(
-        `Your resources, skills, and values are perfectly positioned to benefit from this transit`,
-        `What you own or can offer has market value right now in this situation`,
-        `The transit will increase your income, assets, or sense of self-worth`,
-        `Your natural talents become profitable or useful in navigating these circumstances`
-      );
-    }
+  // --- Layer 2: Natal planet activation (how YOU connect to this) ---
+  if (isNatalHard) {
+    manifestations.push(natalChar.hardActivation);
+  } else {
+    manifestations.push(natalChar.softActivation);
   }
 
-  // Natal 3rd house activation - Communication/learning activating the transit
-  else if (natalHouse === 3) {
-    if (isNatalHard) {
-      manifestations.push(
-        `What you say or how you communicate about this situation will create problems`,
-        `Information you share (or withhold) triggers conflict in the ${transit1House}th-${transit2House}th house areas`,
-        `Miscommunication, gossip, or messages will complicate the transit dynamics`,
-        `Your words, posts, texts, or emails pour gasoline on an already tense situation`
-      );
-    } else {
-      manifestations.push(
-        `Your communication skills help you navigate the transit with clarity and ease`,
-        `The right conversation, message, or information arrives at the perfect time`,
-        `What you learn or teach right now directly helps with the transit challenges`,
-        `Talking it out, writing about it, or sharing information resolves transit tensions`
-      );
-    }
-  }
+  // --- Layer 3: Planet-pair-specific manifestations (the core of the upgrade) ---
+  // These vary by natal planet + transit pair + aspect quality
+  const planetSpecificManifestations = getPlanetPairManifestations(
+    natalPlanet, natalHouse, natalHouseInfo,
+    transit1Planet, transit1House, t1HouseInfo,
+    transit2Planet, transit2House, t2HouseInfo,
+    isNatalHard, isTransitHard, transitPair
+  );
+  manifestations.push(...planetSpecificManifestations);
 
-  // Natal 4th house activation - Home/family/roots activating the transit
-  else if (natalHouse === 4) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Family obligations or home issues will interfere with handling the transit situation`,
-        `Your need for emotional security clashes with what the transit demands of you`,
-        `Past family patterns or childhood wounds are triggered by current events`,
-        `You will feel torn between home/family needs and the ${transit1House}th-${transit2House}th house matters`
-      );
-    } else {
-      manifestations.push(
-        `Home and family provide the foundation you need to handle the transit successfully`,
-        `Your roots, emotional security, and private life support what's happening publicly`,
-        `Family connections or property matters help resolve the transit dynamics`,
-        `You can retreat to your safe space when the transit gets intense - that stability helps`
-      );
-    }
-  }
-
-  // Natal 5th house activation - Creativity/romance/children activating
-  else if (natalHouse === 5) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Creative projects, romantic affairs, or children's needs complicate the transit situation`,
-        `What you do for fun or self-expression conflicts with ${transit1House}th-${transit2House}th house responsibilities`,
-        `Dating drama, pregnancy concerns, or kid issues add stress to an already tense transit`,
-        `Your desire for pleasure, recognition, or creative freedom clashes with what's required now`
-      );
-    } else {
-      manifestations.push(
-        `Creative solutions or playful approaches help you navigate the transit beautifully`,
-        `Romance, children, or creative projects bring joy that balances transit challenges`,
-        `Your authentic self-expression and creativity shine through this situation`,
-        `Taking risks or following your heart leads to breakthrough in the transit areas`
-      );
-    }
-  }
-
-  // Natal 6th house activation - Work/health/service activating
-  else if (natalHouse === 6) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Work demands, health issues, or daily obligations will overwhelm the transit situation`,
-        `Your job or health problems prevent you from properly addressing ${transit1House}th-${transit2House}th house matters`,
-        `Stress from the transit manifests as physical illness or workplace conflict`,
-        `Too many duties, not enough time - the grind interferes with handling bigger transit themes`
-      );
-    } else {
-      manifestations.push(
-        `Your work ethic, organizational skills, and daily routines help you master the transit`,
-        `Health improvements or work opportunities arrive through the transit dynamics`,
-        `Being of service or helping others resolves transit tensions beautifully`,
-        `Your attention to detail and practical approach turns transit challenges into manageable tasks`
-      );
-    }
-  }
-
-  // Natal 7th house activation - Partnerships activating
-  else if (natalHouse === 7) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Your partner, spouse, or close associates actively oppose or complicate the transit situation`,
-        `Relationship conflicts or divorce/separation proceedings intersect with the transit events`,
-        `What your partner wants directly contradicts what you need to do in ${transit1House}th-${transit2House}th houses`,
-        `You will feel caught between relationship harmony and addressing the transit demands`
-      );
-    } else {
-      manifestations.push(
-        `Your partner, collaborator, or counselor provides crucial support for navigating the transit`,
-        `Relationship harmony or new partnerships help resolve the transit challenges`,
-        `Working together with others creates breakthrough in the ${transit1House}th-${transit2House}th house situation`,
-        `The right person shows up at the right time to help you through this`
-      );
-    }
-  }
-
-  // Natal 8th house activation - Transformation/shared resources activating
-  else if (natalHouse === 8) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Debts, taxes, inheritance disputes, or power struggles intensify the transit drama`,
-        `Other people's money or resources become battleground in ${transit1House}th-${transit2House}th house areas`,
-        `Deep psychological fears or control issues surface through the transit events`,
-        `Intimacy wounds, sexual issues, or fear of loss complicate what's already difficult`
-      );
-    } else {
-      manifestations.push(
-        `Shared resources, investments, or other people's support help you leverage the transit`,
-        `Deep psychological insight or therapeutic work transforms the transit challenges`,
-        `You will receive money, inheritance, or resources that help with the situation`,
-        `Intimacy, merging, or joint ventures create powerful synergy in navigating the transit`
-      );
-    }
-  }
-
-  // Natal 9th house activation - Beliefs/expansion activating
-  else if (natalHouse === 9) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Your beliefs, philosophy, or moral stance puts you in conflict with the transit situation`,
-        `Travel plans, legal issues, or educational pursuits complicate ${transit1House}th-${transit2House}th matters`,
-        `What you believe is right clashes with what's practical or necessary in the transit`,
-        `Foreign connections, publishing, or higher learning create additional transit stress`
-      );
-    } else {
-      manifestations.push(
-        `Your vision, optimism, and big-picture thinking help you navigate the transit wisely`,
-        `Travel, education, or legal matters open doors in the ${transit1House}th-${transit2House}th situation`,
-        `Your faith, beliefs, or philosophical approach provides meaning in the transit challenges`,
-        `Teaching, learning, or expanding horizons creates breakthrough opportunities`
-      );
-    }
-  }
-
-  // Natal 10th house activation - Career/public status activating
-  else if (natalHouse === 10) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Career demands or public reputation concerns override ${transit1House}th-${transit2House}th house needs`,
-        `Your boss, authority figures, or professional obligations block what the transit requires`,
-        `Public scandal, career setback, or reputation damage intersects with the transit events`,
-        `What's good for your career conflicts with what you need to do in other life areas right now`
-      );
-    } else {
-      manifestations.push(
-        `Career opportunities or public recognition arrive through navigating the transit well`,
-        `Your professional skills and public standing help you master the ${transit1House}th-${transit2House}th dynamics`,
-        `Authority figures or mentors provide crucial guidance for handling the transit`,
-        `The transit challenges position you for major career advancement or public success`
-      );
-    }
-  }
-
-  // Natal 11th house activation - Friendships/groups/hopes activating
-  else if (natalHouse === 11) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Friends will disappoint you or social groups will pressure you during this transit`,
-        `What your community wants conflicts with ${transit1House}th-${transit2House}th house realities`,
-        `Online drama, group politics, or friendship breakups add to transit stress`,
-        `Your hopes and dreams feel threatened by what's actually happening in the transit`
-      );
-    } else {
-      manifestations.push(
-        `Friends, community, or social networks provide incredible support through the transit`,
-        `Your vision for the future aligns perfectly with what the transit is teaching you`,
-        `Group collaboration or team efforts create solutions to ${transit1House}th-${transit2House}th challenges`,
-        `Technology, innovation, or networking opens unexpected doors during this time`
-      );
-    }
-  }
-
-  // Natal 12th house activation - Spirituality/hidden/subconscious activating
-  else if (natalHouse === 12) {
-    if (isNatalHard) {
-      manifestations.push(
-        `Hidden enemies, self-sabotage, or unconscious patterns undermine the transit situation`,
-        `Secrets come to light that complicate ${transit1House}th-${transit2House}th house matters`,
-        `Escapism, addiction, or avoidance makes the transit challenges worse`,
-        `What you don't see or acknowledge about yourself creates problems in handling this`
-      );
-    } else {
-      manifestations.push(
-        `Spiritual practices, meditation, or inner work provide guidance for the transit`,
-        `Intuitive insights or dreams reveal solutions to ${transit1House}th-${transit2House}th challenges`,
-        `Solitude, retreat, or quiet reflection helps you process the transit wisely`,
-        `Compassion, forgiveness, or letting go creates healing in the situation`
-      );
-    }
-  }
+  // --- Layer 4: House-specific real-life possibilities ---
+  const houseManifestations = getNatalHouseRealLifeManifestations(
+    natalPlanet, natalHouse, natalHouseInfo,
+    transit1Planet, transit1House,
+    transit2Planet, transit2House,
+    isNatalHard, isTransitHard
+  );
+  manifestations.push(...houseManifestations);
 
   return manifestations;
+}
+
+// Generate planet-pair-specific manifestations based on natal planet character + transit pair
+function getPlanetPairManifestations(
+  natalPlanet: string, natalHouse: number, natalHouseInfo: { domain: string; topics: string[] },
+  transit1Planet: string, transit1House: number, t1HouseInfo: { domain: string; topics: string[] },
+  transit2Planet: string, transit2House: number, t2HouseInfo: { domain: string; topics: string[] },
+  isNatalHard: boolean, isTransitHard: boolean,
+  transitPair: { theme: string; hardKeyword: string; softKeyword: string; domain: string }
+): string[] {
+  const results: string[] = [];
+  const nH = ordinal(natalHouse);
+  const t1H = ordinal(transit1House);
+  const t2H = ordinal(transit2House);
+
+  // Natal Sun activations
+  if (natalPlanet === 'Sun') {
+    if (isNatalHard) {
+      results.push(
+        `Your ego and life direction clash with ${transitPair.theme} — you may feel like the transit events personally attack who you are`,
+        `Leadership situations connected to your ${nH} house become a battleground — you're forced to defend your position or identity`,
+        `Authority figures or your own pride create obstacles in navigating ${transitPair.domain}`
+      );
+    } else {
+      results.push(
+        `Your vitality and life purpose align with ${transitPair.theme} — you naturally step into a leadership role in this situation`,
+        `Recognition or opportunities related to your ${nH} house emerge through the ${transit1Planet}-${transit2Planet} dynamic`,
+        `Your confidence and clarity of purpose help others around you navigate ${transitPair.domain} too`
+      );
+    }
+  }
+
+  // Natal Moon activations
+  else if (natalPlanet === 'Moon') {
+    if (isNatalHard) {
+      results.push(
+        `Emotional reactions and mood swings intensify around ${transitPair.theme} — your feelings run the show whether you want them to or not`,
+        `Home life, family needs, or your emotional state complicates how you handle the ${transit1Planet}-${transit2Planet} energy`,
+        `Old emotional patterns from childhood are triggered — you may react from a wounded place rather than responding maturely`
+      );
+    } else {
+      results.push(
+        `Your emotional intelligence and intuition guide you through ${transitPair.theme} — trust your gut feelings during this period`,
+        `Nurturing energy from your ${nH} house supports the ${transit1Planet}-${transit2Planet} dynamic — caregiving or receiving care helps`,
+        `Your ability to create emotional safety for yourself and others turns this transit into a healing experience`
+      );
+    }
+  }
+
+  // Natal Mercury activations
+  else if (natalPlanet === 'Mercury') {
+    if (isNatalHard) {
+      results.push(
+        `Mental stress, overthinking, or miscommunication creates problems in ${transitPair.domain}`,
+        `Important conversations, emails, or decisions connected to your ${nH} house go sideways during this transit`,
+        `Information you receive (or misunderstand) about ${t1HouseInfo.topics[0]} or ${t2HouseInfo.topics[0]} leads you astray`
+      );
+    } else {
+      results.push(
+        `Your communication skills and analytical mind are your greatest assets in navigating ${transitPair.theme}`,
+        `A key conversation, document, or piece of information connected to your ${nH} house unlocks the transit's potential`,
+        `Writing, teaching, learning, or networking related to ${transitPair.domain} brings excellent results`
+      );
+    }
+  }
+
+  // Natal Venus activations
+  else if (natalPlanet === 'Venus') {
+    if (isNatalHard) {
+      results.push(
+        `Relationship dynamics or financial matters connected to your ${nH} house create friction with ${transitPair.theme}`,
+        `What you want for pleasure, love, or comfort conflicts with what the ${transit1Planet}-${transit2Planet} transit demands`,
+        `You may need to choose between keeping the peace and doing what the situation actually requires`
+      );
+    } else {
+      results.push(
+        `Love, beauty, or financial opportunities from your ${nH} house enhance ${transitPair.theme} beautifully`,
+        `Your social grace, charm, and diplomatic skills smooth over any rough edges in the ${transit1Planet}-${transit2Planet} dynamic`,
+        `Relationships or creative pursuits connected to ${transitPair.domain} bring genuine pleasure and reward`
+      );
+    }
+  }
+
+  // Natal Mars activations
+  else if (natalPlanet === 'Mars') {
+    if (isNatalHard) {
+      results.push(
+        `Anger, impatience, or aggressive action connected to your ${nH} house intensifies ${transitPair.theme}`,
+        `You're compelled to act forcefully but the timing or approach backfires — impulsive decisions around ${transitPair.domain} cause problems`,
+        `Conflicts, competition, or physical stress from your ${nH} house life area bleeds into the ${transit1Planet}-${transit2Planet} situation`
+      );
+    } else {
+      results.push(
+        `Your drive, courage, and initiative from the ${nH} house energize ${transitPair.theme} — you take decisive action that moves things forward`,
+        `Physical energy, competitive spirit, or entrepreneurial drive gives you an edge in ${transitPair.domain}`,
+        `Bold moves connected to ${natalHouseInfo.topics[0]} or ${natalHouseInfo.topics[1]} produce winning results during this transit`
+      );
+    }
+  }
+
+  // Natal Jupiter activations
+  else if (natalPlanet === 'Jupiter') {
+    if (isNatalHard) {
+      results.push(
+        `Overconfidence, excess, or poor judgment from your ${nH} house area exaggerates ${transitPair.theme}`,
+        `You take on too much, promise too much, or expect too much from the ${transit1Planet}-${transit2Planet} situation`,
+        `Beliefs or principles connected to ${natalHouseInfo.domain} clash with the practical realities of this transit`
+      );
+    } else {
+      results.push(
+        `Natural luck and expansion from your ${nH} house amplify the best of ${transitPair.theme}`,
+        `Growth opportunities, generosity, or wisdom connected to ${natalHouseInfo.domain} enhance ${transitPair.domain}`,
+        `Your optimism and faith attract fortunate outcomes — the ${transit1Planet}-${transit2Planet} transit delivers more than expected`
+      );
+    }
+  }
+
+  // Natal Saturn activations
+  else if (natalPlanet === 'Saturn') {
+    if (isNatalHard) {
+      results.push(
+        `Heavy responsibilities, delays, or fears from your ${nH} house weigh down ${transitPair.theme}`,
+        `Rules, restrictions, or authority figures connected to ${natalHouseInfo.domain} block progress in the ${transit1Planet}-${transit2Planet} situation`,
+        `You feel the weight of duty and may have to sacrifice something in ${transitPair.domain} for long-term stability`
+      );
+    } else {
+      results.push(
+        `Your discipline, patience, and life experience from the ${nH} house provide the structure to master ${transitPair.theme}`,
+        `Mature, strategic planning connected to ${natalHouseInfo.domain} turns the ${transit1Planet}-${transit2Planet} transit into lasting achievement`,
+        `Time and persistence are on your side — slow, steady effort in ${transitPair.domain} pays off handsomely`
+      );
+    }
+  }
+
+  // Natal Uranus activations
+  else if (natalPlanet === 'Uranus') {
+    if (isNatalHard) {
+      results.push(
+        `Sudden disruptions, rebellious impulses, or chaotic energy from your ${nH} house destabilize ${transitPair.theme}`,
+        `Your need for freedom or unconventional approach to ${natalHouseInfo.domain} creates unpredictability in the ${transit1Planet}-${transit2Planet} dynamic`,
+        `Expect the unexpected — technology failures, sudden reversals, or shocking developments connected to your ${nH} house`
+      );
+    } else {
+      results.push(
+        `Brilliant insights, innovative solutions, or exciting breakthroughs from your ${nH} house revolutionize ${transitPair.theme}`,
+        `Your unique perspective on ${natalHouseInfo.domain} provides the unconventional answer to the ${transit1Planet}-${transit2Planet} situation`,
+        `Technology, networking, or progressive thinking connected to your ${nH} house creates quantum leaps in ${transitPair.domain}`
+      );
+    }
+  }
+
+  // Natal Neptune activations
+  else if (natalPlanet === 'Neptune') {
+    if (isNatalHard) {
+      results.push(
+        `Confusion, idealism, or escapist tendencies from your ${nH} house cloud your judgment about ${transitPair.theme}`,
+        `Boundaries dissolve unhelpfully — you may lose track of reality in ${transitPair.domain} or be deceived about ${natalHouseInfo.topics[0]}`,
+        `Addiction, avoidance, or martyrdom patterns connected to your ${nH} house undermine the ${transit1Planet}-${transit2Planet} transit`
+      );
+    } else {
+      results.push(
+        `Spiritual insight, creative vision, or compassion from your ${nH} house elevates ${transitPair.theme} to a higher level`,
+        `Your intuition about ${natalHouseInfo.domain} provides almost psychic guidance through the ${transit1Planet}-${transit2Planet} dynamic`,
+        `Art, music, healing, or spiritual practice connected to your ${nH} house transforms ${transitPair.domain} beautifully`
+      );
+    }
+  }
+
+  // Natal Pluto activations
+  else if (natalPlanet === 'Pluto') {
+    if (isNatalHard) {
+      results.push(
+        `Intense power dynamics, obsessive patterns, or control issues from your ${nH} house dominate ${transitPair.theme}`,
+        `Deep psychological material connected to ${natalHouseInfo.domain} surfaces and complicates the ${transit1Planet}-${transit2Planet} situation`,
+        `You may experience a death-and-rebirth cycle where something in your ${nH} house must be destroyed before the transit can resolve`
+      );
+    } else {
+      results.push(
+        `Transformative power from your ${nH} house gives you extraordinary leverage in ${transitPair.theme}`,
+        `Your psychological depth and resilience connected to ${natalHouseInfo.domain} turns the ${transit1Planet}-${transit2Planet} transit into profound growth`,
+        `You have the power to completely transform ${transitPair.domain} — this is a phoenix-from-the-ashes moment`
+      );
+    }
+  }
+
+  // Natal North Node activations
+  else if (natalPlanet === 'North Node') {
+    if (isNatalHard) {
+      results.push(
+        `Your soul's growth direction creates uncomfortable friction with ${transitPair.theme} — you're being pushed toward unfamiliar territory`,
+        `The ${transit1Planet}-${transit2Planet} transit forces karmic growth in your ${nH} house — it feels destined but difficult`,
+        `Resistance to your life path makes the transit harder — surrendering to the growth is the way through`
+      );
+    } else {
+      results.push(
+        `This transit feels FATED — the ${transit1Planet}-${transit2Planet} dynamic activates your soul's intended direction`,
+        `Destiny-level opportunities connected to your ${nH} house emerge through ${transitPair.theme}`,
+        `You're exactly where you're supposed to be — the universe is conspiring to move you forward through ${transitPair.domain}`
+      );
+    }
+  }
+
+  // Natal South Node activations
+  else if (natalPlanet === 'South Node') {
+    if (isNatalHard) {
+      results.push(
+        `Past-life patterns or comfort zone habits from your ${nH} house are forcibly disrupted by ${transitPair.theme}`,
+        `You're clinging to old ways of handling ${natalHouseInfo.domain} but the ${transit1Planet}-${transit2Planet} transit demands you let go`,
+        `Karmic debts or unfinished past-life business connected to your ${nH} house must be settled now`
+      );
+    } else {
+      results.push(
+        `Past-life mastery and accumulated soul wisdom from your ${nH} house support you through ${transitPair.theme}`,
+        `Skills and talents you've honed over lifetimes connected to ${natalHouseInfo.domain} serve you well in ${transitPair.domain}`,
+        `You can gracefully release what no longer serves you in your ${nH} house while benefiting from the transit`
+      );
+    }
+  }
+
+  return results;
+}
+
+// Generate house-specific real-life manifestation possibilities
+function getNatalHouseRealLifeManifestations(
+  natalPlanet: string, natalHouse: number, natalHouseInfo: { domain: string; topics: string[] },
+  transit1Planet: string, transit1House: number,
+  transit2Planet: string, transit2House: number,
+  isNatalHard: boolean, isTransitHard: boolean
+): string[] {
+  const results: string[] = [];
+  const nH = ordinal(natalHouse);
+  const t1HouseInfo = getHouseManifestations(transit1House);
+  const t2HouseInfo = getHouseManifestations(transit2House);
+
+  // Pick 2-3 concrete real-life possibilities based on natal house + transit houses combination
+  // These bridge the abstract astrology into "what might actually happen"
+
+  const bothHard = isNatalHard && isTransitHard;
+  const bothSoft = !isNatalHard && !isTransitHard;
+  const mixed = !bothHard && !bothSoft;
+
+  // Real-life manifestation sentences based on natal house
+  if (natalHouse === 1) {
+    if (isNatalHard) {
+      results.push(
+        `You may need to completely reinvent your personal image or approach to handle what's unfolding in your ${ordinal(transit1House)} and ${ordinal(transit2House)} house areas`,
+        `Physical symptoms like headaches, skin issues, or energy changes reflect the internal identity struggle`,
+        `Others may not recognize the "new you" that this transit is forging — expect some resistance from people used to the old version`
+      );
+    } else {
+      results.push(
+        `A new look, personal brand refresh, or physical transformation enhances your ability to handle ${t1HouseInfo.topics[0]} and ${t2HouseInfo.topics[0]}`,
+        `Your natural charisma and presence open doors — people are drawn to help you with ${t1HouseInfo.domain} matters`,
+        `Starting a new personal initiative or project that bridges your ${ordinal(transit1House)} and ${ordinal(transit2House)} house themes brings success`
+      );
+    }
+  } else if (natalHouse === 2) {
+    if (isNatalHard) {
+      results.push(
+        `Unexpected expenses or financial pressure related to ${t1HouseInfo.topics[0]} or ${t2HouseInfo.topics[0]} force tough budget decisions`,
+        `Your self-worth takes a hit — you may question whether you're "enough" to handle this situation`,
+        `A possession, asset, or skill you relied on may prove insufficient for the current challenges`
+      );
+    } else {
+      results.push(
+        `A raise, bonus, new income stream, or valuable opportunity emerges from the ${transit1Planet}-${transit2Planet} dynamic`,
+        `Your existing skills and resources are exactly what's needed — monetize or leverage them now`,
+        `Investing in yourself (courses, tools, health) pays dividends in handling ${t1HouseInfo.domain} and ${t2HouseInfo.domain}`
+      );
+    }
+  } else if (natalHouse === 3) {
+    if (isNatalHard) {
+      results.push(
+        `A text, email, social media post, or conversation about ${t1HouseInfo.topics[0]} spirals into conflict`,
+        `Sibling or neighbor drama intersects with your ${ordinal(transit1House)}-${ordinal(transit2House)} house situation`,
+        `Information overload or contradictory advice about ${t2HouseInfo.topics[0]} leads to analysis paralysis`
+      );
+    } else {
+      results.push(
+        `The right information, book, podcast, or conversation arrives exactly when you need it for ${t1HouseInfo.topics[0]}`,
+        `A short trip, local connection, or sibling/neighbor interaction catalyzes positive change in your ${ordinal(transit1House)} house area`,
+        `Writing, teaching, or sharing knowledge about ${t2HouseInfo.domain} attracts recognition and opportunity`
+      );
+    }
+  } else if (natalHouse === 4) {
+    if (isNatalHard) {
+      results.push(
+        `A parent, family member, or home issue demands attention right when ${t1HouseInfo.topics[0]} and ${t2HouseInfo.topics[0]} need you most`,
+        `Moving, renovation problems, or living situation instability disrupts your ability to focus on the transit`,
+        `Childhood memories or family patterns surface and color how you react to ${t1HouseInfo.domain} situations`
+      );
+    } else {
+      results.push(
+        `Working from home, a family gathering, or domestic comfort provides the perfect base for handling ${t1HouseInfo.topics[0]}`,
+        `A real estate opportunity, home improvement, or family support system helps with ${t2HouseInfo.domain} matters`,
+        `Creating a peaceful, organized home environment amplifies your ability to succeed in your ${ordinal(transit1House)} and ${ordinal(transit2House)} house areas`
+      );
+    }
+  } else if (natalHouse === 5) {
+    if (isNatalHard) {
+      results.push(
+        `A romantic situation, child-related issue, or creative block distracts from handling ${t1HouseInfo.topics[0]}`,
+        `Your desire for fun and self-expression conflicts with the serious demands of ${t2HouseInfo.domain}`,
+        `Risk-taking or gambling (literal or figurative) connected to ${t1HouseInfo.topics[0]} backfires during this transit`
+      );
+    } else {
+      results.push(
+        `A creative project, romantic connection, or joyful experience provides the breakthrough you need in ${t1HouseInfo.domain}`,
+        `Children, artistic endeavors, or recreational activities bring unexpected solutions to ${t2HouseInfo.topics[0]} challenges`,
+        `Following your passion and authentic self-expression naturally resolves tension in your ${ordinal(transit1House)}-${ordinal(transit2House)} house dynamic`
+      );
+    }
+  } else if (natalHouse === 6) {
+    if (isNatalHard) {
+      results.push(
+        `Work deadlines, health flare-ups, or daily routine disruptions interfere with addressing ${t1HouseInfo.topics[0]}`,
+        `A coworker conflict, job stress, or health concern demands immediate attention during the transit period`,
+        `Perfectionism or overwork connected to ${natalHouseInfo.topics[0]} exhausts you before you can deal with ${t2HouseInfo.domain}`
+      );
+    } else {
+      results.push(
+        `Improving your daily routine, diet, or exercise regimen gives you the stamina to master ${t1HouseInfo.domain} challenges`,
+        `A work project or service opportunity connects you to helpful people in your ${ordinal(transit2House)} house area`,
+        `Your practical, detail-oriented approach to ${natalHouseInfo.topics[0]} creates efficient solutions for ${t2HouseInfo.topics[0]}`
+      );
+    }
+  } else if (natalHouse === 7) {
+    if (isNatalHard) {
+      results.push(
+        `Your partner's needs or a relationship conflict directly impacts your ability to handle ${t1HouseInfo.topics[0]}`,
+        `A contract negotiation, legal matter, or counseling situation connected to ${t2HouseInfo.domain} stalls or turns adversarial`,
+        `You may need to choose between maintaining a relationship and doing what the ${transit1Planet}-${transit2Planet} transit requires`
+      );
+    } else {
+      results.push(
+        `Your partner, a close collaborator, or a skilled advisor provides the exact support needed for ${t1HouseInfo.domain} matters`,
+        `A new partnership or strengthened existing relationship creates synergy in your ${ordinal(transit1House)}-${ordinal(transit2House)} house areas`,
+        `Seeking professional counsel — therapist, lawyer, consultant, or coach — unlocks the transit's highest potential`
+      );
+    }
+  } else if (natalHouse === 8) {
+    if (isNatalHard) {
+      results.push(
+        `A tax bill, debt payment, insurance claim, or inheritance dispute complicates ${t1HouseInfo.topics[0]} and ${t2HouseInfo.topics[0]}`,
+        `Power struggles over shared money, sexual dynamics, or emotional control intensify the transit pressure`,
+        `Deep fears about loss, betrayal, or vulnerability surface and must be confronted before the transit can resolve`
+      );
+    } else {
+      results.push(
+        `An inheritance, loan approval, partner's income boost, or investment return provides resources for ${t1HouseInfo.domain}`,
+        `Therapy, shadow work, or deep self-honesty unlocks transformative insight for handling ${t2HouseInfo.topics[0]}`,
+        `Merging resources with someone — financially, creatively, or emotionally — creates powerful leverage in the ${transit1Planet}-${transit2Planet} situation`
+      );
+    }
+  } else if (natalHouse === 9) {
+    if (isNatalHard) {
+      results.push(
+        `Travel complications, visa issues, or being far from home interferes with handling ${t1HouseInfo.topics[0]}`,
+        `A legal dispute, academic challenge, or clash of beliefs connected to ${t2HouseInfo.domain} demands resolution`,
+        `Your worldview or philosophical stance puts you at odds with people involved in the ${transit1Planet}-${transit2Planet} dynamic`
+      );
+    } else {
+      results.push(
+        `A trip abroad, online course, or encounter with a different culture opens your mind to solving ${t1HouseInfo.topics[0]} challenges`,
+        `Legal proceedings, academic achievements, or publishing opportunities connected to ${t2HouseInfo.domain} go in your favor`,
+        `A mentor, teacher, or spiritual guide appears with exactly the wisdom you need for navigating this transit`
+      );
+    }
+  } else if (natalHouse === 10) {
+    if (isNatalHard) {
+      results.push(
+        `Career pressure, a demanding boss, or public scrutiny pulls your energy from ${t1HouseInfo.topics[0]} and ${t2HouseInfo.topics[0]}`,
+        `Your professional reputation is on the line — mistakes in ${t1HouseInfo.domain} could have lasting career consequences`,
+        `The tension between career ambition and ${t2HouseInfo.domain} demands forces a difficult prioritization`
+      );
+    } else {
+      results.push(
+        `A promotion, public recognition, or career milestone emerges through how you handle the ${transit1Planet}-${transit2Planet} dynamic`,
+        `Your professional network or authority position gives you leverage in dealing with ${t1HouseInfo.topics[0]}`,
+        `Career success and handling ${t2HouseInfo.domain} reinforce each other — winning at one helps win at the other`
+      );
+    }
+  } else if (natalHouse === 11) {
+    if (isNatalHard) {
+      results.push(
+        `Friend group drama, social media conflict, or community politics complicates ${t1HouseInfo.topics[0]}`,
+        `Your hopes for the future feel threatened by the current reality of ${t2HouseInfo.domain}`,
+        `A group project, organization, or team effort connected to the transit falls apart or creates unexpected stress`
+      );
+    } else {
+      results.push(
+        `A friend, online community, or professional network provides the connection you need for ${t1HouseInfo.topics[0]}`,
+        `Crowdfunding, community support, or team collaboration creates solutions for ${t2HouseInfo.domain} challenges`,
+        `Your vision for the future aligns with the ${transit1Planet}-${transit2Planet} energy — long-term goals get a major boost`
+      );
+    }
+  } else if (natalHouse === 12) {
+    if (isNatalHard) {
+      results.push(
+        `Unconscious self-sabotage, hidden anxieties, or past trauma patterns undermine your handling of ${t1HouseInfo.topics[0]}`,
+        `Something you can't see or don't want to face about yourself is the real obstacle in ${t2HouseInfo.domain}`,
+        `Isolation, hospital visits, or retreating from the world may be forced upon you during this transit period`
+      );
+    } else {
+      results.push(
+        `Meditation, journaling, therapy, or spiritual practice reveals the hidden key to mastering ${t1HouseInfo.domain}`,
+        `Working behind the scenes, in solitude, or through compassionate service creates breakthroughs in ${t2HouseInfo.topics[0]}`,
+        `Dreams, synchronicities, or intuitive flashes guide you toward the perfect response to the ${transit1Planet}-${transit2Planet} transit`
+      );
+    }
+  }
+
+  return results;
 }

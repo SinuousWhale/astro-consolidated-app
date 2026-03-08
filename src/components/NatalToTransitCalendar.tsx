@@ -402,6 +402,76 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
         }
       }
 
+      // For any natal-to-transit activation involving a node, generate the companion entry
+      // e.g. if natal Mercury sextile (Mars opp South Node) exists, also show Mercury trine (Mars conj North Node)
+      const COMPLEMENT_ASPECT_MAP: Record<string, string> = {
+        'Conjunction': 'Opposition', 'Opposition': 'Conjunction',
+        'Trine': 'Sextile', 'Sextile': 'Trine',
+        'Square': 'Square'
+      };
+
+      const nodeCompanionActivations: typeof natalToTransitAspects = [];
+      for (const activation of natalToTransitAspects) {
+        const ta = activation.transitAspect;
+        const t1IsNode = ta.transit1.name === 'North Node' || ta.transit1.name === 'South Node';
+        const t2IsNode = ta.transit2.name === 'North Node' || ta.transit2.name === 'South Node';
+        if (!t1IsNode && !t2IsNode) continue;
+
+        // Get the complement transit aspect name (conj↔opp, trine↔sextile, square↔square)
+        const complementTransitAspectName = COMPLEMENT_ASPECT_MAP[ta.aspect.name];
+        if (!complementTransitAspectName) continue;
+        const complementTransitAspectType = ASPECT_TYPES.find(a => a.name === complementTransitAspectName);
+        if (!complementTransitAspectType) continue;
+
+        // Get the complement natal aspect name
+        const complementNatalAspectName = COMPLEMENT_ASPECT_MAP[activation.aspect.name];
+        if (!complementNatalAspectName) continue;
+        const complementNatalAspectType = ASPECT_TYPES.find(a => a.name === complementNatalAspectName);
+        if (!complementNatalAspectType) continue;
+
+        // Find the other node
+        const nodeInAspect = t1IsNode ? ta.transit1 : ta.transit2;
+        const nonNode = t1IsNode ? ta.transit2 : ta.transit1;
+        const otherNodeName = nodeInAspect.name === 'North Node' ? 'South Node' : 'North Node';
+        const otherNode = transitPlanetsWithHouses.find(p => p.name === otherNodeName);
+        if (!otherNode) continue;
+
+        // Check this companion doesn't already exist
+        const alreadyExists = natalToTransitAspects.some(existing =>
+          existing.natal.name === activation.natal.name &&
+          ((existing.transitAspect.transit1.name === nonNode.name && existing.transitAspect.transit2.name === otherNodeName) ||
+           (existing.transitAspect.transit1.name === otherNodeName && existing.transitAspect.transit2.name === nonNode.name)) &&
+          existing.transitAspect.aspect.name === complementTransitAspectName
+        ) || nodeCompanionActivations.some(existing =>
+          existing.natal.name === activation.natal.name &&
+          ((existing.transitAspect.transit1.name === nonNode.name && existing.transitAspect.transit2.name === otherNodeName) ||
+           (existing.transitAspect.transit1.name === otherNodeName && existing.transitAspect.transit2.name === nonNode.name)) &&
+          existing.transitAspect.aspect.name === complementTransitAspectName
+        );
+        if (alreadyExists) continue;
+
+        // Calculate orbs for the companion
+        const transitOrbDiff = Math.abs(getAngularDifference(nonNode.longitude, otherNode.longitude) - complementTransitAspectType.angle);
+        const natalOrbDiff = activation.aspect.actualOrb; // Similar orb since nodes are exactly opposite
+
+        nodeCompanionActivations.push({
+          natal: activation.natal,
+          transitAspect: {
+            transit1: nonNode,
+            transit2: otherNode,
+            aspect: {
+              ...complementTransitAspectType,
+              actualOrb: transitOrbDiff
+            }
+          },
+          aspect: {
+            ...complementNatalAspectType,
+            actualOrb: natalOrbDiff
+          }
+        });
+      }
+      natalToTransitAspects.push(...nodeCompanionActivations);
+
       // Sort by planet speed (fastest to slowest: Moon, Sun, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, Nodes)
       natalToTransitAspects.sort((a, b) => {
         const speedA = PLANET_SPEED_ORDER[a.natal.name] || 99;
@@ -608,13 +678,13 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
             >
               <div
                 style={{
-                  fontSize: '18px',
+                  fontSize: '14px',
                   fontWeight: 'bold',
                   marginBottom: '8px',
                   color: isToday ? '#2ecc71' : '#333'
                 }}
               >
-                {day.date.getDate()}
+                {day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
               </div>
 
               {day.aspects.length > 0 ? (
