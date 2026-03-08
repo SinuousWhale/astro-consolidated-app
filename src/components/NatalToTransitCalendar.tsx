@@ -2,8 +2,8 @@ import React, { useState, useMemo } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { calculatePlanetaryPositions, calculateAscendant } from '../utils/ephemeris';
-import { getNatalActivationManifestations, generateDailySummary } from '../utils/aspectInterpretations';
-import type { DailySummary } from '../utils/aspectInterpretations';
+import { getNatalActivationManifestations, generateDailySummary, generateWeeklySummary } from '../utils/aspectInterpretations';
+import type { DailySummary, WeeklySummary } from '../utils/aspectInterpretations';
 
 interface NatalToTransitCalendarProps {
   natalDate: Date;
@@ -264,6 +264,7 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
   const [expandedDayIndex, setExpandedDayIndex] = useState<number | null>(null);
   const [expandedAspectIndex, setExpandedAspectIndex] = useState<{day: number, aspect: number} | null>(null);
   const [dailyBriefingIndex, setDailyBriefingIndex] = useState<number | null>(null);
+  const [showWeeklyBriefing, setShowWeeklyBriefing] = useState(false);
 
   // Convert natal date to UTC accounting for birth location timezone
   // Same logic as SimpleWheelFixed
@@ -637,7 +638,260 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
         >
           Next Week →
         </button>
+        <button
+          onClick={() => {
+            setShowWeeklyBriefing(!showWeeklyBriefing);
+            setDailyBriefingIndex(null);
+            setExpandedAspectIndex(null);
+          }}
+          style={{
+            padding: '10px 20px',
+            fontSize: '14px',
+            fontWeight: 'bold',
+            backgroundColor: showWeeklyBriefing ? '#1a237e' : '#7c4dff',
+            color: 'white',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            letterSpacing: '0.5px'
+          }}
+        >
+          Weekly Briefing
+        </button>
       </div>
+
+      {/* Weekly Briefing Panel */}
+      {showWeeklyBriefing && weeklyAspects.length > 0 && (() => {
+        const weeklyInput = weeklyAspects.map((day: any) => ({
+          date: day.date,
+          activations: day.aspects.map((a: any) => ({
+            natalPlanet: a.natal.name,
+            natalHouse: a.natal.house,
+            transit1Planet: a.transitAspect.transit1.name,
+            transit1House: a.transitAspect.transit1.house,
+            transit2Planet: a.transitAspect.transit2.name,
+            transit2House: a.transitAspect.transit2.house,
+            natalAspectType: a.aspect.name,
+            transitAspectType: a.transitAspect.aspect.name,
+            orb: a.aspect.actualOrb
+          }))
+        }));
+        const ws = generateWeeklySummary(weeklyInput);
+
+        const intensityColorMap: Record<string, string> = {
+          'Quiet': '#66bb6a', 'Active': '#42a5f5', 'Intense': '#ffa726', 'Pivotal': '#ef5350'
+        };
+
+        return (
+          <div style={{
+            marginBottom: '25px',
+            padding: '25px',
+            backgroundColor: '#fafafa',
+            borderRadius: '12px',
+            border: '3px solid #7c4dff',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          }}>
+            {/* Header */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px' }}>
+              <div>
+                <h3 style={{ margin: 0, color: '#4a148c', fontSize: '20px' }}>
+                  Weekly Cosmic Briefing
+                </h3>
+                <div style={{ fontSize: '14px', color: '#666', marginTop: '4px' }}>
+                  {weeklyAspects[0].date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })} — {weeklyAspects[6].date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                </div>
+              </div>
+              <button
+                onClick={() => setShowWeeklyBriefing(false)}
+                style={{
+                  padding: '6px 16px',
+                  backgroundColor: '#666',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '5px',
+                  cursor: 'pointer',
+                  fontSize: '13px'
+                }}
+              >
+                Close
+              </button>
+            </div>
+
+            {/* Overview */}
+            <div style={{
+              padding: '14px 16px',
+              backgroundColor: '#ede7f6',
+              borderRadius: '8px',
+              border: '1px solid #b39ddb',
+              marginBottom: '20px',
+              fontSize: '14px',
+              lineHeight: '1.6',
+              color: '#4a148c'
+            }}>
+              {ws.overview}
+            </div>
+
+            {/* Intensity Timeline */}
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
+                Weekly Intensity Timeline
+              </h4>
+              <div style={{ display: 'flex', gap: '6px', alignItems: 'flex-end' }}>
+                {ws.dailyIntensities.map((d, i) => (
+                  <div key={i} style={{ flex: 1, textAlign: 'center' }}>
+                    <div style={{
+                      height: `${Math.max(d.intensityScore * 18, 8)}px`,
+                      backgroundColor: intensityColorMap[d.intensity],
+                      borderRadius: '4px 4px 0 0',
+                      transition: 'height 0.3s',
+                      marginBottom: '4px',
+                      position: 'relative'
+                    }}>
+                      {d.activationCount > 0 && (
+                        <div style={{
+                          position: 'absolute',
+                          top: '-18px',
+                          left: '50%',
+                          transform: 'translateX(-50%)',
+                          fontSize: '11px',
+                          fontWeight: 'bold',
+                          color: intensityColorMap[d.intensity]
+                        }}>
+                          {d.activationCount}
+                        </div>
+                      )}
+                    </div>
+                    <div style={{ fontSize: '11px', fontWeight: '600', color: '#555' }}>
+                      {d.dayName.slice(0, 3)}
+                    </div>
+                    <div style={{ fontSize: '10px', color: '#999' }}>
+                      {d.dateLabel}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '8px', fontSize: '12px', color: '#777' }}>
+                <span>Peak: <strong style={{ color: '#e65100' }}>{ws.peakDay.dayName}</strong></span>
+                <span>Rest: <strong style={{ color: '#2e7d32' }}>{ws.restDay.dayName}</strong></span>
+              </div>
+            </div>
+
+            {/* Major Themes */}
+            {ws.majorThemes.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
+                  Major Themes This Week
+                </h4>
+                {ws.majorThemes.map((theme, i) => (
+                  <div key={i} style={{
+                    padding: '12px 16px',
+                    backgroundColor: 'white',
+                    borderRadius: '8px',
+                    border: '1px solid #e0e0e0',
+                    marginBottom: '8px',
+                    borderLeft: `4px solid ${theme.hardCount > theme.softCount ? '#ff9800' : theme.softCount > theme.hardCount ? '#4caf50' : '#7c4dff'}`
+                  }}>
+                    <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#333', marginBottom: '4px' }}>
+                      {theme.transitPair} — {theme.theme}
+                      <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                        {theme.daysActive} day{theme.daysActive > 1 ? 's' : ''} active
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
+                      {theme.summary}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Houses Under the Spotlight */}
+            {ws.houseSpotlights.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
+                  Houses Under the Spotlight
+                </h4>
+                {ws.houseSpotlights.map((h, i) => (
+                  <div key={i} style={{
+                    padding: '12px 16px',
+                    backgroundColor: 'white',
+                    borderRadius: '8px',
+                    border: '1px solid #e0e0e0',
+                    marginBottom: '8px'
+                  }}>
+                    <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#1a237e', marginBottom: '4px' }}>
+                      {h.house}{['th','st','nd','rd'][h.house % 100 > 3 && h.house % 100 < 21 ? 0 : h.house % 10 > 3 ? 0 : h.house % 10] || 'th'} House — {h.domain.charAt(0).toUpperCase() + h.domain.slice(1)}
+                      <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
+                        {h.totalActivations} activation{h.totalActivations > 1 ? 's' : ''} • {h.natalPlanets.join(', ')}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
+                      {h.arc}
+                    </div>
+                    <div style={{ display: 'flex', gap: '10px', marginTop: '6px', fontSize: '12px' }}>
+                      {h.hardCount > 0 && <span style={{ color: '#e65100' }}>{h.hardCount} challenging</span>}
+                      {h.softCount > 0 && <span style={{ color: '#2e7d32' }}>{h.softCount} supportive</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Biggest Challenge & Opportunity side by side */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
+              <div style={{
+                padding: '14px 16px',
+                backgroundColor: '#fff3e0',
+                borderRadius: '8px',
+                border: '1px solid #ffcc80'
+              }}>
+                <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#e65100' }}>
+                  Week's Biggest Challenge
+                </h4>
+                <div style={{ fontSize: '13px', color: '#bf360c', lineHeight: '1.6' }}>
+                  {ws.biggestChallenge}
+                </div>
+              </div>
+              <div style={{
+                padding: '14px 16px',
+                backgroundColor: '#e8f5e9',
+                borderRadius: '8px',
+                border: '1px solid #a5d6a7'
+              }}>
+                <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#2e7d32' }}>
+                  Week's Biggest Opportunity
+                </h4>
+                <div style={{ fontSize: '13px', color: '#1b5e20', lineHeight: '1.6' }}>
+                  {ws.biggestOpportunity}
+                </div>
+              </div>
+            </div>
+
+            {/* Weekly Action Plan */}
+            <div style={{
+              padding: '16px',
+              backgroundColor: '#e8eaf6',
+              borderRadius: '8px',
+              border: '2px solid #5c6bc0'
+            }}>
+              <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#283593' }}>
+                Weekly Action Plan
+              </h4>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <div style={{ fontSize: '13px', lineHeight: '1.6', color: '#1a237e' }}>
+                  <strong style={{ color: '#283593' }}>Mon–Wed:</strong> {ws.actionPlan.earlyWeek}
+                </div>
+                <div style={{ fontSize: '13px', lineHeight: '1.6', color: '#1a237e' }}>
+                  <strong style={{ color: '#283593' }}>Thu–Fri:</strong> {ws.actionPlan.midWeek}
+                </div>
+                <div style={{ fontSize: '13px', lineHeight: '1.6', color: '#1a237e' }}>
+                  <strong style={{ color: '#283593' }}>Weekend:</strong> {ws.actionPlan.weekend}
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Calendar Grid */}
       <div style={{

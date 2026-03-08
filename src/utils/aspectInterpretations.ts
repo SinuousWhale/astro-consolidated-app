@@ -9999,3 +9999,261 @@ export function generateDailySummary(activations: DailyActivation[]): DailySumma
     topFocus
   };
 }
+
+// ============================================================
+// WEEKLY COSMIC BRIEFING GENERATOR
+// ============================================================
+
+interface WeeklyDayInput {
+  date: Date;
+  activations: DailyActivation[];
+}
+
+export interface WeeklyDayIntensity {
+  dayName: string;
+  dateLabel: string;
+  intensity: DailySummary['intensity'];
+  intensityScore: number;
+  activationCount: number;
+}
+
+interface WeeklyTheme {
+  transitPair: string;
+  theme: string;
+  daysActive: number;
+  housesActivated: number[];
+  hardCount: number;
+  softCount: number;
+  summary: string;
+}
+
+interface WeeklyHouseSpotlight {
+  house: number;
+  domain: string;
+  totalActivations: number;
+  natalPlanets: string[];
+  hardCount: number;
+  softCount: number;
+  arc: string;
+}
+
+export interface WeeklySummary {
+  overview: string;
+  dailyIntensities: WeeklyDayIntensity[];
+  peakDay: { dayName: string; dateLabel: string; score: number };
+  restDay: { dayName: string; dateLabel: string; score: number };
+  majorThemes: WeeklyTheme[];
+  houseSpotlights: WeeklyHouseSpotlight[];
+  biggestChallenge: string;
+  biggestOpportunity: string;
+  actionPlan: { earlyWeek: string; midWeek: string; weekend: string };
+}
+
+export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
+  const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  const hardAspects = ['Square', 'Opposition'];
+
+  // Generate daily summaries for intensity data
+  const dailySummaries = days.map(d => generateDailySummary(d.activations));
+
+  // --- Daily intensities ---
+  const dailyIntensities: WeeklyDayIntensity[] = days.map((d, i) => ({
+    dayName: dayNames[i] || d.date.toLocaleDateString('en-US', { weekday: 'long' }),
+    dateLabel: d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+    intensity: dailySummaries[i].intensity,
+    intensityScore: dailySummaries[i].intensityScore,
+    activationCount: d.activations.length
+  }));
+
+  // Peak and rest days
+  const sorted = [...dailyIntensities].sort((a, b) => b.intensityScore - a.intensityScore || b.activationCount - a.activationCount);
+  const peakDay = { dayName: sorted[0].dayName, dateLabel: sorted[0].dateLabel, score: sorted[0].intensityScore };
+  const restSorted = [...dailyIntensities].sort((a, b) => a.intensityScore - b.intensityScore || a.activationCount - b.activationCount);
+  const restDay = { dayName: restSorted[0].dayName, dateLabel: restSorted[0].dateLabel, score: restSorted[0].intensityScore };
+
+  // --- All activations flattened with day index ---
+  const allActivations: (DailyActivation & { dayIdx: number })[] = [];
+  days.forEach((d, i) => {
+    d.activations.forEach(a => allActivations.push({ ...a, dayIdx: i }));
+  });
+
+  const totalActivations = allActivations.length;
+  const totalHard = allActivations.filter(a => hardAspects.includes(a.natalAspectType)).length;
+
+  // --- Major themes (transit pairs across the week) ---
+  const transitPairMap: Record<string, { days: Set<number>; houses: Set<number>; hard: number; soft: number }> = {};
+  for (const act of allActivations) {
+    const key = [act.transit1Planet, act.transit2Planet].sort().join('-');
+    if (!transitPairMap[key]) {
+      transitPairMap[key] = { days: new Set(), houses: new Set(), hard: 0, soft: 0 };
+    }
+    transitPairMap[key].days.add(act.dayIdx);
+    transitPairMap[key].houses.add(act.natalHouse);
+    if (hardAspects.includes(act.natalAspectType)) {
+      transitPairMap[key].hard++;
+    } else {
+      transitPairMap[key].soft++;
+    }
+  }
+
+  const majorThemes: WeeklyTheme[] = Object.entries(transitPairMap)
+    .map(([pair, data]) => {
+      const pairTheme = getTransitPairTheme(pair.split('-')[0], pair.split('-')[1]);
+      const housesArr = Array.from(data.houses);
+      const houseLabels = housesArr.slice(0, 3).map(h => `${h}${getOrdinalSuffix(h)}`).join(', ');
+      const moreHouses = housesArr.length > 3 ? ` and ${housesArr.length - 3} more` : '';
+
+      let summary: string;
+      if (data.hard > data.soft) {
+        summary = `${pair} energy creates ${pairTheme.hardKeyword} across your ${houseLabels}${moreHouses} houses over ${data.days.size} day${data.days.size > 1 ? 's' : ''} — expect friction in ${pairTheme.domain}`;
+      } else if (data.soft > data.hard) {
+        summary = `${pair} energy brings ${pairTheme.softKeyword} to your ${houseLabels}${moreHouses} houses over ${data.days.size} day${data.days.size > 1 ? 's' : ''} — opportunities in ${pairTheme.domain}`;
+      } else {
+        summary = `${pair} energy is mixed across your ${houseLabels}${moreHouses} houses over ${data.days.size} day${data.days.size > 1 ? 's' : ''} — both challenges and opportunities in ${pairTheme.domain}`;
+      }
+
+      return {
+        transitPair: pair,
+        theme: pairTheme.theme,
+        daysActive: data.days.size,
+        housesActivated: housesArr,
+        hardCount: data.hard,
+        softCount: data.soft,
+        summary
+      };
+    })
+    .sort((a, b) => b.daysActive - a.daysActive || (b.hardCount + b.softCount) - (a.hardCount + a.softCount))
+    .slice(0, 3);
+
+  // --- Houses under the spotlight ---
+  const houseMap: Record<number, { planets: Set<string>; hard: number; soft: number; days: Set<number> }> = {};
+  for (const act of allActivations) {
+    if (!houseMap[act.natalHouse]) {
+      houseMap[act.natalHouse] = { planets: new Set(), hard: 0, soft: 0, days: new Set() };
+    }
+    houseMap[act.natalHouse].planets.add(act.natalPlanet);
+    houseMap[act.natalHouse].days.add(act.dayIdx);
+    if (hardAspects.includes(act.natalAspectType)) {
+      houseMap[act.natalHouse].hard++;
+    } else {
+      houseMap[act.natalHouse].soft++;
+    }
+  }
+
+  const houseSpotlights: WeeklyHouseSpotlight[] = Object.entries(houseMap)
+    .map(([houseStr, data]) => {
+      const house = parseInt(houseStr);
+      const houseInfo = getHouseManifestations(house);
+      const planetsList = Array.from(data.planets);
+      const total = data.hard + data.soft;
+
+      let arc: string;
+      if (data.hard > data.soft * 2) {
+        arc = `A challenging week for your ${houseInfo.domain.split(',')[0].trim()} — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'are' : 'is'} under pressure across ${data.days.size} days. Growth requires confronting discomfort here.`;
+      } else if (data.soft > data.hard * 2) {
+        arc = `A blessed week for your ${houseInfo.domain.split(',')[0].trim()} — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'receive' : 'receives'} support across ${data.days.size} days. Lean in and take advantage.`;
+      } else {
+        arc = `A dynamic week for your ${houseInfo.domain.split(',')[0].trim()} — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'face' : 'faces'} both tests and rewards across ${data.days.size} days. Stay alert for both.`;
+      }
+
+      return {
+        house,
+        domain: houseInfo.domain,
+        totalActivations: total,
+        natalPlanets: planetsList,
+        hardCount: data.hard,
+        softCount: data.soft,
+        arc
+      };
+    })
+    .sort((a, b) => b.totalActivations - a.totalActivations)
+    .slice(0, 3);
+
+  // --- Biggest challenge (tightest hard aspect) ---
+  const hardActivations = allActivations.filter(a => hardAspects.includes(a.natalAspectType));
+  let biggestChallenge = 'No major challenges this week — smooth sailing.';
+  if (hardActivations.length > 0) {
+    const tightestHard = hardActivations.sort((a, b) => a.orb - b.orb)[0];
+    const hPair = getTransitPairTheme(tightestHard.transit1Planet, tightestHard.transit2Planet);
+    const hChar = getNatalPlanetCharacter(tightestHard.natalPlanet);
+    const hDay = dayNames[tightestHard.dayIdx] || 'this week';
+    const hOrd = `${tightestHard.natalHouse}${getOrdinalSuffix(tightestHard.natalHouse)}`;
+    biggestChallenge = `${tightestHard.natalPlanet} ${tightestHard.natalAspectType.toLowerCase()} ${tightestHard.transit1Planet}-${tightestHard.transit2Planet} peaks on ${hDay} (${tightestHard.orb.toFixed(1)}° orb). Your ${hOrd} house ${hChar.keyword} clashes with ${hPair.hardKeyword}. Don't force outcomes — work with the tension rather than against it.`;
+  }
+
+  // --- Biggest opportunity (tightest soft aspect) ---
+  const softActivations = allActivations.filter(a => !hardAspects.includes(a.natalAspectType));
+  let biggestOpportunity = 'No standout opportunities this week — focus on maintenance and preparation.';
+  if (softActivations.length > 0) {
+    const tightestSoft = softActivations.sort((a, b) => a.orb - b.orb)[0];
+    const sPair = getTransitPairTheme(tightestSoft.transit1Planet, tightestSoft.transit2Planet);
+    const sChar = getNatalPlanetCharacter(tightestSoft.natalPlanet);
+    const sDay = dayNames[tightestSoft.dayIdx] || 'this week';
+    const sOrd = `${tightestSoft.natalHouse}${getOrdinalSuffix(tightestSoft.natalHouse)}`;
+    biggestOpportunity = `${tightestSoft.natalPlanet} ${tightestSoft.natalAspectType.toLowerCase()} ${tightestSoft.transit1Planet}-${tightestSoft.transit2Planet} peaks on ${sDay} (${tightestSoft.orb.toFixed(1)}° orb). Your ${sOrd} house ${sChar.keyword} is perfectly aligned with ${sPair.softKeyword}. Take initiative — this is your green light.`;
+  }
+
+  // --- Overview ---
+  const intensityTrend = dailyIntensities.map(d => d.intensityScore);
+  const earlyAvg = (intensityTrend[0] + intensityTrend[1] + intensityTrend[2]) / 3;
+  const lateAvg = (intensityTrend[4] + intensityTrend[5] + intensityTrend[6]) / 3;
+
+  let trendWord: string;
+  if (earlyAvg > lateAvg + 0.5) {
+    trendWord = 'Front-loaded week — the intensity builds early and eases toward the weekend';
+  } else if (lateAvg > earlyAvg + 0.5) {
+    trendWord = 'Slow-building week — pressure mounts as the weekend approaches';
+  } else {
+    trendWord = 'Evenly distributed week — the energy stays relatively consistent throughout';
+  }
+
+  const overview = `${totalActivations} total cosmic activations this week (${totalHard} challenging, ${totalActivations - totalHard} supportive). ${trendWord}. Peak day: ${peakDay.dayName} (${peakDay.dateLabel}). Best rest day: ${restDay.dayName} (${restDay.dateLabel}).`;
+
+  // --- Action plan ---
+  const earlyHard = allActivations.filter(a => a.dayIdx <= 2 && hardAspects.includes(a.natalAspectType)).length;
+  const earlySoft = allActivations.filter(a => a.dayIdx <= 2 && !hardAspects.includes(a.natalAspectType)).length;
+  const midHard = allActivations.filter(a => (a.dayIdx === 3 || a.dayIdx === 4) && hardAspects.includes(a.natalAspectType)).length;
+  const midSoft = allActivations.filter(a => (a.dayIdx === 3 || a.dayIdx === 4) && !hardAspects.includes(a.natalAspectType)).length;
+  const weekendHard = allActivations.filter(a => a.dayIdx >= 5 && hardAspects.includes(a.natalAspectType)).length;
+  const weekendSoft = allActivations.filter(a => a.dayIdx >= 5 && !hardAspects.includes(a.natalAspectType)).length;
+
+  const earlyTopHouse = Object.entries(houseMap)
+    .filter(([_, d]) => Array.from(d.days).some(day => day <= 2))
+    .sort((a, b) => b[1].planets.size - a[1].planets.size)[0];
+  const midTopHouse = Object.entries(houseMap)
+    .filter(([_, d]) => Array.from(d.days).some(day => day === 3 || day === 4))
+    .sort((a, b) => b[1].planets.size - a[1].planets.size)[0];
+  const weekendTopHouse = Object.entries(houseMap)
+    .filter(([_, d]) => Array.from(d.days).some(day => day >= 5))
+    .sort((a, b) => b[1].planets.size - a[1].planets.size)[0];
+
+  const earlyWeek = earlyHard > earlySoft
+    ? `Monday-Wednesday brings ${earlyHard} challenging activation${earlyHard > 1 ? 's' : ''}${earlyTopHouse ? ` focused on your ${getHouseManifestations(parseInt(earlyTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Stay patient and strategic — don't react impulsively to friction.`
+    : earlySoft > 0
+    ? `Monday-Wednesday brings ${earlySoft} supportive activation${earlySoft > 1 ? 's' : ''}${earlyTopHouse ? ` around your ${getHouseManifestations(parseInt(earlyTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Use early-week momentum to make progress on what matters most.`
+    : `Monday-Wednesday is relatively quiet. Good time for planning and preparation.`;
+
+  const midWeekText = midHard > midSoft
+    ? `Thursday-Friday intensifies with ${midHard} challenging activation${midHard > 1 ? 's' : ''}${midTopHouse ? ` in your ${getHouseManifestations(parseInt(midTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Midweek pivot point — adjust your approach if early-week strategies aren't working.`
+    : midSoft > 0
+    ? `Thursday-Friday offers ${midSoft} supportive activation${midSoft > 1 ? 's' : ''}${midTopHouse ? ` for your ${getHouseManifestations(parseInt(midTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Good window for important conversations, decisions, or launches.`
+    : `Thursday-Friday is quiet. Catch your breath and consolidate gains from earlier in the week.`;
+
+  const weekendText = weekendHard > weekendSoft
+    ? `The weekend brings ${weekendHard} challenging activation${weekendHard > 1 ? 's' : ''}${weekendTopHouse ? ` affecting your ${getHouseManifestations(parseInt(weekendTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Not the most restful weekend — process emotions and avoid making big decisions under pressure.`
+    : weekendSoft > 0
+    ? `The weekend brings ${weekendSoft} supportive activation${weekendSoft > 1 ? 's' : ''}${weekendTopHouse ? ` around your ${getHouseManifestations(parseInt(weekendTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Great time for relationships, creativity, and enjoying the fruits of the week's work.`
+    : `The weekend is quiet cosmically. Rest, recharge, and prepare for next week.`;
+
+  return {
+    overview,
+    dailyIntensities,
+    peakDay,
+    restDay,
+    majorThemes,
+    houseSpotlights,
+    biggestChallenge,
+    biggestOpportunity,
+    actionPlan: { earlyWeek, midWeek: midWeekText, weekend: weekendText }
+  };
+}
