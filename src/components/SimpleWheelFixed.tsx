@@ -722,13 +722,31 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
             {planet.degree}°{planet.minute}'
           </text>
 
+          {/* Retrograde indicator */}
+          {planet.isRetrograde && (
+            <text
+              x={planet.x + 18}
+              y={planet.y - 8}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="11"
+              fill="#FFD700"
+              fontWeight="bold"
+              stroke="#000"
+              strokeWidth="0.5"
+              pointerEvents="none"
+            >
+              ℞
+            </text>
+          )}
+
           {/* Tooltip */}
           {hoveredPlanet === `natal-${planet.name}` && (
             <g>
               <rect
                 x={planet.x + 20}
                 y={planet.y - 20}
-                width="140"
+                width="160"
                 height="40"
                 fill="white"
                 stroke="#333"
@@ -736,16 +754,16 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
                 rx="4"
               />
               <text
-                x={planet.x + 90}
+                x={planet.x + 100}
                 y={planet.y - 5}
                 textAnchor="middle"
                 fontSize="12"
                 fill="#333"
               >
-                {planet.name} (Natal)
+                {planet.name} (Natal){planet.isRetrograde ? ' ℞' : ''}
               </text>
               <text
-                x={planet.x + 90}
+                x={planet.x + 100}
                 y={planet.y + 10}
                 textAnchor="middle"
                 fontSize="12"
@@ -797,13 +815,31 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
             {planet.degree}°{planet.minute}'
           </text>
 
+          {/* Retrograde indicator */}
+          {planet.isRetrograde && (
+            <text
+              x={planet.x + 18}
+              y={planet.y - 8}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="11"
+              fill="#FFD700"
+              fontWeight="bold"
+              stroke="#000"
+              strokeWidth="0.5"
+              pointerEvents="none"
+            >
+              ℞
+            </text>
+          )}
+
           {/* Tooltip */}
           {hoveredPlanet === `transit-${planet.name}` && (
             <g>
               <rect
                 x={planet.x + 20}
                 y={planet.y - 20}
-                width="140"
+                width="160"
                 height="40"
                 fill="white"
                 stroke="#333"
@@ -811,16 +847,16 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
                 rx="4"
               />
               <text
-                x={planet.x + 90}
+                x={planet.x + 100}
                 y={planet.y - 5}
                 textAnchor="middle"
                 fontSize="12"
                 fill="#333"
               >
-                {planet.name} (Transit)
+                {planet.name} (Transit){planet.isRetrograde ? ' ℞' : ''}
               </text>
               <text
-                x={planet.x + 90}
+                x={planet.x + 100}
                 y={planet.y + 10}
                 textAnchor="middle"
                 fontSize="12"
@@ -832,6 +868,207 @@ export const SimpleWheelFixed: React.FC<SimpleWheelFixedProps> = ({
           )}
         </g>
       ))}
+
+      {/* Lunar Event Indicators (New Moon, Full Moon, Eclipses) */}
+      {(() => {
+        // Detect all lunar events
+        const sun = transitPositions.find(p => p.name === 'Sun');
+        const moon = transitPositions.find(p => p.name === 'Moon');
+        const northNode = transitPositions.find(p => p.name === 'North Node');
+
+        if (!sun || !moon) return null;
+
+        const normalizeDegrees = (deg: number): number => {
+          let normalized = deg % 360;
+          if (normalized < 0) normalized += 360;
+          return normalized;
+        };
+
+        const angularDistance = (deg1: number, deg2: number): number => {
+          const diff = Math.abs(normalizeDegrees(deg1) - normalizeDegrees(deg2));
+          return diff > 180 ? 360 - diff : diff;
+        };
+
+        const sunMoonDistance = angularDistance(sun.longitude, moon.longitude);
+
+        let eventType: 'new-moon' | 'full-moon' | 'solar-eclipse' | 'lunar-eclipse' | null = null;
+        let eventVisualAngle = 0;
+        let eventSign = '';
+        let eventDegree = 0;
+        let isNearNode = false;
+
+        // Check for New Moon (Sun conjunct Moon)
+        if (sunMoonDistance <= 10) {
+          // Check if near nodes for eclipse
+          if (northNode) {
+            const nodeDistance = Math.min(
+              angularDistance(moon.longitude, northNode.longitude),
+              angularDistance(moon.longitude, normalizeDegrees(northNode.longitude + 180))
+            );
+            isNearNode = nodeDistance <= 18;
+          }
+
+          eventType = isNearNode ? 'solar-eclipse' : 'new-moon';
+          // Event occurs at Sun's position (where Sun and Moon meet)
+          eventVisualAngle = sun.angle;  // Use Sun's visual angle on the wheel
+          eventSign = sun.zodiacSign;
+          eventDegree = sun.degree;
+        }
+        // Check for Full Moon (Sun opposite Moon)
+        else if (Math.abs(sunMoonDistance - 180) <= 10) {
+          // Check if near nodes for eclipse
+          if (northNode) {
+            const nodeDistance = Math.min(
+              angularDistance(moon.longitude, northNode.longitude),
+              angularDistance(moon.longitude, normalizeDegrees(northNode.longitude + 180))
+            );
+            isNearNode = nodeDistance <= 18;
+          }
+
+          eventType = isNearNode ? 'lunar-eclipse' : 'full-moon';
+          // Full Moon shows at Moon's position
+          eventVisualAngle = moon.angle;  // Use Moon's visual angle on the wheel
+          eventSign = moon.zodiacSign;
+          eventDegree = moon.degree;
+        }
+
+        if (!eventType) return null;
+
+        // Define colors and labels for each event type
+        const eventStyles = {
+          'new-moon': {
+            outerStroke: '#1a1a2e',
+            fill: '#2d3561',
+            stroke: '#1a1a2e',
+            textColor: '#ffffff',
+            symbol: '🌑',
+            label1: 'NEW',
+            label2: 'MOON'
+          },
+          'full-moon': {
+            outerStroke: '#ffd700',
+            fill: '#ffed4e',
+            stroke: '#ffd700',
+            textColor: '#000000',
+            symbol: '🌕',
+            label1: 'FULL',
+            label2: 'MOON'
+          },
+          'solar-eclipse': {
+            outerStroke: '#FF4500',
+            fill: '#FF6347',
+            stroke: '#FF4500',
+            textColor: '#ffffff',
+            symbol: '🌑',
+            label1: 'SOLAR',
+            label2: 'ECLIPSE'
+          },
+          'lunar-eclipse': {
+            outerStroke: '#8B0000',
+            fill: '#DC143C',
+            stroke: '#8B0000',
+            textColor: '#ffffff',
+            symbol: '🌕',
+            label1: 'LUNAR',
+            label2: 'ECLIPSE'
+          }
+        };
+
+        const style = eventStyles[eventType];
+
+        // Calculate position on wheel using the visual angle
+        const angle = angleToSVG(eventVisualAngle);
+        const radiusForEvent = (innerRadius + houseNumberRadius) / 2;
+        const ex = centerX + radiusForEvent * Math.cos(angle * Math.PI / 180);
+        const ey = centerY + radiusForEvent * Math.sin(angle * Math.PI / 180);
+
+        return (
+          <g key="lunar-event-marker">
+            {/* Outer glow ring */}
+            <circle
+              cx={ex}
+              cy={ey}
+              r="26"
+              fill="none"
+              stroke={style.outerStroke}
+              strokeWidth="2"
+              opacity="0.4"
+            />
+
+            {/* Middle ring */}
+            <circle
+              cx={ex}
+              cy={ey}
+              r="20"
+              fill={style.fill}
+              stroke={style.stroke}
+              strokeWidth="3"
+              opacity="0.9"
+            />
+
+            {/* Event symbol */}
+            <text
+              x={ex}
+              y={ey - 3}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="18"
+              fill={style.textColor}
+              fontWeight="bold"
+            >
+              {style.symbol}
+            </text>
+
+            {/* Event degree */}
+            <text
+              x={ex}
+              y={ey + 14}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="8"
+              fill={style.textColor}
+              fontWeight="bold"
+            >
+              {eventDegree}°
+            </text>
+
+            {/* Event label below */}
+            <text
+              x={ex}
+              y={ey + 35}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="10"
+              fill={style.outerStroke}
+              fontWeight="bold"
+            >
+              {style.label1}
+            </text>
+            <text
+              x={ex}
+              y={ey + 47}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="10"
+              fill={style.outerStroke}
+              fontWeight="bold"
+            >
+              {style.label2}
+            </text>
+            <text
+              x={ex}
+              y={ey + 59}
+              textAnchor="middle"
+              dominantBaseline="middle"
+              fontSize="9"
+              fill="#666"
+              fontWeight="normal"
+            >
+              in {eventSign}
+            </text>
+          </g>
+        );
+      })()}
 
       {/* Center info */}
       <text

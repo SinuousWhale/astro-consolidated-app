@@ -280,3 +280,4 @@ const ECLIPSE_ASPECTS: Record<string, EclipseAspectInterpretation> = {
       'Conscious communication brings breakthrough!'
     ]
   }
+};

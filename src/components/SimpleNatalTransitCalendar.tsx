@@ -1,8 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { calculatePlanetaryPositions, calculateAscendant, calculateHouses } from '../utils/ephemeris';
-import { generateAspectInterpretation } from '../utils/aspectInterpretations';
+import { generateAspectInterpretation, generateNatalTransitDailySummary, generateNatalTransitWeeklySummary, matchJournalToAspects, generateJournalReflection, calculateJournalTransitDuration } from '../utils/aspectInterpretations';
+import type { NTWeeklyDayInput } from '../utils/aspectInterpretations';
 import { getUTCOffset } from '../utils/location';
 
 interface SimpleNatalTransitCalendarProps {
@@ -170,8 +171,89 @@ const calculateNatalToTransitAspects = (natalPlanets: any[], transitPlanets: any
   return aspects.sort((a, b) => a.orb - b.orb);
 };
 
+// Find exact lunation moments (New Moon and Full Moon) for a date range
+// Returns the exact longitude at the moment of most exact aspect
+const findExactLunations = (startDate: Date, endDate: Date) => {
+  let exactNewMoon: { longitude: number; date: Date; isEclipse: boolean } | null = null;
+  let exactFullMoon: { longitude: number; date: Date; isEclipse: boolean } | null = null;
+  let bestNewMoonOrb = 999;
+  let bestFullMoonOrb = 999;
+
+  // Search in 6-hour increments for better precision
+  const searchDate = new Date(startDate);
+  searchDate.setDate(searchDate.getDate() - 1); // Start a day early to catch lunations
+  const searchEnd = new Date(endDate);
+  searchEnd.setDate(searchEnd.getDate() + 1); // End a day late
+
+  while (searchDate <= searchEnd) {
+    const planets = calculatePlanetaryPositions(searchDate);
+    const sun = planets.find(p => p.name === 'Sun');
+    const moon = planets.find(p => p.name === 'Moon');
+    const northNode = planets.find(p => p.name === 'North Node');
+
+    if (sun && moon && northNode) {
+      // Check for New Moon (conjunction)
+      let conjDiff = Math.abs(sun.longitude - moon.longitude);
+      if (conjDiff > 180) conjDiff = 360 - conjDiff;
+
+      if (conjDiff < bestNewMoonOrb && conjDiff <= 10) {
+        bestNewMoonOrb = conjDiff;
+        const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
+        const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
+        const southNodeLong = (northNode.longitude + 180) % 360;
+        const southNodeDist = Math.abs(sun.longitude - southNodeLong);
+        const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+        const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+
+        exactNewMoon = {
+          longitude: sun.longitude,
+          date: new Date(searchDate),
+          isEclipse: isNearNode
+        };
+      }
+
+      // Check for Full Moon (opposition)
+      let oppDiff = Math.abs(sun.longitude - moon.longitude);
+      if (oppDiff > 180) oppDiff = 360 - oppDiff;
+      const oppOrb = Math.abs(oppDiff - 180);
+
+      if (oppOrb < bestFullMoonOrb && oppOrb <= 10) {
+        bestFullMoonOrb = oppOrb;
+        const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
+        const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
+        const southNodeLong = (northNode.longitude + 180) % 360;
+        const southNodeDist = Math.abs(sun.longitude - southNodeLong);
+        const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+        const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+
+        // Calculate Full Moon longitude using Sun's degree in opposite sign
+        const sunSignIndex = Math.floor(sun.longitude / 30);
+        const sunDegreeInSign = sun.longitude % 30;
+        const oppositeSignIndex = (sunSignIndex + 6) % 12;
+        const fullMoonLongitude = (oppositeSignIndex * 30) + sunDegreeInSign;
+
+        exactFullMoon = {
+          longitude: fullMoonLongitude,
+          date: new Date(searchDate),
+          isEclipse: isNearNode
+        };
+      }
+    }
+
+    // Advance by 6 hours for better precision
+    searchDate.setTime(searchDate.getTime() + 6 * 60 * 60 * 1000);
+  }
+
+  return { exactNewMoon, exactFullMoon };
+};
+
 // Detect eclipses (Solar = Sun-Moon conjunction, Lunar = Sun-Moon opposition)
-const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
+// Uses pre-calculated exact lunation data if provided for consistent degree display
+const detectEclipses = (
+  transitPlanets: any[],
+  natalPlanets: any[],
+  exactLunations?: { exactNewMoon: any; exactFullMoon: any }
+) => {
   const events: any[] = [];
   const sun = transitPlanets.find(p => p.name === 'Sun');
   const moon = transitPlanets.find(p => p.name === 'Moon');
@@ -184,19 +266,21 @@ const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
   const conjDistance = conjDiff > 180 ? 360 - conjDiff : conjDiff;
 
   if (conjDistance <= 10) { // New Moon within 10°
-    // Check if near nodes for eclipse (within 15° of either node)
-    const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
-    const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
-    const southNodeLong = (northNode.longitude + 180) % 360;
-    const southNodeDist = Math.abs(sun.longitude - southNodeLong);
-    const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
-
-    const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+    // Use exact longitude if available, otherwise calculate from current Sun position
+    const newMoonLongitude = exactLunations?.exactNewMoon?.longitude ?? sun.longitude;
+    const isNearNode = exactLunations?.exactNewMoon?.isEclipse ?? (() => {
+      const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
+      const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
+      const southNodeLong = (northNode.longitude + 180) % 360;
+      const southNodeDist = Math.abs(sun.longitude - southNodeLong);
+      const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+      return normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+    })();
 
     // Check if this eclipse aspects any natal planets
     natalPlanets.forEach((natalPlanet) => {
       ASPECT_TYPES.forEach((aspectType) => {
-        const diff = Math.abs(natalPlanet.longitude - sun.longitude);
+        const diff = Math.abs(natalPlanet.longitude - newMoonLongitude);
         const distance = diff > 180 ? 360 - diff : diff;
         const orb = 3; // Tight orb for eclipses
 
@@ -211,7 +295,7 @@ const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
             color: isNearNode ? '#8B0000' : '#4B0082',
             symbol: isNearNode ? '🌑' : '🌙',
             natalLongitude: natalPlanet.longitude,
-            transitLongitude: sun.longitude,
+            transitLongitude: newMoonLongitude,
             transitPlanet: isNearNode ? 'Solar Eclipse' : 'New Moon'
           });
         }
@@ -224,25 +308,28 @@ const detectEclipses = (transitPlanets: any[], natalPlanets: any[]) => {
   const oppDistance = oppDiff > 180 ? 360 - oppDiff : oppDiff;
 
   if (Math.abs(oppDistance - 180) <= 10) { // Full Moon within 10° of opposition
-    const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
-    const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
-    const southNodeLong = (northNode.longitude + 180) % 360;
-    const southNodeDist = Math.abs(sun.longitude - southNodeLong);
-    const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+    // Use exact longitude if available, otherwise calculate from current Sun position
+    const fullMoonDisplayLongitude = exactLunations?.exactFullMoon?.longitude ?? (() => {
+      const sunSignIndex = Math.floor(sun.longitude / 30);
+      const sunDegreeInSign = sun.longitude % 30;
+      const oppositeSignIndex = (sunSignIndex + 6) % 12;
+      return (oppositeSignIndex * 30) + sunDegreeInSign;
+    })();
 
-    const isNearNode = normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
-
-    // For Full Moon, use Sun's degree in the opposite sign for consistency
-    // Example: Sun at 13° Aquarius → Full Moon shown as 13° Leo
-    const sunSignIndex = Math.floor(sun.longitude / 30);
-    const sunDegreeInSign = sun.longitude % 30;
-    const oppositeSignIndex = (sunSignIndex + 6) % 12;
-    const fullMoonDisplayLongitude = (oppositeSignIndex * 30) + sunDegreeInSign;
+    const isNearNode = exactLunations?.exactFullMoon?.isEclipse ?? (() => {
+      const nodeDistance = Math.abs(sun.longitude - northNode.longitude);
+      const normalizedNodeDist = nodeDistance > 180 ? 360 - nodeDistance : nodeDistance;
+      const southNodeLong = (northNode.longitude + 180) % 360;
+      const southNodeDist = Math.abs(sun.longitude - southNodeLong);
+      const normalizedSouthDist = southNodeDist > 180 ? 360 - southNodeDist : southNodeDist;
+      return normalizedNodeDist <= 15 || normalizedSouthDist <= 15;
+    })();
 
     // Check if this eclipse aspects any natal planets
+    // Use fullMoonDisplayLongitude for aspect calculations to match the displayed degree
     natalPlanets.forEach((natalPlanet) => {
       ASPECT_TYPES.forEach((aspectType) => {
-        const diff = Math.abs(natalPlanet.longitude - moon.longitude);
+        const diff = Math.abs(natalPlanet.longitude - fullMoonDisplayLongitude);
         const distance = diff > 180 ? 360 - diff : diff;
         const orb = 3;
 
@@ -466,6 +553,48 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
   const [expandedAspectKey, setExpandedAspectKey] = useState<string | null>(null);
   const [visibleRowsPerDay, setVisibleRowsPerDay] = useState<Record<number, number>>({});
   const [selectedAspect, setSelectedAspect] = useState<any | null>(null);
+  const [dailyBriefingIndex, setDailyBriefingIndex] = useState<number | null>(null);
+  const [showWeeklyBriefing, setShowWeeklyBriefing] = useState<boolean>(false);
+  const dailyBriefingRef = useRef<HTMLDivElement>(null);
+
+  // --- Journal ---
+  // Stable chart key from natal date for localStorage
+  const chartKey = useMemo(() => {
+    return `journal-${natalDate.getFullYear()}-${natalDate.getMonth()}-${natalDate.getDate()}-${natalDate.getHours()}-${natalDate.getMinutes()}`;
+  }, [natalDate]);
+
+  // Load journal entries from localStorage
+  const [journalEntries, setJournalEntries] = useState<Record<string, string>>(() => {
+    try {
+      const saved = localStorage.getItem(chartKey);
+      return saved ? JSON.parse(saved) : {};
+    } catch { return {}; }
+  });
+
+  // Current editing state
+  const [journalDraft, setJournalDraft] = useState<string>('');
+  const [journalEditingDate, setJournalEditingDate] = useState<string | null>(null);
+
+  // Persist to localStorage whenever entries change
+  useEffect(() => {
+    localStorage.setItem(chartKey, JSON.stringify(journalEntries));
+  }, [journalEntries, chartKey]);
+
+  // Helper: date key string (YYYY-MM-DD)
+  const getDateKey = (date: Date): string => {
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+  };
+
+  const saveJournalEntry = (dateKey: string, text: string) => {
+    if (text.trim() === '') {
+      const updated = { ...journalEntries };
+      delete updated[dateKey];
+      setJournalEntries(updated);
+    } else {
+      setJournalEntries({ ...journalEntries, [dateKey]: text.trim() });
+    }
+    setJournalEditingDate(null);
+  };
 
   // Calculate natal planets once
   const natalPlanets = useMemo(() => {
@@ -586,6 +715,11 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
   const weekData = useMemo(() => {
     const days: any[] = [];
 
+    // First, find exact lunation moments for this week to ensure consistent degree display
+    const weekEnd = new Date(currentWeekStart);
+    weekEnd.setDate(weekEnd.getDate() + 6);
+    const exactLunations = findExactLunations(currentWeekStart, weekEnd);
+
     for (let i = 0; i < 7; i++) {
       const date = new Date(currentWeekStart);
       date.setDate(date.getDate() + i);
@@ -600,24 +734,19 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
         natalAscendant?.ascendant
       );
 
-      // Detect eclipses and lunations
-      const eclipseEvents = detectEclipses(transitPlanets, natalPlanets);
+      // Detect eclipses and lunations using pre-calculated exact positions
+      const eclipseEvents = detectEclipses(transitPlanets, natalPlanets, exactLunations);
 
-      // Detect house cusp events
+      // Detect house cusp crossings (conjunctions only, not other aspects like trine/square)
       const houseCuspCrossings = natalAscendant?.houseCusps
         ? detectHouseCuspCrossings(transitPlanets, natalAscendant.houseCusps, houseSystem)
-        : [];
-
-      const transitToCuspAspects = natalAscendant?.houseCusps
-        ? detectTransitToHouseCuspAspects(transitPlanets, natalAscendant.houseCusps)
         : [];
 
       // Combine all events
       const allEvents = [
         ...natalToTransitAspects,
         ...eclipseEvents,
-        ...houseCuspCrossings,
-        ...transitToCuspAspects
+        ...houseCuspCrossings
       ];
 
       // Sort all events by transit planet speed (slower planets first - outer to inner)
@@ -683,6 +812,57 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
     return aspectKeyToRow;
   }, [weekData]);
 
+  // Compute natal planet houses (stable across weeks)
+  const natalPlanetHouses = useMemo(() => {
+    const houses: Record<string, number> = {};
+    if (!natalAscendant?.houseCusps) return houses;
+    natalPlanets.forEach(p => {
+      houses[p.name] = calculateHousePosition(p.longitude, natalAscendant.houseCusps, houseSystem);
+    });
+    houses['Ascendant'] = 1;
+    return houses;
+  }, [natalPlanets, natalAscendant, houseSystem]);
+
+  // Compute daily briefing inputs for each day (aspects + transit planet houses)
+  const weekBriefingInputs = useMemo(() => {
+    if (!natalAscendant?.houseCusps) return null;
+    return weekData.map(day => {
+      // Compute transit planet houses for this day
+      const transitPlanetHouses: Record<string, number> = {};
+      day.aspects.forEach((a: any) => {
+        if (a.transitLongitude !== undefined && a.transitPlanet && !transitPlanetHouses[a.transitPlanet]) {
+          transitPlanetHouses[a.transitPlanet] = calculateHousePosition(a.transitLongitude, natalAscendant.houseCusps, houseSystem);
+        }
+      });
+      return {
+        date: day.date,
+        aspects: day.aspects,
+        natalPlanetHouses,
+        transitPlanetHouses
+      } as NTWeeklyDayInput;
+    });
+  }, [weekData, natalAscendant, natalPlanetHouses, houseSystem]);
+
+  // Generate weekly briefing
+  const weeklyBriefing = useMemo(() => {
+    if (!weekBriefingInputs) return null;
+    return generateNatalTransitWeeklySummary(weekBriefingInputs);
+  }, [weekBriefingInputs]);
+
+  // Generate daily briefing for selected day
+  const dailyBriefing = useMemo(() => {
+    if (dailyBriefingIndex === null || !weekBriefingInputs) return null;
+    return generateNatalTransitDailySummary(weekBriefingInputs[dailyBriefingIndex]);
+  }, [dailyBriefingIndex, weekBriefingInputs]);
+
+  useEffect(() => {
+    if (dailyBriefingIndex !== null && dailyBriefingRef.current) {
+      setTimeout(() => {
+        dailyBriefingRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }, [dailyBriefingIndex]);
+
   const goToPreviousWeek = () => {
     const newStart = new Date(currentWeekStart);
     newStart.setDate(newStart.getDate() - 7);
@@ -691,6 +871,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
     setShowAllAspects(false);
     setExpandedAspectKey(null);
     setVisibleRowsPerDay({});
+    setDailyBriefingIndex(null);
   };
 
   const goToNextWeek = () => {
@@ -701,6 +882,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
     setShowAllAspects(false);
     setExpandedAspectKey(null);
     setVisibleRowsPerDay({});
+    setDailyBriefingIndex(null);
   };
 
   const goToToday = () => {
@@ -710,6 +892,7 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
     setShowAllAspects(false);
     setExpandedAspectKey(null);
     setVisibleRowsPerDay({});
+    setDailyBriefingIndex(null);
   };
 
   const handleDayClick = (index: number) => {
@@ -721,6 +904,8 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
       setShowAllAspects(false);
     }
     setExpandedAspectKey(null);
+    setJournalEditingDate(null);
+    setJournalDraft('');
   };
 
   const handleAspectClick = (e: React.MouseEvent, aspectKey: string) => {
@@ -908,7 +1093,159 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
         >
           Next Week →
         </button>
+
+        {weekBriefingInputs && (
+          <button
+            onClick={() => { setShowWeeklyBriefing(!showWeeklyBriefing); setDailyBriefingIndex(null); }}
+            style={{
+              padding: '10px 20px',
+              fontSize: '16px',
+              cursor: 'pointer',
+              backgroundColor: showWeeklyBriefing ? '#e74c3c' : '#9b59b6',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+              marginLeft: '10px'
+            }}
+          >
+            {showWeeklyBriefing ? 'Close Weekly Briefing' : 'Weekly Briefing'}
+          </button>
+        )}
       </div>
+
+      {/* Weekly Briefing Panel */}
+      {showWeeklyBriefing && weeklyBriefing && (
+        <div style={{ marginBottom: '25px', padding: '20px', backgroundColor: '#f8f4ff', borderRadius: '10px', border: '2px solid #9b59b6' }}>
+          <h3 style={{ marginBottom: '15px', color: '#9b59b6', fontSize: '20px' }}>Weekly Briefing</h3>
+          <p style={{ marginBottom: '15px', color: '#555', lineHeight: '1.6' }}>{weeklyBriefing.overview}</p>
+
+          {/* Intensity Timeline */}
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '20px' }}>
+            {weeklyBriefing.dailyIntensities.map((d, i) => {
+              const bg = d.intensity === 'Pivotal' ? '#e74c3c' : d.intensity === 'Intense' ? '#e67e22' : d.intensity === 'Active' ? '#3498db' : '#95a5a6';
+              return (
+                <div key={i} style={{ flex: 1, textAlign: 'center', padding: '8px 4px', backgroundColor: bg, color: 'white', borderRadius: '6px', fontSize: '11px' }}>
+                  <div style={{ fontWeight: 'bold' }}>{d.dayName.slice(0, 3)}</div>
+                  <div>{d.dateLabel}</div>
+                  <div style={{ fontSize: '10px', marginTop: '2px' }}>{d.intensity}</div>
+                  <div style={{ fontSize: '10px' }}>{d.activationCount} aspects</div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Peak / Rest Day */}
+          <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+            <div style={{ flex: 1, padding: '10px', backgroundColor: '#e74c3c22', borderRadius: '8px', borderLeft: '4px solid #e74c3c' }}>
+              <strong style={{ color: '#e74c3c' }}>Peak Day:</strong> {weeklyBriefing.peakDay.dayName} ({weeklyBriefing.peakDay.dateLabel})
+            </div>
+            <div style={{ flex: 1, padding: '10px', backgroundColor: '#27ae6022', borderRadius: '8px', borderLeft: '4px solid #27ae60' }}>
+              <strong style={{ color: '#27ae60' }}>Rest Day:</strong> {weeklyBriefing.restDay.dayName} ({weeklyBriefing.restDay.dateLabel})
+            </div>
+          </div>
+
+          {/* Eclipse Spotlights */}
+          {weeklyBriefing.eclipseSpotlights.length > 0 && (
+            <div style={{ marginBottom: '20px' }}>
+              {weeklyBriefing.eclipseSpotlights.map((e, i) => {
+                const isHard = e.aspect === 'Square' || e.aspect === 'Opposition';
+                const isSoft = e.aspect === 'Trine' || e.aspect === 'Sextile';
+                const borderColor = isHard ? '#e74c3c' : isSoft ? '#27ae60' : '#e67e22';
+                return (
+                  <div key={i} style={{ padding: '12px', backgroundColor: '#8B000022', borderRadius: '8px', border: `2px solid ${borderColor}`, marginBottom: '8px' }}>
+                    <strong style={{ color: '#8B0000' }}>{e.eclipseType} {e.aspect} Natal {e.natalPlanet}</strong> ({e.orb.toFixed(1)}° orb)
+                    <div style={{ marginTop: '5px', fontSize: '13px', color: '#555' }}>{e.message}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Weekly Life Event Radar */}
+          {weeklyBriefing.weeklyAlerts.length > 0 && (
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ marginBottom: '10px', color: '#9b59b6', fontSize: '15px' }}>Weekly Life Event Radar</h4>
+              {weeklyBriefing.weeklyAlerts.map((a, i) => (
+                <div key={i} style={{ padding: '10px', backgroundColor: '#fff', borderRadius: '6px', border: '1px solid #ddd', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ fontSize: '20px' }}>{a.emoji}</span>
+                  <div>
+                    <strong>{a.label}</strong> <span style={{ fontSize: '12px', color: '#888' }}>({a.daysActive} day{a.daysActive !== 1 ? 's' : ''})</span>
+                    <div style={{ fontSize: '13px', color: '#555' }}>{a.message}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Transit Visitors */}
+          {weeklyBriefing.transitVisitors.length > 0 && (
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ marginBottom: '10px', color: '#9b59b6', fontSize: '15px' }}>Dominant Energies</h4>
+              {weeklyBriefing.transitVisitors.map((v, i) => {
+                const borderColor = v.hardCount > 0 && v.softCount === 0 ? '#e74c3c' : v.softCount > 0 && v.hardCount === 0 ? '#27ae60' : v.hardCount > 0 ? '#e67e22' : '#ddd';
+                return (
+                  <div key={i} style={{ padding: '10px', backgroundColor: '#fff', borderRadius: '6px', border: `2px solid ${borderColor}`, marginBottom: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span style={{ fontWeight: 'bold', color: PLANET_COLORS[v.transitPlanet] || '#333' }}>
+                        {PLANET_SYMBOLS[v.transitPlanet]} {v.transitPlanet}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#888' }}>— {v.keyword}</span>
+                      {v.isDominant && (
+                        <span style={{ fontSize: '10px', padding: '2px 8px', backgroundColor: '#9b59b6', color: 'white', borderRadius: '10px' }}>SIGNATURE ENERGY</span>
+                      )}
+                      <span style={{ fontSize: '11px', color: '#aaa', marginLeft: 'auto' }}>{v.daysActive}d active · hits {v.natalPlanetsHit.join(', ')}</span>
+                    </div>
+                    <div style={{ marginTop: '5px', fontSize: '13px', color: '#555' }}>{v.summary}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* House Spotlights Grid */}
+          {weeklyBriefing.houseSpotlights.length > 0 && (
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ marginBottom: '10px', color: '#9b59b6', fontSize: '15px' }}>Life Areas in Focus</h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '8px' }}>
+                {weeklyBriefing.houseSpotlights.map((h, i) => (
+                  <div key={i} style={{ padding: '10px', backgroundColor: '#fff', borderRadius: '6px', border: '1px solid #ddd', fontSize: '12px' }}>
+                    <div style={{ fontWeight: 'bold', color: '#9b59b6', marginBottom: '4px' }}>House {h.house} — {h.domainLabel}</div>
+                    <div style={{ color: '#888', marginBottom: '4px' }}>{h.totalHits} hits · {h.transitVisitors.join(', ')}</div>
+                    <div style={{ color: '#555' }}>{h.arc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Key Days */}
+          {weeklyBriefing.keyDays.length > 0 && (
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ marginBottom: '10px', color: '#9b59b6', fontSize: '15px' }}>Week at a Glance</h4>
+              {weeklyBriefing.keyDays.map((k, i) => {
+                const color = k.type === 'power' ? '#e74c3c' : k.type === 'caution' ? '#e67e22' : '#27ae60';
+                return (
+                  <div key={i} style={{ padding: '8px 12px', borderLeft: `4px solid ${color}`, backgroundColor: color + '11', borderRadius: '4px', marginBottom: '6px', fontSize: '13px' }}>
+                    <strong style={{ color }}>{k.label}</strong> — {k.dayName} ({k.dateLabel}): {k.description}
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Challenge / Opportunity */}
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <div style={{ flex: 1, padding: '12px', backgroundColor: '#e74c3c11', borderRadius: '8px', borderLeft: '4px solid #e74c3c' }}>
+              <strong style={{ color: '#e74c3c' }}>Biggest Challenge:</strong>
+              <div style={{ marginTop: '5px', fontSize: '13px', color: '#555' }}>{weeklyBriefing.biggestChallenge}</div>
+            </div>
+            <div style={{ flex: 1, padding: '12px', backgroundColor: '#27ae6011', borderRadius: '8px', borderLeft: '4px solid #27ae60' }}>
+              <strong style={{ color: '#27ae60' }}>Biggest Opportunity:</strong>
+              <div style={{ marginTop: '5px', fontSize: '13px', color: '#555' }}>{weeklyBriefing.biggestOpportunity}</div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Calendar Grid */}
       <div style={{
@@ -946,9 +1283,36 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
                 {day.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
               </div>
 
-              <div style={{ fontSize: '12px', color: '#666' }}>
+              <div style={{ fontSize: '12px', color: '#666', display: 'flex', alignItems: 'center', gap: '6px' }}>
                 {day.aspects.length} aspect{day.aspects.length !== 1 ? 's' : ''}
+                {journalEntries[getDateKey(day.date)] && (
+                  <span title="Journal entry" style={{ fontSize: '14px' }}>📝</span>
+                )}
               </div>
+
+              {weekBriefingInputs && day.aspects.length > 0 && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setDailyBriefingIndex(dailyBriefingIndex === dayIndex ? null : dayIndex);
+                    setShowWeeklyBriefing(false);
+                  }}
+                  style={{
+                    width: '100%',
+                    marginTop: '5px',
+                    marginBottom: '5px',
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    backgroundColor: dailyBriefingIndex === dayIndex ? '#e74c3c' : '#8e44ad',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '4px'
+                  }}
+                >
+                  {dailyBriefingIndex === dayIndex ? 'Close' : 'Daily'} Briefing
+                </button>
+              )}
 
               {/* Render aspects in consistent rows */}
               {(() => {
@@ -1156,6 +1520,118 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
         })}
       </div>
 
+      {/* Daily Briefing Panel */}
+      {dailyBriefingIndex !== null && dailyBriefing && weekData[dailyBriefingIndex] && (
+        <div ref={dailyBriefingRef} style={{ marginTop: '20px', marginBottom: '20px', padding: '20px', backgroundColor: '#fdf4ff', borderRadius: '10px', border: '2px solid #8e44ad' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+            <h3 style={{ color: '#8e44ad', fontSize: '18px', margin: 0 }}>
+              Daily Briefing — {weekData[dailyBriefingIndex].date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
+            </h3>
+            <div style={{
+              padding: '4px 12px',
+              backgroundColor: dailyBriefing.intensity === 'Pivotal' ? '#e74c3c' : dailyBriefing.intensity === 'Intense' ? '#e67e22' : dailyBriefing.intensity === 'Active' ? '#3498db' : '#95a5a6',
+              color: 'white', borderRadius: '12px', fontSize: '13px', fontWeight: 'bold'
+            }}>
+              {dailyBriefing.intensity} Day
+            </div>
+          </div>
+
+          <p style={{ marginBottom: '15px', color: '#555', lineHeight: '1.6' }}>{dailyBriefing.overview}</p>
+
+          {/* Eclipse Spotlights */}
+          {dailyBriefing.eclipseSpotlights.length > 0 && (
+            <div style={{ marginBottom: '15px' }}>
+              {dailyBriefing.eclipseSpotlights.map((e, i) => {
+                const isHard = e.aspect === 'Square' || e.aspect === 'Opposition';
+                const isSoft = e.aspect === 'Trine' || e.aspect === 'Sextile';
+                const borderColor = isHard ? '#e74c3c' : isSoft ? '#27ae60' : '#e67e22';
+                return (
+                  <div key={i} style={{ padding: '12px', backgroundColor: '#8B000022', borderRadius: '8px', border: `2px solid ${borderColor}`, marginBottom: '8px' }}>
+                    <strong style={{ color: '#8B0000' }}>{e.eclipseType} {e.aspect} Natal {e.natalPlanet}</strong> ({e.orb.toFixed(1)}° orb)
+                    <div style={{ marginTop: '5px', fontSize: '13px', color: '#555' }}>{e.message}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Life Event Alerts */}
+          {dailyBriefing.lifeEventAlerts.length > 0 && (
+            <div style={{ marginBottom: '15px' }}>
+              <h4 style={{ marginBottom: '8px', color: '#8e44ad', fontSize: '14px' }}>Life Event Alerts</h4>
+              {dailyBriefing.lifeEventAlerts.map((a, i) => (
+                <div key={i} style={{ padding: '8px 12px', backgroundColor: '#fff', borderRadius: '6px', border: '1px solid #ddd', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ fontSize: '20px' }}>{a.emoji}</span>
+                  <div>
+                    <strong>{a.label}</strong>
+                    <div style={{ fontSize: '13px', color: '#555' }}>{a.message}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Focus Areas by Transit Planet */}
+          {dailyBriefing.focusAreas.length > 0 && (
+            <div style={{ marginBottom: '15px' }}>
+              <h4 style={{ marginBottom: '8px', color: '#8e44ad', fontSize: '14px' }}>Focus Areas</h4>
+              {dailyBriefing.focusAreas.map((f, i) => {
+                const borderColor = f.hasHard && !f.hasSoft ? '#e74c3c' : f.hasSoft && !f.hasHard ? '#27ae60' : f.hasHard ? '#e67e22' : '#ddd';
+                return (
+                  <div key={i} style={{ padding: '10px', backgroundColor: '#fff', borderRadius: '6px', border: `2px solid ${borderColor}`, marginBottom: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                      <span style={{ fontWeight: 'bold', color: PLANET_COLORS[f.transitPlanet] || '#333' }}>
+                        {PLANET_SYMBOLS[f.transitPlanet]} {f.transitPlanet}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#888' }}>— {f.keyword} · touching {f.natalPlanets.join(', ')}</span>
+                    </div>
+                    <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>{f.narrative}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* House Cusp Events */}
+          {dailyBriefing.houseCuspEvents.length > 0 && (
+            <div style={{ marginBottom: '15px' }}>
+              <h4 style={{ marginBottom: '8px', color: '#8e44ad', fontSize: '14px' }}>House Cusp Crossings</h4>
+              {dailyBriefing.houseCuspEvents.map((h, i) => (
+                <div key={i} style={{ padding: '8px 12px', backgroundColor: '#FF8C0011', borderRadius: '6px', borderLeft: '4px solid #FF8C00', marginBottom: '6px', fontSize: '13px' }}>
+                  <strong style={{ color: PLANET_COLORS[h.transitPlanet] || '#333' }}>{PLANET_SYMBOLS[h.transitPlanet]} {h.transitPlanet}</strong> entering House {h.house}
+                  <div style={{ marginTop: '3px', color: '#555' }}>{h.message}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Tensions & Opportunities */}
+          <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
+            {dailyBriefing.tensions.length > 0 && (
+              <div style={{ flex: 1, padding: '10px', backgroundColor: '#e74c3c11', borderRadius: '8px', borderLeft: '4px solid #e74c3c' }}>
+                <strong style={{ color: '#e74c3c', fontSize: '13px' }}>Watch Out For</strong>
+                {dailyBriefing.tensions.map((t, i) => (
+                  <div key={i} style={{ fontSize: '12px', color: '#555', marginTop: '5px' }}>• {t}</div>
+                ))}
+              </div>
+            )}
+            {dailyBriefing.opportunities.length > 0 && (
+              <div style={{ flex: 1, padding: '10px', backgroundColor: '#27ae6011', borderRadius: '8px', borderLeft: '4px solid #27ae60' }}>
+                <strong style={{ color: '#27ae60', fontSize: '13px' }}>Lean Into</strong>
+                {dailyBriefing.opportunities.map((o, i) => (
+                  <div key={i} style={{ fontSize: '12px', color: '#555', marginTop: '5px' }}>• {o}</div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Top Focus */}
+          <div style={{ padding: '12px', backgroundColor: '#8e44ad11', borderRadius: '8px', borderLeft: '4px solid #8e44ad', fontSize: '14px' }}>
+            <strong style={{ color: '#8e44ad' }}>Today's #1 Focus:</strong> {dailyBriefing.topFocus}
+          </div>
+        </div>
+      )}
+
       {/* Expanded Day View */}
       {expandedDayIndex !== null && weekData[expandedDayIndex] && (
         <div style={{
@@ -1310,6 +1786,226 @@ export const SimpleNatalTransitCalendar: React.FC<SimpleNatalTransitCalendarProp
               }
             </button>
           )}
+
+          {/* Journal Section */}
+          {(() => {
+            const dateKey = getDateKey(weekData[expandedDayIndex].date);
+            const existingEntry = journalEntries[dateKey];
+            const isEditing = journalEditingDate === dateKey;
+
+            return (
+              <div style={{ marginTop: '25px', padding: '15px', backgroundColor: '#fffbf0', borderRadius: '8px', border: '2px solid #f0c040' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                  <h4 style={{ margin: 0, color: '#b8860b', fontSize: '16px' }}>
+                    📝 Personal Journal
+                  </h4>
+                  {existingEntry && !isEditing && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setJournalEditingDate(dateKey);
+                        setJournalDraft(existingEntry);
+                      }}
+                      style={{
+                        padding: '4px 12px', fontSize: '12px', cursor: 'pointer',
+                        backgroundColor: '#f0c040', color: '#333', border: 'none', borderRadius: '4px'
+                      }}
+                    >
+                      Edit
+                    </button>
+                  )}
+                </div>
+
+                {isEditing || !existingEntry ? (
+                  <>
+                    <textarea
+                      value={isEditing ? journalDraft : journalDraft}
+                      onChange={(e) => setJournalDraft(e.target.value)}
+                      onFocus={() => {
+                        if (!isEditing && !journalDraft) {
+                          setJournalEditingDate(dateKey);
+                          setJournalDraft(existingEntry || '');
+                        }
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                      placeholder="How was your day? What happened, how did you feel? Write freely — your entry will be mapped to today's astrological aspects..."
+                      style={{
+                        width: '100%', minHeight: '100px', padding: '12px', fontSize: '14px', lineHeight: '1.6',
+                        border: '1px solid #ddd', borderRadius: '6px', resize: 'vertical',
+                        fontFamily: 'inherit', backgroundColor: '#fff', boxSizing: 'border-box'
+                      }}
+                    />
+                    <div style={{ display: 'flex', gap: '8px', marginTop: '8px', justifyContent: 'flex-end' }}>
+                      {isEditing && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setJournalEditingDate(null);
+                            setJournalDraft('');
+                          }}
+                          style={{
+                            padding: '6px 16px', fontSize: '13px', cursor: 'pointer',
+                            backgroundColor: '#ccc', color: '#333', border: 'none', borderRadius: '4px'
+                          }}
+                        >
+                          Cancel
+                        </button>
+                      )}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          saveJournalEntry(dateKey, journalDraft);
+                          setJournalDraft('');
+                        }}
+                        style={{
+                          padding: '6px 16px', fontSize: '13px', cursor: 'pointer',
+                          backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px'
+                        }}
+                      >
+                        Save Entry
+                      </button>
+                      {existingEntry && isEditing && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            saveJournalEntry(dateKey, '');
+                            setJournalDraft('');
+                          }}
+                          style={{
+                            padding: '6px 16px', fontSize: '13px', cursor: 'pointer',
+                            backgroundColor: '#e74c3c', color: 'white', border: 'none', borderRadius: '4px'
+                          }}
+                        >
+                          Delete
+                        </button>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div
+                      style={{
+                        padding: '12px', backgroundColor: '#fff', borderRadius: '6px',
+                        border: '1px solid #e8d990', fontSize: '14px', lineHeight: '1.6',
+                        color: '#555', whiteSpace: 'pre-wrap'
+                      }}
+                    >
+                      {existingEntry}
+                    </div>
+
+                    {/* Cosmic Reflection & Duration Prediction */}
+                    {(() => {
+                      const dayData = weekData[expandedDayIndex];
+                      const dayInput = weekBriefingInputs?.[expandedDayIndex];
+                      if (!dayData || !dayInput || !existingEntry) return null;
+
+                      const matchResult = matchJournalToAspects(existingEntry, dayData.aspects, natalPlanetHouses, dayInput.transitPlanetHouses);
+                      if (!matchResult.bestMatch) return null;
+
+                      const reflection = generateJournalReflection(existingEntry, matchResult, natalPlanetHouses, dayInput.transitPlanetHouses);
+                      const duration = calculateJournalTransitDuration(matchResult.bestMatch.aspect, dayData.date);
+
+                      return (
+                        <div style={{ marginTop: '15px' }}>
+                          {/* Cosmic Reflection */}
+                          <div style={{
+                            padding: '15px', backgroundColor: '#f0f0ff', borderRadius: '8px',
+                            border: '2px solid #7c6dd8', marginBottom: '12px'
+                          }}>
+                            <h5 style={{ margin: '0 0 10px 0', color: '#5b4db5', fontSize: '15px' }}>
+                              ✨ Cosmic Reflection
+                            </h5>
+                            <p style={{ margin: '0 0 12px 0', fontSize: '14px', lineHeight: '1.7', color: '#444' }}>
+                              {reflection.cosmicNarrative}
+                            </p>
+
+                            {reflection.aspectBreakdown.length > 0 && (
+                              <div style={{ marginBottom: '12px' }}>
+                                <h6 style={{ margin: '0 0 6px 0', color: '#5b4db5', fontSize: '13px' }}>Active Transits Connected to Your Experience:</h6>
+                                {reflection.aspectBreakdown.map((line, i) => (
+                                  <p key={i} style={{ margin: '0 0 6px 0', fontSize: '13px', lineHeight: '1.6', color: '#555', paddingLeft: '10px', borderLeft: '3px solid #c4b8f0' }}>
+                                    {line}
+                                  </p>
+                                ))}
+                              </div>
+                            )}
+
+                            <div style={{
+                              padding: '10px', backgroundColor: '#e8e4f8', borderRadius: '6px', marginBottom: '10px'
+                            }}>
+                              <h6 style={{ margin: '0 0 4px 0', color: '#5b4db5', fontSize: '13px' }}>Growth Insight</h6>
+                              <p style={{ margin: 0, fontSize: '13px', lineHeight: '1.6', color: '#444' }}>
+                                {reflection.growthInsight}
+                              </p>
+                            </div>
+
+                            <p style={{
+                              margin: 0, fontSize: '13px', fontStyle: 'italic', color: '#7c6dd8',
+                              textAlign: 'center', padding: '8px 0 0'
+                            }}>
+                              {reflection.affirmation}
+                            </p>
+                          </div>
+
+                          {/* Duration Prediction */}
+                          <div style={{
+                            padding: '15px', backgroundColor: '#f0faf0', borderRadius: '8px',
+                            border: '2px solid #4CAF50'
+                          }}>
+                            <h5 style={{ margin: '0 0 10px 0', color: '#2e7d32', fontSize: '15px' }}>
+                              ⏳ Duration & Timing
+                            </h5>
+                            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '10px' }}>
+                              <span style={{
+                                padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 600,
+                                backgroundColor: duration.intensity === 'peak' ? '#ff9800' : duration.intensity === 'building' ? '#2196F3' : '#9e9e9e',
+                                color: 'white'
+                              }}>
+                                {duration.phase === 'exact' ? '● At Peak' : duration.phase === 'applying' ? '▲ Building' : '▼ Fading'}
+                              </span>
+                              <span style={{
+                                padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 600,
+                                backgroundColor: '#e8f5e9', color: '#2e7d32'
+                              }}>
+                                ~{duration.remainingDays > 60 ? Math.round(duration.remainingDays / 30) + ' months' : duration.remainingDays + ' days'} remaining
+                              </span>
+                              <span style={{
+                                padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: 600,
+                                backgroundColor: '#fff3e0', color: '#e65100'
+                              }}>
+                                {duration.planet} {duration.aspect} {duration.natalPlanet}
+                              </span>
+                            </div>
+                            <p style={{ margin: '0 0 8px 0', fontSize: '13px', lineHeight: '1.6', color: '#444' }}>
+                              {duration.description}
+                            </p>
+                            <p style={{ margin: 0, fontSize: '13px', lineHeight: '1.6', color: '#555', fontStyle: 'italic' }}>
+                              {duration.peakDescription}
+                            </p>
+                          </div>
+
+                          {/* Matched Themes */}
+                          {matchResult.bestMatch.matchedKeywords.length > 0 && (
+                            <div style={{ marginTop: '10px', display: 'flex', flexWrap: 'wrap', gap: '6px', alignItems: 'center' }}>
+                              <span style={{ fontSize: '12px', color: '#888' }}>Matched themes:</span>
+                              {matchResult.bestMatch.matchedKeywords.map((kw, i) => (
+                                <span key={i} style={{
+                                  padding: '2px 8px', borderRadius: '10px', fontSize: '11px',
+                                  backgroundColor: '#e8e4f8', color: '#5b4db5'
+                                }}>
+                                  {kw}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
+                  </>
+                )}
+              </div>
+            );
+          })()}
         </div>
       )}
 

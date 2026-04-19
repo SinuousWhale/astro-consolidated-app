@@ -9814,26 +9814,163 @@ interface DailyActivation {
   orb: number;
 }
 
-interface DailySummarySection {
+interface DailyFocusArea {
   house: number;
-  domain: string;
-  activations: {
-    natalPlanet: string;
-    isHard: boolean;
-    transitPair: string;
-    transitTheme: string;
-    bullets: string[];
-  }[];
+  domainLabel: string;
+  narrative: string;
+  natalPlanets: string[];
+  hasHard: boolean;
+  hasSoft: boolean;
+}
+
+export interface LifeEventAlert {
+  type: 'money' | 'love' | 'career' | 'property' | 'travel' | 'breakthrough';
+  emoji: string;
+  label: string;
+  message: string;
 }
 
 export interface DailySummary {
   intensity: 'Quiet' | 'Active' | 'Intense' | 'Pivotal';
   intensityScore: number;
   overview: string;
-  focusAreas: DailySummarySection[];
+  focusAreas: DailyFocusArea[];
   tensions: string[];
   opportunities: string[];
   topFocus: string;
+  lifeEventAlerts: LifeEventAlert[];
+}
+
+// House domain short labels for focus area headers
+function getHouseDomainLabel(house: number): string {
+  const labels: Record<number, string> = {
+    1: 'Identity & Appearance',
+    2: 'Money & Self-Worth',
+    3: 'Communication & Learning',
+    4: 'Home & Family',
+    5: 'Romance & Creativity',
+    6: 'Work & Health',
+    7: 'Partnerships & Marriage',
+    8: 'Shared Finances & Transformation',
+    9: 'Travel & Higher Learning',
+    10: 'Career & Public Life',
+    11: 'Friendships & Future Goals',
+    12: 'Spirituality & the Unconscious'
+  };
+  return labels[house] || `${house}th House Matters`;
+}
+
+// Detect life event alerts based on house + planet + transit combinations
+function detectLifeEventAlerts(activations: DailyActivation[]): LifeEventAlert[] {
+  const alerts: LifeEventAlert[] = [];
+  const hardAspects = ['Square', 'Opposition'];
+  const seen = new Set<string>();
+
+  for (const act of activations) {
+    const isHard = hardAspects.includes(act.natalAspectType);
+    const transitKey = [act.transit1Planet, act.transit2Planet].sort().join('-');
+    const planets = [act.natalPlanet, act.transit1Planet, act.transit2Planet];
+
+    // --- MONEY ---
+    const moneyHouse = act.natalHouse === 2 || act.natalHouse === 8;
+    const moneyPlanets = planets.some(p => ['Venus', 'Jupiter'].includes(p));
+    const moneyTransit = ['Jupiter-Venus', 'Uranus-Venus', 'Jupiter-Pluto', 'Pluto-Venus'].includes(transitKey) ||
+      (transitKey.includes('Jupiter') && act.natalPlanet === 'Venus') ||
+      (transitKey.includes('Venus') && act.natalPlanet === 'Jupiter');
+    if ((moneyHouse && moneyPlanets) || moneyTransit) {
+      if (!seen.has('money')) {
+        seen.add('money');
+        if (isHard) {
+          alerts.push({ type: 'money', emoji: '💰', label: 'Financial Shake-Up',
+            message: 'Financial shifts possible — unexpected expenses or income changes. Review budgets and avoid impulsive spending.' });
+        } else {
+          alerts.push({ type: 'money', emoji: '💰', label: 'Money Opportunity',
+            message: 'Financial flow is favored — a raise, new income stream, or lucky windfall could appear. Be open to unexpected sources of abundance.' });
+        }
+      }
+    }
+
+    // --- LOVE ---
+    const loveHouse = act.natalHouse === 5 || act.natalHouse === 7;
+    const lovePlanets = planets.some(p => ['Venus', 'Moon'].includes(p));
+    const loveTransit = ['Mars-Venus', 'Neptune-Venus', 'Jupiter-Venus', 'Moon-Venus', 'North Node-Venus'].includes(transitKey) ||
+      (act.natalPlanet === 'Venus' && (loveHouse || transitKey.includes('Mars') || transitKey.includes('Neptune')));
+    if ((loveHouse && lovePlanets) || loveTransit) {
+      if (!seen.has('love')) {
+        seen.add('love');
+        if (isHard) {
+          alerts.push({ type: 'love', emoji: '❤️', label: 'Relationship Crossroads',
+            message: 'Romantic tension or a relationship turning point — important conversations may be needed. Honest communication is key.' });
+        } else {
+          alerts.push({ type: 'love', emoji: '❤️', label: 'Love in the Air',
+            message: 'Romantic energy is heightened — a new connection, deepening of an existing bond, or a meaningful encounter could unfold.' });
+        }
+      }
+    }
+
+    // --- CAREER ---
+    const careerHouse = act.natalHouse === 10 || act.natalHouse === 6;
+    const careerPlanets = planets.some(p => ['Saturn', 'Sun', 'Jupiter', 'Mars'].includes(p));
+    const careerTransit = ['Jupiter-Saturn', 'Jupiter-Sun', 'Saturn-Sun', 'Jupiter-Mars', 'Pluto-Saturn', 'Mars-Saturn'].includes(transitKey);
+    if ((careerHouse && careerPlanets) || (careerTransit && careerHouse)) {
+      if (!seen.has('career')) {
+        seen.add('career');
+        if (isHard) {
+          alerts.push({ type: 'career', emoji: '🏆', label: 'Career Pressure',
+            message: 'Professional challenges demand attention — a test of your authority, restructuring at work, or a needed pivot in your career direction.' });
+        } else {
+          alerts.push({ type: 'career', emoji: '🏆', label: 'Career Advancement',
+            message: 'Professional recognition or promotion energy is active — put yourself forward, pitch ideas, and take on visible responsibilities.' });
+        }
+      }
+    }
+
+    // --- PROPERTY ---
+    const propertyHouse = act.natalHouse === 4;
+    const propertyPlanets = planets.some(p => ['Saturn', 'Jupiter', 'Moon'].includes(p));
+    const propertyTransit = transitKey.includes('Saturn') || transitKey.includes('Jupiter');
+    if (propertyHouse && (propertyPlanets || propertyTransit)) {
+      if (!seen.has('property')) {
+        seen.add('property');
+        if (isHard) {
+          alerts.push({ type: 'property', emoji: '🏠', label: 'Home Changes',
+            message: 'Shifts in your living situation — renovations, family dynamics changing, or unexpected housing matters requiring attention.' });
+        } else {
+          alerts.push({ type: 'property', emoji: '🏠', label: 'Home Opportunity',
+            message: 'Favorable energy for property matters — house hunting, upgrading your living space, or improving family dynamics.' });
+        }
+      }
+    }
+
+    // --- TRAVEL ---
+    const travelHouse = act.natalHouse === 9 || act.natalHouse === 3;
+    const travelPlanets = planets.some(p => ['Jupiter', 'Mercury', 'Uranus'].includes(p));
+    if (travelHouse && travelPlanets) {
+      if (!seen.has('travel')) {
+        seen.add('travel');
+        alerts.push({ type: 'travel', emoji: '✈️', label: 'Travel Window',
+          message: act.natalHouse === 9
+            ? 'International or long-distance travel energy is active — opportunities abroad, cross-cultural connections, or educational journeys may arise.'
+            : 'Short trips and local exploration are favored — day trips, neighborhood discoveries, or spontaneous weekend getaways.' });
+      }
+    }
+
+    // --- BREAKTHROUGH ---
+    const hasUranus = planets.includes('Uranus');
+    const hasPluto = planets.includes('Pluto');
+    const breakthroughTransit = transitKey.includes('Uranus') || transitKey.includes('Pluto');
+    if ((hasUranus || hasPluto) && breakthroughTransit && !isHard) {
+      if (!seen.has('breakthrough')) {
+        seen.add('breakthrough');
+        alerts.push({ type: 'breakthrough', emoji: '⚡', label: 'Breakthrough Moment',
+          message: hasUranus
+            ? 'Sudden insight, liberation, or unexpected opportunity — something could shift quickly and permanently. Stay alert and say yes to the unusual.'
+            : 'Deep transformation is available — a psychological breakthrough, power shift, or phoenix-like renewal in a key area of your life.' });
+      }
+    }
+  }
+
+  return alerts;
 }
 
 export function generateDailySummary(activations: DailyActivation[]): DailySummary {
@@ -9845,13 +9982,13 @@ export function generateDailySummary(activations: DailyActivation[]): DailySumma
       focusAreas: [],
       tensions: [],
       opportunities: [],
-      topFocus: 'Take it easy — the cosmos is giving you a breather.'
+      topFocus: 'Take it easy — the cosmos is giving you a breather.',
+      lifeEventAlerts: []
     };
   }
 
   const hardAspects = ['Square', 'Opposition'];
   const numHard = activations.filter(a => hardAspects.includes(a.natalAspectType)).length;
-  const numSoft = activations.length - numHard;
 
   // --- Intensity ---
   let intensity: DailySummary['intensity'];
@@ -9866,64 +10003,105 @@ export function generateDailySummary(activations: DailyActivation[]): DailySumma
     intensity = 'Pivotal'; intensityScore = 4;
   }
 
-  // --- Group by natal house ---
-  const houseGroups: Record<number, DailySummarySection> = {};
+  // --- Group by natal house, then by transit pair within each house ---
+  const houseMap: Record<number, {
+    acts: DailyActivation[];
+    transitPairs: Record<string, { planets: string[]; aspects: string[]; isHard: boolean[]; theme: string; hardKw: string; softKw: string }>;
+  }> = {};
 
   for (const act of activations) {
-    if (!houseGroups[act.natalHouse]) {
-      const houseInfo = getHouseManifestations(act.natalHouse);
-      houseGroups[act.natalHouse] = {
-        house: act.natalHouse,
-        domain: houseInfo.domain,
-        activations: []
+    if (!houseMap[act.natalHouse]) {
+      houseMap[act.natalHouse] = { acts: [], transitPairs: {} };
+    }
+    houseMap[act.natalHouse].acts.push(act);
+
+    const pairLabel = `${act.transit1Planet}-${act.transit2Planet}`;
+    if (!houseMap[act.natalHouse].transitPairs[pairLabel]) {
+      const tp = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
+      houseMap[act.natalHouse].transitPairs[pairLabel] = {
+        planets: [], aspects: [], isHard: [],
+        theme: tp.theme, hardKw: tp.hardKeyword, softKw: tp.softKeyword
       };
     }
+    const group = houseMap[act.natalHouse].transitPairs[pairLabel];
+    if (!group.planets.includes(act.natalPlanet)) {
+      group.planets.push(act.natalPlanet);
+      group.aspects.push(act.natalAspectType);
+      group.isHard.push(hardAspects.includes(act.natalAspectType));
+    }
+  }
 
-    const isHard = hardAspects.includes(act.natalAspectType);
-    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
-    const natalChar = getNatalPlanetCharacter(act.natalPlanet);
-    const transitPairLabel = `${act.transit1Planet}-${act.transit2Planet}`;
+  // --- Build narrative focus areas ---
+  const focusAreas: DailyFocusArea[] = [];
 
-    const bullets: string[] = [];
-    if (isHard) {
-      bullets.push(
-        `Your ${natalChar.keyword} (${act.natalPlanet}) is challenged by ${transitPair.hardKeyword}`
-      );
-      if (act.natalAspectType === 'Square') {
-        bullets.push(`Friction demands action — you can't ignore this, but forcing it may backfire`);
+  for (const [houseStr, data] of Object.entries(houseMap)) {
+    const house = parseInt(houseStr);
+    const domainLabel = getHouseDomainLabel(house);
+    const allPlanets = [...new Set(data.acts.map(a => a.natalPlanet))];
+    const hasHard = data.acts.some(a => hardAspects.includes(a.natalAspectType));
+    const hasSoft = data.acts.some(a => !hardAspects.includes(a.natalAspectType));
+
+    // Build narrative paragraph per house
+    const sentences: string[] = [];
+    const pairEntries = Object.entries(data.transitPairs);
+
+    for (const [pairLabel, group] of pairEntries) {
+      const planetList = group.planets.length === 1
+        ? `Your natal ${group.planets[0]}`
+        : group.planets.length === 2
+        ? `Your natal ${group.planets[0]} and ${group.planets[1]} are both`
+        : `Your natal ${group.planets.slice(0, -1).join(', ')} and ${group.planets[group.planets.length - 1]} are all`;
+      const verb = group.planets.length === 1 ? 'is' : '';
+
+      const anyHard = group.isHard.some(h => h);
+      const anySoft = group.isHard.some(h => !h);
+
+      if (group.planets.length === 1) {
+        const char = getNatalPlanetCharacter(group.planets[0]);
+        if (anyHard && anySoft) {
+          sentences.push(`${planetList} ${verb} activated by today's ${pairLabel} energy — your ${char.keyword} experiences both challenge and support from ${group.theme}. ${group.hardKw.charAt(0).toUpperCase() + group.hardKw.slice(1)} clashes with ${group.softKw}, creating a nuanced dynamic.`);
+        } else if (anyHard) {
+          sentences.push(`${planetList} ${verb} challenged by today's ${pairLabel} energy. ${group.hardKw.charAt(0).toUpperCase() + group.hardKw.slice(1)} puts pressure on your ${char.keyword} — stay strategic, not reactive.`);
+        } else {
+          sentences.push(`${planetList} ${verb} harmoniously connected to the ${pairLabel} transit. ${group.softKw.charAt(0).toUpperCase() + group.softKw.slice(1)} enhances your ${char.keyword} — lean into this energy.`);
+        }
       } else {
-        bullets.push(`Opposing forces pull you in two directions — find the balance point rather than choosing sides`);
-      }
-    } else {
-      bullets.push(
-        `Your ${natalChar.keyword} (${act.natalPlanet}) benefits from ${transitPair.softKeyword}`
-      );
-      if (act.natalAspectType === 'Trine') {
-        bullets.push(`Natural flow — this works easily if you show up and engage with it`);
-      } else if (act.natalAspectType === 'Sextile') {
-        bullets.push(`Opportunity knocking — take initiative to activate this potential`);
-      } else {
-        bullets.push(`Direct alignment — this energy amplifies your natal strengths`);
+        // Multiple planets hitting same transit pair
+        const keywords = group.planets.map(p => `${p} (${getNatalPlanetCharacter(p).keyword})`);
+        const keywordList = keywords.length === 2 ? keywords.join(' and ') : keywords.slice(0, -1).join(', ') + ' and ' + keywords[keywords.length - 1];
+
+        if (anyHard && anySoft) {
+          sentences.push(`${planetList} activated by today's ${pairLabel} energy. Your ${keywordList} respond differently — some face friction from ${group.hardKw} while others benefit from ${group.softKw}.`);
+        } else if (anyHard) {
+          sentences.push(`${planetList} activated by today's ${pairLabel} energy. Both your ${keywordList} face pressure from ${group.hardKw} — this house demands careful navigation.`);
+        } else {
+          sentences.push(`${planetList} activated by today's ${pairLabel} energy. Your ${keywordList} all benefit from ${group.softKw} — a strong day for this area of life.`);
+        }
       }
     }
 
-    houseGroups[act.natalHouse].activations.push({
-      natalPlanet: act.natalPlanet,
-      isHard,
-      transitPair: transitPairLabel,
-      transitTheme: transitPair.theme,
-      bullets
+    focusAreas.push({
+      house,
+      domainLabel,
+      narrative: sentences.join(' '),
+      natalPlanets: allPlanets,
+      hasHard,
+      hasSoft
     });
   }
 
-  // Sort focus areas by number of activations (most active house first)
-  const focusAreas = Object.values(houseGroups).sort((a, b) => b.activations.length - a.activations.length);
+  // Sort by number of activations (most active house first)
+  focusAreas.sort((a, b) => {
+    const aCount = houseMap[a.house].acts.length;
+    const bCount = houseMap[b.house].acts.length;
+    return bCount - aCount;
+  });
 
   // --- Overview sentence ---
   const topHouses = focusAreas.slice(0, 3);
   const houseLabels = topHouses.map(h => {
     const ord = `${h.house}${getOrdinalSuffix(h.house)}`;
-    return `${ord} house (${h.domain.split(',')[0].trim()})`;
+    return `${ord} house (${h.domainLabel.split('&')[0].trim()})`;
   });
 
   let overviewFocus: string;
@@ -9943,36 +10121,59 @@ export function generateDailySummary(activations: DailyActivation[]): DailySumma
     'A landmark day — major themes are converging. Pay close attention.'
   }`;
 
-  // --- Tensions (hard aspects) ---
+  // --- Tensions (hard aspects, deduplicated by transit pair + house) ---
   const tensions: string[] = [];
+  const seenTensions = new Set<string>();
   for (const act of activations) {
     if (!hardAspects.includes(act.natalAspectType)) continue;
-    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
-    const houseInfo = getHouseManifestations(act.natalHouse);
-    const ord = `${act.natalHouse}${getOrdinalSuffix(act.natalHouse)}`;
+    const tensionKey = `${act.natalHouse}-${act.transit1Planet}-${act.transit2Planet}`;
+    if (seenTensions.has(tensionKey)) continue;
+    seenTensions.add(tensionKey);
 
+    // Collect all natal planets hitting this transit pair in this house
+    const sameGroup = activations.filter(a =>
+      a.natalHouse === act.natalHouse &&
+      a.transit1Planet === act.transit1Planet &&
+      a.transit2Planet === act.transit2Planet &&
+      hardAspects.includes(a.natalAspectType)
+    );
+    const planetNames = [...new Set(sameGroup.map(a => a.natalPlanet))];
+    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
+
+    const planetStr = planetNames.length === 1 ? planetNames[0] : planetNames.join(' & ');
     tensions.push(
-      `${act.natalPlanet} in ${ord} house ${act.natalAspectType.toLowerCase()} ${act.transit1Planet}-${act.transit2Planet}: ${transitPair.hardKeyword} clashes with your ${houseInfo.domain.split(',')[0].trim()} — ${
-        act.natalAspectType === 'Square'
+      `${planetStr} ${sameGroup[0].natalAspectType.toLowerCase()} ${act.transit1Planet}-${act.transit2Planet}: ${transitPair.hardKeyword} — ${
+        sameGroup[0].natalAspectType === 'Square'
           ? `don't force solutions, work with the friction`
-          : `acknowledge both sides instead of suppressing one`
+          : `find the balance point rather than choosing sides`
       }`
     );
   }
 
-  // --- Opportunities (soft aspects) ---
+  // --- Opportunities (soft aspects, deduplicated by transit pair + house) ---
   const opportunities: string[] = [];
+  const seenOpps = new Set<string>();
   for (const act of activations) {
     if (hardAspects.includes(act.natalAspectType)) continue;
-    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
-    const houseInfo = getHouseManifestations(act.natalHouse);
-    const ord = `${act.natalHouse}${getOrdinalSuffix(act.natalHouse)}`;
+    const oppKey = `${act.natalHouse}-${act.transit1Planet}-${act.transit2Planet}`;
+    if (seenOpps.has(oppKey)) continue;
+    seenOpps.add(oppKey);
 
+    const sameGroup = activations.filter(a =>
+      a.natalHouse === act.natalHouse &&
+      a.transit1Planet === act.transit1Planet &&
+      a.transit2Planet === act.transit2Planet &&
+      !hardAspects.includes(a.natalAspectType)
+    );
+    const planetNames = [...new Set(sameGroup.map(a => a.natalPlanet))];
+    const transitPair = getTransitPairTheme(act.transit1Planet, act.transit2Planet);
+
+    const planetStr = planetNames.length === 1 ? planetNames[0] : planetNames.join(' & ');
     opportunities.push(
-      `${act.natalPlanet} in ${ord} house ${act.natalAspectType.toLowerCase()} ${act.transit1Planet}-${act.transit2Planet}: ${transitPair.softKeyword} supports your ${houseInfo.domain.split(',')[0].trim()} — ${
-        act.natalAspectType === 'Trine'
+      `${planetStr} ${sameGroup[0].natalAspectType.toLowerCase()} ${act.transit1Planet}-${act.transit2Planet}: ${transitPair.softKeyword} — ${
+        sameGroup[0].natalAspectType === 'Trine'
           ? `this flows naturally, lean into it`
-          : act.natalAspectType === 'Sextile'
+          : sameGroup[0].natalAspectType === 'Sextile'
           ? `take the initiative to activate this`
           : `direct alignment with your strengths`
       }`
@@ -9984,10 +10185,12 @@ export function generateDailySummary(activations: DailyActivation[]): DailySumma
   const tightestPair = getTransitPairTheme(tightest.transit1Planet, tightest.transit2Planet);
   const tightestChar = getNatalPlanetCharacter(tightest.natalPlanet);
   const tightestIsHard = hardAspects.includes(tightest.natalAspectType);
-  const tightestOrd = `${tightest.natalHouse}${getOrdinalSuffix(tightest.natalHouse)}`;
   const topFocus = tightestIsHard
-    ? `Your most exact activation (${tightest.orb.toFixed(1)}° orb) is ${tightest.natalPlanet} ${tightest.natalAspectType.toLowerCase()} ${tightest.transit1Planet}-${tightest.transit2Planet}. Navigate ${tightestPair.domain} carefully — your ${tightestOrd} house ${tightestChar.keyword} is under maximum pressure.`
-    : `Your most exact activation (${tightest.orb.toFixed(1)}° orb) is ${tightest.natalPlanet} ${tightest.natalAspectType.toLowerCase()} ${tightest.transit1Planet}-${tightest.transit2Planet}. Prioritize ${tightestPair.domain} today — your ${tightestOrd} house ${tightestChar.keyword} is perfectly positioned to benefit.`;
+    ? `Your tightest activation (${tightest.orb.toFixed(1)}° orb) is ${tightest.natalPlanet}-${tightest.transit1Planet}/${tightest.transit2Planet}. Navigate ${tightestPair.domain} carefully — your ${tightestChar.keyword} is under maximum pressure.`
+    : `Your tightest activation (${tightest.orb.toFixed(1)}° orb) is ${tightest.natalPlanet}-${tightest.transit1Planet}/${tightest.transit2Planet}. Prioritize ${tightestPair.domain} today — your ${tightestChar.keyword} is perfectly positioned to benefit.`;
+
+  // --- Life event alerts ---
+  const lifeEventAlerts = detectLifeEventAlerts(activations);
 
   return {
     intensity,
@@ -9996,7 +10199,8 @@ export function generateDailySummary(activations: DailyActivation[]): DailySumma
     focusAreas,
     tensions,
     opportunities,
-    topFocus
+    topFocus,
+    lifeEventAlerts
   };
 }
 
@@ -10025,16 +10229,34 @@ interface WeeklyTheme {
   hardCount: number;
   softCount: number;
   summary: string;
+  isDominant: boolean;
 }
 
 interface WeeklyHouseSpotlight {
   house: number;
-  domain: string;
+  domainLabel: string;
   totalActivations: number;
   natalPlanets: string[];
   hardCount: number;
   softCount: number;
   arc: string;
+}
+
+export interface WeeklyLifeEventAlert {
+  type: 'money' | 'love' | 'career' | 'property' | 'travel' | 'breakthrough';
+  emoji: string;
+  label: string;
+  message: string;
+  daysActive: number;
+  peakDay: string;
+}
+
+interface WeeklyKeyDay {
+  label: string;
+  dayName: string;
+  dateLabel: string;
+  description: string;
+  type: 'power' | 'caution' | 'rest';
 }
 
 export interface WeeklySummary {
@@ -10046,14 +10268,15 @@ export interface WeeklySummary {
   houseSpotlights: WeeklyHouseSpotlight[];
   biggestChallenge: string;
   biggestOpportunity: string;
-  actionPlan: { earlyWeek: string; midWeek: string; weekend: string };
+  weeklyAlerts: WeeklyLifeEventAlert[];
+  keyDays: WeeklyKeyDay[];
 }
 
 export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
   const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const hardAspects = ['Square', 'Opposition'];
 
-  // Generate daily summaries for intensity data
+  // Generate daily summaries for intensity data + life event alerts
   const dailySummaries = days.map(d => generateDailySummary(d.activations));
 
   // --- Daily intensities ---
@@ -10080,6 +10303,66 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
   const totalActivations = allActivations.length;
   const totalHard = allActivations.filter(a => hardAspects.includes(a.natalAspectType)).length;
 
+  // --- Weekly Life Event Radar (aggregate daily alerts across the week) ---
+  const alertDayMap: Record<string, { alert: LifeEventAlert; days: Set<number>; peakScore: number; peakDayIdx: number }> = {};
+  dailySummaries.forEach((ds, dayIdx) => {
+    ds.lifeEventAlerts.forEach(alert => {
+      if (!alertDayMap[alert.type]) {
+        alertDayMap[alert.type] = { alert, days: new Set(), peakScore: 0, peakDayIdx: dayIdx };
+      }
+      alertDayMap[alert.type].days.add(dayIdx);
+      // Track which day has the most activations as "peak" for this alert
+      if (ds.intensityScore > alertDayMap[alert.type].peakScore) {
+        alertDayMap[alert.type].peakScore = ds.intensityScore;
+        alertDayMap[alert.type].peakDayIdx = dayIdx;
+      }
+    });
+  });
+
+  const weeklyAlertMessages: Record<string, { hard: string; soft: string }> = {
+    money: {
+      hard: 'Financial turbulence runs through the week — budget carefully, avoid impulsive purchases, and watch for unexpected expenses.',
+      soft: 'Financial energy builds this week — a raise, new income stream, or lucky windfall could appear. Best window for salary talks or investments.'
+    },
+    love: {
+      hard: 'Romantic tension surfaces this week — relationship conversations may be needed. Use honest communication rather than avoidance.',
+      soft: 'Love energy is heightened this week — new connections, deepening bonds, or meaningful encounters are likely. Put yourself out there.'
+    },
+    career: {
+      hard: 'Professional pressure builds this week — authority tests, restructuring, or a needed career pivot. Stay strategic and adaptable.',
+      soft: 'Career advancement energy is strong this week — seek recognition, pitch ideas, and take on visible responsibilities.'
+    },
+    property: {
+      hard: 'Home and family dynamics shift this week — housing matters, renovations, or family changes require attention.',
+      soft: 'Favorable week for property matters — house hunting, home improvements, or strengthening family foundations.'
+    },
+    travel: {
+      hard: 'Travel plans may face disruptions — double-check bookings and stay flexible with itineraries.',
+      soft: 'Travel energy is active — opportunities for journeys, cross-cultural connections, or educational exploration.'
+    },
+    breakthrough: {
+      hard: 'Intense transformation energy is at work — change may feel forced but is ultimately liberating.',
+      soft: 'Breakthrough potential peaks this week — sudden insights, liberation, or unexpected opportunities that shift things permanently.'
+    }
+  };
+
+  const weeklyAlerts: WeeklyLifeEventAlert[] = Object.entries(alertDayMap)
+    .filter(([_, data]) => data.days.size >= 2) // Only show if active 2+ days
+    .map(([type, data]) => {
+      const isHard = data.alert.label.includes('Shake') || data.alert.label.includes('Crossroads') || data.alert.label.includes('Pressure') || data.alert.label.includes('Changes');
+      const msgs = weeklyAlertMessages[type];
+      const peakDayName = dayNames[data.peakDayIdx] || 'this week';
+      return {
+        type: type as WeeklyLifeEventAlert['type'],
+        emoji: data.alert.emoji,
+        label: `${data.alert.emoji} ${type.charAt(0).toUpperCase() + type.slice(1)} Week`,
+        message: `${isHard ? msgs.hard : msgs.soft} Active across ${data.days.size} days — peaks on ${peakDayName}.`,
+        daysActive: data.days.size,
+        peakDay: peakDayName
+      };
+    })
+    .sort((a, b) => b.daysActive - a.daysActive);
+
   // --- Major themes (transit pairs across the week) ---
   const transitPairMap: Record<string, { days: Set<number>; houses: Set<number>; hard: number; soft: number }> = {};
   for (const act of allActivations) {
@@ -10096,7 +10379,12 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
     }
   }
 
-  const majorThemes: WeeklyTheme[] = Object.entries(transitPairMap)
+  const sortedPairs = Object.entries(transitPairMap)
+    .sort((a, b) => b[1].days.size - a[1].days.size || (b[1].hard + b[1].soft) - (a[1].hard + a[1].soft));
+  const dominantPair = sortedPairs.length > 0 ? sortedPairs[0][0] : '';
+
+  const majorThemes: WeeklyTheme[] = sortedPairs
+    .slice(0, 3)
     .map(([pair, data]) => {
       const pairTheme = getTransitPairTheme(pair.split('-')[0], pair.split('-')[1]);
       const housesArr = Array.from(data.houses);
@@ -10105,11 +10393,11 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
 
       let summary: string;
       if (data.hard > data.soft) {
-        summary = `${pair} energy creates ${pairTheme.hardKeyword} across your ${houseLabels}${moreHouses} houses over ${data.days.size} day${data.days.size > 1 ? 's' : ''} — expect friction in ${pairTheme.domain}`;
+        summary = `${pairTheme.hardKeyword.charAt(0).toUpperCase() + pairTheme.hardKeyword.slice(1)} ripples through your ${houseLabels}${moreHouses} houses over ${data.days.size} days — expect friction in ${pairTheme.domain}.`;
       } else if (data.soft > data.hard) {
-        summary = `${pair} energy brings ${pairTheme.softKeyword} to your ${houseLabels}${moreHouses} houses over ${data.days.size} day${data.days.size > 1 ? 's' : ''} — opportunities in ${pairTheme.domain}`;
+        summary = `${pairTheme.softKeyword.charAt(0).toUpperCase() + pairTheme.softKeyword.slice(1)} flows through your ${houseLabels}${moreHouses} houses over ${data.days.size} days — lean into ${pairTheme.domain}.`;
       } else {
-        summary = `${pair} energy is mixed across your ${houseLabels}${moreHouses} houses over ${data.days.size} day${data.days.size > 1 ? 's' : ''} — both challenges and opportunities in ${pairTheme.domain}`;
+        summary = `Mixed energy across your ${houseLabels}${moreHouses} houses over ${data.days.size} days — both challenge and opportunity in ${pairTheme.domain}.`;
       }
 
       return {
@@ -10119,13 +10407,12 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
         housesActivated: housesArr,
         hardCount: data.hard,
         softCount: data.soft,
-        summary
+        summary,
+        isDominant: pair === dominantPair
       };
-    })
-    .sort((a, b) => b.daysActive - a.daysActive || (b.hardCount + b.softCount) - (a.hardCount + a.softCount))
-    .slice(0, 3);
+    });
 
-  // --- Houses under the spotlight ---
+  // --- Houses under the spotlight (more concise) ---
   const houseMap: Record<number, { planets: Set<string>; hard: number; soft: number; days: Set<number> }> = {};
   for (const act of allActivations) {
     if (!houseMap[act.natalHouse]) {
@@ -10143,22 +10430,22 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
   const houseSpotlights: WeeklyHouseSpotlight[] = Object.entries(houseMap)
     .map(([houseStr, data]) => {
       const house = parseInt(houseStr);
-      const houseInfo = getHouseManifestations(house);
+      const domainLabel = getHouseDomainLabel(house);
       const planetsList = Array.from(data.planets);
       const total = data.hard + data.soft;
 
       let arc: string;
       if (data.hard > data.soft * 2) {
-        arc = `A challenging week for your ${houseInfo.domain.split(',')[0].trim()} — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'are' : 'is'} under pressure across ${data.days.size} days. Growth requires confronting discomfort here.`;
+        arc = `Challenging — ${planetsList.join(', ')} under pressure across ${data.days.size} days. Growth through discomfort.`;
       } else if (data.soft > data.hard * 2) {
-        arc = `A blessed week for your ${houseInfo.domain.split(',')[0].trim()} — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'receive' : 'receives'} support across ${data.days.size} days. Lean in and take advantage.`;
+        arc = `Blessed — ${planetsList.join(', ')} supported across ${data.days.size} days. Lean in and take advantage.`;
       } else {
-        arc = `A dynamic week for your ${houseInfo.domain.split(',')[0].trim()} — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'face' : 'faces'} both tests and rewards across ${data.days.size} days. Stay alert for both.`;
+        arc = `Dynamic — ${planetsList.join(', ')} ${planetsList.length > 1 ? 'face' : 'faces'} both tests and rewards across ${data.days.size} days.`;
       }
 
       return {
         house,
-        domain: houseInfo.domain,
+        domainLabel,
         totalActivations: total,
         natalPlanets: planetsList,
         hardCount: data.hard,
@@ -10177,8 +10464,7 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
     const hPair = getTransitPairTheme(tightestHard.transit1Planet, tightestHard.transit2Planet);
     const hChar = getNatalPlanetCharacter(tightestHard.natalPlanet);
     const hDay = dayNames[tightestHard.dayIdx] || 'this week';
-    const hOrd = `${tightestHard.natalHouse}${getOrdinalSuffix(tightestHard.natalHouse)}`;
-    biggestChallenge = `${tightestHard.natalPlanet} ${tightestHard.natalAspectType.toLowerCase()} ${tightestHard.transit1Planet}-${tightestHard.transit2Planet} peaks on ${hDay} (${tightestHard.orb.toFixed(1)}° orb). Your ${hOrd} house ${hChar.keyword} clashes with ${hPair.hardKeyword}. Don't force outcomes — work with the tension rather than against it.`;
+    biggestChallenge = `${tightestHard.natalPlanet} ${tightestHard.natalAspectType.toLowerCase()} ${tightestHard.transit1Planet}-${tightestHard.transit2Planet} peaks on ${hDay} (${tightestHard.orb.toFixed(1)}° orb). Your ${hChar.keyword} clashes with ${hPair.hardKeyword}. Don't force outcomes — work with the tension.`;
   }
 
   // --- Biggest opportunity (tightest soft aspect) ---
@@ -10189,8 +10475,7 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
     const sPair = getTransitPairTheme(tightestSoft.transit1Planet, tightestSoft.transit2Planet);
     const sChar = getNatalPlanetCharacter(tightestSoft.natalPlanet);
     const sDay = dayNames[tightestSoft.dayIdx] || 'this week';
-    const sOrd = `${tightestSoft.natalHouse}${getOrdinalSuffix(tightestSoft.natalHouse)}`;
-    biggestOpportunity = `${tightestSoft.natalPlanet} ${tightestSoft.natalAspectType.toLowerCase()} ${tightestSoft.transit1Planet}-${tightestSoft.transit2Planet} peaks on ${sDay} (${tightestSoft.orb.toFixed(1)}° orb). Your ${sOrd} house ${sChar.keyword} is perfectly aligned with ${sPair.softKeyword}. Take initiative — this is your green light.`;
+    biggestOpportunity = `${tightestSoft.natalPlanet} ${tightestSoft.natalAspectType.toLowerCase()} ${tightestSoft.transit1Planet}-${tightestSoft.transit2Planet} peaks on ${sDay} (${tightestSoft.orb.toFixed(1)}° orb). Your ${sChar.keyword} aligns with ${sPair.softKeyword}. Take initiative — this is your green light.`;
   }
 
   // --- Overview ---
@@ -10209,41 +10494,52 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
 
   const overview = `${totalActivations} total cosmic activations this week (${totalHard} challenging, ${totalActivations - totalHard} supportive). ${trendWord}. Peak day: ${peakDay.dayName} (${peakDay.dateLabel}). Best rest day: ${restDay.dayName} (${restDay.dateLabel}).`;
 
-  // --- Action plan ---
-  const earlyHard = allActivations.filter(a => a.dayIdx <= 2 && hardAspects.includes(a.natalAspectType)).length;
-  const earlySoft = allActivations.filter(a => a.dayIdx <= 2 && !hardAspects.includes(a.natalAspectType)).length;
-  const midHard = allActivations.filter(a => (a.dayIdx === 3 || a.dayIdx === 4) && hardAspects.includes(a.natalAspectType)).length;
-  const midSoft = allActivations.filter(a => (a.dayIdx === 3 || a.dayIdx === 4) && !hardAspects.includes(a.natalAspectType)).length;
-  const weekendHard = allActivations.filter(a => a.dayIdx >= 5 && hardAspects.includes(a.natalAspectType)).length;
-  const weekendSoft = allActivations.filter(a => a.dayIdx >= 5 && !hardAspects.includes(a.natalAspectType)).length;
+  // --- Key Days (Power / Caution / Rest) ---
+  const keyDays: WeeklyKeyDay[] = [];
 
-  const earlyTopHouse = Object.entries(houseMap)
-    .filter(([_, d]) => Array.from(d.days).some(day => day <= 2))
-    .sort((a, b) => b[1].planets.size - a[1].planets.size)[0];
-  const midTopHouse = Object.entries(houseMap)
-    .filter(([_, d]) => Array.from(d.days).some(day => day === 3 || day === 4))
-    .sort((a, b) => b[1].planets.size - a[1].planets.size)[0];
-  const weekendTopHouse = Object.entries(houseMap)
-    .filter(([_, d]) => Array.from(d.days).some(day => day >= 5))
-    .sort((a, b) => b[1].planets.size - a[1].planets.size)[0];
+  // Power Day — highest score with most soft aspects
+  const powerDayIdx = sorted[0]; // Already sorted by intensity desc
+  const powerDayActs = allActivations.filter(a => a.dayIdx === dailyIntensities.indexOf(powerDayIdx));
+  const powerDayHouses = [...new Set(powerDayActs.map(a => a.natalHouse))];
+  const powerHouseLabel = powerDayHouses.length > 0 ? powerDayHouses.slice(0, 2).map(h => getHouseDomainLabel(h).split('&')[0].trim()).join(' and ') : '';
+  keyDays.push({
+    label: '💪 Power Day',
+    dayName: peakDay.dayName,
+    dateLabel: peakDay.dateLabel,
+    description: `Your strongest day with ${powerDayIdx.activationCount} activations${powerHouseLabel ? ` focused on ${powerHouseLabel}` : ''}. Schedule important meetings, pitches, or conversations here.`,
+    type: 'power'
+  });
 
-  const earlyWeek = earlyHard > earlySoft
-    ? `Monday-Wednesday brings ${earlyHard} challenging activation${earlyHard > 1 ? 's' : ''}${earlyTopHouse ? ` focused on your ${getHouseManifestations(parseInt(earlyTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Stay patient and strategic — don't react impulsively to friction.`
-    : earlySoft > 0
-    ? `Monday-Wednesday brings ${earlySoft} supportive activation${earlySoft > 1 ? 's' : ''}${earlyTopHouse ? ` around your ${getHouseManifestations(parseInt(earlyTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Use early-week momentum to make progress on what matters most.`
-    : `Monday-Wednesday is relatively quiet. Good time for planning and preparation.`;
+  // Caution Day — day with most hard aspects
+  const dayHardCounts = dailyIntensities.map((d, i) => ({
+    ...d, idx: i,
+    hardCount: allActivations.filter(a => a.dayIdx === i && hardAspects.includes(a.natalAspectType)).length
+  }));
+  const cautionDay = [...dayHardCounts].sort((a, b) => b.hardCount - a.hardCount)[0];
+  if (cautionDay.hardCount > 0) {
+    const cautionHouses = [...new Set(allActivations.filter(a => a.dayIdx === cautionDay.idx && hardAspects.includes(a.natalAspectType)).map(a => a.natalHouse))];
+    const cautionHouseLabel = cautionHouses.slice(0, 2).map(h => getHouseDomainLabel(h).split('&')[0].trim()).join(' and ');
+    keyDays.push({
+      label: '⚠️ Caution Day',
+      dayName: cautionDay.dayName,
+      dateLabel: cautionDay.dateLabel,
+      description: `${cautionDay.hardCount} hard aspect${cautionDay.hardCount > 1 ? 's' : ''} hitting your ${cautionHouseLabel}. Avoid confrontation and major decisions if possible.`,
+      type: 'caution'
+    });
+  }
 
-  const midWeekText = midHard > midSoft
-    ? `Thursday-Friday intensifies with ${midHard} challenging activation${midHard > 1 ? 's' : ''}${midTopHouse ? ` in your ${getHouseManifestations(parseInt(midTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Midweek pivot point — adjust your approach if early-week strategies aren't working.`
-    : midSoft > 0
-    ? `Thursday-Friday offers ${midSoft} supportive activation${midSoft > 1 ? 's' : ''}${midTopHouse ? ` for your ${getHouseManifestations(parseInt(midTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Good window for important conversations, decisions, or launches.`
-    : `Thursday-Friday is quiet. Catch your breath and consolidate gains from earlier in the week.`;
-
-  const weekendText = weekendHard > weekendSoft
-    ? `The weekend brings ${weekendHard} challenging activation${weekendHard > 1 ? 's' : ''}${weekendTopHouse ? ` affecting your ${getHouseManifestations(parseInt(weekendTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Not the most restful weekend — process emotions and avoid making big decisions under pressure.`
-    : weekendSoft > 0
-    ? `The weekend brings ${weekendSoft} supportive activation${weekendSoft > 1 ? 's' : ''}${weekendTopHouse ? ` around your ${getHouseManifestations(parseInt(weekendTopHouse[0])).domain.split(',')[0].trim()}` : ''}. Great time for relationships, creativity, and enjoying the fruits of the week's work.`
-    : `The weekend is quiet cosmically. Rest, recharge, and prepare for next week.`;
+  // Rest Day — lowest score
+  if (restDay.dayName !== peakDay.dayName) {
+    keyDays.push({
+      label: '🌙 Rest Day',
+      dayName: restDay.dayName,
+      dateLabel: restDay.dateLabel,
+      description: restSorted[0].activationCount === 0
+        ? 'Zero activations — the cosmos is giving you a breather. Recharge fully.'
+        : `Only ${restSorted[0].activationCount} activation${restSorted[0].activationCount > 1 ? 's' : ''} — lightest day of the week. Ideal for recharging.`,
+      type: 'rest'
+    });
+  }
 
   return {
     overview,
@@ -10254,6 +10550,1222 @@ export function generateWeeklySummary(days: WeeklyDayInput[]): WeeklySummary {
     houseSpotlights,
     biggestChallenge,
     biggestOpportunity,
-    actionPlan: { earlyWeek, midWeek: midWeekText, weekend: weekendText }
+    weeklyAlerts,
+    keyDays
+  };
+}
+
+// ============================================================
+// NATAL-TO-TRANSIT DAILY & WEEKLY BRIEFING GENERATOR
+// (For SimpleNatalTransitCalendar — natal planet ↔ single transit planet)
+// ============================================================
+
+export interface NTAspect {
+  type: string; // 'natal-transit' | 'eclipse' | 'house-cusp-crossing'
+  natalPlanet: string;
+  transitPlanet: string;
+  aspect: string;
+  orb: number;
+  natalLongitude?: number;
+  transitLongitude?: number;
+  eclipseType?: string;
+  house?: number; // for house-cusp-crossing
+}
+
+export interface NTDailyInput {
+  aspects: NTAspect[];
+  natalPlanetHouses: Record<string, number>; // e.g. { Sun: 5, Moon: 10, ... }
+  transitPlanetHouses: Record<string, number>; // e.g. { Saturn: 10, Jupiter: 2, ... }
+}
+
+// Transit planet character profiles
+function getTransitPlanetVisitorProfile(planet: string): { keyword: string; hardEffect: string; softEffect: string; domain: string } {
+  const profiles: Record<string, { keyword: string; hardEffect: string; softEffect: string; domain: string }> = {
+    'Sun': { keyword: 'illumination', hardEffect: 'ego pressure and authority conflicts', softEffect: 'confidence, vitality, and recognition', domain: 'identity and self-expression' },
+    'Mercury': { keyword: 'communication', hardEffect: 'miscommunication, mental stress, or tech issues', softEffect: 'clear thinking, good news, and productive conversations', domain: 'communication and learning' },
+    'Venus': { keyword: 'love & money', hardEffect: 'relationship tension or financial strain', softEffect: 'romantic harmony, financial luck, and social pleasure', domain: 'relationships and finances' },
+    'Mars': { keyword: 'action & drive', hardEffect: 'conflict, aggression, or impulsive action', softEffect: 'courage, motivation, and decisive action', domain: 'energy, ambition, and physical vitality' },
+    'Jupiter': { keyword: 'expansion & luck', hardEffect: 'overconfidence, excess, or poor judgment', softEffect: 'growth, opportunity, and abundance', domain: 'luck, growth, and opportunity' },
+    'Saturn': { keyword: 'discipline & structure', hardEffect: 'restriction, delays, and heavy responsibility', softEffect: 'maturity, lasting achievement, and earned rewards', domain: 'responsibility, career, and long-term goals' },
+    'Uranus': { keyword: 'disruption & freedom', hardEffect: 'sudden upheaval, instability, or rebellion', softEffect: 'exciting breakthroughs, innovation, and liberation', domain: 'freedom, innovation, and sudden change' },
+    'Neptune': { keyword: 'dreams & illusion', hardEffect: 'confusion, deception, or boundary dissolution', softEffect: 'inspiration, spiritual insight, and creative vision', domain: 'spirituality, creativity, and imagination' },
+    'Pluto': { keyword: 'transformation & power', hardEffect: 'power struggles, obsession, or forced change', softEffect: 'profound renewal, empowerment, and deep healing', domain: 'transformation, power, and rebirth' },
+    'North Node': { keyword: 'destiny', hardEffect: 'uncomfortable growth pushing you toward your life path', softEffect: 'fated alignment with your soul direction', domain: 'life purpose and karmic direction' },
+    'South Node': { keyword: 'release', hardEffect: 'karmic patterns resurfacing or comfort zone addiction', softEffect: 'past-life skills supporting present growth', domain: 'karmic release and past-life wisdom' },
+    'Solar Eclipse': { keyword: 'fated new beginning', hardEffect: 'forced restart in a major life area', softEffect: 'powerful seed moment for a new chapter', domain: 'destiny-level new beginnings' },
+    'Lunar Eclipse': { keyword: 'fated culmination', hardEffect: 'emotional crisis or forced ending', softEffect: 'powerful completion and emotional breakthrough', domain: 'destiny-level endings and revelations' },
+    'New Moon': { keyword: 'fresh start', hardEffect: 'tension around new beginnings', softEffect: 'fertile ground for planting intentions', domain: 'new cycles and intentions' },
+    'Full Moon': { keyword: 'culmination', hardEffect: 'emotional peak or revelation under pressure', softEffect: 'harvest of efforts and emotional clarity', domain: 'culmination and awareness' }
+  };
+  return profiles[planet] || { keyword: planet.toLowerCase(), hardEffect: `tension from ${planet}`, softEffect: `support from ${planet}`, domain: `${planet} themes` };
+}
+
+// Detect life event alerts for natal-to-transit aspects
+function detectNTLifeEventAlerts(aspects: NTAspect[], natalHouses: Record<string, number>, transitHouses: Record<string, number>): LifeEventAlert[] {
+  const alerts: LifeEventAlert[] = [];
+  const hardAspects = ['Square', 'Opposition'];
+  const seen = new Set<string>();
+
+  for (const asp of aspects) {
+    if (asp.type === 'house-cusp-crossing') continue;
+    const isHard = hardAspects.includes(asp.aspect);
+    const nH = natalHouses[asp.natalPlanet] || 0;
+    const tH = transitHouses[asp.transitPlanet] || 0;
+    const planets = [asp.natalPlanet, asp.transitPlanet];
+
+    // MONEY
+    const moneyHouse = [2, 8].includes(nH) || [2, 8].includes(tH);
+    const moneyPlanet = planets.some(p => ['Venus', 'Jupiter'].includes(p));
+    if (moneyHouse && moneyPlanet) {
+      if (!seen.has('money')) {
+        seen.add('money');
+        alerts.push(isHard
+          ? { type: 'money', emoji: '💰', label: 'Financial Shake-Up', message: 'Financial shifts possible — unexpected expenses or income changes. Review budgets and avoid impulsive spending.' }
+          : { type: 'money', emoji: '💰', label: 'Money Opportunity', message: 'Financial flow is favored — a raise, new income stream, or lucky windfall could appear. Be open to unexpected sources of abundance.' });
+      }
+    }
+
+    // LOVE
+    const loveHouse = [5, 7].includes(nH) || [5, 7].includes(tH);
+    const lovePlanet = planets.some(p => ['Venus', 'Moon'].includes(p));
+    if (loveHouse && lovePlanet) {
+      if (!seen.has('love')) {
+        seen.add('love');
+        alerts.push(isHard
+          ? { type: 'love', emoji: '❤️', label: 'Relationship Crossroads', message: 'Romantic tension or a relationship turning point — important conversations may be needed. Honest communication is key.' }
+          : { type: 'love', emoji: '❤️', label: 'Love in the Air', message: 'Romantic energy is heightened — a new connection, deepening of an existing bond, or a meaningful encounter could unfold.' });
+      }
+    }
+
+    // CAREER
+    const careerHouse = [10, 6].includes(nH) || [10, 6].includes(tH);
+    const careerPlanet = planets.some(p => ['Saturn', 'Sun', 'Jupiter', 'Mars'].includes(p));
+    if (careerHouse && careerPlanet) {
+      if (!seen.has('career')) {
+        seen.add('career');
+        alerts.push(isHard
+          ? { type: 'career', emoji: '🏆', label: 'Career Pressure', message: 'Professional challenges demand attention — a test of your authority, restructuring at work, or a needed pivot in your career direction.' }
+          : { type: 'career', emoji: '🏆', label: 'Career Advancement', message: 'Professional recognition or promotion energy is active — put yourself forward, pitch ideas, and take on visible responsibilities.' });
+      }
+    }
+
+    // PROPERTY
+    const propertyHouse = nH === 4 || tH === 4;
+    const propertyPlanet = planets.some(p => ['Saturn', 'Jupiter', 'Moon'].includes(p));
+    if (propertyHouse && propertyPlanet) {
+      if (!seen.has('property')) {
+        seen.add('property');
+        alerts.push(isHard
+          ? { type: 'property', emoji: '🏠', label: 'Home Changes', message: 'Shifts in your living situation — renovations, family dynamics changing, or unexpected housing matters requiring attention.' }
+          : { type: 'property', emoji: '🏠', label: 'Home Opportunity', message: 'Favorable energy for property matters — house hunting, upgrading your living space, or improving family dynamics.' });
+      }
+    }
+
+    // TRAVEL
+    const travelHouse = [9, 3].includes(nH) || [9, 3].includes(tH);
+    const travelPlanet = planets.some(p => ['Jupiter', 'Mercury', 'Uranus'].includes(p));
+    if (travelHouse && travelPlanet) {
+      if (!seen.has('travel')) {
+        seen.add('travel');
+        alerts.push({ type: 'travel', emoji: '✈️', label: 'Travel Window',
+          message: nH === 9 || tH === 9
+            ? 'International or long-distance travel energy is active — opportunities abroad, cross-cultural connections, or educational journeys may arise.'
+            : 'Short trips and local exploration are favored — day trips, neighborhood discoveries, or spontaneous weekend getaways.' });
+      }
+    }
+
+    // BREAKTHROUGH
+    const hasUranus = planets.includes('Uranus');
+    const hasPluto = planets.includes('Pluto');
+    if ((hasUranus || hasPluto) && !isHard) {
+      if (!seen.has('breakthrough')) {
+        seen.add('breakthrough');
+        alerts.push({ type: 'breakthrough', emoji: '⚡', label: 'Breakthrough Moment',
+          message: hasUranus
+            ? 'Sudden insight, liberation, or unexpected opportunity — something could shift quickly and permanently.'
+            : 'Deep transformation is available — a psychological breakthrough, power shift, or phoenix-like renewal.' });
+      }
+    }
+  }
+
+  return alerts;
+}
+
+interface NTFocusArea {
+  transitPlanet: string;
+  transitHouse: number;
+  keyword: string;
+  narrative: string;
+  natalPlanets: string[];
+  hasHard: boolean;
+  hasSoft: boolean;
+  aspectCount: number;
+}
+
+interface NTEclipseSpotlight {
+  eclipseType: string;
+  natalPlanet: string;
+  aspect: string;
+  orb: number;
+  message: string;
+}
+
+interface NTHouseCuspEvent {
+  transitPlanet: string;
+  house: number;
+  message: string;
+}
+
+export interface NTDailySummary {
+  intensity: 'Quiet' | 'Active' | 'Intense' | 'Pivotal';
+  intensityScore: number;
+  overview: string;
+  eclipseSpotlights: NTEclipseSpotlight[];
+  lifeEventAlerts: LifeEventAlert[];
+  focusAreas: NTFocusArea[];
+  houseCuspEvents: NTHouseCuspEvent[];
+  tensions: string[];
+  opportunities: string[];
+  topFocus: string;
+}
+
+export function generateNatalTransitDailySummary(input: NTDailyInput): NTDailySummary {
+  const { aspects, natalPlanetHouses, transitPlanetHouses } = input;
+
+  if (aspects.length === 0) {
+    return {
+      intensity: 'Quiet', intensityScore: 0,
+      overview: 'No natal activations today. A quiet day — the transiting planets aren\'t making significant contact with your chart.',
+      eclipseSpotlights: [], lifeEventAlerts: [], focusAreas: [], houseCuspEvents: [],
+      tensions: [], opportunities: [],
+      topFocus: 'Take it easy — the cosmos is giving your chart a breather.'
+    };
+  }
+
+  const hardAspects = ['Square', 'Opposition'];
+  const natalTransitAspects = aspects.filter(a => a.type === 'natal-transit' || a.type === 'eclipse');
+  const cuspCrossings = aspects.filter(a => a.type === 'house-cusp-crossing');
+  const numHard = natalTransitAspects.filter(a => hardAspects.includes(a.aspect)).length;
+
+  // --- Intensity ---
+  let intensity: NTDailySummary['intensity'];
+  let intensityScore: number;
+  if (natalTransitAspects.length <= 2 && numHard === 0) {
+    intensity = 'Quiet'; intensityScore = 1;
+  } else if (natalTransitAspects.length <= 5 && numHard <= 1) {
+    intensity = 'Active'; intensityScore = 2;
+  } else if (natalTransitAspects.length <= 8 || numHard <= 3) {
+    intensity = 'Intense'; intensityScore = 3;
+  } else {
+    intensity = 'Pivotal'; intensityScore = 4;
+  }
+
+  // Eclipses bump intensity
+  const eclipseAspects = aspects.filter(a => a.type === 'eclipse');
+  if (eclipseAspects.length > 0 && intensityScore < 3) {
+    intensity = 'Intense'; intensityScore = 3;
+  }
+
+  // --- Eclipse Spotlights (deduplicated) ---
+  const eclipseSpotlights: NTEclipseSpotlight[] = [];
+  const seenEclipseKeys = new Set<string>();
+  for (const ea of eclipseAspects) {
+    const key = `${ea.eclipseType || ea.transitPlanet}-${ea.aspect}-${ea.natalPlanet}`;
+    if (seenEclipseKeys.has(key)) continue;
+    seenEclipseKeys.add(key);
+    const nChar = getNatalPlanetCharacter(ea.natalPlanet);
+    const isHard = hardAspects.includes(ea.aspect);
+    const profile = getTransitPlanetVisitorProfile(ea.eclipseType || ea.transitPlanet);
+    eclipseSpotlights.push({
+      eclipseType: ea.eclipseType || ea.transitPlanet,
+      natalPlanet: ea.natalPlanet,
+      aspect: ea.aspect,
+      orb: ea.orb,
+      message: isHard
+        ? `${ea.eclipseType || ea.transitPlanet} ${ea.aspect.toLowerCase()} your natal ${ea.natalPlanet} (${ea.orb.toFixed(1)}° orb) — ${profile.hardEffect}. Your ${nChar.keyword} faces a fated turning point.`
+        : `${ea.eclipseType || ea.transitPlanet} ${ea.aspect.toLowerCase()} your natal ${ea.natalPlanet} (${ea.orb.toFixed(1)}° orb) — ${profile.softEffect}. Your ${nChar.keyword} receives a destined activation.`
+    });
+  }
+
+  // --- Life Event Alerts ---
+  const lifeEventAlerts = detectNTLifeEventAlerts(natalTransitAspects, natalPlanetHouses, transitPlanetHouses);
+
+  // --- Focus Areas grouped by transit planet ---
+  const transitGroupMap: Record<string, { aspects: NTAspect[]; hard: boolean[]; planets: string[] }> = {};
+  for (const asp of natalTransitAspects) {
+    const tKey = asp.transitPlanet;
+    if (!transitGroupMap[tKey]) {
+      transitGroupMap[tKey] = { aspects: [], hard: [], planets: [] };
+    }
+    transitGroupMap[tKey].aspects.push(asp);
+    transitGroupMap[tKey].hard.push(hardAspects.includes(asp.aspect));
+    if (!transitGroupMap[tKey].planets.includes(asp.natalPlanet)) {
+      transitGroupMap[tKey].planets.push(asp.natalPlanet);
+    }
+  }
+
+  const focusAreas: NTFocusArea[] = Object.entries(transitGroupMap).map(([transit, data]) => {
+    const profile = getTransitPlanetVisitorProfile(transit);
+    const tH = transitPlanetHouses[transit] || 0;
+    const hasHard = data.hard.some(h => h);
+    const hasSoft = data.hard.some(h => !h);
+
+    // Build narrative
+    const sentences: string[] = [];
+    // Group by aspect type (hard vs soft)
+    const hardNatals = data.aspects.filter(a => hardAspects.includes(a.aspect)).map(a => a.natalPlanet);
+    const softNatals = data.aspects.filter(a => !hardAspects.includes(a.aspect)).map(a => a.natalPlanet);
+    const uniqueHardNatals = [...new Set(hardNatals)];
+    const uniqueSoftNatals = [...new Set(softNatals)];
+
+    if (uniqueHardNatals.length > 0) {
+      const planetDescriptions = uniqueHardNatals.map(p => `${p} (${getNatalPlanetCharacter(p).keyword})`);
+      const listStr = planetDescriptions.length <= 2 ? planetDescriptions.join(' and ') : planetDescriptions.slice(0, -1).join(', ') + ' and ' + planetDescriptions[planetDescriptions.length - 1];
+      sentences.push(`Your natal ${listStr} ${uniqueHardNatals.length > 1 ? 'are' : 'is'} challenged by transit ${transit}'s ${profile.hardEffect}. ${uniqueHardNatals.length > 1 ? 'Multiple' : 'A'} friction point${uniqueHardNatals.length > 1 ? 's' : ''} — stay strategic.`);
+    }
+
+    if (uniqueSoftNatals.length > 0) {
+      const planetDescriptions = uniqueSoftNatals.map(p => `${p} (${getNatalPlanetCharacter(p).keyword})`);
+      const listStr = planetDescriptions.length <= 2 ? planetDescriptions.join(' and ') : planetDescriptions.slice(0, -1).join(', ') + ' and ' + planetDescriptions[planetDescriptions.length - 1];
+      sentences.push(`Your natal ${listStr} ${uniqueSoftNatals.length > 1 ? 'benefit' : 'benefits'} from transit ${transit}'s ${profile.softEffect}. Lean into ${profile.domain}.`);
+    }
+
+    return {
+      transitPlanet: transit,
+      transitHouse: tH,
+      keyword: profile.keyword,
+      narrative: sentences.join(' '),
+      natalPlanets: [...new Set(data.planets)],
+      hasHard,
+      hasSoft,
+      aspectCount: data.aspects.length
+    };
+  }).sort((a, b) => b.aspectCount - a.aspectCount);
+
+  // --- House Cusp Events ---
+  const houseCuspEvents: NTHouseCuspEvent[] = cuspCrossings.map(cc => {
+    const profile = getTransitPlanetVisitorProfile(cc.transitPlanet);
+    const domainLabel = getHouseDomainLabel(cc.house || 1);
+    return {
+      transitPlanet: cc.transitPlanet,
+      house: cc.house || 1,
+      message: `Transit ${cc.transitPlanet} is crossing your ${cc.house}${getOrdinalSuffix(cc.house || 1)} house cusp — ${profile.keyword} energy enters your ${domainLabel} zone. A new chapter begins here.`
+    };
+  });
+
+  // --- Overview ---
+  const mostActiveTransit = focusAreas[0];
+  const topHouses = [...new Set(focusAreas.map(f => f.transitHouse).filter(h => h > 0))].slice(0, 3);
+  const houseStr = topHouses.map(h => `${h}${getOrdinalSuffix(h)} (${getHouseDomainLabel(h).split('&')[0].trim()})`);
+  let housePhrase = '';
+  if (houseStr.length === 1) housePhrase = `centered on your ${houseStr[0]}`;
+  else if (houseStr.length === 2) housePhrase = `activating your ${houseStr[0]} and ${houseStr[1]}`;
+  else if (houseStr.length >= 3) housePhrase = `spanning your ${houseStr[0]}, ${houseStr[1]}, and ${houseStr[2]}`;
+
+  const eclipseNote = eclipseSpotlights.length > 0 ? ` ${eclipseSpotlights[0].eclipseType} is active — a fated day.` : '';
+  const overview = `${natalTransitAspects.length} natal activation${natalTransitAspects.length !== 1 ? 's' : ''} today${housePhrase ? ' ' + housePhrase : ''}${numHard > 0 ? ` with ${numHard} challenging aspect${numHard > 1 ? 's' : ''}` : ''}.${mostActiveTransit ? ` Transit ${mostActiveTransit.transitPlanet} is your most active visitor, touching ${mostActiveTransit.natalPlanets.length} natal planet${mostActiveTransit.natalPlanets.length > 1 ? 's' : ''}.` : ''}${eclipseNote}`;
+
+  // --- Tensions (deduplicated by transit planet) ---
+  const tensions: string[] = [];
+  const seenT = new Set<string>();
+  for (const asp of natalTransitAspects) {
+    if (!hardAspects.includes(asp.aspect)) continue;
+    const tKey = asp.transitPlanet;
+    if (seenT.has(tKey)) continue;
+    seenT.add(tKey);
+    const sameTransit = natalTransitAspects.filter(a => a.transitPlanet === tKey && hardAspects.includes(a.aspect));
+    const natals = [...new Set(sameTransit.map(a => a.natalPlanet))];
+    const profile = getTransitPlanetVisitorProfile(tKey);
+    tensions.push(`${natals.join(' & ')} ${sameTransit[0].aspect.toLowerCase()} transit ${tKey}: ${profile.hardEffect} — ${sameTransit[0].aspect === 'Square' ? `don't force solutions, work with the friction` : `find the balance point rather than choosing sides`}`);
+  }
+
+  // --- Opportunities (deduplicated by transit planet) ---
+  const opportunities: string[] = [];
+  const seenO = new Set<string>();
+  for (const asp of natalTransitAspects) {
+    if (hardAspects.includes(asp.aspect)) continue;
+    const tKey = asp.transitPlanet;
+    if (seenO.has(tKey)) continue;
+    seenO.add(tKey);
+    const sameTransit = natalTransitAspects.filter(a => a.transitPlanet === tKey && !hardAspects.includes(a.aspect));
+    const natals = [...new Set(sameTransit.map(a => a.natalPlanet))];
+    const profile = getTransitPlanetVisitorProfile(tKey);
+    opportunities.push(`${natals.join(' & ')} ${sameTransit[0].aspect.toLowerCase()} transit ${tKey}: ${profile.softEffect} — lean into ${profile.domain}`);
+  }
+
+  // --- Top focus (tightest orb) ---
+  const tightest = [...natalTransitAspects].sort((a, b) => a.orb - b.orb)[0];
+  let topFocus = '';
+  if (tightest) {
+    const tProfile = getTransitPlanetVisitorProfile(tightest.transitPlanet);
+    const nChar = getNatalPlanetCharacter(tightest.natalPlanet);
+    const tIsHard = hardAspects.includes(tightest.aspect);
+    topFocus = tIsHard
+      ? `Your tightest activation (${tightest.orb.toFixed(1)}° orb) is natal ${tightest.natalPlanet} ${tightest.aspect.toLowerCase()} transit ${tightest.transitPlanet}. Your ${nChar.keyword} clashes with ${tProfile.hardEffect} — navigate ${tProfile.domain} carefully.`
+      : `Your tightest activation (${tightest.orb.toFixed(1)}° orb) is natal ${tightest.natalPlanet} ${tightest.aspect.toLowerCase()} transit ${tightest.transitPlanet}. Your ${nChar.keyword} aligns with ${tProfile.softEffect} — prioritize ${tProfile.domain} today.`;
+  }
+
+  return {
+    intensity, intensityScore, overview,
+    eclipseSpotlights, lifeEventAlerts, focusAreas, houseCuspEvents,
+    tensions, opportunities, topFocus
+  };
+}
+
+// --- WEEKLY ---
+
+export interface NTWeeklyDayInput {
+  date: Date;
+  aspects: NTAspect[];
+  natalPlanetHouses: Record<string, number>;
+  transitPlanetHouses: Record<string, number>;
+}
+
+interface NTWeeklyTransitVisitor {
+  transitPlanet: string;
+  keyword: string;
+  daysActive: number;
+  natalPlanetsHit: string[];
+  hardCount: number;
+  softCount: number;
+  summary: string;
+  isDominant: boolean;
+}
+
+interface NTWeeklyHouseSpotlight {
+  house: number;
+  domainLabel: string;
+  totalHits: number;
+  transitVisitors: string[];
+  arc: string;
+}
+
+export interface NTWeeklySummary {
+  overview: string;
+  dailyIntensities: WeeklyDayIntensity[];
+  peakDay: { dayName: string; dateLabel: string; score: number };
+  restDay: { dayName: string; dateLabel: string; score: number };
+  eclipseSpotlights: NTEclipseSpotlight[];
+  weeklyAlerts: WeeklyLifeEventAlert[];
+  transitVisitors: NTWeeklyTransitVisitor[];
+  houseSpotlights: NTWeeklyHouseSpotlight[];
+  biggestChallenge: string;
+  biggestOpportunity: string;
+  keyDays: { label: string; dayName: string; dateLabel: string; description: string; type: 'power' | 'caution' | 'rest' }[];
+}
+
+export function generateNatalTransitWeeklySummary(days: NTWeeklyDayInput[]): NTWeeklySummary {
+  const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  const hardAspects = ['Square', 'Opposition'];
+
+  const dailySummaries = days.map(d => generateNatalTransitDailySummary(d));
+
+  // --- Daily intensities ---
+  const dailyIntensities: WeeklyDayIntensity[] = days.map((d, i) => ({
+    dayName: dayNames[i] || d.date.toLocaleDateString('en-US', { weekday: 'long' }),
+    dateLabel: d.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+    intensity: dailySummaries[i].intensity,
+    intensityScore: dailySummaries[i].intensityScore,
+    activationCount: d.aspects.filter(a => a.type !== 'house-cusp-crossing').length
+  }));
+
+  const sorted = [...dailyIntensities].sort((a, b) => b.intensityScore - a.intensityScore || b.activationCount - a.activationCount);
+  const peakDay = { dayName: sorted[0].dayName, dateLabel: sorted[0].dateLabel, score: sorted[0].intensityScore };
+  const restSorted = [...dailyIntensities].sort((a, b) => a.intensityScore - b.intensityScore || a.activationCount - b.activationCount);
+  const restDay = { dayName: restSorted[0].dayName, dateLabel: restSorted[0].dateLabel, score: restSorted[0].intensityScore };
+
+  // Flatten all aspects with day index
+  const allAspects: (NTAspect & { dayIdx: number })[] = [];
+  days.forEach((d, i) => {
+    d.aspects.filter(a => a.type !== 'house-cusp-crossing').forEach(a => allAspects.push({ ...a, dayIdx: i }));
+  });
+
+  const totalActs = allAspects.length;
+  const totalHard = allAspects.filter(a => hardAspects.includes(a.aspect)).length;
+
+  // --- Eclipse spotlights (across the week, deduplicated) ---
+  const eclipseSpotlights: NTEclipseSpotlight[] = [];
+  const seenWeeklyEclipseKeys = new Set<string>();
+  for (const ds of dailySummaries) {
+    for (const es of ds.eclipseSpotlights) {
+      const key = `${es.eclipseType}-${es.aspect}-${es.natalPlanet}`;
+      if (!seenWeeklyEclipseKeys.has(key)) {
+        seenWeeklyEclipseKeys.add(key);
+        eclipseSpotlights.push(es);
+      }
+    }
+  }
+
+  // --- Weekly life event radar ---
+  const alertDayMap: Record<string, { alert: LifeEventAlert; days: Set<number>; peakScore: number; peakDayIdx: number }> = {};
+  dailySummaries.forEach((ds, dayIdx) => {
+    ds.lifeEventAlerts.forEach(alert => {
+      if (!alertDayMap[alert.type]) {
+        alertDayMap[alert.type] = { alert, days: new Set(), peakScore: 0, peakDayIdx: dayIdx };
+      }
+      alertDayMap[alert.type].days.add(dayIdx);
+      if (ds.intensityScore > alertDayMap[alert.type].peakScore) {
+        alertDayMap[alert.type].peakScore = ds.intensityScore;
+        alertDayMap[alert.type].peakDayIdx = dayIdx;
+      }
+    });
+  });
+
+  const weeklyAlertMsgs: Record<string, { hard: string; soft: string }> = {
+    money: { hard: 'Financial turbulence runs through the week — budget carefully and watch for unexpected expenses.', soft: 'Financial energy builds this week — a raise, new income stream, or lucky windfall could appear.' },
+    love: { hard: 'Romantic tension surfaces this week — honest conversations are needed.', soft: 'Love energy is heightened — new connections or deepening bonds are likely.' },
+    career: { hard: 'Professional pressure builds — authority tests or restructuring ahead.', soft: 'Career advancement energy is strong — seek recognition and take on visibility.' },
+    property: { hard: 'Home dynamics shift — housing matters require attention.', soft: 'Favorable week for property — home improvements or family strengthening.' },
+    travel: { hard: 'Travel may face disruptions — stay flexible.', soft: 'Travel energy is active — opportunities for journeys or exploration.' },
+    breakthrough: { hard: 'Transformation energy is intense — change may feel forced but is liberating.', soft: 'Breakthrough potential peaks — sudden insights or unexpected opportunities.' }
+  };
+
+  const weeklyAlerts: WeeklyLifeEventAlert[] = Object.entries(alertDayMap)
+    .filter(([_, data]) => data.days.size >= 2)
+    .map(([type, data]) => {
+      const isHard = data.alert.label.includes('Shake') || data.alert.label.includes('Crossroads') || data.alert.label.includes('Pressure') || data.alert.label.includes('Changes');
+      const msgs = weeklyAlertMsgs[type] || { hard: '', soft: '' };
+      const peakDayName = dayNames[data.peakDayIdx] || 'this week';
+      return {
+        type: type as WeeklyLifeEventAlert['type'], emoji: data.alert.emoji,
+        label: `${data.alert.emoji} ${type.charAt(0).toUpperCase() + type.slice(1)} Week`,
+        message: `${isHard ? msgs.hard : msgs.soft} Active across ${data.days.size} days — peaks on ${peakDayName}.`,
+        daysActive: data.days.size, peakDay: peakDayName
+      };
+    })
+    .sort((a, b) => b.daysActive - a.daysActive);
+
+  // --- Transit Visitors (grouped by transit planet) ---
+  const visitorMap: Record<string, { days: Set<number>; natals: Set<string>; hard: number; soft: number }> = {};
+  for (const asp of allAspects) {
+    const t = asp.transitPlanet;
+    if (!visitorMap[t]) visitorMap[t] = { days: new Set(), natals: new Set(), hard: 0, soft: 0 };
+    visitorMap[t].days.add(asp.dayIdx);
+    visitorMap[t].natals.add(asp.natalPlanet);
+    if (hardAspects.includes(asp.aspect)) visitorMap[t].hard++; else visitorMap[t].soft++;
+  }
+
+  const sortedVisitors = Object.entries(visitorMap).sort((a, b) => b[1].days.size - a[1].days.size || (b[1].hard + b[1].soft) - (a[1].hard + a[1].soft));
+  const dominantVisitor = sortedVisitors.length > 0 ? sortedVisitors[0][0] : '';
+
+  const transitVisitors: NTWeeklyTransitVisitor[] = sortedVisitors.slice(0, 4).map(([transit, data]) => {
+    const profile = getTransitPlanetVisitorProfile(transit);
+    const natalsList = Array.from(data.natals);
+    let summary: string;
+    if (data.hard > data.soft) {
+      summary = `${profile.hardEffect.charAt(0).toUpperCase() + profile.hardEffect.slice(1)} touches your ${natalsList.join(', ')} across ${data.days.size} days. Navigate ${profile.domain} with care.`;
+    } else if (data.soft > data.hard) {
+      summary = `${profile.softEffect.charAt(0).toUpperCase() + profile.softEffect.slice(1)} supports your ${natalsList.join(', ')} across ${data.days.size} days. Lean into ${profile.domain}.`;
+    } else {
+      summary = `Mixed energy touches your ${natalsList.join(', ')} across ${data.days.size} days — both challenge and opportunity in ${profile.domain}.`;
+    }
+
+    return {
+      transitPlanet: transit, keyword: profile.keyword, daysActive: data.days.size,
+      natalPlanetsHit: natalsList, hardCount: data.hard, softCount: data.soft,
+      summary, isDominant: transit === dominantVisitor
+    };
+  });
+
+  // --- House Spotlights (by transit house position) ---
+  const houseHitMap: Record<number, { transits: Set<string>; count: number; days: Set<number> }> = {};
+  for (const asp of allAspects) {
+    const tH = days[asp.dayIdx]?.transitPlanetHouses[asp.transitPlanet] || 0;
+    if (tH === 0) continue;
+    if (!houseHitMap[tH]) houseHitMap[tH] = { transits: new Set(), count: 0, days: new Set() };
+    houseHitMap[tH].transits.add(asp.transitPlanet);
+    houseHitMap[tH].count++;
+    houseHitMap[tH].days.add(asp.dayIdx);
+  }
+
+  const houseSpotlights: NTWeeklyHouseSpotlight[] = Object.entries(houseHitMap)
+    .map(([hStr, data]) => {
+      const house = parseInt(hStr);
+      const domainLabel = getHouseDomainLabel(house);
+      const visitors = Array.from(data.transits);
+      return {
+        house, domainLabel, totalHits: data.count, transitVisitors: visitors,
+        arc: `${visitors.join(', ')} ${visitors.length > 1 ? 'are' : 'is'} transiting here — ${data.count} activations across ${data.days.size} days.`
+      };
+    })
+    .sort((a, b) => b.totalHits - a.totalHits)
+    .slice(0, 3);
+
+  // --- Biggest challenge / opportunity ---
+  const hardActs = allAspects.filter(a => hardAspects.includes(a.aspect));
+  let biggestChallenge = 'No major challenges this week — smooth sailing.';
+  if (hardActs.length > 0) {
+    const th = hardActs.sort((a, b) => a.orb - b.orb)[0];
+    const prof = getTransitPlanetVisitorProfile(th.transitPlanet);
+    const nChar = getNatalPlanetCharacter(th.natalPlanet);
+    biggestChallenge = `Natal ${th.natalPlanet} ${th.aspect.toLowerCase()} transit ${th.transitPlanet} peaks on ${dayNames[th.dayIdx]} (${th.orb.toFixed(1)}° orb). Your ${nChar.keyword} clashes with ${prof.hardEffect}. Don't force outcomes — work with the tension.`;
+  }
+
+  const softActs = allAspects.filter(a => !hardAspects.includes(a.aspect));
+  let biggestOpportunity = 'No standout opportunities this week — focus on maintenance.';
+  if (softActs.length > 0) {
+    const ts = softActs.sort((a, b) => a.orb - b.orb)[0];
+    const prof = getTransitPlanetVisitorProfile(ts.transitPlanet);
+    const nChar = getNatalPlanetCharacter(ts.natalPlanet);
+    biggestOpportunity = `Natal ${ts.natalPlanet} ${ts.aspect.toLowerCase()} transit ${ts.transitPlanet} peaks on ${dayNames[ts.dayIdx]} (${ts.orb.toFixed(1)}° orb). Your ${nChar.keyword} aligns with ${prof.softEffect}. Take initiative — this is your green light.`;
+  }
+
+  // --- Overview ---
+  const earlyAvg = (dailyIntensities[0].intensityScore + dailyIntensities[1].intensityScore + dailyIntensities[2].intensityScore) / 3;
+  const lateAvg = (dailyIntensities[4].intensityScore + dailyIntensities[5].intensityScore + dailyIntensities[6].intensityScore) / 3;
+  let trendWord = earlyAvg > lateAvg + 0.5 ? 'Front-loaded — intensity eases toward the weekend' : lateAvg > earlyAvg + 0.5 ? 'Slow-building — pressure mounts as the weekend approaches' : 'Evenly distributed throughout the week';
+
+  const eclipseNote = eclipseSpotlights.length > 0 ? ` ${eclipseSpotlights[0].eclipseType} week — fated events possible.` : '';
+  const overview = `${totalActs} natal activations this week (${totalHard} challenging, ${totalActs - totalHard} supportive). ${trendWord}. Peak: ${peakDay.dayName}. Rest: ${restDay.dayName}.${eclipseNote}`;
+
+  // --- Key Days ---
+  const keyDays: NTWeeklySummary['keyDays'] = [];
+
+  keyDays.push({
+    label: '💪 Power Day', dayName: peakDay.dayName, dateLabel: peakDay.dateLabel,
+    description: `Your strongest day with ${sorted[0].activationCount} activations. Schedule important conversations and decisions here.`,
+    type: 'power'
+  });
+
+  const dayHardCounts = dailyIntensities.map((d, i) => ({ ...d, idx: i, hardCount: allAspects.filter(a => a.dayIdx === i && hardAspects.includes(a.aspect)).length }));
+  const cautionDay = [...dayHardCounts].sort((a, b) => b.hardCount - a.hardCount)[0];
+  if (cautionDay.hardCount > 0) {
+    keyDays.push({
+      label: '⚠️ Caution Day', dayName: cautionDay.dayName, dateLabel: cautionDay.dateLabel,
+      description: `${cautionDay.hardCount} hard aspect${cautionDay.hardCount > 1 ? 's' : ''} active. Avoid confrontation and major decisions if possible.`,
+      type: 'caution'
+    });
+  }
+
+  if (restDay.dayName !== peakDay.dayName) {
+    keyDays.push({
+      label: '🌙 Rest Day', dayName: restDay.dayName, dateLabel: restDay.dateLabel,
+      description: restSorted[0].activationCount === 0 ? 'Zero activations — recharge fully.' : `Only ${restSorted[0].activationCount} activation${restSorted[0].activationCount > 1 ? 's' : ''} — lightest day of the week.`,
+      type: 'rest'
+    });
+  }
+
+  return {
+    overview, dailyIntensities, peakDay, restDay,
+    eclipseSpotlights, weeklyAlerts, transitVisitors, houseSpotlights,
+    biggestChallenge, biggestOpportunity, keyDays
+  };
+}
+
+// ============================================================
+// JOURNAL — KEYWORD-TO-ASPECT MATCHING ENGINE
+// ============================================================
+
+interface JournalAspectMatch {
+  aspect: NTAspect;
+  score: number; // 0-100 relevance
+  matchedKeywords: string[];
+  matchReason: string;
+}
+
+export interface JournalMatchResult {
+  matches: JournalAspectMatch[];
+  bestMatch: JournalAspectMatch | null;
+  unmatchedThemes: string[]; // themes from text that didn't map to any aspect
+}
+
+// Keyword categories mapped to planets, houses, and aspect types
+const JOURNAL_KEYWORD_MAP: {
+  keywords: string[];
+  planets: string[];
+  houses: number[];
+  label: string;
+  prefersHard?: boolean;
+  prefersSoft?: boolean;
+}[] = [
+  // CONFLICT / ANGER / FRUSTRATION
+  {
+    keywords: ['argument', 'fight', 'angry', 'anger', 'furious', 'conflict', 'rage', 'aggressive', 'confrontation', 'yelled', 'shouted', 'hostile', 'frustrated', 'frustration', 'irritated', 'annoyed', 'clash', 'battle', 'attacked'],
+    planets: ['Mars', 'Pluto'],
+    houses: [],
+    label: 'conflict & anger',
+    prefersHard: true
+  },
+  // CAREER / WORK / AUTHORITY
+  {
+    keywords: ['boss', 'manager', 'work', 'job', 'career', 'promotion', 'fired', 'hired', 'interview', 'office', 'professional', 'business', 'colleagues', 'coworkers', 'workplace', 'salary', 'raise', 'demoted', 'authority', 'responsibility', 'project', 'deadline', 'meeting'],
+    planets: ['Saturn', 'Sun', 'Jupiter', 'Mars'],
+    houses: [6, 10],
+    label: 'career & work'
+  },
+  // LOVE / ROMANCE / RELATIONSHIPS
+  {
+    keywords: ['love', 'romantic', 'romance', 'date', 'dating', 'boyfriend', 'girlfriend', 'husband', 'wife', 'partner', 'relationship', 'kiss', 'attracted', 'attraction', 'crush', 'flirting', 'engaged', 'wedding', 'marriage', 'soulmate', 'heartbreak', 'breakup', 'broke up', 'divorce', 'separated', 'jealous', 'cheating', 'affair'],
+    planets: ['Venus', 'Moon', 'Neptune'],
+    houses: [5, 7],
+    label: 'love & romance'
+  },
+  // MONEY / FINANCES
+  {
+    keywords: ['money', 'financial', 'finances', 'income', 'salary', 'debt', 'loan', 'bank', 'investment', 'stock', 'profit', 'loss', 'expensive', 'cheap', 'budget', 'savings', 'windfall', 'inheritance', 'tax', 'bills', 'paid', 'payment', 'purchase', 'bought', 'sold', 'wealth', 'rich', 'poor', 'bankruptcy'],
+    planets: ['Venus', 'Jupiter', 'Pluto'],
+    houses: [2, 8],
+    label: 'money & finances'
+  },
+  // HOME / FAMILY
+  {
+    keywords: ['home', 'house', 'apartment', 'move', 'moving', 'renovation', 'family', 'mother', 'father', 'parent', 'parents', 'sibling', 'brother', 'sister', 'children', 'child', 'son', 'daughter', 'domestic', 'kitchen', 'room', 'landlord', 'tenant', 'rent', 'mortgage'],
+    planets: ['Moon', 'Saturn', 'Jupiter'],
+    houses: [4],
+    label: 'home & family'
+  },
+  // COMMUNICATION / LEARNING
+  {
+    keywords: ['talk', 'talked', 'conversation', 'email', 'message', 'call', 'phone', 'text', 'news', 'heard', 'said', 'miscommunication', 'misunderstanding', 'study', 'studying', 'exam', 'test', 'course', 'class', 'school', 'university', 'learn', 'learning', 'teach', 'writing', 'wrote', 'read', 'book', 'signed', 'contract', 'document'],
+    planets: ['Mercury'],
+    houses: [3, 9],
+    label: 'communication & learning'
+  },
+  // HEALTH / BODY
+  {
+    keywords: ['health', 'sick', 'ill', 'doctor', 'hospital', 'surgery', 'pain', 'headache', 'tired', 'exhausted', 'energy', 'exercise', 'gym', 'diet', 'weight', 'injury', 'accident', 'medication', 'therapy', 'symptom', 'diagnosis', 'recovery', 'heal', 'healing', 'stress', 'anxious', 'anxiety', 'depressed', 'depression', 'insomnia', 'sleep'],
+    planets: ['Mars', 'Sun', 'Neptune'],
+    houses: [1, 6],
+    label: 'health & body'
+  },
+  // TRAVEL / ADVENTURE
+  {
+    keywords: ['travel', 'trip', 'vacation', 'holiday', 'flight', 'airport', 'abroad', 'foreign', 'country', 'adventure', 'explore', 'journey', 'road trip', 'passport', 'visa', 'hotel', 'tourist', 'cruise', 'backpack'],
+    planets: ['Jupiter', 'Mercury', 'Uranus'],
+    houses: [3, 9],
+    label: 'travel & adventure'
+  },
+  // SPIRITUAL / INTUITION / DREAMS
+  {
+    keywords: ['dream', 'dreamed', 'intuition', 'spiritual', 'meditation', 'pray', 'prayer', 'vision', 'psychic', 'sign', 'synchronicity', 'universe', 'faith', 'soul', 'astral', 'mystical', 'transcendent', 'enlightenment', 'consciousness', 'awakening'],
+    planets: ['Neptune', 'Pluto', 'North Node'],
+    houses: [8, 12],
+    label: 'spirituality & intuition'
+  },
+  // SUDDEN CHANGE / SURPRISE / SHOCK
+  {
+    keywords: ['sudden', 'unexpected', 'surprise', 'surprised', 'shock', 'shocked', 'shocking', 'out of nowhere', 'bizarre', 'strange', 'weird', 'crazy', 'chaotic', 'upheaval', 'disruption', 'breakthrough', 'revelation', 'epiphany', 'realised', 'realized', 'changed everything', 'turning point'],
+    planets: ['Uranus', 'Pluto'],
+    houses: [],
+    label: 'sudden change & surprise'
+  },
+  // EMOTIONS / MOOD
+  {
+    keywords: ['emotional', 'emotions', 'crying', 'cried', 'tears', 'sad', 'sadness', 'happy', 'happiness', 'joy', 'joyful', 'moody', 'mood', 'sensitive', 'overwhelmed', 'nostalgic', 'lonely', 'loneliness', 'hopeful', 'hope', 'grateful', 'gratitude', 'peaceful', 'calm', 'fearful', 'fear', 'worried', 'worry'],
+    planets: ['Moon', 'Neptune'],
+    houses: [4, 12],
+    label: 'emotions & mood'
+  },
+  // CREATIVITY / SELF-EXPRESSION
+  {
+    keywords: ['creative', 'creativity', 'art', 'artistic', 'music', 'song', 'painting', 'drawing', 'writing', 'performing', 'stage', 'dance', 'poetry', 'inspiration', 'inspired', 'project', 'design', 'photography', 'film', 'content'],
+    planets: ['Venus', 'Neptune', 'Sun'],
+    houses: [5],
+    label: 'creativity & expression'
+  },
+  // FRIENDS / SOCIAL / COMMUNITY
+  {
+    keywords: ['friend', 'friends', 'friendship', 'social', 'party', 'gathering', 'group', 'community', 'network', 'networking', 'team', 'club', 'organization', 'event', 'celebration', 'invited', 'invitation'],
+    planets: ['Venus', 'Jupiter', 'Uranus'],
+    houses: [11],
+    label: 'friends & social life'
+  },
+  // POWER / CONTROL / TRANSFORMATION
+  {
+    keywords: ['power', 'powerful', 'control', 'controlling', 'manipulate', 'manipulation', 'obsess', 'obsessed', 'obsession', 'intense', 'intensity', 'transform', 'transformation', 'death', 'ending', 'rebirth', 'destroy', 'destroyed', 'secret', 'secrets', 'betrayal', 'betrayed', 'trust', 'revenge'],
+    planets: ['Pluto', 'Mars', 'Saturn'],
+    houses: [8],
+    label: 'power & transformation',
+    prefersHard: true
+  },
+  // RESTRICTION / DELAY / BLOCK
+  {
+    keywords: ['stuck', 'blocked', 'delay', 'delayed', 'waiting', 'slow', 'limit', 'limited', 'restriction', 'denied', 'rejected', 'rejection', 'no', 'refused', 'cancelled', 'canceled', 'postponed', 'obstacle', 'barrier', 'patience', 'discipline'],
+    planets: ['Saturn'],
+    houses: [10, 12],
+    label: 'restriction & delay',
+    prefersHard: true
+  },
+  // FREEDOM / INDEPENDENCE
+  {
+    keywords: ['freedom', 'free', 'independent', 'independence', 'liberation', 'liberated', 'rebel', 'rebellious', 'broke free', 'quit', 'resigned', 'left', 'walked out', 'escape', 'escaped', 'unconventional'],
+    planets: ['Uranus', 'Jupiter'],
+    houses: [1, 9, 11],
+    label: 'freedom & independence'
+  },
+  // LEGAL / CONTRACTS
+  {
+    keywords: ['legal', 'lawyer', 'court', 'lawsuit', 'sue', 'contract', 'agreement', 'settlement', 'negotiate', 'negotiation', 'arbitration', 'judge', 'verdict', 'justice'],
+    planets: ['Jupiter', 'Saturn', 'Venus'],
+    houses: [7, 9],
+    label: 'legal matters'
+  }
+];
+
+export function matchJournalToAspects(
+  journalText: string,
+  aspects: NTAspect[],
+  natalPlanetHouses: Record<string, number>,
+  transitPlanetHouses: Record<string, number>
+): JournalMatchResult {
+  const textLower = journalText.toLowerCase();
+  const hardAspects = ['Square', 'Opposition'];
+  const softAspects = ['Trine', 'Sextile'];
+
+  // Find all keyword categories that match the text
+  const matchedCategories: { cat: typeof JOURNAL_KEYWORD_MAP[0]; matchedWords: string[] }[] = [];
+  for (const cat of JOURNAL_KEYWORD_MAP) {
+    const found: string[] = [];
+    for (const kw of cat.keywords) {
+      // Word boundary match (space/start/end/punctuation)
+      const regex = new RegExp(`(?:^|[\\s,;.!?'"\`()])${kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:$|[\\s,;.!?'"\`()ed ing s])`, 'i');
+      if (regex.test(' ' + textLower + ' ')) {
+        found.push(kw);
+      }
+    }
+    if (found.length > 0) {
+      matchedCategories.push({ cat, matchedWords: found });
+    }
+  }
+
+  // Filter to actual natal-transit and eclipse aspects (not house cusp crossings)
+  const scorableAspects = aspects.filter(a => a.type === 'natal-transit' || a.type === 'eclipse');
+
+  // Score each aspect against matched categories
+  const aspectScores: JournalAspectMatch[] = scorableAspects.map(asp => {
+    let score = 0;
+    const matchedKeywords: string[] = [];
+    const reasons: string[] = [];
+
+    const isHard = hardAspects.includes(asp.aspect);
+    const isSoft = softAspects.includes(asp.aspect);
+    const nH = natalPlanetHouses[asp.natalPlanet] || 0;
+    const tH = transitPlanetHouses[asp.transitPlanet] || 0;
+
+    for (const { cat, matchedWords } of matchedCategories) {
+      let catScore = 0;
+
+      // Planet match (transit or natal planet in category's planet list)
+      const transitMatch = cat.planets.includes(asp.transitPlanet);
+      const natalMatch = cat.planets.includes(asp.natalPlanet);
+      if (transitMatch) catScore += 25;
+      if (natalMatch) catScore += 15;
+
+      // House match (natal or transit house in category's house list)
+      if (cat.houses.length > 0) {
+        if (cat.houses.includes(nH)) catScore += 20;
+        if (cat.houses.includes(tH)) catScore += 15;
+      }
+
+      // Hard/soft preference match
+      if (cat.prefersHard && isHard) catScore += 10;
+      if (cat.prefersSoft && isSoft) catScore += 10;
+
+      // More matched keywords = higher confidence
+      catScore += Math.min(matchedWords.length * 5, 15);
+
+      if (catScore > 0 && (transitMatch || natalMatch || (cat.houses.length > 0 && (cat.houses.includes(nH) || cat.houses.includes(tH))))) {
+        score += catScore;
+        matchedKeywords.push(...matchedWords);
+        reasons.push(cat.label);
+      }
+    }
+
+    // Bonus for tight orb (tighter = more active)
+    if (score > 0) {
+      score += Math.max(0, Math.round((5 - asp.orb) * 3));
+    }
+
+    // Bonus for eclipse aspects (fated events)
+    if (asp.type === 'eclipse' && score > 0) {
+      score += 15;
+    }
+
+    return {
+      aspect: asp,
+      score: Math.min(score, 100),
+      matchedKeywords: [...new Set(matchedKeywords)],
+      matchReason: [...new Set(reasons)].join(', ')
+    };
+  });
+
+  // Sort by score descending
+  const ranked = aspectScores.filter(m => m.score > 0).sort((a, b) => b.score - a.score);
+
+  // If no keyword matches, fall back to tightest-orb aspect
+  if (ranked.length === 0 && scorableAspects.length > 0) {
+    const tightest = [...scorableAspects].sort((a, b) => a.orb - b.orb)[0];
+    ranked.push({
+      aspect: tightest,
+      score: 10,
+      matchedKeywords: [],
+      matchReason: 'tightest active aspect (no specific keyword match)'
+    });
+  }
+
+  // Identify themes from text that didn't map to any aspect
+  const matchedLabels = new Set(ranked.flatMap(r => r.matchReason.split(', ')));
+  const unmatchedThemes = matchedCategories
+    .filter(mc => !matchedLabels.has(mc.cat.label))
+    .map(mc => mc.cat.label);
+
+  return {
+    matches: ranked.slice(0, 5), // top 5 matches
+    bestMatch: ranked.length > 0 ? ranked[0] : null,
+    unmatchedThemes
+  };
+}
+
+// ============================================================
+// JOURNAL — ASTROLOGICAL REFLECTION GENERATOR
+// ============================================================
+
+export interface JournalReflection {
+  cosmicNarrative: string;       // main astrological rephrasing of their experience
+  aspectBreakdown: string[];     // per-aspect explanations
+  growthInsight: string;         // what this transit is teaching them
+  affirmation: string;           // empowering closing statement
+}
+
+// Planet archetype descriptions for narrative building
+const PLANET_ARCHETYPES: Record<string, { energy: string; domain: string; verb: string }> = {
+  Sun: { energy: 'core identity', domain: 'self-expression and vitality', verb: 'illuminating' },
+  Moon: { energy: 'emotional nature', domain: 'feelings and inner security', verb: 'stirring' },
+  Mercury: { energy: 'mental processes', domain: 'communication and thinking', verb: 'activating thought around' },
+  Venus: { energy: 'values and affection', domain: 'love, beauty, and finances', verb: 'harmonizing or disrupting' },
+  Mars: { energy: 'drive and assertion', domain: 'action, courage, and desire', verb: 'energizing' },
+  Jupiter: { energy: 'expansion and faith', domain: 'growth, wisdom, and opportunity', verb: 'expanding' },
+  Saturn: { energy: 'structure and discipline', domain: 'responsibility, boundaries, and mastery', verb: 'testing' },
+  Uranus: { energy: 'liberation and innovation', domain: 'freedom, change, and awakening', verb: 'disrupting' },
+  Neptune: { energy: 'transcendence and imagination', domain: 'spirituality, dreams, and illusion', verb: 'dissolving boundaries around' },
+  Pluto: { energy: 'transformation and power', domain: 'deep change, rebirth, and hidden forces', verb: 'transforming' },
+  'North Node': { energy: 'soul direction', domain: 'destiny and karmic growth', verb: 'pulling you toward' },
+  'South Node': { energy: 'past patterns', domain: 'release and karmic completion', verb: 'asking you to release' },
+  Chiron: { energy: 'wounded healer', domain: 'healing, vulnerability, and wisdom through pain', verb: 'revealing healing potential in' },
+};
+
+// Aspect quality descriptions
+const ASPECT_QUALITIES: Record<string, { tone: string; dynamic: string; lesson: string }> = {
+  Conjunction: { tone: 'fusion', dynamic: 'merging and intensifying', lesson: 'integration — learning to blend these energies as one' },
+  Opposition: { tone: 'tension', dynamic: 'pulling in opposing directions', lesson: 'balance — finding the middle ground between two extremes' },
+  Square: { tone: 'friction', dynamic: 'creating pressure to act', lesson: 'growth through challenge — the tension is building strength' },
+  Trine: { tone: 'flow', dynamic: 'supporting and easing', lesson: 'natural gifts — receiving cosmic support to move forward' },
+  Sextile: { tone: 'opportunity', dynamic: 'opening doors', lesson: 'conscious effort — the opportunity is there if you reach for it' },
+};
+
+// House life-area descriptions
+const HOUSE_LIFE_AREAS: Record<number, string> = {
+  1: 'your sense of self and personal identity',
+  2: 'your finances, possessions, and self-worth',
+  3: 'your communication, siblings, and local environment',
+  4: 'your home, family, and emotional foundations',
+  5: 'your creativity, romance, and self-expression',
+  6: 'your daily routines, health, and work habits',
+  7: 'your partnerships, relationships, and one-on-one connections',
+  8: 'your shared resources, intimacy, and transformation',
+  9: 'your beliefs, higher learning, and long-distance matters',
+  10: 'your career, public reputation, and life direction',
+  11: 'your friendships, community, and hopes for the future',
+  12: 'your subconscious, spiritual life, and hidden patterns',
+};
+
+export function generateJournalReflection(
+  journalText: string,
+  matchResult: JournalMatchResult,
+  natalPlanetHouses: Record<string, number>,
+  transitPlanetHouses: Record<string, number>
+): JournalReflection {
+  const { matches, bestMatch } = matchResult;
+
+  if (!bestMatch) {
+    return {
+      cosmicNarrative: 'Your experience today reflects the subtle undercurrents of the cosmos. Even when no single transit stands out, the sky holds space for your journey.',
+      aspectBreakdown: [],
+      growthInsight: 'Sometimes the most significant growth happens in quiet moments between major transits. Trust the process.',
+      affirmation: 'You are exactly where you need to be on your cosmic journey.'
+    };
+  }
+
+  // Build the cosmic narrative from the best match
+  const best = bestMatch.aspect;
+  const transitArch = PLANET_ARCHETYPES[best.transitPlanet] || { energy: 'cosmic energy', domain: 'your life path', verb: 'influencing' };
+  const natalArch = PLANET_ARCHETYPES[best.natalPlanet] || { energy: 'personal energy', domain: 'your inner world', verb: 'activating' };
+  const aspectQual = ASPECT_QUALITIES[best.aspect] || { tone: 'activation', dynamic: 'engaging with', lesson: 'awareness of cosmic timing' };
+
+  const natalHouse = natalPlanetHouses[best.natalPlanet] || 0;
+  const transitHouse = transitPlanetHouses[best.transitPlanet] || 0;
+  const natalHouseArea = natalHouse > 0 ? HOUSE_LIFE_AREAS[natalHouse] : '';
+  const transitHouseArea = transitHouse > 0 ? HOUSE_LIFE_AREAS[transitHouse] : '';
+
+  // Construct cosmic narrative
+  let narrative = `Transit ${best.transitPlanet}, the planet of ${transitArch.energy}, is ${aspectQual.dynamic} your natal ${best.natalPlanet} through a ${best.aspect.toLowerCase()}`;
+  if (best.orb <= 1) {
+    narrative += ' at near-exact precision';
+  } else if (best.orb <= 2) {
+    narrative += ' within a tight orb';
+  }
+  narrative += '.';
+
+  // Add house context
+  if (natalHouseArea) {
+    narrative += ` This is directly activating ${natalHouseArea}`;
+    if (transitHouseArea && transitHouse !== natalHouse) {
+      narrative += `, with the transit energy flowing from ${transitHouseArea}`;
+    }
+    narrative += '.';
+  }
+
+  // Add experience connection
+  narrative += ` What you described resonates with the ${aspectQual.tone} between ${transitArch.domain} and ${natalArch.domain}.`;
+
+  if (best.type === 'eclipse') {
+    narrative += ` This is intensified by the eclipse energy, which marks this as a fated turning point rather than a passing mood.`;
+  }
+
+  // Build per-aspect breakdowns (top 3)
+  const aspectBreakdown: string[] = matches.slice(0, 3).map(m => {
+    const asp = m.aspect;
+    const tA = PLANET_ARCHETYPES[asp.transitPlanet] || { energy: 'cosmic energy', verb: 'influencing' };
+    const nA = PLANET_ARCHETYPES[asp.natalPlanet] || { energy: 'personal energy', verb: 'activating' };
+    const aQ = ASPECT_QUALITIES[asp.aspect] || { tone: 'activation', dynamic: 'engaging with' };
+    const orbDesc = asp.orb <= 1 ? '(exact)' : asp.orb <= 2 ? '(tight)' : `(${asp.orb.toFixed(1)}° orb)`;
+
+    let line = `${asp.transitPlanet} ${asp.aspect} ${asp.natalPlanet} ${orbDesc}: `;
+    line += `The energy of ${tA.energy} is ${aQ.dynamic} your ${nA.energy}`;
+
+    if (m.matchedKeywords.length > 0) {
+      line += `. Your mention of "${m.matchedKeywords.slice(0, 2).join('" and "')}" connects to this ${aQ.tone}`;
+    }
+    line += '.';
+    return line;
+  });
+
+  // Growth insight based on aspect type
+  let growthInsight: string;
+  const isHard = ['Square', 'Opposition'].includes(best.aspect);
+  const isSoft = ['Trine', 'Sextile'].includes(best.aspect);
+
+  if (isHard) {
+    growthInsight = `The ${best.aspect.toLowerCase()} between transit ${best.transitPlanet} and your natal ${best.natalPlanet} is here to catalyze growth through challenge. ${aspectQual.lesson}. The discomfort you feel is the friction of evolution — you are being shaped into a stronger version of yourself.`;
+  } else if (isSoft) {
+    growthInsight = `The ${best.aspect.toLowerCase()} from transit ${best.transitPlanet} to your natal ${best.natalPlanet} is offering cosmic support. ${aspectQual.lesson}. Lean into this ease — it's the universe rewarding your alignment.`;
+  } else {
+    // Conjunction
+    growthInsight = `The conjunction of transit ${best.transitPlanet} with your natal ${best.natalPlanet} is a powerful reset point. ${aspectQual.lesson}. This is a new beginning in how you experience ${natalArch.domain}.`;
+  }
+
+  // Affirmation based on dominant themes
+  const affirmations: Record<string, string> = {
+    Mars: 'Your courage is being forged in cosmic fire. Trust your instincts and channel this energy with purpose.',
+    Venus: 'Your heart knows what it values. Let beauty and connection guide you through this transit.',
+    Saturn: 'Every boundary you set and responsibility you carry is building something lasting. Your discipline is your superpower.',
+    Jupiter: 'Abundance is flowing toward you. Stay open, stay grateful, and let expansion happen naturally.',
+    Pluto: 'What transforms you cannot destroy you. You are emerging more powerful than before.',
+    Neptune: 'Trust the mystery. Not everything needs to be understood — some things need to be felt.',
+    Uranus: 'The changes happening now are liberating you from what no longer serves your authentic path.',
+    Mercury: 'Your mind is a powerful instrument right now. Speak your truth and trust your perception.',
+    Moon: 'Honor your emotions — they are messengers from your deeper self, guiding you home.',
+    Sun: 'You are stepping into a truer expression of who you are. Let your light shine without apology.',
+    'North Node': 'You are being called toward your destiny. The unfamiliar path is the right one.',
+    Chiron: 'Your wounds are becoming your wisdom. What once hurt you is now your gift to others.',
+  };
+
+  const affirmation = affirmations[best.transitPlanet] || affirmations[best.natalPlanet] ||
+    'The cosmos is holding space for your journey. Trust the timing of your life.';
+
+  return {
+    cosmicNarrative: narrative,
+    aspectBreakdown,
+    growthInsight,
+    affirmation
+  };
+}
+
+// ============================================================
+// JOURNAL — DURATION PREDICTION CALCULATOR
+// ============================================================
+
+export interface TransitDuration {
+  planet: string;
+  aspect: string;
+  natalPlanet: string;
+  totalDays: number;          // estimated total duration of this aspect (applying → exact → separating)
+  remainingDays: number;      // estimated days remaining from now
+  phase: 'applying' | 'exact' | 'separating';  // where we are in the aspect lifecycle
+  intensity: 'building' | 'peak' | 'fading';
+  description: string;        // human-readable duration narrative
+  peakDescription: string;    // when the peak energy occurs
+}
+
+// Average daily motion in degrees for each planet
+// These are approximate mean values; actual speed varies with retrograde/station
+const PLANET_DAILY_MOTION: Record<string, number> = {
+  Moon: 13.2,
+  Mercury: 1.2,
+  Venus: 1.0,
+  Sun: 1.0,
+  Mars: 0.52,
+  Jupiter: 0.083,    // ~5° per year
+  Saturn: 0.033,     // ~2° per year
+  Uranus: 0.012,     // ~0.7° per year
+  Neptune: 0.006,    // ~0.35° per year
+  Pluto: 0.004,      // ~0.25° per year
+  'North Node': 0.053,  // ~19° per year (retrograde mean)
+  'South Node': 0.053,
+  Chiron: 0.02,      // ~1.2° per year average
+};
+
+// Standard orb limits for when an aspect is "felt"
+const ASPECT_EFFECTIVE_ORBS: Record<string, number> = {
+  Conjunction: 8,
+  Opposition: 8,
+  Square: 7,
+  Trine: 7,
+  Sextile: 5,
+};
+
+export function calculateJournalTransitDuration(
+  aspect: NTAspect,
+  currentDate: Date
+): TransitDuration {
+  const dailyMotion = PLANET_DAILY_MOTION[aspect.transitPlanet] || 0.5;
+  const effectiveOrb = ASPECT_EFFECTIVE_ORBS[aspect.aspect] || 6;
+
+  // Determine phase based on whether orb is applying or separating
+  // We use a heuristic: if transitLongitude is available, calculate direction
+  // Otherwise, assume midpoint of the aspect window
+  let phase: 'applying' | 'exact' | 'separating';
+  let intensity: 'building' | 'peak' | 'fading';
+
+  if (aspect.orb <= 0.5) {
+    phase = 'exact';
+    intensity = 'peak';
+  } else if (aspect.transitLongitude !== undefined && aspect.natalLongitude !== undefined) {
+    // Calculate expected exact aspect longitude
+    // For conjunction: transit = natal; opposition: transit = natal + 180; etc.
+    const aspectAngles: Record<string, number> = {
+      Conjunction: 0, Opposition: 180, Square: 90, Trine: 120, Sextile: 60
+    };
+    const targetAngle = aspectAngles[aspect.aspect] || 0;
+    const diff = ((aspect.transitLongitude - aspect.natalLongitude + 360) % 360);
+    // If the transit planet is short of the target angle, it's applying
+    const distToExact = Math.abs(diff - targetAngle);
+    const altDist = Math.abs(diff - (360 - targetAngle));
+    const minDist = Math.min(distToExact, altDist);
+
+    // Check if transit planet is approaching or leaving the exact angle
+    // Simple heuristic: if orb is tightening (planet moving toward exact), it's applying
+    // Since we can't track orb over time with a single snapshot, we use the orb magnitude
+    // Tighter orbs with planets moving direct = could be either; use 50/50 heuristic
+    // Better approach: assume applying if we're in the first half of the effective orb window
+    if (aspect.orb > effectiveOrb * 0.5) {
+      phase = 'applying';
+      intensity = 'building';
+    } else {
+      phase = 'separating';
+      intensity = 'fading';
+    }
+  } else {
+    // No longitude data — estimate from orb position
+    if (aspect.orb > effectiveOrb * 0.5) {
+      phase = 'applying';
+      intensity = 'building';
+    } else {
+      phase = 'separating';
+      intensity = 'fading';
+    }
+  }
+
+  // Calculate total duration: time to traverse the full effective orb window
+  // Total window = 2 × effectiveOrb degrees / daily motion
+  const totalDays = Math.round((2 * effectiveOrb) / dailyMotion);
+
+  // Remaining days depends on phase
+  let remainingDays: number;
+  if (phase === 'applying') {
+    // Still approaching exact + full separating side
+    const daysToExact = Math.round(aspect.orb / dailyMotion);
+    const daysSeparating = Math.round(effectiveOrb / dailyMotion);
+    remainingDays = daysToExact + daysSeparating;
+  } else if (phase === 'exact') {
+    // Just the separating side
+    remainingDays = Math.round(effectiveOrb / dailyMotion);
+  } else {
+    // Separating — remaining is (effectiveOrb - orb) / daily motion
+    remainingDays = Math.max(1, Math.round((effectiveOrb - aspect.orb) / dailyMotion));
+  }
+
+  // Cap minimum at 1 day
+  remainingDays = Math.max(1, remainingDays);
+
+  // Build human-readable descriptions
+  const planetSpeed = dailyMotion >= 1 ? 'fast-moving' : dailyMotion >= 0.05 ? 'moderate' : 'slow-moving';
+
+  let description: string;
+  if (totalDays <= 3) {
+    description = `This is a brief ${planetSpeed} transit lasting about ${totalDays} day${totalDays > 1 ? 's' : ''}. Its effects are quick and sharp — pay attention now, as the energy will pass soon.`;
+  } else if (totalDays <= 14) {
+    description = `This ${planetSpeed} transit spans approximately ${totalDays} days. You have about ${remainingDays} day${remainingDays > 1 ? 's' : ''} remaining in this energy. It's significant but not permanent — use this window wisely.`;
+  } else if (totalDays <= 60) {
+    const weeks = Math.round(totalDays / 7);
+    const remWeeks = Math.round(remainingDays / 7);
+    description = `This ${planetSpeed} transit unfolds over approximately ${weeks} week${weeks > 1 ? 's' : ''} (${totalDays} days). You have roughly ${remWeeks > 0 ? remWeeks + ' week' + (remWeeks > 1 ? 's' : '') : remainingDays + ' days'} remaining. This is a meaningful chapter — significant shifts can occur during this period.`;
+  } else if (totalDays <= 365) {
+    const months = Math.round(totalDays / 30);
+    const remMonths = Math.round(remainingDays / 30);
+    description = `This is a major ${planetSpeed} transit lasting approximately ${months} month${months > 1 ? 's' : ''}. With about ${remMonths > 0 ? remMonths + ' month' + (remMonths > 1 ? 's' : '') : remainingDays + ' days'} remaining, this energy is reshaping a significant area of your life. Embrace the process.`;
+  } else {
+    const years = (totalDays / 365).toFixed(1);
+    const remMonths = Math.round(remainingDays / 30);
+    description = `This is a profound, generational ${planetSpeed} transit spanning approximately ${years} years. With about ${remMonths} month${remMonths > 1 ? 's' : ''} remaining, this represents a deep transformation. These are the transits that define entire life chapters.`;
+  }
+
+  // Peak description
+  let peakDescription: string;
+  if (phase === 'applying') {
+    const daysToExact = Math.max(1, Math.round(aspect.orb / dailyMotion));
+    if (daysToExact <= 1) {
+      peakDescription = 'The peak intensity is imminent — within the next day or so.';
+    } else if (daysToExact <= 7) {
+      peakDescription = `The energy is building toward peak intensity in approximately ${daysToExact} days. You're in the anticipation phase — events are gathering momentum.`;
+    } else if (daysToExact <= 30) {
+      const wks = Math.round(daysToExact / 7);
+      peakDescription = `Peak intensity arrives in approximately ${wks} week${wks > 1 ? 's' : ''}. The pressure you feel will intensify before reaching its crescendo.`;
+    } else {
+      const mths = Math.round(daysToExact / 30);
+      peakDescription = `Peak intensity is still about ${mths} month${mths > 1 ? 's' : ''} away. What you're experiencing now is just the opening act.`;
+    }
+  } else if (phase === 'exact') {
+    peakDescription = 'You are at or near the peak of this transit right now. This is the most potent moment — what happens now carries the greatest weight.';
+  } else {
+    peakDescription = 'The peak has already passed. The energy is now integrating — you\'re processing and absorbing the lessons this transit brought.';
+  }
+
+  // Eclipse override — eclipses have longer-lasting effects
+  if (aspect.type === 'eclipse') {
+    const eclipseDescription = `${description} As an eclipse aspect, its effects extend far beyond the transit window — eclipse energy typically reverberates for 6 months and can be felt up to a year later. Events triggered now may unfold gradually over the coming months.`;
+    return {
+      planet: aspect.transitPlanet,
+      aspect: aspect.aspect,
+      natalPlanet: aspect.natalPlanet,
+      totalDays: Math.max(totalDays, 180), // eclipses: minimum 6 months influence
+      remainingDays: Math.max(remainingDays, 150),
+      phase,
+      intensity,
+      description: eclipseDescription,
+      peakDescription
+    };
+  }
+
+  return {
+    planet: aspect.transitPlanet,
+    aspect: aspect.aspect,
+    natalPlanet: aspect.natalPlanet,
+    totalDays,
+    remainingDays,
+    phase,
+    intensity,
+    description,
+    peakDescription
   };
 }

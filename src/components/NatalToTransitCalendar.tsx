@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { calculatePlanetaryPositions, calculateAscendant } from '../utils/ephemeris';
 import { getNatalActivationManifestations, generateDailySummary, generateWeeklySummary } from '../utils/aspectInterpretations';
-import type { DailySummary, WeeklySummary } from '../utils/aspectInterpretations';
+import type { DailySummary, WeeklySummary, LifeEventAlert, WeeklyLifeEventAlert } from '../utils/aspectInterpretations';
 
 interface NatalToTransitCalendarProps {
   natalDate: Date;
@@ -776,25 +776,66 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
               </div>
             </div>
 
+            {/* Weekly Life Event Radar */}
+            {ws.weeklyAlerts.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
+                  🔮 Weekly Life Event Radar
+                </h4>
+                {ws.weeklyAlerts.map((alert, i) => (
+                  <div key={i} style={{
+                    padding: '12px 16px',
+                    backgroundColor: alert.type === 'money' ? '#fff8e1' : alert.type === 'love' ? '#fce4ec' : alert.type === 'career' ? '#e8eaf6' : alert.type === 'property' ? '#e0f2f1' : alert.type === 'travel' ? '#e1f5fe' : '#f3e5f5',
+                    borderRadius: '8px',
+                    border: `2px solid ${alert.type === 'money' ? '#ffc107' : alert.type === 'love' ? '#e91e63' : alert.type === 'career' ? '#3f51b5' : alert.type === 'property' ? '#009688' : alert.type === 'travel' ? '#03a9f4' : '#9c27b0'}`,
+                    marginBottom: '10px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '10px'
+                  }}>
+                    <span style={{ fontSize: '22px', lineHeight: '1' }}>{alert.emoji}</span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                        <span style={{ fontWeight: 'bold', fontSize: '14px', color: '#333' }}>
+                          {alert.type.charAt(0).toUpperCase() + alert.type.slice(1)} Week
+                        </span>
+                        <span style={{ fontSize: '11px', color: '#888', fontWeight: 'normal' }}>
+                          {alert.daysActive} days active • peaks {alert.peakDay}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
+                        {alert.message}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* Major Themes */}
             {ws.majorThemes.length > 0 && (
               <div style={{ marginBottom: '20px' }}>
                 <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
-                  Major Themes This Week
+                  🌊 Dominant Energies
                 </h4>
                 {ws.majorThemes.map((theme, i) => (
                   <div key={i} style={{
                     padding: '12px 16px',
-                    backgroundColor: 'white',
+                    backgroundColor: theme.isDominant ? '#fafafa' : 'white',
                     borderRadius: '8px',
-                    border: '1px solid #e0e0e0',
+                    border: theme.isDominant ? '2px solid #7c4dff' : '1px solid #e0e0e0',
                     marginBottom: '8px',
                     borderLeft: `4px solid ${theme.hardCount > theme.softCount ? '#ff9800' : theme.softCount > theme.hardCount ? '#4caf50' : '#7c4dff'}`
                   }}>
-                    <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#333', marginBottom: '4px' }}>
+                    <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#333', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                       {theme.transitPair} — {theme.theme}
-                      <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
-                        {theme.daysActive} day{theme.daysActive > 1 ? 's' : ''} active
+                      {theme.isDominant && (
+                        <span style={{ fontSize: '10px', fontWeight: 'bold', color: '#7c4dff', backgroundColor: '#ede7f6', padding: '2px 6px', borderRadius: '4px' }}>
+                          SIGNATURE ENERGY
+                        </span>
+                      )}
+                      <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: 'auto' }}>
+                        {theme.daysActive} day{theme.daysActive > 1 ? 's' : ''}
                       </span>
                     </div>
                     <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
@@ -809,31 +850,61 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
             {ws.houseSpotlights.length > 0 && (
               <div style={{ marginBottom: '20px' }}>
                 <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
-                  Houses Under the Spotlight
+                  🏠 Life Areas in Focus
                 </h4>
-                {ws.houseSpotlights.map((h, i) => (
-                  <div key={i} style={{
-                    padding: '12px 16px',
-                    backgroundColor: 'white',
-                    borderRadius: '8px',
-                    border: '1px solid #e0e0e0',
-                    marginBottom: '8px'
-                  }}>
-                    <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#1a237e', marginBottom: '4px' }}>
-                      {h.house}{['th','st','nd','rd'][h.house % 100 > 3 && h.house % 100 < 21 ? 0 : h.house % 10 > 3 ? 0 : h.house % 10] || 'th'} House — {h.domain.charAt(0).toUpperCase() + h.domain.slice(1)}
-                      <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: '8px' }}>
-                        {h.totalActivations} activation{h.totalActivations > 1 ? 's' : ''} • {h.natalPlanets.join(', ')}
-                      </span>
+                <div style={{ display: 'grid', gridTemplateColumns: ws.houseSpotlights.length >= 3 ? '1fr 1fr 1fr' : ws.houseSpotlights.length === 2 ? '1fr 1fr' : '1fr', gap: '10px' }}>
+                  {ws.houseSpotlights.map((h, i) => (
+                    <div key={i} style={{
+                      padding: '12px 14px',
+                      backgroundColor: 'white',
+                      borderRadius: '8px',
+                      border: '1px solid #e0e0e0',
+                      borderLeft: `4px solid ${h.hardCount > h.softCount ? '#ff9800' : h.softCount > h.hardCount ? '#4caf50' : '#5c6bc0'}`
+                    }}>
+                      <div style={{ fontWeight: 'bold', fontSize: '13px', color: '#1a237e', marginBottom: '4px' }}>
+                        {h.domainLabel}
+                        <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', display: 'block' }}>
+                          {h.house}{['th','st','nd','rd'][h.house % 100 > 3 && h.house % 100 < 21 ? 0 : h.house % 10 > 3 ? 0 : h.house % 10] || 'th'} house • {h.totalActivations} hits
+                        </span>
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#555', lineHeight: '1.5' }}>
+                        {h.arc}
+                      </div>
                     </div>
-                    <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
-                      {h.arc}
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Key Days */}
+            {ws.keyDays.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#333' }}>
+                  📅 Week at a Glance
+                </h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {ws.keyDays.map((kd, i) => (
+                    <div key={i} style={{
+                      padding: '10px 14px',
+                      backgroundColor: kd.type === 'power' ? '#e8eaf6' : kd.type === 'caution' ? '#fff3e0' : '#e8f5e9',
+                      borderRadius: '8px',
+                      border: `1px solid ${kd.type === 'power' ? '#7c4dff' : kd.type === 'caution' ? '#ffcc80' : '#a5d6a7'}`,
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '10px'
+                    }}>
+                      <div style={{ fontWeight: 'bold', fontSize: '13px', color: kd.type === 'power' ? '#283593' : kd.type === 'caution' ? '#e65100' : '#2e7d32', minWidth: '120px' }}>
+                        {kd.label}
+                        <div style={{ fontSize: '11px', fontWeight: 'normal', color: '#888' }}>
+                          {kd.dayName} ({kd.dateLabel})
+                        </div>
+                      </div>
+                      <div style={{ fontSize: '13px', color: '#444', lineHeight: '1.5' }}>
+                        {kd.description}
+                      </div>
                     </div>
-                    <div style={{ display: 'flex', gap: '10px', marginTop: '6px', fontSize: '12px' }}>
-                      {h.hardCount > 0 && <span style={{ color: '#e65100' }}>{h.hardCount} challenging</span>}
-                      {h.softCount > 0 && <span style={{ color: '#2e7d32' }}>{h.softCount} supportive</span>}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
 
@@ -846,7 +917,7 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
                 border: '1px solid #ffcc80'
               }}>
                 <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#e65100' }}>
-                  Week's Biggest Challenge
+                  ⚡ Week's Biggest Challenge
                 </h4>
                 <div style={{ fontSize: '13px', color: '#bf360c', lineHeight: '1.6' }}>
                   {ws.biggestChallenge}
@@ -859,33 +930,10 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
                 border: '1px solid #a5d6a7'
               }}>
                 <h4 style={{ margin: '0 0 8px 0', fontSize: '14px', color: '#2e7d32' }}>
-                  Week's Biggest Opportunity
+                  ✨ Week's Biggest Opportunity
                 </h4>
                 <div style={{ fontSize: '13px', color: '#1b5e20', lineHeight: '1.6' }}>
                   {ws.biggestOpportunity}
-                </div>
-              </div>
-            </div>
-
-            {/* Weekly Action Plan */}
-            <div style={{
-              padding: '16px',
-              backgroundColor: '#e8eaf6',
-              borderRadius: '8px',
-              border: '2px solid #5c6bc0'
-            }}>
-              <h4 style={{ margin: '0 0 12px 0', fontSize: '15px', color: '#283593' }}>
-                Weekly Action Plan
-              </h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <div style={{ fontSize: '13px', lineHeight: '1.6', color: '#1a237e' }}>
-                  <strong style={{ color: '#283593' }}>Mon–Wed:</strong> {ws.actionPlan.earlyWeek}
-                </div>
-                <div style={{ fontSize: '13px', lineHeight: '1.6', color: '#1a237e' }}>
-                  <strong style={{ color: '#283593' }}>Thu–Fri:</strong> {ws.actionPlan.midWeek}
-                </div>
-                <div style={{ fontSize: '13px', lineHeight: '1.6', color: '#1a237e' }}>
-                  <strong style={{ color: '#283593' }}>Weekend:</strong> {ws.actionPlan.weekend}
                 </div>
               </div>
             </div>
@@ -1255,48 +1303,55 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
               </div>
             </div>
 
+            {/* Life Event Alerts */}
+            {summary.lifeEventAlerts.length > 0 && (
+              <div style={{ marginBottom: '20px' }}>
+                {summary.lifeEventAlerts.map((alert, i) => (
+                  <div key={i} style={{
+                    padding: '12px 16px',
+                    backgroundColor: alert.type === 'money' ? '#fff8e1' : alert.type === 'love' ? '#fce4ec' : alert.type === 'career' ? '#e8eaf6' : alert.type === 'property' ? '#e0f2f1' : alert.type === 'travel' ? '#e1f5fe' : '#f3e5f5',
+                    borderRadius: '8px',
+                    border: `2px solid ${alert.type === 'money' ? '#ffc107' : alert.type === 'love' ? '#e91e63' : alert.type === 'career' ? '#3f51b5' : alert.type === 'property' ? '#009688' : alert.type === 'travel' ? '#03a9f4' : '#9c27b0'}`,
+                    marginBottom: '10px',
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '10px'
+                  }}>
+                    <span style={{ fontSize: '22px', lineHeight: '1' }}>{alert.emoji}</span>
+                    <div>
+                      <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#333', marginBottom: '4px' }}>
+                        {alert.label}
+                      </div>
+                      <div style={{ fontSize: '13px', color: '#555', lineHeight: '1.5' }}>
+                        {alert.message}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
             {/* Focus Areas */}
             {summary.focusAreas.length > 0 && (
               <div style={{ marginBottom: '20px' }}>
                 <h4 style={{ margin: '0 0 12px 0', fontSize: '16px', color: '#333' }}>
-                  Life Areas in Focus
+                  🎯 Today's Focus Areas
                 </h4>
                 {summary.focusAreas.map((area, areaIdx) => (
                   <div key={areaIdx} style={{
-                    padding: '12px 16px',
+                    padding: '14px 16px',
                     backgroundColor: 'white',
                     borderRadius: '8px',
                     border: '1px solid #e0e0e0',
+                    borderLeft: `4px solid ${area.hasHard && !area.hasSoft ? '#ff9800' : area.hasSoft && !area.hasHard ? '#4caf50' : '#5c6bc0'}`,
                     marginBottom: '10px'
                   }}>
                     <div style={{ fontWeight: 'bold', fontSize: '14px', color: '#1a237e', marginBottom: '8px' }}>
-                      {area.house}{['th','st','nd','rd'][area.house % 100 > 3 && area.house % 100 < 21 ? 0 : area.house % 10 > 3 ? 0 : area.house % 10] || 'th'} House — {area.domain.charAt(0).toUpperCase() + area.domain.slice(1)}
-                      <span style={{ fontSize: '12px', color: '#888', fontWeight: 'normal', marginLeft: '8px' }}>
-                        ({area.activations.length} activation{area.activations.length > 1 ? 's' : ''})
-                      </span>
+                      {area.domainLabel} ({area.house}{['th','st','nd','rd'][area.house % 100 > 3 && area.house % 100 < 21 ? 0 : area.house % 10 > 3 ? 0 : area.house % 10] || 'th'} house)
                     </div>
-                    {area.activations.map((act, actIdx) => (
-                      <div key={actIdx} style={{
-                        padding: '8px 12px',
-                        marginBottom: actIdx < area.activations.length - 1 ? '6px' : 0,
-                        backgroundColor: act.isHard ? '#fff8e1' : '#e8f5e9',
-                        borderRadius: '6px',
-                        borderLeft: `4px solid ${act.isHard ? '#ff9800' : '#4caf50'}`,
-                        fontSize: '13px'
-                      }}>
-                        <div style={{ fontWeight: '600', marginBottom: '4px', color: act.isHard ? '#e65100' : '#2e7d32' }}>
-                          {act.natalPlanet} — {act.transitTheme}
-                          <span style={{ fontSize: '11px', fontWeight: 'normal', color: '#888', marginLeft: '6px' }}>
-                            via {act.transitPair}
-                          </span>
-                        </div>
-                        {act.bullets.map((bullet, bIdx) => (
-                          <div key={bIdx} style={{ color: '#555', lineHeight: '1.5', paddingLeft: '8px' }}>
-                            • {bullet}
-                          </div>
-                        ))}
-                      </div>
-                    ))}
+                    <div style={{ fontSize: '13px', color: '#444', lineHeight: '1.7' }}>
+                      {area.narrative}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -1312,7 +1367,7 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
                 marginBottom: '15px'
               }}>
                 <h4 style={{ margin: '0 0 10px 0', fontSize: '15px', color: '#e65100' }}>
-                  Watch Out For
+                  ⚡ Watch Out For
                 </h4>
                 {summary.tensions.map((t, i) => (
                   <div key={i} style={{ fontSize: '13px', color: '#bf360c', lineHeight: '1.6', marginBottom: '6px' }}>
@@ -1332,7 +1387,7 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
                 marginBottom: '15px'
               }}>
                 <h4 style={{ margin: '0 0 10px 0', fontSize: '15px', color: '#2e7d32' }}>
-                  Lean Into
+                  ✨ Lean Into
                 </h4>
                 {summary.opportunities.map((o, i) => (
                   <div key={i} style={{ fontSize: '13px', color: '#1b5e20', lineHeight: '1.6', marginBottom: '6px' }}>
@@ -1351,7 +1406,7 @@ export const NatalToTransitCalendar: React.FC<NatalToTransitCalendarProps> = ({
               textAlign: 'center'
             }}>
               <h4 style={{ margin: '0 0 8px 0', fontSize: '15px', color: '#283593' }}>
-                Today's #1 Focus
+                🎯 Today's #1 Focus
               </h4>
               <div style={{ fontSize: '14px', color: '#1a237e', lineHeight: '1.6', fontWeight: '500' }}>
                 {summary.topFocus}

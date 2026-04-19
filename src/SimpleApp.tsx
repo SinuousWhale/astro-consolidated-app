@@ -18,6 +18,126 @@ const isInnerPlanet = (name: string): boolean => {
   return innerPlanets.includes(name);
 };
 
+// Helper function to normalize degrees (0-360)
+const normalizeDegrees = (deg: number): number => {
+  let normalized = deg % 360;
+  if (normalized < 0) normalized += 360;
+  return normalized;
+};
+
+// Helper function to calculate angular distance between two points
+const angularDistance = (deg1: number, deg2: number): number => {
+  const diff = Math.abs(normalizeDegrees(deg1) - normalizeDegrees(deg2));
+  return diff > 180 ? 360 - diff : diff;
+};
+
+// Helper function to calculate moon illumination percentage
+const getMoonIllumination = (sunLon: number, moonLon: number): number => {
+  const angle = angularDistance(sunLon, moonLon);
+  // Moon illumination formula: (1 - cos(angle)) / 2
+  const illumination = (1 - Math.cos((angle * Math.PI) / 180)) / 2;
+  return Math.round(illumination * 100);
+};
+
+// Helper function to get moon phase name and icon
+const getMoonPhase = (sunLon: number, moonLon: number): { name: string; icon: string } => {
+  const angle = angularDistance(sunLon, moonLon);
+
+  if (angle < 45) return { name: 'New Moon', icon: '🌑' };
+  if (angle < 90) return { name: 'Waxing Crescent', icon: '🌒' };
+  if (angle < 135) return { name: 'First Quarter', icon: '🌓' };
+  if (angle < 180) return { name: 'Waxing Gibbous', icon: '🌔' };
+
+  // For angles > 180, we need to check the other side
+  if (angle > 315) return { name: 'New Moon', icon: '🌑' };
+  if (angle > 270) return { name: 'Waning Crescent', icon: '🌘' };
+  if (angle > 225) return { name: 'Last Quarter', icon: '🌗' };
+  if (angle > 180) return { name: 'Waning Gibbous', icon: '🌖' };
+
+  return { name: 'Full Moon', icon: '🌕' };
+};
+
+// Helper function to detect lunar events
+interface LunarEvent {
+  type: 'new-moon' | 'full-moon' | 'solar-eclipse' | 'lunar-eclipse';
+  phase: string;
+  orb: number;
+  illumination?: number;
+}
+
+const detectLunarEvent = (planetData: any): LunarEvent | null => {
+  if (!planetData?.transitPlanets) return null;
+
+  const sun = planetData.transitPlanets.find((p: any) => p.name === 'Sun');
+  const moon = planetData.transitPlanets.find((p: any) => p.name === 'Moon');
+  const northNode = planetData.transitPlanets.find((p: any) => p.name === 'North Node');
+
+  if (!sun || !moon) return null;
+
+  const sunLon = sun.longitude;
+  const moonLon = moon.longitude;
+  const illumination = getMoonIllumination(sunLon, moonLon);
+
+  // Calculate Sun-Moon aspect
+  const sunMoonDistance = angularDistance(sunLon, moonLon);
+
+  // New Moon: Sun conjunct Moon (within 10°)
+  if (sunMoonDistance <= 10) {
+    // Check if it's near a node (eclipse) - within 18° of North or South Node
+    if (northNode) {
+      const nodeDistance = Math.min(
+        angularDistance(moonLon, northNode.longitude),
+        angularDistance(moonLon, normalizeDegrees(northNode.longitude + 180)) // South Node
+      );
+
+      if (nodeDistance <= 18) {
+        return {
+          type: 'solar-eclipse',
+          phase: 'Solar Eclipse',
+          orb: sunMoonDistance,
+          illumination
+        };
+      }
+    }
+
+    return {
+      type: 'new-moon',
+      phase: 'New Moon',
+      orb: sunMoonDistance,
+      illumination
+    };
+  }
+
+  // Full Moon: Sun opposite Moon (within 10° of 180°)
+  if (Math.abs(sunMoonDistance - 180) <= 10) {
+    // Check if it's near a node (eclipse) - within 18° of North or South Node
+    if (northNode) {
+      const nodeDistance = Math.min(
+        angularDistance(moonLon, northNode.longitude),
+        angularDistance(moonLon, normalizeDegrees(northNode.longitude + 180)) // South Node
+      );
+
+      if (nodeDistance <= 18) {
+        return {
+          type: 'lunar-eclipse',
+          phase: 'Lunar Eclipse',
+          orb: Math.abs(sunMoonDistance - 180),
+          illumination
+        };
+      }
+    }
+
+    return {
+      type: 'full-moon',
+      phase: 'Full Moon',
+      orb: Math.abs(sunMoonDistance - 180),
+      illumination
+    };
+  }
+
+  return null;
+};
+
 // Helper function to get color intensity based on orb and planet types
 // Returns an rgba color string with varying opacity
 const getOrbColorIntensity = (orb: number, planet1: string, planet2: string, baseColor: string): string => {
@@ -67,7 +187,7 @@ function SimpleApp() {
     return date;
   });
   const [transitDate, setTransitDate] = useState<Date>(new Date());
-  const [houseSystem, setHouseSystem] = useState<string>('placidus');
+  const [houseSystem, setHouseSystem] = useState<string>('whole-sign');
   const [latitude, setLatitude] = useState<number>(44.8565); // Default: Pitești, Romania
   const [longitude, setLongitude] = useState<number>(24.8692);
   const [cityName, setCityName] = useState<string>('Pitești');
@@ -78,6 +198,7 @@ function SimpleApp() {
   const [manualFirstHouseSign, setManualFirstHouseSign] = useState<string>('Aries');
   const [natalPlanetFilter, setNatalPlanetFilter] = useState<string>('all');
   const [transitPlanetFilter, setTransitPlanetFilter] = useState<string>('all');
+  const [transitToTransitPlanetFilter, setTransitToTransitPlanetFilter] = useState<string>('all');
   const [planetData, setPlanetData] = useState<any>(null);
   const [expandedAspectIndex, setExpandedAspectIndex] = useState<number | null>(null);
   const [expandedTransitAspectIndex, setExpandedTransitAspectIndex] = useState<number | null>(null);
@@ -140,7 +261,7 @@ function SimpleApp() {
               timeIntervals={15}
               dateFormat="MMMM d, yyyy h:mm aa"
               className="date-picker"
-              minDate={new Date('1960-01-01')}
+              minDate={new Date('1910-01-01')}
               maxDate={new Date('2027-12-31')}
               showYearDropdown
               showMonthDropdown
@@ -1002,8 +1123,8 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
           <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Transit-to-Transit Wheel</h2>
 
           {/* Transit-Transit Controls */}
-          <div className="controls" style={{ marginBottom: '30px' }}>
-            <div className="control-group">
+          <div className="controls" style={{ marginBottom: '30px', minHeight: '120px', alignItems: 'flex-start' }}>
+            <div className="control-group" style={{ minWidth: '250px' }}>
               <label>
                 <strong>Transit Date & Time:</strong>
                 <DatePicker
@@ -1018,7 +1139,7 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
                   timeIntervals={15}
                   dateFormat="MMMM d, yyyy h:mm aa"
                   className="date-picker"
-                  minDate={new Date('1960-01-01')}
+                  minDate={new Date('1910-01-01')}
                   maxDate={new Date('2027-12-31')}
                   showYearDropdown
                   showMonthDropdown
@@ -1034,7 +1155,7 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
               </button>
             </div>
 
-            <div className="control-group">
+            <div className="control-group" style={{ minWidth: '200px' }}>
               <label>
                 <strong>House System:</strong>
                 <select
@@ -1054,7 +1175,7 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
               </label>
             </div>
 
-            <div className="control-group">
+            <div className="control-group" style={{ minHeight: '85px', minWidth: '220px' }}>
               <label>
                 <strong>First House Reference:</strong>
                 <select
@@ -1102,7 +1223,7 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
               )}
             </div>
 
-            <div className="control-group">
+            <div className="control-group" style={{ minWidth: '230px' }}>
               <label>
                 <strong>Location:</strong>
                 <input
@@ -1121,7 +1242,118 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
                 />
               </label>
             </div>
+
+            <div className="control-group" style={{ minWidth: '260px' }}>
+              <label>
+                <strong>Transit Planets:</strong>
+                <select
+                  value={transitToTransitPlanetFilter}
+                  onChange={(e) => setTransitToTransitPlanetFilter(e.target.value)}
+                  style={{
+                    marginLeft: '10px',
+                    padding: '8px 12px',
+                    border: '1px solid #ccc',
+                    borderRadius: '4px',
+                    fontSize: '14px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  <option value="all">All Planets</option>
+                  <option value="inner">Inner Planets Only</option>
+                  <option value="outer">Outer Planets Only</option>
+                  <option value="outer-nodes">Outer Planets & Nodes Only</option>
+                  <option value="nodes">Nodes Only</option>
+                  <option value="sun">Only Sun</option>
+                  <option value="moon">Only Moon</option>
+                  <option value="mercury">Only Mercury</option>
+                  <option value="venus">Only Venus</option>
+                  <option value="mars">Only Mars</option>
+                  <option value="jupiter">Only Jupiter</option>
+                  <option value="saturn">Only Saturn</option>
+                  <option value="uranus">Only Uranus</option>
+                  <option value="neptune">Only Neptune</option>
+                  <option value="pluto">Only Pluto</option>
+                  <option value="north node">Only North Node</option>
+                  <option value="south node">Only South Node</option>
+                  <option value="sun-outer">Sun & Outer Planets</option>
+                  <option value="moon-outer">Moon & Outer Planets</option>
+                  <option value="mercury-outer">Mercury & Outer Planets</option>
+                  <option value="venus-outer">Venus & Outer Planets</option>
+                  <option value="mars-outer">Mars & Outer Planets</option>
+                  <option value="jupiter-inner">Jupiter & Inner Planets</option>
+                  <option value="saturn-inner">Saturn & Inner Planets</option>
+                  <option value="uranus-inner">Uranus & Inner Planets</option>
+                  <option value="neptune-inner">Neptune & Inner Planets</option>
+                  <option value="pluto-inner">Pluto & Inner Planets</option>
+                </select>
+              </label>
+            </div>
           </div>
+
+          {/* Lunar Event & Moon Phase Indicator */}
+          {(() => {
+            if (!planetData?.transitPlanets) return null;
+
+            const sun = planetData.transitPlanets.find((p: any) => p.name === 'Sun');
+            const moon = planetData.transitPlanets.find((p: any) => p.name === 'Moon');
+
+            if (!sun || !moon) return null;
+
+            const lunarEvent = detectLunarEvent(planetData);
+            const moonPhase = getMoonPhase(sun.longitude, moon.longitude);
+            const illumination = getMoonIllumination(sun.longitude, moon.longitude);
+
+            // Show special indicator for eclipses and exact new/full moons
+            if (lunarEvent) {
+              const eventColors = {
+                'new-moon': { bg: '#1a1a2e', text: '#fff', icon: '🌑' },
+                'full-moon': { bg: '#ffd700', text: '#000', icon: '🌕' },
+                'solar-eclipse': { bg: '#ff4500', text: '#fff', icon: '🌑🌞' },
+                'lunar-eclipse': { bg: '#8b0000', text: '#fff', icon: '🌕🌑' }
+              };
+
+              const color = eventColors[lunarEvent.type];
+
+              return (
+                <div style={{
+                  padding: '15px 30px',
+                  background: color.bg,
+                  color: color.text,
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                  fontSize: '18px',
+                  fontWeight: 'bold',
+                  display: 'inline-block',
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.2)'
+                }}>
+                  {color.icon} {lunarEvent.phase}
+                  <div style={{ fontSize: '14px', marginTop: '5px', fontWeight: 'normal' }}>
+                    Orb: {lunarEvent.orb.toFixed(2)}° | Moon Illumination: {illumination}%
+                  </div>
+                </div>
+              );
+            }
+
+            // Show regular moon phase indicator
+            return (
+              <div style={{
+                padding: '12px 25px',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: '#fff',
+                borderRadius: '8px',
+                marginBottom: '20px',
+                fontSize: '16px',
+                fontWeight: '500',
+                display: 'inline-block',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.15)'
+              }}>
+                {moonPhase.icon} Current Moon Phase: {moonPhase.name}
+                <div style={{ fontSize: '13px', marginTop: '4px', fontWeight: 'normal', opacity: 0.9 }}>
+                  Illumination: {illumination}%
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Transit-Only Wheel */}
           <div style={{ padding: '20px', textAlign: 'center' }}>
@@ -1136,7 +1368,7 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
               firstHouseReference={firstHouseReference}
               manualFirstHouseSign={manualFirstHouseSign}
               natalPlanetFilter="none"
-              transitPlanetFilter="all"
+              transitPlanetFilter={transitToTransitPlanetFilter}
               onDataUpdate={setPlanetData}
             />
 
@@ -1175,6 +1407,26 @@ ${item.aspect.name === 'Square' || item.aspect.name === 'Opposition'
                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <div style={{ width: '30px', height: '2px', background: '#00FF00', borderStyle: 'dashed', borderWidth: '1px 0 0 0' }}></div>
                   <span style={{ fontSize: '12px' }}>Sextile</span>
+                </div>
+              </div>
+
+              {/* Lunar Events Info */}
+              <div style={{
+                marginTop: '20px',
+                padding: '15px',
+                background: '#f9f9f9',
+                borderRadius: '8px',
+                fontSize: '13px',
+                maxWidth: '600px',
+                margin: '20px auto',
+                border: '1px solid #e0e0e0'
+              }}>
+                <div style={{ fontWeight: 'bold', marginBottom: '8px', color: '#333' }}>Lunar Events:</div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', color: '#666' }}>
+                  <div>🌑 <strong>New Moon:</strong> Sun ☌ Moon (±10°)</div>
+                  <div>🌕 <strong>Full Moon:</strong> Sun ☍ Moon (±10°)</div>
+                  <div>🌑🌞 <strong>Solar Eclipse:</strong> New Moon near Nodes (±18°)</div>
+                  <div>🌕🌑 <strong>Lunar Eclipse:</strong> Full Moon near Nodes (±18°)</div>
                 </div>
               </div>
             </div>

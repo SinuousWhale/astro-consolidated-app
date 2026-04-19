@@ -867,7 +867,7 @@ export const TransitCalendar: React.FC<TransitCalendarProps> = ({ startDate = ne
                             {dayData.date.toLocaleDateString('en-US', { weekday: 'short' })}
                           </div>
                           <div style={{ fontSize: '10px', color: '#666' }}>
-                            {dayData.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                            {dayData.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                           </div>
                           {isToday && <div style={{ color: '#28a745', fontSize: '9px', fontWeight: 'bold' }}>Today</div>}
                         </th>
