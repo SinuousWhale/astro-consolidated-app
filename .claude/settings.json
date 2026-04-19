@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"D:/projects/astro-consolidated-app\" || exit 0\nporcelain=$(git status --porcelain)\nif [ -z \"$porcelain\" ]; then echo '{\"systemMessage\":\"[auto-push] No changes.\"}'; exit 0; fi\npaths=$(echo \"$porcelain\" | cut -c4-)\nif echo \"$paths\" | grep -iqE '(^|/)\\.env($|\\.)|\\.pem$|\\.key$|\\.p12$|credentials|secrets'; then echo '{\"systemMessage\":\"[auto-push] ABORTED — sensitive file pattern detected. Commit manually.\"}'; exit 0; fi\nbig=$(echo \"$paths\" | while IFS= read -r f; do [ -f \"$f\" ] && [ $(wc -c < \"$f\" 2>/dev/null || echo 0) -gt 52428800 ] && echo \"$f\"; done | head -1)\nif [ -n \"$big\" ]; then printf '{\"systemMessage\":\"[auto-push] ABORTED — file >50MB: %s\"}\\n' \"$big\"; exit 0; fi\nbranch=$(git symbolic-ref --short HEAD 2>/dev/null)\nif [ -z \"$branch\" ]; then echo '{\"systemMessage\":\"[auto-push] ABORTED — detached HEAD.\"}'; exit 0; fi\ngit add -A >/dev/null\ncount=$(git diff --cached --name-only | wc -l | tr -d ' ')\nts=$(date +\"%Y-%m-%d %H:%M\")\ngit commit -m \"auto: session update [$ts] ($count files)\" >/dev/null 2>&1\nif GIT_TERMINAL_PROMPT=0 git push origin \"$branch\" >/tmp/autopush_aca.log 2>&1; then\n  printf '{\"systemMessage\":\"[auto-push astro-consolidated-app] Pushed %s files to %s at %s\"}\\n' \"$count\" \"$branch\" \"$ts\"\nelse\n  tail_msg=$(tail -3 /tmp/autopush_aca.log | tr '\\n' ' ' | tr -d '\"' | cut -c1-200)\n  printf '{\"systemMessage\":\"[auto-push astro-consolidated-app] PUSH FAILED: %s\"}\\n' \"$tail_msg\"\nfi",
+            "timeout": 180,
+            "statusMessage": "Auto-pushing astro-consolidated-app to GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
